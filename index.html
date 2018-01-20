@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Clémentine Bertrand — Designer</title>
+  <link rel="stylesheet" href="css/main.min.css">
+</head>
+
+<body>
+  <!-- Button menu  -->
+  <div class="menu-btn menu-btn-open">
+    <span></span>
+  </div>
+
+  <!-- Links -->
+  <div class="links">
+    <a class="link--behance" href="" target="_blank">
+      <span>Behance</span>
+    </a>
+    <a class="link--dribbble" href="https://dribbble.com/cbertrand" target="_blank">
+      <span>Dribbble</span>
+    </a>
+    <a class="link--linkedin" href="www.linkedin.com/in/clementinebertrand" target="_blank">
+      <span>Linkedin</span>
+    </a>
+    <a href="hello@clementinebertrand.fr" target="_blank">
+      <span>Email</span>
+    </a>
+  </div>
+
+  <!-- Home -->
+  <div class="home">
+    <div class="home__presentation">
+      <h1>Hello ! <span>👋</span></h1>
+      <p>I’m Clémentine. <br />
+         Look, I'll give you Jesse Pinkman, OK? Like you said, he's the problem, he's always been the problem and without him, we would.</p>
+      <button class="btn btn__work" >See my work</button>
+    </div>
+    <img src="img/presentation-draw.png" alt="Dessin de présentation" draggable="false">
+  </div>
+
+  <!-- Projects -->
+  <div class="projects__wrapper">
+
+    <!-- Project : Navigation -->
+    <div class="projects__navigation">
+      <span class="navigation__arrow navigation__arrow--top" onClick="navigationProjects(-1)"></span>
+      <div class="navigation__number">
+        <p class="number number__active">
+          <span>0</span> <span>1</span>
+        </p>
+        <span class="number__separator"></span>
+        <p class="number number__total">
+          <span>0</span> <span>1</span>
+        </p>
+      </div>
+      <span class="navigation__arrow navigation__arrow--bottom" onClick="navigationProjects(+1)"></span>
+    </div>
+
+    <!-- Project 1 : BTYD -->
+    <div class="project" id="project-01">
+      <div class="project__visuel">
+        <div class="visuel__mockup">
+          <img class="mockup--desktop" src="img/btyd-visuel-home.png" alt="Visuel du Blog Zenchef" draggable="false">
+        </div>
+        <img src="img/btyd-letter.png" alt="B" draggable="false">
+      </div>
+
+      <div class="project__description">
+        <div class="description__wrapper">
+          <div class="description__title">
+            <h2> Back to your Dream</h2>
+          </div>
+          <span class="description__number">01.</span>
+          <div class="description__info">
+            <div class="info">
+              <span>Rôle</span>
+              <p>Digital design</p>
+            </div>
+            <div class="info">
+              <span>Client</span>
+              <p>IESA Multimédia</p>
+            </div>
+            <div class="info">
+              <span>Année</span>
+              <p>2016</p>
+            </div>
+          </div>
+          <div class="description">
+            <p>Option A, you kill me right here and now. Apparently I've made that very easy for you. You can kill me, no witnesses and then spend the next few weeks or months tracking down Jesse Pinkman and you kill him too. A pointless exercise it seems…</p>
+          </div>
+          <a class="btn" href="">Découvrir le projet</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Project 2 : Le Blog Zenchef -->
+    <div class="project" id="project-02">
+      <div class="project__visuel">
+        <div class="visuel__mockup">
+          <img class="mockup--desktop" src="img/blog-zenchef-visuel-home.png" alt="Visuel du Blog Zenchef" draggable="false">
+          <img class="mockup--mobile" src="img/blog-zenchef-visuel-home-2.png" alt="Visuel du Blog Zenchef" draggable="false">
+        </div>
+        <img src="img/blog-zenchef-letter.png" alt="Z" draggable="false">
+      </div>
+
+      <div class="project__description">
+        <div class="description__wrapper">
+          <div class="description__title">
+            <h2>Le Blog Zenchef</h2>
+          </div>
+          <span class="description__number">02.</span>
+
+          <div class="description__info">
+            <div class="info">
+              <span>Rôle</span>
+              <p>Digital design</p>
+            </div>
+            <div class="info">
+              <span>Client</span>
+              <p>Zenchef</p>
+            </div>
+            <div class="info">
+              <span>Année</span>
+              <p>2017</p>
+            </div>
+          </div>
+
+          <div class="description">
+            <p>Option A, you kill me right here and now. Apparently I've made that very easy for you. You can kill me, no witnesses and then spend the next few weeks or months tracking down Jesse Pinkman and you kill him too. A pointless exercise it seems…</p>
+          </div>
+          <a class="btn" href="">Découvrir le projet</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Contact -->
+  <div class="contact__wrapper disable">
+
+    <!-- Contact description -->
+    <div class="contact__description">
+      <div class="description__wrapper">
+        <div class="description__title description__title--contact">
+          <h2>Pour me contacter, c’est par ici 👉</h2>
+        </div>
+        <span class="description__number">Contact</span>
+        <div class="description description--contact">
+          <p>Option A, you kill me right here and now. Apparently I've made that very easy for you. You can kill me, no witnesses and then spend the next few weeks or months tracking down Jesse Pinkman and you kill him too. A pointless exercise it seems…</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Contact form-->
+    <div class="contact__form">
+      <form name=contact onsubmit="return false" class="invisible-scrollbar">
+        <div class="bubble--group">
+            <div class="bubble">
+              <p>Hello ! 👋 </p>
+            </div>
+
+            <button class="btn bubble--answer" onclick="displayBubble(2,2);">J'amerais te contacter</button>
+        </div>
+
+        <div class="bubble--group">
+          <div class="bubble">
+            <p>Cool ! Comment t’appelles-tu ?</p>
+          </div>
+
+          <div class="bubble bubble--answer">
+            <input type="text" id="nameAnswer" name="name" placeholder="Écris ton nom ici" onKeyPress="if(event.keyCode == 13) ttdonnees(name,3,3);" />
+          </div>
+        </div>
+
+        <div class="bubble--group">
+          <div class="bubble">
+            <p>Bienvenue <span id="name" ></span> !<br> Que puis-je faire pour toi ?</p>
+          </div>
+
+          <div class="bubble bubble--answer">
+            <p>J'aimerais : </p>
+          </div>
+          <div class="bubble__choice">
+            <label class="bubble" for="project-1">
+                  <input type="radio" id="project-1" name="project" value="project"/>
+                  Te proposer un super projet
+              </label>
+            <label class="bubble" for="project-2">
+                  <input type="radio" id="project-2" name="project" value="message"/>
+                  Seulement t’envoyer un message
+              </label>
+            <label class="bubble" for="project-3">
+                  <input type="radio" id="project-3" name="project" value="surprise"/>
+                  Chut, c’est une surprise !
+              </label>
+          </div>
+        </div>
+        <div class="bubble--group">
+          <div class="bubble">
+            <p>Bienvenue <span id="name" ></span> !<br> Que puis-je faire pour toi ?</p>
+          </div>
+
+          <div class="bubble bubble--answer">
+            <p>J'aimerais : </p>
+          </div>
+          <div class="bubble__choice">
+            <label class="bubble" for="project-1">
+                  <input type="radio" id="project-1" name="project" value="project"/>
+                  Te proposer un super projet
+              </label>
+            <label class="bubble" for="project-2">
+                  <input type="radio" id="project-2" name="project" value="message"/>
+                  Seulement t’envoyer un message
+              </label>
+            <label class="bubble" for="project-3">
+                  <input type="radio" id="project-3" name="project" value="surprise"/>
+                  Chut, c’est une surprise !
+              </label>
+          </div>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <script type="text/javascript" src="script.js"></script>
+</body>
+</html>

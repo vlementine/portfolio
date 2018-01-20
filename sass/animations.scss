@@ -1,0 +1,140 @@
+@import "mixins.scss";
+@import "variables.scss";
+
+//-------------------------------------
+//	ANIMATIONS
+//-------------------------------------
+@include keyframes(slideRight) {
+	0% {
+		@include transform(translateX(-15%));
+		opacity: 0;
+	}
+
+	100% {
+		@include transform(translateX(0%));
+		opacity: 1;
+	}
+}
+
+@include keyframes(slideRightBis) {
+	0% {
+		@include transform(translateX(-10%));
+		opacity: 0;
+	}
+
+	100% {
+		@include transform(translateX(0%));
+		opacity: 1;
+	}
+}
+
+@include keyframes(slideLeft) {
+	0% {
+		@include transform(translateX(0%));
+		opacity: 1;
+	}
+
+	100% {
+		@include transform(translateX(-15%));
+		opacity: 0;
+	}
+}
+
+@include keyframes(slideLeftBis) {
+	0% {
+		@include transform(translateX(0%));
+		opacity: 1;
+	}
+
+	100% {
+		@include transform(translateX(-10%));
+		opacity: 0;
+	}
+}
+
+@include keyframes(slideTop) {
+	0% {
+		@include transform(translateY(120%));
+		opacity: 0;
+	}
+
+	100% {
+		@include transform(translateY(0%));
+		opacity: 1;
+	}
+}
+
+@include keyframes(slideBottom) {
+	0% {
+		@include transform(translateY(0%));
+		opacity: 0;
+	}
+
+	100% {
+		@include transform(translateY(120%));
+		opacity: 1;
+	}
+}
+
+@include keyframes(fadeIn) {
+	0% {
+		opacity: 0;
+	}
+
+	100% {
+		opacity: 1;
+	}
+}
+
+@include keyframes(fadeOut) {
+	0% {
+		opacity: 1;
+	}
+
+	100% {
+		opacity: 0;
+	}
+}
+
+@include keyframes(shadowDropIn) {
+	0% {
+		text-shadow: 0 0 0 $dark-blue-10;
+	}
+
+	100% {
+		text-shadow: 0 0 20px $dark-blue-10;
+	}
+}
+
+@include keyframes(shadowDropOut) {
+	0% {
+		text-shadow: 0 0 20px $dark-blue-10;
+	}
+
+	100% {
+		text-shadow: 0 0 0 $dark-blue-10;
+	}
+}
+
+@include keyframes(bubble) {
+	0% {
+		@include transform(translateY(20%));
+		opacity: 0;
+	}
+	100% {
+		@include transform(translateY(0%));
+		opacity: 1;
+	}
+}
+
+@include keyframes(gradient) {
+	0% {
+		background-position: 0% 50%;
+	}
+	50% {
+		background-position: 100% 50%;
+	}
+	100% {
+		background-position: 0% 50%;
+	}
+}

@@ -1,0 +1,74 @@
+@import "mixins.scss";
+@import "variables.scss";
+
+//-------------------------------------
+//	BASICS
+//-------------------------------------
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Work Sans', sans-serif;
+  -webkit-font-smoothing: antialiased;
+  color: $dark-blue-80;
+  line-height: 1.5;
+  font-size: 14px;
+  margin: 0;
+  padding: 0;
+
+	&:before {
+		content: '';
+		border: 1px solid $dark-blue-05;
+		position: absolute;
+		width: calc(100vw - 110px);
+		height: calc(100vh - 110px);
+		transform: translate(55px, 55px);
+	}
+}
+.visible-scrollbar, .invisible-scrollbar {
+  display: block;
+  width: 10em;
+  overflow: auto;
+}
+.invisible-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+
+/*------------------------
+  Links
+------------------------*/
+a {
+  font-size: 10px;
+  font-weight: 400;
+  color: $dark-blue-80;
+  text-decoration: none;
+}
+
+/*------------------------
+  Buttons
+------------------------*/
+button {
+  outline: none;
+}
+
+.btn {
+  display: inline-block;
+  border: 1px solid $dark-blue-10;
+	font-size: 10px;
+  font-weight: 400;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: $primary-color;
+  border-radius: 2px;
+  height: 40px;
+  line-height: 40px;
+  padding: 0 15px;
+	cursor: pointer;
+  @include transition(all .4s ease-in-out);
+
+  &:hover {
+    box-shadow: 0 4px 14px $dark-blue-10;
+  }
+}
