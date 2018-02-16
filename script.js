@@ -1,6 +1,11 @@
 var projectNumber = document.querySelectorAll('.project').length;
 document.querySelector('.number__total span:last-child').textContent = projectNumber;
 
+document.querySelector('body').onscroll = function(){
+  alert('PLOP');
+}
+
+
 function ttdonnees(param1,param2,param3) {
   var donnee = document.getElementById(param1+'Answer').value;
 
