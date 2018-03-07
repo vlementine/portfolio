@@ -182,19 +182,33 @@
           <div class="bubble bubble--answer">
             <p>J'aimerais : </p>
           </div>
+          
           <div class="bubble__choice">
-            <label class="bubble" for="project-1">
+            <label class="bubble" for="project-1" onclick="displayBubble(4,2)";>
               <input type="radio" id="project-1" name="project" value="project"/>
-              J'ai un projet dans les cartons 📦
+              <span>📦</span>
+              J'ai un projet dans les cartons 
             </label>
-            <label class="bubble" for="project-2">
+            <label class="bubble" for="project-2" onclick="displayBubble(4,2)";>
               <input type="radio" id="project-2" name="project" value="message"/>
-              J'ai une question ? 🤔
+              <span>🤔</span>
+              J'ai une question ? 
             </label>
-            <label class="bubble" for="project-3">
+            <label class="bubble" for="project-3" onclick="displayBubble(4,2)";>
               <input type="radio" id="project-3" name="project" value="surprise"/>
-              J'ai seulement envie de te dire bonjour 🤗
+              <span>🤗</span>
+              J'ai seulement envie de te dire bonjour 
             </label>
+          </div>
+        </div>
+
+        <div class="bubble--group">
+          <div class="bubble">
+            <p>Super ! Tu peux m’en dire plus ?</p>
+          </div>
+
+          <div class="bubble bubble--answer">
+            <textarea type="text" id="messageAnswer" name="name" placeholder="Écris ton message ici"></textarea>
           </div>
         </div>
       </form>
