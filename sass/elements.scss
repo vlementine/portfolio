@@ -554,6 +554,11 @@
 
    &:nth-child(1) {
      margin-top: 10%;
+
+     .bubble--answer {
+       text-decoration: underline;
+       cursor: pointer;
+     }
    }
 }
 
@@ -606,12 +611,6 @@
   color: #FFF;
   align-self: flex-end;
   //margin-left: calc(100% - 280px);
-
-  &.btn {
-    @include transform(translateY(20%));
-    opacity: 0;
-    margin-bottom: 20px;
-  }
 
   &.enable {
       @include animation(.3s bubble ease-in-out forwards .6s);
