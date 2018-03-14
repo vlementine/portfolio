@@ -103,3 +103,12 @@ function main() {
 }
 
 document.onload = main();
+
+function sendEmail() {
+  $.ajax({
+      url: "test.php",
+      data: {mail: "dsqfdqs@mail.fr", objet: "fdshifuhs fdhsufh usdgf udsgf usyd"}
+  }).done(function () {
+      console.log("HIUdfgds");
+  });
+}

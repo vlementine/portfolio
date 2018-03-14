@@ -1,9 +1,9 @@
 <?php
 
-$nom=$_POST['nom'];
-$mailF=$_POST['mail'];
-$objet=$_POST['objet'];
-$message=$_POST['message'];
+$nom="clem";
+$mailF=$_GET["mail"];
+$objet=$_GET["Objet"];
+$message="Hfsdoif iuzehf izoueh fizuf uoezgf uezgf uzfg uz";
 
 $mail = 'clementine@zenchef.com'; // Déclaration de l'adresse de destination.
 if (!preg_match("#^[a-z0-9._-]+@(hotmail|live|msn).[a-z]{2,4}$#", $mail)) // On filtre les serveurs qui rencontrent des bogues.
@@ -17,7 +17,7 @@ else
 
 //=====Déclaration des messages au format texte et au format HTML.
 $message_txt = "Salut à tous, voici un e-mail envoyé par un script PHP.";
-$message_html = "<html><head></head><body><b>Salut à tous</b>, voici un e-mail envoyé par un <i>script PHP</i>.</body></html>";
+$message_html = "<html><head></head><body><b>Salut à tous</b>, voici un e-mail envoyé par un <i>script PHP</i>. " . $mailF ."</body></html>";
 //==========
 
 //=====Création de la boundary
@@ -29,8 +29,8 @@ $sujet = "Hey mon ami !";
 //=========
 
 //=====Création du header de l'e-mail.
-$header = "From: \"Clem\"<clem@mail.fr>".$passage_ligne;
-$header.= "Reply-to: \"Clem\" <clem@mail.fr>".$passage_ligne;
+//$header = "From: \"Clem\"<hello@clementinebertrand.fr>".$passage_ligne;
+//$header.= "Reply-to: \"Clem\" <plop@mail.fr>".$passage_ligne;
 $header.= "MIME-Version: 1.0".$passage_ligne;
 $header.= "Content-Type: multipart/alternative;".$passage_ligne." boundary=\"$boundary\"".$passage_ligne;
 //==========
