@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="fr">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -34,10 +35,13 @@
   <!-- Home -->
   <div class="home">
     <div class="home__presentation">
-      <h1>Hello ! <span>👋</span></h1>
-      <p>I’m Clémentine. <br />
-         Look, I'll give you Jesse Pinkman, OK? Like you said, he's the problem, he's always been the problem and without him, we would.</p>
-      <button class="btn btn__work" >See my work</button>
+      <h1>Hello !
+        <span>👋</span>
+      </h1>
+      <p>I’m Clémentine.
+        <br /> Look, I'll give you Jesse Pinkman, OK? Like you said, he's the problem, he's always been the problem and without
+        him, we would.</p>
+      <button class="btn btn__work">See my work</button>
     </div>
     <img src="img/presentation-draw.png" alt="Dessin de présentation" draggable="false">
   </div>
@@ -50,11 +54,13 @@
       <span class="navigation__arrow navigation__arrow--top" onClick="navigationProjects(-1)"></span>
       <div class="navigation__number">
         <p class="number number__active">
-          <span>0</span> <span>1</span>
+          <span>0</span>
+          <span>1</span>
         </p>
         <span class="number__separator"></span>
         <p class="number number__total">
-          <span>0</span> <span>1</span>
+          <span>0</span>
+          <span>1</span>
         </p>
       </div>
       <span class="navigation__arrow navigation__arrow--bottom" onClick="navigationProjects(+1)"></span>
@@ -90,7 +96,9 @@
             </div>
           </div>
           <div class="description">
-            <p>Option A, you kill me right here and now. Apparently I've made that very easy for you. You can kill me, no witnesses and then spend the next few weeks or months tracking down Jesse Pinkman and you kill him too. A pointless exercise it seems…</p>
+            <p>Option A, you kill me right here and now. Apparently I've made that very easy for you. You can kill me, no witnesses
+              and then spend the next few weeks or months tracking down Jesse Pinkman and you kill him too. A pointless exercise
+              it seems…</p>
           </div>
           <a class="btn" href="">Découvrir le projet</a>
         </div>
@@ -130,7 +138,9 @@
           </div>
 
           <div class="description">
-            <p>Option A, you kill me right here and now. Apparently I've made that very easy for you. You can kill me, no witnesses and then spend the next few weeks or months tracking down Jesse Pinkman and you kill him too. A pointless exercise it seems…</p>
+            <p>Option A, you kill me right here and now. Apparently I've made that very easy for you. You can kill me, no witnesses
+              and then spend the next few weeks or months tracking down Jesse Pinkman and you kill him too. A pointless exercise
+              it seems…</p>
           </div>
           <a class="btn" href="">Découvrir le projet</a>
         </div>
@@ -149,22 +159,24 @@
         </div>
         <span class="description__number">Contact</span>
         <div class="description description--contact">
-          <p>Option A, you kill me right here and now. Apparently I've made that very easy for you. You can kill me, no witnesses and then spend the next few weeks or months tracking down Jesse Pinkman and you kill him too. A pointless exercise it seems…</p>
+          <p>Option A, you kill me right here and now. Apparently I've made that very easy for you. You can kill me, no witnesses
+            and then spend the next few weeks or months tracking down Jesse Pinkman and you kill him too. A pointless exercise
+            it seems…</p>
         </div>
       </div>
     </div>
 
     <!-- Contact form-->
     <div class="contact__form">
-      <form name=contact action="https://formspree.io/clementine@zenchef.com" onsubmit="return false" class="invisible-scrollbar">
+      <form onsubmit="return false" class="invisible-scrollbar">
         <div class="bubble--group">
-            <div class="bubble">
-              <p>Hello ! 👋 </p>
-            </div>
+          <div class="bubble">
+            <p>Hello ! 👋 </p>
+          </div>
 
-            <div class="bubble bubble--answer" onclick="displayBubble(2,2);">
-              <p>J'amerais te contacter</p>
-            </div>
+          <div class="bubble bubble--answer" onclick="displayBubble(2,2);">
+            <p>J'amerais te contacter</p>
+          </div>
         </div>
 
         <div class="bubble--group">
@@ -173,34 +185,42 @@
           </div>
 
           <div class="bubble bubble--answer">
-            <input type="text" id="nameAnswer" name="name" placeholder="Écris ton nom ici" onKeyPress="if(event.keyCode == 13) ttdonnees(name,3,3);" />
+            <input type="text" id="nameAnswer" name="name" placeholder="Écris ton nom ici" onKeyPress="if(event.keyCode == 13) getAnswer(name,3,3);"
+            />
           </div>
         </div>
 
         <div class="bubble--group">
           <div class="bubble">
-            <p>Bienvenue <span id="name" ></span> !<br> Que puis-je faire pour toi ?</p>
+            <p>Bienvenue
+              <span id="nameQuestion"></span> !
+              <br> Que puis-je faire pour toi ?</p>
           </div>
 
-          <div class="bubble bubble--answer">
-            <p>J'aimerais : </p>
-          </div>
-          
-          <div class="bubble__choice">
-            <label class="bubble" for="project-1" onclick="displayBubble(4,2)";>
-              <input type="radio" id="project-1" name="project" value="project"/>
-              <span>📦</span>
-              J'ai un projet dans les cartons 
+          <div class="bubble--group__choice">
+            <label class="bubble" onclick="displayBubble(4,2)" ;>
+              <input type="radio" name="project" id="project-1" />
+              <div class="choice">
+                <span>🤔</span>
+                <p> Tu as
+                  <br> une question ? </p>
+              </div>
             </label>
-            <label class="bubble" for="project-2" onclick="displayBubble(4,2)";>
-              <input type="radio" id="project-2" name="project" value="message"/>
-              <span>🤔</span>
-              J'ai une question ? 
+
+            <label class="bubble" onclick="displayBubble(4,2)" ;>
+              <input type="radio" name="project" id="project-2" />
+              <div class="choice">
+                <span>📦</span>
+                <p> Tu as un projet dans les cartons </p>
+              </div>
             </label>
-            <label class="bubble" for="project-3" onclick="displayBubble(4,2)";>
-              <input type="radio" id="project-3" name="project" value="surprise"/>
-              <span>🤗</span>
-              J'ai seulement envie de te dire bonjour 
+
+            <label class="bubble" onclick="displayBubble(4,2)" ;>
+              <input type="radio" name="project" id="project-3" />
+              <div class="choice">
+                <span>🤗</span>
+                <p> Tu as seulement envie de te dire bonjour </p>
+              </div>
             </label>
           </div>
         </div>
@@ -211,7 +231,29 @@
           </div>
 
           <div class="bubble bubble--answer">
-            <textarea type="text" id="messageAnswer" name="name" placeholder="Écris ton message ici" onclick="sendEmail()";></textarea>
+            <textarea type="text" id="messageAnswer" name="message" placeholder="Écris ton message ici" onKeyPress="if(event.keyCode == 13) getAnswer(name,5,2);"></textarea>
+          </div>
+        </div>
+
+        <div class="bubble--group">
+          <div class="bubble">
+            <p>Je prends note ! ✍️ Tu aurais une adresse mail pour que je puisse te recontacter plus tard ?</p>
+          </div>
+
+          <div class="bubble bubble--answer">
+            <p id="result"></p>
+            <input type="email" id="mailAnswer" name="mail" placeholder="Écris ton mail ici" onKeyPress="if(event.keyCode == 13) validate(6,1);"
+            />
+          </div>
+        </div>
+
+        <div class="bubble--group">
+          <div class="bubble">
+            <p>Parfait, je te recontacte au plus vite !</p>
+          </div>
+
+          <div class="bubble bubble--delay">
+            <p>En te souhaitant une excellente journée ! 👌</p>
           </div>
         </div>
       </form>
@@ -221,4 +263,5 @@
   <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
   <script type="text/javascript" src="script.js"></script>
 </body>
+
 </html>

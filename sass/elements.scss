@@ -7,7 +7,7 @@
 .menu-btn {
   width: 50px;
   height: 50px;
-  background: #FFF;
+  background: #fff;
   box-shadow: 0 2px 4px $dark-blue-10;
   border-radius: 50%;
   position: absolute;
@@ -15,7 +15,7 @@
   top: 30px;
   right: 30px;
   cursor: pointer;
-  @include transition(box-shadow .4s ease-in-out);
+  @include transition(box-shadow 0.4s ease-in-out);
 
   span {
     width: 20px;
@@ -26,7 +26,7 @@
     margin: 25px auto;
 
     &:before {
-      content: '';
+      content: "";
       display: block;
       width: 20px;
       height: 2px;
@@ -34,7 +34,7 @@
     }
 
     &:after {
-      content: '';
+      content: "";
       display: block;
       width: 20px;
       height: 2px;
@@ -52,7 +52,7 @@
 //-------------------------------------
 .links {
   margin: auto;
-  background: #FFF;
+  background: #fff;
   padding: 0 14px;
   height: 38px;
   line-height: 38px;
@@ -61,26 +61,26 @@
   bottom: 38px;
   left: 50%;
   margin-left: -185px;
-	border-radius: 2px;
+  border-radius: 2px;
 
   a {
-		position: relative;
-		z-index: 10;
-		margin: 0 15px;
-		display: inline-block;
-		line-height: 1em;
+    position: relative;
+    z-index: 10;
+    margin: 0 15px;
+    display: inline-block;
+    line-height: 1em;
 
-		span {
-			display: inline-block;
-			font-size: 10px;
-	    font-weight: 400;
-	    letter-spacing: 0.12em;
-	    text-transform: uppercase;
-      @include transition(transform .4s ease-in-out);
-		}
+    span {
+      display: inline-block;
+      font-size: 10px;
+      font-weight: 400;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      @include transition(transform 0.4s ease-in-out);
+    }
 
     &:after {
-      content:'';
+      content: "";
       position: absolute;
       display: block;
       background: $primary-color;
@@ -91,19 +91,25 @@
       bottom: -4px;
       transform-origin: right center;
       @include transform(scaleX(0));
-      @include transition(transform .4s ease-in-out);
+      @include transition(transform 0.4s ease-in-out);
     }
 
-    &.link--behance:after {background: $behance;}
-    &.link--dribbble:after {background: $dribbble;}
-    &.link--linkedin:after {background: $linkedin;}
+    &.link--behance:after {
+      background: $behance;
+    }
+    &.link--dribbble:after {
+      background: $dribbble;
+    }
+    &.link--linkedin:after {
+      background: $linkedin;
+    }
 
     &:hover {
-			span {
-				@include transform(translateX(-6px));
-			}
+      span {
+        @include transform(translateX(-6px));
+      }
 
-      &:after  {
+      &:after {
         transform-origin: left center;
         @include transform(scaleX(1));
         opacity: 0.2;
@@ -116,22 +122,22 @@
 //	HOME
 //-------------------------------------
 .home {
-	position: relative;
+  position: relative;
   display: flex;
-	z-index: 24;
+  z-index: 24;
   justify-content: center;
   align-items: center;
   height: 100vh;
   padding: 0 10%;
-	background: #FFF;
+  background: #fff;
 
-	@include transform(translateY(0%));
-	@include transition(transform .8s ease-in-out);
+  @include transform(translateY(0%));
+  @include transition(transform 0.8s ease-in-out);
 
-	&.disable {
-		@include transform(translateY(-100%));
-		@include transition(transform .8s ease-in-out);
-	}
+  &.disable {
+    @include transform(translateY(-100%));
+    @include transition(transform 0.8s ease-in-out);
+  }
 
   .home__presentation {
     width: 60%;
@@ -158,7 +164,7 @@
   }
 
   img {
-		height: auto;
+    height: auto;
     max-height: 60%;
     width: auto;
     max-width: 350px;
@@ -169,9 +175,9 @@
 //	PROJECTS
 //-------------------------------------
 .projects__wrapper {
-	position: absolute;
-	top: 0;
-	left: 0;
+  position: absolute;
+  top: 0;
+  left: 0;
 }
 
 /*------------------------
@@ -183,7 +189,7 @@
   right: 29px;
   top: 50%;
   margin-top: -90px;
-  background: #FFF;
+  background: #fff;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -198,27 +204,27 @@
     border-radius: 50%;
     border: 1px solid $dark-blue-10;
     cursor: pointer;
-    @include transition(all .4s ease-in-out);
+    @include transition(all 0.4s ease-in-out);
 
     &:hover {
       background: $primary-color;
       box-shadow: 0 2px 8px $dark-blue-10;
 
       &:after {
-        border-top: 1px solid #FFF;
-        border-left: 1px solid #FFF;
+        border-top: 1px solid #fff;
+        border-left: 1px solid #fff;
       }
     }
 
     &:after {
-      content: '';
+      content: "";
       display: block;
       width: 7px;
       height: 7px;
       border-top: 1px solid $primary-color;
       border-left: 1px solid $primary-color;
       @include transform(translate(9px, 11px) rotate(45deg));
-      @include transition(all .4s ease-in-out);
+      @include transition(all 0.4s ease-in-out);
     }
   }
 
@@ -260,21 +266,21 @@
   Project
 ------------------------*/
 .project {
-	position: relative;
+  position: relative;
   height: 100vh;
   width: 100vw;
   padding: 15px;
-	z-index: 0;
-	display: none;
+  z-index: 0;
+  display: none;
 
-	&.enable {
-	  z-index: 16;
-		display: flex;
-	}
+  &.enable {
+    z-index: 16;
+    display: flex;
+  }
 }
 
-#project-02 .project__visuel{
-  background: linear-gradient(45deg, #F59E64, #EB5160);
+#project-02 .project__visuel {
+  background: linear-gradient(45deg, #f59e64, #eb5160);
 }
 
 //Project visuel
@@ -287,14 +293,14 @@
   position: relative;
   z-index: 24;
   margin-right: 15px;
-  background: linear-gradient(45deg, #1D7D90, #5dd5c3);
+  background: linear-gradient(45deg, #1d7d90, #5dd5c3);
   background-size: 400% 400%;
   border-radius: 4px;
   box-shadow: 0 0 16px $dark-blue-20;
   @include animation(1s fadeOut ease-in-out forwards);
 
   &.enable {
-    @include animation(.6s fadeIn ease-in-out forwards .6s);
+    @include animation(0.6s fadeIn ease-in-out forwards 0.6s);
   }
 
   .visuel__mockup {
@@ -313,10 +319,10 @@
       position: relative;
       z-index: 8;
       opacity: 0;
-      @include animation(.4s slideLeft ease-in-out forwards);
+      @include animation(0.4s slideLeft ease-in-out forwards);
 
       &.enable {
-        @include animation(.6s slideRight ease-out forwards .6s);
+        @include animation(0.6s slideRight ease-out forwards 0.6s);
       }
     }
 
@@ -328,10 +334,10 @@
       bottom: 0;
       right: 0;
       opacity: 0;
-      @include animation(.4s slideLeft ease-in-out forwards);
+      @include animation(0.4s slideLeft ease-in-out forwards);
 
       &.enable {
-        @include animation(.6s slideRightBis ease-out forwards .6s);
+        @include animation(0.6s slideRightBis ease-out forwards 0.6s);
       }
     }
   }
@@ -364,10 +370,10 @@
   .btn {
     margin-top: 40px;
     opacity: 0;
-    @include animation(.8s fadeOut ease-in-out forwards);
+    @include animation(0.8s fadeOut ease-in-out forwards);
 
     &.enable {
-      @include animation(.8s fadeIn ease-in-out forwards .6s);
+      @include animation(0.8s fadeIn ease-in-out forwards 0.6s);
     }
   }
 }
@@ -380,16 +386,16 @@
 
   h2 {
     z-index: 10;
-    font-family: 'Playfair Display', serif;
+    font-family: "Playfair Display", serif;
     font-weight: 900;
     font-size: 44px;
     line-height: 1;
     margin: 0;
     @include transform(translateY(120%));
-    @include animation(.6s slideBottom ease-out forwards);
+    @include animation(0.6s slideBottom ease-out forwards);
 
     &.enable {
-      @include animation(.6s slideTop ease-out forwards .8s);
+      @include animation(0.6s slideTop ease-out forwards 0.8s);
     }
   }
 }
@@ -400,14 +406,14 @@
   top: -45px;
   left: -20px;
   z-index: -1;
-  font-family: 'Work Sans', sans-serif;
+  font-family: "Work Sans", sans-serif;
   font-weight: 700;
   font-size: 104px;
-  color: #FFF;
-  @include animation(.6s shadowDropOut ease-out forwards);
+  color: #fff;
+  @include animation(0.6s shadowDropOut ease-out forwards);
 
   &.enable {
-    @include animation(.6s shadowDropIn ease-out forwards .8s);
+    @include animation(0.6s shadowDropIn ease-out forwards 0.8s);
   }
 }
 
@@ -415,7 +421,7 @@
   overflow: hidden;
 
   p {
-    font-family: 'Playfair Display', serif;
+    font-family: "Playfair Display", serif;
     font-weight: 400;
     font-style: italic;
     font-size: 14px;
@@ -424,10 +430,10 @@
     color: $dark-blue-50;
     margin: 20px 0 0 0;
     @include transform(translateY(125%));
-    @include animation(.6s slideBottom ease-in-out forwards);
+    @include animation(0.6s slideBottom ease-in-out forwards);
 
     &.enable {
-      @include animation(.6s slideTop ease-in-out forwards .8s);
+      @include animation(0.6s slideTop ease-in-out forwards 0.8s);
     }
   }
 }
@@ -439,31 +445,31 @@
   overflow: hidden;
 
   span {
-    font-family: 'Playfair Display', serif;
+    font-family: "Playfair Display", serif;
     font-weight: 700;
     font-size: 12px;
     color: $dark-blue-20;
     margin: 0;
     opacity: 0;
-    @include animation(.8s fadeOut ease-in-out forwards);
+    @include animation(0.8s fadeOut ease-in-out forwards);
 
     &.enable {
-      @include animation(.8s fadeIn ease-in-out forwards .6s);
+      @include animation(0.8s fadeIn ease-in-out forwards 0.6s);
     }
   }
 
   p {
-    font-family: 'Work Sans', sans-serif;
+    font-family: "Work Sans", sans-serif;
     font-weight: 600;
     font-size: 12px;
     text-transform: uppercase;
     letter-spacing: 0.15em;
     margin: 0;
     @include transform(translateY(120%));
-    @include animation(.6s slideBottom ease-in-out forwards);
+    @include animation(0.6s slideBottom ease-in-out forwards);
 
     &.enable {
-      @include animation(.6s slideTop ease-in-out forwards .8s);
+      @include animation(0.6s slideTop ease-in-out forwards 0.8s);
     }
   }
 }
@@ -472,23 +478,23 @@
 //	CONTACT
 //-------------------------------------
 .contact__wrapper {
-	position: absolute;
-	top: 0;
-	left: 0;
+  position: absolute;
+  top: 0;
+  left: 0;
   height: 100vh;
   width: 100vw;
   padding: 15px;
   z-index: 30;
-	display: flex;
-  background: #FFF;
+  display: flex;
+  background: #fff;
 
   @include transform(translateY(0%));
-	@include transition(transform .8s ease-in-out);
+  @include transition(transform 0.8s ease-in-out);
 
-	&.disable {
-		@include transform(translateY(-100%));
-		@include transition(transform .8s ease-in-out);
-	}
+  &.disable {
+    @include transform(translateY(-100%));
+    @include transition(transform 0.8s ease-in-out);
+  }
 }
 
 //Contact description
@@ -534,7 +540,7 @@
   flex-basis: 50%;
   position: relative;
   z-index: 24;
-  background: linear-gradient(45deg, #1D7D90, #5dd5c3);
+  background: linear-gradient(45deg, #1d7d90, #5dd5c3);
   background-size: 400% 400%;
   border-radius: 4px;
   box-shadow: 0 0 16px $dark-blue-20;
@@ -552,19 +558,23 @@
   flex-direction: column;
   align-items: baseline;
 
-   &:nth-child(1) {
-     margin-top: 10%;
+  &:nth-child(1) {
+    margin-top: 10%;
 
-     .bubble--answer {
-       text-decoration: underline;
-       cursor: pointer;
-     }
-   }
+    .bubble--answer {
+      text-decoration: underline;
+      cursor: pointer;
+    }
+  }
+
+  &:last-child .bubble:last-child {
+    margin-bottom: 40px;
+  }
 }
 
 .bubble {
   display: none;
-  background: #FFF;
+  background: #fff;
   max-width: 300px;
   padding: 20px;
   border-radius: 4px;
@@ -577,12 +587,13 @@
     margin: 0;
   }
 
-  input, textarea {
+  input,
+  textarea {
     background: transparent;
     border: transparent;
     padding-bottom: 4px;
     outline: none;
-    color: #FFF;
+    color: #fff;
     font-size: 14px;
     font-weight: 600;
     height: 16px;
@@ -596,77 +607,108 @@
   }
 
   @include placeholder {
-      color: #FFF;
-      opacity: 0.5;
+    color: #fff;
+    opacity: 0.5;
   }
 
   &.enable {
-    @include animation(bubble ease-in-out forwards .6s);
+    @include animation(bubble ease-in-out forwards 0.6s);
     display: inline-block;
   }
 }
 
 .bubble--answer {
   background: $dark-blue-50;
-  color: #FFF;
+  color: #fff;
   align-self: flex-end;
   //margin-left: calc(100% - 280px);
-
   &.enable {
-      @include animation(.3s bubble ease-in-out forwards .6s);
-    }
+    @include animation(0.3s bubble ease-in-out forwards 0.6s);
+  }
 }
 
-.bubble__choice {
+.bubble--delay {
+  &.enable {
+    @include animation(0.3s bubble ease-in-out forwards 0.6s);
+  }
+}
+
+.bubble--group__choice {
+  display: flex;
+  justify-content: center;
   align-self: center;
   margin-bottom: 20px;
-  display: flex;
 
   .bubble {
-    margin: 0 8px;
     width: calc(33.333333333% - 20px);
-    min-height: 150px;
     text-align: center;
-    vertical-align: top;
+    padding: 0;
     cursor: pointer;
+    box-shadow: none;
+    background: none;
+    flex-grow: 1;
 
-    input[type="radio"] {
-      position: absolute; 
+    input {
+      position: absolute;
       opacity: 0;
+      cursor: pointer;
 
-      &:checked ~ span{
-        background: crimson;
+      &:checked ~ div {
+        box-shadow: 0 4px 16px $dark-blue-10;
+        @include transform(scale(1));
+      }
+
+      &:not(:checked) ~ div {
+        @include transform(scale(0.9));
+
+        span,
+        p {
+          opacity: 0.5;
+        }
       }
     }
 
-    span {
-      position: relative;
-      display: block;
-      font-size: 20px;
-      line-height: 64px;
-      margin: 10px auto 20px;
-      border-radius: 50%;
-      width: 64px;
-      height: 64px;
-      background: #FFF;
-      box-shadow: 0 0 8px rgba($color: #000000, $alpha: .1);
+    .choice {
+      width: 100%;
+      padding: 20px;
+      background: #fff;
+      box-shadow: 0 4px 8px $dark-blue-10;
+      border-radius: 4px;
+      @include transition(transform 0.4s ease-in-out);
 
-      &:after {
-        position: absolute;
-        content: '';
-        top: 0;
-        left: 0;
-        border: 1px solid $dark-blue-05;
+      span {
+        position: relative;
+        display: block;
+        font-size: 20px;
+        line-height: 64px;
+        margin: 10px auto 20px;
         border-radius: 50%;
-        width: calc(100% + 20px);
-        height: calc(100% + 20px);
-        @include transform(translate(-11px, -11px)); 
+        width: 64px;
+        height: 64px;
+        box-shadow: 0 0 8px rgba($color: #000000, $alpha: 0.1);
+        @include transition(opacity 0.4s ease-in-out);
+
+        &:after {
+          position: absolute;
+          content: "";
+          top: 0;
+          left: 0;
+          border: 1px solid $dark-blue-05;
+          border-radius: 50%;
+          width: calc(100% + 20px);
+          height: calc(100% + 20px);
+          @include transform(translate(-11px, -11px));
+        }
+      }
+      
+      p {
+        @include transition(opacity 0.4s ease-in-out);
       }
     }
 
-    &.enableBis {
-      @include animation(.6s bubble ease-in-out forwards .9s);
-      display: inline-block;
+    &.enable__choice {
+      @include animation(0.3s bubble ease-in-out forwards 0.9s);
+      display: flex;
     }
   }
 }
