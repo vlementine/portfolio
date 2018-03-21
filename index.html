@@ -66,86 +66,11 @@
       <span class="navigation__arrow navigation__arrow--bottom" onClick="navigationProjects(+1)"></span>
     </div>
 
-    <!-- Project 1 : BTYD -->
-    <div class="project" id="project-01">
-      <div class="project__visuel">
-        <div class="visuel__mockup">
-          <img class="mockup--desktop" src="img/btyd-visuel-home.png" alt="Visuel du Blog Zenchef" draggable="false">
-        </div>
-        <img src="img/btyd-letter.png" alt="B" draggable="false">
-      </div>
+    <!-- Projects -->
+   <div id="projects">
+     
+   </div>
 
-      <div class="project__description">
-        <div class="description__wrapper">
-          <div class="description__title">
-            <h2> Back to your Dream</h2>
-          </div>
-          <span class="description__number">01.</span>
-          <div class="description__info">
-            <div class="info">
-              <span>Rôle</span>
-              <p>Digital design</p>
-            </div>
-            <div class="info">
-              <span>Client</span>
-              <p>IESA Multimédia</p>
-            </div>
-            <div class="info">
-              <span>Année</span>
-              <p>2016</p>
-            </div>
-          </div>
-          <div class="description">
-            <p>Option A, you kill me right here and now. Apparently I've made that very easy for you. You can kill me, no witnesses
-              and then spend the next few weeks or months tracking down Jesse Pinkman and you kill him too. A pointless exercise
-              it seems…</p>
-          </div>
-          <a class="btn" href="">Découvrir le projet</a>
-        </div>
-      </div>
-    </div>
-
-    <!-- Project 2 : Le Blog Zenchef -->
-    <div class="project" id="project-02">
-      <div class="project__visuel">
-        <div class="visuel__mockup">
-          <img class="mockup--desktop" src="img/blog-zenchef-visuel-home.png" alt="Visuel du Blog Zenchef" draggable="false">
-          <img class="mockup--mobile" src="img/blog-zenchef-visuel-home-2.png" alt="Visuel du Blog Zenchef" draggable="false">
-        </div>
-        <img src="img/blog-zenchef-letter.png" alt="Z" draggable="false">
-      </div>
-
-      <div class="project__description">
-        <div class="description__wrapper">
-          <div class="description__title">
-            <h2>Le Blog Zenchef</h2>
-          </div>
-          <span class="description__number">02.</span>
-
-          <div class="description__info">
-            <div class="info">
-              <span>Rôle</span>
-              <p>Digital design</p>
-            </div>
-            <div class="info">
-              <span>Client</span>
-              <p>Zenchef</p>
-            </div>
-            <div class="info">
-              <span>Année</span>
-              <p>2017</p>
-            </div>
-          </div>
-
-          <div class="description">
-            <p>Option A, you kill me right here and now. Apparently I've made that very easy for you. You can kill me, no witnesses
-              and then spend the next few weeks or months tracking down Jesse Pinkman and you kill him too. A pointless exercise
-              it seems…</p>
-          </div>
-          <a class="btn" href="">Découvrir le projet</a>
-        </div>
-      </div>
-    </div>
   </div>
 
   <!-- Contact -->
@@ -185,7 +110,7 @@
           </div>
 
           <div class="bubble bubble--answer">
-            <input type="text" id="nameAnswer" name="name" placeholder="Écris ton nom ici" onKeyPress="if(event.keyCode == 13) getAnswer(name,3,3);"
+            <input type="text" id="nameAnswer" name="name" placeholder="Écris ton nom ici" autocomplete="off" onKeyPress="if(event.keyCode == 13) getAnswer(name,3,3);"
             />
           </div>
         </div>
@@ -242,7 +167,7 @@
 
           <div class="bubble bubble--answer">
             <p id="result"></p>
-            <input type="email" id="mailAnswer" name="mail" placeholder="Écris ton mail ici" onKeyPress="if(event.keyCode == 13) validate(6,1);"
+            <input type="email" id="mailAnswer" name="mail" autocomplete="off" placeholder="Écris ton mail ici" onKeyPress="if(event.keyCode == 13) validate(6,1);"
             />
           </div>
         </div>
