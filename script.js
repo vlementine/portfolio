@@ -229,27 +229,27 @@ function sendEmail() {
   let nameAnswer = document.getElementById("nameAnswer").value;
   let mailAnswer = document.getElementById("mailAnswer").value;
   if (document.getElementById("project-1").checked) {
-    let objectAnswer = "Une question ?";
+    var objectAnswer = "Une question ?";
   } else if (document.getElementById("project-2").checked) {
-    let objectAnswer = "Un projet dans les cartons";
+    var objectAnswer = "Un projet dans les cartons";
   } else if (document.getElementById("project-3").checked) {
-    let objectAnswer = "Seulement envie de dire bonjour";
+    var objectAnswer = "Seulement envie de dire bonjour";
   }
   let messageAnswer = document.getElementById("messageAnswer").value;
 
-  $.ajax({
-    url: "sendEmail.php",
-    data: {
+
+  xhr = new XMLHttpRequest();
+  xhr.open("POST", "sendEmail.php");
+  xhr.setRequestHeader("Content-Type", "application/json");
+  xhr.send(
+    JSON.stringify({
       name: nameAnswer,
       mail: mailAnswer,
       object: objectAnswer,
       message: messageAnswer
-    }
-  }).done(function() {
-    console.log("Email sended");
-  });
+    })
+  );
 }
-
 //-------------------------------------
 //	MAIN FUNCTION
 //-------------------------------------

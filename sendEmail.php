@@ -1,10 +1,12 @@
 <?php
 
+$data = json_decode(file_get_contents('php://input'), true);
+
 // --- Variables
-$name=$_GET["name"];
-$email=$_GET["mail"];
-$object=$_GET["object"];
-$message=$_GET["message"];
+$name=$data["name"];
+$email=$data["mail"];
+$object=$data["object"];
+$message=$data["message"];
 
 // --- Recipient
 $mailRecipient = 'bertrand_clementine@yahoo.fr'; 
