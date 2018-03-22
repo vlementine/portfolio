@@ -10,30 +10,17 @@ const projects = [
     year: "2016",
     description:
       "Option A, you kill me right here and now. Apparently I've made that very easy for you. You can kill me, no witnesses and then spend the next few weeks or months tracking down Jesse Pinkman and you kill him too. A pointless exercise it seems…",
-    image: "img/.png",
-    letter: "img/.png"
+    image: "btyd"
   },
   {
     number: "02",
-    title: "Alcatraz, 1962",
+    title: "Le Blog Zenchef",
     role: "Designer",
-    client: "IESA Multimédia",
-    year: "2016",
+    client: "Zenchef",
+    year: "2017",
     description:
       "Option A, you kill me right here and now. Apparently I've made that very easy for you. You can kill me, no witnesses and then spend the next few weeks or months tracking down Jesse Pinkman and you kill him too. A pointless exercise it seems…",
-    image: "img/.png",
-    letter: "img/.png"
-  },
-  {
-    number: "03",
-    title: "DISGQDOYUsqd, 1962",
-    role: "Designer",
-    client: "IESA Multimédia",
-    year: "2016",
-    description:
-      "Option A, you kill me right here and now. Apparently I've made that very easy for you. You can kill me, no witnesses and then spend the next few weeks or months tracking down Jesse Pinkman and you kill him too. A pointless exercise it seems…",
-    image: "img/.png",
-    letter: "img/.png"
+    image: "blog-zenchef"
   }
 ];
 
@@ -45,9 +32,11 @@ projects.forEach(project => {
   content += `<div class="project" id="project-${project.number}">
       <div class="project__visuel">
         <div class="visuel__mockup">
-          <img class="mockup--desktop" src="img/btyd-visuel-home.png" alt="Visuel du Blog Zenchef" draggable="false">
+          <img class="mockup--desktop" src="img/${
+            project.image
+          }_visuel-home.png" alt="Visuel du Blog Zenchef" draggable="false">
         </div>
-        <img src="img/btyd-letter.png" alt="B" draggable="false">
+        <img src="img/${project.image}_letter.png" alt="B" draggable="false">
       </div>
 
       <div class="project__description">
@@ -78,8 +67,6 @@ projects.forEach(project => {
       </div>
     </div>`;
 });
-
-console.log(content);
 
 document.getElementById("projects").innerHTML = content;
 
@@ -236,7 +223,6 @@ function sendEmail() {
     var objectAnswer = "Seulement envie de dire bonjour";
   }
   let messageAnswer = document.getElementById("messageAnswer").value;
-
 
   xhr = new XMLHttpRequest();
   xhr.open("POST", "sendEmail.php");

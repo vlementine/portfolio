@@ -46,30 +46,50 @@
     <img src="img/presentation-draw.png" alt="Dessin de présentation" draggable="false">
   </div>
 
+
+
+  <!-- Navigation -->
+  <div class="nav__wrapper">
+    <span class="nav__item">
+      01.
+      <span class="item__title">Home</span>
+    </span>
+    <span class="nav__item">
+      02.
+      <span class="item__title">Back To Your Dream</span>
+    </span>
+    <span class="nav__item">
+      03.
+      <span class="item__title">Le Blog Zenchef</span>
+    </span>
+    <span class="nav__item">
+      04.
+      <span class="item__title">Contact</span>
+    </span>
+  </div>
+
+
+  <!-- Project : Navigation -->
+  <div class="projects__navigation">
+    <span class="navigation__arrow navigation__arrow--top" onClick="navigationProjects(-1)"></span>
+    <div class="navigation__number">
+      <p class="number number__active">
+        <span>0</span>
+        <span>1</span>
+      </p>
+      <span class="number__separator"></span>
+      <p class="number number__total">
+        <span>0</span>
+        <span>1</span>
+      </p>
+    </div>
+    <span class="navigation__arrow navigation__arrow--bottom" onClick="navigationProjects(+1)"></span>
+  </div>
+
   <!-- Projects -->
   <div class="projects__wrapper">
-
-    <!-- Project : Navigation -->
-    <div class="projects__navigation">
-      <span class="navigation__arrow navigation__arrow--top" onClick="navigationProjects(-1)"></span>
-      <div class="navigation__number">
-        <p class="number number__active">
-          <span>0</span>
-          <span>1</span>
-        </p>
-        <span class="number__separator"></span>
-        <p class="number number__total">
-          <span>0</span>
-          <span>1</span>
-        </p>
-      </div>
-      <span class="navigation__arrow navigation__arrow--bottom" onClick="navigationProjects(+1)"></span>
-    </div>
-
     <!-- Projects -->
-   <div id="projects">
-     
-   </div>
+    <div id="projects"></div>
 
   </div>
 

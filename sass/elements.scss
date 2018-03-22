@@ -183,7 +183,7 @@
 /*------------------------
   Navigation
 ------------------------*/
-.projects__navigation {
+.nav__wrapper {
   position: absolute;
   z-index: 24;
   right: 29px;
@@ -191,6 +191,35 @@
   margin-top: -90px;
   background: #fff;
   display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 50px;
+
+  span.nav__item {
+    position: relative;
+    display: inline-flex;
+    font-weight: 600;
+    font-size: 18px;
+    margin: 4px;
+
+    span.item__title {
+      position: absolute;
+      top: 0;
+      right: 40px;
+      width: max-content;
+    }
+  }
+}
+
+.projects__navigation {
+  position: absolute;
+  z-index: 24;
+  right: 29px;
+  top: 50%;
+  margin-top: -90px;
+  background: #fff;
+  display: none;
   flex-direction: column;
   justify-content: center;
   align-items: center;
@@ -700,7 +729,7 @@
           @include transform(translate(-11px, -11px));
         }
       }
-      
+
       p {
         @include transition(opacity 0.4s ease-in-out);
       }
