@@ -1052,30 +1052,68 @@ button {
 .nav__wrapper {
   position: absolute;
   z-index: 24;
-  right: 29px;
+  right: 38px;
   top: 50%;
   margin-top: -90px;
   background: #fff;
+  padding: 10px 0;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  width: 50px;
+  width: 30px;
 }
 
 .nav__wrapper span.nav__item {
   position: relative;
   display: inline-flex;
-  font-weight: 600;
-  font-size: 18px;
-  margin: 4px;
+  font-weight: 500;
+  font-size: 14px;
+  opacity: 0.2;
+  margin: 5px 0;
+  cursor: pointer;
+  -webkit-transition: all 0.4s ease-in-out;
+  -moz-transition: all 0.4s ease-in-out;
+  -ms-transition: all 0.4s ease-in-out;
+  -o-transition: all 0.4s ease-in-out;
+  transition: all 0.4s ease-in-out;
+}
+
+.nav__wrapper span.nav__item:hover {
+  opacity: 1;
+}
+
+.nav__wrapper span.nav__item:hover span.item__title {
+  -webkit-transform: translateY(0%);
+  -moz-transform: translateY(0%);
+  -ms-transform: translateY(0%);
+  -o-transform: translateY(0%);
+  transform: translateY(0%);
+  opacity: 1;
 }
 
 .nav__wrapper span.nav__item span.item__title {
   position: absolute;
   top: 0;
-  right: 50px;
+  right: 20px;
   width: max-content;
+  font-size: 10px;
+  font-weight: 600;
+  text-transform: uppercase;
+  line-height: 22px;
+  background: #fff;
+  padding: 0px 6px;
+  opacity: 0;
+  -webkit-transform: translateX(-15%);
+  -moz-transform: translateX(-15%);
+  -ms-transform: translateX(-15%);
+  -o-transform: translateX(-15%);
+  transform: translateX(-15%);
+  -webkit-transition: all 0.4s ease-in-out;
+  -moz-transition: all 0.4s ease-in-out;
+  -ms-transition: all 0.4s ease-in-out;
+  -o-transition: all 0.4s ease-in-out;
+  transition: all 0.4s ease-in-out;
 }
 
 .projects__navigation {

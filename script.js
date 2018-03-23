@@ -24,9 +24,37 @@ const projects = [
   }
 ];
 
+const nav = [
+  {
+    number: "01",
+    title: "Home"
+  },
+  {
+    number: "02",
+    title: "Back to your dream"
+  },
+  {
+    number: "03",
+    title: "Le Blog Zenchef"
+  },
+  {
+    number: "04",
+    title: "Contact"
+  }
+];
 //Add href, and alt for img
 
 let content = "";
+let navigation = "";
+
+nav.forEach(itemNav => {
+  navigation += ` <span class="nav__item" onClick="navPortfolio(${itemNav.number})">
+  ${itemNav.number}
+  <span class="item__title">${itemNav.title}</span>
+</span>`;
+});
+
+document.querySelector(".nav__wrapper").innerHTML = navigation;
 
 projects.forEach(project => {
   content += `<div class="project" id="project-${project.number}">
@@ -74,7 +102,9 @@ document.getElementById("projects").innerHTML = content;
 //	VARIABLES
 //-------------------------------------
 let projectNumber = document.querySelectorAll(".project").length;
-document.querySelector(".number__total span:last-child").textContent = projectNumber;
+document.querySelector(
+  ".number__total span:last-child"
+).textContent = projectNumber;
 
 //-------------------------------------
 //	GET ANSWER
@@ -97,16 +127,26 @@ function getAnswer(name, groupBubble, nbBubble) {
 //-------------------------------------
 function displayBubble(groupBubble, nbBubble) {
   for (let n = 0; n < 2; n++) {
-    document.querySelectorAll(".bubble--group:nth-child(" + groupBubble + ") .bubble")[n].classList.add("enable");
-    document.querySelector(".contact__form form").scrollTo(0, document.body.scrollHeight);
+    document
+      .querySelectorAll(".bubble--group:nth-child(" + groupBubble + ") .bubble")
+      [n].classList.add("enable");
+    document
+      .querySelector(".contact__form form")
+      .scrollTo(0, document.body.scrollHeight);
   }
 
   if (nbBubble == 3) {
     for (let n = 0; n < nbBubble; n++) {
       document
-        .querySelectorAll(".bubble--group:nth-child(" + groupBubble + ") .bubble--group__choice .bubble")
+        .querySelectorAll(
+          ".bubble--group:nth-child(" +
+            groupBubble +
+            ") .bubble--group__choice .bubble"
+        )
         [n].classList.add("enable__choice");
-      document.querySelector(".contact__form form").scrollTo(0, document.body.scrollHeight);
+      document
+        .querySelector(".contact__form form")
+        .scrollTo(0, document.body.scrollHeight);
     }
   }
 }
@@ -115,22 +155,39 @@ function displayBubble(groupBubble, nbBubble) {
 //	DISPLAY PROJECT
 //-------------------------------------
 function displayProject(project) {
-  let imgNumber = document.querySelectorAll(project + " .project__visuel img").length;
+  let imgNumber = document.querySelectorAll(project + " .project__visuel img")
+    .length;
   for (let i = 0; i < imgNumber; i++) {
-    document.querySelectorAll(project + " .project__visuel img")[i].classList.toggle("enable");
+    document
+      .querySelectorAll(project + " .project__visuel img")
+      [i].classList.toggle("enable");
   }
 
-  document.querySelector(project + " .project__visuel").classList.toggle("enable");
-  document.querySelector(project + " .description__number").classList.toggle("enable");
-  document.querySelector(project + " .description__title h2").classList.toggle("enable");
+  document
+    .querySelector(project + " .project__visuel")
+    .classList.toggle("enable");
+  document
+    .querySelector(project + " .description__number")
+    .classList.toggle("enable");
+  document
+    .querySelector(project + " .description__title h2")
+    .classList.toggle("enable");
 
   for (let j = 0; j < 3; j++) {
-    document.querySelectorAll(project + " .info span")[j].classList.toggle("enable");
-    document.querySelectorAll(project + " .info p")[j].classList.toggle("enable");
+    document
+      .querySelectorAll(project + " .info span")
+      [j].classList.toggle("enable");
+    document
+      .querySelectorAll(project + " .info p")
+      [j].classList.toggle("enable");
   }
 
-  document.querySelector(project + " .description p").classList.toggle("enable");
-  document.querySelector(project + " .description__wrapper .btn").classList.toggle("enable");
+  document
+    .querySelector(project + " .description p")
+    .classList.toggle("enable");
+  document
+    .querySelector(project + " .description__wrapper .btn")
+    .classList.toggle("enable");
 }
 
 function seeMyWork() {
@@ -143,11 +200,17 @@ function seeMyWork() {
 }
 
 function navigationProjects(parameter) {
-  let currentProjectNumber = parseInt(document.querySelector(".number__active span:last-child").innerHTML);
+  let currentProjectNumber = parseInt(
+    document.querySelector(".number__active span:last-child").innerHTML
+  );
 
-  if (currentProjectNumber + parameter <= projectNumber && currentProjectNumber + parameter > 0) {
+  if (
+    currentProjectNumber + parameter <= projectNumber &&
+    currentProjectNumber + parameter > 0
+  ) {
     //Dispay the current
-    document.querySelector(".number__active span:last-child").textContent = currentProjectNumber + parameter;
+    document.querySelector(".number__active span:last-child").textContent =
+      currentProjectNumber + parameter;
 
     let projectNext = "#project-0" + (currentProjectNumber + parameter);
     let projectPrev = "#project-0" + currentProjectNumber;
@@ -177,9 +240,15 @@ function navigationProjects(parameter) {
 
     //Hide last project
     setTimeout(function() {
-      document.querySelector("#project-0" + currentProjectNumber).classList.toggle("enable");
-      document.querySelector(".bubble--group:nth-child(1) .bubble").classList.add("enable");
-      document.querySelector(".bubble--group:nth-child(1) .bubble--answer").classList.add("enable");
+      document
+        .querySelector("#project-0" + currentProjectNumber)
+        .classList.toggle("enable");
+      document
+        .querySelector(".bubble--group:nth-child(1) .bubble")
+        .classList.add("enable");
+      document
+        .querySelector(".bubble--group:nth-child(1) .bubble--answer")
+        .classList.add("enable");
     }, 700);
   }
 }
