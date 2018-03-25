@@ -12,8 +12,8 @@
   border-radius: 50%;
   position: absolute;
   z-index: 32;
-  top: 30px;
-  right: 30px;
+  top: 20px;
+  right: 20px;
   cursor: pointer;
   @include transition(box-shadow 0.4s ease-in-out);
 
@@ -55,10 +55,9 @@
   background: #fff;
   padding: 0 14px;
   height: 38px;
-  line-height: 38px;
   position: absolute;
   z-index: 32;
-  bottom: 38px;
+  bottom: 28px;
   left: 50%;
   margin-left: -185px;
   border-radius: 2px;
@@ -68,7 +67,7 @@
     z-index: 10;
     margin: 0 15px;
     display: inline-block;
-    line-height: 1em;
+    line-height: 38px;
 
     span {
       display: inline-block;
@@ -88,7 +87,7 @@
       width: 100%;
       opacity: 0.1;
       left: 0;
-      bottom: -4px;
+      bottom: 10px;
       transform-origin: right center;
       @include transform(scaleX(0));
       @include transition(transform 0.4s ease-in-out);
@@ -160,6 +159,7 @@
       font-size: 24px;
       font-weight: 300;
       margin: 15px 0;
+      line-height: 1.3em;
     }
   }
 
@@ -186,7 +186,7 @@
 .nav__wrapper {
   position: absolute;
   z-index: 24;
-  right: 38px;
+  right: 28px;
   top: 50%;
   margin-top: -90px;
   background: #fff;
@@ -206,6 +206,15 @@
     margin: 5px 0;
     cursor: pointer;
     @include transition(all 0.4s ease-in-out);
+
+    &.active {
+      opacity: 1;
+      cursor: default;
+
+      &:hover span.item__title {
+        opacity: 0;
+      }
+    }
 
     &:hover {
       opacity: 1;
@@ -234,85 +243,6 @@
   }
 }
 
-.projects__navigation {
-  position: absolute;
-  z-index: 24;
-  right: 29px;
-  top: 50%;
-  margin-top: -90px;
-  background: #fff;
-  display: none;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  width: 50px;
-
-  span.navigation__arrow {
-    display: block;
-    margin: 16px 0 0 0;
-    width: 28px;
-    height: 28px;
-    border-radius: 50%;
-    border: 1px solid $dark-blue-10;
-    cursor: pointer;
-    @include transition(all 0.4s ease-in-out);
-
-    &:hover {
-      background: $primary-color;
-      box-shadow: 0 2px 8px $dark-blue-10;
-
-      &:after {
-        border-top: 1px solid #fff;
-        border-left: 1px solid #fff;
-      }
-    }
-
-    &:after {
-      content: "";
-      display: block;
-      width: 7px;
-      height: 7px;
-      border-top: 1px solid $primary-color;
-      border-left: 1px solid $primary-color;
-      @include transform(translate(9px, 11px) rotate(45deg));
-      @include transition(all 0.4s ease-in-out);
-    }
-  }
-
-  span.navigation__arrow--bottom {
-    margin: 0 0 16px 0;
-    @include transform(rotate(180deg));
-  }
-
-  div.navigation__number {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    margin: 8px 0;
-
-    p.number {
-      margin: 4px;
-      display: inline-flex;
-      font-weight: 600;
-
-      &.number__active {
-        font-size: 18px;
-      }
-
-      &.number__total {
-        font-size: 12px;
-      }
-    }
-
-    span.number__separator {
-      height: 1px;
-      width: 100%;
-      background: $dark-blue-10;
-      margin: 4px 0;
-    }
-  }
-}
-
 /*------------------------
   Project
 ------------------------*/
@@ -330,8 +260,20 @@
   }
 }
 
+#project-01 .project__visuel {
+  background: linear-gradient(45deg, #1d7d90, #5dd5c3);
+}
+
 #project-02 .project__visuel {
   background: linear-gradient(45deg, #f59e64, #eb5160);
+}
+
+#project-03 .project__visuel {
+  background: linear-gradient(45deg, #1d7d90, #5dd5c3);
+}
+
+#project-04 .project__visuel {
+  background: linear-gradient(45deg, #1d7d90, #5dd5c3);
 }
 
 //Project visuel
@@ -477,7 +419,6 @@
     font-style: italic;
     font-size: 14px;
     letter-spacing: 0.15em;
-    line-height: 26px;
     color: $dark-blue-50;
     margin: 20px 0 0 0;
     @include transform(translateY(125%));

@@ -1,3 +1,236 @@
-/*-----------------------------
-  MEDIA QUERIES
------------------------------*/
+//-------------------------------------
+//	MEDIA QUERIES
+//-------------------------------------
+
+@import "mixins.scss";
+@import "variables.scss";
+@media screen and (max-width: 1000px) {
+  /*------------------------
+    Project
+  ------------------------*/
+  .project {
+    flex-direction: column;
+  }
+
+  .project__visuel {
+    flex-basis: 40%;
+    margin-right: 0;
+    overflow: hidden;
+    .visuel__mockup {
+      height: 100%;
+      width: 100%;
+      max-width: 100%;
+      .mockup--desktop {
+        bottom: -110px;
+        position: absolute;
+        max-height: initial;
+        display: block;
+      }
+    }
+
+    img:last-child {
+      max-height: 90%;
+    }
+  }
+
+  .description__wrapper {
+    margin-left: 0;
+    margin-top: 20px;
+    text-align: center;
+    max-width: 600px;
+    width: 70%;
+
+    .btn {
+      margin-top: 20px;
+    }
+  }
+
+  .description__title {
+    margin: 30px 0 20px;
+  }
+
+  .description__number {
+    left: 0;
+    width: 100%;
+    top: -20px;
+    font-size: 80px;
+  }
+
+  //-------------------------------------
+  //	NAVIGATION
+  //-------------------------------------
+  .nav__wrapper {
+    top: 65%;
+  }
+}
+
+@media screen and (max-width: 650px) {
+  body:before {
+    display: none;
+  }
+
+  //-------------------------------------
+  //	NAVIGATION
+  //-------------------------------------
+  .nav__wrapper {
+    display: none;
+  }
+  //-------------------------------------
+  //	HOME
+  //-------------------------------------
+  .home {
+    padding: 0;
+    height: auto;
+    @include transform(translateY(0%) !important);
+    @include transition(transform 0.8s ease-in-out !important);
+
+    .home__presentation {
+      width: 100%;
+      margin: 40px 20px 10px;
+
+      p {
+        font-size: 22px;
+      }
+    }
+
+    img {
+      display: none;
+    }
+
+    .btn {
+      display: none;
+    }
+  }
+
+  //-------------------------------------
+  //	PROJECT
+  //-------------------------------------
+  .projects__wrapper {
+    position: relative;
+    top: 0;
+    left: 0;
+  }
+
+  .project {
+    display: flex;
+    height: auto;
+    flex-direction: column-reverse;
+    margin-bottom: 20px;
+    padding: 0;
+  }
+  .project__visuel {
+    height: 30vh;
+    margin-top: 30px;
+    border-radius: 0;
+    overflow: visible;
+    @include animation(0.6s fadeIn ease-in-out forwards);
+
+    .visuel__mockup {
+      .mockup--desktop {
+        opacity: 1;
+        bottom: 20px;
+        max-height: 120%;
+        height: auto;
+        width: auto;
+        @include animation(0.6s slideRight ease-out forwards);
+      }
+      .mockup--mobile {
+        opacity: 1;
+        bottom: 20px;
+        @include animation(0.6s slideRight ease-out forwards);
+      }
+    }
+  }
+
+  .description__wrapper {
+    width: 100%;
+    margin: 0 auto 55px;
+    text-align: left;
+    padding: 20px;
+    .btn {
+      @include animation(0.8s fadeIn ease-in-out forwards 0.6s);
+    }
+  }
+
+  .description__title {
+    margin: 30px 0 10px;
+    h2 {
+      font-size: 36px;
+      @include animation(0.6s slideTop ease-out forwards 0.8s);
+    }
+  }
+
+  .description__number {
+    width: auto;
+    left: 30px;
+    top: -5px;
+    @include animation(0.6s shadowDropIn ease-out forwards 0.8s);
+  }
+
+  .description {
+    p {
+      @include animation(0.6s slideTop ease-in-out forwards 0.8s);
+    }
+  }
+
+  .description__info {
+    span {
+      @include animation(0.8s fadeIn ease-in-out forwards 0.6s);
+    }
+
+    p {
+      @include animation(0.6s slideTop ease-in-out forwards 0.8s);
+    }
+  }
+
+  //-------------------------------------
+  //	CONTACT
+  //-------------------------------------
+  .contact__wrapper {
+    position: relative;
+    flex-direction: column;
+    height: auto;
+
+    &.disable {
+      @include transform(translateY(0%));
+      @include transition(transform 0.8s ease-in-out);
+    }
+  }
+
+  .contact__description .description__wrapper {
+    margin: 0 0 30px;
+
+    .description__number {
+      top: -20px;
+    }
+    .description__title {
+      margin: 20px 0 0;
+    }
+  }
+
+  .contact__form {
+    height: calc(100vh - 98px);
+    form {
+      margin: 0 20px 40px;
+      width: calc(100% - 40px);
+    }
+  }
+
+  .bubble--group:nth-child(1) .bubble,
+  .bubble--group:nth-child(1) .bubble--answer {
+    @include animation(bubble ease-in-out forwards 0.6s);
+    display: inline-block;
+  }
+
+  //-------------------------------------
+  //	LINKS
+  //-------------------------------------
+  .links {
+    position: relative;
+    bottom: auto;
+    left: auto;
+    margin: 0 auto 15px;
+    width: 100%;
+    text-align: center;
+  }
+}

@@ -17,8 +17,8 @@
   border-radius: 50%;
   position: absolute;
   z-index: 32;
-  top: 30px;
-  right: 30px;
+  top: 20px;
+  right: 20px;
   cursor: pointer;
   -webkit-transition: box-shadow 0.4s ease-in-out;
   -moz-transition: box-shadow 0.4s ease-in-out;
@@ -61,10 +61,9 @@
   background: #fff;
   padding: 0 14px;
   height: 38px;
-  line-height: 38px;
   position: absolute;
   z-index: 32;
-  bottom: 38px;
+  bottom: 28px;
   left: 50%;
   margin-left: -185px;
   border-radius: 2px;
@@ -75,7 +74,7 @@
   z-index: 10;
   margin: 0 15px;
   display: inline-block;
-  line-height: 1em;
+  line-height: 38px;
 }
 
 .links a span {
@@ -100,7 +99,7 @@
   width: 100%;
   opacity: 0.1;
   left: 0;
-  bottom: -4px;
+  bottom: 10px;
   transform-origin: right center;
   -webkit-transform: scaleX(0);
   -moz-transform: scaleX(0);
@@ -200,6 +199,7 @@
   font-size: 24px;
   font-weight: 300;
   margin: 15px 0;
+  line-height: 1.3em;
 }
 
 .home img {
@@ -221,7 +221,7 @@
 .nav__wrapper {
   position: absolute;
   z-index: 24;
-  right: 38px;
+  right: 28px;
   top: 50%;
   margin-top: -90px;
   background: #fff;
@@ -246,6 +246,15 @@
   -ms-transition: all 0.4s ease-in-out;
   -o-transition: all 0.4s ease-in-out;
   transition: all 0.4s ease-in-out;
+}
+
+.nav__wrapper span.nav__item.active {
+  opacity: 1;
+  cursor: default;
+}
+
+.nav__wrapper span.nav__item.active:hover span.item__title {
+  opacity: 0;
 }
 
 .nav__wrapper span.nav__item:hover {
@@ -285,101 +294,6 @@
   transition: all 0.4s ease-in-out;
 }
 
-.projects__navigation {
-  position: absolute;
-  z-index: 24;
-  right: 29px;
-  top: 50%;
-  margin-top: -90px;
-  background: #fff;
-  display: none;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  width: 50px;
-}
-
-.projects__navigation span.navigation__arrow {
-  display: block;
-  margin: 16px 0 0 0;
-  width: 28px;
-  height: 28px;
-  border-radius: 50%;
-  border: 1px solid rgba(6, 10, 46, 0.1);
-  cursor: pointer;
-  -webkit-transition: all 0.4s ease-in-out;
-  -moz-transition: all 0.4s ease-in-out;
-  -ms-transition: all 0.4s ease-in-out;
-  -o-transition: all 0.4s ease-in-out;
-  transition: all 0.4s ease-in-out;
-}
-
-.projects__navigation span.navigation__arrow:hover {
-  background: #2286B6;
-  box-shadow: 0 2px 8px rgba(6, 10, 46, 0.1);
-}
-
-.projects__navigation span.navigation__arrow:hover:after {
-  border-top: 1px solid #fff;
-  border-left: 1px solid #fff;
-}
-
-.projects__navigation span.navigation__arrow:after {
-  content: "";
-  display: block;
-  width: 7px;
-  height: 7px;
-  border-top: 1px solid #2286B6;
-  border-left: 1px solid #2286B6;
-  -webkit-transform: translate(9px, 11px) rotate(45deg);
-  -moz-transform: translate(9px, 11px) rotate(45deg);
-  -ms-transform: translate(9px, 11px) rotate(45deg);
-  -o-transform: translate(9px, 11px) rotate(45deg);
-  transform: translate(9px, 11px) rotate(45deg);
-  -webkit-transition: all 0.4s ease-in-out;
-  -moz-transition: all 0.4s ease-in-out;
-  -ms-transition: all 0.4s ease-in-out;
-  -o-transition: all 0.4s ease-in-out;
-  transition: all 0.4s ease-in-out;
-}
-
-.projects__navigation span.navigation__arrow--bottom {
-  margin: 0 0 16px 0;
-  -webkit-transform: rotate(180deg);
-  -moz-transform: rotate(180deg);
-  -ms-transform: rotate(180deg);
-  -o-transform: rotate(180deg);
-  transform: rotate(180deg);
-}
-
-.projects__navigation div.navigation__number {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  margin: 8px 0;
-}
-
-.projects__navigation div.navigation__number p.number {
-  margin: 4px;
-  display: inline-flex;
-  font-weight: 600;
-}
-
-.projects__navigation div.navigation__number p.number.number__active {
-  font-size: 18px;
-}
-
-.projects__navigation div.navigation__number p.number.number__total {
-  font-size: 12px;
-}
-
-.projects__navigation div.navigation__number span.number__separator {
-  height: 1px;
-  width: 100%;
-  background: rgba(6, 10, 46, 0.1);
-  margin: 4px 0;
-}
-
 /*------------------------
   Project
 ------------------------*/
@@ -397,8 +311,20 @@
   display: flex;
 }
 
+#project-01 .project__visuel {
+  background: linear-gradient(45deg, #1d7d90, #5dd5c3);
+}
+
 #project-02 .project__visuel {
   background: linear-gradient(45deg, #f59e64, #eb5160);
+}
+
+#project-03 .project__visuel {
+  background: linear-gradient(45deg, #1d7d90, #5dd5c3);
+}
+
+#project-04 .project__visuel {
+  background: linear-gradient(45deg, #1d7d90, #5dd5c3);
 }
 
 .project__visuel {
@@ -595,7 +521,6 @@
   font-style: italic;
   font-size: 14px;
   letter-spacing: 0.15em;
-  line-height: 26px;
   color: rgba(6, 10, 46, 0.5);
   margin: 20px 0 0 0;
   -webkit-transform: translateY(125%);

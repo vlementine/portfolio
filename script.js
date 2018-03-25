@@ -10,7 +10,8 @@ const projects = [
     year: "2016",
     description:
       "Option A, you kill me right here and now. Apparently I've made that very easy for you. You can kill me, no witnesses and then spend the next few weeks or months tracking down Jesse Pinkman and you kill him too. A pointless exercise it seems…",
-    image: "btyd"
+    image: "btyd",
+    href: " "
   },
   {
     number: "02",
@@ -20,7 +21,30 @@ const projects = [
     year: "2017",
     description:
       "Option A, you kill me right here and now. Apparently I've made that very easy for you. You can kill me, no witnesses and then spend the next few weeks or months tracking down Jesse Pinkman and you kill him too. A pointless exercise it seems…",
-    image: "blog-zenchef"
+    image: "blog-zenchef",
+    href: " "
+  },
+  {
+    number: "03",
+    title: "Alcatraz, 1962",
+    role: "Designer",
+    client: "IUT Laval",
+    year: "2015",
+    description:
+      "Option A, you kill me right here and now. Apparently I've made that very easy for you. You can kill me, no witnesses and then spend the next few weeks or months tracking down Jesse Pinkman and you kill him too. A pointless exercise it seems…",
+    image: "btyd",
+    href: " "
+  },
+  {
+    number: "04",
+    title: "La Maroquinerie",
+    role: "Designer",
+    client: "IESA Multimédia",
+    year: "2016",
+    description:
+      "Option A, you kill me right here and now. Apparently I've made that very easy for you. You can kill me, no witnesses and then spend the next few weeks or months tracking down Jesse Pinkman and you kill him too. A pointless exercise it seems…",
+    image: "btyd",
+    href: " "
   }
 ];
 
@@ -39,72 +63,27 @@ const nav = [
   },
   {
     number: "04",
+    title: "Alcatraz, 1962"
+  },
+  {
+    number: "05",
+    title: "La Maroquinerie"
+  },
+  {
+    number: "06",
     title: "Contact"
   }
 ];
-//Add href, and alt for img
 
-let content = "";
 let navigation = "";
 
 nav.forEach(itemNav => {
-  navigation += ` <span class="nav__item" onClick="navPortfolio(${itemNav.number})">
+  navigation += ` <span class="nav__item" onClick="navNew(${itemNav.number})">
   ${itemNav.number}
   <span class="item__title">${itemNav.title}</span>
-</span>`;
+  </span>`;
 });
-
 document.querySelector(".nav__wrapper").innerHTML = navigation;
-
-projects.forEach(project => {
-  content += `<div class="project" id="project-${project.number}">
-      <div class="project__visuel">
-        <div class="visuel__mockup">
-          <img class="mockup--desktop" src="img/${
-            project.image
-          }_visuel-home.png" alt="Visuel du Blog Zenchef" draggable="false">
-        </div>
-        <img src="img/${project.image}_letter.png" alt="B" draggable="false">
-      </div>
-
-      <div class="project__description">
-        <div class="description__wrapper">
-          <div class="description__title">
-            <h2> ${project.title} </h2>
-          </div>
-          <span class="description__number">${project.number}.</span>
-          <div class="description__info">
-            <div class="info">
-              <span>Rôle</span>
-              <p>${project.role}</p>
-            </div>
-            <div class="info">
-              <span>Client</span>
-              <p>${project.client}</p>
-            </div>
-            <div class="info">
-              <span>Année</span>
-              <p>${project.year}</p>
-            </div>
-          </div>
-          <div class="description">
-            <p>${project.description}</p>
-          </div>
-          <a class="btn" href="">Découvrir le projet</a>
-        </div>
-      </div>
-    </div>`;
-});
-
-document.getElementById("projects").innerHTML = content;
-
-//-------------------------------------
-//	VARIABLES
-//-------------------------------------
-let projectNumber = document.querySelectorAll(".project").length;
-document.querySelector(
-  ".number__total span:last-child"
-).textContent = projectNumber;
 
 //-------------------------------------
 //	GET ANSWER
@@ -196,53 +175,68 @@ function seeMyWork() {
 
   //Display first project
   document.querySelector("#project-01").classList.toggle("enable");
+  navActiveItem(2);
   displayProject("#project-01");
 }
 
-function navigationProjects(parameter) {
-  let currentProjectNumber = parseInt(
-    document.querySelector(".number__active span:last-child").innerHTML
+//-------------------------------------
+//	ACTIVE ITEM
+//-------------------------------------
+function navActiveItem(param) {
+  for (let n = 0; n < Object.keys(nav).length; n++) {
+    document.querySelectorAll("span.nav__item")[n].classList.remove("active");
+  }
+  document
+    .querySelector("span.nav__item:nth-child(" + param + ")")
+    .classList.add("active");
+}
+
+//-------------------------------------
+//	NAVIGATION
+//-------------------------------------
+function navNew(param) {
+  //Get the total of item of nav
+  let totalItemNav = Object.keys(nav).length;
+
+  //Get the number of item clicked
+  let projectClicked = parseInt(param) - 1;
+  let itemClicked = parseInt(param);
+
+  //Item active
+  let projectActive = parseInt(
+    document.querySelector(".project.enable").id.substr(-1)
   );
 
+  navActiveItem(projectClicked + 1);
+
+  let idToDisplay = "#project-0" + projectClicked;
+  let idToHide = "#" + document.querySelector(".project.enable").id;
+
   if (
-    currentProjectNumber + parameter <= projectNumber &&
-    currentProjectNumber + parameter > 0
+    projectClicked < totalItemNav - 1 &&
+    projectClicked !== 0 &&
+    projectClicked !== projectActive
   ) {
-    //Dispay the current
-    document.querySelector(".number__active span:last-child").textContent =
-      currentProjectNumber + parameter;
-
-    let projectNext = "#project-0" + (currentProjectNumber + parameter);
-    let projectPrev = "#project-0" + currentProjectNumber;
-
-    //Hide previous project
-    displayProject(projectPrev);
+    displayProject(idToHide);
 
     setTimeout(function() {
-      document.querySelector(projectPrev).classList.toggle("enable");
-      document.querySelector(projectNext).classList.toggle("enable");
-
-      //Display next project
-      displayProject(projectNext);
+      document.querySelector(idToHide).classList.toggle("enable");
+      document.querySelector(idToDisplay).classList.toggle("enable");
+      displayProject(idToDisplay);
     }, 800);
-  } else if (currentProjectNumber === 1) {
-    //Display Home
+  } else if (projectClicked === 0) {
     document.querySelector(".home").classList.toggle("disable");
+    displayProject(idToHide);
 
-    //Hide first project
-    displayProject("#project-01");
     setTimeout(function() {
-      document.querySelector("#project-01").classList.toggle("enable");
+      document.querySelector(idToHide).classList.toggle("enable");
     }, 700);
-  } else if (currentProjectNumber === projectNumber) {
-    //Display Contact
+  } else if (itemClicked == totalItemNav) {
     document.querySelector(".contact__wrapper").classList.toggle("disable");
+    displayProject(idToHide);
 
-    //Hide last project
     setTimeout(function() {
-      document
-        .querySelector("#project-0" + currentProjectNumber)
-        .classList.toggle("enable");
+      document.querySelector(idToHide).classList.toggle("enable");
       document
         .querySelector(".bubble--group:nth-child(1) .bubble")
         .classList.add("enable");
@@ -305,11 +299,119 @@ function sendEmail() {
     })
   );
 }
+
+//-------------------------------------
+//	RESPONSIVE
+//-------------------------------------
+function responsive() {
+  let windowWidth = window.innerWidth;
+
+  let content = "";
+  let contentResponsive = "";
+
+  projects.forEach(project => {
+    content += `<div class="project" id="project-${project.number}">
+          <div class="project__visuel">
+            <div class="visuel__mockup">
+              <img class="mockup--desktop" src="img/${
+                project.image
+              }_visuel-home.png" alt="Visuel du Blog Zenchef" draggable="false">
+            </div>
+            <img src="img/${
+              project.image
+            }_letter.png" alt="B" draggable="false">
+          </div>
+
+          <div class="project__description">
+            <div class="description__wrapper">
+              <div class="description__title">
+                <h2> ${project.title} </h2>
+              </div>
+              <span class="description__number">${project.number}.</span>
+              <div class="description__info">
+                <div class="info">
+                  <span>Rôle</span>
+                  <p>${project.role}</p>
+                </div>
+                <div class="info">
+                  <span>Client</span>
+                  <p>${project.client}</p>
+                </div>
+                <div class="info">
+                  <span>Année</span>
+                  <p>${project.year}</p>
+                </div>
+              </div>
+              <div class="description">
+                <p>${project.description}</p>
+              </div>
+              <a class="btn" href="">Découvrir le projet</a>
+            </div>
+          </div>
+        </div>`;
+  });
+
+  projects.forEach(projectResponsive => {
+    contentResponsive += `<a href="${
+      projectResponsive.href
+    }" class="project" id="project-${projectResponsive.number}">
+          <div class="project__visuel">
+            <div class="visuel__mockup">
+              <img class="mockup--desktop" src="img/${
+                projectResponsive.image
+              }_visuel-home.png" alt="Visuel du Blog Zenchef" draggable="false">
+            </div>
+            <img src="img/${
+              projectResponsive.image
+            }_letter.png" alt="B" draggable="false">
+          </div>
+
+          <div class="project__description">
+            <div class="description__wrapper">
+              <div class="description__title">
+                <h2> ${projectResponsive.title} </h2>
+              </div>
+              <span class="description__number">${
+                projectResponsive.number
+              }.</span>
+              <div class="description__info">
+                <div class="info">
+                  <span>Rôle</span>
+                  <p>${projectResponsive.role}</p>
+                </div>
+                <div class="info">
+                  <span>Client</span>
+                  <p>${projectResponsive.client}</p>
+                </div>
+                <div class="info">
+                  <span>Année</span>
+                  <p>${projectResponsive.year}</p>
+                </div>
+              </div>
+              <div class="description">
+                <p>${projectResponsive.description}</p>
+              </div>
+            </div>
+          </div>
+        </a>`;
+  });
+
+  if (windowWidth <= 650) {
+    console.log("plop");
+    document.getElementById("projects").innerHTML = contentResponsive;
+    document.querySelector(".home").classList.remove("disable");
+  } else {
+    console.log("ploup");
+    document.getElementById("projects").innerHTML = content;
+  }
+}
+
 //-------------------------------------
 //	MAIN FUNCTION
 //-------------------------------------
 function main() {
   document.querySelector(".btn__work").addEventListener("click", seeMyWork);
+  responsive();
 }
 
 document.onload = main();

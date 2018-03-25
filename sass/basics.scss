@@ -22,9 +22,9 @@ body {
 		content: '';
 		border: 1px solid $dark-blue-05;
 		position: absolute;
-		width: calc(100vw - 110px);
-		height: calc(100vh - 110px);
-		transform: translate(55px, 55px);
+		width: calc(100vw - 90px);
+		height: calc(100vh - 90px);
+		transform: translate(45px, 45px);
 	}
 }
 .visible-scrollbar, .invisible-scrollbar {
