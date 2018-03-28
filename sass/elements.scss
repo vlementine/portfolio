@@ -2,7 +2,7 @@
 @import "variables.scss";
 
 //-------------------------------------
-//	MENU
+//	ICON MENU
 //-------------------------------------
 .menu-btn {
   width: 50px;
@@ -46,7 +46,58 @@
     box-shadow: 0 2px 4px $dark-blue-20;
   }
 }
+//-------------------------------------
+//	MENU
+//-------------------------------------
+.menu__wrapper {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: 31;
+  background: #fff;
+  @include transform(translateY(0%));
+  opacity: 1;
+  @include transition(opacity 0.8s ease-in-out);
 
+  &.disable {
+    opacity: 0;
+    @include transition(opacity 0.8s ease-in-out);
+    @include transform(translateY(-100%));
+  }
+}
+
+.menu__content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-content: center;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+}
+
+.menu__item {
+  margin: 20px auto;
+  a {
+    font-family: "Playfair Display", serif;
+    font-weight: 900;
+    font-size: 46px;
+    color: $dark-blue-30;
+    @include transition(color 0.4s ease-in-out);
+
+    &:hover {
+      color: $primary-color;
+    }
+  }
+  p {
+    font-size: 14px;
+    text-transform: uppercase;
+    color: $dark-blue-30;
+    margin: 0;
+  }
+}
 //-------------------------------------
 //	LINKS
 //-------------------------------------

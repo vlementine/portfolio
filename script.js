@@ -106,26 +106,16 @@ function getAnswer(name, groupBubble, nbBubble) {
 //-------------------------------------
 function displayBubble(groupBubble, nbBubble) {
   for (let n = 0; n < 2; n++) {
-    document
-      .querySelectorAll(".bubble--group:nth-child(" + groupBubble + ") .bubble")
-      [n].classList.add("enable");
-    document
-      .querySelector(".contact__form form")
-      .scrollTo(0, document.body.scrollHeight);
+    document.querySelectorAll(".bubble--group:nth-child(" + groupBubble + ") .bubble")[n].classList.add("enable");
+    document.querySelector(".contact__form form").scrollTo(0, document.body.scrollHeight);
   }
 
   if (nbBubble == 3) {
     for (let n = 0; n < nbBubble; n++) {
       document
-        .querySelectorAll(
-          ".bubble--group:nth-child(" +
-            groupBubble +
-            ") .bubble--group__choice .bubble"
-        )
+        .querySelectorAll(".bubble--group:nth-child(" + groupBubble + ") .bubble--group__choice .bubble")
         [n].classList.add("enable__choice");
-      document
-        .querySelector(".contact__form form")
-        .scrollTo(0, document.body.scrollHeight);
+      document.querySelector(".contact__form form").scrollTo(0, document.body.scrollHeight);
     }
   }
 }
@@ -134,39 +124,41 @@ function displayBubble(groupBubble, nbBubble) {
 //	DISPLAY PROJECT
 //-------------------------------------
 function displayProject(project) {
-  let imgNumber = document.querySelectorAll(project + " .project__visuel img")
-    .length;
+  let imgNumber = document.querySelectorAll(project + " .project__visuel img").length;
   for (let i = 0; i < imgNumber; i++) {
-    document
-      .querySelectorAll(project + " .project__visuel img")
-      [i].classList.toggle("enable");
+    document.querySelectorAll(project + " .project__visuel img")[i].classList.add("enable");
   }
 
-  document
-    .querySelector(project + " .project__visuel")
-    .classList.toggle("enable");
-  document
-    .querySelector(project + " .description__number")
-    .classList.toggle("enable");
-  document
-    .querySelector(project + " .description__title h2")
-    .classList.toggle("enable");
+  document.querySelector(project + " .project__visuel").classList.add("enable");
+  document.querySelector(project + " .description__number").classList.add("enable");
+  document.querySelector(project + " .description__title h2").classList.add("enable");
 
   for (let j = 0; j < 3; j++) {
-    document
-      .querySelectorAll(project + " .info span")
-      [j].classList.toggle("enable");
-    document
-      .querySelectorAll(project + " .info p")
-      [j].classList.toggle("enable");
+    document.querySelectorAll(project + " .info span")[j].classList.add("enable");
+    document.querySelectorAll(project + " .info p")[j].classList.add("enable");
   }
 
-  document
-    .querySelector(project + " .description p")
-    .classList.toggle("enable");
-  document
-    .querySelector(project + " .description__wrapper .btn")
-    .classList.toggle("enable");
+  document.querySelector(project + " .description p").classList.add("enable");
+  document.querySelector(project + " .description__wrapper .btn").classList.add("enable");
+}
+
+function hideProject(project) {
+  let imgNumber = document.querySelectorAll(project + " .project__visuel img").length;
+  for (let i = 0; i < imgNumber; i++) {
+    document.querySelectorAll(project + " .project__visuel img")[i].classList.remove("enable");
+  }
+
+  document.querySelector(project + " .project__visuel").classList.remove("enable");
+  document.querySelector(project + " .description__number").classList.remove("enable");
+  document.querySelector(project + " .description__title h2").classList.remove("enable");
+
+  for (let j = 0; j < 3; j++) {
+    document.querySelectorAll(project + " .info span")[j].classList.remove("enable");
+    document.querySelectorAll(project + " .info p")[j].classList.remove("enable");
+  }
+
+  document.querySelector(project + " .description p").classList.remove("enable");
+  document.querySelector(project + " .description__wrapper .btn").classList.remove("enable");
 }
 
 function seeMyWork() {
@@ -174,7 +166,7 @@ function seeMyWork() {
   document.querySelector(".home").classList.add("disable");
 
   //Display first project
-  document.querySelector("#project-01").classList.toggle("enable");
+  document.querySelector("#project-01").classList.add("enable");
   navActiveItem(2);
   displayProject("#project-01");
 }
@@ -186,9 +178,7 @@ function navActiveItem(param) {
   for (let n = 0; n < Object.keys(nav).length; n++) {
     document.querySelectorAll("span.nav__item")[n].classList.remove("active");
   }
-  document
-    .querySelector("span.nav__item:nth-child(" + param + ")")
-    .classList.add("active");
+  document.querySelector("span.nav__item:nth-child(" + param + ")").classList.add("active");
 }
 
 //-------------------------------------
@@ -203,48 +193,45 @@ function navNew(param) {
   let itemClicked = parseInt(param);
 
   //Item active
-  let projectActive = parseInt(
-    document.querySelector(".project.enable").id.substr(-1)
-  );
+  let projectActive = parseInt(document.querySelector(".project.enable").id.substr(-1));
 
   navActiveItem(projectClicked + 1);
 
   let idToDisplay = "#project-0" + projectClicked;
   let idToHide = "#" + document.querySelector(".project.enable").id;
 
-  if (
-    projectClicked < totalItemNav - 1 &&
-    projectClicked !== 0 &&
-    projectClicked !== projectActive
-  ) {
-    displayProject(idToHide);
+  if (projectClicked < totalItemNav - 1 && projectClicked !== 0 && projectClicked !== projectActive) {
+    hideProject(idToHide);
 
     setTimeout(function() {
-      document.querySelector(idToHide).classList.toggle("enable");
-      document.querySelector(idToDisplay).classList.toggle("enable");
+      document.querySelector(idToHide).classList.remove("enable");
+      document.querySelector(idToDisplay).classList.add("enable");
       displayProject(idToDisplay);
     }, 800);
   } else if (projectClicked === 0) {
-    document.querySelector(".home").classList.toggle("disable");
-    displayProject(idToHide);
+    document.querySelector(".home").classList.remove("disable");
+    hideProject(idToHide);
 
     setTimeout(function() {
-      document.querySelector(idToHide).classList.toggle("enable");
+      document.querySelector(idToHide).classList.remove("enable");
     }, 700);
   } else if (itemClicked == totalItemNav) {
-    document.querySelector(".contact__wrapper").classList.toggle("disable");
-    displayProject(idToHide);
+    document.querySelector(".contact__wrapper").classList.remove("disable");
+    hideProject(idToHide);
 
     setTimeout(function() {
-      document.querySelector(idToHide).classList.toggle("enable");
-      document
-        .querySelector(".bubble--group:nth-child(1) .bubble")
-        .classList.add("enable");
-      document
-        .querySelector(".bubble--group:nth-child(1) .bubble--answer")
-        .classList.add("enable");
+      document.querySelector(idToHide).classList.remove("enable");
+      document.querySelector(".bubble--group:nth-child(1) .bubble").classList.add("enable");
+      document.querySelector(".bubble--group:nth-child(1) .bubble--answer").classList.add("enable");
     }, 700);
   }
+}
+
+//-------------------------------------
+//	MENU
+//-------------------------------------
+function displayMenu() {
+  document.querySelector(".menu__wrapper").classList.toggle("disable");
 }
 
 //-------------------------------------
@@ -317,9 +304,7 @@ function responsive() {
                 project.image
               }_visuel-home.png" alt="Visuel du Blog Zenchef" draggable="false">
             </div>
-            <img src="img/${
-              project.image
-            }_letter.png" alt="B" draggable="false">
+            <img src="img/${project.image}_letter.png" alt="B" draggable="false">
           </div>
 
           <div class="project__description">
@@ -345,25 +330,21 @@ function responsive() {
               <div class="description">
                 <p>${project.description}</p>
               </div>
-              <a class="btn" href="">Découvrir le projet</a>
+              <a class="btn" href="${project.href}">Découvrir le projet</a>
             </div>
           </div>
         </div>`;
   });
 
   projects.forEach(projectResponsive => {
-    contentResponsive += `<a href="${
-      projectResponsive.href
-    }" class="project" id="project-${projectResponsive.number}">
+    contentResponsive += `<a href="${projectResponsive.href}" class="project" id="project-${projectResponsive.number}">
           <div class="project__visuel">
             <div class="visuel__mockup">
               <img class="mockup--desktop" src="img/${
                 projectResponsive.image
               }_visuel-home.png" alt="Visuel du Blog Zenchef" draggable="false">
             </div>
-            <img src="img/${
-              projectResponsive.image
-            }_letter.png" alt="B" draggable="false">
+            <img src="img/${projectResponsive.image}_letter.png" alt="B" draggable="false">
           </div>
 
           <div class="project__description">
@@ -371,9 +352,7 @@ function responsive() {
               <div class="description__title">
                 <h2> ${projectResponsive.title} </h2>
               </div>
-              <span class="description__number">${
-                projectResponsive.number
-              }.</span>
+              <span class="description__number">${projectResponsive.number}.</span>
               <div class="description__info">
                 <div class="info">
                   <span>Rôle</span>
