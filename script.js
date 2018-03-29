@@ -232,22 +232,37 @@ function navNew(param) {
 //-------------------------------------
 function displayMenu() {
   document.querySelector(".menu__wrapper").classList.toggle("disable");
+
+  //Animation menu
 }
 
 function navMenu(param) {
-  console.log(param);
-  let idToHide = "#" + document.querySelector(".project.enable").id;
-  // document.querySelectorAll('.project').forEach(element => 
-  //   element.classList.contains('enable') ?  element.classList.remove('enable') : ''
-  // )
-  if(param == "home"){
-    displayMenu();
+  let hideProject = document
+    .querySelectorAll(".project")
+    .forEach(element => (element.classList.contains("enable") ? element.classList.remove("enable") : ""));
+  displayMenu();
+  if (param == "home") {
+    hideProject;
     document.querySelector(".home").classList.remove("disable");
-    hideProject(idToHide);
+    document.querySelector(".contact__wrapper").classList.add("disable");
+  } else if (param == "work") {
+    hideProject;
+    document.querySelector(".home").classList.add("disable");
+    document.querySelector(".contact__wrapper").classList.add("disable");
+    navActiveItem(2);
+    setTimeout(function() {
+      document.querySelector("#project-01").classList.add("enable");
+      displayProject("#project-01");
+    }, 500);
+  } else if (param == "contact") {
+    hideProject;
+    document.querySelector(".contact__wrapper").classList.remove("disable");
 
     setTimeout(function() {
-      document.querySelector(idToHide).classList.remove("enable");
-    }, 700);
+      document.querySelector(".bubble--group:nth-child(1) .bubble").classList.add("enable");
+      document.querySelector(".bubble--group:nth-child(1) .bubble--answer").classList.add("enable");
+      document.querySelector(".home").classList.add("disable");
+    }, 500);
   }
 }
 
