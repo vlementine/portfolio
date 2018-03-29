@@ -80,11 +80,13 @@
 
 .menu__item {
   margin: 20px auto;
-  a {
+  h2 {
     font-family: "Playfair Display", serif;
     font-weight: 900;
     font-size: 46px;
     color: $dark-blue-30;
+    margin: 0;
+    cursor: pointer;
     @include transition(color 0.4s ease-in-out);
 
     &:hover {

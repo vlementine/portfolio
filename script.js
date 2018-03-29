@@ -234,6 +234,23 @@ function displayMenu() {
   document.querySelector(".menu__wrapper").classList.toggle("disable");
 }
 
+function navMenu(param) {
+  console.log(param);
+  let idToHide = "#" + document.querySelector(".project.enable").id;
+  // document.querySelectorAll('.project').forEach(element => 
+  //   element.classList.contains('enable') ?  element.classList.remove('enable') : ''
+  // )
+  if(param == "home"){
+    displayMenu();
+    document.querySelector(".home").classList.remove("disable");
+    hideProject(idToHide);
+
+    setTimeout(function() {
+      document.querySelector(idToHide).classList.remove("enable");
+    }, 700);
+  }
+}
+
 //-------------------------------------
 //	VALIDATE EMAIL
 //-------------------------------------
