@@ -15,35 +15,60 @@
   top: 20px;
   right: 20px;
   cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   @include transition(box-shadow 0.4s ease-in-out);
 
+  .menu__icon {
+    width: 20px;
+    height: 16px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-content: center;
+  }
+
+  &:hover {
+    .menu__icon--open span:after {
+      opacity: 0.6;
+      transform-origin: left center;
+      transform: scaleX(1);
+    }
+    box-shadow: 0 2px 4px $dark-blue-20;
+  }
+}
+
+.menu__icon--open {
   span {
     width: 20px;
     height: 2px;
     background: $dark-blue-80;
     display: block;
-    text-align: center;
-    margin: 25px auto;
-
-    &:before {
-      content: "";
-      display: block;
-      width: 20px;
-      height: 2px;
-      box-shadow: 0 7px 0 $dark-blue-80;
-    }
+    position: relative;
 
     &:after {
       content: "";
+      position: absolute;
       display: block;
-      width: 20px;
+      background: #fff;
       height: 2px;
-      box-shadow: 0 -9px 0 $dark-blue-80;
+      width: 100%;
+      opacity: 0.4;
+      left: 0;
+      bottom: 0;
+      transform-origin: right center;
+      @include transform(scaleX(0));
+      @include transition(transform 0.4s ease-in-out);
     }
-  }
 
-  &:hover {
-    box-shadow: 0 2px 4px $dark-blue-20;
+    &:nth-child(1):after {
+      @include transition(transform 0.4s ease-in-out 0.2s);
+    }
+
+    &:nth-child(3):after {
+      @include transition(transform 0.4s ease-in-out 0.2s);
+    }
   }
 }
 //-------------------------------------

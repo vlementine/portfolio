@@ -20,6 +20,9 @@
   top: 20px;
   right: 20px;
   cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   -webkit-transition: box-shadow 0.4s ease-in-out;
   -moz-transition: box-shadow 0.4s ease-in-out;
   -ms-transition: box-shadow 0.4s ease-in-out;
@@ -27,33 +30,70 @@
   transition: box-shadow 0.4s ease-in-out;
 }
 
-.menu-btn span {
+.menu-btn .menu__icon {
   width: 20px;
-  height: 2px;
-  background: rgba(6, 10, 46, 0.8);
-  display: block;
-  text-align: center;
-  margin: 25px auto;
-}
-
-.menu-btn span:before {
-  content: "";
-  display: block;
-  width: 20px;
-  height: 2px;
-  box-shadow: 0 7px 0 rgba(6, 10, 46, 0.8);
-}
-
-.menu-btn span:after {
-  content: "";
-  display: block;
-  width: 20px;
-  height: 2px;
-  box-shadow: 0 -9px 0 rgba(6, 10, 46, 0.8);
+  height: 16px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-content: center;
 }
 
 .menu-btn:hover {
   box-shadow: 0 2px 4px rgba(6, 10, 46, 0.2);
+}
+
+.menu-btn:hover .menu__icon--open span:after {
+  opacity: 0.6;
+  transform-origin: left center;
+  transform: scaleX(1);
+}
+
+.menu__icon--open span {
+  width: 20px;
+  height: 2px;
+  background: rgba(6, 10, 46, 0.8);
+  display: block;
+  position: relative;
+}
+
+.menu__icon--open span:after {
+  content: "";
+  position: absolute;
+  display: block;
+  background: #fff;
+  height: 2px;
+  width: 100%;
+  opacity: 0.4;
+  left: 0;
+  bottom: 0;
+  transform-origin: right center;
+  -webkit-transform: scaleX(0);
+  -moz-transform: scaleX(0);
+  -ms-transform: scaleX(0);
+  -o-transform: scaleX(0);
+  transform: scaleX(0);
+  -webkit-transition: transform 0.4s ease-in-out;
+  -moz-transition: transform 0.4s ease-in-out;
+  -ms-transition: transform 0.4s ease-in-out;
+  -o-transition: transform 0.4s ease-in-out;
+  transition: transform 0.4s ease-in-out;
+}
+
+.menu__icon--open span:nth-child(1):after {
+  -webkit-transition: transform 0.4s ease-in-out 0.2s;
+  -moz-transition: transform 0.4s ease-in-out 0.2s;
+  -ms-transition: transform 0.4s ease-in-out 0.2s;
+  -o-transition: transform 0.4s ease-in-out 0.2s;
+  transition: transform 0.4s ease-in-out 0.2s;
+}
+
+.menu__icon--open span:nth-child(3):after {
+  -webkit-transition: transform 0.4s ease-in-out 0.2s;
+  -moz-transition: transform 0.4s ease-in-out 0.2s;
+  -ms-transition: transform 0.4s ease-in-out 0.2s;
+  -o-transition: transform 0.4s ease-in-out 0.2s;
+  transition: transform 0.4s ease-in-out 0.2s;
 }
 
 .menu__wrapper {
