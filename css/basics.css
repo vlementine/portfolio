@@ -32,6 +32,10 @@ body:before {
   transform: translate(45px, 45px);
 }
 
+body.menu-visible {
+  overflow: hidden;
+}
+
 .visible-scrollbar, .invisible-scrollbar {
   display: block;
   width: 10em;

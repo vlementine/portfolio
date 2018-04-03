@@ -25,7 +25,11 @@ body {
 		width: calc(100vw - 90px);
 		height: calc(100vh - 90px);
     transform: translate(45px, 45px);
-	}
+  }
+  
+  &.menu-visible {
+    overflow: hidden;
+  }
 }
 .visible-scrollbar, .invisible-scrollbar {
   display: block;

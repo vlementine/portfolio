@@ -10,7 +10,7 @@
   background: #fff;
   box-shadow: 0 2px 4px $dark-blue-10;
   border-radius: 50%;
-  position: absolute;
+  position: fixed;
   z-index: 32;
   top: 20px;
   right: 20px;
@@ -23,63 +23,77 @@
   .menu__icon {
     width: 20px;
     height: 16px;
-    display: flex;
+    display: none;
     flex-direction: column;
     justify-content: space-between;
     align-content: center;
+
+    span {
+      width: 20px;
+      height: 2px;
+      background: $dark-blue-80;
+      display: block;
+      position: relative;
+      &:after {
+        content: "";
+        position: absolute;
+        display: block;
+        background: #fff;
+        height: 2px;
+        width: 100%;
+        opacity: 0.4;
+        left: 0;
+        bottom: 0;
+        transform-origin: right center;
+        @include transform(scaleX(0));
+        @include transition(transform 0.4s ease-in-out);
+      }
+
+      &:nth-child(1):after {
+        @include transition(transform 0.4s ease-in-out 0.2s);
+      }
+
+      &:nth-child(3):after {
+        @include transition(transform 0.4s ease-in-out 0.2s);
+      }
+    }
+
+    &.enable {
+      display: flex;
+    }
   }
 
   &:hover {
-    .menu__icon--open span:after {
+    .menu__icon span:after {
       opacity: 0.6;
       transform-origin: left center;
       transform: scaleX(1);
     }
     box-shadow: 0 2px 4px $dark-blue-20;
   }
-}
 
-.menu__icon--open {
-  span {
-    width: 20px;
-    height: 2px;
-    background: $dark-blue-80;
-    display: block;
-    position: relative;
-
-    &:after {
-      content: "";
-      position: absolute;
-      display: block;
-      background: #fff;
-      height: 2px;
-      width: 100%;
-      opacity: 0.4;
-      left: 0;
-      bottom: 0;
-      transform-origin: right center;
-      @include transform(scaleX(0));
-      @include transition(transform 0.4s ease-in-out);
+  .menu__icon--close {
+    justify-content: center;
+    span:first-child {
+      @include transform(rotate(45deg));
     }
-
-    &:nth-child(1):after {
-      @include transition(transform 0.4s ease-in-out 0.2s);
-    }
-
-    &:nth-child(3):after {
-      @include transition(transform 0.4s ease-in-out 0.2s);
+    span:last-child {
+      @include transform(rotate(-45deg));
+      margin-top: -2px;
     }
   }
 }
+
 //-------------------------------------
 //	MENU
 //-------------------------------------
 .menu__wrapper {
-  position: absolute;
+  position: fixed;
   top: 0;
   left: 0;
-  width: 100vw;
-  height: 100vh;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
   z-index: 31;
   background: #fff;
   @include transform(translateY(0%));
@@ -133,7 +147,7 @@
   background: #fff;
   padding: 0 14px;
   height: 38px;
-  position: absolute;
+  position: fixed;
   z-index: 32;
   bottom: 28px;
   left: 50%;
@@ -191,6 +205,19 @@
         @include transform(scaleX(1));
         opacity: 0.2;
       }
+    }
+  }
+
+  &.menu-visible {
+    opacity: 0;
+    position: fixed;
+    left: 50%;
+    margin: auto 0 auto -185px;
+    bottom: 28px;
+    width: auto;
+    background: transparent;
+    &.enable {
+      @include animation(0.6s fadeIn ease-in-out forwards);
     }
   }
 }

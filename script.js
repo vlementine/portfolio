@@ -1,15 +1,13 @@
 //-------------------------------------
 //	JSON
 //-------------------------------------
-const projects = [
-  {
+const projects = [{
     number: "01",
     title: "Back to your dream",
     role: "Designer",
     client: "IESA Multimédia",
     year: "2016",
-    description:
-      "Option A, you kill me right here and now. Apparently I've made that very easy for you. You can kill me, no witnesses and then spend the next few weeks or months tracking down Jesse Pinkman and you kill him too. A pointless exercise it seems…",
+    description: "Option A, you kill me right here and now. Apparently I've made that very easy for you. You can kill me, no witnesses and then spend the next few weeks or months tracking down Jesse Pinkman and you kill him too. A pointless exercise it seems…",
     image: "btyd",
     href: " "
   },
@@ -19,8 +17,7 @@ const projects = [
     role: "Designer",
     client: "Zenchef",
     year: "2017",
-    description:
-      "Option A, you kill me right here and now. Apparently I've made that very easy for you. You can kill me, no witnesses and then spend the next few weeks or months tracking down Jesse Pinkman and you kill him too. A pointless exercise it seems…",
+    description: "Option A, you kill me right here and now. Apparently I've made that very easy for you. You can kill me, no witnesses and then spend the next few weeks or months tracking down Jesse Pinkman and you kill him too. A pointless exercise it seems…",
     image: "blog-zenchef",
     href: " "
   },
@@ -30,8 +27,7 @@ const projects = [
     role: "Designer",
     client: "IUT Laval",
     year: "2015",
-    description:
-      "Option A, you kill me right here and now. Apparently I've made that very easy for you. You can kill me, no witnesses and then spend the next few weeks or months tracking down Jesse Pinkman and you kill him too. A pointless exercise it seems…",
+    description: "Option A, you kill me right here and now. Apparently I've made that very easy for you. You can kill me, no witnesses and then spend the next few weeks or months tracking down Jesse Pinkman and you kill him too. A pointless exercise it seems…",
     image: "btyd",
     href: " "
   },
@@ -41,15 +37,13 @@ const projects = [
     role: "Designer",
     client: "IESA Multimédia",
     year: "2016",
-    description:
-      "Option A, you kill me right here and now. Apparently I've made that very easy for you. You can kill me, no witnesses and then spend the next few weeks or months tracking down Jesse Pinkman and you kill him too. A pointless exercise it seems…",
+    description: "Option A, you kill me right here and now. Apparently I've made that very easy for you. You can kill me, no witnesses and then spend the next few weeks or months tracking down Jesse Pinkman and you kill him too. A pointless exercise it seems…",
     image: "btyd",
     href: " "
   }
 ];
 
-const nav = [
-  {
+const nav = [{
     number: "01",
     title: "Home"
   },
@@ -113,8 +107,7 @@ function displayBubble(groupBubble, nbBubble) {
   if (nbBubble == 3) {
     for (let n = 0; n < nbBubble; n++) {
       document
-        .querySelectorAll(".bubble--group:nth-child(" + groupBubble + ") .bubble--group__choice .bubble")
-        [n].classList.add("enable__choice");
+        .querySelectorAll(".bubble--group:nth-child(" + groupBubble + ") .bubble--group__choice .bubble")[n].classList.add("enable__choice");
       document.querySelector(".contact__form form").scrollTo(0, document.body.scrollHeight);
     }
   }
@@ -203,7 +196,7 @@ function navNew(param) {
   if (projectClicked < totalItemNav - 1 && projectClicked !== 0 && projectClicked !== projectActive) {
     hideProject(idToHide);
 
-    setTimeout(function() {
+    setTimeout(function () {
       document.querySelector(idToHide).classList.remove("enable");
       document.querySelector(idToDisplay).classList.add("enable");
       displayProject(idToDisplay);
@@ -212,14 +205,14 @@ function navNew(param) {
     document.querySelector(".home").classList.remove("disable");
     hideProject(idToHide);
 
-    setTimeout(function() {
+    setTimeout(function () {
       document.querySelector(idToHide).classList.remove("enable");
     }, 700);
   } else if (itemClicked == totalItemNav) {
     document.querySelector(".contact__wrapper").classList.remove("disable");
     hideProject(idToHide);
 
-    setTimeout(function() {
+    setTimeout(function () {
       document.querySelector(idToHide).classList.remove("enable");
       document.querySelector(".bubble--group:nth-child(1) .bubble").classList.add("enable");
       document.querySelector(".bubble--group:nth-child(1) .bubble--answer").classList.add("enable");
@@ -232,7 +225,11 @@ function navNew(param) {
 //-------------------------------------
 function displayMenu() {
   document.querySelector(".menu__wrapper").classList.toggle("disable");
-
+  document.querySelector(".menu__icon--open").classList.toggle("enable");
+  document.querySelector(".menu__icon--close").classList.toggle("enable");
+  document.querySelector("body").classList.toggle("menu-visible");
+  document.querySelector(".links").classList.toggle("menu-visible");
+  document.querySelector(".links").classList.toggle("enable");
   //Animation menu
 }
 
@@ -250,7 +247,7 @@ function navMenu(param) {
     document.querySelector(".home").classList.add("disable");
     document.querySelector(".contact__wrapper").classList.add("disable");
     navActiveItem(2);
-    setTimeout(function() {
+    setTimeout(function () {
       document.querySelector("#project-01").classList.add("enable");
       displayProject("#project-01");
     }, 500);
@@ -258,7 +255,7 @@ function navMenu(param) {
     hideProject;
     document.querySelector(".contact__wrapper").classList.remove("disable");
 
-    setTimeout(function() {
+    setTimeout(function () {
       document.querySelector(".bubble--group:nth-child(1) .bubble").classList.add("enable");
       document.querySelector(".bubble--group:nth-child(1) .bubble--answer").classList.add("enable");
       document.querySelector(".home").classList.add("disable");

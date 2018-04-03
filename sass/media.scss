@@ -112,6 +112,7 @@
   }
 
   .project {
+    width: 100%;
     display: flex;
     height: auto;
     flex-direction: column-reverse;
@@ -190,6 +191,7 @@
   //	CONTACT
   //-------------------------------------
   .contact__wrapper {
+    width: 100%;
     position: relative;
     flex-direction: column;
     height: auto;

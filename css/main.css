@@ -782,6 +782,10 @@ body:before {
   transform: translate(45px, 45px);
 }
 
+body.menu-visible {
+  overflow: hidden;
+}
+
 .visible-scrollbar, .invisible-scrollbar {
   display: block;
   width: 10em;
@@ -848,7 +852,7 @@ button {
   background: #fff;
   box-shadow: 0 2px 4px rgba(6, 10, 46, 0.1);
   border-radius: 50%;
-  position: absolute;
+  position: fixed;
   z-index: 32;
   top: 20px;
   right: 20px;
@@ -866,23 +870,13 @@ button {
 .menu-btn .menu__icon {
   width: 20px;
   height: 16px;
-  display: flex;
+  display: none;
   flex-direction: column;
   justify-content: space-between;
   align-content: center;
 }
 
-.menu-btn:hover {
-  box-shadow: 0 2px 4px rgba(6, 10, 46, 0.2);
-}
-
-.menu-btn:hover .menu__icon--open span:after {
-  opacity: 0.6;
-  transform-origin: left center;
-  transform: scaleX(1);
-}
-
-.menu__icon--open span {
+.menu-btn .menu__icon span {
   width: 20px;
   height: 2px;
   background: rgba(6, 10, 46, 0.8);
@@ -890,7 +884,7 @@ button {
   position: relative;
 }
 
-.menu__icon--open span:after {
+.menu-btn .menu__icon span:after {
   content: "";
   position: absolute;
   display: block;
@@ -913,7 +907,7 @@ button {
   transition: transform 0.4s ease-in-out;
 }
 
-.menu__icon--open span:nth-child(1):after {
+.menu-btn .menu__icon span:nth-child(1):after {
   -webkit-transition: transform 0.4s ease-in-out 0.2s;
   -moz-transition: transform 0.4s ease-in-out 0.2s;
   -ms-transition: transform 0.4s ease-in-out 0.2s;
@@ -921,20 +915,56 @@ button {
   transition: transform 0.4s ease-in-out 0.2s;
 }
 
-.menu__icon--open span:nth-child(3):after {
+.menu-btn .menu__icon span:nth-child(3):after {
   -webkit-transition: transform 0.4s ease-in-out 0.2s;
   -moz-transition: transform 0.4s ease-in-out 0.2s;
   -ms-transition: transform 0.4s ease-in-out 0.2s;
   -o-transition: transform 0.4s ease-in-out 0.2s;
   transition: transform 0.4s ease-in-out 0.2s;
+}
+
+.menu-btn .menu__icon.enable {
+  display: flex;
+}
+
+.menu-btn:hover {
+  box-shadow: 0 2px 4px rgba(6, 10, 46, 0.2);
+}
+
+.menu-btn:hover .menu__icon span:after {
+  opacity: 0.6;
+  transform-origin: left center;
+  transform: scaleX(1);
+}
+
+.menu-btn .menu__icon--close {
+  justify-content: center;
+}
+
+.menu-btn .menu__icon--close span:first-child {
+  -webkit-transform: rotate(45deg);
+  -moz-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  -o-transform: rotate(45deg);
+  transform: rotate(45deg);
+}
+
+.menu-btn .menu__icon--close span:last-child {
+  -webkit-transform: rotate(-45deg);
+  -moz-transform: rotate(-45deg);
+  -ms-transform: rotate(-45deg);
+  -o-transform: rotate(-45deg);
+  transform: rotate(-45deg);
+  margin-top: -2px;
 }
 
 .menu__wrapper {
-  position: absolute;
+  position: fixed;
   top: 0;
   left: 0;
-  width: 100vw;
-  height: 100vh;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
   z-index: 31;
   background: #fff;
   -webkit-transform: translateY(0%);
@@ -1008,7 +1038,7 @@ button {
   background: #fff;
   padding: 0 14px;
   height: 38px;
-  position: absolute;
+  position: fixed;
   z-index: 32;
   bottom: 28px;
   left: 50%;
@@ -1088,6 +1118,24 @@ button {
   -o-transform: scaleX(1);
   transform: scaleX(1);
   opacity: 0.2;
+}
+
+.links.menu-visible {
+  opacity: 0;
+  position: fixed;
+  left: 50%;
+  margin: auto 0 auto -185px;
+  bottom: 28px;
+  width: auto;
+  background: transparent;
+}
+
+.links.menu-visible.enable {
+  -webkit-animation: 0.6s fadeIn ease-in-out forwards;
+  -moz-animation: 0.6s fadeIn ease-in-out forwards;
+  -ms-animation: 0.6s fadeIn ease-in-out forwards;
+  -o-transition: 0.6s fadeIn ease-in-out forwards;
+  animation: 0.6s fadeIn ease-in-out forwards;
 }
 
 .home {
@@ -1970,6 +2018,7 @@ button {
     left: 0;
   }
   .project {
+    width: 100%;
     display: flex;
     height: auto;
     flex-direction: column-reverse;
@@ -2067,6 +2116,7 @@ button {
     animation: 0.6s slideTop ease-in-out forwards 0.8s;
   }
   .contact__wrapper {
+    width: 100%;
     position: relative;
     flex-direction: column;
     height: auto;
