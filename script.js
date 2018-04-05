@@ -1,6 +1,7 @@
 //-------------------------------------
 //	JSON
 //-------------------------------------
+let windowWidth = window.innerWidth;
 const projects = [{
     number: "01",
     title: "Back to your dream",
@@ -228,8 +229,10 @@ function displayMenu() {
   document.querySelector(".menu__icon--open").classList.toggle("enable");
   document.querySelector(".menu__icon--close").classList.toggle("enable");
   document.querySelector("body").classList.toggle("menu-visible");
-  document.querySelector(".links").classList.toggle("menu-visible");
-  document.querySelector(".links").classList.toggle("enable");
+  if (windowWidth <= 650) {
+    document.querySelector(".links").classList.toggle("menu-visible");
+    document.querySelector(".links").classList.toggle("enable");
+  }
   //Animation menu
 }
 
@@ -320,7 +323,7 @@ function sendEmail() {
 //	RESPONSIVE
 //-------------------------------------
 function responsive() {
-  let windowWidth = window.innerWidth;
+
 
   let content = "";
   let contentResponsive = "";

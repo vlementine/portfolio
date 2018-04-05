@@ -1,7 +1,7 @@
 /*-----------------------------
   MIXINS
 -----------------------------*/
-@mixin transition($param-transition) {
+@mixin transition($param-transition...) {
 	-webkit-transition: $param-transition;
 	-moz-transition: $param-transition;
 	-ms-transition: $param-transition;
