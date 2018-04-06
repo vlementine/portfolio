@@ -1751,7 +1751,6 @@ button {
 
 .bubble textarea {
   height: auto;
-  min-height: 60px;
 }
 
 .bubble ::-webkit-input-placeholder {

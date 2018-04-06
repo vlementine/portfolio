@@ -97,6 +97,27 @@ function getAnswer(name, groupBubble, nbBubble) {
 }
 
 //-------------------------------------
+//	AUTO-REZISE © Zenchef
+//-------------------------------------
+const textareaChat = document.querySelector('#messageAnswer')
+textareaChat.addEventListener('input', autoSize, false);
+const TEXTAREA_CONFIG = {
+  LINE_HEIGHT: 18, // adjust textarea lineheight
+  PADDING: 0  // adjust textarea padding vertical
+}
+function autoSize() {
+  if (textareaChat) {
+    textareaChat.setAttribute('rows', 2)
+    const rowsRequired = parseInt(
+      (textareaChat.scrollHeight - TEXTAREA_CONFIG.PADDING) / TEXTAREA_CONFIG.LINE_HEIGHT
+    )
+    if (rowsRequired !== parseInt(textareaChat.getAttribute('rows'))) {
+      textareaChat.setAttribute('rows', rowsRequired)
+    }
+  }
+}
+
+//-------------------------------------
 //	DISPLAY BUBBLE
 //-------------------------------------
 function displayBubble(groupBubble, nbBubble) {
@@ -285,7 +306,7 @@ function validate(groupBubble, nbBubble) {
     sendEmail();
   } else {
     result.innerText = "L'adresse n'est pas valide";
-    result.style.color = "red";
+    result.style.color = "crimson";
   }
   return false;
 }
@@ -323,8 +344,6 @@ function sendEmail() {
 //	RESPONSIVE
 //-------------------------------------
 function responsive() {
-
-
   let content = "";
   let contentResponsive = "";
 
