@@ -168,7 +168,7 @@
 .menu__item h2 {
   font-family: "Playfair Display", serif;
   font-weight: 900;
-  font-size: 46px;
+  font-size: 2.8rem;
   color: rgba(6, 10, 46, 0.3);
   margin: 0;
   cursor: pointer;
@@ -184,7 +184,7 @@
 }
 
 .menu__item p {
-  font-size: 14px;
+  font-size: 0.75rem;
   text-transform: uppercase;
   color: rgba(6, 10, 46, 0.3);
   margin: 0;
@@ -213,7 +213,7 @@
 
 .links a span {
   display: inline-block;
-  font-size: 10px;
+  font-size: 0.6rem;
   font-weight: 400;
   letter-spacing: 0.12em;
   text-transform: uppercase;
@@ -335,7 +335,7 @@
 }
 
 .home .home__presentation h1 {
-  font-size: 10px;
+  font-size: 0.6rem;
   color: rgba(6, 10, 46, 0.3);
   font-weight: 500;
   text-transform: uppercase;
@@ -348,7 +348,7 @@
 }
 
 .home .home__presentation p {
-  font-size: 24px;
+  font-size: 1.5rem;
   font-weight: 300;
   margin: 15px 0;
   line-height: 1.3em;
@@ -389,7 +389,7 @@
   position: relative;
   display: inline-flex;
   font-weight: 500;
-  font-size: 14px;
+  font-size: 0.75rem;
   opacity: 0.2;
   margin: 5px 0;
   cursor: pointer;
@@ -427,7 +427,7 @@
   top: 0;
   right: 20px;
   width: max-content;
-  font-size: 10px;
+  font-size: 0.6rem;
   font-weight: 600;
   text-transform: uppercase;
   line-height: 22px;
@@ -615,7 +615,7 @@
   z-index: 10;
   font-family: "Playfair Display", serif;
   font-weight: 900;
-  font-size: 44px;
+  font-size: 2.8rem;
   line-height: 1;
   margin: 0;
   -webkit-transform: translateY(120%);
@@ -646,7 +646,7 @@
   z-index: -1;
   font-family: "Work Sans", sans-serif;
   font-weight: 700;
-  font-size: 104px;
+  font-size: 6.5rem;
   color: #fff;
   -webkit-animation: 0.6s shadowDropOut ease-out forwards;
   -moz-animation: 0.6s shadowDropOut ease-out forwards;
@@ -671,7 +671,7 @@
   font-family: "Playfair Display", serif;
   font-weight: 400;
   font-style: italic;
-  font-size: 14px;
+  font-size: 0.75rem;
   letter-spacing: 0.15em;
   color: rgba(6, 10, 46, 0.5);
   margin: 20px 0 0 0;
@@ -705,7 +705,7 @@
 .description__info span {
   font-family: "Playfair Display", serif;
   font-weight: 700;
-  font-size: 12px;
+  font-size: 0.75rem;
   color: rgba(6, 10, 46, 0.2);
   margin: 0;
   opacity: 0;
@@ -727,7 +727,7 @@
 .description__info p {
   font-family: "Work Sans", sans-serif;
   font-weight: 600;
-  font-size: 12px;
+  font-size: 0.75rem;
   text-transform: uppercase;
   letter-spacing: 0.15em;
   margin: 0;
@@ -905,7 +905,7 @@
   padding-bottom: 4px;
   outline: none;
   color: #fff;
-  font-size: 14px;
+  font-size: 0.75rem;
   line-height: 18px;
   font-weight: 600;
   height: 16px;
@@ -1029,7 +1029,7 @@
 .bubble--group__choice .bubble .choice span {
   position: relative;
   display: block;
-  font-size: 20px;
+  font-size: 1.25rem;
   line-height: 64px;
   margin: 10px auto 20px;
   border-radius: 50%;
