@@ -763,6 +763,10 @@
   box-sizing: border-box;
 }
 
+html {
+  font-size: 100%;
+}
+
 body {
   font-family: 'Work Sans', sans-serif;
   -webkit-font-smoothing: antialiased;
@@ -1423,7 +1427,7 @@ button {
 }
 
 .description__wrapper .btn {
-  margin-top: 40px;
+  margin-top: 20px;
   opacity: 0;
   -webkit-animation: 0.8s fadeOut ease-in-out forwards;
   -moz-animation: 0.8s fadeOut ease-in-out forwards;
@@ -1444,7 +1448,7 @@ button {
   overflow: hidden;
   position: relative;
   padding: 8px 0;
-  margin: 30px 0;
+  margin: 30px 0 15px 0;
 }
 
 .description__title h2 {
@@ -1539,28 +1543,6 @@ button {
 }
 
 .description__info span {
-  font-family: "Playfair Display", serif;
-  font-weight: 700;
-  font-size: 0.75rem;
-  color: rgba(6, 10, 46, 0.2);
-  margin: 0;
-  opacity: 0;
-  -webkit-animation: 0.8s fadeOut ease-in-out forwards;
-  -moz-animation: 0.8s fadeOut ease-in-out forwards;
-  -ms-animation: 0.8s fadeOut ease-in-out forwards;
-  -o-transition: 0.8s fadeOut ease-in-out forwards;
-  animation: 0.8s fadeOut ease-in-out forwards;
-}
-
-.description__info span.enable {
-  -webkit-animation: 0.8s fadeIn ease-in-out forwards 0.6s;
-  -moz-animation: 0.8s fadeIn ease-in-out forwards 0.6s;
-  -ms-animation: 0.8s fadeIn ease-in-out forwards 0.6s;
-  -o-transition: 0.8s fadeIn ease-in-out forwards 0.6s;
-  animation: 0.8s fadeIn ease-in-out forwards 0.6s;
-}
-
-.description__info p {
   font-family: "Work Sans", sans-serif;
   font-weight: 600;
   font-size: 0.75rem;
@@ -1579,7 +1561,7 @@ button {
   animation: 0.6s slideBottom ease-in-out forwards;
 }
 
-.description__info p.enable {
+.description__info span.enable {
   -webkit-animation: 0.6s slideTop ease-in-out forwards 0.8s;
   -moz-animation: 0.6s slideTop ease-in-out forwards 0.8s;
   -ms-animation: 0.6s slideTop ease-in-out forwards 0.8s;
@@ -1972,6 +1954,9 @@ button {
 }
 
 @media screen and (max-width: 650px) {
+  body {
+    font-size: 14px;
+  }
   body:before {
     display: none;
   }
@@ -1980,7 +1965,6 @@ button {
   }
   .home {
     padding: 0;
-    height: auto;
     -webkit-transform: translateY(0%) !important;
     -moz-transform: translateY(0%) !important;
     -ms-transform: translateY(0%) !important;
@@ -1995,9 +1979,6 @@ button {
   .home .home__presentation {
     width: 100%;
     margin: 40px 20px 10px;
-  }
-  .home .home__presentation p {
-    font-size: 22px;
   }
   .home img {
     display: none;

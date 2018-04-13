@@ -5,9 +5,7 @@ let windowWidth = window.innerWidth;
 const projects = [{
     number: "01",
     title: "Back to your dream",
-    role: "Designer",
-    client: "IESA Multimédia",
-    year: "2016",
+    keywords: "User Interface • Animation",
     description: "Option A, you kill me right here and now. Apparently I've made that very easy for you. You can kill me, no witnesses and then spend the next few weeks or months tracking down Jesse Pinkman and you kill him too. A pointless exercise it seems…",
     image: "btyd",
     href: " "
@@ -15,9 +13,7 @@ const projects = [{
   {
     number: "02",
     title: "Le Blog Zenchef",
-    role: "Designer",
-    client: "Zenchef",
-    year: "2017",
+    keywords: "User Interface • Blog",
     description: "Option A, you kill me right here and now. Apparently I've made that very easy for you. You can kill me, no witnesses and then spend the next few weeks or months tracking down Jesse Pinkman and you kill him too. A pointless exercise it seems…",
     image: "blog-zenchef",
     href: " "
@@ -25,9 +21,7 @@ const projects = [{
   {
     number: "03",
     title: "Alcatraz, 1962",
-    role: "Designer",
-    client: "IUT Laval",
-    year: "2015",
+    keywords: "User Interface • Webdoc",
     description: "Option A, you kill me right here and now. Apparently I've made that very easy for you. You can kill me, no witnesses and then spend the next few weeks or months tracking down Jesse Pinkman and you kill him too. A pointless exercise it seems…",
     image: "btyd",
     href: " "
@@ -35,9 +29,7 @@ const projects = [{
   {
     number: "04",
     title: "La Maroquinerie",
-    role: "Designer",
-    client: "IESA Multimédia",
-    year: "2016",
+    keywords: "User Interface • Concert",
     description: "Option A, you kill me right here and now. Apparently I've made that very easy for you. You can kill me, no witnesses and then spend the next few weeks or months tracking down Jesse Pinkman and you kill him too. A pointless exercise it seems…",
     image: "btyd",
     href: " "
@@ -147,11 +139,7 @@ function displayProject(project) {
   document.querySelector(project + " .project__visuel").classList.add("enable");
   document.querySelector(project + " .description__number").classList.add("enable");
   document.querySelector(project + " .description__title h2").classList.add("enable");
-
-  for (let j = 0; j < 3; j++) {
-    document.querySelectorAll(project + " .info span")[j].classList.add("enable");
-    document.querySelectorAll(project + " .info p")[j].classList.add("enable");
-  }
+  document.querySelector(project + " .description__info span").classList.add("enable");
 
   document.querySelector(project + " .description p").classList.add("enable");
   document.querySelector(project + " .description__wrapper .btn").classList.add("enable");
@@ -167,10 +155,7 @@ function hideProject(project) {
   document.querySelector(project + " .description__number").classList.remove("enable");
   document.querySelector(project + " .description__title h2").classList.remove("enable");
 
-  for (let j = 0; j < 3; j++) {
-    document.querySelectorAll(project + " .info span")[j].classList.remove("enable");
-    document.querySelectorAll(project + " .info p")[j].classList.remove("enable");
-  }
+  document.querySelector(project + " .description__info span").classList.remove("enable");
 
   document.querySelector(project + " .description p").classList.remove("enable");
   document.querySelector(project + " .description__wrapper .btn").classList.remove("enable");
@@ -365,18 +350,7 @@ function responsive() {
               </div>
               <span class="description__number">${project.number}.</span>
               <div class="description__info">
-                <div class="info">
-                  <span>Rôle</span>
-                  <p>${project.role}</p>
-                </div>
-                <div class="info">
-                  <span>Client</span>
-                  <p>${project.client}</p>
-                </div>
-                <div class="info">
-                  <span>Année</span>
-                  <p>${project.year}</p>
-                </div>
+                <span>${project.keywords}</span>
               </div>
               <div class="description">
                 <p>${project.description}</p>
@@ -407,15 +381,7 @@ function responsive() {
               <div class="description__info">
                 <div class="info">
                   <span>Rôle</span>
-                  <p>${projectResponsive.role}</p>
-                </div>
-                <div class="info">
-                  <span>Client</span>
-                  <p>${projectResponsive.client}</p>
-                </div>
-                <div class="info">
-                  <span>Année</span>
-                  <p>${projectResponsive.year}</p>
+                  <p>${projectResponsive.keywords}</p>
                 </div>
               </div>
               <div class="description">

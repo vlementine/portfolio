@@ -65,8 +65,11 @@
 }
 
 @media screen and (max-width: 650px) {
-  body:before {
-    display: none;
+  body {
+    font-size: 14px;
+    &:before {
+      display: none;
+    }
   }
 
   //-------------------------------------
@@ -80,17 +83,12 @@
   //-------------------------------------
   .home {
     padding: 0;
-    height: auto;
     @include transform(translateY(0%) !important);
     @include transition(transform 0.8s ease-in-out !important);
 
     .home__presentation {
       width: 100%;
       margin: 40px 20px 10px;
-
-      p {
-        font-size: 22px;
-      }
     }
 
     img {

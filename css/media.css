@@ -60,6 +60,9 @@
 }
 
 @media screen and (max-width: 650px) {
+  body {
+    font-size: 14px;
+  }
   body:before {
     display: none;
   }
@@ -68,7 +71,6 @@
   }
   .home {
     padding: 0;
-    height: auto;
     -webkit-transform: translateY(0%) !important;
     -moz-transform: translateY(0%) !important;
     -ms-transform: translateY(0%) !important;
@@ -83,9 +85,6 @@
   .home .home__presentation {
     width: 100%;
     margin: 40px 20px 10px;
-  }
-  .home .home__presentation p {
-    font-size: 22px;
   }
   .home img {
     display: none;
