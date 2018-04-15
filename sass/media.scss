@@ -78,13 +78,14 @@
   .nav__wrapper {
     display: none;
   }
+
   //-------------------------------------
   //	HOME
   //-------------------------------------
   .home {
     padding: 0;
-    @include transform(translateY(0%) !important);
-    @include transition(transform 0.8s ease-in-out !important);
+    // @include transform(translateY(0%) !important);
+    // @include transition(transform 0.8s ease-in-out !important);
 
     .home__presentation {
       width: 100%;
@@ -94,146 +95,62 @@
     img {
       display: none;
     }
-
-    .btn {
-      display: none;
-    }
-  }
-
-  //-------------------------------------
-  //	PROJECT
-  //-------------------------------------
-  .projects__wrapper {
-    position: relative;
-    top: 0;
-    left: 0;
-  }
-
-  .project {
-    width: 100%;
-    display: flex;
-    height: auto;
-    flex-direction: column-reverse;
-    margin-bottom: 50px;
-    padding: 0;
-  }
-
-  .project__visuel {
-    height: 30vh;
-    border-radius: 0;
-    @include animation(0.6s fadeIn ease-in-out forwards);
-
-    .visuel__mockup {
-      align-items: center;
-      .mockup--desktop {
-        opacity: 1;
-        bottom: 0;
-        position: relative;
-
-        max-width: 100%;
-        max-height: 85%;
-        height: auto;
-        width: auto;
-        @include animation(0.6s slideRight ease-out forwards);
-      }
-      .mockup--mobile {
-        opacity: 1;
-        bottom: 20px;
-        @include animation(0.6s slideRight ease-out forwards);
-      }
-    }
-  }
-
-  .description__wrapper {
-    width: 100%;
-    margin: 0 auto 10px;
-    text-align: left;
-    padding: 20px;
-    .btn {
-      @include animation(0.8s fadeIn ease-in-out forwards 0.6s);
-    }
-  }
-
-  .description__title {
-    margin: 30px 0 10px;
-    h2 {
-      font-size: 36px;
-      @include animation(0.6s slideTop ease-out forwards 0.8s);
-    }
-  }
-
-  .description__number {
-    width: auto;
-    left: 30px;
-    top: -5px;
-    @include animation(0.6s shadowDropIn ease-out forwards 0.8s);
-  }
-
-  .description {
-    p {
-      @include animation(0.6s slideTop ease-in-out forwards 0.8s);
-    }
-  }
-
-  .description__info {
-    span {
-      @include animation(0.8s fadeIn ease-in-out forwards 0.6s);
-    }
-
-    p {
-      @include animation(0.6s slideTop ease-in-out forwards 0.8s);
-    }
   }
 
   //-------------------------------------
   //	CONTACT
   //-------------------------------------
-  .contact__wrapper {
-    width: 100%;
-    position: relative;
-    flex-direction: column;
-    height: auto;
+  // .contact__wrapper {
+  //   width: 100%;
+  //   position: relative;
+  //   flex-direction: column;
+  //   height: auto;
 
-    &.disable {
-      @include transform(translateY(0%));
-      @include transition(transform 0.8s ease-in-out);
-    }
-  }
+  //   &.disable {
+  //     @include transform(translateY(0%));
+  //     @include transition(transform 0.8s ease-in-out);
+  //   }
+  // }
 
-  .contact__description .description__wrapper {
-    margin: 0 0 30px;
+  // .contact__description .description__wrapper {
+  //   margin: 0 0 30px;
 
-    .description__number {
-      top: -20px;
-    }
-    .description__title {
-      margin: 20px 0 0;
-    }
-  }
+  //   .description__number {
+  //     top: -20px;
+  //   }
+  //   .description__title {
+  //     margin: 20px 0 0;
+  //   }
+  // }
 
-  .contact__form {
-    height: calc(100vh - 98px);
-    form {
-      margin: 0 20px 40px;
-      width: calc(100% - 40px);
-    }
-  }
+  // .contact__form {
+  //   height: calc(100vh - 98px);
+  //   form {
+  //     margin: 0 20px 40px;
+  //     width: calc(100% - 40px);
+  //   }
+  // }
 
-  .bubble--group:nth-child(1) .bubble,
-  .bubble--group:nth-child(1) .bubble--answer {
-    @include animation(bubble ease-in-out forwards 0.6s);
-    display: inline-block;
-  }
+  // .bubble--group:nth-child(1) .bubble,
+  // .bubble--group:nth-child(1) .bubble--answer {
+  //   @include animation(bubble ease-in-out forwards 0.6s);
+  //   display: inline-block;
+  // }
 
   //-------------------------------------
   //	LINKS
   //-------------------------------------
   .links {
+    margin-left: auto;
     position: relative;
-    bottom: auto;
-    left: auto;
-    margin: 0 auto 15px;
-    width: 100%;
+    bottom: 68px;
+    max-width: calc(100% - 60px);
     text-align: center;
+    left: 0;
+    padding: 0 10px;
+
+    a {
+      margin: 0 10px;
+    }
   }
 }

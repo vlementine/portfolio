@@ -372,7 +372,7 @@
 ------------------------*/
 .nav__wrapper {
   position: absolute;
-  z-index: 24;
+  z-index: 22;
   right: 28px;
   top: 50%;
   margin-top: -90px;
@@ -463,20 +463,66 @@
   display: flex;
 }
 
-#project-01 .project__visuel {
+#project-01 .project__visuel,
+.project--mobile#project-01 {
   background: linear-gradient(45deg, #1d7d90, #5dd5c3);
 }
 
-#project-02 .project__visuel {
+#project-01 .description__number-wrapper--mobile .description__number--mobile {
+  background: linear-gradient(45deg, #1d7d90, #5dd5c3);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+#project-02 .project__visuel,
+.project--mobile#project-02 {
   background: linear-gradient(45deg, #f59e64, #eb5160);
 }
 
-#project-03 .project__visuel {
+#project-02 .description__number-wrapper--mobile .description__number--mobile {
+  background: linear-gradient(45deg, #f59e64, #eb5160);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+#project-02
+.description__number-wrapper--mobile
+.description__number--mobile:after {
+  content: "02.";
+}
+
+#project-03 .project__visuel,
+.project--mobile#project-03 {
   background: linear-gradient(45deg, #1d7d90, #5dd5c3);
 }
 
-#project-04 .project__visuel {
+#project-03 .description__number-wrapper--mobile .description__number--mobile {
   background: linear-gradient(45deg, #1d7d90, #5dd5c3);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+#project-03
+.description__number-wrapper--mobile
+.description__number--mobile:after {
+  content: "03.";
+}
+
+#project-04 .project__visuel,
+.project--mobile#project-04 {
+  background: linear-gradient(45deg, #1d7d90, #5dd5c3);
+}
+
+#project-04
+.description__number-wrapper--mobile
+.description__number--mobile:after {
+  content: "04.";
+}
+
+#project-04 .description__number-wrapper--mobile .description__number--mobile {
+  background: linear-gradient(45deg, #1d7d90, #5dd5c3);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 
 .project__visuel {
@@ -696,13 +742,11 @@
 }
 
 .description__info {
-  display: flex;
-  justify-content: space-between;
   width: 100%;
   overflow: hidden;
 }
 
-.description__info span {
+.description__info p {
   font-family: "Work Sans", sans-serif;
   font-weight: 600;
   font-size: 0.75rem;
@@ -721,12 +765,164 @@
   animation: 0.6s slideBottom ease-in-out forwards;
 }
 
-.description__info span.enable {
+.description__info p.enable {
   -webkit-animation: 0.6s slideTop ease-in-out forwards 0.8s;
   -moz-animation: 0.6s slideTop ease-in-out forwards 0.8s;
   -ms-animation: 0.6s slideTop ease-in-out forwards 0.8s;
   -o-transition: 0.6s slideTop ease-in-out forwards 0.8s;
   animation: 0.6s slideTop ease-in-out forwards 0.8s;
+}
+
+.project--mobile {
+  z-index: 16;
+  position: relative;
+  height: calc(100vh - 30px);
+  width: calc(100vw - 30px);
+  margin: 15px;
+  padding: 20px;
+  background: linear-gradient(45deg, #1d7d90, #5dd5c3);
+  background-size: 400% 400%;
+  border-radius: 4px;
+  box-shadow: 0 0 16px rgba(6, 10, 46, 0.2);
+}
+
+.project--mobile:after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  z-index: -2;
+  background-image: url(../img/noise-pattern.png);
+}
+
+.project--mobile .btn {
+  align-self: center;
+  margin-top: 45px;
+}
+
+.project__content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: calc(100% - 48px);
+}
+
+.project__description--mobile {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.project__description--mobile > div {
+  position: relative;
+}
+
+.description__title--mobile {
+  overflow: hidden;
+  position: relative;
+  padding: 8px 0;
+  margin: 35px 0 10px 0;
+}
+
+.description__title--mobile h2 {
+  z-index: 10;
+  font-family: "Playfair Display", serif;
+  font-weight: 900;
+  font-size: 2.8rem;
+  line-height: 1;
+  margin: 0;
+}
+
+.description__number-wrapper--mobile .description__number--mobile {
+  position: absolute;
+  display: block;
+  top: -90px;
+  left: -35px;
+  height: calc(100vh - 30px);
+  width: calc(100vw - 30px);
+  margin: 15px;
+  z-index: -1;
+  font-family: "Work Sans", sans-serif;
+  font-weight: 700;
+  font-size: 6.5rem;
+  background: linear-gradient(45deg, #1d7d90, #5dd5c3);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.description__number-wrapper--mobile .description__number--mobile:after {
+  content: "01.";
+  position: absolute;
+  width: 100%;
+  top: 0;
+  left: 0;
+  text-align: center;
+  -webkit-background-clip: text;
+  background-image: url(../img/noise-pattern.png);
+}
+
+.description__number-wrapper--mobile .description__number-shadow--mobile {
+  position: absolute;
+  display: block;
+  left: 0;
+  width: 100%;
+  top: -75px;
+  z-index: -2;
+  font-family: "Work Sans", sans-serif;
+  font-weight: 700;
+  font-size: 6.5rem;
+  color: rgba(0, 0, 0, 0.1);
+  text-shadow: 0 0px 18px rgba(0, 0, 0, 0.3);
+}
+
+.description__info--mobile {
+  width: 100%;
+  overflow: hidden;
+}
+
+.description__info--mobile p {
+  font-family: "Work Sans", sans-serif;
+  font-weight: 600;
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 0.15em;
+  margin: 0;
+  text-align: center;
+}
+
+.project__visuel--mobile {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  z-index: 24;
+  margin-top: 15px;
+}
+
+.project__visuel--mobile .visuel__mockup {
+  position: relative;
+  z-index: 10;
+  display: flex;
+  justify-content: center;
+  align-items: baseline;
+  text-align: center;
+  width: 90%;
+}
+
+.project__visuel--mobile .visuel__mockup .mockup--desktop {
+  position: relative;
+  z-index: 22;
+  width: 100%;
+}
+
+.project__visuel--mobile .visuel__letter {
+  position: absolute;
+  z-index: 5;
+  height: auto;
+  max-height: calc(100% + 30px);
+  width: auto;
+  max-width: 60%;
 }
 
 .contact__wrapper {
