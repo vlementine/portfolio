@@ -65,11 +65,12 @@
 }
 
 @media screen and (max-width: 650px) {
-  body {
+  html {
     font-size: 14px;
-    &:before {
-      display: none;
-    }
+  }
+
+  body:before {
+    display: none;
   }
 
   //-------------------------------------
@@ -77,6 +78,13 @@
   //-------------------------------------
   .nav__wrapper {
     display: none;
+  }
+
+  /*------------------------
+    Navigation • Mobile
+  ------------------------*/
+  .nav--mobile {
+    display: flex;
   }
 
   //-------------------------------------
@@ -143,7 +151,7 @@
   .links {
     margin-left: auto;
     position: relative;
-    bottom: 68px;
+    bottom: 94px;
     max-width: calc(100% - 60px);
     text-align: center;
     left: 0;

@@ -106,10 +106,7 @@ const TEXTAREA_CONFIG = {
 function autoSize() {
   if (textareaChat) {
     textareaChat.setAttribute("rows", 2);
-    const rowsRequired = parseInt(
-      (textareaChat.scrollHeight - TEXTAREA_CONFIG.PADDING) /
-        TEXTAREA_CONFIG.LINE_HEIGHT
-    );
+    const rowsRequired = parseInt((textareaChat.scrollHeight - TEXTAREA_CONFIG.PADDING) / TEXTAREA_CONFIG.LINE_HEIGHT);
     if (rowsRequired !== parseInt(textareaChat.getAttribute("rows"))) {
       textareaChat.setAttribute("rows", rowsRequired);
     }
@@ -121,26 +118,16 @@ function autoSize() {
 //-------------------------------------
 function displayBubble(groupBubble, nbBubble) {
   for (let n = 0; n < 2; n++) {
-    document
-      .querySelectorAll(".bubble--group:nth-child(" + groupBubble + ") .bubble")
-      [n].classList.add("enable");
-    document
-      .querySelector(".contact__form form")
-      .scrollTo(0, document.body.scrollHeight);
+    document.querySelectorAll(".bubble--group:nth-child(" + groupBubble + ") .bubble")[n].classList.add("enable");
+    document.querySelector(".contact__form form").scrollTo(0, document.body.scrollHeight);
   }
 
   if (nbBubble == 3) {
     for (let n = 0; n < nbBubble; n++) {
       document
-        .querySelectorAll(
-          ".bubble--group:nth-child(" +
-            groupBubble +
-            ") .bubble--group__choice .bubble"
-        )
+        .querySelectorAll(".bubble--group:nth-child(" + groupBubble + ") .bubble--group__choice .bubble")
         [n].classList.add("enable__choice");
-      document
-        .querySelector(".contact__form form")
-        .scrollTo(0, document.body.scrollHeight);
+      document.querySelector(".contact__form form").scrollTo(0, document.body.scrollHeight);
     }
   }
 }
@@ -149,62 +136,42 @@ function displayBubble(groupBubble, nbBubble) {
 //	DISPLAY PROJECT
 //-------------------------------------
 function displayProject(project) {
-  let imgNumber = document.querySelectorAll(project + " .project__visuel img")
-    .length;
+  let imgNumber = document.querySelectorAll(project + " .project__visuel img").length;
   for (let i = 0; i < imgNumber; i++) {
-    document
-      .querySelectorAll(project + " .project__visuel img")
-      [i].classList.add("enable");
+    document.querySelectorAll(project + " .project__visuel img")[i].classList.add("enable");
   }
 
   document.querySelector(project + " .project__visuel").classList.add("enable");
-  document
-    .querySelector(project + " .description__number")
-    .classList.add("enable");
-  document
-    .querySelector(project + " .description__title h2")
-    .classList.add("enable");
-  document
-    .querySelector(project + " .description__info p")
-    .classList.add("enable");
+  document.querySelector(project + " .description__number").classList.add("enable");
+  document.querySelector(project + " .description__title h2").classList.add("enable");
+  document.querySelector(project + " .description__info p").classList.add("enable");
 
   document.querySelector(project + " .description p").classList.add("enable");
-  document
-    .querySelector(project + " .description__wrapper .btn")
-    .classList.add("enable");
+  document.querySelector(project + " .description__wrapper .btn").classList.add("enable");
 }
 
+//-------------------------------------
+//	HIDE PROJECT
+//-------------------------------------
 function hideProject(project) {
-  let imgNumber = document.querySelectorAll(project + " .project__visuel img")
-    .length;
+  let imgNumber = document.querySelectorAll(project + " .project__visuel img").length;
   for (let i = 0; i < imgNumber; i++) {
-    document
-      .querySelectorAll(project + " .project__visuel img")
-      [i].classList.remove("enable");
+    document.querySelectorAll(project + " .project__visuel img")[i].classList.remove("enable");
   }
 
-  document
-    .querySelector(project + " .project__visuel")
-    .classList.remove("enable");
-  document
-    .querySelector(project + " .description__number")
-    .classList.remove("enable");
-  document
-    .querySelector(project + " .description__title h2")
-    .classList.remove("enable");
+  document.querySelector(project + " .project__visuel").classList.remove("enable");
+  document.querySelector(project + " .description__number").classList.remove("enable");
+  document.querySelector(project + " .description__title h2").classList.remove("enable");
 
-  document
-    .querySelector(project + " .description__info p")
-    .classList.remove("enable");
+  document.querySelector(project + " .description__info p").classList.remove("enable");
 
-  document
-    .querySelector(project + " .description p")
-    .classList.remove("enable");
-  document
-    .querySelector(project + " .description__wrapper .btn")
-    .classList.remove("enable");
+  document.querySelector(project + " .description p").classList.remove("enable");
+  document.querySelector(project + " .description__wrapper .btn").classList.remove("enable");
 }
 
+//-------------------------------------
+//	BTN SEE MY WORK
+//-------------------------------------
 function seeMyWork() {
   //Hide Home
   document.querySelector(".home").classList.add("disable");
@@ -222,9 +189,7 @@ function navActiveItem(param) {
   for (let n = 0; n < Object.keys(nav).length; n++) {
     document.querySelectorAll("span.nav__item")[n].classList.remove("active");
   }
-  document
-    .querySelector("span.nav__item:nth-child(" + param + ")")
-    .classList.add("active");
+  document.querySelector("span.nav__item:nth-child(" + param + ")").classList.add("active");
 }
 
 //-------------------------------------
@@ -239,20 +204,14 @@ function navNew(param) {
   let itemClicked = parseInt(param);
 
   //Item active
-  let projectActive = parseInt(
-    document.querySelector(".project.enable").id.substr(-1)
-  );
+  let projectActive = parseInt(document.querySelector(".project.enable").id.substr(-1));
 
   navActiveItem(projectClicked + 1);
 
   let idToDisplay = "#project-0" + projectClicked;
   let idToHide = "#" + document.querySelector(".project.enable").id;
 
-  if (
-    projectClicked < totalItemNav - 1 &&
-    projectClicked !== 0 &&
-    projectClicked !== projectActive
-  ) {
+  if (projectClicked < totalItemNav - 1 && projectClicked !== 0 && projectClicked !== projectActive) {
     hideProject(idToHide);
 
     setTimeout(function() {
@@ -273,13 +232,47 @@ function navNew(param) {
 
     setTimeout(function() {
       document.querySelector(idToHide).classList.remove("enable");
-      document
-        .querySelector(".bubble--group:nth-child(1) .bubble")
-        .classList.add("enable");
-      document
-        .querySelector(".bubble--group:nth-child(1) .bubble--answer")
-        .classList.add("enable");
+      document.querySelector(".bubble--group:nth-child(1) .bubble").classList.add("enable");
+      document.querySelector(".bubble--group:nth-child(1) .bubble--answer").classList.add("enable");
     }, 700);
+  }
+}
+
+//-------------------------------------
+//	NAVIGATION • MOBILE
+//-------------------------------------
+function navMobile(param) {
+  //Get the total of item of nav
+  let totalItemNav = Object.keys(nav).length;
+
+  //Get the number of item clicked
+  let itemActive = parseInt(document.querySelector(".number--active").innerHTML);
+  let itemClicked = itemActive + param;
+
+  //Get id to display and hide
+  let idToDisplay = "#project-0" + itemClicked;
+  let idToHide = "#project-0" + itemActive;
+
+  console.log("itemClicked : " + itemClicked + " / totalItemNav : " + totalItemNav + " / idToDisplay : " + idToDisplay + " / idToHide : " + idToHide);
+
+  if (itemClicked < totalItemNav && itemClicked !== 1) {
+    //console.log("Plop");
+    
+    //Update active number
+    document.querySelector(".number--active").textContent = "0" + itemClicked;
+
+
+
+  } else if(itemClicked == 1) {
+    //console.log("itemClicked == 1");
+
+    //Display Home
+    document.querySelector('.home').classList.remove('disable');
+
+  } else if (itemClicked == totalItemNav) {
+    //console.log("itemClicked == totalItemNav");
+
+    document.querySelector(".contact__wrapper").classList.remove("disable");
   }
 }
 
@@ -301,12 +294,7 @@ function displayMenu() {
 function navMenu(param) {
   let hideProject = document
     .querySelectorAll(".project")
-    .forEach(
-      element =>
-        element.classList.contains("enable")
-          ? element.classList.remove("enable")
-          : ""
-    );
+    .forEach(element => (element.classList.contains("enable") ? element.classList.remove("enable") : ""));
   displayMenu();
   if (param == "home") {
     hideProject;
@@ -326,12 +314,8 @@ function navMenu(param) {
     document.querySelector(".contact__wrapper").classList.remove("disable");
 
     setTimeout(function() {
-      document
-        .querySelector(".bubble--group:nth-child(1) .bubble")
-        .classList.add("enable");
-      document
-        .querySelector(".bubble--group:nth-child(1) .bubble--answer")
-        .classList.add("enable");
+      document.querySelector(".bubble--group:nth-child(1) .bubble").classList.add("enable");
+      document.querySelector(".bubble--group:nth-child(1) .bubble--answer").classList.add("enable");
       document.querySelector(".home").classList.add("disable");
     }, 500);
   }
@@ -405,9 +389,7 @@ function responsive() {
                 project.image
               }_visuel-home.png" alt="Visuel du Blog Zenchef" draggable="false">
             </div>
-            <img src="img/${
-              project.image
-            }_letter.png" alt="B" draggable="false">
+            <img src="img/${project.image}_letter.png" alt="B" draggable="false">
           </div>
 
           <div class="project__description">
@@ -429,9 +411,7 @@ function responsive() {
   });
 
   projects.forEach(projectResponsive => {
-    contentResponsive += `<div class="project--mobile" id="project-${
-      projectResponsive.number
-    }">
+    contentResponsive += `<div class="project--mobile" id="project-${projectResponsive.number}">
     <div class="project__content">
       <div class="project__description--mobile">
           <div>
@@ -439,12 +419,8 @@ function responsive() {
                 <h2> ${projectResponsive.title} </h2>
             </div>
             <div class="description__number-wrapper--mobile">
-              <span class="description__number--mobile">${
-                projectResponsive.number
-              }.</span>
-              <span class="description__number-shadow--mobile">${
-                projectResponsive.number
-              }.</span>
+              <span class="description__number--mobile">${projectResponsive.number}.</span>
+              <span class="description__number-shadow--mobile">${projectResponsive.number}.</span>
             </div>
           </div>
           <div class="description__info--mobile">
@@ -457,13 +433,9 @@ function responsive() {
                 projectResponsive.image
               }_visuel-home.png" alt="Visuel du Blog Zenchef" draggable="false">
           </div>
-          <img class="visuel__letter" src="img/${
-            projectResponsive.image
-          }_letter.png" alt="B" draggable="false">
+          <img class="visuel__letter" src="img/${projectResponsive.image}_letter.png" alt="B" draggable="false">
       </div>
       <a class="btn" href="${projectResponsive.href}">Découvrir le projet</a>
-    </div>
-    <div class="nav-nav">
     </div>
 </div>`;
   });

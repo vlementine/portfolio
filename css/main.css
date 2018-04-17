@@ -1,3 +1,4 @@
+@charset "UTF-8";
 /*-----------------------------
   MIXINS
 -----------------------------*/
@@ -6,6 +7,21 @@
 ------------------------*/
 @import url("https://fonts.googleapis.com/css?family=Work+Sans:300,400,500,600,700");
 @import url("https://fonts.googleapis.com/css?family=Playfair+Display:400i,700,900");
+@import url("https://fonts.googleapis.com/css?family=Work+Sans:300,400,500,600,700");
+@import url("https://fonts.googleapis.com/css?family=Playfair+Display:400i,700,900");
+@import url("https://fonts.googleapis.com/css?family=Work+Sans:300,400,500,600,700");
+@import url("https://fonts.googleapis.com/css?family=Playfair+Display:400i,700,900");
+@import url("https://fonts.googleapis.com/css?family=Work+Sans:300,400,500,600,700");
+@import url("https://fonts.googleapis.com/css?family=Playfair+Display:400i,700,900");
+@import url("https://fonts.googleapis.com/css?family=Work+Sans:300,400,500,600,700");
+@import url("https://fonts.googleapis.com/css?family=Playfair+Display:400i,700,900");
+@font-face {
+  font-family: 'butler_stencilextrabold';
+  src: url("../font/butler_extrabold_stencil-webfont.woff2") format("woff2"), url("../font/butler_extrabold_stencil-webfont.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+
 /*------------------------
   Colors
 ------------------------*/
@@ -15,17 +31,16 @@
 /*------------------------
   Fonts
 ------------------------*/
-@import url("https://fonts.googleapis.com/css?family=Work+Sans:300,400,500,600,700");
-@import url("https://fonts.googleapis.com/css?family=Playfair+Display:400i,700,900");
+@font-face {
+  font-family: 'butler_stencilextrabold';
+  src: url("../font/butler_extrabold_stencil-webfont.woff2") format("woff2"), url("../font/butler_extrabold_stencil-webfont.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+
 /*------------------------
   Colors
 ------------------------*/
-@import url("https://fonts.googleapis.com/css?family=Work+Sans:300,400,500,600,700");
-@import url("https://fonts.googleapis.com/css?family=Playfair+Display:400i,700,900");
-@import url("https://fonts.googleapis.com/css?family=Work+Sans:300,400,500,600,700");
-@import url("https://fonts.googleapis.com/css?family=Playfair+Display:400i,700,900");
-@import url("https://fonts.googleapis.com/css?family=Work+Sans:300,400,500,600,700");
-@import url("https://fonts.googleapis.com/css?family=Playfair+Display:400i,700,900");
 @-webkit-keyframes slideRight {
   0% {
     -webkit-transform: translateX(-15%);
@@ -756,6 +771,13 @@
 /*------------------------
   Fonts
 ------------------------*/
+@font-face {
+  font-family: 'butler_stencilextrabold';
+  src: url("../font/butler_extrabold_stencil-webfont.woff2") format("woff2"), url("../font/butler_extrabold_stencil-webfont.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+
 /*------------------------
   Colors
 ------------------------*/
@@ -847,6 +869,13 @@ button {
 /*------------------------
   Fonts
 ------------------------*/
+@font-face {
+  font-family: 'butler_stencilextrabold';
+  src: url("../font/butler_extrabold_stencil-webfont.woff2") format("woff2"), url("../font/butler_extrabold_stencil-webfont.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+
 /*------------------------
   Colors
 ------------------------*/
@@ -1326,9 +1355,7 @@ button {
   -webkit-text-fill-color: transparent;
 }
 
-#project-02
-.description__number-wrapper--mobile
-.description__number--mobile:after {
+#project-02 .description__number-wrapper--mobile .description__number--mobile:after {
   content: "02.";
 }
 
@@ -1343,9 +1370,7 @@ button {
   -webkit-text-fill-color: transparent;
 }
 
-#project-03
-.description__number-wrapper--mobile
-.description__number--mobile:after {
+#project-03 .description__number-wrapper--mobile .description__number--mobile:after {
   content: "03.";
 }
 
@@ -1354,9 +1379,7 @@ button {
   background: linear-gradient(45deg, #1d7d90, #5dd5c3);
 }
 
-#project-04
-.description__number-wrapper--mobile
-.description__number--mobile:after {
+#project-04 .description__number-wrapper--mobile .description__number--mobile:after {
   content: "04.";
 }
 
@@ -1678,7 +1701,7 @@ button {
 .description__number-wrapper--mobile .description__number--mobile {
   position: absolute;
   display: block;
-  top: -90px;
+  top: -80px;
   left: -35px;
   height: calc(100vh - 30px);
   width: calc(100vw - 30px);
@@ -1708,7 +1731,7 @@ button {
   display: block;
   left: 0;
   width: 100%;
-  top: -75px;
+  top: -65px;
   z-index: -2;
   font-family: "Work Sans", sans-serif;
   font-weight: 700;
@@ -1764,6 +1787,73 @@ button {
   max-height: calc(100% + 30px);
   width: auto;
   max-width: 60%;
+}
+
+/*------------------------
+  Navigation • Mobile
+------------------------*/
+.nav--mobile {
+  position: relative;
+  z-index: 24;
+  display: none;
+  justify-content: space-around;
+  align-items: center;
+  bottom: 110px;
+  max-width: calc(100% - 80px);
+  margin: auto;
+}
+
+.nav__arrow {
+  position: relative;
+  display: block;
+  width: 9px;
+  height: 9px;
+  border-top: 2px solid rgba(6, 10, 46, 0.8);
+  border-left: 2px solid rgba(6, 10, 46, 0.8);
+  -webkit-transform: rotate(-45deg);
+  -moz-transform: rotate(-45deg);
+  -ms-transform: rotate(-45deg);
+  -o-transform: rotate(-45deg);
+  transform: rotate(-45deg);
+}
+
+.nav__arrow:after {
+  content: "";
+  position: absolute;
+  display: block;
+  width: 12px;
+  height: 2px;
+  background: rgba(6, 10, 46, 0.8);
+  transform: translate(17px, 22px) rotate(45deg);
+  top: -20px;
+  left: -20px;
+}
+
+.nav__arrow.nav__arrow--right {
+  -webkit-transform: rotate(135deg);
+  -moz-transform: rotate(135deg);
+  -ms-transform: rotate(135deg);
+  -o-transform: rotate(135deg);
+  transform: rotate(135deg);
+}
+
+.nav__number .number {
+  font-family: "butler_stencilextrabold", serif;
+  text-transform: uppercase;
+  font-size: 1rem;
+}
+
+.nav__number .number.number--active {
+  font-size: 1.42rem;
+}
+
+.nav__number .number.number--total {
+  color: rgba(6, 10, 46, 0.5);
+}
+
+.nav__number .number__separator {
+  margin-right: -4px;
+  margin-left: -4px;
 }
 
 .contact__wrapper {
@@ -2097,6 +2187,13 @@ button {
 /*------------------------
   Fonts
 ------------------------*/
+@font-face {
+  font-family: 'butler_stencilextrabold';
+  src: url("../font/butler_extrabold_stencil-webfont.woff2") format("woff2"), url("../font/butler_extrabold_stencil-webfont.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+
 /*------------------------
   Colors
 ------------------------*/
@@ -2151,7 +2248,7 @@ button {
 }
 
 @media screen and (max-width: 650px) {
-  body {
+  html {
     font-size: 14px;
   }
   body:before {
@@ -2159,6 +2256,12 @@ button {
   }
   .nav__wrapper {
     display: none;
+  }
+  /*------------------------
+    Navigation • Mobile
+  ------------------------*/
+  .nav--mobile {
+    display: flex;
   }
   .home {
     padding: 0;
@@ -2173,7 +2276,7 @@ button {
   .links {
     margin-left: auto;
     position: relative;
-    bottom: 68px;
+    bottom: 94px;
     max-width: calc(100% - 60px);
     text-align: center;
     left: 0;

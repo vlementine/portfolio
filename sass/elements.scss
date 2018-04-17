@@ -102,10 +102,7 @@
   &.disable {
     opacity: 0;
     z-index: -1;
-    @include transition(
-      opacity 0.4s ease-in-out,
-      z-index 0.4s ease-in-out 0.4s
-    );
+    @include transition(opacity 0.4s ease-in-out, z-index 0.4s ease-in-out 0.4s);
   }
 }
 
@@ -282,16 +279,10 @@
 }
 
 //-------------------------------------
-//	PROJECTS • DESKTOP
+//	NAVIGATION
 //-------------------------------------
-.projects__wrapper {
-  position: absolute;
-  top: 0;
-  left: 0;
-}
-
 /*------------------------
-  Navigation
+  Navigation • Desktop
 ------------------------*/
 .nav__wrapper {
   position: absolute;
@@ -354,6 +345,75 @@
 }
 
 /*------------------------
+  Navigation • Mobile
+------------------------*/
+.nav--mobile {
+  position: relative;
+  z-index: 24;
+  display: none;
+  justify-content: space-around;
+  align-items: center;
+  bottom: 110px;
+  max-width: calc(100% - 80px);
+  margin: auto;
+}
+
+.nav__arrow {
+  position: relative;
+  display: block;
+  width: 9px;
+  height: 9px;
+  border-top: 2px solid $dark-blue-80;
+  border-left: 2px solid $dark-blue-80;
+  @include transform(rotate(-45deg));
+
+  &:after {
+    content: "";
+    position: absolute;
+    display: block;
+    width: 12px;
+    height: 2px;
+    background: $dark-blue-80;
+    transform: translate(17px, 22px) rotate(45deg);
+    top: -20px;
+    left: -20px;
+  }
+
+  &.nav__arrow--right {
+    @include transform(rotate(135deg));
+  }
+}
+
+.nav__number {
+  .number {
+    font-family: "butler_stencilextrabold", serif;
+    text-transform: uppercase;
+    font-size: 1rem;
+
+    &.number--active {
+      font-size: 1.42rem;
+    }
+
+    &.number--total {
+      color: $dark-blue-50;
+    }
+  }
+  .number__separator {
+    margin-right: -4px;
+    margin-left: -4px;
+  }
+}
+
+//-------------------------------------
+//	PROJECTS • DESKTOP
+//-------------------------------------
+.projects__wrapper {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+/*------------------------
   Project
 ------------------------*/
 .project {
@@ -392,9 +452,7 @@
   -webkit-text-fill-color: transparent;
 }
 
-#project-02
-  .description__number-wrapper--mobile
-  .description__number--mobile:after {
+#project-02 .description__number-wrapper--mobile .description__number--mobile:after {
   content: "02.";
 }
 #project-03 .project__visuel,
@@ -407,18 +465,14 @@
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
-#project-03
-  .description__number-wrapper--mobile
-  .description__number--mobile:after {
+#project-03 .description__number-wrapper--mobile .description__number--mobile:after {
   content: "03.";
 }
 #project-04 .project__visuel,
 .project--mobile#project-04 {
   background: linear-gradient(45deg, #1d7d90, #5dd5c3);
 }
-#project-04
-  .description__number-wrapper--mobile
-  .description__number--mobile:after {
+#project-04 .description__number-wrapper--mobile .description__number--mobile:after {
   content: "04.";
 }
 #project-04 .description__number-wrapper--mobile .description__number--mobile {
@@ -668,7 +722,7 @@
   .description__number--mobile {
     position: absolute;
     display: block;
-    top: -90px;
+    top: -80px;
     left: -35px;
     height: calc(100vh - 30px);
     width: calc(100vw - 30px);
@@ -698,13 +752,18 @@
     display: block;
     left: 0;
     width: 100%;
-    top: -75px;
+    top: -65px;
     z-index: -2;
     font-family: "Work Sans", sans-serif;
     font-weight: 700;
     font-size: 6.5rem;
     color: rgba(0, 0, 0, 0.1);
     text-shadow: 0 0px 18px rgba(0, 0, 0, 0.3);
+    @include animation(0.6s shadowDropOut ease-out forwards);
+
+    &.enable {
+      @include animation(0.6s shadowDropIn ease-out forwards 0.8s);
+    }
   }
 }
 

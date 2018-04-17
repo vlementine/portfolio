@@ -1,3 +1,4 @@
+@charset "UTF-8";
 /*-----------------------------
   MIXINS
 -----------------------------*/
@@ -6,6 +7,13 @@
 ------------------------*/
 @import url("https://fonts.googleapis.com/css?family=Work+Sans:300,400,500,600,700");
 @import url("https://fonts.googleapis.com/css?family=Playfair+Display:400i,700,900");
+@font-face {
+  font-family: 'butler_stencilextrabold';
+  src: url("../font/butler_extrabold_stencil-webfont.woff2") format("woff2"), url("../font/butler_extrabold_stencil-webfont.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+
 /*------------------------
   Colors
 ------------------------*/
@@ -60,7 +68,7 @@
 }
 
 @media screen and (max-width: 650px) {
-  body {
+  html {
     font-size: 14px;
   }
   body:before {
@@ -68,6 +76,12 @@
   }
   .nav__wrapper {
     display: none;
+  }
+  /*------------------------
+    Navigation • Mobile
+  ------------------------*/
+  .nav--mobile {
+    display: flex;
   }
   .home {
     padding: 0;
@@ -82,7 +96,7 @@
   .links {
     margin-left: auto;
     position: relative;
-    bottom: 68px;
+    bottom: 94px;
     max-width: calc(100% - 60px);
     text-align: center;
     left: 0;
