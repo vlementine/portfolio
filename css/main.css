@@ -1320,8 +1320,8 @@ button {
   justify-content: space-around;
   align-items: center;
   bottom: 80px;
-  width: 100%;
-  margin: auto;
+  width: calc(100% - 60px);
+  margin: auto 30px;
 }
 
 .nav__arrow {
@@ -1743,12 +1743,13 @@ button {
 
 .project__content {
   display: flex;
+  position: relative;
   flex-direction: column;
   justify-content: center;
   height: calc(100vh - 30px);
   width: calc(100vw - 30px);
   margin: 15px;
-  padding: 20px;
+  padding: 20px 20px 90px 20px;
   background: linear-gradient(45deg, #1d7d90, #5dd5c3);
   background-size: 400% 400%;
   border-radius: 4px;
@@ -2420,7 +2421,7 @@ button {
   }
   .home .home__presentation {
     width: 100%;
-    margin: 40px 20px 10px;
+    margin: 0 20px;
   }
   .home img {
     display: none;
