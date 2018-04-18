@@ -102,7 +102,10 @@
   &.disable {
     opacity: 0;
     z-index: -1;
-    @include transition(opacity 0.4s ease-in-out, z-index 0.4s ease-in-out 0.4s);
+    @include transition(
+      opacity 0.4s ease-in-out,
+      z-index 0.4s ease-in-out 0.4s
+    );
   }
 }
 
@@ -431,7 +434,7 @@
 }
 
 #project-01 .project__visuel,
-.project--mobile#project-01 {
+.project--mobile#project-01 .project__content{
   background: linear-gradient(45deg, #1d7d90, #5dd5c3);
 }
 
@@ -442,7 +445,7 @@
 }
 
 #project-02 .project__visuel,
-.project--mobile#project-02 {
+.project--mobile#project-02 .project__content{
   background: linear-gradient(45deg, #f59e64, #eb5160);
 }
 
@@ -452,11 +455,13 @@
   -webkit-text-fill-color: transparent;
 }
 
-#project-02 .description__number-wrapper--mobile .description__number--mobile:after {
+#project-02
+  .description__number-wrapper--mobile
+  .description__number--mobile:after {
   content: "02.";
 }
 #project-03 .project__visuel,
-.project--mobile#project-03 {
+.project--mobile#project-03 .project__content{
   background: linear-gradient(45deg, #1d7d90, #5dd5c3);
 }
 
@@ -465,14 +470,18 @@
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
-#project-03 .description__number-wrapper--mobile .description__number--mobile:after {
+#project-03
+  .description__number-wrapper--mobile
+  .description__number--mobile:after {
   content: "03.";
 }
 #project-04 .project__visuel,
-.project--mobile#project-04 {
+.project--mobile#project-04 .project__content{
   background: linear-gradient(45deg, #1d7d90, #5dd5c3);
 }
-#project-04 .description__number-wrapper--mobile .description__number--mobile:after {
+#project-04
+  .description__number-wrapper--mobile
+  .description__number--mobile:after {
   content: "04.";
 }
 #project-04 .description__number-wrapper--mobile .description__number--mobile {
@@ -663,31 +672,10 @@
   display: none;
   position: relative;
   overflow: hidden;
-  height: calc(100vh - 30px);
-  width: calc(100vw - 30px);
-  margin: 15px;
-  padding: 20px;
-  background: linear-gradient(45deg, #1d7d90, #5dd5c3);
-  background-size: 400% 400%;
-  border-radius: 4px;
-  box-shadow: 0 0 16px $dark-blue-20;
-  @include animation(0.6s fadeOut ease-in-out forwards);
 
   &.enable {
     z-index: 16;
     display: flex;
-    @include animation(0.6s fadeIn ease-in-out forwards);
-  }
-
-  &:after {
-    content: "";
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    top: 0;
-    left: 0;
-    z-index: -2;
-    background-image: url(../img/noise-pattern.png);
   }
 
   .btn {
@@ -706,7 +694,31 @@
   display: flex;
   flex-direction: column;
   justify-content: center;
-  height: calc(100% - 48px);
+  height: calc(100vh - 30px);
+  width: calc(100vw - 30px);
+  margin: 15px;
+  padding: 20px;
+  background: linear-gradient(45deg, #1d7d90, #5dd5c3);
+  background-size: 400% 400%;
+  border-radius: 4px;
+  box-shadow: 0 0 16px $dark-blue-20;
+  opacity: 0;
+  @include animation(0.8s fadeOut ease-in-out forwards);
+
+  &.enable {
+    @include animation(0.8s fadeIn ease-in-out forwards .2s);
+  }
+
+  &:after {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    z-index: -2;
+    background-image: url(../img/noise-pattern.png);
+  }
 }
 
 //Project description

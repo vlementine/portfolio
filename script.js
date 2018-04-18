@@ -252,6 +252,7 @@ function displayProjectMobile(project) {
   document.querySelector(project + " .description__title--mobile h2").classList.add("enable");
   document.querySelector(project + " .description__info--mobile p").classList.add("enable");
   document.querySelector(project + ".project--mobile .btn").classList.add("enable");
+  document.querySelector(project + " .project__content").classList.add("enable");
 }
 
 //-------------------------------------
@@ -268,6 +269,7 @@ function hideProjectMobile(project) {
   document.querySelector(project + " .description__title--mobile h2").classList.remove("enable");
   document.querySelector(project + " .description__info--mobile p").classList.remove("enable");
   document.querySelector(project + ".project--mobile .btn").classList.remove("enable");
+  document.querySelector(project + " .project__content").classList.remove("enable");
 }
 
 //-------------------------------------
@@ -301,13 +303,13 @@ function navMobile(param) {
     //Update active number
     document.querySelector(".number--active").textContent = "0" + itemClicked;
 
-    hideProjectMobile(idToHide);
-
+    hideProjectMobile(idToHide);    
+    
     setTimeout(function() {
       document.querySelector(idToHide).classList.remove("enable");
       document.querySelector(idToDisplay).classList.add("enable");
       displayProjectMobile(idToDisplay);
-    }, 900);
+    }, 600);
   } else if (itemClicked == 1) {
     //console.log("itemClicked == 1");
 
