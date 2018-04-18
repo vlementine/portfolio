@@ -239,6 +239,50 @@ function navNew(param) {
 }
 
 //-------------------------------------
+//	DISPLAY PROJECT • MOBILE
+//-------------------------------------
+function displayProjectMobile(project) {
+  let imgNumber = document.querySelectorAll(project + " .project__visuel--mobile img").length;
+  for (let i = 0; i < imgNumber; i++) {
+    document.querySelectorAll(project + " .project__visuel--mobile img")[i].classList.add("enable");
+  }
+
+  document.querySelector(project + " .project__visuel--mobile").classList.add("enable");
+  document.querySelector(project + " .description__number-shadow--mobile").classList.add("enable");
+  document.querySelector(project + " .description__title--mobile h2").classList.add("enable");
+  document.querySelector(project + " .description__info--mobile p").classList.add("enable");
+  document.querySelector(project + ".project--mobile .btn").classList.add("enable");
+}
+
+//-------------------------------------
+//	HIDE PROJECT • MOBILE
+//-------------------------------------
+function hideProjectMobile(project) {
+  let imgNumber = document.querySelectorAll(project + " .project__visuel--mobile img").length;
+  for (let i = 0; i < imgNumber; i++) {
+    document.querySelectorAll(project + " .project__visuel--mobile img")[i].classList.remove("enable");
+  }
+
+  document.querySelector(project + " .project__visuel--mobile").classList.remove("enable");
+  document.querySelector(project + " .description__number-shadow--mobile").classList.remove("enable");
+  document.querySelector(project + " .description__title--mobile h2").classList.remove("enable");
+  document.querySelector(project + " .description__info--mobile p").classList.remove("enable");
+  document.querySelector(project + ".project--mobile .btn").classList.remove("enable");
+}
+
+//-------------------------------------
+//	BTN SEE MY WORK • MOBILE
+//-------------------------------------
+function seeMyWorkMobile() {
+  //Hide Home
+  document.querySelector(".home").classList.add("disable");
+
+  //Display first project
+  document.querySelector("#project-01").classList.add("enable");
+  displayProjectMobile("#project-01");
+}
+
+//-------------------------------------
 //	NAVIGATION • MOBILE
 //-------------------------------------
 function navMobile(param) {
@@ -250,25 +294,25 @@ function navMobile(param) {
   let itemClicked = itemActive + param;
 
   //Get id to display and hide
-  let idToDisplay = "#project-0" + itemClicked;
-  let idToHide = "#project-0" + itemActive;
-
-  console.log("itemClicked : " + itemClicked + " / totalItemNav : " + totalItemNav + " / idToDisplay : " + idToDisplay + " / idToHide : " + idToHide);
+  let idToDisplay = "#project-0" + (itemClicked - 1);
+  let idToHide = "#project-0" + (itemActive - 1);
 
   if (itemClicked < totalItemNav && itemClicked !== 1) {
-    //console.log("Plop");
-    
     //Update active number
     document.querySelector(".number--active").textContent = "0" + itemClicked;
 
+    hideProjectMobile(idToHide);
 
-
-  } else if(itemClicked == 1) {
+    setTimeout(function() {
+      document.querySelector(idToHide).classList.remove("enable");
+      document.querySelector(idToDisplay).classList.add("enable");
+      displayProjectMobile(idToDisplay);
+    }, 900);
+  } else if (itemClicked == 1) {
     //console.log("itemClicked == 1");
 
     //Display Home
-    document.querySelector('.home').classList.remove('disable');
-
+    document.querySelector(".home").classList.remove("disable");
   } else if (itemClicked == totalItemNav) {
     //console.log("itemClicked == totalItemNav");
 
@@ -443,10 +487,14 @@ function responsive() {
   if (windowWidth <= 650) {
     console.log("plop");
     document.getElementById("projects").innerHTML = contentResponsive;
-    document.querySelector(".home").classList.add("disable");
+    document.querySelector(".home").classList.remove("disable");
+    document.querySelector(".btn__work--desktop").classList.add("btn__work--mobile");
+    document.querySelector(".btn__work--desktop").classList.remove("btn__work--desktop");
   } else {
     console.log("ploup");
     document.getElementById("projects").innerHTML = content;
+    document.querySelector(".btn__work--mobile").classList.add("btn__work--desktop");
+    document.querySelector(".btn__work--desktop").classList.remove("btn__work--mobile");
   }
 }
 
@@ -454,8 +502,12 @@ function responsive() {
 //	MAIN FUNCTION
 //-------------------------------------
 function main() {
-  document.querySelector(".btn__work").addEventListener("click", seeMyWork);
   responsive();
+  if (windowWidth <= 650) {
+    document.querySelector(".btn__work--mobile").addEventListener("click", seeMyWorkMobile);
+  } else {
+    document.querySelector(".btn__work--desktop").addEventListener("click", seeMyWork);
+  }
 }
 
 document.onload = main();

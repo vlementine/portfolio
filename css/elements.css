@@ -452,13 +452,13 @@
   Navigation • Mobile
 ------------------------*/
 .nav--mobile {
-  position: relative;
-  z-index: 24;
+  position: fixed;
+  z-index: 16;
   display: none;
   justify-content: space-around;
   align-items: center;
-  bottom: 110px;
-  max-width: calc(100% - 80px);
+  bottom: 80px;
+  width: 100%;
   margin: auto;
 }
 
@@ -730,7 +730,7 @@
   z-index: 10;
   font-family: "Playfair Display", serif;
   font-weight: 900;
-  font-size: 2.8rem;
+  font-size: 2.4rem;
   line-height: 1;
   margin: 0;
   -webkit-transform: translateY(120%);
@@ -786,7 +786,7 @@
   font-family: "Playfair Display", serif;
   font-weight: 400;
   font-style: italic;
-  font-size: 0.75rem;
+  font-size: 0.85rem;
   letter-spacing: 0.15em;
   color: rgba(6, 10, 46, 0.5);
   margin: 20px 0 0 0;
@@ -818,7 +818,7 @@
 .description__info p {
   font-family: "Work Sans", sans-serif;
   font-weight: 600;
-  font-size: 0.75rem;
+  font-size: 0.7rem;
   text-transform: uppercase;
   letter-spacing: 0.15em;
   margin: 0;
@@ -843,8 +843,10 @@
 }
 
 .project--mobile {
-  z-index: 16;
+  z-index: 0;
+  display: none;
   position: relative;
+  overflow: hidden;
   height: calc(100vh - 30px);
   width: calc(100vw - 30px);
   margin: 15px;
@@ -853,6 +855,21 @@
   background-size: 400% 400%;
   border-radius: 4px;
   box-shadow: 0 0 16px rgba(6, 10, 46, 0.2);
+  -webkit-animation: 0.6s fadeOut ease-in-out forwards;
+  -moz-animation: 0.6s fadeOut ease-in-out forwards;
+  -ms-animation: 0.6s fadeOut ease-in-out forwards;
+  -o-transition: 0.6s fadeOut ease-in-out forwards;
+  animation: 0.6s fadeOut ease-in-out forwards;
+}
+
+.project--mobile.enable {
+  z-index: 16;
+  display: flex;
+  -webkit-animation: 0.6s fadeIn ease-in-out forwards;
+  -moz-animation: 0.6s fadeIn ease-in-out forwards;
+  -ms-animation: 0.6s fadeIn ease-in-out forwards;
+  -o-transition: 0.6s fadeIn ease-in-out forwards;
+  animation: 0.6s fadeIn ease-in-out forwards;
 }
 
 .project--mobile:after {
@@ -869,6 +886,20 @@
 .project--mobile .btn {
   align-self: center;
   margin-top: 45px;
+  opacity: 0;
+  -webkit-animation: 0.8s fadeOut ease-in-out forwards;
+  -moz-animation: 0.8s fadeOut ease-in-out forwards;
+  -ms-animation: 0.8s fadeOut ease-in-out forwards;
+  -o-transition: 0.8s fadeOut ease-in-out forwards;
+  animation: 0.8s fadeOut ease-in-out forwards;
+}
+
+.project--mobile .btn.enable {
+  -webkit-animation: 0.8s fadeIn ease-in-out forwards 0.6s;
+  -moz-animation: 0.8s fadeIn ease-in-out forwards 0.6s;
+  -ms-animation: 0.8s fadeIn ease-in-out forwards 0.6s;
+  -o-transition: 0.8s fadeIn ease-in-out forwards 0.6s;
+  animation: 0.8s fadeIn ease-in-out forwards 0.6s;
 }
 
 .project__content {
@@ -901,6 +932,24 @@
   font-size: 2.8rem;
   line-height: 1;
   margin: 0;
+  -webkit-transform: translateY(120%);
+  -moz-transform: translateY(120%);
+  -ms-transform: translateY(120%);
+  -o-transform: translateY(120%);
+  transform: translateY(120%);
+  -webkit-animation: 0.6s slideBottom ease-out forwards;
+  -moz-animation: 0.6s slideBottom ease-out forwards;
+  -ms-animation: 0.6s slideBottom ease-out forwards;
+  -o-transition: 0.6s slideBottom ease-out forwards;
+  animation: 0.6s slideBottom ease-out forwards;
+}
+
+.description__title--mobile h2.enable {
+  -webkit-animation: 0.6s slideTop ease-out forwards 0.8s;
+  -moz-animation: 0.6s slideTop ease-out forwards 0.8s;
+  -ms-animation: 0.6s slideTop ease-out forwards 0.8s;
+  -o-transition: 0.6s slideTop ease-out forwards 0.8s;
+  animation: 0.6s slideTop ease-out forwards 0.8s;
 }
 
 .description__number-wrapper--mobile .description__number--mobile {
@@ -942,7 +991,6 @@
   font-weight: 700;
   font-size: 6.5rem;
   color: rgba(0, 0, 0, 0.1);
-  text-shadow: 0 0px 18px rgba(0, 0, 0, 0.3);
   -webkit-animation: 0.6s shadowDropOut ease-out forwards;
   -moz-animation: 0.6s shadowDropOut ease-out forwards;
   -ms-animation: 0.6s shadowDropOut ease-out forwards;
@@ -971,6 +1019,24 @@
   letter-spacing: 0.15em;
   margin: 0;
   text-align: center;
+  -webkit-transform: translateY(125%);
+  -moz-transform: translateY(125%);
+  -ms-transform: translateY(125%);
+  -o-transform: translateY(125%);
+  transform: translateY(125%);
+  -webkit-animation: 0.6s slideBottom ease-in-out forwards;
+  -moz-animation: 0.6s slideBottom ease-in-out forwards;
+  -ms-animation: 0.6s slideBottom ease-in-out forwards;
+  -o-transition: 0.6s slideBottom ease-in-out forwards;
+  animation: 0.6s slideBottom ease-in-out forwards;
+}
+
+.description__info--mobile p.enable {
+  -webkit-animation: 0.6s slideTop ease-in-out forwards 0.8s;
+  -moz-animation: 0.6s slideTop ease-in-out forwards 0.8s;
+  -ms-animation: 0.6s slideTop ease-in-out forwards 0.8s;
+  -o-transition: 0.6s slideTop ease-in-out forwards 0.8s;
+  animation: 0.6s slideTop ease-in-out forwards 0.8s;
 }
 
 .project__visuel--mobile {
@@ -980,6 +1046,19 @@
   position: relative;
   z-index: 24;
   margin-top: 15px;
+  -webkit-animation: 1s fadeOut ease-in-out forwards;
+  -moz-animation: 1s fadeOut ease-in-out forwards;
+  -ms-animation: 1s fadeOut ease-in-out forwards;
+  -o-transition: 1s fadeOut ease-in-out forwards;
+  animation: 1s fadeOut ease-in-out forwards;
+}
+
+.project__visuel--mobile.enable {
+  -webkit-animation: 0.6s fadeIn ease-in-out forwards 0.6s;
+  -moz-animation: 0.6s fadeIn ease-in-out forwards 0.6s;
+  -ms-animation: 0.6s fadeIn ease-in-out forwards 0.6s;
+  -o-transition: 0.6s fadeIn ease-in-out forwards 0.6s;
+  animation: 0.6s fadeIn ease-in-out forwards 0.6s;
 }
 
 .project__visuel--mobile .visuel__mockup {
@@ -996,6 +1075,42 @@
   position: relative;
   z-index: 22;
   width: 100%;
+  opacity: 0;
+  -webkit-animation: 0.4s slideLeft ease-in-out forwards;
+  -moz-animation: 0.4s slideLeft ease-in-out forwards;
+  -ms-animation: 0.4s slideLeft ease-in-out forwards;
+  -o-transition: 0.4s slideLeft ease-in-out forwards;
+  animation: 0.4s slideLeft ease-in-out forwards;
+}
+
+.project__visuel--mobile .visuel__mockup .mockup--desktop.enable {
+  -webkit-animation: 0.6s slideRight ease-out forwards 0.6s;
+  -moz-animation: 0.6s slideRight ease-out forwards 0.6s;
+  -ms-animation: 0.6s slideRight ease-out forwards 0.6s;
+  -o-transition: 0.6s slideRight ease-out forwards 0.6s;
+  animation: 0.6s slideRight ease-out forwards 0.6s;
+}
+
+.project__visuel--mobile .visuel__mockup .mockup--mobile {
+  position: relative;
+  z-index: 22;
+  width: 100%;
+  bottom: 0;
+  right: 0;
+  opacity: 0;
+  -webkit-animation: 0.4s slideLeft ease-in-out forwards;
+  -moz-animation: 0.4s slideLeft ease-in-out forwards;
+  -ms-animation: 0.4s slideLeft ease-in-out forwards;
+  -o-transition: 0.4s slideLeft ease-in-out forwards;
+  animation: 0.4s slideLeft ease-in-out forwards;
+}
+
+.project__visuel--mobile .visuel__mockup .mockup--mobile.enable {
+  -webkit-animation: 0.6s slideRight ease-out forwards 0.6s;
+  -moz-animation: 0.6s slideRight ease-out forwards 0.6s;
+  -ms-animation: 0.6s slideRight ease-out forwards 0.6s;
+  -o-transition: 0.6s slideRight ease-out forwards 0.6s;
+  animation: 0.6s slideRight ease-out forwards 0.6s;
 }
 
 .project__visuel--mobile .visuel__letter {
@@ -1005,6 +1120,20 @@
   max-height: calc(100% + 30px);
   width: auto;
   max-width: 60%;
+  opacity: 0;
+  -webkit-animation: 1s fadeOut ease-in-out forwards;
+  -moz-animation: 1s fadeOut ease-in-out forwards;
+  -ms-animation: 1s fadeOut ease-in-out forwards;
+  -o-transition: 1s fadeOut ease-in-out forwards;
+  animation: 1s fadeOut ease-in-out forwards;
+}
+
+.project__visuel--mobile .visuel__letter.enable {
+  -webkit-animation: 0.6s fadeIn ease-in-out forwards 0.6s;
+  -moz-animation: 0.6s fadeIn ease-in-out forwards 0.6s;
+  -ms-animation: 0.6s fadeIn ease-in-out forwards 0.6s;
+  -o-transition: 0.6s fadeIn ease-in-out forwards 0.6s;
+  animation: 0.6s fadeIn ease-in-out forwards 0.6s;
 }
 
 .contact__wrapper {
@@ -1152,6 +1281,7 @@
 
 .bubble p {
   margin: 0;
+  font-size: 0.9rem;
 }
 
 .bubble input,

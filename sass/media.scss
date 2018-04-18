@@ -66,7 +66,7 @@
 
 @media screen and (max-width: 650px) {
   html {
-    font-size: 14px;
+    font-size: 13px;
   }
 
   body:before {
@@ -108,57 +108,70 @@
   //-------------------------------------
   //	CONTACT
   //-------------------------------------
-  // .contact__wrapper {
-  //   width: 100%;
-  //   position: relative;
-  //   flex-direction: column;
-  //   height: auto;
+  .contact__wrapper {
+    width: 100%;
+    flex-direction: column;
+  }
 
-  //   &.disable {
-  //     @include transform(translateY(0%));
-  //     @include transition(transform 0.8s ease-in-out);
-  //   }
-  // }
+  .contact__description {
+    flex-basis: auto;
 
-  // .contact__description .description__wrapper {
-  //   margin: 0 0 30px;
+    .description__wrapper {
+      width: calc(100vw - 40px);
+      margin: 40px auto 40px;
 
-  //   .description__number {
-  //     top: -20px;
-  //   }
-  //   .description__title {
-  //     margin: 20px 0 0;
-  //   }
-  // }
+      .description__number {
+        top: -22px;
+        font-size: 5rem;
+      }
+      .description__title {
+        margin: 20px 0 0;
+      }
+      .description {
+        display: none;
+      }
+    }
+  }
 
-  // .contact__form {
-  //   height: calc(100vh - 98px);
-  //   form {
-  //     margin: 0 20px 40px;
-  //     width: calc(100% - 40px);
-  //   }
-  // }
+  .contact__form {
+    flex-grow: 1;
+    form {
+      margin: 0 20px 40px;
+      width: calc(100% - 40px);
+    }
+  }
 
-  // .bubble--group:nth-child(1) .bubble,
-  // .bubble--group:nth-child(1) .bubble--answer {
-  //   @include animation(bubble ease-in-out forwards 0.6s);
-  //   display: inline-block;
-  // }
+  .bubble--group:nth-child(1) .bubble,
+  .bubble--group:nth-child(1) .bubble--answer {
+    @include animation(bubble ease-in-out forwards 0.6s);
+    display: inline-block;
+  }
 
   //-------------------------------------
   //	LINKS
   //-------------------------------------
   .links {
     margin-left: auto;
-    position: relative;
-    bottom: 94px;
-    max-width: calc(100% - 60px);
-    text-align: center;
+    position: fixed;
+    bottom: 30px;
     left: 0;
+    width: calc(100% - 60px);
+    margin: auto 30px;
+    text-align: center;
     padding: 0 10px;
 
     a {
       margin: 0 10px;
     }
+  }
+
+  //-------------------------------------
+  //	MENU
+  //-------------------------------------
+  .links.menu-visible {
+    left: 0;
+    width: calc(100% - 60px);
+    margin: auto 30px;
+    background: #FFF;
   }
 }
