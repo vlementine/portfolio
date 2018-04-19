@@ -1,137 +1,4 @@
 //-------------------------------------
-//	JSON
-//-------------------------------------
-const projects = [
-  {
-    number: "01",
-    title: "Back to your dream",
-    keywords: "User Interface • Animation",
-    description:
-      "Option A, you kill me right here and now. Apparently I've made that very easy for you. You can kill me, no witnesses and then spend the next few weeks or months tracking down Jesse Pinkman and you kill him too. A pointless exercise it seems…",
-    image: "btyd",
-    href: " "
-  },
-  {
-    number: "02",
-    title: "Le Blog Zenchef",
-    keywords: "User Interface • Blog",
-    description:
-      "Option A, you kill me right here and now. Apparently I've made that very easy for you. You can kill me, no witnesses and then spend the next few weeks or months tracking down Jesse Pinkman and you kill him too. A pointless exercise it seems…",
-    image: "blog-zenchef",
-    href: " "
-  },
-  {
-    number: "03",
-    title: "Alcatraz, 1962",
-    keywords: "User Interface • Webdoc",
-    description:
-      "Option A, you kill me right here and now. Apparently I've made that very easy for you. You can kill me, no witnesses and then spend the next few weeks or months tracking down Jesse Pinkman and you kill him too. A pointless exercise it seems…",
-    image: "btyd",
-    href: " "
-  },
-  {
-    number: "04",
-    title: "La Maroquinerie",
-    keywords: "User Interface • Concert",
-    description:
-      "Option A, you kill me right here and now. Apparently I've made that very easy for you. You can kill me, no witnesses and then spend the next few weeks or months tracking down Jesse Pinkman and you kill him too. A pointless exercise it seems…",
-    image: "btyd",
-    href: " "
-  }
-];
-
-const nav = [
-  {
-    number: "01",
-    title: "Home"
-  },
-  {
-    number: "02",
-    title: "Back to your dream"
-  },
-  {
-    number: "03",
-    title: "Le Blog Zenchef"
-  },
-  {
-    number: "04",
-    title: "Alcatraz, 1962"
-  },
-  {
-    number: "05",
-    title: "La Maroquinerie"
-  },
-  {
-    number: "06",
-    title: "Contact"
-  }
-];
-
-let navigation = "";
-
-nav.forEach(itemNav => {
-  navigation += ` <span class="nav__item" onClick="navNew(${itemNav.number})">
-  ${itemNav.number}
-  <span class="item__title">${itemNav.title}</span>
-  </span>`;
-});
-document.querySelector(".nav__wrapper").innerHTML = navigation;
-
-//-------------------------------------
-//	GET ANSWER
-//-------------------------------------
-function getAnswer(name, groupBubble, nbBubble) {
-  let answer = document.getElementById(name + "Answer").value;
-  displayBubble(groupBubble, nbBubble);
-
-  if (answer !== "" && answer !== " ") {
-    document.getElementById(name + "Answer").setAttribute("readonly", true);
-
-    if (name == "name") {
-      document.getElementById(name + "Question").innerHTML = answer;
-    }
-  }
-}
-
-//-------------------------------------
-//	AUTO-REZISE © Zenchef
-//-------------------------------------
-const textareaChat = document.querySelector("#messageAnswer");
-textareaChat.addEventListener("input", autoSize, false);
-const TEXTAREA_CONFIG = {
-  LINE_HEIGHT: 18, // adjust textarea lineheight
-  PADDING: 0 // adjust textarea padding vertical
-};
-function autoSize() {
-  if (textareaChat) {
-    textareaChat.setAttribute("rows", 2);
-    const rowsRequired = parseInt((textareaChat.scrollHeight - TEXTAREA_CONFIG.PADDING) / TEXTAREA_CONFIG.LINE_HEIGHT);
-    if (rowsRequired !== parseInt(textareaChat.getAttribute("rows"))) {
-      textareaChat.setAttribute("rows", rowsRequired);
-    }
-  }
-}
-
-//-------------------------------------
-//	DISPLAY BUBBLE
-//-------------------------------------
-function displayBubble(groupBubble, nbBubble) {
-  for (let n = 0; n < 2; n++) {
-    document.querySelectorAll(".bubble--group:nth-child(" + groupBubble + ") .bubble")[n].classList.add("enable");
-    document.querySelector(".contact__form form").scrollTo(0, document.body.scrollHeight);
-  }
-
-  if (nbBubble == 3) {
-    for (let n = 0; n < nbBubble; n++) {
-      document
-        .querySelectorAll(".bubble--group:nth-child(" + groupBubble + ") .bubble--group__choice .bubble")
-        [n].classList.add("enable__choice");
-      document.querySelector(".contact__form form").scrollTo(0, document.body.scrollHeight);
-    }
-  }
-}
-
-//-------------------------------------
 //	DISPLAY PROJECT
 //-------------------------------------
 function displayProject(project) {
@@ -173,20 +40,20 @@ function hideProject(project) {
 //-------------------------------------
 function seeMyWork() {
   let windowWidth = window.innerWidth;
-  if(windowWidth <= 650) {
-  //Hide Home
-  document.querySelector(".home").classList.add("disable");
+  if (windowWidth <= 650) {
+    //Hide Home
+    document.querySelector(".home").classList.add("disable");
 
-  //Display first project
-  document.querySelector("#project-01").classList.add("enable");
-  displayProjectMobile("#project-01");
+    //Display first project
+    document.querySelector("#project-01").classList.add("enable");
+    displayProjectMobile("#project-01");
   } else {
-  //Hide Home
-  document.querySelector(".home").classList.add("disable");
-
-  //Display first project
-  document.querySelector("#project-01").classList.add("enable");
-  displayProject("#project-01");
+    //Hide Home
+    document.querySelector(".home").classList.add("disable");
+    navActiveItem(2);
+    //Display first project
+    document.querySelector("#project-01").classList.add("enable");
+    displayProject("#project-01");
   }
 }
 
@@ -384,126 +251,33 @@ function navMenu(param) {
 }
 
 //-------------------------------------
-//	VALIDATE EMAIL
-//-------------------------------------
-function validateEmail(email) {
-  let re = /^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
-  return re.test(email);
-}
-
-function validate(groupBubble, nbBubble) {
-  let result = document.querySelector("#result");
-  let email = document.querySelector("#mailAnswer").value;
-
-  if (validateEmail(email)) {
-    document.querySelector("#mailAnswer").setAttribute("readonly", true);
-    result.style.display = "none";
-    displayBubble(groupBubble, nbBubble);
-    sendEmail();
-  } else {
-    result.innerText = "L'adresse n'est pas valide";
-    result.style.color = "crimson";
-  }
-  return false;
-}
-
-//-------------------------------------
-//	MAIL SENDING
-//-------------------------------------
-function sendEmail() {
-  //Variables
-  let nameAnswer = document.getElementById("nameAnswer").value;
-  let mailAnswer = document.getElementById("mailAnswer").value;
-  if (document.getElementById("project-1").checked) {
-    var objectAnswer = "Une question ?";
-  } else if (document.getElementById("project-2").checked) {
-    var objectAnswer = "Un projet dans les cartons";
-  } else if (document.getElementById("project-3").checked) {
-    var objectAnswer = "Seulement envie de dire bonjour";
-  }
-  let messageAnswer = document.getElementById("messageAnswer").value;
-
-  xhr = new XMLHttpRequest();
-  xhr.open("POST", "sendEmail.php");
-  xhr.setRequestHeader("Content-Type", "application/json");
-  xhr.send(
-    JSON.stringify({
-      name: nameAnswer,
-      mail: mailAnswer,
-      object: objectAnswer,
-      message: messageAnswer
-    })
-  );
-}
-
-//-------------------------------------
 //	RESPONSIVE
 //-------------------------------------
 function responsive() {
-
   let windowWidth = window.innerWidth;
   console.log(windowWidth);
-  let content = "";
-  let contentResponsive = "";
 
-  projects.forEach(project => {
-    content += `<div class="project" id="project-${project.number}">
-          <div class="project__visuel">
-            <div class="visuel__mockup">
-              <img class="mockup--desktop" src="img/${
-                project.image
-              }_visuel-home.png" alt="Visuel du Blog Zenchef" draggable="false">
-            </div>
-            <img src="img/${project.image}_letter.png" alt="B" draggable="false">
-          </div>
+  if (windowWidth <= 650) {
+    console.log("plop");
+    document.querySelector(".home").classList.remove("disable");
+    document.querySelector(".btn__home").classList.add("btn__work--desktop", "btn__work--mobile");
+    if (!document.querySelector(".project--mobile")) {
+      document.getElementById("projects").innerHTML = contentResponsive;
+    }
+  } else {
+    console.log("ploup");
+    document.querySelector(".btn__home").classList.replace("btn__work--mobile", "btn__work--desktop");
+    if (!document.querySelector(".project")) {
+      document.getElementById("projects").innerHTML = content;
+    }
+  }
+}
 
-          <div class="project__description">
-            <div class="description__wrapper">
-              <div class="description__title">
-                <h2> ${project.title} </h2>
-              </div>
-              <span class="description__number">${project.number}.</span>
-              <div class="description__info">
-                <p>${project.keywords}</p>
-              </div>
-              <div class="description">
-                <p>${project.description}</p>
-              </div>
-              <a class="btn" href="${project.href}">Découvrir le projet</a>
-            </div>
-          </div>
-        </div>`;
-  });
-
-  projects.forEach(projectResponsive => {
-    contentResponsive += `<div class="project--mobile" id="project-${projectResponsive.number}">
-    <div class="project__content">
-      <div class="project__description--mobile">
-          <div>
-            <div class="description__title--mobile">
-                <h2> ${projectResponsive.title} </h2>
-            </div>
-            <div class="description__number-wrapper--mobile">
-              <span class="description__number--mobile">${projectResponsive.number}.</span>
-              <span class="description__number-shadow--mobile">${projectResponsive.number}.</span>
-            </div>
-          </div>
-          <div class="description__info--mobile">
-              <p>${projectResponsive.keywords}</p>
-          </div>
-      </div>
-      <div class="project__visuel--mobile">
-          <div class="visuel__mockup">
-              <img class="mockup--desktop" src="img/${
-                projectResponsive.image
-              }_visuel-home.png" alt="Visuel du Blog Zenchef" draggable="false">
-          </div>
-          <img class="visuel__letter" src="img/${projectResponsive.image}_letter.png" alt="B" draggable="false">
-      </div>
-      <a class="btn" href="${projectResponsive.href}">Découvrir le projet</a>
-    </div>
-</div>`;
-  });
+//-------------------------------------
+//	MAIN FUNCTION
+//-------------------------------------
+function main() {
+  let windowWidth = window.innerWidth;
 
   if (windowWidth <= 650) {
     console.log("plop");
@@ -517,17 +291,8 @@ function responsive() {
     document.querySelector(".btn__home").classList.remove("btn__work--mobile");
     document.getElementById("projects").innerHTML = content;
   }
-}
 
-//-------------------------------------
-//	MAIN FUNCTION
-//-------------------------------------
-function main() {
-  responsive();
-  let windowWidth = window.innerWidth;
-
-    document.querySelector(".btn__home").addEventListener("click", seeMyWork);
-
+  document.querySelector(".btn__home").addEventListener("click", seeMyWork);
 }
 
 document.onload = main();
