@@ -189,6 +189,7 @@ function navMobile(param) {
 //	MENU
 //-------------------------------------
 function displayMenu() {
+  let windowWidth = window.innerWidth;
   document.querySelector(".menu__wrapper").classList.toggle("disable");
   document.querySelector(".menu__icon--open").classList.toggle("enable");
   document.querySelector(".menu__icon--close").classList.toggle("enable");
@@ -197,7 +198,6 @@ function displayMenu() {
     document.querySelector(".links").classList.toggle("menu-visible");
     document.querySelector(".links").classList.toggle("enable");
   }
-  //Animation menu
 }
 
 function navMenu(param) {
