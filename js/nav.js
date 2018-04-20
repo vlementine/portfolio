@@ -1,0 +1,233 @@
+//-------------------------------------
+//	DISPLAY PROJECT
+//-------------------------------------
+function displayProject(project) {
+  let windowWidth = window.innerWidth;
+
+  if (windowWidth <= 650) {
+    let imgNumber = document.querySelectorAll(project + " .project__visuel--mobile img").length;
+    for (let i = 0; i < imgNumber; i++) {
+      document.querySelectorAll(project + " .project__visuel--mobile img")[i].classList.add("enable");
+    }
+    document.querySelector(project + " .project__visuel--mobile").classList.add("enable");
+    document.querySelector(project + " .description__number-shadow--mobile").classList.add("enable");
+    document.querySelector(project + " .description__title--mobile h2").classList.add("enable");
+    document.querySelector(project + " .description__info--mobile p").classList.add("enable");
+    document.querySelector(project + ".project--mobile .btn").classList.add("enable");
+    document.querySelector(project + " .project__content").classList.add("enable");
+  } else {
+    let imgNumber = document.querySelectorAll(project + " .project__visuel img").length;
+    for (let i = 0; i < imgNumber; i++) {
+      document.querySelectorAll(project + " .project__visuel img")[i].classList.add("enable");
+    }
+    document.querySelector(project + " .project__visuel").classList.add("enable");
+    document.querySelector(project + " .description__number").classList.add("enable");
+    document.querySelector(project + " .description__title h2").classList.add("enable");
+    document.querySelector(project + " .description__info p").classList.add("enable");
+    document.querySelector(project + " .description p").classList.add("enable");
+    document.querySelector(project + " .description__wrapper .btn").classList.add("enable");
+  }
+}
+
+//-------------------------------------
+//	HIDE PROJECT
+//-------------------------------------
+function hideProject(project) {
+  let windowWidth = window.innerWidth;
+
+  if (windowWidth <= 650) {
+    let imgNumber = document.querySelectorAll(project + " .project__visuel--mobile img").length;
+    for (let i = 0; i < imgNumber; i++) {
+      document.querySelectorAll(project + " .project__visuel--mobile img")[i].classList.remove("enable");
+    }
+    document.querySelector(project + " .project__visuel--mobile").classList.remove("enable");
+    document.querySelector(project + " .description__number-shadow--mobile").classList.remove("enable");
+    document.querySelector(project + " .description__title--mobile h2").classList.remove("enable");
+    document.querySelector(project + " .description__info--mobile p").classList.remove("enable");
+    document.querySelector(project + ".project--mobile .btn").classList.remove("enable");
+    document.querySelector(project + " .project__content").classList.remove("enable");
+  } else {
+    let imgNumber = document.querySelectorAll(project + " .project__visuel img").length;
+    for (let i = 0; i < imgNumber; i++) {
+      document.querySelectorAll(project + " .project__visuel img")[i].classList.remove("enable");
+    }
+    document.querySelector(project + " .project__visuel").classList.remove("enable");
+    document.querySelector(project + " .description__number").classList.remove("enable");
+    document.querySelector(project + " .description__title h2").classList.remove("enable");
+    document.querySelector(project + " .description__info p").classList.remove("enable");
+    document.querySelector(project + " .description p").classList.remove("enable");
+    document.querySelector(project + " .description__wrapper .btn").classList.remove("enable");
+  }
+}
+
+//-------------------------------------
+//	BTN SEE MY WORK
+//-------------------------------------
+function seeMyWork() {
+  let windowWidth = window.innerWidth;
+  document.querySelector(".home").classList.add("disable");
+  document.querySelector("#project-01").classList.add("enable");
+  if (windowWidth <= 650) {
+    displayProject("#project-01");
+  } else {
+    navActiveItem(2);
+    displayProject("#project-01");
+  }
+}
+
+//-------------------------------------
+//	ACTIVE ITEM
+//-------------------------------------
+function navActiveItem(param) {
+  for (let n = 0; n < Object.keys(nav).length; n++) {
+    document.querySelectorAll("span.nav__item")[n].classList.remove("active");
+  }
+  document.querySelector("span.nav__item:nth-child(" + param + ")").classList.add("active");
+}
+
+//-------------------------------------
+//	NAVIGATION
+//-------------------------------------
+function navNew(param) {
+  //Get the total of item of nav
+  let totalItemNav = Object.keys(nav).length;
+
+  //Get the number of item clicked
+  let projectClicked = parseInt(param) - 1;
+  let itemClicked = parseInt(param);
+
+  //Item active
+  let projectActive = parseInt(document.querySelector(".project.enable").id.substr(-1));
+
+  navActiveItem(projectClicked + 1);
+
+  let idToDisplay = "#project-0" + projectClicked;
+  let idToHide = "#" + document.querySelector(".project.enable").id;
+
+  if (projectClicked < totalItemNav - 1 && projectClicked !== 0 && projectClicked !== projectActive) {
+    hideProject(idToHide);
+
+    setTimeout(function() {
+      document.querySelector(idToHide).classList.remove("enable");
+      document.querySelector(idToDisplay).classList.add("enable");
+      displayProject(idToDisplay);
+    }, 800);
+  } else if (projectClicked === 0) {
+    document.querySelector(".home").classList.remove("disable");
+    hideProject(idToHide);
+
+    setTimeout(function() {
+      document.querySelector(idToHide).classList.remove("enable");
+    }, 700);
+  } else if (itemClicked == totalItemNav) {
+    document.querySelector(".contact__wrapper").classList.remove("disable");
+    hideProject(idToHide);
+
+    setTimeout(function() {
+      document.querySelector(idToHide).classList.remove("enable");
+      document.querySelector(".bubble--group:nth-child(1) .bubble").classList.add("enable");
+      document.querySelector(".bubble--group:nth-child(1) .bubble--answer").classList.add("enable");
+    }, 700);
+  }
+}
+
+//-------------------------------------
+//	NAVIGATION • MOBILE
+//-------------------------------------
+function navMobile(param) {
+  //Get the total of item of nav
+  let totalItemNav = Object.keys(nav).length;
+
+  //Get the number of item clicked
+  let itemActive = parseInt(document.querySelector(".number--active").innerHTML);
+  let itemClicked = itemActive + param;
+
+  //Get id to display and hide
+  let idToDisplay = "#project-0" + (itemClicked - 1);
+  let idToHide = "#project-0" + (itemActive - 1);
+
+  if (itemClicked < totalItemNav && itemClicked !== 1) {
+    //Update active number
+    document.querySelector(".number--active").textContent = "0" + itemClicked;
+
+    hideProject(idToHide);
+
+    setTimeout(function() {
+      document.querySelector(idToHide).classList.remove("enable");
+      document.querySelector(idToDisplay).classList.add("enable");
+      displayProject(idToDisplay);
+    }, 600);
+  } else if (itemClicked == 1) {
+    //console.log("itemClicked == 1");
+
+    //Display Home
+    document.querySelector(".home").classList.remove("disable");
+  } else if (itemClicked == totalItemNav) {
+    //console.log("itemClicked == totalItemNav");
+
+    document.querySelector(".contact__wrapper").classList.remove("disable");
+  }
+}
+
+//-------------------------------------
+//	MENU
+//-------------------------------------
+function displayMenu() {
+  let windowWidth = window.innerWidth;
+  document.querySelector(".menu__wrapper").classList.toggle("disable");
+  document.querySelector(".menu__icon--open").classList.toggle("enable");
+  document.querySelector(".menu__icon--close").classList.toggle("enable");
+  document.querySelector("body").classList.toggle("menu-visible");
+  if (windowWidth <= 650) {
+    document.querySelector(".links").classList.toggle("menu-visible");
+    document.querySelector(".links").classList.toggle("enable");
+  }
+}
+
+function initProject(param) {
+  document
+    .querySelectorAll(param)
+    .forEach(element => (element.classList.contains("enable") ? element.classList.remove("enable") : ""));
+}
+
+function navMenu(param) {
+  let windowWidth = window.innerWidth;
+  displayMenu();
+
+  // Home
+  if (param == "home") {
+    document.querySelector(".home").classList.remove("disable");
+    document.querySelector(".contact__wrapper").classList.add("disable");
+    if (windowWidth <= 650) {
+      initProject(".project--mobile");
+    } else {
+      initProject(".project");
+    }
+  }
+  // Work
+  else if (param == "work") {
+    document.querySelector(".home").classList.add("disable");
+    document.querySelector(".contact__wrapper").classList.add("disable");
+    setTimeout(function() {
+      document.querySelector("#project-01").classList.add("enable");
+      displayProject("#project-01");
+    }, 500);
+    if (windowWidth <= 650) {
+      initProject(".project--mobile");
+      document.querySelector(".number--active").textContent = "02";
+    } else {
+      initProject(".project");
+      navActiveItem(2);
+    }
+  }
+  // Contact
+  else if (param == "contact") {
+    initProject(".project");
+    document.querySelector(".contact__wrapper").classList.remove("disable");
+    setTimeout(function() {
+      document.querySelector(".bubble--group:nth-child(1) .bubble").classList.add("enable");
+      document.querySelector(".bubble--group:nth-child(1) .bubble--answer").classList.add("enable");
+      document.querySelector(".home").classList.add("disable");
+    }, 500);
+  }
+}
