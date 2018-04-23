@@ -4,6 +4,7 @@
 function displayProject(project) {
   let windowWidth = window.innerWidth;
 
+  //Mobile
   if (windowWidth <= 650) {
     let imgNumber = document.querySelectorAll(project + " .project__visuel--mobile img").length;
     for (let i = 0; i < imgNumber; i++) {
@@ -15,6 +16,8 @@ function displayProject(project) {
     document.querySelector(project + " .description__info--mobile p").classList.add("enable");
     document.querySelector(project + ".project--mobile .btn").classList.add("enable");
     document.querySelector(project + " .project__content").classList.add("enable");
+
+    //Desktop
   } else {
     let imgNumber = document.querySelectorAll(project + " .project__visuel img").length;
     for (let i = 0; i < imgNumber; i++) {
@@ -35,6 +38,7 @@ function displayProject(project) {
 function hideProject(project) {
   let windowWidth = window.innerWidth;
 
+  //Mobile
   if (windowWidth <= 650) {
     let imgNumber = document.querySelectorAll(project + " .project__visuel--mobile img").length;
     for (let i = 0; i < imgNumber; i++) {
@@ -46,6 +50,8 @@ function hideProject(project) {
     document.querySelector(project + " .description__info--mobile p").classList.remove("enable");
     document.querySelector(project + ".project--mobile .btn").classList.remove("enable");
     document.querySelector(project + " .project__content").classList.remove("enable");
+
+    //Desktop
   } else {
     let imgNumber = document.querySelectorAll(project + " .project__visuel img").length;
     for (let i = 0; i < imgNumber; i++) {
@@ -64,11 +70,16 @@ function hideProject(project) {
 //	BTN SEE MY WORK
 //-------------------------------------
 function seeMyWork() {
+  //All
   let windowWidth = window.innerWidth;
   document.querySelector(".home").classList.add("disable");
   document.querySelector("#project-01").classList.add("enable");
+
+  //Mobile
   if (windowWidth <= 650) {
     displayProject("#project-01");
+
+    //Desktop
   } else {
     navActiveItem(2);
     displayProject("#project-01");
@@ -86,9 +97,9 @@ function navActiveItem(param) {
 }
 
 //-------------------------------------
-//	NAVIGATION
+//	NAVIGATION • DESKTOP
 //-------------------------------------
-function navNew(param) {
+function navDesktop(param) {
   //Get the total of item of nav
   let totalItemNav = Object.keys(nav).length;
 
@@ -99,30 +110,34 @@ function navNew(param) {
   //Item active
   let projectActive = parseInt(document.querySelector(".project.enable").id.substr(-1));
 
+  //Update number navigation
   navActiveItem(projectClicked + 1);
 
+  //Get id to display and hide
   let idToDisplay = "#project-0" + projectClicked;
   let idToHide = "#" + document.querySelector(".project.enable").id;
 
+  //Display projects
   if (projectClicked < totalItemNav - 1 && projectClicked !== 0 && projectClicked !== projectActive) {
     hideProject(idToHide);
-
     setTimeout(function() {
       document.querySelector(idToHide).classList.remove("enable");
       document.querySelector(idToDisplay).classList.add("enable");
       displayProject(idToDisplay);
     }, 800);
+
+    //Display home
   } else if (projectClicked === 0) {
     document.querySelector(".home").classList.remove("disable");
     hideProject(idToHide);
-
     setTimeout(function() {
       document.querySelector(idToHide).classList.remove("enable");
     }, 700);
+
+    //Display contact
   } else if (itemClicked == totalItemNav) {
     document.querySelector(".contact__wrapper").classList.remove("disable");
     hideProject(idToHide);
-
     setTimeout(function() {
       document.querySelector(idToHide).classList.remove("enable");
       document.querySelector(".bubble--group:nth-child(1) .bubble").classList.add("enable");
@@ -146,25 +161,21 @@ function navMobile(param) {
   let idToDisplay = "#project-0" + (itemClicked - 1);
   let idToHide = "#project-0" + (itemActive - 1);
 
+  //Display projects
   if (itemClicked < totalItemNav && itemClicked !== 1) {
-    //Update active number
     document.querySelector(".number--active").textContent = "0" + itemClicked;
-
     hideProject(idToHide);
-
     setTimeout(function() {
       document.querySelector(idToHide).classList.remove("enable");
       document.querySelector(idToDisplay).classList.add("enable");
       displayProject(idToDisplay);
     }, 600);
+
+    //Display home
   } else if (itemClicked == 1) {
-    //console.log("itemClicked == 1");
-
-    //Display Home
     document.querySelector(".home").classList.remove("disable");
+    //Display contact
   } else if (itemClicked == totalItemNav) {
-    //console.log("itemClicked == totalItemNav");
-
     document.querySelector(".contact__wrapper").classList.remove("disable");
   }
 }
@@ -173,11 +184,14 @@ function navMobile(param) {
 //	MENU
 //-------------------------------------
 function displayMenu() {
+  //All
   let windowWidth = window.innerWidth;
   document.querySelector(".menu__wrapper").classList.toggle("disable");
   document.querySelector(".menu__icon--open").classList.toggle("enable");
   document.querySelector(".menu__icon--close").classList.toggle("enable");
   document.querySelector("body").classList.toggle("menu-visible");
+
+  //Mobile
   if (windowWidth <= 650) {
     document.querySelector(".links").classList.toggle("menu-visible");
     document.querySelector(".links").classList.toggle("enable");
@@ -194,7 +208,7 @@ function navMenu(param) {
   let windowWidth = window.innerWidth;
   displayMenu();
 
-  // Home
+  //Home
   if (param == "home") {
     document.querySelector(".home").classList.remove("disable");
     document.querySelector(".contact__wrapper").classList.add("disable");
@@ -204,7 +218,7 @@ function navMenu(param) {
       initProject(".project");
     }
   }
-  // Work
+  //Work
   else if (param == "work") {
     document.querySelector(".home").classList.add("disable");
     document.querySelector(".contact__wrapper").classList.add("disable");

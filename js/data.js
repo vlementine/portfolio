@@ -132,7 +132,7 @@ projects.forEach(projectResponsive => {
 let navigation = "";
 
 nav.forEach(itemNav => {
-  navigation += ` <span class="nav__item" onClick="navNew(${itemNav.number})">
+  navigation += ` <span class="nav__item" onClick="navDesktop(${itemNav.number})">
   ${itemNav.number}
   <span class="item__title">${itemNav.title}</span>
   </span>`;
