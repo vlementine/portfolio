@@ -6,6 +6,13 @@
 ------------------------*/
 @import url("https://fonts.googleapis.com/css?family=Work+Sans:300,400,500,600,700");
 @import url("https://fonts.googleapis.com/css?family=Playfair+Display:400i,700,900");
+@font-face {
+  font-family: 'butler_stencilextrabold';
+  src: url("../font/butler_extrabold_stencil-webfont.woff2") format("woff2"), url("../font/butler_extrabold_stencil-webfont.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+
 /*------------------------
   Colors
 ------------------------*/
@@ -26,7 +33,7 @@ body {
   padding: 0;
 }
 
-body:before {
+body.home:before {
   content: '';
   border: 1px solid rgba(6, 10, 46, 0.05);
   position: absolute;

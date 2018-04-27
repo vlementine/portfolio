@@ -798,7 +798,7 @@ body {
   padding: 0;
 }
 
-body:before {
+body.home:before {
   content: '';
   border: 1px solid rgba(6, 10, 46, 0.05);
   position: absolute;
