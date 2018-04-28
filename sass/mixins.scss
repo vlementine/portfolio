@@ -1,30 +1,38 @@
-/*-----------------------------
-  MIXINS
------------------------------*/
+//-------------------------------------
+//	MIXINS
+//-------------------------------------
 @mixin transition($param-transition...) {
-	-webkit-transition: $param-transition;
-	-moz-transition: $param-transition;
-	-ms-transition: $param-transition;
-	-o-transition: $param-transition;
-	transition: $param-transition;
+  -webkit-transition: $param-transition;
+  -moz-transition: $param-transition;
+  -ms-transition: $param-transition;
+  -o-transition: $param-transition;
+  transition: $param-transition;
 }
 
 @mixin transform($param-transform) {
-	-webkit-transform: $param-transform;
-	-moz-transform: $param-transform;
-	-ms-transform: $param-transform;
-	-o-transform: $param-transform;
-	transform: $param-transform;
+  -webkit-transform: $param-transform;
+  -moz-transform: $param-transform;
+  -ms-transform: $param-transform;
+  -o-transform: $param-transform;
+  transform: $param-transform;
 }
 
 @mixin placeholder {
-   ::-webkit-input-placeholder { @content;}
-   :-moz-placeholder           { @content;}
-   ::-moz-placeholder          { @content;}
-   :-ms-input-placeholder      { @content;}
+  ::-webkit-input-placeholder {
+    @content;
+  }
+  :-moz-placeholder {
+    @content;
+  }
+  ::-moz-placeholder {
+    @content;
+  }
+  :-ms-input-placeholder {
+    @content;
+  }
 }
 
-@mixin animation ($param-animation) {
+@mixin animation($param-animation) {
   -webkit-animation: $param-animation;
   -moz-animation: $param-animation;
   -ms-animation: $param-animation;
@@ -34,15 +42,15 @@
 
 @mixin keyframes($animation-name) {
   @-webkit-keyframes #{$animation-name} {
-      @content;
+    @content;
   }
   @-moz-keyframes #{$animation-name} {
-      @content;
+    @content;
   }
   @-o-keyframes #{$animation-name} {
-      @content;
+    @content;
   }
   @keyframes #{$animation-name} {
-      @content;
+    @content;
   }
 }

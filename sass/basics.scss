@@ -21,7 +21,7 @@ body {
   margin: 0;
   padding: 0;
 
-	&.home:before {
+	&:before {
 		content: '';
 		border: 1px solid $dark-blue-05;
 		position: absolute;

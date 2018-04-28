@@ -10,7 +10,7 @@
   <link rel="stylesheet" href="css/main.min.css">
 </head>
 
-<body class="home">
+<body>
   <!-- Button menu  -->
   <div class="menu-btn menu-btn-open" onclick="displayMenu()">
     <div class="menu__icon menu__icon--open enable">
@@ -42,8 +42,8 @@
     </div>
   </div>
 
-  <!-- Home -->
-  <div class="home">
+  <!-- HOME -->
+  <section class="home">
     <div class="home__presentation">
       <h1>Hello !
         <span>👋</span>
@@ -54,21 +54,16 @@
       <button class="btn btn__home">See my work</button>
     </div>
     <img src="img/presentation-draw.png" alt="Dessin de présentation" draggable="false">
-  </div>
+  </section>
 
-  <!-- Projects -->
-  <div class="projects__wrapper">
-
-    <!-- Navigation -->
+  <!-- PROJECT -->
+  <section class="projects__wrapper">
     <div class="nav__wrapper"></div>
+    <div class="projects"></div>
+  </section>
 
-    <!-- Projects -->
-    <div id="projects"></div>
-
-  </div>
-
-  <!-- Contact -->
-  <div class="contact__wrapper disable">
+  <!-- CONTACT -->
+  <section class="contact__wrapper disable">
 
     <!-- Contact description -->
     <div class="contact__description">
@@ -85,7 +80,7 @@
       </div>
     </div>
 
-    <!-- Contact form-->
+    <!-- Contact form -->
     <div class="contact__form">
       <form onsubmit="return false" class="invisible-scrollbar">
         <div class="bubble--group">
@@ -177,9 +172,9 @@
         </div>
       </form>
     </div>
-  </div>
+  </section>
 
-  <!-- Nav mobile -->
+  <!-- NAV • MOBILE -->
   <div class="nav--mobile">
     <span class="nav__arrow nav__arrow--left" onClick="navMobile(-1)"></span>
     <div class="nav__number">
@@ -190,8 +185,8 @@
     <span class="nav__arrow nav__arrow--right" onClick="navMobile(+1)"></span>
   </div>
 
-  <!-- Links -->
-  <div class="links">
+  <!-- FOOTER -->
+  <footer>
     <a class="link--behance" href="" target="_blank">
       <span>Behance</span>
     </a>
@@ -204,7 +199,7 @@
     <a href="mailto:hello@clementinebertrand.fr" target="_blank">
       <span>Email</span>
     </a>
-  </div>
+  </footer>
 
   <script src="js/data.js"></script>
   <script src="js/chat.js"></script>

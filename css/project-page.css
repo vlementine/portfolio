@@ -1,0 +1,4 @@
+header {
+  width: calc(100% - 20px);
+  margin: 10px auto 0;
+}

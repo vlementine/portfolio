@@ -2,33 +2,33 @@
 //	DISPLAY BUBBLE
 //-------------------------------------
 function displayBubble(groupBubble, nbBubble) {
-    for (let n = 0; n < 2; n++) {
-      document.querySelectorAll(".bubble--group:nth-child(" + groupBubble + ") .bubble")[n].classList.add("enable");
-      document.querySelector(".contact__form form").scrollTo(0, document.body.scrollHeight);
-    }
-  
-    if (nbBubble == 3) {
-      for (let n = 0; n < nbBubble; n++) {
-        document
-          .querySelectorAll(".bubble--group:nth-child(" + groupBubble + ") .bubble--group__choice .bubble")
-          [n].classList.add("enable__choice");
-        document.querySelector(".contact__form form").scrollTo(0, document.body.scrollHeight);
-      }
+  for (let n = 0; n < 2; n++) {
+    document.querySelectorAll('.bubble--group:nth-child(' + groupBubble + ') .bubble')[n].classList.add('enable');
+    document.querySelector('.contact__form form').scrollTo(0, document.body.scrollHeight);
+  }
+
+  if (nbBubble == 3) {
+    for (let n = 0; n < nbBubble; n++) {
+      document
+        .querySelectorAll('.bubble--group:nth-child(' + groupBubble + ') .bubble--group__choice .bubble')
+        [n].classList.add('enable__choice');
+      document.querySelector('.contact__form form').scrollTo(0, document.body.scrollHeight);
     }
   }
+}
 
 //-------------------------------------
 //	GET ANSWER
 //-------------------------------------
 function getAnswer(name, groupBubble, nbBubble) {
-  let answer = document.getElementById(name + "Answer").value;
+  let answer = document.getElementById(name + 'Answer').value;
   displayBubble(groupBubble, nbBubble);
 
-  if (answer !== "" && answer !== " ") {
-    document.getElementById(name + "Answer").setAttribute("readonly", true);
+  if (answer !== '' && answer !== ' ') {
+    document.getElementById(name + 'Answer').setAttribute('readonly', true);
 
-    if (name == "name") {
-      document.getElementById(name + "Question").innerHTML = answer;
+    if (name == 'name') {
+      document.getElementById(name + 'Question').innerHTML = answer;
     }
   }
 }
@@ -36,18 +36,18 @@ function getAnswer(name, groupBubble, nbBubble) {
 //-------------------------------------
 //	AUTO-REZISE © Zenchef
 //-------------------------------------
-const textareaChat = document.querySelector("#messageAnswer");
-textareaChat.addEventListener("input", autoSize, false);
+const textareaChat = document.querySelector('#messageAnswer');
+textareaChat.addEventListener('input', autoSize, false);
 const TEXTAREA_CONFIG = {
   LINE_HEIGHT: 18, // adjust textarea lineheight
   PADDING: 0 // adjust textarea padding vertical
 };
 function autoSize() {
   if (textareaChat) {
-    textareaChat.setAttribute("rows", 2);
+    textareaChat.setAttribute('rows', 2);
     const rowsRequired = parseInt((textareaChat.scrollHeight - TEXTAREA_CONFIG.PADDING) / TEXTAREA_CONFIG.LINE_HEIGHT);
-    if (rowsRequired !== parseInt(textareaChat.getAttribute("rows"))) {
-      textareaChat.setAttribute("rows", rowsRequired);
+    if (rowsRequired !== parseInt(textareaChat.getAttribute('rows'))) {
+      textareaChat.setAttribute('rows', rowsRequired);
     }
   }
 }
@@ -61,17 +61,17 @@ function validateEmail(email) {
 }
 
 function validate(groupBubble, nbBubble) {
-  let result = document.querySelector("#result");
-  let email = document.querySelector("#mailAnswer").value;
+  let result = document.querySelector('#result');
+  let email = document.querySelector('#mailAnswer').value;
 
   if (validateEmail(email)) {
-    document.querySelector("#mailAnswer").setAttribute("readonly", true);
-    result.style.display = "none";
+    document.querySelector('#mailAnswer').setAttribute('readonly', true);
+    result.style.display = 'none';
     displayBubble(groupBubble, nbBubble);
     sendEmail();
   } else {
     result.innerText = "L'adresse n'est pas valide";
-    result.style.color = "crimson";
+    result.style.color = 'crimson';
   }
   return false;
 }
@@ -81,20 +81,20 @@ function validate(groupBubble, nbBubble) {
 //-------------------------------------
 function sendEmail() {
   //Variables
-  let nameAnswer = document.getElementById("nameAnswer").value;
-  let mailAnswer = document.getElementById("mailAnswer").value;
-  if (document.getElementById("project-1").checked) {
-    var objectAnswer = "Une question ?";
-  } else if (document.getElementById("project-2").checked) {
-    var objectAnswer = "Un projet dans les cartons";
-  } else if (document.getElementById("project-3").checked) {
-    var objectAnswer = "Seulement envie de dire bonjour";
+  let nameAnswer = document.getElementById('nameAnswer').value;
+  let mailAnswer = document.getElementById('mailAnswer').value;
+  if (document.getElementById('project-1').checked) {
+    var objectAnswer = 'Une question ?';
+  } else if (document.getElementById('project-2').checked) {
+    var objectAnswer = 'Un projet dans les cartons';
+  } else if (document.getElementById('project-3').checked) {
+    var objectAnswer = 'Seulement envie de dire bonjour';
   }
-  let messageAnswer = document.getElementById("messageAnswer").value;
+  let messageAnswer = document.getElementById('messageAnswer').value;
 
   xhr = new XMLHttpRequest();
-  xhr.open("POST", "../sendEmail.php");
-  xhr.setRequestHeader("Content-Type", "application/json");
+  xhr.open('POST', '../sendEmail.php');
+  xhr.setRequestHeader('Content-Type', 'application/json');
   xhr.send(
     JSON.stringify({
       name: nameAnswer,

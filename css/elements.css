@@ -1,10 +1,4 @@
 @charset "UTF-8";
-/*-----------------------------
-  MIXINS
------------------------------*/
-/*------------------------
-  Fonts
-------------------------*/
 @import url("https://fonts.googleapis.com/css?family=Work+Sans:300,400,500,600,700");
 @import url("https://fonts.googleapis.com/css?family=Playfair+Display:400i,700,900");
 @font-face {
@@ -14,9 +8,6 @@
   font-style: normal;
 }
 
-/*------------------------
-  Colors
-------------------------*/
 .menu-btn {
   width: 50px;
   height: 50px;
@@ -56,7 +47,7 @@
 }
 
 .menu-btn .menu__icon span:after {
-  content: "";
+  content: '';
   position: absolute;
   display: block;
   background: #fff;
@@ -174,7 +165,7 @@
 }
 
 .menu__item h2 {
-  font-family: "Playfair Display", serif;
+  font-family: 'Playfair Display', serif;
   font-weight: 900;
   font-size: 2.8rem;
   color: rgba(6, 10, 46, 0.3);
@@ -188,7 +179,7 @@
 }
 
 .menu__item h2:hover {
-  color: #2286B6;
+  color: #2286b6;
 }
 
 .menu__item p {
@@ -198,7 +189,7 @@
   margin: 0;
 }
 
-.links {
+footer {
   margin: auto;
   background: #fff;
   padding: 0 14px;
@@ -211,7 +202,7 @@
   border-radius: 2px;
 }
 
-.links a {
+footer a {
   position: relative;
   z-index: 10;
   margin: 0 15px;
@@ -219,7 +210,7 @@
   line-height: 38px;
 }
 
-.links a span {
+footer a span {
   display: inline-block;
   font-size: 0.6rem;
   font-weight: 400;
@@ -232,11 +223,11 @@
   transition: transform 0.4s ease-in-out;
 }
 
-.links a:after {
-  content: "";
+footer a:after {
+  content: '';
   position: absolute;
   display: block;
-  background: #2286B6;
+  background: #2286b6;
   height: 10px;
   width: 100%;
   opacity: 0.1;
@@ -255,19 +246,19 @@
   transition: transform 0.4s ease-in-out;
 }
 
-.links a.link--behance:after {
+footer a.link--behance:after {
   background: #0057ff;
 }
 
-.links a.link--dribbble:after {
+footer a.link--dribbble:after {
   background: #ea4c89;
 }
 
-.links a.link--linkedin:after {
-  background: #0077B5;
+footer a.link--linkedin:after {
+  background: #0077b5;
 }
 
-.links a:hover span {
+footer a:hover span {
   -webkit-transform: translateX(-6px);
   -moz-transform: translateX(-6px);
   -ms-transform: translateX(-6px);
@@ -275,7 +266,7 @@
   transform: translateX(-6px);
 }
 
-.links a:hover:after {
+footer a:hover:after {
   transform-origin: left center;
   -webkit-transform: scaleX(1);
   -moz-transform: scaleX(1);
@@ -285,7 +276,7 @@
   opacity: 0.2;
 }
 
-.links.menu-visible {
+footer.menu-visible {
   opacity: 0;
   position: fixed;
   left: 50%;
@@ -295,7 +286,7 @@
   background: transparent;
 }
 
-.links.menu-visible.enable {
+footer.menu-visible.enable {
   -webkit-animation: 0.6s fadeIn ease-in-out forwards;
   -moz-animation: 0.6s fadeIn ease-in-out forwards;
   -ms-animation: 0.6s fadeIn ease-in-out forwards;
@@ -477,7 +468,7 @@
 }
 
 .nav__arrow:after {
-  content: "";
+  content: '';
   position: absolute;
   display: block;
   width: 12px;
@@ -497,7 +488,7 @@
 }
 
 .nav__number .number {
-  font-family: "butler_stencilextrabold", serif;
+  font-family: 'butler_stencilextrabold', serif;
   text-transform: uppercase;
   font-size: 1rem;
 }
@@ -560,10 +551,8 @@
   -webkit-text-fill-color: transparent;
 }
 
-#project-02
-.description__number-wrapper--mobile
-.description__number--mobile:after {
-  content: "02.";
+#project-02 .description__number-wrapper--mobile .description__number--mobile:after {
+  content: '02.';
 }
 
 #project-03 .project__visuel,
@@ -577,10 +566,8 @@
   -webkit-text-fill-color: transparent;
 }
 
-#project-03
-.description__number-wrapper--mobile
-.description__number--mobile:after {
-  content: "03.";
+#project-03 .description__number-wrapper--mobile .description__number--mobile:after {
+  content: '03.';
 }
 
 #project-04 .project__visuel,
@@ -588,10 +575,8 @@
   background: linear-gradient(45deg, #1d7d90, #5dd5c3);
 }
 
-#project-04
-.description__number-wrapper--mobile
-.description__number--mobile:after {
-  content: "04.";
+#project-04 .description__number-wrapper--mobile .description__number--mobile:after {
+  content: '04.';
 }
 
 #project-04 .description__number-wrapper--mobile .description__number--mobile {
@@ -734,7 +719,7 @@
 
 .description__title h2 {
   z-index: 10;
-  font-family: "Playfair Display", serif;
+  font-family: 'Playfair Display', serif;
   font-weight: 900;
   font-size: 2.4rem;
   line-height: 1;
@@ -765,7 +750,7 @@
   top: -45px;
   left: -20px;
   z-index: -1;
-  font-family: "Work Sans", sans-serif;
+  font-family: 'Work Sans', sans-serif;
   font-weight: 700;
   font-size: 6.5rem;
   color: #fff;
@@ -789,7 +774,7 @@
 }
 
 .description p {
-  font-family: "Playfair Display", serif;
+  font-family: 'Playfair Display', serif;
   font-weight: 400;
   font-style: italic;
   font-size: 0.85rem;
@@ -822,7 +807,7 @@
 }
 
 .description__info p {
-  font-family: "Work Sans", sans-serif;
+  font-family: 'Work Sans', sans-serif;
   font-weight: 600;
   font-size: 0.7rem;
   text-transform: uppercase;
@@ -909,7 +894,7 @@
 }
 
 .project__content:after {
-  content: "";
+  content: '';
   position: absolute;
   width: 100%;
   height: 100%;
@@ -937,7 +922,7 @@
 
 .description__title--mobile h2 {
   z-index: 10;
-  font-family: "Playfair Display", serif;
+  font-family: 'Playfair Display', serif;
   font-weight: 900;
   font-size: 2.8rem;
   line-height: 1;
@@ -971,7 +956,7 @@
   width: calc(100vw - 30px);
   margin: 15px;
   z-index: -1;
-  font-family: "Work Sans", sans-serif;
+  font-family: 'Work Sans', sans-serif;
   font-weight: 700;
   font-size: 6.5rem;
   background: linear-gradient(45deg, #1d7d90, #5dd5c3);
@@ -980,7 +965,7 @@
 }
 
 .description__number-wrapper--mobile .description__number--mobile:after {
-  content: "01.";
+  content: '01.';
   position: absolute;
   width: 100%;
   top: 0;
@@ -997,7 +982,7 @@
   width: 100%;
   top: -65px;
   z-index: -2;
-  font-family: "Work Sans", sans-serif;
+  font-family: 'Work Sans', sans-serif;
   font-weight: 700;
   font-size: 6.5rem;
   color: rgba(0, 0, 0, 0.1);
@@ -1022,7 +1007,7 @@
 }
 
 .description__info--mobile p {
-  font-family: "Work Sans", sans-serif;
+  font-family: 'Work Sans', sans-serif;
   font-weight: 600;
   font-size: 0.75rem;
   text-transform: uppercase;
@@ -1441,7 +1426,7 @@
 
 .bubble--group__choice .bubble .choice span:after {
   position: absolute;
-  content: "";
+  content: '';
   top: 0;
   left: 0;
   border: 1px solid rgba(6, 10, 46, 0.05);

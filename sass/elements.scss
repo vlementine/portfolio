@@ -1,5 +1,5 @@
-@import "mixins.scss";
-@import "variables.scss";
+@import 'mixins.scss';
+@import 'variables.scss';
 
 //-------------------------------------
 //	ICON MENU
@@ -35,7 +35,7 @@
       display: block;
       position: relative;
       &:after {
-        content: "";
+        content: '';
         position: absolute;
         display: block;
         background: #fff;
@@ -102,10 +102,7 @@
   &.disable {
     opacity: 0;
     z-index: -1;
-    @include transition(
-      opacity 0.4s ease-in-out,
-      z-index 0.4s ease-in-out 0.4s
-    );
+    @include transition(opacity 0.4s ease-in-out, z-index 0.4s ease-in-out 0.4s);
   }
 }
 
@@ -125,7 +122,7 @@
 .menu__item {
   margin: 20px auto;
   h2 {
-    font-family: "Playfair Display", serif;
+    font-family: 'Playfair Display', serif;
     font-weight: 900;
     font-size: 2.8rem;
     color: $dark-blue-30;
@@ -145,9 +142,9 @@
   }
 }
 //-------------------------------------
-//	LINKS
+//	FOOTER
 //-------------------------------------
-.links {
+footer {
   margin: auto;
   background: #fff;
   padding: 0 14px;
@@ -176,7 +173,7 @@
     }
 
     &:after {
-      content: "";
+      content: '';
       position: absolute;
       display: block;
       background: $primary-color;
@@ -371,7 +368,7 @@
   @include transform(rotate(-45deg));
 
   &:after {
-    content: "";
+    content: '';
     position: absolute;
     display: block;
     width: 12px;
@@ -389,7 +386,7 @@
 
 .nav__number {
   .number {
-    font-family: "butler_stencilextrabold", serif;
+    font-family: 'butler_stencilextrabold', serif;
     text-transform: uppercase;
     font-size: 1rem;
 
@@ -434,7 +431,7 @@
 }
 
 #project-01 .project__visuel,
-.project--mobile#project-01 .project__content{
+.project--mobile#project-01 .project__content {
   background: linear-gradient(45deg, #1d7d90, #5dd5c3);
 }
 
@@ -445,7 +442,7 @@
 }
 
 #project-02 .project__visuel,
-.project--mobile#project-02 .project__content{
+.project--mobile#project-02 .project__content {
   background: linear-gradient(45deg, #f59e64, #eb5160);
 }
 
@@ -455,13 +452,11 @@
   -webkit-text-fill-color: transparent;
 }
 
-#project-02
-  .description__number-wrapper--mobile
-  .description__number--mobile:after {
-  content: "02.";
+#project-02 .description__number-wrapper--mobile .description__number--mobile:after {
+  content: '02.';
 }
 #project-03 .project__visuel,
-.project--mobile#project-03 .project__content{
+.project--mobile#project-03 .project__content {
   background: linear-gradient(45deg, #1d7d90, #5dd5c3);
 }
 
@@ -470,19 +465,15 @@
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
-#project-03
-  .description__number-wrapper--mobile
-  .description__number--mobile:after {
-  content: "03.";
+#project-03 .description__number-wrapper--mobile .description__number--mobile:after {
+  content: '03.';
 }
 #project-04 .project__visuel,
-.project--mobile#project-04 .project__content{
+.project--mobile#project-04 .project__content {
   background: linear-gradient(45deg, #1d7d90, #5dd5c3);
 }
-#project-04
-  .description__number-wrapper--mobile
-  .description__number--mobile:after {
-  content: "04.";
+#project-04 .description__number-wrapper--mobile .description__number--mobile:after {
+  content: '04.';
 }
 #project-04 .description__number-wrapper--mobile .description__number--mobile {
   background: linear-gradient(45deg, #1d7d90, #5dd5c3);
@@ -593,7 +584,7 @@
 
   h2 {
     z-index: 10;
-    font-family: "Playfair Display", serif;
+    font-family: 'Playfair Display', serif;
     font-weight: 900;
     font-size: 2.4rem;
     line-height: 1;
@@ -613,7 +604,7 @@
   top: -45px;
   left: -20px;
   z-index: -1;
-  font-family: "Work Sans", sans-serif;
+  font-family: 'Work Sans', sans-serif;
   font-weight: 700;
   font-size: 6.5rem;
   color: #fff;
@@ -628,7 +619,7 @@
   overflow: hidden;
 
   p {
-    font-family: "Playfair Display", serif;
+    font-family: 'Playfair Display', serif;
     font-weight: 400;
     font-style: italic;
     font-size: 0.85rem;
@@ -649,7 +640,7 @@
   overflow: hidden;
 
   p {
-    font-family: "Work Sans", sans-serif;
+    font-family: 'Work Sans', sans-serif;
     font-weight: 600;
     font-size: 0.7rem;
     text-transform: uppercase;
@@ -707,11 +698,11 @@
   @include animation(0.8s fadeOut ease-in-out forwards);
 
   &.enable {
-    @include animation(0.8s fadeIn ease-in-out forwards .2s);
+    @include animation(0.8s fadeIn ease-in-out forwards 0.2s);
   }
 
   &:after {
-    content: "";
+    content: '';
     position: absolute;
     width: 100%;
     height: 100%;
@@ -740,7 +731,7 @@
 
   h2 {
     z-index: 10;
-    font-family: "Playfair Display", serif;
+    font-family: 'Playfair Display', serif;
     font-weight: 900;
     font-size: 2.8rem;
     line-height: 1;
@@ -764,7 +755,7 @@
     margin: 15px;
 
     z-index: -1;
-    font-family: "Work Sans", sans-serif;
+    font-family: 'Work Sans', sans-serif;
     font-weight: 700;
     font-size: 6.5rem;
     background: linear-gradient(45deg, #1d7d90, #5dd5c3);
@@ -772,7 +763,7 @@
     -webkit-text-fill-color: transparent;
 
     &:after {
-      content: "01.";
+      content: '01.';
       position: absolute;
       width: 100%;
       top: 0;
@@ -789,7 +780,7 @@
     width: 100%;
     top: -65px;
     z-index: -2;
-    font-family: "Work Sans", sans-serif;
+    font-family: 'Work Sans', sans-serif;
     font-weight: 700;
     font-size: 6.5rem;
     color: rgba(0, 0, 0, 0.1);
@@ -806,7 +797,7 @@
   overflow: hidden;
 
   p {
-    font-family: "Work Sans", sans-serif;
+    font-family: 'Work Sans', sans-serif;
     font-weight: 600;
     font-size: 0.75rem;
     text-transform: uppercase;
@@ -1104,7 +1095,7 @@
 
         &:after {
           position: absolute;
-          content: "";
+          content: '';
           top: 0;
           left: 0;
           border: 1px solid $dark-blue-05;

@@ -1,13 +1,11 @@
-//-------------------------------------
-//	MEDIA QUERIES
-//-------------------------------------
+@import 'mixins.scss';
+@import 'variables.scss';
 
-@import "mixins.scss";
-@import "variables.scss";
+//-------------------------------------
+//	MEDIA QUERIES : 1000px
+//-------------------------------------
 @media screen and (max-width: 1000px) {
-  /*------------------------
-    Project
-  ------------------------*/
+  //-- PROJECTS
   .project {
     flex-direction: column;
   }
@@ -56,14 +54,15 @@
     font-size: 80px;
   }
 
-  //-------------------------------------
-  //	NAVIGATION
-  //-------------------------------------
+  //-- NAVIGATION • DESKTOP
   .nav__wrapper {
     top: 65%;
   }
 }
 
+//-------------------------------------
+//	MEDIA QUERIES : 650px
+//-------------------------------------
 @media screen and (max-width: 650px) {
   html {
     font-size: 13px;
@@ -73,27 +72,19 @@
     display: none;
   }
 
-  //-------------------------------------
-  //	NAVIGATION
-  //-------------------------------------
+  //-- NAVIGATION • DESKTOP
   .nav__wrapper {
     display: none;
   }
 
-  /*------------------------
-    Navigation • Mobile
-  ------------------------*/
+  //-- NAVIGATION • MOBILE
   .nav--mobile {
     display: flex;
   }
 
-  //-------------------------------------
-  //	HOME
-  //-------------------------------------
+  //-- HOME
   .home {
     padding: 0;
-    // @include transform(translateY(0%) !important);
-    // @include transition(transform 0.8s ease-in-out !important);
 
     .home__presentation {
       width: 100%;
@@ -105,9 +96,7 @@
     }
   }
 
-  //-------------------------------------
-  //	CONTACT
-  //-------------------------------------
+  //-- CONTACT
   .contact__wrapper {
     width: 100%;
     flex-direction: column;
@@ -147,10 +136,8 @@
     display: inline-block;
   }
 
-  //-------------------------------------
-  //	LINKS
-  //-------------------------------------
-  .links {
+  //-- FOOTER
+  footer {
     margin-left: auto;
     position: fixed;
     bottom: 30px;
@@ -165,13 +152,10 @@
     }
   }
 
-  //-------------------------------------
-  //	MENU
-  //-------------------------------------
-  .links.menu-visible {
+  footer.menu-visible {
     left: 0;
     width: calc(100% - 60px);
     margin: auto 30px;
-    background: #FFF;
+    background: #fff;
   }
 }

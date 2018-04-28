@@ -1,10 +1,3 @@
-@charset "UTF-8";
-/*-----------------------------
-  MIXINS
------------------------------*/
-/*------------------------
-  Fonts
-------------------------*/
 @import url("https://fonts.googleapis.com/css?family=Work+Sans:300,400,500,600,700");
 @import url("https://fonts.googleapis.com/css?family=Playfair+Display:400i,700,900");
 @font-face {
@@ -14,13 +7,7 @@
   font-style: normal;
 }
 
-/*------------------------
-  Colors
-------------------------*/
 @media screen and (max-width: 1000px) {
-  /*------------------------
-    Project
-  ------------------------*/
   .project {
     flex-direction: column;
   }
@@ -77,9 +64,6 @@
   .nav__wrapper {
     display: none;
   }
-  /*------------------------
-    Navigation • Mobile
-  ------------------------*/
   .nav--mobile {
     display: flex;
   }
@@ -130,7 +114,7 @@
     animation: bubble ease-in-out forwards 0.6s;
     display: inline-block;
   }
-  .links {
+  footer {
     margin-left: auto;
     position: fixed;
     bottom: 30px;
@@ -140,13 +124,13 @@
     text-align: center;
     padding: 0 10px;
   }
-  .links a {
+  footer a {
     margin: 0 10px;
   }
-  .links.menu-visible {
+  footer.menu-visible {
     left: 0;
     width: calc(100% - 60px);
     margin: auto 30px;
-    background: #FFF;
+    background: #fff;
   }
 }

@@ -6,29 +6,29 @@ function displayProject(project) {
 
   //Mobile
   if (windowWidth <= 650) {
-    let imgNumber = document.querySelectorAll(project + " .project__visuel--mobile img").length;
+    let imgNumber = document.querySelectorAll(project + ' .project__visuel--mobile img').length;
     for (let i = 0; i < imgNumber; i++) {
-      document.querySelectorAll(project + " .project__visuel--mobile img")[i].classList.add("enable");
+      document.querySelectorAll(project + ' .project__visuel--mobile img')[i].classList.add('enable');
     }
-    document.querySelector(project + " .project__visuel--mobile").classList.add("enable");
-    document.querySelector(project + " .description__number-shadow--mobile").classList.add("enable");
-    document.querySelector(project + " .description__title--mobile h2").classList.add("enable");
-    document.querySelector(project + " .description__info--mobile p").classList.add("enable");
-    document.querySelector(project + ".project--mobile .btn").classList.add("enable");
-    document.querySelector(project + " .project__content").classList.add("enable");
+    document.querySelector(project + ' .project__visuel--mobile').classList.add('enable');
+    document.querySelector(project + ' .description__number-shadow--mobile').classList.add('enable');
+    document.querySelector(project + ' .description__title--mobile h2').classList.add('enable');
+    document.querySelector(project + ' .description__info--mobile p').classList.add('enable');
+    document.querySelector(project + '.project--mobile .btn').classList.add('enable');
+    document.querySelector(project + ' .project__content').classList.add('enable');
 
     //Desktop
   } else {
-    let imgNumber = document.querySelectorAll(project + " .project__visuel img").length;
+    let imgNumber = document.querySelectorAll(project + ' .project__visuel img').length;
     for (let i = 0; i < imgNumber; i++) {
-      document.querySelectorAll(project + " .project__visuel img")[i].classList.add("enable");
+      document.querySelectorAll(project + ' .project__visuel img')[i].classList.add('enable');
     }
-    document.querySelector(project + " .project__visuel").classList.add("enable");
-    document.querySelector(project + " .description__number").classList.add("enable");
-    document.querySelector(project + " .description__title h2").classList.add("enable");
-    document.querySelector(project + " .description__info p").classList.add("enable");
-    document.querySelector(project + " .description p").classList.add("enable");
-    document.querySelector(project + " .description__wrapper .btn").classList.add("enable");
+    document.querySelector(project + ' .project__visuel').classList.add('enable');
+    document.querySelector(project + ' .description__number').classList.add('enable');
+    document.querySelector(project + ' .description__title h2').classList.add('enable');
+    document.querySelector(project + ' .description__info p').classList.add('enable');
+    document.querySelector(project + ' .description p').classList.add('enable');
+    document.querySelector(project + ' .description__wrapper .btn').classList.add('enable');
   }
 }
 
@@ -40,29 +40,29 @@ function hideProject(project) {
 
   //Mobile
   if (windowWidth <= 650) {
-    let imgNumber = document.querySelectorAll(project + " .project__visuel--mobile img").length;
+    let imgNumber = document.querySelectorAll(project + ' .project__visuel--mobile img').length;
     for (let i = 0; i < imgNumber; i++) {
-      document.querySelectorAll(project + " .project__visuel--mobile img")[i].classList.remove("enable");
+      document.querySelectorAll(project + ' .project__visuel--mobile img')[i].classList.remove('enable');
     }
-    document.querySelector(project + " .project__visuel--mobile").classList.remove("enable");
-    document.querySelector(project + " .description__number-shadow--mobile").classList.remove("enable");
-    document.querySelector(project + " .description__title--mobile h2").classList.remove("enable");
-    document.querySelector(project + " .description__info--mobile p").classList.remove("enable");
-    document.querySelector(project + ".project--mobile .btn").classList.remove("enable");
-    document.querySelector(project + " .project__content").classList.remove("enable");
+    document.querySelector(project + ' .project__visuel--mobile').classList.remove('enable');
+    document.querySelector(project + ' .description__number-shadow--mobile').classList.remove('enable');
+    document.querySelector(project + ' .description__title--mobile h2').classList.remove('enable');
+    document.querySelector(project + ' .description__info--mobile p').classList.remove('enable');
+    document.querySelector(project + '.project--mobile .btn').classList.remove('enable');
+    document.querySelector(project + ' .project__content').classList.remove('enable');
 
     //Desktop
   } else {
-    let imgNumber = document.querySelectorAll(project + " .project__visuel img").length;
+    let imgNumber = document.querySelectorAll(project + ' .project__visuel img').length;
     for (let i = 0; i < imgNumber; i++) {
-      document.querySelectorAll(project + " .project__visuel img")[i].classList.remove("enable");
+      document.querySelectorAll(project + ' .project__visuel img')[i].classList.remove('enable');
     }
-    document.querySelector(project + " .project__visuel").classList.remove("enable");
-    document.querySelector(project + " .description__number").classList.remove("enable");
-    document.querySelector(project + " .description__title h2").classList.remove("enable");
-    document.querySelector(project + " .description__info p").classList.remove("enable");
-    document.querySelector(project + " .description p").classList.remove("enable");
-    document.querySelector(project + " .description__wrapper .btn").classList.remove("enable");
+    document.querySelector(project + ' .project__visuel').classList.remove('enable');
+    document.querySelector(project + ' .description__number').classList.remove('enable');
+    document.querySelector(project + ' .description__title h2').classList.remove('enable');
+    document.querySelector(project + ' .description__info p').classList.remove('enable');
+    document.querySelector(project + ' .description p').classList.remove('enable');
+    document.querySelector(project + ' .description__wrapper .btn').classList.remove('enable');
   }
 }
 
@@ -72,17 +72,17 @@ function hideProject(project) {
 function seeMyWork() {
   //All
   let windowWidth = window.innerWidth;
-  document.querySelector(".home").classList.add("disable");
-  document.querySelector("#project-01").classList.add("enable");
+  document.querySelector('.home').classList.add('disable');
+  document.querySelector('#project-01').classList.add('enable');
 
   //Mobile
   if (windowWidth <= 650) {
-    displayProject("#project-01");
+    displayProject('#project-01');
 
     //Desktop
   } else {
     navActiveItem(2);
-    displayProject("#project-01");
+    displayProject('#project-01');
   }
 }
 
@@ -91,9 +91,9 @@ function seeMyWork() {
 //-------------------------------------
 function navActiveItem(param) {
   for (let n = 0; n < Object.keys(nav).length; n++) {
-    document.querySelectorAll("span.nav__item")[n].classList.remove("active");
+    document.querySelectorAll('span.nav__item')[n].classList.remove('active');
   }
-  document.querySelector("span.nav__item:nth-child(" + param + ")").classList.add("active");
+  document.querySelector('span.nav__item:nth-child(' + param + ')').classList.add('active');
 }
 
 //-------------------------------------
@@ -108,40 +108,40 @@ function navDesktop(param) {
   let itemClicked = parseInt(param);
 
   //Item active
-  let projectActive = parseInt(document.querySelector(".project.enable").id.substr(-1));
+  let projectActive = parseInt(document.querySelector('.project.enable').id.substr(-1));
 
   //Update number navigation
   navActiveItem(projectClicked + 1);
 
   //Get id to display and hide
-  let idToDisplay = "#project-0" + projectClicked;
-  let idToHide = "#" + document.querySelector(".project.enable").id;
+  let idToDisplay = '#project-0' + projectClicked;
+  let idToHide = '#' + document.querySelector('.project.enable').id;
 
   //Display projects
   if (projectClicked < totalItemNav - 1 && projectClicked !== 0 && projectClicked !== projectActive) {
     hideProject(idToHide);
     setTimeout(function() {
-      document.querySelector(idToHide).classList.remove("enable");
-      document.querySelector(idToDisplay).classList.add("enable");
+      document.querySelector(idToHide).classList.remove('enable');
+      document.querySelector(idToDisplay).classList.add('enable');
       displayProject(idToDisplay);
     }, 800);
 
     //Display home
   } else if (projectClicked === 0) {
-    document.querySelector(".home").classList.remove("disable");
+    document.querySelector('.home').classList.remove('disable');
     hideProject(idToHide);
     setTimeout(function() {
-      document.querySelector(idToHide).classList.remove("enable");
+      document.querySelector(idToHide).classList.remove('enable');
     }, 700);
 
     //Display contact
   } else if (itemClicked == totalItemNav) {
-    document.querySelector(".contact__wrapper").classList.remove("disable");
+    document.querySelector('.contact__wrapper').classList.remove('disable');
     hideProject(idToHide);
     setTimeout(function() {
-      document.querySelector(idToHide).classList.remove("enable");
-      document.querySelector(".bubble--group:nth-child(1) .bubble").classList.add("enable");
-      document.querySelector(".bubble--group:nth-child(1) .bubble--answer").classList.add("enable");
+      document.querySelector(idToHide).classList.remove('enable');
+      document.querySelector('.bubble--group:nth-child(1) .bubble').classList.add('enable');
+      document.querySelector('.bubble--group:nth-child(1) .bubble--answer').classList.add('enable');
     }, 700);
   }
 }
@@ -154,29 +154,29 @@ function navMobile(param) {
   let totalItemNav = Object.keys(nav).length;
 
   //Get the number of item clicked
-  let itemActive = parseInt(document.querySelector(".number--active").innerHTML);
+  let itemActive = parseInt(document.querySelector('.number--active').innerHTML);
   let itemClicked = itemActive + param;
 
   //Get id to display and hide
-  let idToDisplay = "#project-0" + (itemClicked - 1);
-  let idToHide = "#project-0" + (itemActive - 1);
+  let idToDisplay = '#project-0' + (itemClicked - 1);
+  let idToHide = '#project-0' + (itemActive - 1);
 
   //Display projects
   if (itemClicked < totalItemNav && itemClicked !== 1) {
-    document.querySelector(".number--active").textContent = "0" + itemClicked;
+    document.querySelector('.number--active').textContent = '0' + itemClicked;
     hideProject(idToHide);
     setTimeout(function() {
-      document.querySelector(idToHide).classList.remove("enable");
-      document.querySelector(idToDisplay).classList.add("enable");
+      document.querySelector(idToHide).classList.remove('enable');
+      document.querySelector(idToDisplay).classList.add('enable');
       displayProject(idToDisplay);
     }, 600);
 
     //Display home
   } else if (itemClicked == 1) {
-    document.querySelector(".home").classList.remove("disable");
+    document.querySelector('.home').classList.remove('disable');
     //Display contact
   } else if (itemClicked == totalItemNav) {
-    document.querySelector(".contact__wrapper").classList.remove("disable");
+    document.querySelector('.contact__wrapper').classList.remove('disable');
   }
 }
 
@@ -186,22 +186,22 @@ function navMobile(param) {
 function displayMenu() {
   //All
   let windowWidth = window.innerWidth;
-  document.querySelector(".menu__wrapper").classList.toggle("disable");
-  document.querySelector(".menu__icon--open").classList.toggle("enable");
-  document.querySelector(".menu__icon--close").classList.toggle("enable");
-  document.querySelector("body").classList.toggle("menu-visible");
+  document.querySelector('.menu__wrapper').classList.toggle('disable');
+  document.querySelector('.menu__icon--open').classList.toggle('enable');
+  document.querySelector('.menu__icon--close').classList.toggle('enable');
+  document.querySelector('body').classList.toggle('menu-visible');
 
   //Mobile
   if (windowWidth <= 650) {
-    document.querySelector(".links").classList.toggle("menu-visible");
-    document.querySelector(".links").classList.toggle("enable");
+    document.querySelector('.links').classList.toggle('menu-visible');
+    document.querySelector('.links').classList.toggle('enable');
   }
 }
 
 function initProject(param) {
   document
     .querySelectorAll(param)
-    .forEach(element => (element.classList.contains("enable") ? element.classList.remove("enable") : ""));
+    .forEach(element => (element.classList.contains('enable') ? element.classList.remove('enable') : ''));
 }
 
 function navMenu(param) {
@@ -209,39 +209,37 @@ function navMenu(param) {
   displayMenu();
 
   //Home
-  if (param == "home") {
-    document.querySelector(".home").classList.remove("disable");
-    document.querySelector(".contact__wrapper").classList.add("disable");
+  if (param == 'home') {
+    document.querySelector('.home').classList.remove('disable');
+    document.querySelector('.contact__wrapper').classList.add('disable');
     if (windowWidth <= 650) {
-      initProject(".project--mobile");
+      initProject('.project--mobile');
     } else {
-      initProject(".project");
+      initProject('.project');
     }
-  }
-  //Work
-  else if (param == "work") {
-    document.querySelector(".home").classList.add("disable");
-    document.querySelector(".contact__wrapper").classList.add("disable");
+  } else if (param == 'work') {
+    //Work
+    document.querySelector('.home').classList.add('disable');
+    document.querySelector('.contact__wrapper').classList.add('disable');
     setTimeout(function() {
-      document.querySelector("#project-01").classList.add("enable");
-      displayProject("#project-01");
+      document.querySelector('#project-01').classList.add('enable');
+      displayProject('#project-01');
     }, 500);
     if (windowWidth <= 650) {
-      initProject(".project--mobile");
-      document.querySelector(".number--active").textContent = "02";
+      initProject('.project--mobile');
+      document.querySelector('.number--active').textContent = '02';
     } else {
-      initProject(".project");
+      initProject('.project');
       navActiveItem(2);
     }
-  }
-  // Contact
-  else if (param == "contact") {
-    initProject(".project");
-    document.querySelector(".contact__wrapper").classList.remove("disable");
+  } else if (param == 'contact') {
+    // Contact
+    initProject('.project');
+    document.querySelector('.contact__wrapper').classList.remove('disable');
     setTimeout(function() {
-      document.querySelector(".bubble--group:nth-child(1) .bubble").classList.add("enable");
-      document.querySelector(".bubble--group:nth-child(1) .bubble--answer").classList.add("enable");
-      document.querySelector(".home").classList.add("disable");
+      document.querySelector('.bubble--group:nth-child(1) .bubble').classList.add('enable');
+      document.querySelector('.bubble--group:nth-child(1) .bubble--answer').classList.add('enable');
+      document.querySelector('.home').classList.add('disable');
     }, 500);
   }
 }

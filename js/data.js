@@ -3,72 +3,72 @@
 //-------------------------------------
 const projects = [
   {
-    number: "01",
-    title: "Back to your dream",
-    keywords: "User Interface • Animation",
+    number: '01',
+    title: 'Back to your dream',
+    keywords: 'User Interface • Animation',
     description:
       "Option A, you kill me right here and now. Apparently I've made that very easy for you. You can kill me, no witnesses and then spend the next few weeks or months tracking down Jesse Pinkman and you kill him too. A pointless exercise it seems…",
-    image: "btyd",
-    href: " "
+    image: 'btyd',
+    href: ' '
   },
   {
-    number: "02",
-    title: "Le Blog Zenchef",
-    keywords: "User Interface • Blog",
+    number: '02',
+    title: 'Le Blog Zenchef',
+    keywords: 'User Interface • Blog',
     description:
       "Option A, you kill me right here and now. Apparently I've made that very easy for you. You can kill me, no witnesses and then spend the next few weeks or months tracking down Jesse Pinkman and you kill him too. A pointless exercise it seems…",
-    image: "blog-zenchef",
-    href: " "
+    image: 'blog-zenchef',
+    href: ' '
   },
   {
-    number: "03",
-    title: "Alcatraz, 1962",
-    keywords: "User Interface • Webdoc",
+    number: '03',
+    title: 'Alcatraz, 1962',
+    keywords: 'User Interface • Webdoc',
     description:
       "Option A, you kill me right here and now. Apparently I've made that very easy for you. You can kill me, no witnesses and then spend the next few weeks or months tracking down Jesse Pinkman and you kill him too. A pointless exercise it seems…",
-    image: "btyd",
-    href: " "
+    image: 'btyd',
+    href: ' '
   },
   {
-    number: "04",
-    title: "La Maroquinerie",
-    keywords: "User Interface • Concert",
+    number: '04',
+    title: 'La Maroquinerie',
+    keywords: 'User Interface • Concert',
     description:
       "Option A, you kill me right here and now. Apparently I've made that very easy for you. You can kill me, no witnesses and then spend the next few weeks or months tracking down Jesse Pinkman and you kill him too. A pointless exercise it seems…",
-    image: "btyd",
-    href: " "
+    image: 'btyd',
+    href: ' '
   }
 ];
 
 const nav = [
   {
-    number: "01",
-    title: "Home"
+    number: '01',
+    title: 'Home'
   },
   {
-    number: "02",
-    title: "Back to your dream"
+    number: '02',
+    title: 'Back to your dream'
   },
   {
-    number: "03",
-    title: "Le Blog Zenchef"
+    number: '03',
+    title: 'Le Blog Zenchef'
   },
   {
-    number: "04",
-    title: "Alcatraz, 1962"
+    number: '04',
+    title: 'Alcatraz, 1962'
   },
   {
-    number: "05",
-    title: "La Maroquinerie"
+    number: '05',
+    title: 'La Maroquinerie'
   },
   {
-    number: "06",
-    title: "Contact"
+    number: '06',
+    title: 'Contact'
   }
 ];
 
-var content = "";
-var contentResponsive = "";
+var content = '';
+var contentResponsive = '';
 
 projects.forEach(project => {
   content += `<div class="project" id="project-${project.number}">
@@ -129,12 +129,12 @@ projects.forEach(projectResponsive => {
 </div>`;
 });
 
-let navigation = "";
+let navigation = '';
 
 nav.forEach(itemNav => {
-  navigation += ` <span class="nav__item" onClick="navDesktop(${itemNav.number})">
+  navigation += `<span class="nav__item" onClick="navDesktop(${itemNav.number})">
   ${itemNav.number}
   <span class="item__title">${itemNav.title}</span>
   </span>`;
 });
-document.querySelector(".nav__wrapper").innerHTML = navigation;
+document.querySelector('.nav__wrapper').innerHTML = navigation;
