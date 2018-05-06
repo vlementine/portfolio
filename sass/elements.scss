@@ -951,7 +951,7 @@ footer {
   flex-basis: 50%;
   position: relative;
   z-index: 24;
-  background: linear-gradient(45deg, #1d7d90, #5dd5c3);
+  background: linear-gradient(45deg, rgba(34, 135, 182, 0.60), #2286B6);
   background-size: 400% 400%;
   border-radius: 4px;
   box-shadow: 0 0 16px $dark-blue-20;
@@ -1000,7 +1000,7 @@ footer {
     padding-bottom: 4px;
     outline: none;
     color: #fff;
-    font-size: 0.75rem;
+    font-size: 0.9rem;
     line-height: 18px;
     font-weight: 600;
     height: 16px;
