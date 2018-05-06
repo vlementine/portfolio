@@ -1,6 +1,5 @@
 @import 'mixins.scss';
 @import 'variables.scss';
-
 //-------------------------------------
 //	ICON MENU
 //-------------------------------------
@@ -19,7 +18,6 @@
   justify-content: center;
   align-items: center;
   @include transition(box-shadow 0.4s ease-in-out);
-
   .menu__icon {
     width: 20px;
     height: 16px;
@@ -27,7 +25,6 @@
     flex-direction: column;
     justify-content: space-between;
     align-content: center;
-
     span {
       width: 20px;
       height: 2px;
@@ -48,21 +45,17 @@
         @include transform(scaleX(0));
         @include transition(transform 0.4s ease-in-out);
       }
-
       &:nth-child(1):after {
         @include transition(transform 0.4s ease-in-out 0.2s);
       }
-
       &:nth-child(3):after {
         @include transition(transform 0.4s ease-in-out 0.2s);
       }
     }
-
     &.enable {
       display: flex;
     }
   }
-
   &:hover {
     .menu__icon span:after {
       opacity: 0.6;
@@ -71,7 +64,6 @@
     }
     box-shadow: 0 2px 4px $dark-blue-20;
   }
-
   .menu__icon--close {
     justify-content: center;
     span:first-child {
@@ -98,7 +90,6 @@
   background: #fff;
   opacity: 1;
   @include transition(opacity 0.4s ease-in-out);
-
   &.disable {
     opacity: 0;
     z-index: -1;
@@ -129,7 +120,6 @@
     margin: 0;
     cursor: pointer;
     @include transition(color 0.4s ease-in-out);
-
     &:hover {
       color: $primary-color;
     }
@@ -141,10 +131,19 @@
     margin: 0;
   }
 }
+
 //-------------------------------------
 //	FOOTER
 //-------------------------------------
 footer {
+  color: $dark-blue-30;
+  font-size: 0.6rem;
+  font-weight: 400;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+.links {
   margin: auto;
   background: #fff;
   padding: 0 14px;
@@ -155,14 +154,12 @@ footer {
   left: 50%;
   margin-left: -185px;
   border-radius: 2px;
-
   a {
     position: relative;
     z-index: 10;
     margin: 0 15px;
     display: inline-block;
     line-height: 38px;
-
     span {
       display: inline-block;
       font-size: 0.6rem;
@@ -171,7 +168,6 @@ footer {
       text-transform: uppercase;
       @include transition(transform 0.4s ease-in-out);
     }
-
     &:after {
       content: '';
       position: absolute;
@@ -186,7 +182,6 @@ footer {
       @include transform(scaleX(0));
       @include transition(transform 0.4s ease-in-out);
     }
-
     &.link--behance:after {
       background: $behance;
     }
@@ -196,12 +191,10 @@ footer {
     &.link--linkedin:after {
       background: $linkedin;
     }
-
     &:hover {
       span {
         @include transform(translateX(-6px));
       }
-
       &:after {
         transform-origin: left center;
         @include transform(scaleX(1));
@@ -209,7 +202,6 @@ footer {
       }
     }
   }
-
   &.menu-visible {
     opacity: 0;
     position: fixed;
@@ -236,19 +228,15 @@ footer {
   height: 100vh;
   padding: 0 10%;
   background: #fff;
-
   @include transform(translateY(0%));
   @include transition(transform 0.8s ease-in-out);
-
   &.disable {
     @include transform(translateY(-100%));
     @include transition(transform 0.8s ease-in-out);
   }
-
   .home__presentation {
     width: 60%;
     margin-right: 35px;
-
     h1 {
       font-size: 0.6rem;
       color: $dark-blue-30;
@@ -256,12 +244,10 @@ footer {
       text-transform: uppercase;
       letter-spacing: 0.15em;
       margin: 0;
-
       span {
         color: #000;
       }
     }
-
     p {
       font-size: 1.5rem;
       font-weight: 300;
@@ -269,7 +255,6 @@ footer {
       line-height: 1.3em;
     }
   }
-
   img {
     height: auto;
     max-height: 60%;
@@ -284,6 +269,7 @@ footer {
 /*------------------------
   Navigation • Desktop
 ------------------------*/
+
 .nav__wrapper {
   position: absolute;
   z-index: 22;
@@ -297,7 +283,6 @@ footer {
   justify-content: center;
   align-items: center;
   width: 30px;
-
   span.nav__item {
     position: relative;
     display: inline-flex;
@@ -307,25 +292,20 @@ footer {
     margin: 5px 0;
     cursor: pointer;
     @include transition(all 0.4s ease-in-out);
-
     &.active {
       opacity: 1;
       cursor: default;
-
       &:hover span.item__title {
         opacity: 0;
       }
     }
-
     &:hover {
       opacity: 1;
-
       span.item__title {
         @include transform(translateY(0%));
         opacity: 1;
       }
     }
-
     span.item__title {
       position: absolute;
       top: 0;
@@ -347,6 +327,7 @@ footer {
 /*------------------------
   Navigation • Mobile
 ------------------------*/
+
 .nav--mobile {
   position: fixed;
   z-index: 16;
@@ -361,24 +342,32 @@ footer {
 .nav__arrow {
   position: relative;
   display: block;
-  width: 9px;
-  height: 9px;
+  cursor: pointer;
+  margin-left: 1px;
+  width: 6px;
+  height: 6px;
   border-top: 2px solid $dark-blue-80;
   border-left: 2px solid $dark-blue-80;
   @include transform(rotate(-45deg));
-
-  &:after {
-    content: '';
-    position: absolute;
+  .arrow__circle {
     display: block;
-    width: 12px;
-    height: 2px;
-    background: $dark-blue-80;
-    transform: translate(17px, 22px) rotate(45deg);
-    top: -20px;
-    left: -20px;
+    background: rgba(6, 10, 46, 0.5);
+    width: 3px;
+    height: 3px;
+    border-radius: 50%;
+    @include transform(translate(3px, 3px));
+    @include transition(background 0.2s ease-in-out 0.1s);
+    &:after {
+      content: '';
+      display: block;
+      background: rgba(6, 10, 46, 0.3);
+      width: 3px;
+      height: 3px;
+      border-radius: 50%;
+      @include transform(translate(4px, 4px));
+      @include transition(background 0.2s ease-in-out 0.2s);
+    }
   }
-
   &.nav__arrow--right {
     @include transform(rotate(135deg));
   }
@@ -389,11 +378,9 @@ footer {
     font-family: 'butler_stencilextrabold', serif;
     text-transform: uppercase;
     font-size: 1rem;
-
     &.number--active {
       font-size: 1.42rem;
     }
-
     &.number--total {
       color: $dark-blue-50;
     }
@@ -416,6 +403,7 @@ footer {
 /*------------------------
   Project
 ------------------------*/
+
 .project {
   position: relative;
   height: 100vh;
@@ -423,7 +411,6 @@ footer {
   padding: 15px;
   z-index: 0;
   display: none;
-
   &.enable {
     z-index: 16;
     display: flex;
@@ -455,6 +442,7 @@ footer {
 #project-02 .description__number-wrapper--mobile .description__number--mobile:after {
   content: '02.';
 }
+
 #project-03 .project__visuel,
 .project--mobile#project-03 .project__content {
   background: linear-gradient(45deg, #1d7d90, #5dd5c3);
@@ -465,16 +453,20 @@ footer {
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
+
 #project-03 .description__number-wrapper--mobile .description__number--mobile:after {
   content: '03.';
 }
+
 #project-04 .project__visuel,
 .project--mobile#project-04 .project__content {
   background: linear-gradient(45deg, #1d7d90, #5dd5c3);
 }
+
 #project-04 .description__number-wrapper--mobile .description__number--mobile:after {
   content: '04.';
 }
+
 #project-04 .description__number-wrapper--mobile .description__number--mobile {
   background: linear-gradient(45deg, #1d7d90, #5dd5c3);
   -webkit-background-clip: text;
@@ -496,11 +488,9 @@ footer {
   border-radius: 4px;
   box-shadow: 0 0 16px $dark-blue-20;
   @include animation(1s fadeOut ease-in-out forwards);
-
   &.enable {
     @include animation(0.6s fadeIn ease-in-out forwards 0.6s);
   }
-
   .visuel__mockup {
     position: relative;
     z-index: 10;
@@ -510,7 +500,6 @@ footer {
     text-align: center;
     max-width: 630px;
     width: 80%;
-
     .mockup--desktop {
       max-width: 600px;
       width: 100%;
@@ -518,12 +507,10 @@ footer {
       z-index: 8;
       opacity: 0;
       @include animation(0.4s slideLeft ease-in-out forwards);
-
       &.enable {
         @include animation(0.6s slideRight ease-out forwards 0.6s);
       }
     }
-
     .mockup--mobile {
       max-width: 600px;
       width: 100%;
@@ -533,13 +520,11 @@ footer {
       right: 0;
       opacity: 0;
       @include animation(0.4s slideLeft ease-in-out forwards);
-
       &.enable {
         @include animation(0.6s slideRightBis ease-out forwards 0.6s);
       }
     }
   }
-
   img:last-child {
     position: absolute;
     z-index: 5;
@@ -564,12 +549,10 @@ footer {
   width: 80%;
   max-width: 400px;
   margin-left: -40px;
-
   .btn {
     margin-top: 20px;
     opacity: 0;
     @include animation(0.8s fadeOut ease-in-out forwards);
-
     &.enable {
       @include animation(0.8s fadeIn ease-in-out forwards 0.6s);
     }
@@ -581,7 +564,6 @@ footer {
   position: relative;
   padding: 8px 0;
   margin: 30px 0 15px 0;
-
   h2 {
     z-index: 10;
     font-family: 'Playfair Display', serif;
@@ -591,7 +573,6 @@ footer {
     margin: 0;
     @include transform(translateY(120%));
     @include animation(0.6s slideBottom ease-out forwards);
-
     &.enable {
       @include animation(0.6s slideTop ease-out forwards 0.8s);
     }
@@ -609,7 +590,6 @@ footer {
   font-size: 6.5rem;
   color: #fff;
   @include animation(0.6s shadowDropOut ease-out forwards);
-
   &.enable {
     @include animation(0.6s shadowDropIn ease-out forwards 0.8s);
   }
@@ -617,7 +597,6 @@ footer {
 
 .description {
   overflow: hidden;
-
   p {
     font-family: 'Playfair Display', serif;
     font-weight: 400;
@@ -628,7 +607,6 @@ footer {
     margin: 20px 0 0 0;
     @include transform(translateY(125%));
     @include animation(0.6s slideBottom ease-in-out forwards);
-
     &.enable {
       @include animation(0.6s slideTop ease-in-out forwards 0.8s);
     }
@@ -638,7 +616,6 @@ footer {
 .description__info {
   width: 100%;
   overflow: hidden;
-
   p {
     font-family: 'Work Sans', sans-serif;
     font-weight: 600;
@@ -648,7 +625,6 @@ footer {
     margin: 0;
     @include transform(translateY(120%));
     @include animation(0.6s slideBottom ease-in-out forwards);
-
     &.enable {
       @include animation(0.6s slideTop ease-in-out forwards 0.8s);
     }
@@ -663,18 +639,15 @@ footer {
   display: none;
   position: relative;
   overflow: hidden;
-
   &.enable {
     z-index: 16;
     display: flex;
   }
-
   .btn {
     align-self: center;
     margin-top: 45px;
     opacity: 0;
     @include animation(0.8s fadeOut ease-in-out forwards);
-
     &.enable {
       @include animation(0.8s fadeIn ease-in-out forwards 0.6s);
     }
@@ -696,11 +669,9 @@ footer {
   box-shadow: 0 0 16px $dark-blue-20;
   opacity: 0;
   @include animation(0.8s fadeOut ease-in-out forwards);
-
   &.enable {
     @include animation(0.8s fadeIn ease-in-out forwards 0.2s);
   }
-
   &:after {
     content: '';
     position: absolute;
@@ -717,8 +688,7 @@ footer {
 .project__description--mobile {
   text-align: center;
   margin-bottom: 30px;
-
-  & > div {
+  &>div {
     position: relative;
   }
 }
@@ -728,7 +698,6 @@ footer {
   position: relative;
   padding: 8px 0;
   margin: 35px 0 10px 0;
-
   h2 {
     z-index: 10;
     font-family: 'Playfair Display', serif;
@@ -738,12 +707,12 @@ footer {
     margin: 0;
     @include transform(translateY(120%));
     @include animation(0.6s slideBottom ease-out forwards);
-
     &.enable {
       @include animation(0.6s slideTop ease-out forwards 0.8s);
     }
   }
 }
+
 .description__number-wrapper--mobile {
   .description__number--mobile {
     position: absolute;
@@ -753,7 +722,6 @@ footer {
     height: calc(100vh - 30px);
     width: calc(100vw - 30px);
     margin: 15px;
-
     z-index: -1;
     font-family: 'Work Sans', sans-serif;
     font-weight: 700;
@@ -761,7 +729,6 @@ footer {
     background: linear-gradient(45deg, #1d7d90, #5dd5c3);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
-
     &:after {
       content: '01.';
       position: absolute;
@@ -785,7 +752,6 @@ footer {
     font-size: 6.5rem;
     color: rgba(0, 0, 0, 0.1);
     @include animation(0.6s shadowDropOut ease-out forwards);
-
     &.enable {
       @include animation(0.6s shadowDropIn ease-out forwards 0.8s);
     }
@@ -795,7 +761,6 @@ footer {
 .description__info--mobile {
   width: 100%;
   overflow: hidden;
-
   p {
     font-family: 'Work Sans', sans-serif;
     font-weight: 600;
@@ -806,7 +771,6 @@ footer {
     text-align: center;
     @include transform(translateY(125%));
     @include animation(0.6s slideBottom ease-in-out forwards);
-
     &.enable {
       @include animation(0.6s slideTop ease-in-out forwards 0.8s);
     }
@@ -822,11 +786,9 @@ footer {
   z-index: 24;
   margin-top: 15px;
   @include animation(1s fadeOut ease-in-out forwards);
-
   &.enable {
     @include animation(0.6s fadeIn ease-in-out forwards 0.6s);
   }
-
   .visuel__mockup {
     position: relative;
     z-index: 10;
@@ -835,19 +797,16 @@ footer {
     align-items: baseline;
     text-align: center;
     width: 90%;
-
     .mockup--desktop {
       position: relative;
       z-index: 22;
       width: 100%;
       opacity: 0;
       @include animation(0.4s slideLeft ease-in-out forwards);
-
       &.enable {
         @include animation(0.6s slideRight ease-out forwards 0.6s);
       }
     }
-
     .mockup--mobile {
       position: relative;
       z-index: 22;
@@ -856,7 +815,6 @@ footer {
       right: 0;
       opacity: 0;
       @include animation(0.4s slideLeft ease-in-out forwards);
-
       &.enable {
         @include animation(0.6s slideRight ease-out forwards 0.6s);
       }
@@ -871,7 +829,6 @@ footer {
     max-width: 60%;
     opacity: 0;
     @include animation(1s fadeOut ease-in-out forwards);
-
     &.enable {
       @include animation(0.6s fadeIn ease-in-out forwards 0.6s);
     }
@@ -891,10 +848,8 @@ footer {
   z-index: 30;
   display: flex;
   background: #fff;
-
   @include transform(translateY(0%));
   @include transition(transform 0.8s ease-in-out);
-
   &.disable {
     @include transform(translateY(-100%));
     @include transition(transform 0.8s ease-in-out);
@@ -908,18 +863,15 @@ footer {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-
   .description__wrapper {
     max-width: 470px;
     margin-left: -40px;
   }
-
   .description__title h2 {
     text-align: center;
     @include animation(none);
     @include transform(none);
   }
-
   .description__number {
     text-align: center;
     width: 100%;
@@ -927,7 +879,6 @@ footer {
     text-shadow: 0 0 20px $dark-blue-10;
     @include animation(none);
   }
-
   .description p {
     text-align: center;
     @include animation(none);
@@ -937,8 +888,7 @@ footer {
 
 //Contact form
 .contact__form {
-  overflow: auto;
-  //max-height: 100vh;
+  overflow: auto; //max-height: 100vh;
   display: flex;
   opacity: 1;
   flex-basis: 50%;
@@ -948,7 +898,6 @@ footer {
   background-size: 400% 400%;
   border-radius: 4px;
   box-shadow: 0 0 16px $dark-blue-20;
-
   form {
     margin: 0 80px 40px;
     width: calc(100% - 160px);
@@ -961,16 +910,13 @@ footer {
   display: flex;
   flex-direction: column;
   align-items: baseline;
-
   &:nth-child(1) {
     margin-top: 10%;
-
     .bubble--answer {
       text-decoration: underline;
       cursor: pointer;
     }
   }
-
   &:last-child .bubble:last-child {
     margin-bottom: 40px;
   }
@@ -986,12 +932,10 @@ footer {
   margin-bottom: 20px;
   @include transform(translateY(20%));
   opacity: 0;
-
   p {
     margin: 0;
     font-size: 0.9rem;
   }
-
   input,
   textarea {
     background: transparent;
@@ -1006,16 +950,13 @@ footer {
     resize: none;
     width: 100%;
   }
-
   textarea {
     height: auto;
   }
-
   @include placeholder {
     color: #fff;
     opacity: 0.5;
   }
-
   &.enable {
     @include animation(bubble ease-in-out forwards 0.6s);
     display: inline-block;
@@ -1025,8 +966,7 @@ footer {
 .bubble--answer {
   background: $dark-blue-50;
   color: #fff;
-  align-self: flex-end;
-  //margin-left: calc(100% - 280px);
+  align-self: flex-end; //margin-left: calc(100% - 280px);
   &.enable {
     @include animation(0.3s bubble ease-in-out forwards 0.6s);
   }
@@ -1043,7 +983,6 @@ footer {
   justify-content: center;
   align-self: center;
   margin-bottom: 20px;
-
   .bubble {
     width: calc(33.333333333% - 20px);
     text-align: center;
@@ -1052,27 +991,22 @@ footer {
     box-shadow: none;
     background: none;
     flex-grow: 1;
-
     input {
       position: absolute;
       opacity: 0;
       cursor: pointer;
-
-      &:checked ~ div {
+      &:checked~div {
         box-shadow: 0 4px 16px $dark-blue-10;
         @include transform(scale(1));
       }
-
-      &:not(:checked) ~ div {
+      &:not(:checked)~div {
         @include transform(scale(0.9));
-
         span,
         p {
           opacity: 0.5;
         }
       }
     }
-
     .choice {
       width: 100%;
       padding: 20px;
@@ -1080,7 +1014,6 @@ footer {
       box-shadow: 0 4px 8px $dark-blue-10;
       border-radius: 4px;
       @include transition(transform 0.4s ease-in-out);
-
       span {
         position: relative;
         display: block;
@@ -1092,7 +1025,6 @@ footer {
         height: 64px;
         box-shadow: 0 0 8px rgba($color: #000000, $alpha: 0.1);
         @include transition(opacity 0.4s ease-in-out);
-
         &:after {
           position: absolute;
           content: '';
@@ -1105,12 +1037,10 @@ footer {
           @include transform(translate(-11px, -11px));
         }
       }
-
       p {
         @include transition(opacity 0.4s ease-in-out);
       }
     }
-
     &.enable__choice {
       @include animation(0.3s bubble ease-in-out forwards 0.9s);
       display: flex;

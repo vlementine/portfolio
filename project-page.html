@@ -1,22 +1,45 @@
-<!DOCTYPE html>
-<html lang="fr">
-
-<head>
+<html lang="fr"><head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Project name • Clémentine Bertrand</title>
-    <link rel="icon" type="image/png" href="img/favicon-pro.png" />
+    <link rel="icon" type="image/png" href="img/favicon-pro.png">
     <link rel="stylesheet" href="css/main.min.css">
 </head>
 
-<body>
+<body id="project-01" class="project-page">
+    <!-- HEADER -->
     <header>
         <nav>
-            <span class="nav__arrow nav__arrow--left"></span>
+            <div class="nav__return">
+                <span class="nav__arrow nav__arrow--left">
+                    <span class="arrow__circle"></span>
+                </span>
+                <div class="return__text">
+                    <span class="text--top">Back to projects</span>
+                    <span class="text--bottom">Back to projects</span>
+                </div>
+            </div>
+            <!-- Button menu  -->
+            <div class="menu-btn menu-btn-open" onclick="displayMenu()">
+                <div class="menu__icon menu__icon--open enable">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+                <div class="menu__icon menu__icon--close">
+                    <span></span>
+                    <span></span>
+                </div>
+            </div>
         </nav>
-        <h1>Nom du projet</h1>
-        <span>Type du projet</span>
+        <div class="project__summary">
+            <h1>Back to your dream</h1>
+            <div class="summary__type">
+                <span class="type">Digital design</span>
+                <span class="type--shadow">Digital design</span>
+            </div>
+        </div>
         <div class="project__info">
             <div class="info">
                 <span>Rôle</span>
@@ -33,9 +56,65 @@
         </div>
     </header>
 
-    <section></section>
-    
-    <footer></footer>
-</body>
+    <!-- Menu  -->
+    <div class="menu__wrapper disable">
+        <div class="menu__content">
+            <div class="menu__item">
+                <h2 onclick="navMenu('home')">Home</h2>
+                <p>Présentation</p>
+            </div>
+            <div class="menu__item">
+                <h2 onclick="navMenu('work')">Work</h2>
+                <p>Présentation</p>
+            </div>
+            <div class="menu__item">
+                <h2 onclick="navMenu('contact')">Contact</h2>
+                <p>Présentation</p>
+            </div>
+        </div>
+    </div>
 
-</html>
+    <!-- SECTION -->
+    <section>
+        <div class="project__intro">
+            <h2>Présentation</h2>
+            <p>Option A, you kill me right here and now. Apparently I've made that very easy for you. You can kill me, no witnesses
+                and then spend the next few weeks or months tracking down Jesse Pinkman and you kill him too. A pointless
+                exercise it.</p>
+            <a class="btn" href="">Découvrir le projet</a>
+        </div>
+        <div class="project__img">
+            <img src="img/btyd_project-01.png" alt="">
+            <span></span>
+        </div>
+    </section>
+
+    <!-- NEXT PROJECT -->
+    <section>
+
+    </section>
+
+    <!-- FOOTER -->
+    <footer>
+        <span class="copyright">Clémentine Bertrand © 2018</span>
+        <div class="links">
+            <a class="link--behance" href="" target="_blank">
+                <span>Behance</span>
+            </a>
+            <a class="link--dribbble" href="https://dribbble.com/cbertrand" target="_blank">
+                <span>Dribbble</span>
+            </a>
+            <a class="link--linkedin" href="https://www.linkedin.com/in/clementinebertrand" target="_blank">
+                <span>Linkedin</span>
+            </a>
+        </div>
+        <div class="footer__contact">
+            <span>Contactez-moi</span>
+            <a href="mailto:hello@clementinebertrand.fr" target="_blank">
+                ✍️
+            </a>
+        </div>
+    </footer>
+
+
+</body></html>
