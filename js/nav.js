@@ -91,9 +91,9 @@ function seeMyWork() {
 //-------------------------------------
 function navActiveItem(param) {
   for (let n = 0; n < Object.keys(nav).length; n++) {
-    document.querySelectorAll('span.nav__item')[n].classList.remove('active');
+    document.querySelectorAll('.nav__items p')[n].classList.remove('item--active');
   }
-  document.querySelector('span.nav__item:nth-child(' + param + ')').classList.add('active');
+  document.querySelector('.nav__items p:nth-child(' + param + ')').classList.add('item--active');
 }
 
 //-------------------------------------
