@@ -1,10 +1,8 @@
 @import "mixins.scss";
 @import "variables.scss";
-
 //-------------------------------------
 //	BASICS
 //-------------------------------------
-
 * {
   box-sizing: border-box;
 }
@@ -20,25 +18,18 @@ body {
   line-height: 1.5;
   margin: 0;
   padding: 0;
-
-	&:before {
-		content: '';
-		border: 1px solid $dark-blue-05;
-		position: absolute;
-		width: calc(100vw - 90px);
-		height: calc(100vh - 90px);
-    transform: translate(45px, 45px);
-  }
-  
   &.menu-visible {
     overflow: hidden;
   }
 }
-.visible-scrollbar, .invisible-scrollbar {
+
+.visible-scrollbar,
+.invisible-scrollbar {
   display: block;
   width: 10em;
   overflow: auto;
 }
+
 .invisible-scrollbar::-webkit-scrollbar {
   display: none;
 }
@@ -46,6 +37,7 @@ body {
 /*------------------------
   Links
 ------------------------*/
+
 a {
   font-size: 0.6rem;
   font-weight: 400;
@@ -56,6 +48,7 @@ a {
 /*------------------------
   Buttons
 ------------------------*/
+
 button {
   outline: none;
 }
@@ -63,7 +56,7 @@ button {
 .btn {
   display: inline-block;
   border: 1px solid $dark-blue-10;
-	font-size: 0.6rem;
+  font-size: 0.6rem;
   font-weight: 400;
   letter-spacing: 0.12em;
   text-transform: uppercase;
@@ -73,10 +66,26 @@ button {
   height: 40px;
   line-height: 40px;
   padding: 0 15px;
-	cursor: pointer;
+  cursor: pointer;
   @include transition(all .4s ease-in-out);
-
   &:hover {
     box-shadow: 0 4px 14px $dark-blue-10;
+  }
+}
+
+/*------------------------
+  Border
+------------------------*/
+.projects__wrapper,
+.contact__wrapper {
+  &:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    border: 1px solid $dark-blue-05;
+    width: calc(100vw - 90px);
+    height: calc(100vh - 90px);
+    @include transform(translate(45px, 45px));
   }
 }

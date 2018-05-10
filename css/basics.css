@@ -1,11 +1,5 @@
-/*-----------------------------
-  MIXINS
------------------------------*/
-/*------------------------
-  Fonts
-------------------------*/
 @import url("https://fonts.googleapis.com/css?family=Work+Sans:300,400,500,600,700");
-@import url("https://fonts.googleapis.com/css?family=Playfair+Display:400i,700,900");
+@import url("https://fonts.googleapis.com/css?family=Playfair+Display:400,400i,700,900");
 @font-face {
   font-family: 'butler_stencilextrabold';
   src: url("../font/butler_extrabold_stencil-webfont.woff2") format("woff2"), url("../font/butler_extrabold_stencil-webfont.woff") format("woff");
@@ -13,9 +7,6 @@
   font-style: normal;
 }
 
-/*------------------------
-  Colors
-------------------------*/
 * {
   box-sizing: border-box;
 }
@@ -33,20 +24,12 @@ body {
   padding: 0;
 }
 
-body:before {
-  content: '';
-  border: 1px solid rgba(6, 10, 46, 0.05);
-  position: absolute;
-  width: calc(100vw - 90px);
-  height: calc(100vh - 90px);
-  transform: translate(45px, 45px);
-}
-
 body.menu-visible {
   overflow: hidden;
 }
 
-.visible-scrollbar, .invisible-scrollbar {
+.visible-scrollbar,
+.invisible-scrollbar {
   display: block;
   width: 10em;
   overflow: auto;
@@ -81,7 +64,7 @@ button {
   letter-spacing: 0.12em;
   text-transform: uppercase;
   background: #FFF;
-  color: #2286B6;
+  color: #2286b6;
   border-radius: 2px;
   height: 40px;
   line-height: 40px;
@@ -96,4 +79,23 @@ button {
 
 .btn:hover {
   box-shadow: 0 4px 14px rgba(6, 10, 46, 0.1);
+}
+
+/*------------------------
+  Border
+------------------------*/
+.projects__wrapper:before,
+.contact__wrapper:before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  border: 1px solid rgba(6, 10, 46, 0.05);
+  width: calc(100vw - 90px);
+  height: calc(100vh - 90px);
+  -webkit-transform: translate(45px, 45px);
+  -moz-transform: translate(45px, 45px);
+  -ms-transform: translate(45px, 45px);
+  -o-transform: translate(45px, 45px);
+  transform: translate(45px, 45px);
 }

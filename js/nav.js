@@ -86,6 +86,23 @@ function seeMyWork() {
   }
 }
 
+function returnProjects() {
+  //All
+  let windowWidth = window.innerWidth;
+  document.querySelector('.contact__wrapper').classList.add('disable');
+  document.querySelector('#project-04').classList.add('enable');
+  //Mobile
+  if (windowWidth <= 650) {
+    document.querySelector('.number--active').textContent = '05';
+    displayProject('#project-04');
+
+    //Desktop
+  } else {
+    navActiveItem(5);
+    displayProject('#project-04');
+  }
+}
+
 //-------------------------------------
 //	ACTIVE ITEM
 //-------------------------------------
@@ -120,7 +137,7 @@ function navDesktop(param) {
   //Display projects
   if (projectClicked < totalItemNav - 1 && projectClicked !== 0 && projectClicked !== projectActive) {
     hideProject(idToHide);
-    setTimeout(function() {
+    setTimeout(function () {
       document.querySelector(idToHide).classList.remove('enable');
       document.querySelector(idToDisplay).classList.add('enable');
       displayProject(idToDisplay);
@@ -130,7 +147,7 @@ function navDesktop(param) {
   } else if (projectClicked === 0) {
     document.querySelector('.home').classList.remove('disable');
     hideProject(idToHide);
-    setTimeout(function() {
+    setTimeout(function () {
       document.querySelector(idToHide).classList.remove('enable');
     }, 700);
 
@@ -138,7 +155,7 @@ function navDesktop(param) {
   } else if (itemClicked == totalItemNav) {
     document.querySelector('.contact__wrapper').classList.remove('disable');
     hideProject(idToHide);
-    setTimeout(function() {
+    setTimeout(function () {
       document.querySelector(idToHide).classList.remove('enable');
       document.querySelector('.bubble--group:nth-child(1) .bubble').classList.add('enable');
       document.querySelector('.bubble--group:nth-child(1) .bubble--answer').classList.add('enable');
@@ -165,7 +182,7 @@ function navMobile(param) {
   if (itemClicked < totalItemNav && itemClicked !== 1) {
     document.querySelector('.number--active').textContent = '0' + itemClicked;
     hideProject(idToHide);
-    setTimeout(function() {
+    setTimeout(function () {
       document.querySelector(idToHide).classList.remove('enable');
       document.querySelector(idToDisplay).classList.add('enable');
       displayProject(idToDisplay);
@@ -221,7 +238,7 @@ function navMenu(param) {
     //Work
     document.querySelector('.home').classList.add('disable');
     document.querySelector('.contact__wrapper').classList.add('disable');
-    setTimeout(function() {
+    setTimeout(function () {
       document.querySelector('#project-01').classList.add('enable');
       displayProject('#project-01');
     }, 500);
@@ -236,7 +253,7 @@ function navMenu(param) {
     // Contact
     initProject('.project');
     document.querySelector('.contact__wrapper').classList.remove('disable');
-    setTimeout(function() {
+    setTimeout(function () {
       document.querySelector('.bubble--group:nth-child(1) .bubble').classList.add('enable');
       document.querySelector('.bubble--group:nth-child(1) .bubble--answer').classList.add('enable');
       document.querySelector('.home').classList.add('disable');

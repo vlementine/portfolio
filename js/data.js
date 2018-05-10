@@ -62,7 +62,7 @@ const nav = [{
 ];
 
 var content = '';
-var contentResponsive = '';
+var contentMobile = '';
 
 projects.forEach(project => {
   content += `<div class="project" id="project-${project.number}">
@@ -87,38 +87,38 @@ projects.forEach(project => {
               <div class="description">
                 <p>${project.description}</p>
               </div>
-              <a class="btn" href="${project.href}">Découvrir le projet</a>
+              <a class="btn" href="projects-page/project-page.html">Découvrir le projet</a>
             </div>
           </div>
         </div>`;
 });
 
-projects.forEach(projectResponsive => {
-  contentResponsive += `<div class="project--mobile" id="project-${projectResponsive.number}">
+projects.forEach(projectMobile => {
+  contentMobile += `<div class="project--mobile" id="project-${projectMobile.number}">
     <div class="project__content">
       <div class="project__description--mobile">
           <div>
             <div class="description__title--mobile">
-                <h2> ${projectResponsive.title} </h2>
+                <h2> ${projectMobile.title} </h2>
             </div>
             <div class="description__number-wrapper--mobile">
-              <span class="description__number--mobile">${projectResponsive.number}.</span>
-              <span class="description__number-shadow--mobile">${projectResponsive.number}.</span>
+              <span class="description__number--mobile">${projectMobile.number}.</span>
+              <span class="description__number-shadow--mobile">${projectMobile.number}.</span>
             </div>
           </div>
           <div class="description__info--mobile">
-              <p>${projectResponsive.keywords}</p>
+              <p>${projectMobile.keywords}</p>
           </div>
       </div>
       <div class="project__visuel--mobile">
           <div class="visuel__mockup">
               <img class="mockup--desktop" src="img/${
-                projectResponsive.image
+                projectMobile.image
               }_visuel-home.png" alt="Visuel du Blog Zenchef" draggable="false">
           </div>
-          <img class="visuel__letter" src="img/${projectResponsive.image}_letter.png" alt="B" draggable="false">
+          <img class="visuel__letter" src="img/${projectMobile.image}_letter.png" alt="B" draggable="false">
       </div>
-      <a class="btn" href="${projectResponsive.href}">Découvrir le projet</a>
+      <a class="btn" href="projects-page/project-page.html">Découvrir le projet</a>
     </div>
 </div>`;
 });

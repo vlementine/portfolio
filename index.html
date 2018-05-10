@@ -71,18 +71,26 @@
 
   <!-- CONTACT -->
   <section class="contact__wrapper disable">
-
+    <div class="nav__return" onClick="returnProjects()">
+      <span class="nav__arrow nav__arrow--left">
+        <span class="arrow__circle"></span>
+      </span>
+      <div class="return__text">
+        <span class="text--top">Back to projects</span>
+        <span class="text--bottom">Back to projects</span>
+      </div>
+    </div>
     <!-- Contact description -->
     <div class="contact__description">
       <div class="description__wrapper">
         <div class="description__title description__title--contact">
-          <h2>Pour me contacter, c’est par ici 👉</h2>
+          <h2>Pour me contacter,
+            <br>c’est par ici 👉</h2>
         </div>
         <span class="description__number">Contact</span>
         <div class="description description--contact">
-          <p>Option A, you kill me right here and now. Apparently I've made that very easy for you. You can kill me, no witnesses
-            and then spend the next few weeks or months tracking down Jesse Pinkman and you kill him too. A pointless exercise
-            it seems…</p>
+          <p>Low-key, no pressure, just hang with me and my weather ! Rose-colored boy I hear you making all that noise about
+            the world you want to see</p>
         </div>
       </div>
     </div>
@@ -183,16 +191,23 @@
 
   <!-- NAV • MOBILE -->
   <div class="nav--mobile">
-    <span class="nav__arrow nav__arrow--left" onClick="navMobile(-1)">
-      <span class="arrow__circle"></span>
-    </span>
+    <div class="arrow__wrapper" onClick="navMobile(-1)">
+      <span class="nav__arrow nav__arrow--left">
+        <span class="arrow__circle"></span>
+      </span>
+    </div>
+
     <div class="nav__number">
       <span class="number number--active">02</span>
       <span class="number__separator">/</span>
       <span class="number number--total">06</span>
     </div>
-    <span class="nav__arrow nav__arrow--right" onClick="navMobile(+1)">
-      <span class="arrow__circle"></span>
+
+    <div class="arrow__wrapper" onClick="navMobile(+1)">
+      <span class="nav__arrow nav__arrow--right">
+        <span class="arrow__circle"></span>
+      </span>
+    </div>
     </span>
   </div>
 
