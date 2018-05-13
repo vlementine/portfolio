@@ -1,6 +1,5 @@
 @import 'mixins.scss';
 @import 'variables.scss';
-
 //-------------------------------------
 //	ANIMATIONS
 //-------------------------------------
@@ -9,7 +8,6 @@
     @include transform(translateX(-15%));
     opacity: 0;
   }
-
   100% {
     @include transform(translateX(0%));
     opacity: 1;
@@ -21,7 +19,6 @@
     @include transform(translateX(-10%));
     opacity: 0;
   }
-
   100% {
     @include transform(translateX(0%));
     opacity: 1;
@@ -33,7 +30,6 @@
     @include transform(translateX(0%));
     opacity: 1;
   }
-
   100% {
     @include transform(translateX(-15%));
     opacity: 0;
@@ -45,7 +41,6 @@
     @include transform(translateX(0%));
     opacity: 1;
   }
-
   100% {
     @include transform(translateX(-10%));
     opacity: 0;
@@ -57,7 +52,6 @@
     @include transform(translateY(120%));
     opacity: 0;
   }
-
   100% {
     @include transform(translateY(0%));
     opacity: 1;
@@ -69,7 +63,6 @@
     @include transform(translateY(0%));
     opacity: 0;
   }
-
   100% {
     @include transform(translateY(120%));
     opacity: 1;
@@ -80,7 +73,6 @@
   0% {
     opacity: 0;
   }
-
   100% {
     opacity: 1;
   }
@@ -90,7 +82,6 @@
   0% {
     opacity: 1;
   }
-
   100% {
     opacity: 0;
   }
@@ -100,7 +91,6 @@
   0% {
     text-shadow: 0 0 0 $dark-blue-10;
   }
-
   100% {
     text-shadow: 0 0 20px $dark-blue-10;
   }
@@ -110,7 +100,6 @@
   0% {
     text-shadow: 0 0 20px $dark-blue-10;
   }
-
   100% {
     text-shadow: 0 0 0 $dark-blue-10;
   }
@@ -136,5 +125,59 @@
   }
   100% {
     background-position: 0% 50%;
+  }
+}
+
+@include keyframes(contact) {
+  0% {
+    @include transform(translateX(0) translateY(0) rotate(0));
+  }
+  15% {
+    @include transform(translateY(-2px) rotate(20deg));
+  }
+  30% {
+    @include transform(translateY(0));
+  }
+  45% {
+    @include transform(translateY(-1px));
+  }
+  55% {
+    @include transform(translateY(0));
+  }
+  65% {
+    @include transform(translateY(-1px));
+  }
+  75% {
+    @include transform(translateX(1px) translateY(0) rotate(0));
+  }
+  100% {
+    @include transform(translateX(0) translateY(0) rotate(0));
+  }
+}
+
+@include keyframes(plop) {
+  0% {
+    @include transform(rotate(0));
+  }
+  25% {
+    @include transform(rotate(20deg));
+  }
+  50% {
+    @include transform(rotate(-20deg));
+  }
+  60% {
+    @include transform(rotate(0));
+  }
+  70% {
+    @include transform(rotate(-20deg));
+  }
+  80% {
+    @include transform(rotate(0));
+  }
+  90% {
+    @include transform(rotate(-20deg));
+  }
+  100% {
+    @include transform(rotate(0));
   }
 }

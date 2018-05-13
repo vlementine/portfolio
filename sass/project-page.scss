@@ -241,18 +241,18 @@
         background: $dark-blue-10;
         margin: 0 15px 2px 10px;
     }
-    a {
+    .contact__link {
         position: relative;
         width: 24px;
         height: 24px;
         border-radius: 50%;
         line-height: 24px;
         background: #fff;
-        display: inline-block;
-        text-align: center;
+        display: inline-flex;
+        justify-content: center;
+        align-items: center;
         box-shadow: 0 0 10px $dark-blue-10;
-        padding-left: 3px;
-        @include transition(box-shadow 0.2s ease-in-out);
+        @include transition(box-shadow 0.4s ease-in-out);
         &:after {
             content: '';
             position: absolute;
@@ -263,13 +263,24 @@
             top: 0;
             left: 0;
             @include transform(translate(-6px, -6px));
-            @include transition(border 0.2s ease-in-out);
+            @include transition(border 0.4s ease-in-out);
         }
         &:hover {
             box-shadow: 0 0 10px $dark-blue-20;
             &:after {
                 border-color: $dark-blue-10;
             }
+        }
+    }
+    a {
+        position: relative;
+        z-index: 30;
+        width: 24px;
+        height: 24px;
+        text-align: center;
+        padding-left: 2px;
+        &:hover {
+            @include animation(1.5s contact ease-in-out);
         }
     }
 }
