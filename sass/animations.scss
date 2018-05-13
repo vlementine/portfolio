@@ -133,22 +133,22 @@
     @include transform(translateX(0) translateY(0) rotate(0));
   }
   15% {
-    @include transform(translateY(-2px) rotate(20deg));
+    @include transform(translateX(0) translateY(-2px) rotate(20deg));
   }
   30% {
-    @include transform(translateY(0));
+    @include transform(translateX(1px) translateY(0));
   }
   45% {
-    @include transform(translateY(-1px));
+    @include transform(translateX(1px) translateY(-1px));
   }
   55% {
-    @include transform(translateY(0));
+    @include transform(translateX(1.5px) translateY(0));
   }
   65% {
-    @include transform(translateY(-1px));
+    @include transform(translateX(1.5px) translateY(-1px));
   }
   75% {
-    @include transform(translateX(1px) translateY(0) rotate(0));
+    @include transform(translateX(2px) translateY(0) rotate(0));
   }
   100% {
     @include transform(translateX(0) translateY(0) rotate(0));
