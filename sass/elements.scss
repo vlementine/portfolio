@@ -918,10 +918,6 @@ footer {
   @include transform(translateY(0%));
   @include transition(transform 0.8s ease-in-out);
   .nav__return {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    cursor: pointer;
     padding: 0 10px;
     background: #FFF;
     position: absolute;

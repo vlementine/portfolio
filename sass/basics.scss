@@ -89,3 +89,24 @@ button {
     @include transform(translate(45px, 45px));
   }
 }
+
+.nav__return {
+  display:flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  &:hover .nav__arrow+.return__text span {
+      &:first-child {
+          color: $dark-blue-80;
+          opacity: 0;
+          @include transform(translateY(-15px));
+          @include transition(color 0.4s ease-in-out 0.2s, opacity 0.4s ease-in-out 0.2s, transform 0.4s ease-in-out 0.2s);
+      }
+      &:last-child {
+          color: $dark-blue-80;
+          opacity: 1;
+          @include transform(translateY(0));
+          @include transition(color 0.4s ease-in-out 0.1s, opacity 0.4s ease-in-out 0.1s, transform 0.4s ease-in-out 0.1s);
+      }
+  }
+}

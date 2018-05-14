@@ -14,22 +14,6 @@
         top: 0;
         left: 0;
     }
-    .nav__return {
-        &:hover .nav__arrow+.return__text span {
-            &:first-child {
-                color: $dark-blue-80;
-                opacity: 0;
-                @include transform(translateY(-15px));
-                @include transition(color 0.4s ease-in-out 0.2s, opacity 0.4s ease-in-out 0.2s, transform 0.4s ease-in-out 0.2s);
-            }
-            &:last-child {
-                color: $dark-blue-80;
-                opacity: 1;
-                @include transform(translateY(0));
-                @include transition(color 0.4s ease-in-out 0.1s, opacity 0.4s ease-in-out 0.1s, transform 0.4s ease-in-out 0.1s);
-            }
-        }
-    }
 }
 
 .return__text {
