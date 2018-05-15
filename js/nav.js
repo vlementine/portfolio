@@ -70,6 +70,7 @@ function hideProject(project) {
 //	BTN SEE MY WORK
 //-------------------------------------
 function seeMyWork() {
+  console.log('dsqd')
   //All
   let windowWidth = window.innerWidth;
   document.querySelector('.home').classList.add('disable');
@@ -116,7 +117,14 @@ function navActiveItem(param) {
 //-------------------------------------
 //	NAVIGATION • DESKTOP
 //-------------------------------------
-function navDesktop(param) {
+
+function navDesktop(param = null) {
+  console.log('call')
+  var clem = parseInt(clem)
+  if (param === null) { 
+    param = parseInt(document.querySelector('.project.enable').id.split('-')[1]) + 2
+    console.log(param)
+  }
   //Get the total of item of nav
   let totalItemNav = Object.keys(nav).length;
 

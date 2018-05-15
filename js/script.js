@@ -39,6 +39,26 @@ function main() {
     document.querySelector('.projects').innerHTML = content;
   }
   document.querySelector('.btn__home').addEventListener('click', seeMyWork);
+  
+  let lockScroll = false
+
+  document.addEventListener('mousewheel', function(event)
+  {
+    if (Math.abs(event.deltaY) > 0)
+    if(event.deltaY > 30) {
+      if (!lockScroll) {
+        console.log('enter')
+        lockScroll = true
+        if (document.querySelector(".home:not(.disable)")) seeMyWork()
+        else {
+          navDesktop()
+        }
+        window.setTimeout(() => {
+          lockScroll = false
+        }, 1000)
+      }
+    }
+  });
 }
 
 document.onload = main();
