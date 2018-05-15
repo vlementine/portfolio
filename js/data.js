@@ -126,7 +126,7 @@ projects.forEach(projectMobile => {
 let navigation = '';
 
 nav.forEach(itemNav => {
-  navigation += `<p onClick="navDesktop(${itemNav.number})">${itemNav.number}
+  navigation += `<p onClick="navDesktop(null, ${itemNav.number})">${itemNav.number}
   <span class="item__title">${itemNav.title}</span>
 </p>`;
 });
