@@ -103,14 +103,14 @@ function main() {
   });
 
   //Control scroll
-  document.addEventListener('mousewheel', function(event) {
+  document.addEventListener('mousewheel', event => {
     if (windowWidth <= 650) {
       if (event.deltaX > 30) {
-        console.log('prev');
-        scrollDirection('prev');
-      } else if (event.deltaX < -30) {
         console.log('next');
         scrollDirection('next');
+      } else if (event.deltaX < -30) {
+        console.log('prev');
+        scrollDirection('prev');
       }
     } else {
       if (event.deltaY > 30) {
@@ -120,6 +120,23 @@ function main() {
       }
     }
   });
+
+  //Control touch
+  document.addEventListener('touchstart', touchStart);
+  document.addEventListener('touchmove', touchMove);
+  var start = { x: 0, y: 0 };
+  function touchStart(event) {
+    start.x = event.touches[0].pageX;
+  }
+  function touchMove(event) {
+    offset = {};
+    offset.x = start.x - event.touches[0].pageX;
+    if (offset.x > 50) {
+      scrollDirection('next');
+    } else if (offset.x < -50) {
+      scrollDirection('prev');
+    }
+  }
 }
 
 document.onload = main();

@@ -759,7 +759,7 @@ footer {
 .project__description--mobile {
   text-align: center;
   margin-bottom: 30px;
-  &>div {
+  & > div {
     position: relative;
   }
 }
@@ -919,7 +919,7 @@ footer {
   @include transition(transform 0.8s ease-in-out);
   .nav__return {
     padding: 0 10px;
-    background: #FFF;
+    background: #fff;
     position: absolute;
     top: 38px;
     left: 50px;
@@ -967,7 +967,7 @@ footer {
   flex-basis: 50%;
   position: relative;
   z-index: 24;
-  background: linear-gradient(45deg, rgba(34, 135, 182, 0.60), #2286B6);
+  background: linear-gradient(45deg, rgba(34, 135, 182, 0.6), #2286b6);
   background-size: 400% 400%;
   border-radius: 4px;
   box-shadow: 0 0 16px $dark-blue-20;
@@ -1078,11 +1078,11 @@ footer {
       position: absolute;
       opacity: 0;
       cursor: pointer;
-      &:checked~div {
+      &:checked ~ div {
         box-shadow: 0 4px 16px $dark-blue-10;
         @include transform(scale(1));
       }
-      &:not(:checked)~div {
+      &:not(:checked) ~ div {
         @include transform(scale(0.9));
         span,
         p {
