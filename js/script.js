@@ -101,15 +101,15 @@ function main() {
   }
 
   //Control keyboard
-  document.addEventListener('keydown', function(event) {
-    if (event.keyCode == 38) {
-      console.log('up');
-      scrollDirection('prev');
-    } else if (event.keyCode == 40) {
-      console.log('down');
-      scrollDirection('next');
-    }
-  });
+  // document.addEventListener('keydown', function(event) {
+  //   if (event.keyCode == 38) {
+  //     console.log('up');
+  //     scrollDirection('prev');
+  //   } else if (event.keyCode == 40) {
+  //     console.log('down');
+  //     scrollDirection('next');
+  //   }
+  // });
 
   //Control scroll
   // document.addEventListener('wheel', event => {
