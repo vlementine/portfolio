@@ -139,9 +139,9 @@ function main() {
     }
     offset = {};
     offset.x = start.x - event.touches[0].pageX;
-    if (offset.x > 50) {
+    if (offset.x > 100) {
       scrollDirection('next');
-    } else if (offset.x < -50) {
+    } else if (offset.x < -100) {
       scrollDirection('prev');
     }
   }
