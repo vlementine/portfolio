@@ -60,14 +60,14 @@ function main() {
           seeMyWork();
         } else if (document.querySelector('.contact__wrapper:not(.disable)')) {
           //navDesktop(direction);
-          document.removeEventListener('touchstart', touchStart);
-          document.removeEventListener('touchmove', touchMove);
+          // document.removeEventListener('touchstart', touchStart);
+          // document.removeEventListener('touchmove', touchMove);
         } else if (document.querySelector('.contact__wrapper.disable')) {
           if (windowWidth <= 650) navMobile(+1);
           else navDesktop(direction);
         }
-        document.addEventListener('touchstart', touchStart);
-        document.addEventListener('touchmove', touchMove);
+        // document.addEventListener('touchstart', touchStart);
+        // document.addEventListener('touchmove', touchMove);
       } else if (direction == 'prev') {
         if (document.querySelector('.contact__wrapper:not(.disable)')) {
           document.querySelector('.home').classList.add('disable');
@@ -108,23 +108,23 @@ function main() {
   });
 
   //Control scroll
-  document.addEventListener('wheel', event => {
-    if (windowWidth <= 650) {
-      if (event.deltaX > 30) {
-        console.log('next');
-        scrollDirection('next');
-      } else if (event.deltaX < -30) {
-        console.log('prev');
-        scrollDirection('prev');
-      }
-    } else {
-      if (event.deltaY > 30) {
-        scrollDirection('prev');
-      } else if (event.deltaY < -30) {
-        scrollDirection('next');
-      }
-    }
-  });
+  // document.addEventListener('wheel', event => {
+  //   if (windowWidth <= 650) {
+  //     if (event.deltaX > 30) {
+  //       console.log('next');
+  //       scrollDirection('next');
+  //     } else if (event.deltaX < -30) {
+  //       console.log('prev');
+  //       scrollDirection('prev');
+  //     }
+  //   } else {
+  //     if (event.deltaY > 30) {
+  //       scrollDirection('prev');
+  //     } else if (event.deltaY < -30) {
+  //       scrollDirection('next');
+  //     }
+  //   }
+  // });
 
   //Control touch
   document.addEventListener('touchstart', touchStart);
@@ -135,8 +135,7 @@ function main() {
   }
   function touchMove(event) {
     if (navigator.userAgent.match(/Android/i)) {
-      // if you already work on Android system, you can        skip this step
-      event.preventDefault(); //THIS IS THE KEY. You can read the difficult doc released by W3C to learn more.
+      event.preventDefault();
     }
     offset = {};
     offset.x = start.x - event.touches[0].pageX;
