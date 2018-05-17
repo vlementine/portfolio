@@ -137,16 +137,11 @@ function main() {
       console.log(direction);
 
       if (direction == 'next') {
-        if (document.querySelector('.home:not(.disable)')) {
-          seeMyWork();
-          alert('See my work !');
-        } else {
-          navMobile(+1);
-          alert('Next !');
-        }
+        alert('Next !');
+        navMobile(+1);
       } else if (direction == 'prev') {
-        navMobile(-1);
         alert('Prev !');
+        navMobile(-1);
       }
 
       window.setTimeout(() => {
