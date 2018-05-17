@@ -136,13 +136,14 @@ function main() {
   function touchMove(event) {
     if (navigator.userAgent.match(/Android/i)) {
       event.preventDefault();
-    }
-    offset = {};
-    offset.x = start.x - event.touches[0].pageX;
-    if (offset.x > 100) {
-      scrollDirection('next');
-    } else if (offset.x < -100) {
-      scrollDirection('prev');
+
+      offset = {};
+      offset.x = start.x - event.touches[0].pageX;
+      if (offset.x > 100) {
+        scrollDirection('next');
+      } else if (offset.x < -100) {
+        scrollDirection('prev');
+      }
     }
   }
 }
