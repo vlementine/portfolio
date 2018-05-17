@@ -132,19 +132,23 @@ function main() {
   var start = { x: 0, y: 0 };
   function touchStart(event) {
     start.x = event.touches[0].pageX;
+    start.y = event.touches[0].pageY;
   }
   function touchMove(event) {
     if (navigator.userAgent.match(/Android/i)) {
       event.preventDefault();
-
-      offset = {};
-      offset.x = start.x - event.touches[0].pageX;
-      if (offset.x > 100) {
-        scrollDirection('next');
-      } else if (offset.x < -100) {
-        scrollDirection('prev');
-      }
     }
+    offset = {};
+    offset.x = start.x - event.touches[0].pageX;
+    offset.y = start.y - event.touches[0].pageY;
+    console.log("y" + offset.y);
+    console.log("x" + offset.x);
+    if (offset.x > 100 && Math.abs(offset.y) < 15) {
+      scrollDirection('next');
+    } else if (offset.x < -100 && Math.abs(offset.y) < 15) {
+      scrollDirection('prev');
+    }
+ 
   }
 }
 
