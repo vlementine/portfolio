@@ -134,14 +134,12 @@ function main() {
   function touchDirection(direction) {
     if (!lockTouch) {
       lockTouch = true;
-      console.log(direction);
-
       if (direction == 'next') {
         alert('Next !');
-        navMobile(+1);
+        //navMobile(+1);
       } else if (direction == 'prev') {
         alert('Prev !');
-        navMobile(-1);
+       // navMobile(-1);
       }
 
       window.setTimeout(() => {
