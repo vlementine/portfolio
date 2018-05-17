@@ -39,7 +39,6 @@ function main() {
     document.querySelector('.btn__home').classList.add('btn__work--mobile');
     document.querySelector('.btn__home').classList.remove('btn__work--desktop');
     document.querySelector('.projects').innerHTML = contentMobile;
-    document.querySelector('.nav__wrapper').remove();
   } else {
     document.querySelector(
       '.contact__description .description__title h2'
@@ -130,47 +129,47 @@ function main() {
   //   }
   // });
 
-  let lockTouch = false;
-  function touchDirection(direction) {
-    if (!lockTouch) {
-      lockTouch = true;
-      if (direction == 'next') {
-        alert('Next !');
-        //navMobile(+1);
-      } else if (direction == 'prev') {
-        alert('Prev !');
-       // navMobile(-1);
-      }
+  // let lockTouch = false;
+  // function touchDirection(direction) {
+  //   if (!lockTouch) {
+  //     lockTouch = true;
+  //     if (direction == 'next') {
+  //       alert('Next !');
+  //       //navMobile(+1);
+  //     } else if (direction == 'prev') {
+  //       alert('Prev !');
+  //      // navMobile(-1);
+  //     }
 
-      window.setTimeout(() => {
-        lockTouch = false;
-      }, 1000);
-    }
-  }
+  //     window.setTimeout(() => {
+  //       lockTouch = false;
+  //     }, 1000);
+  //   }
+  // }
 
   //Control touch
-  document.addEventListener('touchstart', touchStart);
-  document.addEventListener('touchmove', touchMove);
-  var start = { x: 0, y: 0 };
-  function touchStart(event) {
-    start.x = event.touches[0].pageX;
-    start.y = event.touches[0].pageY;
-  }
-  function touchMove(event) {
-    // if (navigator.userAgent.match(/Android/i)) {
-    //   event.preventDefault();
-    // }
-    offset = {};
-    offset.x = start.x - event.touches[0].pageX;
-    offset.y = start.y - event.touches[0].pageY;
-    console.log('y' + offset.y);
-    console.log('x' + offset.x);
-    if (offset.x > 100 && Math.abs(offset.y) < 15) {
-      //touchDirection('next');
-    } else if (offset.x < -100 && Math.abs(offset.y) < 15) {
-     // touchDirection('prev');
-    }
-  }
+  // document.addEventListener('touchstart', touchStart);
+  // document.addEventListener('touchmove', touchMove);
+  // var start = { x: 0, y: 0 };
+  // function touchStart(event) {
+  //   start.x = event.touches[0].pageX;
+  //   start.y = event.touches[0].pageY;
+  // }
+  // function touchMove(event) {
+  //   // if (navigator.userAgent.match(/Android/i)) {
+  //   //   event.preventDefault();
+  //   // }
+  //   offset = {};
+  //   offset.x = start.x - event.touches[0].pageX;
+  //   offset.y = start.y - event.touches[0].pageY;
+  //   console.log('y' + offset.y);
+  //   console.log('x' + offset.x);
+  //   if (offset.x > 100 && Math.abs(offset.y) < 15) {
+  //     //touchDirection('next');
+  //   } else if (offset.x < -100 && Math.abs(offset.y) < 15) {
+  //    // touchDirection('prev');
+  //   }
+  // }
 
 }
 
