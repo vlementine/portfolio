@@ -166,9 +166,9 @@ function main() {
     console.log('y' + offset.y);
     console.log('x' + offset.x);
     if (offset.x > 100 && Math.abs(offset.y) < 15) {
-      touchDirection('next');
+      //touchDirection('next');
     } else if (offset.x < -100 && Math.abs(offset.y) < 15) {
-      touchDirection('prev');
+     // touchDirection('prev');
     }
   }
 }
