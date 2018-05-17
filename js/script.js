@@ -112,23 +112,23 @@ function main() {
   });
 
   //Control scroll
-  document.addEventListener('wheel', event => {
-    if (windowWidth <= 650) {
-      if (event.deltaX > 30) {
-        console.log('next');
-        scrollDirection('next');
-      } else if (event.deltaX < -30) {
-        console.log('prev');
-        scrollDirection('prev');
-      }
-    } else {
-      if (event.deltaY > 30) {
-        scrollDirection('prev');
-      } else if (event.deltaY < -30) {
-        scrollDirection('next');
-      }
-    }
-  });
+  // document.addEventListener('wheel', event => {
+  //   if (windowWidth <= 650) {
+  //     if (event.deltaX > 30) {
+  //       console.log('next');
+  //       scrollDirection('next');
+  //     } else if (event.deltaX < -30) {
+  //       console.log('prev');
+  //       scrollDirection('prev');
+  //     }
+  //   } else {
+  //     if (event.deltaY > 30) {
+  //       scrollDirection('prev');
+  //     } else if (event.deltaY < -30) {
+  //       scrollDirection('next');
+  //     }
+  //   }
+  // });
 
   let lockTouch = false;
   function touchDirection(direction) {
