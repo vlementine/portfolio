@@ -157,9 +157,9 @@ function main() {
     start.y = event.touches[0].pageY;
   }
   function touchMove(event) {
-    if (navigator.userAgent.match(/Android/i)) {
-      event.preventDefault();
-    }
+    // if (navigator.userAgent.match(/Android/i)) {
+    //   event.preventDefault();
+    // }
     offset = {};
     offset.x = start.x - event.touches[0].pageX;
     offset.y = start.y - event.touches[0].pageY;
@@ -171,7 +171,7 @@ function main() {
      // touchDirection('prev');
     }
   }
-  
+
 }
 
 document.onload = main();
