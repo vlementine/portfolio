@@ -139,9 +139,11 @@ function main() {
       if (direction == 'next') {
         if (document.querySelector('.home:not(.disable)')) {
           seeMyWork();
+          alert('See my work !');
+        } else {
+          navMobile(+1);
+          alert('Next !');
         }
-        navMobile(+1);
-        alert('Next !');
       } else if (direction == 'prev') {
         navMobile(-1);
         alert('Prev !');
