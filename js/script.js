@@ -32,6 +32,7 @@ function main() {
   document.querySelector('.nav__items p:nth-child(1)').classList.add('item--active');
 
   if (windowWidth <= 650) {
+
     document.querySelector(
       '.contact__description .description__title h2'
     ).innerHTML = `Pour me contacter,<br>c’est par ici 👇`;
@@ -39,6 +40,8 @@ function main() {
     document.querySelector('.btn__home').classList.add('btn__work--mobile');
     document.querySelector('.btn__home').classList.remove('btn__work--desktop');
     document.querySelector('.projects').innerHTML = contentMobile;
+    document.querySelector('.nav__wrapper').remove();
+
   } else {
     document.querySelector(
       '.contact__description .description__title h2'
