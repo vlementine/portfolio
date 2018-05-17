@@ -66,7 +66,9 @@ function main() {
           // document.removeEventListener('touchstart', touchStart);
           // document.removeEventListener('touchmove', touchMove);
         } else if (document.querySelector('.contact__wrapper.disable')) {
-          if (windowWidth <= 650) navMobile(+1);
+          if (windowWidth <= 650) navMobile(+1) 
+
+          alert('fty !');;
           else navDesktop(direction);
         }
         // document.addEventListener('touchstart', touchStart);
