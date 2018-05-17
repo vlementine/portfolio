@@ -58,6 +58,7 @@ function main() {
       if (direction == 'next') {
         if (document.querySelector('.home:not(.disable)')) {
           seeMyWork();
+          alert('Hi !');
         } else if (document.querySelector('.contact__wrapper:not(.disable)')) {
           //navDesktop(direction);
           // document.removeEventListener('touchstart', touchStart);
@@ -108,23 +109,23 @@ function main() {
   });
 
   //Control scroll
-  // document.addEventListener('wheel', event => {
-  //   if (windowWidth <= 650) {
-  //     if (event.deltaX > 30) {
-  //       console.log('next');
-  //       scrollDirection('next');
-  //     } else if (event.deltaX < -30) {
-  //       console.log('prev');
-  //       scrollDirection('prev');
-  //     }
-  //   } else {
-  //     if (event.deltaY > 30) {
-  //       scrollDirection('prev');
-  //     } else if (event.deltaY < -30) {
-  //       scrollDirection('next');
-  //     }
-  //   }
-  // });
+  document.addEventListener('wheel', event => {
+    if (windowWidth <= 650) {
+      if (event.deltaX > 30) {
+        console.log('next');
+        scrollDirection('next');
+      } else if (event.deltaX < -30) {
+        console.log('prev');
+        scrollDirection('prev');
+      }
+    } else {
+      if (event.deltaY > 30) {
+        scrollDirection('prev');
+      } else if (event.deltaY < -30) {
+        scrollDirection('next');
+      }
+    }
+  });
 
   //Control touch
   document.addEventListener('touchstart', touchStart);
