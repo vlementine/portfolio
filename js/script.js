@@ -141,10 +141,10 @@ function main() {
           seeMyWork();
         }
         navMobile(+1);
-        alert('fty !');
+        alert('Next !');
       } else if (direction == 'prev') {
         navMobile(-1);
-        alert('Hi !');
+        alert('Prev !');
       }
 
       window.setTimeout(() => {

@@ -77,6 +77,7 @@ function seeMyWork() {
 
   //Mobile
   if (windowWidth <= 650) {
+    document.querySelector('.number--active').textContent = '02';
     displayProject('#project-01');
 
     //Desktop
@@ -197,6 +198,7 @@ function navMobile(param) {
 
     //Display home
   } else if (itemClicked == 1) {
+    document.querySelector('.number--active').textContent = '01';
     document.querySelector('.home').classList.remove('disable');
     //Display contact
   } else if (itemClicked == totalItemNav) {
