@@ -61,7 +61,6 @@ function main() {
       if (direction == 'next') {
         if (document.querySelector('.home:not(.disable)')) {
           seeMyWork();
-          alert('Hi !');
         } else if (document.querySelector('.contact__wrapper:not(.disable)')) {
           //navDesktop(direction);
           // document.removeEventListener('touchstart', touchStart);
@@ -91,6 +90,8 @@ function main() {
           navDesktop(direction);
         } else if (windowWidth <= 650) {
           navMobile(-1);
+
+          alert('Hi !');
         }
       }
 
