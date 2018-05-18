@@ -131,23 +131,23 @@ function main() {
   //   }
   // });
 
-  // let lockTouch = false;
-  // function touchDirection(direction) {
-  //   if (!lockTouch) {
-  //     lockTouch = true;
-  //     if (direction == 'next') {
-  //       alert('Next !');
-  //       //navMobile(+1);
-  //     } else if (direction == 'prev') {
-  //       alert('Prev !');
-  //      // navMobile(-1);
-  //     }
+  let lockTouch = false;
+  function touchDirection(direction) {
+    if (!lockTouch) {
+      lockTouch = true;
+      if (direction == 'next') {
+        alert('Next !');
+        //navMobile(+1);
+      } else if (direction == 'prev') {
+        alert('Prev !');
+       // navMobile(-1);
+      }
 
-  //     window.setTimeout(() => {
-  //       lockTouch = false;
-  //     }, 1000);
-  //   }
-  // }
+      window.setTimeout(() => {
+        lockTouch = false;
+      }, 1000);
+    }
+  }
 
   //Control touch
   document.addEventListener('touchstart', touchStart);
