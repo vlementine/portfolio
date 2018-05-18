@@ -118,10 +118,10 @@ function navActiveItem(param) {
 //-------------------------------------
 
 function navDesktop(direction = null, param = null) {
-  if (param === null && direction === 'next') { 
-    param = parseInt(document.querySelector('.project.enable').id.split('-')[1]) + 2
-  } else if(param === null && direction === 'prev') {
-    param = parseInt(document.querySelector('.project.enable').id.split('-')[1]) 
+  if (param === null && direction === 'next') {
+    param = parseInt(document.querySelector('.project.enable').id.split('-')[1]) + 2;
+  } else if (param === null && direction === 'prev') {
+    param = parseInt(document.querySelector('.project.enable').id.split('-')[1]);
   }
 
   //Get the total of item of nav
@@ -144,7 +144,7 @@ function navDesktop(direction = null, param = null) {
   //Display projects
   if (projectClicked < totalItemNav - 1 && projectClicked !== 0 && projectClicked !== projectActive) {
     hideProject(idToHide);
-    setTimeout(function () {
+    setTimeout(function() {
       document.querySelector(idToHide).classList.remove('enable');
       document.querySelector(idToDisplay).classList.add('enable');
       displayProject(idToDisplay);
@@ -154,14 +154,16 @@ function navDesktop(direction = null, param = null) {
   } else if (projectClicked === 0) {
     document.querySelector('.home').classList.remove('disable');
     hideProject(idToHide);
-    setTimeout(function () {
+    setTimeout(function() {
       document.querySelector(idToHide).classList.remove('enable');
     }, 700);
     //Display contact
+
+    alert('Display Home ! Nav Desktop');
   } else if (itemClicked == totalItemNav) {
     document.querySelector('.contact__wrapper').classList.remove('disable');
     hideProject(idToHide);
-    setTimeout(function () {
+    setTimeout(function() {
       document.querySelector(idToHide).classList.remove('enable');
       document.querySelector('.bubble--group:nth-child(1) .bubble').classList.add('enable');
       document.querySelector('.bubble--group:nth-child(1) .bubble--answer').classList.add('enable');
@@ -188,7 +190,7 @@ function navMobile(param) {
   if (itemClicked < totalItemNav && itemClicked !== 1) {
     document.querySelector('.number--active').textContent = '0' + itemClicked;
     hideProject(idToHide);
-    setTimeout(function () {
+    setTimeout(function() {
       document.querySelector(idToHide).classList.remove('enable');
       document.querySelector(idToDisplay).classList.add('enable');
       displayProject(idToDisplay);
@@ -198,7 +200,6 @@ function navMobile(param) {
   } else if (itemClicked == 1) {
     document.querySelector('.number--active').textContent = '01';
     document.querySelector('.home').classList.remove('disable');
-
 
     alert('Display Home ! Nav Mobile');
     //Display contact
@@ -240,17 +241,18 @@ function navMenu(param) {
     document.querySelector('.home').classList.remove('disable');
     document.querySelector('.contact__wrapper').classList.add('disable');
     if (windowWidth <= 650) {
-
-    alert('Display Home ! NavMenu');
+      alert('Display Home ! NavMenu Mobile');
       initProject('.project--mobile');
     } else {
+
+      alert('Display Home ! NavMenu Desktop');
       initProject('.project');
     }
   } else if (param == 'work') {
     //Work
     document.querySelector('.home').classList.add('disable');
     document.querySelector('.contact__wrapper').classList.add('disable');
-    setTimeout(function () {
+    setTimeout(function() {
       document.querySelector('#project-01').classList.add('enable');
       displayProject('#project-01');
     }, 500);
@@ -265,7 +267,7 @@ function navMenu(param) {
     // Contact
     initProject('.project');
     document.querySelector('.contact__wrapper').classList.remove('disable');
-    setTimeout(function () {
+    setTimeout(function() {
       document.querySelector('.bubble--group:nth-child(1) .bubble').classList.add('enable');
       document.querySelector('.bubble--group:nth-child(1) .bubble--answer').classList.add('enable');
       document.querySelector('.home').classList.add('disable');
