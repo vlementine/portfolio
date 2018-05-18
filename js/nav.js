@@ -96,7 +96,6 @@ function returnProjects() {
   if (windowWidth <= 650) {
     document.querySelector('.number--active').textContent = '05';
     displayProject('#project-04');
-
     //Desktop
   } else {
     navActiveItem(5);
@@ -158,7 +157,6 @@ function navDesktop(direction = null, param = null) {
     setTimeout(function () {
       document.querySelector(idToHide).classList.remove('enable');
     }, 700);
-
     //Display contact
   } else if (itemClicked == totalItemNav) {
     document.querySelector('.contact__wrapper').classList.remove('disable');
@@ -200,6 +198,9 @@ function navMobile(param) {
   } else if (itemClicked == 1) {
     document.querySelector('.number--active').textContent = '01';
     document.querySelector('.home').classList.remove('disable');
+
+
+    alert('Display Home ! Nav Mobile');
     //Display contact
   } else if (itemClicked == totalItemNav) {
     document.querySelector('.contact__wrapper').classList.remove('disable');
@@ -239,6 +240,8 @@ function navMenu(param) {
     document.querySelector('.home').classList.remove('disable');
     document.querySelector('.contact__wrapper').classList.add('disable');
     if (windowWidth <= 650) {
+
+    alert('Display Home ! NavMenu');
       initProject('.project--mobile');
     } else {
       initProject('.project');
