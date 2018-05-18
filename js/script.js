@@ -3,8 +3,8 @@
 //-------------------------------------
 function responsive() {
   let windowWidth = window.innerWidth;
- 
-  if(initialWidth !== windowWidth) {
+
+  if (initialWidth !== windowWidth) {
     if (windowWidth <= 650) {
       document.querySelector(
         '.contact__description .description__title h2'
@@ -24,8 +24,6 @@ function responsive() {
       }
     }
   }
-
-
 }
 
 //-------------------------------------
@@ -53,49 +51,49 @@ function main() {
   }
   document.querySelector('.btn__home').addEventListener('click', seeMyWork);
 
-  // let lockScroll = false;
-  // function scrollDirection(direction) {
-  //   if (!lockScroll) {
-  //     lockScroll = true;
-  //     console.log(direction);
+  let lockScroll = false;
+  function scrollDirection(direction) {
+    if (!lockScroll) {
+      lockScroll = true;
+      console.log(direction);
 
-  //     if (direction == 'next') {
-  //       if (document.querySelector('.home:not(.disable)')) {
-  //         seeMyWork();
-  //       } else if (document.querySelector('.contact__wrapper:not(.disable)')) {
-  //         //navDesktop(direction);
-  //         // document.removeEventListener('touchstart', touchStart);
-  //         // document.removeEventListener('touchmove', touchMove);
-  //       } else if (document.querySelector('.contact__wrapper.disable')) {
-  //         if (windowWidth <= 650) {
-  //           navMobile(+1);
-  //           alert('fty !');
-  //         } else navDesktop(direction);
-  //       }
-  //       // document.addEventListener('touchstart', touchStart);
-  //       // document.addEventListener('touchmove', touchMove);
-  //     } else if (direction == 'prev') {
-  //       if (document.querySelector('.contact__wrapper:not(.disable)')) {
-  //         document.querySelector('.home').classList.add('disable');
-  //         document.querySelector('.contact__wrapper').classList.add('disable');
-  //         setTimeout(function() {
-  //           document.querySelector('#project-04').classList.add('enable');
-  //           displayProject('#project-04');
-  //         }, 500);
-  //         if (windowWidth <= 650) {
-  //           initProject('.project--mobile');
-  //           document.querySelector('.number--active').textContent = '05';
-  //         } else {
-  //           initProject('.project');
-  //           navActiveItem(5);
-  //         }
-  //       } else if (document.querySelector('.nav__items p:nth-child(1):not(.item--active)')) {
-  //         navDesktop(direction);
-  //       } else if (windowWidth <= 650) {
-  //         navMobile(-1);
-  //         alert('Hi !');
-  //       }
-  //     }
+      if (direction == 'next') {
+        if (document.querySelector('.home:not(.disable)')) {
+          seeMyWork();
+        } else if (document.querySelector('.contact__wrapper:not(.disable)')) {
+          //navDesktop(direction);
+          // document.removeEventListener('touchstart', touchStart);
+          // document.removeEventListener('touchmove', touchMove);
+        } else if (document.querySelector('.contact__wrapper.disable')) {
+          if (windowWidth <= 650) {
+            navMobile(+1);
+            
+          } else navDesktop(direction);
+        }
+        // document.addEventListener('touchstart', touchStart);
+        // document.addEventListener('touchmove', touchMove);
+      } else if (direction == 'prev') {
+        if (document.querySelector('.contact__wrapper:not(.disable)')) {
+          document.querySelector('.home').classList.add('disable');
+          document.querySelector('.contact__wrapper').classList.add('disable');
+          setTimeout(function() {
+            document.querySelector('#project-04').classList.add('enable');
+            displayProject('#project-04');
+          }, 500);
+          if (windowWidth <= 650) {
+            initProject('.project--mobile');
+            document.querySelector('.number--active').textContent = '05';
+          } else {
+            initProject('.project');
+            navActiveItem(5);
+          }
+        } else if (document.querySelector('.nav__items p:nth-child(1):not(.item--active)')) {
+          navDesktop(direction);
+        } else if (windowWidth <= 650) {
+          navMobile(-1);
+          
+        }
+      }
 
   //     window.setTimeout(() => {
   //       lockScroll = false;
@@ -152,32 +150,27 @@ function main() {
   // }
 
   //Control touch
-  // document.addEventListener('touchstart', touchStart);
-  // document.addEventListener('touchmove', touchMove);
-  // var start = { x: 0, y: 0 };
-  // function touchStart(event) {
-  //   start.x = event.touches[0].pageX;
-  //   start.y = event.touches[0].pageY;
-  // }
-  // function touchMove(event) {
-  //   // if (navigator.userAgent.match(/Android/i)) {
-  //   //   event.preventDefault();
-  //   // }
-  //   offset = {};
-  //   offset.x = start.x - event.touches[0].pageX;
-  //   offset.y = start.y - event.touches[0].pageY;
-  //   console.log('y' + offset.y);
-  //   console.log('x' + offset.x);
-  //   if (offset.x > 100 && Math.abs(offset.y) < 15) {
-  //     //touchDirection('next');
-  //   } else if (offset.x < -100 && Math.abs(offset.y) < 15) {
-  //    // touchDirection('prev');
-  //   }
-  // }
+  document.addEventListener('touchstart', touchStart);
+  document.addEventListener('touchmove', touchMove);
+  var startX = 0;
+  function touchStart(event) {
+    startX = event.touches[0].pageX;
+  }
+  function touchMove(event) {
+    if (navigator.userAgent.match(/Android/i)) {
+      event.preventDefault();
+    }
+    let offsetX = 0;
+    offsetX = startX - event.touches[0].pageX;
+
+    if (offsetX > 100) {
+      touchDirection('next');
+    } else if (offsetX < -100) {
+      touchDirection('prev');
+    }
+  }
 
   var initialWidth = window.innerWidth;
-
-
 }
 
 document.onload = main();
