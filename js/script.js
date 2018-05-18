@@ -100,34 +100,34 @@ function main() {
   }
 
   //Control keyboard
-  // document.addEventListener('keydown', function(event) {
-  //   if (event.keyCode == 38) {
-  //     console.log('up');
-  //     scrollDirection('prev');
-  //   } else if (event.keyCode == 40) {
-  //     console.log('down');
-  //     scrollDirection('next');
-  //   }
-  // });
+  document.addEventListener('keydown', function(event) {
+    if (event.keyCode == 38) {
+      console.log('up');
+      scrollDirection('prev');
+    } else if (event.keyCode == 40) {
+      console.log('down');
+      scrollDirection('next');
+    }
+  });
 
   //Control scroll
-  // document.addEventListener('wheel', event => {
-  //   if (windowWidth <= 650) {
-  //     if (event.deltaX > 30) {
-  //       console.log('next');
-  //       scrollDirection('next');
-  //     } else if (event.deltaX < -30) {
-  //       console.log('prev');
-  //       scrollDirection('prev');
-  //     }
-  //   } else {
-  //     if (event.deltaY > 30) {
-  //       scrollDirection('prev');
-  //     } else if (event.deltaY < -30) {
-  //       scrollDirection('next');
-  //     }
-  //   }
-  // });
+  document.addEventListener('wheel', event => {
+    if (windowWidth <= 650) {
+      if (event.deltaX > 30) {
+        console.log('next');
+        scrollDirection('next');
+      } else if (event.deltaX < -30) {
+        console.log('prev');
+        scrollDirection('prev');
+      }
+    } else {
+      if (event.deltaY > 30) {
+        scrollDirection('prev');
+      } else if (event.deltaY < -30) {
+        scrollDirection('next');
+      }
+    }
+  });
 
   let lockTouch = false;
   function touchDirection(direction) {
@@ -159,9 +159,9 @@ function main() {
     let offsetX = 0;
     offsetX = startX - event.touches[0].pageX;
 
-    if (offsetX > 100) {
+    if (offsetX > 50) {
       touchDirection('next');
-    } else if (offsetX < -100) {
+    } else if (offsetX < -50) {
       touchDirection('prev');
     }
   }
