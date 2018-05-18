@@ -129,21 +129,21 @@ function main() {
     }
   });
 
-  let lockTouch = false;
-  function touchDirection(direction) {
-    if (!lockTouch) {
-      lockTouch = true;
-      if (direction == 'next') {
-        navMobile(+1);
-      } else if (direction == 'prev') {
-        navMobile(-1);
-      }
+  // let lockTouch = false;
+  // function touchDirection(direction) {
+  //   if (!lockTouch) {
+  //     lockTouch = true;
+  //     if (direction == 'next') {
+  //       navMobile(+1);
+  //     } else if (direction == 'prev') {
+  //       navMobile(-1);
+  //     }
 
-      window.setTimeout(() => {
-        lockTouch = false;
-      }, 1000);
-    }
-  }
+  //     window.setTimeout(() => {
+  //       lockTouch = false;
+  //     }, 1000);
+  //   }
+  // }
 
   //Control touch
   document.addEventListener('touchstart', touchStart);
@@ -160,15 +160,15 @@ function main() {
     offsetX = startX - event.touches[0].pageX;
 
     if (offsetX > 50) {
-      touchDirection('next');
+      scrollDirection('next');
     } else if (offsetX < -50) {
-      touchDirection('prev');
+      scrollDirection('prev');
     }
   }
 
-  var initialWidth = window.innerWidth;
 }
 
+var initialWidth = window.innerWidth;
 document.onload = main();
 
 window.onresize = responsive;
