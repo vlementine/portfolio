@@ -67,7 +67,6 @@ function main() {
         } else if (document.querySelector('.contact__wrapper.disable')) {
           if (windowWidth <= 650) {
             navMobile(+1);
-            
           } else navDesktop(direction);
         }
         // document.addEventListener('touchstart', touchStart);
@@ -91,7 +90,6 @@ function main() {
           navDesktop(direction);
         } else if (windowWidth <= 650) {
           navMobile(-1);
-          
         }
       }
 
@@ -136,11 +134,9 @@ function main() {
     if (!lockTouch) {
       lockTouch = true;
       if (direction == 'next') {
-        alert('Next !');
-        //navMobile(+1);
+        navMobile(+1);
       } else if (direction == 'prev') {
-        alert('Prev !');
-       // navMobile(-1);
+        navMobile(-1);
       }
 
       window.setTimeout(() => {
