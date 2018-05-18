@@ -241,11 +241,9 @@ function navMenu(param) {
     document.querySelector('.home').classList.remove('disable');
     document.querySelector('.contact__wrapper').classList.add('disable');
     if (windowWidth <= 650) {
-      alert('Display Home ! NavMenu Mobile');
+      alert('Display Home ! NavMenu');
       initProject('.project--mobile');
     } else {
-
-      alert('Display Home ! NavMenu Desktop');
       initProject('.project');
     }
   } else if (param == 'work') {
