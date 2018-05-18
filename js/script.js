@@ -61,7 +61,7 @@ function main() {
         if (document.querySelector('.home:not(.disable)')) {
           seeMyWork();
         } else if (document.querySelector('.contact__wrapper:not(.disable)')) {
-          //navDesktop(direction);
+          // navDesktop(direction);
           // document.removeEventListener('touchstart', touchStart);
           // document.removeEventListener('touchmove', touchMove);
         } else if (document.querySelector('.contact__wrapper.disable')) {
@@ -95,11 +95,11 @@ function main() {
         }
       }
 
-  //     window.setTimeout(() => {
-  //       lockScroll = false;
-  //     }, 1000);
-  //   }
-  // }
+      window.setTimeout(() => {
+        lockScroll = false;
+      }, 1000);
+    }
+  }
 
   //Control keyboard
   // document.addEventListener('keydown', function(event) {
