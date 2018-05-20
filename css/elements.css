@@ -650,6 +650,31 @@ footer {
 /*------------------------
   Project
 ------------------------*/
+.white-screen {
+  height: 200vh;
+  width: 200vw;
+  background: #FFF;
+  transform-origin: center;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 100;
+  margin-top: 50vh;
+  -webkit-transform: translate(-100%, -50%);
+  -moz-transform: translate(-100%, -50%);
+  -ms-transform: translate(-100%, -50%);
+  -o-transform: translate(-100%, -50%);
+  transform: translate(-100%, -50%);
+}
+
+.white-screen.active {
+  -webkit-animation: 1.3s project ease-in-out forwards;
+  -moz-animation: 1.3s project ease-in-out forwards;
+  -ms-animation: 1.3s project ease-in-out forwards;
+  -o-transition: 1.3s project ease-in-out forwards;
+  animation: 1.3s project ease-in-out forwards;
+}
+
 .project {
   position: relative;
   height: 100vh;
@@ -1132,19 +1157,19 @@ footer {
   font-weight: 700;
   font-size: 6.5rem;
   color: rgba(0, 0, 0, 0.1);
-  -webkit-animation: 0.6s shadowDropOut ease-out forwards;
-  -moz-animation: 0.6s shadowDropOut ease-out forwards;
-  -ms-animation: 0.6s shadowDropOut ease-out forwards;
-  -o-transition: 0.6s shadowDropOut ease-out forwards;
-  animation: 0.6s shadowDropOut ease-out forwards;
+  -webkit-animation: 0.6s shadowDropOutColor ease-out forwards;
+  -moz-animation: 0.6s shadowDropOutColor ease-out forwards;
+  -ms-animation: 0.6s shadowDropOutColor ease-out forwards;
+  -o-transition: 0.6s shadowDropOutColor ease-out forwards;
+  animation: 0.6s shadowDropOutColor ease-out forwards;
 }
 
 .description__number-wrapper--mobile .description__number-shadow--mobile.enable {
-  -webkit-animation: 0.6s shadowDropIn ease-out forwards 0.8s;
-  -moz-animation: 0.6s shadowDropIn ease-out forwards 0.8s;
-  -ms-animation: 0.6s shadowDropIn ease-out forwards 0.8s;
-  -o-transition: 0.6s shadowDropIn ease-out forwards 0.8s;
-  animation: 0.6s shadowDropIn ease-out forwards 0.8s;
+  -webkit-animation: 0.6s shadowDropInColor ease-out forwards 0.8s;
+  -moz-animation: 0.6s shadowDropInColor ease-out forwards 0.8s;
+  -ms-animation: 0.6s shadowDropInColor ease-out forwards 0.8s;
+  -o-transition: 0.6s shadowDropInColor ease-out forwards 0.8s;
+  animation: 0.6s shadowDropInColor ease-out forwards 0.8s;
 }
 
 .description__info--mobile {

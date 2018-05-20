@@ -13,6 +13,7 @@ function responsive() {
       document.querySelector('.btn__home').classList.add('btn__work--desktop', 'btn__work--mobile');
       if (!document.querySelector('.project--mobile')) {
         document.querySelector('.projects').innerHTML = contentMobile;
+        document.querySelector('.number--active').textContent = '01';
       }
     } else {
       document.querySelector(
@@ -52,47 +53,64 @@ function main() {
   document.querySelector('.btn__home').addEventListener('click', seeMyWork);
 
   let lockScroll = false;
+
   function scrollDirection(direction) {
     if (!lockScroll) {
       lockScroll = true;
-      console.log(direction);
 
       if (direction == 'next') {
-        if (document.querySelector('.home:not(.disable)')) {
-          seeMyWork();
-        } else if (document.querySelector('.contact__wrapper:not(.disable)')) {
-          // navDesktop(direction);
-          // document.removeEventListener('touchstart', touchStart);
-          // document.removeEventListener('touchmove', touchMove);
-        } else if (document.querySelector('.contact__wrapper.disable')) {
-          if (windowWidth <= 650) {
+        //MOBILE
+        if (windowWidth <= 650) {
+          if (
+            document.querySelector('.number--active').textContent != '01' &&
+            document.querySelector('.contact__wrapper.disable')
+          ) {
             navMobile(+1);
-          } else navDesktop(direction);
+          }
+          //DESKTOP
+        } else {
+          if (document.querySelector('.home:not(.disable)')) {
+            seeMyWork();
+          } else if (document.querySelector('.contact__wrapper.disable')) {
+            navDesktop(direction);
+          }
         }
-        // document.addEventListener('touchstart', touchStart);
-        // document.addEventListener('touchmove', touchMove);
       } else if (direction == 'prev') {
-        if (document.querySelector('.contact__wrapper:not(.disable)')) {
-          document.querySelector('.home').classList.add('disable');
-          document.querySelector('.contact__wrapper').classList.add('disable');
-          setTimeout(function() {
-            document.querySelector('#project-04').classList.add('enable');
-            displayProject('#project-04');
-          }, 500);
-          if (windowWidth <= 650) {
+        //MOBILE
+        if (windowWidth <= 650) {
+          //Home
+          if (document.querySelector('.number--active').textContent != '01') {
+            navMobile(-1);
+            //Projects
+          } else if (document.querySelector('.contact__wrapper:not(.disable)')) {
+            console.log('Plooop');
+            document.querySelector('.home').classList.add('disable');
+            document.querySelector('.contact__wrapper').classList.add('disable');
+            setTimeout(function () {
+              document.querySelector('#project-04').classList.add('enable');
+              displayProject('#project-04');
+            }, 500);
             initProject('.project--mobile');
             document.querySelector('.number--active').textContent = '05';
-          } else {
+          }
+          //DESKTOP
+        } else {
+          //Home
+          if (document.querySelector('.nav__items p:nth-child(1):not(.item--active)')) {
+            navDesktop(direction);
+            //Projects
+          } else if (document.querySelector('.contact__wrapper:not(.disable)')) {
+            document.querySelector('.home').classList.add('disable');
+            document.querySelector('.contact__wrapper').classList.add('disable');
+            setTimeout(function () {
+              document.querySelector('#project-04').classList.add('enable');
+              displayProject('#project-04');
+            }, 500);
             initProject('.project');
             navActiveItem(5);
           }
-        } else if (document.querySelector('.nav__items p:nth-child(1):not(.item--active)')) {
-          navDesktop(direction);
-        } else if (windowWidth <= 650) {
-          navMobile(-1);
         }
       }
-
       window.setTimeout(() => {
         lockScroll = false;
       }, 1000);
@@ -100,72 +118,80 @@ function main() {
   }
 
   //Control keyboard
-  document.addEventListener('keydown', function(event) {
-    if (event.keyCode == 38) {
-      console.log('up');
-      scrollDirection('prev');
-    } else if (event.keyCode == 40) {
-      console.log('down');
-      scrollDirection('next');
+  document.addEventListener('keydown', e => {
+    if (windowWidth <= 650) {
+      if (e.keyCode == 37) {
+        console.log('up');
+        scrollDirection('prev');
+      } else if (e.keyCode == 39) {
+        console.log('down');
+        scrollDirection('next');
+      }
+    } else {
+      if (e.keyCode == 38) {
+        console.log('up');
+        scrollDirection('prev');
+      } else if (e.keyCode == 40) {
+        console.log('down');
+        scrollDirection('next');
+      }
     }
   });
 
   //Control scroll
-  document.addEventListener('wheel', event => {
+  document.addEventListener('wheel', e => {
     if (windowWidth <= 650) {
-      if (event.deltaX > 30) {
-        console.log('next');
+      if (e.deltaX > 100) {
         scrollDirection('next');
-      } else if (event.deltaX < -30) {
-        console.log('prev');
+      } else if (e.deltaX < -100) {
         scrollDirection('prev');
       }
     } else {
-      if (event.deltaY > 30) {
+      if (e.deltaY > 30) {
         scrollDirection('prev');
-      } else if (event.deltaY < -30) {
+      } else if (e.deltaY < -30) {
         scrollDirection('next');
       }
     }
   });
-
-  // let lockTouch = false;
-  // function touchDirection(direction) {
-  //   if (!lockTouch) {
-  //     lockTouch = true;
-  //     if (direction == 'next') {
-  //       navMobile(+1);
-  //     } else if (direction == 'prev') {
-  //       navMobile(-1);
-  //     }
-
-  //     window.setTimeout(() => {
-  //       lockTouch = false;
-  //     }, 1000);
-  //   }
-  // }
 
   //Control touch
   document.addEventListener('touchstart', touchStart);
   document.addEventListener('touchmove', touchMove);
   var startX = 0;
+  var startY = 0;
+
   function touchStart(event) {
     startX = event.touches[0].pageX;
+    startY = event.touches[0].pageY;
   }
+
   function touchMove(event) {
     if (navigator.userAgent.match(/Android/i)) {
       event.preventDefault();
     }
     let offsetX = 0;
+    let offsetY = 0;
     offsetX = startX - event.touches[0].pageX;
+    offsetY = startY - event.touches[0].pageY;
 
-    if (offsetX > 50) {
+    if (offsetX > 30) {
       scrollDirection('next');
-    } else if (offsetX < -50) {
+    } else if (offsetX < -30) {
       scrollDirection('prev');
+    } else if (document.querySelector('.number--active').textContent == '01' && offsetY > 100) {
+      seeMyWork();
     }
   }
+}
 
+//Redirection project page
+function redirectionProject(numberProject) {
+  console.log(numberProject);
+  document.querySelector('.white-screen').classList.add('active');
+  setTimeout(function () {
+   window.location.href = "./projects-page/project-page.html";
+  }, 1500);
 }
 
 var initialWidth = window.innerWidth;

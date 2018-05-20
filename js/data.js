@@ -87,7 +87,7 @@ projects.forEach(project => {
               <div class="description">
                 <p>${project.description}</p>
               </div>
-              <a class="btn" href="projects-page/project-page.html">Découvrir le projet</a>
+              <button class="btn btn--project" onClick="redirectionProject(${project.number})">Découvrir le projet</button>
             </div>
           </div>
         </div>`;

@@ -52,6 +52,10 @@
     margin: 10px auto 0;
     border-radius: 2px;
     background: linear-gradient(45deg, #1d7d90, #5dd5c3);
+    opacity: 0;
+    &.enable {
+        @include animation(0.6s fadeIn ease-in-out forwards);
+    }
     &:after {
         content: '';
         position: absolute;
@@ -79,6 +83,7 @@
 .project-page {
     .project__summary {
         text-align: center;
+        overflow: hidden;
         h1 {
             font-family: 'Playfair Display', serif;
             color: $dark-blue-50;
@@ -86,6 +91,10 @@
             font-size: 2.4rem;
             line-height: 1;
             margin: 0;
+            opacity: 0;
+            &.enable {
+                @include animation(0.6s slideTop ease-in-out forwards);
+            }
         }
         .summary__type {
             span {
@@ -111,7 +120,6 @@
                     content: 'Digital Design';
                     position: absolute;
                     width: 100%;
-                    top: 60px;
                     left: 0;
                     text-align: center;
                     -webkit-background-clip: text;
@@ -121,7 +129,9 @@
             .type--shadow {
                 z-index: -2;
                 color: rgba(0, 0, 0, 0.1);
-                text-shadow: 0 0 20px $dark-blue-30;
+                &.enable {
+                    @include animation(0.6s shadowDropInColor ease-out forwards);
+                }
             }
         }
     }
@@ -136,6 +146,10 @@
             margin: 0 25px;
             span {
                 color: rgba(255, 255, 255, 0.5);
+                opacity: 0;
+                &.enable {
+                    @include animation(0.6s fadeIn ease-in-out forwards);
+                }
             }
             p {
                 text-transform: uppercase;
@@ -143,6 +157,10 @@
                 font-weight: 600;
                 color: #fff;
                 margin: 5px auto 0;
+                opacity: 0;
+                &.enable {
+                    @include animation(0.6s slideTop ease-in-out forwards);
+                }
             }
         }
     }
@@ -155,11 +173,19 @@
     margin: 50px auto;
 }
 
+.project__intro-wrapper {
+    overflow: hidden;
+}
+
 .project__intro {
     width: 80%;
     max-width: 640px;
     margin: auto;
     text-align: center;
+    opacity: 0;
+    &.enable {
+        @include animation(1s slideTop ease-in-out forwards);
+    }
     h2 {
         font-size: 0.875rem;
         font-weight: 500;
@@ -184,10 +210,11 @@
 }
 
 .project__img {
-    background: $dark-blue-05;
+    position: relative;
+    background: transparent;
     margin: 90px 50px 50px;
-    width: calc(100% - 100px);
     padding: 50px;
+    width: calc(100% - 100px);
     img {
         display: block;
         text-align: center;
@@ -196,6 +223,30 @@
         margin: -90px auto 0 auto;
         border-radius: 4px;
         box-shadow: 0 4px 16px $dark-blue-10;
+        opacity: 0;
+        &.enable {
+            @include animation(0.6s slideTop ease-out forwards);
+        }
+    }
+    .img__background {
+        height: 100%;
+        width: 100%;
+        position: absolute;
+        top: 0;
+        left: 0;
+        overflow: hidden;
+        span {
+            display: block;
+            height: 100%;
+            width: 100%;
+            background: $dark-blue-05;
+            transform-origin: center;
+            z-index: 100;
+            @include transform(translate(-100%, 0));
+            &.enable {
+                @include animation(.8s imgProject ease-in-out forwards);
+            }
+        }
     }
 }
 

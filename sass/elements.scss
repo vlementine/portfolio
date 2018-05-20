@@ -471,6 +471,23 @@ footer {
   Project
 ------------------------*/
 
+.white-screen {
+  height: 200vh;
+  width: 200vw;
+  background: #FFF;
+  transform-origin: center;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 100;
+  margin-top: 50vh;
+  @include transform(translate(-100%, -50%));
+
+  &.active {
+    @include animation(1.3s project ease-in-out forwards);
+  }
+}
+
 .project {
   position: relative;
   height: 100vh;
@@ -759,7 +776,7 @@ footer {
 .project__description--mobile {
   text-align: center;
   margin-bottom: 30px;
-  & > div {
+  &>div {
     position: relative;
   }
 }
@@ -822,9 +839,9 @@ footer {
     font-weight: 700;
     font-size: 6.5rem;
     color: rgba(0, 0, 0, 0.1);
-    @include animation(0.6s shadowDropOut ease-out forwards);
+    @include animation(0.6s shadowDropOutColor ease-out forwards);
     &.enable {
-      @include animation(0.6s shadowDropIn ease-out forwards 0.8s);
+      @include animation(0.6s shadowDropInColor ease-out forwards 0.8s);
     }
   }
 }
@@ -1078,11 +1095,11 @@ footer {
       position: absolute;
       opacity: 0;
       cursor: pointer;
-      &:checked ~ div {
+      &:checked~div {
         box-shadow: 0 4px 16px $dark-blue-10;
         @include transform(scale(1));
       }
-      &:not(:checked) ~ div {
+      &:not(:checked)~div {
         @include transform(scale(0.9));
         span,
         p {

@@ -105,6 +105,25 @@
   }
 }
 
+@include keyframes(shadowDropInColor) {
+  0% {
+    text-shadow: 0 0 0 $dark-blue-30;
+  }
+  100% {
+    text-shadow: 0 0 20px $dark-blue-30;
+  }
+}
+
+@include keyframes(shadowDropOutColor) {
+  0% {
+    text-shadow: 0 0 20px $dark-blue-30;
+  }
+  100% {
+    text-shadow: 0 0 0 $dark-blue-30;
+  }
+}
+
+
 @include keyframes(bubble) {
   0% {
     @include transform(translateY(20%));
@@ -179,5 +198,23 @@
   }
   100% {
     @include transform(rotate(0));
+  }
+}
+
+@include keyframes(project) {
+  0% {
+    @include transform(translate(-100%, -50%) rotate(15deg));
+  }
+  100% {
+    @include transform(translate(0, -50%) rotate(0));
+  }
+}
+
+@include keyframes(imgProject) {
+  0% {
+    @include transform(translate(-100%, 0));
+  }
+  100% {
+    @include transform(translate(0, 0));
   }
 }
