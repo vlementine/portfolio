@@ -83,7 +83,6 @@ function main() {
             navMobile(-1);
             //Projects
           } else if (document.querySelector('.contact__wrapper:not(.disable)')) {
-            console.log('Plooop');
             document.querySelector('.home').classList.add('disable');
             document.querySelector('.contact__wrapper').classList.add('disable');
             setTimeout(function () {
@@ -96,7 +95,7 @@ function main() {
           //DESKTOP
         } else {
           //Home
-          if (document.querySelector('.nav__items p:nth-child(1):not(.item--active)')) {
+          if (document.querySelector('.nav__items p:nth-child(1):not(.item--active)') && document.querySelector('.contact__wrapper.disable')) {
             navDesktop(direction);
             //Projects
           } else if (document.querySelector('.contact__wrapper:not(.disable)')) {
@@ -186,9 +185,8 @@ function main() {
 }
 
 //Redirection project page
-function redirectionProject(numberProject) {
-  console.log(numberProject);
-  document.querySelector('.white-screen').classList.add('active');
+function redirectionProject() {
+  document.querySelector('.white-screen').classList.add('go-project');
   setTimeout(function () {
    window.location.href = "./projects-page/project-page.html";
   }, 1500);

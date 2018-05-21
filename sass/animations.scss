@@ -58,6 +58,17 @@
   }
 }
 
+@include keyframes(slideTopBis) {
+  0% {
+    @include transform(translateY(110%));
+    opacity: 0;
+  }
+  100% {
+    @include transform(translateY(0%));
+    opacity: 1;
+  }
+}
+
 @include keyframes(slideBottom) {
   0% {
     @include transform(translateY(0%));
@@ -201,9 +212,18 @@
   }
 }
 
-@include keyframes(project) {
+@include keyframes(goProject) {
   0% {
     @include transform(translate(-100%, -50%) rotate(15deg));
+  }
+  100% {
+    @include transform(translate(0, -50%) rotate(0));
+  }
+}
+
+@include keyframes(goHome) {
+  0% {
+    @include transform(translate(100%, -50%) rotate(-15deg));
   }
   100% {
     @include transform(translate(0, -50%) rotate(0));

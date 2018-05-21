@@ -651,9 +651,10 @@ footer {
   Project
 ------------------------*/
 .white-screen {
+  display: none;
   height: 200vh;
   width: 200vw;
-  background: #FFF;
+  background: #fff;
   transform-origin: center;
   position: absolute;
   top: 0;
@@ -667,12 +668,33 @@ footer {
   transform: translate(-100%, -50%);
 }
 
-.white-screen.active {
-  -webkit-animation: 1.3s project ease-in-out forwards;
-  -moz-animation: 1.3s project ease-in-out forwards;
-  -ms-animation: 1.3s project ease-in-out forwards;
-  -o-transition: 1.3s project ease-in-out forwards;
-  animation: 1.3s project ease-in-out forwards;
+.white-screen.go-project {
+  display: block;
+  -webkit-transform: translate(-100%, -50%);
+  -moz-transform: translate(-100%, -50%);
+  -ms-transform: translate(-100%, -50%);
+  -o-transform: translate(-100%, -50%);
+  transform: translate(-100%, -50%);
+  -webkit-animation: 1.3s goProject ease-in-out forwards;
+  -moz-animation: 1.3s goProject ease-in-out forwards;
+  -ms-animation: 1.3s goProject ease-in-out forwards;
+  -o-transition: 1.3s goProject ease-in-out forwards;
+  animation: 1.3s goProject ease-in-out forwards;
+}
+
+.white-screen.go-home {
+  display: block;
+  margin-top: 0;
+  -webkit-transform: translate(100%, 0);
+  -moz-transform: translate(100%, 0);
+  -ms-transform: translate(100%, 0);
+  -o-transform: translate(100%, 0);
+  transform: translate(100%, 0);
+  -webkit-animation: 1.3s goHome ease-in-out forwards;
+  -moz-animation: 1.3s goHome ease-in-out forwards;
+  -ms-animation: 1.3s goHome ease-in-out forwards;
+  -o-transition: 1.3s goHome ease-in-out forwards;
+  animation: 1.3s goHome ease-in-out forwards;
 }
 
 .project {

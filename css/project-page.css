@@ -119,11 +119,11 @@
 }
 
 .project-page .project__summary h1.enable {
-  -webkit-animation: 0.6s slideTop ease-in-out forwards;
-  -moz-animation: 0.6s slideTop ease-in-out forwards;
-  -ms-animation: 0.6s slideTop ease-in-out forwards;
-  -o-transition: 0.6s slideTop ease-in-out forwards;
-  animation: 0.6s slideTop ease-in-out forwards;
+  -webkit-animation: 0.6s slideTop ease-in-out forwards 0.4s;
+  -moz-animation: 0.6s slideTop ease-in-out forwards 0.4s;
+  -ms-animation: 0.6s slideTop ease-in-out forwards 0.4s;
+  -o-transition: 0.6s slideTop ease-in-out forwards 0.4s;
+  animation: 0.6s slideTop ease-in-out forwards 0.4s;
 }
 
 .project-page .project__summary .summary__type span {
@@ -164,11 +164,11 @@
 }
 
 .project-page .project__summary .summary__type .type--shadow.enable {
-  -webkit-animation: 0.6s shadowDropInColor ease-out forwards;
-  -moz-animation: 0.6s shadowDropInColor ease-out forwards;
-  -ms-animation: 0.6s shadowDropInColor ease-out forwards;
-  -o-transition: 0.6s shadowDropInColor ease-out forwards;
-  animation: 0.6s shadowDropInColor ease-out forwards;
+  -webkit-animation: 0.6s shadowDropInColor ease-out forwards 0.6s;
+  -moz-animation: 0.6s shadowDropInColor ease-out forwards 0.6s;
+  -ms-animation: 0.6s shadowDropInColor ease-out forwards 0.6s;
+  -o-transition: 0.6s shadowDropInColor ease-out forwards 0.6s;
+  animation: 0.6s shadowDropInColor ease-out forwards 0.6s;
 }
 
 .project-page .project__info {
@@ -190,11 +190,11 @@
 }
 
 .project-page .project__info .info span.enable {
-  -webkit-animation: 0.6s fadeIn ease-in-out forwards;
-  -moz-animation: 0.6s fadeIn ease-in-out forwards;
-  -ms-animation: 0.6s fadeIn ease-in-out forwards;
-  -o-transition: 0.6s fadeIn ease-in-out forwards;
-  animation: 0.6s fadeIn ease-in-out forwards;
+  -webkit-animation: 0.4s fadeIn ease-in-out forwards 1.2s;
+  -moz-animation: 0.4s fadeIn ease-in-out forwards 1.2s;
+  -ms-animation: 0.4s fadeIn ease-in-out forwards 1.2s;
+  -o-transition: 0.4s fadeIn ease-in-out forwards 1.2s;
+  animation: 0.4s fadeIn ease-in-out forwards 1.2s;
 }
 
 .project-page .project__info .info p {
@@ -207,11 +207,11 @@
 }
 
 .project-page .project__info .info p.enable {
-  -webkit-animation: 0.6s slideTop ease-in-out forwards;
-  -moz-animation: 0.6s slideTop ease-in-out forwards;
-  -ms-animation: 0.6s slideTop ease-in-out forwards;
-  -o-transition: 0.6s slideTop ease-in-out forwards;
-  animation: 0.6s slideTop ease-in-out forwards;
+  -webkit-animation: 0.6s slideTop ease-in-out forwards 1.6s;
+  -moz-animation: 0.6s slideTop ease-in-out forwards 1.6s;
+  -ms-animation: 0.6s slideTop ease-in-out forwards 1.6s;
+  -o-transition: 0.6s slideTop ease-in-out forwards 1.6s;
+  animation: 0.6s slideTop ease-in-out forwards 1.6s;
 }
 
 .project-page section {
@@ -231,11 +231,11 @@
 }
 
 .project__intro.enable {
-  -webkit-animation: 1s slideTop ease-in-out forwards;
-  -moz-animation: 1s slideTop ease-in-out forwards;
-  -ms-animation: 1s slideTop ease-in-out forwards;
-  -o-transition: 1s slideTop ease-in-out forwards;
-  animation: 1s slideTop ease-in-out forwards;
+  -webkit-animation: 1s slideTopBis ease-in-out forwards 2.4s;
+  -moz-animation: 1s slideTopBis ease-in-out forwards 2.4s;
+  -ms-animation: 1s slideTopBis ease-in-out forwards 2.4s;
+  -o-transition: 1s slideTopBis ease-in-out forwards 2.4s;
+  animation: 1s slideTopBis ease-in-out forwards 2.4s;
 }
 
 .project__intro h2 {
@@ -259,7 +259,7 @@
   margin-top: 12px;
   margin-right: 10px;
   font-weight: 700;
-  line-height: .6;
+  line-height: 0.6;
 }
 
 .project__img {
@@ -271,6 +271,8 @@
 }
 
 .project__img img {
+  position: relative;
+  z-index: 20;
   display: block;
   text-align: center;
   width: 60%;
@@ -282,11 +284,11 @@
 }
 
 .project__img img.enable {
-  -webkit-animation: 0.6s slideTop ease-out forwards;
-  -moz-animation: 0.6s slideTop ease-out forwards;
-  -ms-animation: 0.6s slideTop ease-out forwards;
-  -o-transition: 0.6s slideTop ease-out forwards;
-  animation: 0.6s slideTop ease-out forwards;
+  -webkit-animation: 0.6s slideTopBis ease-out forwards 3.6s;
+  -moz-animation: 0.6s slideTopBis ease-out forwards 3.6s;
+  -ms-animation: 0.6s slideTopBis ease-out forwards 3.6s;
+  -o-transition: 0.6s slideTopBis ease-out forwards 3.6s;
+  animation: 0.6s slideTopBis ease-out forwards 3.6s;
 }
 
 .project__img .img__background {
@@ -296,6 +298,7 @@
   top: 0;
   left: 0;
   overflow: hidden;
+  z-index: 10;
 }
 
 .project__img .img__background span {
@@ -304,7 +307,6 @@
   width: 100%;
   background: rgba(6, 10, 46, 0.05);
   transform-origin: center;
-  z-index: 100;
   -webkit-transform: translate(-100%, 0);
   -moz-transform: translate(-100%, 0);
   -ms-transform: translate(-100%, 0);
@@ -313,11 +315,11 @@
 }
 
 .project__img .img__background span.enable {
-  -webkit-animation: 0.8s imgProject ease-in-out forwards;
-  -moz-animation: 0.8s imgProject ease-in-out forwards;
-  -ms-animation: 0.8s imgProject ease-in-out forwards;
-  -o-transition: 0.8s imgProject ease-in-out forwards;
-  animation: 0.8s imgProject ease-in-out forwards;
+  -webkit-animation: 0.8s imgProject ease-in-out forwards 3s;
+  -moz-animation: 0.8s imgProject ease-in-out forwards 3s;
+  -ms-animation: 0.8s imgProject ease-in-out forwards 3s;
+  -o-transition: 0.8s imgProject ease-in-out forwards 3s;
+  animation: 0.8s imgProject ease-in-out forwards 3s;
 }
 
 .project-page footer {

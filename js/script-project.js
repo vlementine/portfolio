@@ -10,18 +10,20 @@
               document.querySelectorAll('.project-page .project__info .info span')[i].classList.add('enable');
               document.querySelectorAll('.project-page .project__info .info p')[i].classList.add('enable');
           }
-          document.querySelector('.project__intro').classList.add('enable');
-          document.querySelector('.project__img span').classList.add('enable');
-          document.querySelector('.project__img img').classList.add('enable');
-      }, 100);
+        document.querySelector('.project__intro').classList.add('enable');
+        document.querySelector('.project__img span').classList.add('enable');
+        document.querySelector('.project__img img').classList.add('enable');
+      }, 00);
+
+      console.log(document.location.href);
   }
 
   //Redirection project page
   function redirectionProject(numberProject) {
       console.log(numberProject);
-      document.querySelector('.plop').classList.add('active');
+      document.querySelector('.white-screen').classList.add('go-home');
       setTimeout(function () {
-          window.location.href = "./projects-page/project-page.html";
+          window.location.href = "../index.html";
       }, 1500);
   }
 
