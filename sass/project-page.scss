@@ -209,6 +209,11 @@
   }
 }
 
+.project__img__wrapper {
+    display: flex;
+    overflow: hidden;
+}
+
 .project__img {
   position: relative;
   background: transparent;
