@@ -23,7 +23,7 @@
       console.log(numberProject);
       document.querySelector('.white-screen').classList.add('go-home');
       setTimeout(function () {
-          window.location.href = "../index.html";
+          window.location.href = "../index.html#2";
       }, 1500);
   }
 

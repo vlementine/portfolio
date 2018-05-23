@@ -85,7 +85,7 @@ function main() {
           } else if (document.querySelector('.contact__wrapper:not(.disable)')) {
             document.querySelector('.home').classList.add('disable');
             document.querySelector('.contact__wrapper').classList.add('disable');
-            setTimeout(function () {
+            setTimeout(function() {
               document.querySelector('#project-04').classList.add('enable');
               displayProject('#project-04');
             }, 500);
@@ -95,13 +95,16 @@ function main() {
           //DESKTOP
         } else {
           //Home
-          if (document.querySelector('.nav__items p:nth-child(1):not(.item--active)') && document.querySelector('.contact__wrapper.disable')) {
+          if (
+            document.querySelector('.nav__items p:nth-child(1):not(.item--active)') &&
+            document.querySelector('.contact__wrapper.disable')
+          ) {
             navDesktop(direction);
             //Projects
           } else if (document.querySelector('.contact__wrapper:not(.disable)')) {
             document.querySelector('.home').classList.add('disable');
             document.querySelector('.contact__wrapper').classList.add('disable');
-            setTimeout(function () {
+            setTimeout(function() {
               document.querySelector('#project-04').classList.add('enable');
               displayProject('#project-04');
             }, 500);
@@ -182,13 +185,29 @@ function main() {
       seeMyWork();
     }
   }
+
+  //URL
+  let urlNumber = window.location.hash.substring(1);
+
+  console.log(urlNumber);
+
+  if (urlNumber == 1 || 2 || 3 || 4 || 5) {
+    document.querySelector('.home').classList.add('disable');
+    document.querySelector('.contact__wrapper').classList.add('disable');
+    setTimeout(function() {
+      document.querySelector('#project-0' + urlNumber).classList.add('enable');
+      displayProject('#project-0' + urlNumber);
+    }, 500);
+    initProject('.project');
+    navActiveItem(parseInt(urlNumber)+1);
+  }
 }
 
 //Redirection project page
 function redirectionProject() {
   document.querySelector('.white-screen').classList.add('go-project');
-  setTimeout(function () {
-   window.location.href = "./projects-page/project-page.html";
+  setTimeout(function() {
+    window.location.href = './projects-page/project-page.html';
   }, 1500);
 }
 
