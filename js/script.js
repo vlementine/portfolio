@@ -188,19 +188,25 @@ function main() {
 
   //URL
   let urlNumber = window.location.hash.substring(1);
-
-  console.log(urlNumber);
+  window.history.replaceState({}, '', 'index.html');
 
   if (urlNumber == 1 || urlNumber == 2 || urlNumber == 3 || urlNumber == 4) {
-    window.history.replaceState({}, '', 'index.html');
     document.querySelector('.home').classList.add('disable');
     document.querySelector('.contact__wrapper').classList.add('disable');
     setTimeout(function() {
       document.querySelector('#project-0' + urlNumber).classList.add('enable');
       displayProject('#project-0' + urlNumber);
     }, 500);
-    initProject('.project');
-    navActiveItem(parseInt(urlNumber) + 1);
+    if (windowWidth <= 650) {
+      initProject('.project--mobile');
+      document.querySelector('.number--active').textContent = '0' + (parseInt(urlNumber) + 1);
+    } else {
+      initProject('.project');
+      navActiveItem(parseInt(urlNumber) + 1);
+    }
+  } else if (urlNumber == 'home' || urlNumber == 'work' || urlNumber == 'contact') {
+    displayMenu();
+    navMenu(urlNumber);
   }
 }
 

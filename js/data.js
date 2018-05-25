@@ -118,7 +118,7 @@ projects.forEach(projectMobile => {
           </div>
           <img class="visuel__letter" src="img/${projectMobile.image}_letter.png" alt="B" draggable="false">
       </div>
-      <a class="btn" href="projects-page/project-page.html">Découvrir le projet</a>
+      <button class="btn" onClick="redirectionProject(${projectMobile.number})">Découvrir le projet</button>
     </div>
 </div>`;
 });
