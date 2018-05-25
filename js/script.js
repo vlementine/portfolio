@@ -191,7 +191,8 @@ function main() {
 
   console.log(urlNumber);
 
-  if (urlNumber == 1 || 2 || 3 || 4 || 5) {
+  if (urlNumber == 1 || urlNumber == 2 || urlNumber == 3 || urlNumber == 4) {
+    window.history.replaceState({}, '', 'index.html');
     document.querySelector('.home').classList.add('disable');
     document.querySelector('.contact__wrapper').classList.add('disable');
     setTimeout(function() {
@@ -199,7 +200,7 @@ function main() {
       displayProject('#project-0' + urlNumber);
     }, 500);
     initProject('.project');
-    navActiveItem(parseInt(urlNumber)+1);
+    navActiveItem(parseInt(urlNumber) + 1);
   }
 }
 
