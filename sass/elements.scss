@@ -472,28 +472,29 @@ footer {
 ------------------------*/
 
 .white-screen {
-  display: none;
-  height: 200vh;
-  width: 200vw;
-  background: #fff;
+  display: block;
+  height: 100%;
+  width: 100%;
+  background: #FFF;
   transform-origin: center;
   position: absolute;
   top: 0;
   left: 0;
   z-index: 100;
-  margin-top: 50vh;
-  @include transform(translate(-100%, -50%))
-
+  margin-top: 0; //@include transform(translate3d(100%, 0px, 0px));
+  transition: all 1.2s ease-in-out;
+  transform: translate(130%, 0) matrix(1, 0, 0.5, 1, 0, 0);
   &.go-project {
     display: block;
+    margin-top: 50vh;
     @include transform(translate(-100%, -50%));
     @include animation(1.3s goProject ease-in-out forwards);
   }
   &.go-home {
     display: block;
     margin-top: 0;
-    @include transform(translate(100%, 0));
-    @include animation(1.3s goHome ease-in-out forwards);
+    transform: translate(0, 0) matrix(1, 0, 0, 1, 0, 0); //@include transform(matrix(2, 1, -1, 2, 0, 1));
+    // @include animation(1.3s goHome ease-in-out forwards);
   }
 }
 
@@ -785,7 +786,7 @@ footer {
 .project__description--mobile {
   text-align: center;
   margin-bottom: 30px;
-  & > div {
+  &>div {
     position: relative;
   }
 }
@@ -1104,11 +1105,11 @@ footer {
       position: absolute;
       opacity: 0;
       cursor: pointer;
-      &:checked ~ div {
+      &:checked~div {
         box-shadow: 0 4px 16px $dark-blue-10;
         @include transform(scale(1));
       }
-      &:not(:checked) ~ div {
+      &:not(:checked)~div {
         @include transform(scale(0.9));
         span,
         p {

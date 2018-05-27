@@ -16,10 +16,9 @@ function main() {
 
 //Redirection project page
 function redirectionProject(varURL) {
-  console.log('../index.html#' + varURL);
   document.querySelector('.white-screen').classList.add('go-home');
   setTimeout(function() {
-    window.location.href = '../index.html#' + varURL;
+    //window.location.href = '../index.html#' + varURL;
   }, 1500);
 }
 

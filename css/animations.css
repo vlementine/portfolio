@@ -1421,69 +1421,69 @@
 
 @-webkit-keyframes goHome {
   0% {
-    -webkit-transform: translate(100%, -50%) rotate(-15deg);
-    -moz-transform: translate(100%, -50%) rotate(-15deg);
-    -ms-transform: translate(100%, -50%) rotate(-15deg);
-    -o-transform: translate(100%, -50%) rotate(-15deg);
-    transform: translate(100%, -50%) rotate(-15deg);
+    -webkit-transform: matrix(2, 1, -1, 2, 0, 1);
+    -moz-transform: matrix(2, 1, -1, 2, 0, 1);
+    -ms-transform: matrix(2, 1, -1, 2, 0, 1);
+    -o-transform: matrix(2, 1, -1, 2, 0, 1);
+    transform: matrix(2, 1, -1, 2, 0, 1);
   }
   100% {
-    -webkit-transform: translate(0, -50%) rotate(0);
-    -moz-transform: translate(0, -50%) rotate(0);
-    -ms-transform: translate(0, -50%) rotate(0);
-    -o-transform: translate(0, -50%) rotate(0);
-    transform: translate(0, -50%) rotate(0);
+    -webkit-transform: translate3d(100%, 0px, 0px);
+    -moz-transform: translate3d(100%, 0px, 0px);
+    -ms-transform: translate3d(100%, 0px, 0px);
+    -o-transform: translate3d(100%, 0px, 0px);
+    transform: translate3d(100%, 0px, 0px);
   }
 }
 
 @-moz-keyframes goHome {
   0% {
-    -webkit-transform: translate(100%, -50%) rotate(-15deg);
-    -moz-transform: translate(100%, -50%) rotate(-15deg);
-    -ms-transform: translate(100%, -50%) rotate(-15deg);
-    -o-transform: translate(100%, -50%) rotate(-15deg);
-    transform: translate(100%, -50%) rotate(-15deg);
+    -webkit-transform: matrix(2, 1, -1, 2, 0, 1);
+    -moz-transform: matrix(2, 1, -1, 2, 0, 1);
+    -ms-transform: matrix(2, 1, -1, 2, 0, 1);
+    -o-transform: matrix(2, 1, -1, 2, 0, 1);
+    transform: matrix(2, 1, -1, 2, 0, 1);
   }
   100% {
-    -webkit-transform: translate(0, -50%) rotate(0);
-    -moz-transform: translate(0, -50%) rotate(0);
-    -ms-transform: translate(0, -50%) rotate(0);
-    -o-transform: translate(0, -50%) rotate(0);
-    transform: translate(0, -50%) rotate(0);
+    -webkit-transform: translate3d(100%, 0px, 0px);
+    -moz-transform: translate3d(100%, 0px, 0px);
+    -ms-transform: translate3d(100%, 0px, 0px);
+    -o-transform: translate3d(100%, 0px, 0px);
+    transform: translate3d(100%, 0px, 0px);
   }
 }
 
 @-o-keyframes goHome {
   0% {
-    -webkit-transform: translate(100%, -50%) rotate(-15deg);
-    -moz-transform: translate(100%, -50%) rotate(-15deg);
-    -ms-transform: translate(100%, -50%) rotate(-15deg);
-    -o-transform: translate(100%, -50%) rotate(-15deg);
-    transform: translate(100%, -50%) rotate(-15deg);
+    -webkit-transform: matrix(2, 1, -1, 2, 0, 1);
+    -moz-transform: matrix(2, 1, -1, 2, 0, 1);
+    -ms-transform: matrix(2, 1, -1, 2, 0, 1);
+    -o-transform: matrix(2, 1, -1, 2, 0, 1);
+    transform: matrix(2, 1, -1, 2, 0, 1);
   }
   100% {
-    -webkit-transform: translate(0, -50%) rotate(0);
-    -moz-transform: translate(0, -50%) rotate(0);
-    -ms-transform: translate(0, -50%) rotate(0);
-    -o-transform: translate(0, -50%) rotate(0);
-    transform: translate(0, -50%) rotate(0);
+    -webkit-transform: translate3d(100%, 0px, 0px);
+    -moz-transform: translate3d(100%, 0px, 0px);
+    -ms-transform: translate3d(100%, 0px, 0px);
+    -o-transform: translate3d(100%, 0px, 0px);
+    transform: translate3d(100%, 0px, 0px);
   }
 }
 
 @keyframes goHome {
   0% {
-    -webkit-transform: translate(100%, -50%) rotate(-15deg);
-    -moz-transform: translate(100%, -50%) rotate(-15deg);
-    -ms-transform: translate(100%, -50%) rotate(-15deg);
-    -o-transform: translate(100%, -50%) rotate(-15deg);
-    transform: translate(100%, -50%) rotate(-15deg);
+    -webkit-transform: matrix(2, 1, -1, 2, 0, 1);
+    -moz-transform: matrix(2, 1, -1, 2, 0, 1);
+    -ms-transform: matrix(2, 1, -1, 2, 0, 1);
+    -o-transform: matrix(2, 1, -1, 2, 0, 1);
+    transform: matrix(2, 1, -1, 2, 0, 1);
   }
   100% {
-    -webkit-transform: translate(0, -50%) rotate(0);
-    -moz-transform: translate(0, -50%) rotate(0);
-    -ms-transform: translate(0, -50%) rotate(0);
-    -o-transform: translate(0, -50%) rotate(0);
-    transform: translate(0, -50%) rotate(0);
+    -webkit-transform: translate3d(100%, 0px, 0px);
+    -moz-transform: translate3d(100%, 0px, 0px);
+    -ms-transform: translate3d(100%, 0px, 0px);
+    -o-transform: translate3d(100%, 0px, 0px);
+    transform: translate3d(100%, 0px, 0px);
   }
 }
 

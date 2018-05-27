@@ -134,7 +134,6 @@
   }
 }
 
-
 @include keyframes(bubble) {
   0% {
     @include transform(translateY(20%));
@@ -223,10 +222,10 @@
 
 @include keyframes(goHome) {
   0% {
-    @include transform(translate(100%, -50%) rotate(-15deg));
+    @include transform(matrix(2, 1, -1, 2, 0, 1));
   }
   100% {
-    @include transform(translate(0, -50%) rotate(0));
+    @include transform(translate3d(100%, 0px, 0px));
   }
 }
 

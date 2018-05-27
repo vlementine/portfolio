@@ -214,7 +214,7 @@ function main() {
 function redirectionProject() {
   document.querySelector('.white-screen').classList.add('go-project');
   setTimeout(function() {
-    window.location.href = './projects-page/project-page.html';
+   // window.location.href = './projects-page/project-page.html';
   }, 1500);
 }
 

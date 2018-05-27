@@ -651,25 +651,23 @@ footer {
   Project
 ------------------------*/
 .white-screen {
-  display: none;
-  height: 200vh;
-  width: 200vw;
-  background: #fff;
+  display: block;
+  height: 100%;
+  width: 100%;
+  background: #FFF;
   transform-origin: center;
   position: absolute;
   top: 0;
   left: 0;
   z-index: 100;
-  margin-top: 50vh;
-  -webkit-transform: translate(-100%, -50%);
-  -moz-transform: translate(-100%, -50%);
-  -ms-transform: translate(-100%, -50%);
-  -o-transform: translate(-100%, -50%);
-  transform: translate(-100%, -50%);
+  margin-top: 0;
+  transition: all 1.2s ease-in-out;
+  transform: translate(130%, 0) matrix(1, 0, 0.5, 1, 0, 0);
 }
 
 .white-screen.go-project {
   display: block;
+  margin-top: 50vh;
   -webkit-transform: translate(-100%, -50%);
   -moz-transform: translate(-100%, -50%);
   -ms-transform: translate(-100%, -50%);
@@ -685,16 +683,7 @@ footer {
 .white-screen.go-home {
   display: block;
   margin-top: 0;
-  -webkit-transform: translate(100%, 0);
-  -moz-transform: translate(100%, 0);
-  -ms-transform: translate(100%, 0);
-  -o-transform: translate(100%, 0);
-  transform: translate(100%, 0);
-  -webkit-animation: 1.3s goHome ease-in-out forwards;
-  -moz-animation: 1.3s goHome ease-in-out forwards;
-  -ms-animation: 1.3s goHome ease-in-out forwards;
-  -o-transition: 1.3s goHome ease-in-out forwards;
-  animation: 1.3s goHome ease-in-out forwards;
+  transform: translate(0, 0) matrix(1, 0, 0, 1, 0, 0);
 }
 
 .project {
