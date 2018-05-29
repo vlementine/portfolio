@@ -18,7 +18,7 @@ function main() {
 function redirectionProject(varURL) {
   document.querySelector('.white-screen').classList.add('go-home');
   setTimeout(function() {
-    //window.location.href = '../index.html#' + varURL;
+    window.location.href = '../index.html#' + varURL;
   }, 1500);
 }
 

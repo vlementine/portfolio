@@ -188,6 +188,7 @@ function main() {
 
   //URL
   let urlNumber = window.location.hash.substring(1);
+  console.log(urlNumber);
   window.history.replaceState({}, '', 'index.html');
 
   if (urlNumber == 1 || urlNumber == 2 || urlNumber == 3 || urlNumber == 4) {
@@ -214,7 +215,7 @@ function main() {
 function redirectionProject() {
   document.querySelector('.white-screen').classList.add('go-project');
   setTimeout(function() {
-   // window.location.href = './projects-page/project-page.html';
+    window.location.href = './projects-page/project-page.html';
   }, 1500);
 }
 
