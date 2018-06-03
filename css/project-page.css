@@ -327,7 +327,7 @@
   animation: 0.8s imgProject ease-in-out forwards 3s;
 }
 
-.project-page footer {
+.project-page footer, .menu__footer {
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -335,7 +335,7 @@
   line-height: 38px;
 }
 
-.project-page footer .links {
+.project-page footer .links, .menu__footer .links {
   position: initial;
   margin: auto 20px;
   text-align: center;

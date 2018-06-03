@@ -102,8 +102,8 @@
   justify-content: center;
   align-items: center;
   text-align: center;
-  background: $dark-blue-05;
-  height: 20vh;
+  background:  rgba(6, 10, 46, 0.05);
+  height: 30vh;
 }
 
 .menu__category {
@@ -129,31 +129,94 @@
 }
 
 .menu__projects-wrapper {
-  height: 80vh;
   display: flex;
   justify-content: center;
   align-items: center;
-
+  height: calc(70vh - 98px);
+  margin-top: -20px;
   .menu__project-visuel {
-    width: 400px;
-    height: 60vh;
-    background: crimson;
     display: flex;
     justify-content: center;
     align-items: center;
-
-    img {
-      width: 90%;
-      margin: auto;
-      display: block;
+    position: relative;
+    width: 400px;
+    height: 100%;
+    background: linear-gradient(45deg, #f59e64, #eb5160);
+    border-radius: 2px;
+    box-shadow: 0 2px 16px rgba(0, 0, 0, 0.2);
+    margin-right: 50px;
+    &:after {
+      content: '';
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      top: 0;
+      left: 0;
+      background-image: url(../img/noise-pattern.png);
+    }
+    .visuel__mockup {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      z-index: 20;
+      .mockup--desktop {
+        max-width: 90%;
+        margin: auto;
+        display: block;
+      }
+    }
+    img:last-child {
+      position: absolute;
+      z-index: 5;
+      height: auto;
+      max-height: 500px;
+      width: auto;
+      max-width: 70%;
+    }
+  }
+  .menu__projects .menu__project {
+    display: flex;
+    justify-content: center;
+    align-items: baseline;
+    margin: 15px auto;
+    cursor: pointer;
+    h3 {
+      position: relative;
+      font-family: 'Playfair Display', serif;
+      font-weight: 900;
+      font-size: 1.125rem;
+      color: $dark-blue-80;
+      margin: 0 10px 0;
+      &:after {
+        content: '';
+        position: absolute;
+        left: -5px;
+        bottom: 0;
+        height: 50%;
+        width: calc(100% + 10px);
+        background: linear-gradient(45deg, #1d7d90, #5dd5c3);
+        opacity: 0;
+        z-index: -1;
+        @include transition(opacity 0.4s ease-in-out);
+      }
+    }
+    span {
+      font-size: 0.75rem;
+      text-transform: uppercase;
+      color: $dark-blue-30;
+    }
+    &:hover h3:after {
+      opacity: 0.2;
     }
   }
 }
 
+
 //-------------------------------------
 //	FOOTER
 //-------------------------------------
-footer {
+footer,
+.menu__footer {
   color: $dark-blue-30;
   font-size: 0.6rem;
   font-weight: 400;
@@ -488,12 +551,15 @@ footer {
 /*------------------------
   Project
 ------------------------*/
+
 .projects__wrapper .white-screen {
   transform: translate(-130%, 0) matrix(1, 0, -0.5, 1, 0, 0);
 }
+
 .project-page .white-screen {
   transform: translate(130%, 0) matrix(1, 0, 0.5, 1, 0, 0);
 }
+
 .white-screen {
   display: block;
   height: 100%;
@@ -506,7 +572,6 @@ footer {
   z-index: -1;
   margin-top: 0; //@include transform(translate3d(100%, 0px, 0px));
   transition: all 1.2s ease-in-out;
-
   &.redirect-page {
     margin-top: 0;
     z-index: 100;
@@ -528,7 +593,8 @@ footer {
 }
 
 #project-01 .project__visuel,
-.project--mobile#project-01 .project__content {
+.project--mobile#project-01 .project__content,
+  .menu__projects .menu__project:nth-child(1) h3:after {
   background: linear-gradient(45deg, #1d7d90, #5dd5c3);
 }
 
@@ -539,7 +605,8 @@ footer {
 }
 
 #project-02 .project__visuel,
-.project--mobile#project-02 .project__content {
+.project--mobile#project-02 .project__content,
+  .menu__projects .menu__project:nth-child(2) h3:after {
   background: linear-gradient(45deg, #f59e64, #eb5160);
 }
 
@@ -554,7 +621,8 @@ footer {
 }
 
 #project-03 .project__visuel,
-.project--mobile#project-03 .project__content {
+.project--mobile#project-03 .project__content ,
+  .menu__projects .menu__project:nth-child(3) h3:after{
   background: linear-gradient(45deg, #1d7d90, #5dd5c3);
 }
 
@@ -569,7 +637,8 @@ footer {
 }
 
 #project-04 .project__visuel,
-.project--mobile#project-04 .project__content {
+.project--mobile#project-04 .project__content,
+  .menu__projects .menu__project:nth-child(4) h3:after {
   background: linear-gradient(45deg, #1d7d90, #5dd5c3);
 }
 
@@ -802,7 +871,7 @@ footer {
 .project__description--mobile {
   text-align: center;
   margin-bottom: 30px;
-  & > div {
+  &>div {
     position: relative;
   }
 }
@@ -1121,11 +1190,11 @@ footer {
       position: absolute;
       opacity: 0;
       cursor: pointer;
-      &:checked ~ div {
+      &:checked~div {
         box-shadow: 0 4px 16px $dark-blue-10;
         @include transform(scale(1));
       }
-      &:not(:checked) ~ div {
+      &:not(:checked)~div {
         @include transform(scale(0.9));
         span,
         p {
