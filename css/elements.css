@@ -204,6 +204,7 @@
   border-radius: 2px;
   box-shadow: 0 2px 16px rgba(0, 0, 0, 0.2);
   margin-right: 50px;
+  transition: all 0.4s ease-in-out;
 }
 
 .menu__projects-wrapper .menu__project-visuel:after {
@@ -214,6 +215,11 @@
   top: 0;
   left: 0;
   background-image: url(../img/noise-pattern.png);
+}
+
+.menu__projects-wrapper .menu__project-visuel.hide {
+  transform: translateX(-10%);
+  opacity: 0;
 }
 
 .menu__projects-wrapper .menu__project-visuel .visuel__mockup {
@@ -240,7 +246,6 @@
 
 .menu__projects-wrapper .menu__projects .menu__project {
   display: flex;
-  justify-content: center;
   align-items: baseline;
   margin: 15px auto;
   cursor: pointer;
@@ -788,6 +793,7 @@ footer,
 
 #project-01 .project__visuel,
 .project--mobile#project-01 .project__content,
+.menu__projects-wrapper .menu__project-visuel#menu__project-01,
 .menu__projects .menu__project:nth-child(1) h3:after {
   background: linear-gradient(45deg, #1d7d90, #5dd5c3);
 }
@@ -800,6 +806,7 @@ footer,
 
 #project-02 .project__visuel,
 .project--mobile#project-02 .project__content,
+.menu__projects-wrapper .menu__project-visuel#menu__project-02,
 .menu__projects .menu__project:nth-child(2) h3:after {
   background: linear-gradient(45deg, #f59e64, #eb5160);
 }
@@ -816,6 +823,7 @@ footer,
 
 #project-03 .project__visuel,
 .project--mobile#project-03 .project__content,
+.menu__projects-wrapper .menu__project-visuel#menu__project-03,
 .menu__projects .menu__project:nth-child(3) h3:after {
   background: linear-gradient(45deg, #1d7d90, #5dd5c3);
 }
@@ -832,6 +840,7 @@ footer,
 
 #project-04 .project__visuel,
 .project--mobile#project-04 .project__content,
+.menu__projects-wrapper .menu__project-visuel#menu__project-04,
 .menu__projects .menu__project:nth-child(4) h3:after {
   background: linear-gradient(45deg, #1d7d90, #5dd5c3);
 }

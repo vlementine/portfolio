@@ -1,4 +1,59 @@
 //-------------------------------------
+//	JSON
+//-------------------------------------
+const projects = [
+  {
+    number: '01',
+    title: 'Back to your dream',
+    keywords: 'User Interface • Animation',
+    description:
+      "Option A, you kill me right here and now. Apparently I've made that very easy for you. You can kill me, no witnesses and then spend the next few weeks or months tracking down Jesse Pinkman and you kill him too. A pointless exercise it seems…",
+    image: 'btyd',
+    href: ' '
+  },
+  {
+    number: '02',
+    title: 'Le Blog Zenchef',
+    keywords: 'User Interface • Blog',
+    description:
+      "Option A, you kill me right here and now. Apparently I've made that very easy for you. You can kill me, no witnesses and then spend the next few weeks or months tracking down Jesse Pinkman and you kill him too. A pointless exercise it seems…",
+    image: 'blog-zenchef',
+    href: ' '
+  },
+  {
+    number: '03',
+    title: 'Alcatraz, 1962',
+    keywords: 'User Interface • Webdoc',
+    description:
+      "Option A, you kill me right here and now. Apparently I've made that very easy for you. You can kill me, no witnesses and then spend the next few weeks or months tracking down Jesse Pinkman and you kill him too. A pointless exercise it seems…",
+    image: 'btyd',
+    href: ' '
+  },
+  {
+    number: '04',
+    title: 'La Maroquinerie',
+    keywords: 'User Interface • Concert',
+    description:
+      "Option A, you kill me right here and now. Apparently I've made that very easy for you. You can kill me, no witnesses and then spend the next few weeks or months tracking down Jesse Pinkman and you kill him too. A pointless exercise it seems…",
+    image: 'btyd',
+    href: ' '
+  }
+];
+
+var menu_projects = '';
+
+projects.forEach(menu_project => {
+  menu_projects += `<div class="menu__project" onMouseenter="menuHoverProject(${menu_project.number}, '${menu_project.image}')" onClick="redirectToPageProject(2)">
+                    <h3>${menu_project.title} </h3>
+                    <span>${menu_project.keywords}</span>
+                  </div>`;
+});
+
+document.querySelector('.menu__projects').innerHTML = menu_projects;
+
+
+
+//-------------------------------------
 //	MAIN FUNCTION
 //-------------------------------------
 function main() {

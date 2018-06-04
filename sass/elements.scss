@@ -102,7 +102,7 @@
   justify-content: center;
   align-items: center;
   text-align: center;
-  background:  rgba(6, 10, 46, 0.05);
+  background: rgba(6, 10, 46, 0.05);
   height: 30vh;
 }
 
@@ -145,6 +145,7 @@
     border-radius: 2px;
     box-shadow: 0 2px 16px rgba(0, 0, 0, 0.2);
     margin-right: 50px;
+    transition: all 0.4s ease-in-out;
     &:after {
       content: '';
       position: absolute;
@@ -153,6 +154,10 @@
       top: 0;
       left: 0;
       background-image: url(../img/noise-pattern.png);
+    }
+    &.hide {
+      transform: translateX(-10%);
+      opacity: 0;
     }
     .visuel__mockup {
       display: flex;
@@ -176,7 +181,6 @@
   }
   .menu__projects .menu__project {
     display: flex;
-    justify-content: center;
     align-items: baseline;
     margin: 15px auto;
     cursor: pointer;
@@ -210,7 +214,6 @@
     }
   }
 }
-
 
 //-------------------------------------
 //	FOOTER
@@ -594,7 +597,8 @@ footer,
 
 #project-01 .project__visuel,
 .project--mobile#project-01 .project__content,
-  .menu__projects .menu__project:nth-child(1) h3:after {
+.menu__projects-wrapper .menu__project-visuel#menu__project-01,
+.menu__projects .menu__project:nth-child(1) h3:after {
   background: linear-gradient(45deg, #1d7d90, #5dd5c3);
 }
 
@@ -606,7 +610,8 @@ footer,
 
 #project-02 .project__visuel,
 .project--mobile#project-02 .project__content,
-  .menu__projects .menu__project:nth-child(2) h3:after {
+.menu__projects-wrapper .menu__project-visuel#menu__project-02,
+.menu__projects .menu__project:nth-child(2) h3:after {
   background: linear-gradient(45deg, #f59e64, #eb5160);
 }
 
@@ -621,8 +626,9 @@ footer,
 }
 
 #project-03 .project__visuel,
-.project--mobile#project-03 .project__content ,
-  .menu__projects .menu__project:nth-child(3) h3:after{
+.project--mobile#project-03 .project__content,
+.menu__projects-wrapper .menu__project-visuel#menu__project-03,
+.menu__projects .menu__project:nth-child(3) h3:after {
   background: linear-gradient(45deg, #1d7d90, #5dd5c3);
 }
 
@@ -638,7 +644,8 @@ footer,
 
 #project-04 .project__visuel,
 .project--mobile#project-04 .project__content,
-  .menu__projects .menu__project:nth-child(4) h3:after {
+.menu__projects-wrapper .menu__project-visuel#menu__project-04,
+.menu__projects .menu__project:nth-child(4) h3:after {
   background: linear-gradient(45deg, #1d7d90, #5dd5c3);
 }
 
@@ -871,7 +878,7 @@ footer,
 .project__description--mobile {
   text-align: center;
   margin-bottom: 30px;
-  &>div {
+  & > div {
     position: relative;
   }
 }
@@ -1190,11 +1197,11 @@ footer,
       position: absolute;
       opacity: 0;
       cursor: pointer;
-      &:checked~div {
+      &:checked ~ div {
         box-shadow: 0 4px 16px $dark-blue-10;
         @include transform(scale(1));
       }
-      &:not(:checked)~div {
+      &:not(:checked) ~ div {
         @include transform(scale(0.9));
         span,
         p {

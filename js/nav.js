@@ -268,3 +268,22 @@ function navMenu(param) {
     }, 500);
   }
 }
+
+function menuHoverProject(number, name) {
+  document.querySelector('.menu__project-visuel').classList.add('hide');
+  setTimeout(function() {
+    document.querySelector('.menu__project-visuel .mockup--desktop').src = '../img/' + name + '_visuel-home.png';
+    document.querySelector('.menu__project-visuel .visuel__mockup+img').src = '../img/' + name + '_letter.png';
+    document.querySelector('.menu__project-visuel').id = 'menu__project-0' + number;
+  }, 500);
+  setTimeout(function() {
+    document.querySelector('.menu__project-visuel').classList.remove('hide');
+  }, 600);
+}
+
+function redirectToPageProject(varURL) {
+  document.querySelector('.white-screen').classList.add('redirect-page');
+  setTimeout(function() {
+    window.location.href = './project-page--' + varURL + 'html';
+  }, 1500);
+}
