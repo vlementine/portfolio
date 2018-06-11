@@ -15,16 +15,17 @@ function responsive() {
         document.querySelector('.projects').innerHTML = contentMobile;
         document.querySelector('.number--active').textContent = '01';
       }
-    } else {
-      document.querySelector(
-        '.contact__description .description__title h2'
-      ).innerHTML = `Pour me contacter,<br>c’est par ici 👉`;
-      document.querySelector('.btn__home').classList.replace('btn__work--mobile', 'btn__work--desktop');
-      if (!document.querySelector('.project')) {
-        document.querySelector('.projects').innerHTML = content;
-      }
+    }
+  } else {
+    document.querySelector(
+      '.contact__description .description__title h2'
+    ).innerHTML = `Pour me contacter,<br>c’est par ici 👉`;
+    document.querySelector('.btn__home').classList.replace('btn__work--mobile', 'btn__work--desktop');
+    if (!document.querySelector('.project')) {
+      document.querySelector('.projects').innerHTML = content;
     }
   }
+}
 }
 
 //-------------------------------------
@@ -85,7 +86,7 @@ function main() {
           } else if (document.querySelector('.contact__wrapper:not(.disable)')) {
             document.querySelector('.home').classList.add('disable');
             document.querySelector('.contact__wrapper').classList.add('disable');
-            setTimeout(function() {
+            setTimeout(function () {
               document.querySelector('#project-04').classList.add('enable');
               displayProject('#project-04');
             }, 500);
@@ -104,7 +105,7 @@ function main() {
           } else if (document.querySelector('.contact__wrapper:not(.disable)')) {
             document.querySelector('.home').classList.add('disable');
             document.querySelector('.contact__wrapper').classList.add('disable');
-            setTimeout(function() {
+            setTimeout(function () {
               document.querySelector('#project-04').classList.add('enable');
               displayProject('#project-04');
             }, 500);
@@ -123,18 +124,14 @@ function main() {
   document.addEventListener('keydown', e => {
     if (windowWidth <= 650) {
       if (e.keyCode == 37) {
-        console.log('up');
         scrollDirection('prev');
       } else if (e.keyCode == 39) {
-        console.log('down');
         scrollDirection('next');
       }
     } else {
       if (e.keyCode == 38) {
-        console.log('up');
         scrollDirection('prev');
       } else if (e.keyCode == 40) {
-        console.log('down');
         scrollDirection('next');
       }
     }
@@ -194,7 +191,7 @@ function main() {
   if (urlNumber == 1 || urlNumber == 2 || urlNumber == 3 || urlNumber == 4) {
     document.querySelector('.home').classList.add('disable');
     document.querySelector('.contact__wrapper').classList.add('disable');
-    setTimeout(function() {
+    setTimeout(function () {
       document.querySelector('#project-0' + urlNumber).classList.add('enable');
       displayProject('#project-0' + urlNumber);
     }, 500);
@@ -214,7 +211,7 @@ function main() {
 //Redirection project page
 function redirectionProject() {
   document.querySelector('.white-screen').classList.add('redirect-page');
-  setTimeout(function() {
+  setTimeout(function () {
     window.location.href = './projects-page/project-page.html';
   }, 1500);
 }

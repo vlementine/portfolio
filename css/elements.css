@@ -15,7 +15,7 @@
   box-shadow: 0 2px 4px rgba(6, 10, 46, 0.1);
   border-radius: 50%;
   position: fixed;
-  z-index: 32;
+  z-index: 52;
   top: 20px;
   right: 20px;
   cursor: pointer;
@@ -127,7 +127,7 @@
   width: 100%;
   height: 100%;
   overflow: auto;
-  z-index: 31;
+  z-index: 50;
   background: #fff;
   opacity: 1;
   -webkit-transition: opacity 0.4s ease-in-out;
@@ -200,7 +200,7 @@
   position: relative;
   width: 400px;
   height: 100%;
-  background: linear-gradient(45deg, #f59e64, #eb5160);
+  background: linear-gradient(45deg, rgba(34, 135, 182, 0.6), #2286b6);
   border-radius: 2px;
   box-shadow: 0 2px 16px rgba(0, 0, 0, 0.2);
   margin-right: 50px;
@@ -248,7 +248,6 @@
   display: flex;
   align-items: baseline;
   margin: 15px auto;
-  cursor: pointer;
 }
 
 .menu__projects-wrapper .menu__projects .menu__project h3 {
@@ -257,24 +256,32 @@
   font-weight: 900;
   font-size: 1.125rem;
   color: rgba(6, 10, 46, 0.8);
-  margin: 0 10px 0;
+  margin: 0 10px 0 0;
+  cursor: pointer;
 }
 
 .menu__projects-wrapper .menu__projects .menu__project h3:after {
   content: '';
-  position: absolute;
-  left: -5px;
-  bottom: 0;
-  height: 50%;
-  width: calc(100% + 10px);
-  background: linear-gradient(45deg, #1d7d90, #5dd5c3);
-  opacity: 0;
   z-index: -1;
-  -webkit-transition: opacity 0.4s ease-in-out;
-  -moz-transition: opacity 0.4s ease-in-out;
-  -ms-transition: opacity 0.4s ease-in-out;
-  -o-transition: opacity 0.4s ease-in-out;
-  transition: opacity 0.4s ease-in-out;
+  position: absolute;
+  display: block;
+  background: linear-gradient(45deg, rgba(34, 135, 182, 0.6), #2286b6);
+  height: 13px;
+  width: 100%;
+  opacity: 0.1;
+  left: 5px;
+  bottom: 0;
+  transform-origin: right center;
+  -webkit-transform: scaleX(0);
+  -moz-transform: scaleX(0);
+  -ms-transform: scaleX(0);
+  -o-transform: scaleX(0);
+  transform: scaleX(0);
+  -webkit-transition: transform 0.4s ease-in-out;
+  -moz-transition: transform 0.4s ease-in-out;
+  -ms-transition: transform 0.4s ease-in-out;
+  -o-transition: transform 0.4s ease-in-out;
+  transition: transform 0.4s ease-in-out;
 }
 
 .menu__projects-wrapper .menu__projects .menu__project span {
@@ -283,8 +290,70 @@
   color: rgba(6, 10, 46, 0.3);
 }
 
-.menu__projects-wrapper .menu__projects .menu__project:hover h3:after {
+.menu__projects-wrapper .menu__projects .menu__project h3:hover:after {
   opacity: 0.2;
+  transform-origin: left center;
+  -webkit-transform: scaleX(1);
+  -moz-transform: scaleX(1);
+  -ms-transform: scaleX(1);
+  -o-transform: scaleX(1);
+  transform: scaleX(1);
+}
+
+.menu__projects-wrapper--mobile {
+  display: none;
+  margin: 40px 25px;
+}
+
+.menu__project--mobile {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.menu__project--mobile:last-child {
+  margin-bottom: 0;
+}
+
+.menu__project-info--mobile {
+  display: flex;
+}
+
+.menu__project-visuel--mobile {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 40px;
+  height: 40px;
+  border-radius: 2px;
+  box-shadow: 0 2px 16px rgba(6, 10, 46, 0.2);
+  background: linear-gradient(45deg, rgba(34, 135, 182, 0.6), #2286b6);
+}
+
+.menu__project-visuel--mobile img {
+  height: 60%;
+}
+
+.menu__project-title {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin-left: 15px;
+}
+
+.menu__project-title h3 {
+  font-family: 'Playfair Display', serif;
+  font-weight: 900;
+  font-size: 1.125rem;
+  color: rgba(6, 10, 46, 0.8);
+  margin: 0;
+}
+
+.menu__project-title span {
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  color: rgba(6, 10, 46, 0.3);
 }
 
 footer,
@@ -758,7 +827,6 @@ footer,
 }
 
 .white-screen {
-  display: block;
   height: 100%;
   width: 100%;
   background: #fff;
@@ -804,6 +872,18 @@ footer,
   -webkit-text-fill-color: transparent;
 }
 
+.nav__arrow#menu__project-01 {
+  border-color: #2286b6;
+}
+
+.nav__arrow#menu__project-01 .arrow__circle {
+  background: #88c9e9;
+}
+
+.nav__arrow#menu__project-01 .arrow__circle:after {
+  background: #b3ddf1;
+}
+
 #project-02 .project__visuel,
 .project--mobile#project-02 .project__content,
 .menu__projects-wrapper .menu__project-visuel#menu__project-02,
@@ -819,6 +899,18 @@ footer,
 
 #project-02 .description__number-wrapper--mobile .description__number--mobile:after {
   content: '02.';
+}
+
+.nav__arrow#menu__project-02 {
+  border-color: #F59E64;
+}
+
+.nav__arrow#menu__project-02 .arrow__circle {
+  background: #fef8f4;
+}
+
+.nav__arrow#menu__project-02 .arrow__circle:after {
+  background: white;
 }
 
 #project-03 .project__visuel,
@@ -838,6 +930,18 @@ footer,
   content: '03.';
 }
 
+.nav__arrow#menu__project-03 {
+  border-color: #2286b6;
+}
+
+.nav__arrow#menu__project-03 .arrow__circle {
+  background: #88c9e9;
+}
+
+.nav__arrow#menu__project-03 .arrow__circle:after {
+  background: #b3ddf1;
+}
+
 #project-04 .project__visuel,
 .project--mobile#project-04 .project__content,
 .menu__projects-wrapper .menu__project-visuel#menu__project-04,
@@ -855,6 +959,18 @@ footer,
   -webkit-text-fill-color: transparent;
 }
 
+.nav__arrow#menu__project-04 {
+  border-color: #2286b6;
+}
+
+.nav__arrow#menu__project-04 .arrow__circle {
+  background: #88c9e9;
+}
+
+.nav__arrow#menu__project-04 .arrow__circle:after {
+  background: #b3ddf1;
+}
+
 .project__visuel {
   display: flex;
   opacity: 0;
@@ -864,7 +980,7 @@ footer,
   position: relative;
   z-index: 24;
   margin-right: 15px;
-  background: linear-gradient(45deg, #1d7d90, #5dd5c3);
+  background: linear-gradient(45deg, rgba(34, 135, 182, 0.6), #2286b6);
   background-size: 400% 400%;
   border-radius: 4px;
   box-shadow: 0 0 16px rgba(6, 10, 46, 0.2);
@@ -1154,7 +1270,7 @@ footer,
   width: calc(100vw - 30px);
   margin: 15px;
   padding: 20px 20px 90px 20px;
-  background: linear-gradient(45deg, #1d7d90, #5dd5c3);
+  background: linear-gradient(45deg, rgba(34, 135, 182, 0.6), #2286b6);
   background-size: 400% 400%;
   border-radius: 4px;
   box-shadow: 0 0 16px rgba(6, 10, 46, 0.2);
@@ -1240,7 +1356,7 @@ footer,
   font-family: 'Work Sans', sans-serif;
   font-weight: 700;
   font-size: 6.5rem;
-  background: linear-gradient(45deg, #1d7d90, #5dd5c3);
+  background: linear-gradient(45deg, rgba(34, 135, 182, 0.6), #2286b6);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
