@@ -10,90 +10,144 @@
 </head>
 
 <body id="project-01" class="project-page">
-    <span class="white-screen"></span>
-    <!-- Button menu  -->
-    <div class="menu-btn menu-btn-open" onclick="displayMenu()">
-        <div class="menu__icon menu__icon--open enable">
-            <span></span>
-            <span></span>
-            <span></span>
+    <div>
+        <span class="white-screen"></span>
+        <!-- Button menu  -->
+        <div class="menu-btn menu-btn-open" onclick="displayMenu()">
+            <div class="menu__icon menu__icon--open enable">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+            <div class="menu__icon menu__icon--close">
+                <span></span>
+                <span></span>
+            </div>
         </div>
-        <div class="menu__icon menu__icon--close">
-            <span></span>
-            <span></span>
-        </div>
-    </div>
-    <!-- HEADER -->
-    <header>
-        <nav>
-            <div onClick="redirectionProject(2)" class="nav__return">
-                <span class="nav__arrow nav__arrow--left">
-                    <span class="arrow__circle"></span>
-                </span>
-                <div class="return__text">
-                    <span class="text--top">Back to projects</span>
-                    <span class="text--bottom">Back to projects</span>
+        <!-- HEADER -->
+        <header>
+            <nav>
+                <div onClick="redirectionProject(2)" class="nav__return">
+                    <span class="nav__arrow nav__arrow--left">
+                        <span class="arrow__circle"></span>
+                    </span>
+                    <div class="return__text">
+                        <span class="text--top">Back to projects</span>
+                        <span class="text--bottom">Back to projects</span>
+                    </div>
+                </div>
+            </nav>
+            <div class="project__summary">
+                <h1>Back to your dream</h1>
+                <div class="summary__type">
+                    <span class="type">Digital design</span>
+                    <span class="type--shadow">Digital design</span>
                 </div>
             </div>
-        </nav>
-        <div class="project__summary">
-            <h1>Back to your dream</h1>
-            <div class="summary__type">
-                <span class="type">Digital design</span>
-                <span class="type--shadow">Digital design</span>
+            <div class="project__info">
+                <div class="info">
+                    <span>Rôle</span>
+                    <p>Digital Design</p>
+                </div>
+                <div class="info">
+                    <span>Client</span>
+                    <p>IESA Multimédia</p>
+                </div>
+                <div class="info">
+                    <span>Année</span>
+                    <p>2017</p>
+                </div>
             </div>
-        </div>
-        <div class="project__info">
-            <div class="info">
-                <span>Rôle</span>
-                <p>Digital Design</p>
-            </div>
-            <div class="info">
-                <span>Client</span>
-                <p>IESA Multimédia</p>
-            </div>
-            <div class="info">
-                <span>Année</span>
-                <p>2017</p>
-            </div>
-        </div>
-    </header>
+        </header>
 
-    <!-- Menu  -->
-    <div class="menu__wrapper disable">
-        <div class="menu__categories">
-            <div class="menu__category">
-                <h2 onClick="redirectionProject('home')">Accueil</h2>
-                <p>Présentation</p>
+        <!-- Menu  -->
+        <div class="menu__wrapper disable">
+            <div class="menu__categories">
+                <div class="menu__category">
+                    <h2 onClick="redirectionProject('home')">Accueil</h2>
+                    <p>Présentation</p>
+                </div>
+                <div class="menu__category">
+                    <h2 onClick="redirectionProject('work')">Projets</h2>
+                    <p>Découvrez mes travaux</p>
+                </div>
+                <div class="menu__category">
+                    <h2 onClick="redirectionProject('contact')">Contact</h2>
+                    <p>En savoir plus</p>
+                </div>
             </div>
-            <div class="menu__category">
-                <h2 onClick="redirectionProject('work')">Projets</h2>
-                <p>Découvrez mes travaux</p>
+
+            <div class="menu__projects-wrapper--mobile"></div>
+
+            <div class="menu__projects-wrapper">
+                <div class="menu__project-visuel">
+                    <div class="visuel__mockup">
+                        <img class="mockup--desktop" src="../img/blog-zenchef_visuel-home.png" alt="Visuel du Blog Zenchef" draggable="false">
+                    </div>
+                    <img src="../img/blog-zenchef_letter.png" alt="B" draggable="false">
+                </div>
+                <div class="menu__projects"></div>
             </div>
-            <div class="menu__category">
+
+            <div class="menu__category menu__category--mobile">
                 <h2 onClick="redirectionProject('contact')">Contact</h2>
                 <p>En savoir plus</p>
             </div>
-        </div>
 
-        <div class="menu__projects-wrapper--mobile"></div>
-
-        <div class="menu__projects-wrapper">
-            <div class="menu__project-visuel">
-                <div class="visuel__mockup">
-                    <img class="mockup--desktop" src="../img/blog-zenchef_visuel-home.png" alt="Visuel du Blog Zenchef" draggable="false">
+            <div class="menu__footer">
+                <span class="copyright">Clémentine Bertrand © 2018</span>
+                <div class="links">
+                    <a class="link--behance" href="" target="_blank">
+                        <span>Behance</span>
+                    </a>
+                    <a class="link--dribbble" href="https://dribbble.com/cbertrand" target="_blank">
+                        <span>Dribbble</span>
+                    </a>
+                    <a class="link--linkedin" href="https://www.linkedin.com/in/clementinebertrand" target="_blank">
+                        <span>Linkedin</span>
+                    </a>
                 </div>
-                <img src="../img/blog-zenchef_letter.png" alt="B" draggable="false">
+                <div class="footer__contact">
+                    <span>Contactez-moi</span>
+                    <div class="contact__link">
+                        <a href="mailto:hello@clementinebertrand.fr">
+                            ✍️
+                        </a>
+                    </div>
+
+                </div>
             </div>
-            <div class="menu__projects"></div>
         </div>
 
-        <div class="menu__category menu__category--mobile">
-            <h2 onClick="redirectionProject('contact')">Contact</h2>
-            <p>En savoir plus</p>
-        </div>
+        <!-- SECTION -->
+        <section>
+            <div class="project__intro-wrapper">
+                <div class="project__intro">
+                    <h2>Présentation</h2>
+                    <p>Option A, you kill me right here and now. Apparently I've made that very easy for you. You can kill me,
+                        no witnesses and then spend the next few weeks or months tracking down Jesse Pinkman and you kill
+                        him too. A pointless exercise it.</p>
+                    <a class="btn" href="">Découvrir le projet</a>
+                </div>
+            </div>
 
-        <div class="menu__footer">
+            <div class="project__img__wrapper">
+                <div class="project__img">
+                    <img src="../img/btyd_project-01.png" alt="">
+                    <div class="img__background">
+                        <span></span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- NEXT PROJECT -->
+        <section>
+
+        </section>
+
+        <!-- FOOTER -->
+        <footer>
             <span class="copyright">Clémentine Bertrand © 2018</span>
             <div class="links">
                 <a class="link--behance" href="" target="_blank">
@@ -113,61 +167,9 @@
                         ✍️
                     </a>
                 </div>
-
             </div>
-        </div>
+        </footer>
     </div>
-
-    <!-- SECTION -->
-    <section>
-        <div class="project__intro-wrapper">
-            <div class="project__intro">
-                <h2>Présentation</h2>
-                <p>Option A, you kill me right here and now. Apparently I've made that very easy for you. You can kill me, no
-                    witnesses and then spend the next few weeks or months tracking down Jesse Pinkman and you kill him too.
-                    A pointless exercise it.</p>
-                <a class="btn" href="">Découvrir le projet</a>
-            </div>
-        </div>
-
-        <div class="project__img__wrapper">
-            <div class="project__img">
-                <img src="../img/btyd_project-01.png" alt="">
-                <div class="img__background">
-                    <span></span>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- NEXT PROJECT -->
-    <section>
-
-    </section>
-
-    <!-- FOOTER -->
-    <footer>
-        <span class="copyright">Clémentine Bertrand © 2018</span>
-        <div class="links">
-            <a class="link--behance" href="" target="_blank">
-                <span>Behance</span>
-            </a>
-            <a class="link--dribbble" href="https://dribbble.com/cbertrand" target="_blank">
-                <span>Dribbble</span>
-            </a>
-            <a class="link--linkedin" href="https://www.linkedin.com/in/clementinebertrand" target="_blank">
-                <span>Linkedin</span>
-            </a>
-        </div>
-        <div class="footer__contact">
-            <span>Contactez-moi</span>
-            <div class="contact__link">
-                <a href="mailto:hello@clementinebertrand.fr">
-                    ✍️
-                </a>
-            </div>
-        </div>
-    </footer>
 
     <script src="../js/nav.js"></script>
     <script src="../js/script-project.js"></script>

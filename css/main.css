@@ -3693,8 +3693,9 @@ footer,
   background: linear-gradient(45deg, #1d7d90, #5dd5c3);
 }
 
-.project-page {
+.project-page > div {
   overflow-x: hidden;
+  position: relative;
 }
 
 .project-page .project__summary {
