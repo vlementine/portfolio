@@ -126,6 +126,9 @@
     color: $dark-blue-30;
     margin: 0;
   }
+  &.menu__category--mobile {
+    display: none;
+  }
 }
 
 .menu__projects-wrapper {
@@ -275,7 +278,8 @@
   }
 }
 
-.menu__project-title {}
+.menu__project-title {
+}
 
 //-------------------------------------
 //	FOOTER
@@ -979,7 +983,7 @@ footer,
 .project__description--mobile {
   text-align: center;
   margin-bottom: 30px;
-  &>div {
+  & > div {
     position: relative;
   }
 }
@@ -1298,11 +1302,11 @@ footer,
       position: absolute;
       opacity: 0;
       cursor: pointer;
-      &:checked~div {
+      &:checked ~ div {
         box-shadow: 0 4px 16px $dark-blue-10;
         @include transform(scale(1));
       }
-      &:not(:checked)~div {
+      &:not(:checked) ~ div {
         @include transform(scale(0.9));
         span,
         p {

@@ -185,6 +185,10 @@
   margin: 0;
 }
 
+.menu__category.menu__category--mobile {
+  display: none;
+}
+
 .menu__projects-wrapper {
   display: flex;
   justify-content: center;

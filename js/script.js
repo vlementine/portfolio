@@ -26,7 +26,6 @@ function responsive() {
     }
   }
 }
-}
 
 //-------------------------------------
 //	MAIN FUNCTION
@@ -86,7 +85,7 @@ function main() {
           } else if (document.querySelector('.contact__wrapper:not(.disable)')) {
             document.querySelector('.home').classList.add('disable');
             document.querySelector('.contact__wrapper').classList.add('disable');
-            setTimeout(function () {
+            setTimeout(function() {
               document.querySelector('#project-04').classList.add('enable');
               displayProject('#project-04');
             }, 500);
@@ -105,7 +104,7 @@ function main() {
           } else if (document.querySelector('.contact__wrapper:not(.disable)')) {
             document.querySelector('.home').classList.add('disable');
             document.querySelector('.contact__wrapper').classList.add('disable');
-            setTimeout(function () {
+            setTimeout(function() {
               document.querySelector('#project-04').classList.add('enable');
               displayProject('#project-04');
             }, 500);
@@ -191,7 +190,7 @@ function main() {
   if (urlNumber == 1 || urlNumber == 2 || urlNumber == 3 || urlNumber == 4) {
     document.querySelector('.home').classList.add('disable');
     document.querySelector('.contact__wrapper').classList.add('disable');
-    setTimeout(function () {
+    setTimeout(function() {
       document.querySelector('#project-0' + urlNumber).classList.add('enable');
       displayProject('#project-0' + urlNumber);
     }, 500);
@@ -211,7 +210,7 @@ function main() {
 //Redirection project page
 function redirectionProject() {
   document.querySelector('.white-screen').classList.add('redirect-page');
-  setTimeout(function () {
+  setTimeout(function() {
     window.location.href = './projects-page/project-page.html';
   }, 1500);
 }
