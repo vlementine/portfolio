@@ -21,6 +21,10 @@ body {
   &.menu-visible {
     overflow: hidden;
   }
+  & > div {
+    overflow-x: hidden;
+    position: relative;
+  }
 } 
 
 .visible-scrollbar,

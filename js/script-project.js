@@ -40,22 +40,24 @@ const projects = [
   }
 ];
 
-var menu_projects = '';
+var menuProjects = '';
 var menuProjectsMobile = '';
 
-projects.forEach(menu_project => {
-  menu_projects += `<div class="menu__project">
-                    <h3 onMouseenter="menuHoverProject(${menu_project.number}, '${
-    menu_project.image
-  }')" onClick="redirectToPageProject(${menu_project.number})">${menu_project.title}</h3>
-                    <span>${menu_project.keywords}</span>
+projects.forEach(menuProject => {
+  menuProjects += `<div class="menu__project">
+                    <h3 onMouseenter="menuHoverProject(${menuProject.number}, '${
+    menuProject.image
+  }')" onClick="redirectToPageProject(${menuProject.number})">${menuProject.title}</h3>
+                    <span>${menuProject.keywords}</span>
                   </div>`;
 });
 
-document.querySelector('.menu__projects').innerHTML = menu_projects;
+document.querySelector('.menu__projects').innerHTML = menuProjects;
 
 projects.forEach(menuProjectMobile => {
-  menuProjectsMobile += `<div class="menu__project--mobile">
+  menuProjectsMobile += `<div class="menu__project--mobile" onClick="redirectToPageProject(${
+    menuProjectMobile.number
+  })">
                           <div class="menu__project-info--mobile">
                               <div class="menu__project-visuel--mobile">
                                   <img src="../img/${menuProjectMobile.image}_letter.png" alt="">

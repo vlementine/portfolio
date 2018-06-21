@@ -28,6 +28,11 @@ body.menu-visible {
   overflow: hidden;
 }
 
+body > div {
+  overflow-x: hidden;
+  position: relative;
+}
+
 .visible-scrollbar,
 .invisible-scrollbar {
   display: block;
