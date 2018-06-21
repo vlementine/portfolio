@@ -208,7 +208,7 @@ function main() {
 }
 
 //Redirection project page
-function redirectionProject() {
+function redirectionProject(varURL) {
   document.querySelector('.white-screen').classList.add('redirect-page');
   setTimeout(function() {
     window.location.href = './projects-page/project-page.html';

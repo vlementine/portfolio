@@ -139,3 +139,38 @@ nav.forEach(itemNav => {
 </p>`;
 });
 document.querySelector('.nav__items').innerHTML = navigation;
+
+
+var menu_projects = '';
+var menuProjectsMobile = '';
+
+projects.forEach(menu_project => {
+  menu_projects += `<div class="menu__project">
+                    <h3 onMouseenter="menuHoverProject(${menu_project.number}, '${
+    menu_project.image
+  }')" onClick="redirectToPageProject(${menu_project.number})">${menu_project.title}</h3>
+                    <span>${menu_project.keywords}</span>
+                  </div>`;
+});
+
+document.querySelector('.menu__projects').innerHTML = menu_projects;
+
+projects.forEach(menuProjectMobile => {
+  menuProjectsMobile += `<div class="menu__project--mobile">
+                          <div class="menu__project-info--mobile">
+                              <div class="menu__project-visuel--mobile">
+                                  <img src="./img/${menuProjectMobile.image}_letter.png" alt="">
+                              </div>
+                              <div class="menu__project-title">
+                                  <h3>${menuProjectMobile.title}</h3>
+                                  <span>${menuProjectMobile.keywords}</span>
+                              </div>
+                          </div>
+
+                          <span class="nav__arrow nav__arrow--right" id="menu__project-${menuProjectMobile.number}">
+                              <span class="arrow__circle"></span>
+                          </span>
+                        </div>`;
+});
+
+document.querySelector('.menu__projects-wrapper--mobile').innerHTML = menuProjectsMobile;

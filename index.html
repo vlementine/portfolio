@@ -11,6 +11,8 @@
 </head>
 
 <body>
+
+  <span class="white-screen"></span>
   <!-- Button menu  -->
   <div class="menu-btn menu-btn-open" onclick="displayMenu()">
     <div class="menu__icon menu__icon--open enable">
@@ -28,15 +30,15 @@
   <div class="menu__wrapper disable">
     <div class="menu__categories">
       <div class="menu__category">
-        <h2 onClick="redirectionProject('home')">Accueil</h2>
+        <h2 onClick="navMenu('home')">Accueil</h2>
         <p>Présentation</p>
       </div>
       <div class="menu__category">
-        <h2 onClick="redirectionProject('work')">Projets</h2>
+        <h2 onClick="navMenu('work')">Projets</h2>
         <p>Découvrez mes travaux</p>
       </div>
       <div class="menu__category">
-        <h2 onClick="redirectionProject('contact')">Contact</h2>
+        <h2 onClick="navMenu('contact')">Contact</h2>
         <p>En savoir plus</p>
       </div>
     </div>
@@ -46,15 +48,15 @@
     <div class="menu__projects-wrapper">
       <div class="menu__project-visuel">
         <div class="visuel__mockup">
-          <img class="mockup--desktop" src="../img/blog-zenchef_visuel-home.png" alt="Visuel du Blog Zenchef" draggable="false">
+          <img class="mockup--desktop" src="./img/btyd_visuel-home.png" alt="Visuel du Blog Zenchef" draggable="false">
         </div>
-        <img src="../img/blog-zenchef_letter.png" alt="B" draggable="false">
+        <img src="./img/btyd_letter.png" alt="B" draggable="false">
       </div>
       <div class="menu__projects"></div>
     </div>
 
     <div class="menu__category menu__category--mobile">
-      <h2 onClick="redirectionProject('contact')">Contact</h2>
+      <h2 onClick="navMenu('contact')">Contact</h2>
       <p>En savoir plus</p>
     </div>
 
@@ -108,7 +110,6 @@
       </div>
     </div>
     <div class="projects"></div>
-    <span class="white-screen"></span>
   </section>
 
   <!-- CONTACT -->

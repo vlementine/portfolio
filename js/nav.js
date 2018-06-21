@@ -272,9 +272,17 @@ function navMenu(param) {
 function menuHoverProject(number, name) {
   document.querySelector('.menu__project-visuel').classList.add('hide');
   setTimeout(function() {
-    document.querySelector('.menu__project-visuel .mockup--desktop').src = '../img/' + name + '_visuel-home.png';
-    document.querySelector('.menu__project-visuel .visuel__mockup+img').src = '../img/' + name + '_letter.png';
-    document.querySelector('.menu__project-visuel').id = 'menu__project-0' + number;
+    let urlPlop = window.location.href;
+    let positionSlash = urlPlop.lastIndexOf('/') + 1;
+    if (urlPlop.substring(positionSlash) === 'index.html') {
+      document.querySelector('.menu__project-visuel .mockup--desktop').src = './img/' + name + '_visuel-home.png';
+      document.querySelector('.menu__project-visuel .visuel__mockup+img').src = './img/' + name + '_letter.png';
+      document.querySelector('.menu__project-visuel').id = 'menu__project-0' + number;
+    } else {
+      document.querySelector('.menu__project-visuel .mockup--desktop').src = '../img/' + name + '_visuel-home.png';
+      document.querySelector('.menu__project-visuel .visuel__mockup+img').src = '../img/' + name + '_letter.png';
+      document.querySelector('.menu__project-visuel').id = 'menu__project-0' + number;
+    }
   }, 500);
   setTimeout(function() {
     document.querySelector('.menu__project-visuel').classList.remove('hide');
@@ -284,6 +292,12 @@ function menuHoverProject(number, name) {
 function redirectToPageProject(varURL) {
   document.querySelector('.white-screen').classList.add('redirect-page');
   setTimeout(function() {
-    window.location.href = './project-page--' + varURL + 'html';
+    let urlPlop = window.location.href;
+    let positionSlash = urlPlop.lastIndexOf('/') + 1;
+    if (urlPlop.substring(positionSlash) === 'index.html') {
+      window.location.href = './projects-page/project-page--' + varURL + '.html';
+    } else {
+      window.location.href = './project-page--' + varURL + '.html';
+    }
   }, 1500);
 }

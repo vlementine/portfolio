@@ -263,6 +263,7 @@
   display: flex;
   flex-direction: column;
   justify-content: center;
+  align-items: flex-start;
   margin-left: 15px;
   h3 {
     font-family: 'Playfair Display', serif;
@@ -625,7 +626,7 @@ footer,
   transform: translate(-130%, 0) matrix(1, 0, -0.5, 1, 0, 0);
 }
 
-.project-page .white-screen {
+.white-screen {
   transform: translate(130%, 0) matrix(1, 0, 0.5, 1, 0, 0);
 }
 
@@ -663,7 +664,7 @@ footer,
 #project-01 .project__visuel,
 .project--mobile#project-01 .project__content,
 .menu__projects-wrapper .menu__project-visuel#menu__project-01,
-.menu__projects .menu__project:nth-child(1) h3:after {
+.menu__projects .menu__project:nth-child(1) h3:after, .menu__project--mobile:nth-child(1) .menu__project-visuel--mobile {
   background: $gradient-project-01;
 }
 
@@ -678,7 +679,7 @@ footer,
   .arrow__circle {
     background: lighten($project-01, 30%);
     &:after {
-      background: lighten($project-01, 40%);
+      background: lighten($project-01, 45%);
     }
   }
 }
@@ -686,7 +687,7 @@ footer,
 #project-02 .project__visuel,
 .project--mobile#project-02 .project__content,
 .menu__projects-wrapper .menu__project-visuel#menu__project-02,
-.menu__projects .menu__project:nth-child(2) h3:after {
+.menu__projects .menu__project:nth-child(2) h3:after, .menu__project--mobile:nth-child(2) .menu__project-visuel--mobile {
   background: $gradient-project-02;
 }
 
@@ -703,9 +704,9 @@ footer,
 .nav__arrow#menu__project-02 {
   border-color: $project-02;
   .arrow__circle {
-    background: lighten($project-02, 30%);
+    background: lighten($project-02, 10%);
     &:after {
-      background: lighten($project-02, 40%);
+      background: lighten($project-02, 20%);
     }
   }
 }
@@ -713,7 +714,7 @@ footer,
 #project-03 .project__visuel,
 .project--mobile#project-03 .project__content,
 .menu__projects-wrapper .menu__project-visuel#menu__project-03,
-.menu__projects .menu__project:nth-child(3) h3:after {
+.menu__projects .menu__project:nth-child(3) h3:after, .menu__project--mobile:nth-child(3) .menu__project-visuel--mobile {
   background: $gradient-project-03;
 }
 
@@ -732,7 +733,7 @@ footer,
   .arrow__circle {
     background: lighten($project-03, 30%);
     &:after {
-      background: lighten($project-03, 40%);
+      background: lighten($project-03, 45%);
     }
   }
 }
@@ -740,7 +741,7 @@ footer,
 #project-04 .project__visuel,
 .project--mobile#project-04 .project__content,
 .menu__projects-wrapper .menu__project-visuel#menu__project-04,
-.menu__projects .menu__project:nth-child(4) h3:after {
+.menu__projects .menu__project:nth-child(4) h3:after, .menu__project--mobile:nth-child(4) .menu__project-visuel--mobile {
   background: $gradient-project-04;
 }
 
@@ -759,7 +760,7 @@ footer,
   .arrow__circle {
     background: lighten($project-04, 30%);
     &:after {
-      background: lighten($project-04, 40%);
+      background: lighten($project-04, 45%);
     }
   }
 }

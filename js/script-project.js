@@ -47,7 +47,7 @@ projects.forEach(menu_project => {
   menu_projects += `<div class="menu__project">
                     <h3 onMouseenter="menuHoverProject(${menu_project.number}, '${
     menu_project.image
-  }')" onClick="redirectToPageProject(2)">${menu_project.title}</h3>
+  }')" onClick="redirectToPageProject(${menu_project.number})">${menu_project.title}</h3>
                     <span>${menu_project.keywords}</span>
                   </div>`;
 });
