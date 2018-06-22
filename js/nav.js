@@ -122,6 +122,8 @@ function navDesktop(direction = null, param = null) {
     param = parseInt(document.querySelector('.project.enable').id.split('-')[1]) + 2;
   } else if (param === null && direction === 'prev') {
     param = parseInt(document.querySelector('.project.enable').id.split('-')[1]);
+  } else {
+    console.log('Plop navDesktop')
   }
 
   //Get the total of item of nav
