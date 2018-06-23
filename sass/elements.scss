@@ -144,7 +144,7 @@
     position: relative;
     width: 400px;
     height: 100%;
-    background: $gradient-primary;
+    background: $gradient-project-01;
     border-radius: 2px;
     box-shadow: 0 2px 16px rgba(0, 0, 0, 0.2);
     margin-right: 50px;
@@ -279,8 +279,7 @@
   }
 }
 
-.menu__project-title {
-}
+.menu__project-title {}
 
 //-------------------------------------
 //	FOOTER
@@ -663,18 +662,21 @@ footer,
 
 #project-01 .project__visuel,
 .project--mobile#project-01 .project__content,
-.menu__projects-wrapper .menu__project-visuel#menu__project-01,
-.menu__projects .menu__project:nth-child(1) h3:after, .menu__project--mobile:nth-child(1) .menu__project-visuel--mobile {
+.menu__projects .menu__project:nth-child(1) h3:after,
+#menu__project-01 .menu__project-visuel--mobile,
+.menu__projects-wrapper #menu__project-01,
+.project-page#project-01 header {
   background: $gradient-project-01;
 }
 
-#project-01 .description__number-wrapper--mobile .description__number--mobile {
+#project-01 .description__number-wrapper--mobile .description__number--mobile,
+.project-page#project-01 .project__summary .summary__type .type {
   background: $gradient-project-01;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
 
-.nav__arrow#menu__project-01 {
+#menu__project-01 .nav__arrow {
   border-color: $project-01;
   .arrow__circle {
     background: lighten($project-01, 30%);
@@ -686,12 +688,15 @@ footer,
 
 #project-02 .project__visuel,
 .project--mobile#project-02 .project__content,
-.menu__projects-wrapper .menu__project-visuel#menu__project-02,
-.menu__projects .menu__project:nth-child(2) h3:after, .menu__project--mobile:nth-child(2) .menu__project-visuel--mobile {
+.menu__projects .menu__project:nth-child(2) h3:after,
+#menu__project-02 .menu__project-visuel--mobile,
+.menu__projects-wrapper #menu__project-02,
+.project-page#project-02 header {
   background: $gradient-project-02;
 }
 
-#project-02 .description__number-wrapper--mobile .description__number--mobile {
+#project-02 .description__number-wrapper--mobile .description__number--mobile,
+.project-page#project-02 .project__summary .summary__type .type {
   background: $gradient-project-02;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -701,7 +706,7 @@ footer,
   content: '02.';
 }
 
-.nav__arrow#menu__project-02 {
+#menu__project-02 .nav__arrow {
   border-color: $project-02;
   .arrow__circle {
     background: lighten($project-02, 10%);
@@ -713,12 +718,15 @@ footer,
 
 #project-03 .project__visuel,
 .project--mobile#project-03 .project__content,
-.menu__projects-wrapper .menu__project-visuel#menu__project-03,
-.menu__projects .menu__project:nth-child(3) h3:after, .menu__project--mobile:nth-child(3) .menu__project-visuel--mobile {
+.menu__projects .menu__project:nth-child(3) h3:after,
+#menu__project-03 .menu__project-visuel--mobile,
+.menu__projects-wrapper #menu__project-03,
+.project-page#project-03 header {
   background: $gradient-project-03;
 }
 
-#project-03 .description__number-wrapper--mobile .description__number--mobile {
+#project-03 .description__number-wrapper--mobile .description__number--mobile,
+.project-page#project-03 .project__summary .summary__type .type {
   background: $gradient-project-03;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -728,7 +736,7 @@ footer,
   content: '03.';
 }
 
-.nav__arrow#menu__project-03 {
+#menu__project-03 .nav__arrow {
   border-color: $project-03;
   .arrow__circle {
     background: lighten($project-03, 30%);
@@ -740,8 +748,10 @@ footer,
 
 #project-04 .project__visuel,
 .project--mobile#project-04 .project__content,
-.menu__projects-wrapper .menu__project-visuel#menu__project-04,
-.menu__projects .menu__project:nth-child(4) h3:after, .menu__project--mobile:nth-child(4) .menu__project-visuel--mobile {
+.menu__projects .menu__project:nth-child(4) h3:after,
+#menu__project-04 .menu__project-visuel--mobile,
+.menu__projects-wrapper #menu__project-04,
+.project-page#project-04 header {
   background: $gradient-project-04;
 }
 
@@ -749,13 +759,14 @@ footer,
   content: '04.';
 }
 
-#project-04 .description__number-wrapper--mobile .description__number--mobile {
+#project-04 .description__number-wrapper--mobile .description__number--mobile,
+.project-page#project-04 .project__summary .summary__type .type {
   background: $gradient-project-04;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
 
-.nav__arrow#menu__project-04 {
+#menu__project-04 .nav__arrow {
   border-color: $project-04;
   .arrow__circle {
     background: lighten($project-04, 30%);
@@ -984,7 +995,7 @@ footer,
 .project__description--mobile {
   text-align: center;
   margin-bottom: 30px;
-  & > div {
+  &>div {
     position: relative;
   }
 }
@@ -1303,11 +1314,11 @@ footer,
       position: absolute;
       opacity: 0;
       cursor: pointer;
-      &:checked ~ div {
+      &:checked~div {
         box-shadow: 0 4px 16px $dark-blue-10;
         @include transform(scale(1));
       }
-      &:not(:checked) ~ div {
+      &:not(:checked)~div {
         @include transform(scale(0.9));
         span,
         p {

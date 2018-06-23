@@ -92,18 +92,6 @@
   background-image: url(../img/noise-pattern.png);
 }
 
-#project-01 header {
-  background: linear-gradient(45deg, #1d7d90, #5dd5c3);
-}
-
-#project-02 header {
-  background: linear-gradient(45deg, #1d7d90, #5dd5c3);
-}
-
-#project-03 header {
-  background: linear-gradient(45deg, #1d7d90, #5dd5c3);
-}
-
 .project-page .project__summary {
   text-align: center;
   overflow: hidden;
@@ -326,6 +314,37 @@
   -ms-animation: 0.8s imgProject ease-in-out forwards 3s;
   -o-transition: 0.8s imgProject ease-in-out forwards 3s;
   animation: 0.8s imgProject ease-in-out forwards 3s;
+}
+
+.next-project__wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: rgba(6, 10, 46, 0.05);
+  border: 1px solid rgba(6, 10, 46, 0.1);
+  border-radius: 2px;
+  padding: 50px;
+  width: calc(100% - 100px);
+}
+
+.next-project__info p {
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  color: rgba(6, 10, 46, 0.3);
+  margin: 0;
+}
+
+.next-project__info h3 {
+  font-family: 'Playfair Display', serif;
+  font-weight: 900;
+  font-size: 2rem;
+  color: rgba(6, 10, 46, 0.8);
+  margin: -5px 0 10px;
+}
+
+.next-project__visuel img {
+  margin-top: -130px;
+  max-width: 400px;
 }
 
 .project-page footer,

@@ -177,13 +177,11 @@
     }
   }
   //-- MENU
-  .menu__projects-wrapper,
-  .menu__category:nth-child(3) {
+  .menu__projects-wrapper {
     display: none;
   }
 
-  .menu__projects-wrapper--mobile,
-  .menu__category.menu__category--mobile {
+  .menu__projects-wrapper--mobile {
     display: block;
     text-align: center;
   }
@@ -192,5 +190,8 @@
     flex-direction: column;
     height: auto;
     padding: 40px 0;
+  }
+  .menu__category {
+    margin: 10px auto;
   }
 }

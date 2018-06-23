@@ -204,7 +204,7 @@
   position: relative;
   width: 400px;
   height: 100%;
-  background: linear-gradient(45deg, rgba(34, 135, 182, 0.6), #2286b6);
+  background: linear-gradient(45deg, #1d7d90, #5dd5c3);
   border-radius: 2px;
   box-shadow: 0 2px 16px rgba(0, 0, 0, 0.2);
   margin-right: 50px;
@@ -269,7 +269,7 @@
   z-index: -1;
   position: absolute;
   display: block;
-  background: linear-gradient(45deg, rgba(34, 135, 182, 0.6), #2286b6);
+  background: linear-gradient(45deg, #7BB7D4, #2286b6);
   height: 13px;
   width: 100%;
   opacity: 0.1;
@@ -332,7 +332,7 @@
   height: 40px;
   border-radius: 2px;
   box-shadow: 0 2px 16px rgba(6, 10, 46, 0.2);
-  background: linear-gradient(45deg, rgba(34, 135, 182, 0.6), #2286b6);
+  background: linear-gradient(45deg, #7BB7D4, #2286b6);
 }
 
 .menu__project-visuel--mobile img {
@@ -866,37 +866,43 @@ footer,
 
 #project-01 .project__visuel,
 .project--mobile#project-01 .project__content,
-.menu__projects-wrapper .menu__project-visuel#menu__project-01,
-.menu__projects .menu__project:nth-child(1) h3:after, .menu__project--mobile:nth-child(1) .menu__project-visuel--mobile {
+.menu__projects .menu__project:nth-child(1) h3:after,
+#menu__project-01 .menu__project-visuel--mobile,
+.menu__projects-wrapper #menu__project-01,
+.project-page#project-01 header {
   background: linear-gradient(45deg, #1d7d90, #5dd5c3);
 }
 
-#project-01 .description__number-wrapper--mobile .description__number--mobile {
+#project-01 .description__number-wrapper--mobile .description__number--mobile,
+.project-page#project-01 .project__summary .summary__type .type {
   background: linear-gradient(45deg, #1d7d90, #5dd5c3);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
 
-.nav__arrow#menu__project-01 {
+#menu__project-01 .nav__arrow {
   border-color: #2286b6;
 }
 
-.nav__arrow#menu__project-01 .arrow__circle {
+#menu__project-01 .nav__arrow .arrow__circle {
   background: #88c9e9;
 }
 
-.nav__arrow#menu__project-01 .arrow__circle:after {
+#menu__project-01 .nav__arrow .arrow__circle:after {
   background: #c9e7f5;
 }
 
 #project-02 .project__visuel,
 .project--mobile#project-02 .project__content,
-.menu__projects-wrapper .menu__project-visuel#menu__project-02,
-.menu__projects .menu__project:nth-child(2) h3:after, .menu__project--mobile:nth-child(2) .menu__project-visuel--mobile {
+.menu__projects .menu__project:nth-child(2) h3:after,
+#menu__project-02 .menu__project-visuel--mobile,
+.menu__projects-wrapper #menu__project-02,
+.project-page#project-02 header {
   background: linear-gradient(45deg, #f59e64, #eb5160);
 }
 
-#project-02 .description__number-wrapper--mobile .description__number--mobile {
+#project-02 .description__number-wrapper--mobile .description__number--mobile,
+.project-page#project-02 .project__summary .summary__type .type {
   background: linear-gradient(45deg, #f59e64, #eb5160);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -906,27 +912,30 @@ footer,
   content: '02.';
 }
 
-.nav__arrow#menu__project-02 {
+#menu__project-02 .nav__arrow {
   border-color: #F59E64;
 }
 
-.nav__arrow#menu__project-02 .arrow__circle {
+#menu__project-02 .nav__arrow .arrow__circle {
   background: #f8bc94;
 }
 
-.nav__arrow#menu__project-02 .arrow__circle:after {
+#menu__project-02 .nav__arrow .arrow__circle:after {
   background: #fbdac4;
 }
 
 #project-03 .project__visuel,
 .project--mobile#project-03 .project__content,
-.menu__projects-wrapper .menu__project-visuel#menu__project-03,
-.menu__projects .menu__project:nth-child(3) h3:after, .menu__project--mobile:nth-child(3) .menu__project-visuel--mobile {
-  background: linear-gradient(45deg, rgba(34, 135, 182, 0.6), #2286b6);
+.menu__projects .menu__project:nth-child(3) h3:after,
+#menu__project-03 .menu__project-visuel--mobile,
+.menu__projects-wrapper #menu__project-03,
+.project-page#project-03 header {
+  background: linear-gradient(45deg, #7BB7D4, #2286b6);
 }
 
-#project-03 .description__number-wrapper--mobile .description__number--mobile {
-  background: linear-gradient(45deg, rgba(34, 135, 182, 0.6), #2286b6);
+#project-03 .description__number-wrapper--mobile .description__number--mobile,
+.project-page#project-03 .project__summary .summary__type .type {
+  background: linear-gradient(45deg, #7BB7D4, #2286b6);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
@@ -935,44 +944,47 @@ footer,
   content: '03.';
 }
 
-.nav__arrow#menu__project-03 {
+#menu__project-03 .nav__arrow {
   border-color: #2286b6;
 }
 
-.nav__arrow#menu__project-03 .arrow__circle {
+#menu__project-03 .nav__arrow .arrow__circle {
   background: #88c9e9;
 }
 
-.nav__arrow#menu__project-03 .arrow__circle:after {
+#menu__project-03 .nav__arrow .arrow__circle:after {
   background: #c9e7f5;
 }
 
 #project-04 .project__visuel,
 .project--mobile#project-04 .project__content,
-.menu__projects-wrapper .menu__project-visuel#menu__project-04,
-.menu__projects .menu__project:nth-child(4) h3:after, .menu__project--mobile:nth-child(4) .menu__project-visuel--mobile {
-  background: linear-gradient(45deg, #1d7d90, #5dd5c3);
+.menu__projects .menu__project:nth-child(4) h3:after,
+#menu__project-04 .menu__project-visuel--mobile,
+.menu__projects-wrapper #menu__project-04,
+.project-page#project-04 header {
+  background: linear-gradient(45deg, #2FA4D4, #5DD4D5);
 }
 
 #project-04 .description__number-wrapper--mobile .description__number--mobile:after {
   content: '04.';
 }
 
-#project-04 .description__number-wrapper--mobile .description__number--mobile {
-  background: linear-gradient(45deg, #1d7d90, #5dd5c3);
+#project-04 .description__number-wrapper--mobile .description__number--mobile,
+.project-page#project-04 .project__summary .summary__type .type {
+  background: linear-gradient(45deg, #2FA4D4, #5DD4D5);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
 
-.nav__arrow#menu__project-04 {
+#menu__project-04 .nav__arrow {
   border-color: #2286b6;
 }
 
-.nav__arrow#menu__project-04 .arrow__circle {
+#menu__project-04 .nav__arrow .arrow__circle {
   background: #88c9e9;
 }
 
-.nav__arrow#menu__project-04 .arrow__circle:after {
+#menu__project-04 .nav__arrow .arrow__circle:after {
   background: #c9e7f5;
 }
 
@@ -985,7 +997,7 @@ footer,
   position: relative;
   z-index: 24;
   margin-right: 15px;
-  background: linear-gradient(45deg, rgba(34, 135, 182, 0.6), #2286b6);
+  background: linear-gradient(45deg, #7BB7D4, #2286b6);
   background-size: 400% 400%;
   border-radius: 4px;
   box-shadow: 0 0 16px rgba(6, 10, 46, 0.2);
@@ -1275,7 +1287,7 @@ footer,
   width: calc(100vw - 30px);
   margin: 15px;
   padding: 20px 20px 90px 20px;
-  background: linear-gradient(45deg, rgba(34, 135, 182, 0.6), #2286b6);
+  background: linear-gradient(45deg, #7BB7D4, #2286b6);
   background-size: 400% 400%;
   border-radius: 4px;
   box-shadow: 0 0 16px rgba(6, 10, 46, 0.2);
@@ -1361,7 +1373,7 @@ footer,
   font-family: 'Work Sans', sans-serif;
   font-weight: 700;
   font-size: 6.5rem;
-  background: linear-gradient(45deg, rgba(34, 135, 182, 0.6), #2286b6);
+  background: linear-gradient(45deg, #7BB7D4, #2286b6);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
@@ -1639,7 +1651,7 @@ footer,
   flex-basis: 50%;
   position: relative;
   z-index: 24;
-  background: linear-gradient(45deg, rgba(34, 135, 182, 0.6), #2286b6);
+  background: linear-gradient(45deg, #7BB7D4, #2286b6);
   background-size: 400% 400%;
   border-radius: 4px;
   box-shadow: 0 0 16px rgba(6, 10, 46, 0.2);

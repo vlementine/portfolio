@@ -26,7 +26,7 @@ const projects = [
     keywords: 'User Interface • Webdoc',
     description:
       "Option A, you kill me right here and now. Apparently I've made that very easy for you. You can kill me, no witnesses and then spend the next few weeks or months tracking down Jesse Pinkman and you kill him too. A pointless exercise it seems…",
-    image: 'btyd',
+    image: 'alcatraz',
     href: ' '
   },
   {
@@ -35,7 +35,7 @@ const projects = [
     keywords: 'User Interface • Concert',
     description:
       "Option A, you kill me right here and now. Apparently I've made that very easy for you. You can kill me, no witnesses and then spend the next few weeks or months tracking down Jesse Pinkman and you kill him too. A pointless exercise it seems…",
-    image: 'btyd',
+    image: 'maroquinerie',
     href: ' '
   }
 ];
@@ -55,7 +55,7 @@ projects.forEach(menuProject => {
 document.querySelector('.menu__projects').innerHTML = menuProjects;
 
 projects.forEach(menuProjectMobile => {
-  menuProjectsMobile += `<div class="menu__project--mobile" onClick="redirectToPageProject(${
+  menuProjectsMobile += `<div class="menu__project--mobile" id="menu__project-${menuProjectMobile.number}" onClick="redirectToPageProject(${
     menuProjectMobile.number
   })">
                           <div class="menu__project-info--mobile">
@@ -68,7 +68,7 @@ projects.forEach(menuProjectMobile => {
                               </div>
                           </div>
 
-                          <span class="nav__arrow nav__arrow--right" id="menu__project-${menuProjectMobile.number}">
+                          <span class="nav__arrow nav__arrow--right">
                               <span class="arrow__circle"></span>
                           </span>
                         </div>`;

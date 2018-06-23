@@ -69,18 +69,6 @@
   }
 }
 
-#project-01 header {
-  background: linear-gradient(45deg, #1d7d90, #5dd5c3);
-}
-
-#project-02 header {
-  background: linear-gradient(45deg, #1d7d90, #5dd5c3);
-}
-
-#project-03 header {
-  background: linear-gradient(45deg, #1d7d90, #5dd5c3);
-}
-
 .project-page {
   .project__summary {
     text-align: center;
@@ -255,6 +243,43 @@
         @include animation(0.8s imgProject ease-in-out forwards 3s);
       }
     }
+  }
+}
+
+//-------------------------------------
+//	NEXT PROJECT
+//-------------------------------------
+.next-project__wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: $dark-blue-05;
+  border: 1px solid $dark-blue-10;
+  border-radius: 2px;
+  padding: 50px;
+  width: calc(100% - 100px);
+}
+
+.next-project__info {
+  p {
+    font-size: 0.75rem;
+    text-transform: uppercase;
+    color: $dark-blue-30;
+    margin: 0;
+  }
+  h3 {
+    font-family: 'Playfair Display', serif;
+    font-weight: 900;
+    font-size: 2rem;
+    color: $dark-blue-80;
+    margin: -5px 0 10px;
+  }
+}
+
+.next-project__visuel {
+  img {
+    margin-top: -130px;
+    max-width: 400px;
   }
 }
 

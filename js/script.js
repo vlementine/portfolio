@@ -97,7 +97,8 @@ function main() {
           //Home
           if (
             document.querySelector('.nav__items p:nth-child(1):not(.item--active)') &&
-            document.querySelector('.contact__wrapper.disable')
+            document.querySelector('.contact__wrapper.disable') && 
+            document.querySelector('.home.disable')
           ) {
             navDesktop(direction);
             //Projects
