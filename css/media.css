@@ -115,6 +115,21 @@
   .menu__footer .links {
     order: 1;
   }
+  section.next-project__wrapper {
+    flex-direction: column-reverse;
+    justify-content: flex-start;
+    align-items: flex-start;
+    margin-top: 170px;
+  }
+  .next-project__visuel {
+    text-align: center;
+    width: 100%;
+  }
+  .next-project__visuel img {
+    max-width: 400px;
+    width: 100%;
+    margin: -220px auto 20px;
+  }
 }
 
 @media screen and (max-width: 650px) {

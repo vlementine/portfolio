@@ -113,6 +113,21 @@
     .links {
       order: 1;
     }
+  } //-- NEXT PAGE
+  section.next-project__wrapper {
+    flex-direction: column-reverse;
+    justify-content: flex-start;
+    align-items: flex-start;
+    margin-top: 170px;
+  }
+  .next-project__visuel {
+    text-align: center;
+    width: 100%;
+    img {
+      max-width: 400px;
+      width: 100%;
+      margin: -220px auto 20px;
+    }
   }
 }
 
@@ -175,17 +190,14 @@
       width: 100%;
       margin: -70px auto 0 auto;
     }
-  }
-  //-- MENU
+  } //-- MENU
   .menu__projects-wrapper {
     display: none;
   }
-
   .menu__projects-wrapper--mobile {
     display: block;
     text-align: center;
   }
-
   .menu__categories {
     flex-direction: column;
     height: auto;
