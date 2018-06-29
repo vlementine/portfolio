@@ -16,7 +16,7 @@ const projects = [
     title: 'Le Blog Zenchef',
     keywords: 'User Interface • Blog',
     description:
-      "Option A, you kill me right here and now. Apparently I've made that very easy for you. You can kill me, no witnesses and then spend the next few weeks or months tracking down Jesse Pinkman and you kill him too. A pointless exercise it seems…",
+      "Option A, you kill me right here and now. Apparently I've made that very easy for you. You can kill me, no witnesses and then spend the next few weeks or months tracking down Jesse Pinkman and you kill him too. A pointless exercise.",
     image: 'blog-zenchef',
     href: ' '
   },
@@ -34,7 +34,7 @@ const projects = [
     title: 'La Maroquinerie',
     keywords: 'User Interface • Concert',
     description:
-      "Option A, you kill me right here and now. Apparently I've made that very easy for you. You can kill me, no witnesses and then spend the next few weeks or months tracking down Jesse Pinkman and you kill him too. A pointless exercise it seems…",
+      "Option A, you kill me right here and now. Apparently I've made that very easy for you. You can kill me, no witnesses and then spend the next few weeks or months tracking down Jesse Pinkman and you kill him too.",
     image: 'maroquinerie',
     href: ' '
   }
@@ -55,9 +55,9 @@ projects.forEach(menuProject => {
 document.querySelector('.menu__projects').innerHTML = menuProjects;
 
 projects.forEach(menuProjectMobile => {
-  menuProjectsMobile += `<div class="menu__project--mobile" id="menu__project-${menuProjectMobile.number}" onClick="redirectToPageProject(${
+  menuProjectsMobile += `<div class="menu__project--mobile" id="menu__project-${
     menuProjectMobile.number
-  })">
+  }" onClick="redirectToPageProject(${menuProjectMobile.number})">
                           <div class="menu__project-info--mobile">
                               <div class="menu__project-visuel--mobile">
                                   <img src="../img/${menuProjectMobile.image}_letter.png" alt="">
@@ -76,6 +76,8 @@ projects.forEach(menuProjectMobile => {
 
 document.querySelector('.menu__projects-wrapper--mobile').innerHTML = menuProjectsMobile;
 
+
+
 //-------------------------------------
 //	MAIN FUNCTION
 //-------------------------------------
@@ -90,14 +92,21 @@ function main() {
   document.querySelector('.project__intro').classList.add('enable');
   document.querySelector('.project__img span').classList.add('enable');
   document.querySelector('.project__img img').classList.add('enable');
+
+  displayContentPage(2);
+}
+
+const displayContentPage = idProject => {
+  document.querySelector('.project__summary h1').innerText = projects[idProject].title;
+  document.querySelector('.project__intro p').innerText = projects[idProject].description;
 }
 
 //Redirection project page
-function redirectionProject(varURL) {
+const redirectionProject = varURL => {
   document.querySelector('.white-screen').style.display = 'block';
   document.querySelector('.white-screen').classList.add('redirect-page');
-  setTimeout(function() {
+  setTimeout(() => {
     window.location.href = '../index.html#' + varURL;
   }, 1500);
-}
+};
 document.onload = main();

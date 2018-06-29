@@ -85,7 +85,7 @@ const main = () => {
           } else if (document.querySelector('.contact__wrapper:not(.disable)')) {
             document.querySelector('.home').classList.add('disable');
             document.querySelector('.contact__wrapper').classList.add('disable');
-            setTimeout(function() {
+            setTimeout(() => {
               document.querySelector('#project-04').classList.add('enable');
               displayProject('#project-04');
             }, 500);
@@ -210,7 +210,7 @@ const main = () => {
 };
 
 //Redirection project page
-redirectionProject = varURL => {
+ const redirectionProject = varURL => {
   document.querySelector('.white-screen').classList.add('redirect-page');
   setTimeout(() => {
     window.location.href = './projects-page/project-page--' + varURL + '.html';
