@@ -9,7 +9,7 @@ const projects = [
     description:
       "Option A, you kill me right here and now. Apparently I've made that very easy for you. You can kill me, no witnesses and then spend the next few weeks or months tracking down Jesse Pinkman and you kill him too. A pointless exercise it seems…",
     image: 'btyd',
-    href: ' '
+    link: ' '
   },
   {
     number: '02',
@@ -18,7 +18,7 @@ const projects = [
     description:
       "Option A, you kill me right here and now. Apparently I've made that very easy for you. You can kill me, no witnesses and then spend the next few weeks or months tracking down Jesse Pinkman and you kill him too. A pointless exercise.",
     image: 'blog-zenchef',
-    href: ' '
+    link: ' '
   },
   {
     number: '03',
@@ -27,7 +27,7 @@ const projects = [
     description:
       "Option A, you kill me right here and now. Apparently I've made that very easy for you. You can kill me, no witnesses and then spend the next few weeks or months tracking down Jesse Pinkman and you kill him too. A pointless exercise it seems…",
     image: 'alcatraz',
-    href: ' '
+    link: ' '
   },
   {
     number: '04',
@@ -36,7 +36,7 @@ const projects = [
     description:
       "Option A, you kill me right here and now. Apparently I've made that very easy for you. You can kill me, no witnesses and then spend the next few weeks or months tracking down Jesse Pinkman and you kill him too.",
     image: 'maroquinerie',
-    href: ' '
+    link: ' '
   }
 ];
 
@@ -93,12 +93,17 @@ function main() {
   document.querySelector('.project__img span').classList.add('enable');
   document.querySelector('.project__img img').classList.add('enable');
 
-  displayContentPage(2);
+
+  //Traiter l'url pour générer le bon contenu automatiuement
+  displayContentPage(0);
 }
 
 const displayContentPage = idProject => {
   document.querySelector('.project__summary h1').innerText = projects[idProject].title;
   document.querySelector('.project__intro p').innerText = projects[idProject].description;
+  document.querySelector('.project__intro a.btn').href = projects[idProject].link;
+  document.querySelector('.project__img img').src = '../img/' + projects[idProject].image + '_project-01.png';
+  //document.querySelector('.next-project__visuel img').src = '../img/' + projects[idProject].image + '_next-project.png';
 }
 
 //Redirection project page
