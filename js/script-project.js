@@ -1,13 +1,11 @@
 //-------------------------------------
 //	JSON
 //-------------------------------------
-const projects = [
-  {
+const projects = [{
     number: '01',
     title: 'Back to your dream',
     keywords: 'User Interface • Animation',
-    description:
-      "Option A, you kill me right here and now. Apparently I've made that very easy for you. You can kill me, no witnesses and then spend the next few weeks or months tracking down Jesse Pinkman and you kill him too. A pointless exercise it seems…",
+    description: "Option A, you kill me right here and now. Apparently I've made that very easy for you. You can kill me, no witnesses and then spend the next few weeks or months tracking down Jesse Pinkman and you kill him too. A pointless exercise it seems…",
     image: 'btyd',
     link: ' '
   },
@@ -15,8 +13,7 @@ const projects = [
     number: '02',
     title: 'Le Blog Zenchef',
     keywords: 'User Interface • Blog',
-    description:
-      "Option A, you kill me right here and now. Apparently I've made that very easy for you. You can kill me, no witnesses and then spend the next few weeks or months tracking down Jesse Pinkman and you kill him too. A pointless exercise.",
+    description: "Option A, you kill me right here and now. Apparently I've made that very easy for you. You can kill me, no witnesses and then spend the next few weeks or months tracking down Jesse Pinkman and you kill him too. A pointless exercise.",
     image: 'blog-zenchef',
     link: ' '
   },
@@ -24,8 +21,7 @@ const projects = [
     number: '03',
     title: 'Alcatraz, 1962',
     keywords: 'User Interface • Webdoc',
-    description:
-      "Option A, you kill me right here and now. Apparently I've made that very easy for you. You can kill me, no witnesses and then spend the next few weeks or months tracking down Jesse Pinkman and you kill him too. A pointless exercise it seems…",
+    description: "Option A, you kill me right here and now. Apparently I've made that very easy for you. You can kill me, no witnesses and then spend the next few weeks or months tracking down Jesse Pinkman and you kill him too. A pointless exercise it seems…",
     image: 'alcatraz',
     link: ' '
   },
@@ -33,8 +29,7 @@ const projects = [
     number: '04',
     title: 'La Maroquinerie',
     keywords: 'User Interface • Concert',
-    description:
-      "Option A, you kill me right here and now. Apparently I've made that very easy for you. You can kill me, no witnesses and then spend the next few weeks or months tracking down Jesse Pinkman and you kill him too.",
+    description: "Option A, you kill me right here and now. Apparently I've made that very easy for you. You can kill me, no witnesses and then spend the next few weeks or months tracking down Jesse Pinkman and you kill him too.",
     image: 'maroquinerie',
     link: ' '
   }
@@ -94,8 +89,15 @@ function main() {
   document.querySelector('.project__img img').classList.add('enable');
 
 
-  //Traiter l'url pour générer le bon contenu automatiuement
-  displayContentPage(0);
+  //Traiter l'url pour générer le bon contenu automatiquement
+
+  //Generate good project ID from URL
+  let initialURL = window.location.href;
+  let positionAfterHyphen = initialURL.lastIndexOf('-') + 1;
+  let idProject = initialURL.substring(positionAfterHyphen, (positionAfterHyphen + 1)) - 1;
+  console.log(idProject);
+
+  displayContentPage(idProject);
 }
 
 const displayContentPage = idProject => {

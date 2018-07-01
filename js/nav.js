@@ -144,7 +144,7 @@ function navDesktop(direction = null, param = null) {
   //Display projects
   if (projectClicked < totalItemNav - 1 && projectClicked !== 0 && projectClicked !== projectActive) {
     hideProject(idToHide);
-    setTimeout(function() {
+    setTimeout(function () {
       document.querySelector(idToHide).classList.remove('enable');
       document.querySelector(idToDisplay).classList.add('enable');
       displayProject(idToDisplay);
@@ -154,14 +154,14 @@ function navDesktop(direction = null, param = null) {
   } else if (projectClicked === 0) {
     document.querySelector('.home').classList.remove('disable');
     hideProject(idToHide);
-    setTimeout(function() {
+    setTimeout(function () {
       document.querySelector(idToHide).classList.remove('enable');
     }, 700);
     //Display contact
   } else if (itemClicked == totalItemNav) {
     document.querySelector('.contact__wrapper').classList.remove('disable');
     hideProject(idToHide);
-    setTimeout(function() {
+    setTimeout(function () {
       document.querySelector(idToHide).classList.remove('enable');
       document.querySelector('.bubble--group:nth-child(1) .bubble').classList.add('enable');
       document.querySelector('.bubble--group:nth-child(1) .bubble--answer').classList.add('enable');
@@ -188,7 +188,7 @@ function navMobile(param) {
   if (itemClicked < totalItemNav && itemClicked !== 1) {
     document.querySelector('.number--active').textContent = '0' + itemClicked;
     hideProject(idToHide);
-    setTimeout(function() {
+    setTimeout(function () {
       document.querySelector(idToHide).classList.remove('enable');
       document.querySelector(idToDisplay).classList.add('enable');
       displayProject(idToDisplay);
@@ -246,7 +246,7 @@ function navMenu(param) {
     //Work
     document.querySelector('.home').classList.add('disable');
     document.querySelector('.contact__wrapper').classList.add('disable');
-    setTimeout(function() {
+    setTimeout(() => {
       document.querySelector('#project-01').classList.add('enable');
       displayProject('#project-01');
     }, 500);
@@ -271,29 +271,26 @@ function navMenu(param) {
 
 menuHoverProject = (number, name) => {
   document.querySelector('.menu__project-visuel').classList.add('hide');
-  setTimeout(function() {
-    let urlPlop = window.location.href;
-    let positionSlash = urlPlop.lastIndexOf('/') + 1;
-    let imgPath = urlPlop.substring(positionSlash) === 'index.html' ? './img/' : '../img/';
+  setTimeout(() => {
+    let urlPage = window.location.href;
+    let positionSlash = urlPage.lastIndexOf('/') + 1;
+    let imgPath = urlPage.substring(positionSlash) === 'index.html' ? './img/' : '../img/';
 
     document.querySelector('.menu__project-visuel .mockup--desktop').src = imgPath + name + '_visuel-home.png';
     document.querySelector('.menu__project-visuel .visuel__mockup+img').src = imgPath + name + '_letter.png';
     document.querySelector('.menu__project-visuel').id = 'menu__project-0' + number;
   }, 500);
-  setTimeout(function() {
+  setTimeout(() => {
     document.querySelector('.menu__project-visuel').classList.remove('hide');
   }, 600);
 }
 
-function redirectToPageProject(varURL) {
+redirectToPageProject = (varURL) => {
   document.querySelector('.white-screen').classList.add('redirect-page');
   setTimeout(() => {
-    let urlPlop = window.location.href;
-    let positionSlash = urlPlop.lastIndexOf('/') + 1;
-    if (urlPlop.substring(positionSlash) === 'index.html') {
-      window.location.href = './projects-page/project-page--' + varURL + '.html';
-    } else {
-      window.location.href = './project-page--' + varURL + '.html';
-    }
+    let urlPage = window.location.href;
+    let positionSlash = urlPage.lastIndexOf('/') + 1;
+    let urlPath = urlPage.substring(positionSlash) === 'index.html' ? './projects-page/project-page--' : './project-page--'
+    window.location.href = urlPath + varURL + '.html';
   }, 1500);
 }
