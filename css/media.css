@@ -119,7 +119,6 @@
     flex-direction: column-reverse;
     justify-content: flex-start;
     align-items: flex-start;
-    margin-top: 170px;
   }
   .next-project__visuel {
     text-align: center;
@@ -128,7 +127,6 @@
   .next-project__visuel img {
     max-width: 400px;
     width: 100%;
-    margin: -220px auto 20px;
   }
 }
 
@@ -186,6 +184,9 @@
   .project__img img {
     width: 100%;
     margin: -70px auto 0 auto;
+  }
+  .next-project__wrapper {
+    width: 80%;
   }
   .menu__projects-wrapper {
     display: none;

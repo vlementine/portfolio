@@ -1,4 +1,6 @@
-
+//-------------------------------------
+//	GENERATE CONTENT PAGE
+//-------------------------------------
 const displayContentPage = idProject => {
   document.querySelector('.project__summary h1').innerText = projects[idProject].title;
   document.querySelector('.project__intro p').innerText = projects[idProject].description;
@@ -7,7 +9,10 @@ const displayContentPage = idProject => {
   //document.querySelector('.next-project__visuel img').src = '../img/' + projects[idProject].image + '_next-project.png';
 };
 
-//Redirection project page
+
+//-------------------------------------
+//	REDIRECTION -> INDEX
+//-------------------------------------
 const redirectionProject = varURL => {
   document.querySelector('.white-screen').style.display = 'block';
   document.querySelector('.white-screen').classList.add('redirect-page');

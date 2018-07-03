@@ -123,10 +123,10 @@ function navDesktop(direction = null, param = null) {
     param = parseInt(document.querySelector('.project.enable').id.split('-')[1]);
   }
 
-  //Get the total of item of nav
+  //Get total of item of nav
   let totalItemNav = Object.keys(nav).length;
 
-  //Get the number of item clicked
+  //Get number of item clicked
   let projectClicked = parseInt(param) - 1;
   let itemClicked = parseInt(param);
 
@@ -172,10 +172,10 @@ function navDesktop(direction = null, param = null) {
 //	NAVIGATION • MOBILE
 //-------------------------------------
 function navMobile(param) {
-  //Get the total of item of nav
+  //Get total of item of nav
   let totalItemNav = Object.keys(nav).length;
 
-  //Get the number of item clicked
+  //Get number of item clicked
   let itemActive = parseInt(document.querySelector('.number--active').innerHTML);
   let itemClicked = itemActive + param;
 
@@ -284,6 +284,7 @@ menuHoverProject = (number, name) => {
   }, 600);
 };
 
+
 //-------------------------------------
 //	REDIRECTION -> PROJECT
 //-------------------------------------
@@ -296,3 +297,49 @@ redirectToPageProject = varURL => {
     window.location.href = urlPath + varURL + '.html';
   }, 1500);
 };
+
+
+//-------------------------------------
+//	GENERATOR CONTENT • MENU
+//-------------------------------------∑
+let urlPage = window.location.href;
+let positionSlash = urlPage.lastIndexOf('/') + 1;
+let imgPath = urlPage.substring(positionSlash) === 'index.html' ? './img/' : '../img/';
+
+// MENU
+let menuProjects = '';
+let menuProjectsMobile = '';
+
+projects.forEach(menuProject => {
+  menuProjects += `<div class="menu__project">
+                    <h3 onMouseenter="menuHoverProject(${menuProject.number}, '${
+    menuProject.image
+  }')" onClick="redirectToPageProject('${menuProject.href}')">${menuProject.title}</h3>
+                    <span>${menuProject.keywords}</span>
+                  </div>`;
+});
+
+document.querySelector('.menu__projects').innerHTML = menuProjects;
+
+projects.forEach(menuProjectMobile => {
+  menuProjectsMobile +=
+    `<div class="menu__project--mobile" id="menu__project-${
+      menuProjectMobile.number
+    }" onClick="redirectToPageProject('${menuProjectMobile.href}')">
+    <div class="menu__project-info--mobile">
+        <div class="menu__project-visuel--mobile">
+            <img src="` + imgPath + `${menuProjectMobile.image}_letter.png" alt="">
+        </div>
+        <div class="menu__project-title">
+            <h3>${menuProjectMobile.title}</h3>
+            <span>${menuProjectMobile.keywords}</span>
+        </div>
+    </div>
+
+    <span class="nav__arrow nav__arrow--right">
+        <span class="arrow__circle"></span>
+    </span>
+</div>`;
+});
+
+document.querySelector('.menu__projects-wrapper--mobile').innerHTML = menuProjectsMobile;

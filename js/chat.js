@@ -1,7 +1,7 @@
 //-------------------------------------
 //	DISPLAY BUBBLE
 //-------------------------------------
-function displayBubble(groupBubble, nbBubble) {
+const displayBubble = (groupBubble, nbBubble) => {
   for (let n = 0; n < 2; n++) {
     document.querySelectorAll('.bubble--group:nth-child(' + groupBubble + ') .bubble')[n].classList.add('enable');
     document.querySelector('.contact__form form').scrollTo(0, document.body.scrollHeight);
@@ -20,7 +20,7 @@ function displayBubble(groupBubble, nbBubble) {
 //-------------------------------------
 //	GET ANSWER
 //-------------------------------------
-function getAnswer(name, groupBubble, nbBubble) {
+const getAnswer = (name, groupBubble, nbBubble) => {
   let answer = document.getElementById(name + 'Answer').value;
   displayBubble(groupBubble, nbBubble);
 
@@ -39,8 +39,8 @@ function getAnswer(name, groupBubble, nbBubble) {
 const textareaChat = document.querySelector('#messageAnswer');
 textareaChat.addEventListener('input', autoSize, false);
 const TEXTAREA_CONFIG = {
-  LINE_HEIGHT: 18, // adjust textarea lineheight
-  PADDING: 0 // adjust textarea padding vertical
+  LINE_HEIGHT: 18, 
+  PADDING: 0 
 };
 function autoSize() {
   if (textareaChat) {
@@ -55,12 +55,12 @@ function autoSize() {
 //-------------------------------------
 //    VALIDATE EMAIL
 //-------------------------------------
-function validateEmail(email) {
+const validateEmail = (email) => {
   let re = /^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
   return re.test(email);
 }
 
-function validate(groupBubble, nbBubble) {
+const validate = (groupBubble, nbBubble) => {
   let result = document.querySelector('#result');
   let email = document.querySelector('#mailAnswer').value;
 
@@ -79,7 +79,7 @@ function validate(groupBubble, nbBubble) {
 //-------------------------------------
 //    MAIL SENDING
 //-------------------------------------
-function sendEmail() {
+const sendEmail = () => {
   //Variables
   let nameAnswer = document.getElementById('nameAnswer').value;
   let mailAnswer = document.getElementById('mailAnswer').value;

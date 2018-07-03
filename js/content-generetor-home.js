@@ -1,12 +1,10 @@
 //-------------------------------------
-//	GENERATOR
+//	GENERATOR CONTENT • PROJECT
 //-------------------------------------
+let content = '';
+let contentMobile = '';
 
-
-// HOME PROJECTS 
-var content = '';
-var contentMobile = '';
-
+// DESKTOP
 projects.forEach(project => {
   content += `<div class="project" id="project-${project.number}">
           <div class="project__visuel">
@@ -38,6 +36,7 @@ projects.forEach(project => {
         </div>`;
 });
 
+// MOBILE
 projects.forEach(projectMobile => {
   contentMobile += `<div class="project--mobile" id="project-${projectMobile.number}">
     <div class="project__content">
@@ -68,8 +67,9 @@ projects.forEach(projectMobile => {
 </div>`;
 });
 
-
-// NAVIGATION 
+//-------------------------------------
+//	GENERATOR CONTENT • NAVIGATION
+//-------------------------------------
 let navigation = '';
 
 nav.forEach(itemNav => {
@@ -77,8 +77,5 @@ nav.forEach(itemNav => {
   <span class="item__title">${itemNav.title}</span>
 </p>`;
 });
+
 document.querySelector('.nav__items').innerHTML = navigation;
-
-
-
-
