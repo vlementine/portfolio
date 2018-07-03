@@ -7,8 +7,9 @@ const displayContentPage = idProject => {
   document.querySelector('.project__intro a.btn').href = projects[idProject].link;
   document.querySelector('.project__img img').src = '../img/' + projects[idProject].image + '_project-01.png';
   //document.querySelector('.next-project__visuel img').src = '../img/' + projects[idProject].image + '_next-project.png';
-};
 
+  generateMenu();
+};
 
 //-------------------------------------
 //	REDIRECTION -> INDEX

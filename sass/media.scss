@@ -189,6 +189,9 @@
       margin: -70px auto 0 auto;
     }
   }
+  .project-page .project__info .info {
+    width: calc(33.333% - 50px);
+  }
   .next-project__wrapper {
     width: 80%;
   }

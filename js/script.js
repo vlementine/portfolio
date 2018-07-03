@@ -204,6 +204,8 @@ const main = () => {
   let urlNumber = window.location.hash.substring(1);
   window.history.replaceState({}, '', 'index.html');
 
+  generateMenu();
+
   if (urlNumber == 1 || urlNumber == 2 || urlNumber == 3 || urlNumber == 4) {
     document.querySelector('.home').classList.add('disable');
     document.querySelector('.contact__wrapper').classList.add('disable');
