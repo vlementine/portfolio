@@ -116,7 +116,6 @@ function navActiveItem(param) {
 //-------------------------------------
 //	NAVIGATION • DESKTOP
 //-------------------------------------
-
 function navDesktop(direction = null, param = null) {
   if (param === null && direction === 'next') {
     param = parseInt(document.querySelector('.project.enable').id.split('-')[1]) + 2;
@@ -285,6 +284,9 @@ menuHoverProject = (number, name) => {
   }, 600);
 };
 
+//-------------------------------------
+//	REDIRECTION -> PROJECT
+//-------------------------------------
 redirectToPageProject = varURL => {
   document.querySelector('.white-screen').classList.add('redirect-page');
   setTimeout(() => {
