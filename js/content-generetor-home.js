@@ -28,9 +28,9 @@ projects.forEach(project => {
               <div class="description">
                 <p>${project.description}</p>
               </div>
-              <button class="btn btn--project" onClick="redirectionProject(${
-                project.number
-              })">Découvrir le projet</button>
+              <button class="btn btn--project" onClick="redirectionProject('${
+                project.href
+              }')">Découvrir le projet</button>
             </div>
           </div>
         </div>`;
@@ -62,7 +62,7 @@ projects.forEach(projectMobile => {
           </div>
           <img class="visuel__letter" src="img/${projectMobile.image}_letter.png" alt="B" draggable="false">
       </div>
-      <button class="btn" onClick="redirectionProject(${projectMobile.number})">Découvrir le projet</button>
+      <button class="btn" onClick="redirectionProject('${projectMobile.href}')">Découvrir le projet</button>
     </div>
 </div>`;
 });

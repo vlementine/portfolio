@@ -33,7 +33,7 @@ const responsive = () => {
 const redirectionProject = varURL => {
   document.querySelector('.white-screen').classList.add('redirect-page');
   setTimeout(() => {
-    window.location.href = './projects-page/project-page--' + varURL + '.html';
+    window.location.href = './projects-page/' + varURL + '.html';
   }, 1500);
 };
 
