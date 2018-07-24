@@ -136,6 +136,9 @@
   html {
     font-size: 13px;
   }
+  .white-screen {
+    transition: all .8s ease-in-out;
+  }
   .projects__wrapper,
   .contact__wrapper {
     &:before {
@@ -194,8 +197,7 @@
   }
   .next-project__wrapper {
     width: 80%;
-  }
-  //-- MENU
+  } //-- MENU
   .menu__projects-wrapper {
     display: none;
   }

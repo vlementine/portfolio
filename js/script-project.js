@@ -56,7 +56,7 @@ const main = () => {
     case 'alcatraz-1962':
       idProject = 2;
       break;
-    case 'maroquinerie':
+    case 'le-trianon':
       idProject = 3;
       break;
   }

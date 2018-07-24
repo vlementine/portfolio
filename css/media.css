@@ -134,6 +134,9 @@
   html {
     font-size: 13px;
   }
+  .white-screen {
+    transition: all .8s ease-in-out;
+  }
   .projects__wrapper:before,
   .contact__wrapper:before {
     display: none;

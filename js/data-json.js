@@ -33,12 +33,12 @@ const projects = [
   },
   {
     number: '04',
-    title: 'La Maroquinerie',
+    title: 'Le Trianon',
     keywords: 'User Interface • Concert',
     description:
       "Option A, you kill me right here and now. Apparently I've made that very easy for you. You can kill me, no witnesses and then spend the next few weeks or months tracking down Jesse Pinkman and you kill him too. A pointless exercise it seems…",
-    image: 'maroquinerie',
-    href: 'maroquinerie'
+    image: 'le-trianon',
+    href: 'le-trianon'
   }
 ];
 
@@ -62,7 +62,7 @@ const nav = [
   },
   {
     number: '05',
-    title: 'La Maroquinerie'
+    title: 'Le Trianon'
   },
   {
     number: '06',

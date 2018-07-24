@@ -2676,7 +2676,7 @@ footer,
 #menu__project-04 .menu__project-visuel--mobile,
 .menu__projects-wrapper #menu__project-04,
 .project-page#project-04 header {
-  background: linear-gradient(45deg, #2FA4D4, #5DD4D5);
+  background: linear-gradient(45deg, #CD3557, #D75D79);
 }
 
 #project-04 .description__number-wrapper--mobile .description__number--mobile:after {
@@ -2685,7 +2685,7 @@ footer,
 
 #project-04 .description__number-wrapper--mobile .description__number--mobile,
 .project-page#project-04 .project__summary .summary__type .type {
-  background: linear-gradient(45deg, #2FA4D4, #5DD4D5);
+  background: linear-gradient(45deg, #CD3557, #D75D79);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
@@ -4178,6 +4178,9 @@ footer,
 @media screen and (max-width: 650px) {
   html {
     font-size: 13px;
+  }
+  .white-screen {
+    transition: all .8s ease-in-out;
   }
   .projects__wrapper:before,
   .contact__wrapper:before {
