@@ -15,14 +15,14 @@ const responsive = () => {
         document.querySelector('.projects').innerHTML = contentMobile;
         document.querySelector('.number--active').textContent = '01';
       }
-    }
-  } else {
-    document.querySelector(
-      '.contact__description .description__title h2'
-    ).innerHTML = `Pour me contacter,<br>c’est par ici 👉`;
-    document.querySelector('.btn__home').classList.replace('btn__work--mobile', 'btn__work--desktop');
-    if (!document.querySelector('.project')) {
-      document.querySelector('.projects').innerHTML = content;
+    } else {
+      document.querySelector(
+        '.contact__description .description__title h2'
+      ).innerHTML = `Pour me contacter,<br>c’est par ici 👉`;
+      document.querySelector('.btn__home').classList.replace('btn__work--mobile', 'btn__work--desktop');
+      if (!document.querySelector('.project')) {
+        document.querySelector('.projects').innerHTML = content;
+      }
     }
   }
 };
