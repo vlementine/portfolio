@@ -179,11 +179,11 @@ const main = () => {
     offsetX = startX - event.touches[0].pageX;
     offsetY = startY - event.touches[0].pageY;
 
-    if (offsetX > 30) {
+    if (offsetX > 80) {
       scrollDirection('next');
-    } else if (offsetX < -30) {
+    } else if (offsetX < -80) {
       scrollDirection('prev');
-    } else if (document.querySelector('.number--active').textContent == '01' && offsetY > 30) {
+    } else if (document.querySelector('.number--active').textContent == '01' && offsetY > 80) {
       seeMyWork();
     }
   };
