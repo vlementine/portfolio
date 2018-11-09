@@ -1,11 +1,24 @@
 //-------------------------------------
-//	MAIN
+//	SETTINGS
 //-------------------------------------
 @import 'mixins.scss';
 @import 'variables.scss';
-@import 'animations.scss';
+
+//-------------------------------------
+//	COMPONENTS
+//-------------------------------------
 @import 'basics.scss';
-@import 'elements.scss';
+// @import 'buttons.scss';
+
+//-------------------------------------
+//	ELEMENTS
+//-------------------------------------
+@import 'elements.scss'; 
+// ^__ RENAME home-page
 @import 'project-page.scss';
+
+//-------------------------------------
+//	ELEMENTS
+//-------------------------------------
 @import 'media.scss';
-            
+@import 'animations.scss';
