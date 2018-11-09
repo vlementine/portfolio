@@ -8,13 +8,13 @@
 //	COMPONENTS
 //-------------------------------------
 @import 'basics.scss';
-// @import 'buttons.scss';
+@import 'buttons.scss';
 
 //-------------------------------------
 //	ELEMENTS
 //-------------------------------------
-@import 'elements.scss'; 
-// ^__ RENAME home-page
+// @import 'globals.scss';
+@import 'home-page.scss';
 @import 'project-page.scss';
 
 //-------------------------------------
@@ -22,3 +22,4 @@
 //-------------------------------------
 @import 'media.scss';
 @import 'animations.scss';
+ 

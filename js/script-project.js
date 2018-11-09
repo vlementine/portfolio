@@ -2,7 +2,7 @@
 //	GENERATE CONTENT PAGE
 //-------------------------------------
 const displayContentPage = idProject => {
-  document.querySelector('.project__summary h1').innerText = projects[idProject].title;
+  document.querySelector('h1').innerText = projects[idProject].title;
   document.querySelector('.project__intro p').innerText = projects[idProject].description;
   document.querySelector('.project__intro a.btn').href = projects[idProject].link;
   document.querySelector('.project__img img').src = '../img/' + projects[idProject].image + '_project-01.png';
@@ -27,16 +27,16 @@ const redirectionProject = varURL => {
 //-------------------------------------
 const main = () => {
   //Display
-  document.querySelector('header').classList.add('enable');
-  document.querySelector('.project__summary h1').classList.add('enable');
-  document.querySelector('.type--shadow').classList.add('enable');
-  for (let i = 0; i < 3; i++) {
-    document.querySelectorAll('.project-page .project__info .info span')[i].classList.add('enable');
-    document.querySelectorAll('.project-page .project__info .info p')[i].classList.add('enable');
-  }
-  document.querySelector('.project__intro').classList.add('enable');
-  document.querySelector('.project__img span').classList.add('enable');
-  document.querySelector('.project__img img').classList.add('enable');
+  // document.querySelector('header').classList.add('enable');
+  // document.querySelector('.project__summary h1').classList.add('enable');
+  // document.querySelector('.type--shadow').classList.add('enable');
+  // for (let i = 0; i < 3; i++) {
+  //   document.querySelectorAll('.project-page .project__info .info span')[i].classList.add('enable');
+  //   document.querySelectorAll('.project-page .project__info .info p')[i].classList.add('enable');
+  // }
+  // document.querySelector('.project__intro').classList.add('enable');
+  // document.querySelector('.project__img span').classList.add('enable');
+  // document.querySelector('.project__img img').classList.add('enable');
 
   //Generate good project ID from URL
   let initialURL = window.location.href;

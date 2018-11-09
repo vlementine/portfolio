@@ -1,0 +1,32 @@
+@import "mixins.scss";
+@import "variables.scss";
+
+// -----------------------------------
+//
+//   BUTTONS
+//
+// -----------------------------------
+
+button {
+  outline: none;
+}
+
+.btn {
+  display: inline-block;
+  border: 1px solid $dark-blue-10;
+  font-size: 0.6rem;
+  font-weight: 400;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  background: #FFF;
+  color: $primary-color;
+  border-radius: 2px;
+  height: 40px;
+  line-height: 40px;
+  padding: 0 15px;
+  cursor: pointer;
+  @include transition(all .4s ease-in-out);
+  &:hover {
+    box-shadow: 0 4px 14px $dark-blue-10;
+  }
+}
