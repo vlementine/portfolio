@@ -478,6 +478,7 @@ footer,
 .home {
   position: relative;
   display: flex;
+  flex-direction: column-reverse;
   z-index: 24;
   justify-content: center;
   align-items: center;
@@ -510,8 +511,10 @@ footer,
 }
 
 .home .home__presentation {
-  width: 60%;
-  margin-right: 35px;
+  width: 80%;
+  max-width: 700px;
+  text-align: center;
+  margin-top: -80px;
 }
 
 .home .home__presentation h1 {
@@ -535,10 +538,11 @@ footer,
 }
 
 .home img {
+  z-index: -1;
   height: auto;
   max-height: 60%;
   width: auto;
-  max-width: 200px;
+  max-width: 350px;
 }
 
 /*------------------------
