@@ -3,9 +3,10 @@
 //-------------------------------------
 const displayContentPage = idProject => {
   document.querySelector('h1').innerText = projects[idProject].title;
-  document.querySelector('.project__intro p').innerText = projects[idProject].description;
-  document.querySelector('.project__intro a.btn').href = projects[idProject].link;
-  document.querySelector('.project__img img').src = '../img/' + projects[idProject].image + '_project-01.png';
+  document.querySelector('p.subtitle').innerText = projects[idProject].keywords;
+  document.querySelector('.project-intro p').innerText = projects[idProject].description;
+  document.querySelector('.project-intro a.btn').href = projects[idProject].link;
+  // document.querySelector('.project__img img').src = '../img/' + projects[idProject].image + '_project-01.png';
   //document.querySelector('.next-project__visuel img').src = '../img/' + projects[idProject].image + '_next-project.png';
 
   generateMenu();

@@ -6,17 +6,48 @@
 //   PROJECT PAGE
 //
 // -----------------------------------
+//-------------------------------------
+//	BASICS
+//-------------------------------------
+.project-page {
+	.container {
+		width: calc(100% - 100px);
+		max-width: 1340px;
+		margin: 140px auto;
+
+		&:first-child {
+			margin-top: 0;
+		}
+
+		&:last-child {
+			margin-bottom: 0;
+		}
+	}
+
+	.container-fluid {
+		width: 100%;
+		text-align: center;
+		background-color: $dark-blue-05;
+	}
+
+	h4 {
+		font-size: .72em;
+		font-weight: 700;
+		color: $primary-color;
+		margin: 0;
+	}
+}
 
 //-------------------------------------
 //	NAVIGATION
 //-------------------------------------
 .project-page nav {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 20px 15px 0 15px;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	padding: 20px 50px 0 50px;
 	height: 70px;
-	
+
 	.menu-btn {
 		position: relative;
 		top: 0;
@@ -57,35 +88,46 @@
 //	HEADER
 //-------------------------------------
 .project-page header {
+	text-align: center;
+	margin-bottom: 50px;
+
 	h1 {
 		font-family: 'Playfair Display', serif;
 		font-size: 3em;
 		font-weight: 300;
 		font-style: italic;
-		color: $project-04;
-		text-align: center;
-		margin: 0 0 10px 0;
+		color: $primary-color;
+		margin: 0 0 5px 0;
+	}
+
+	p.subtitle {
+		font-size: .75em;
+		font-weight: 600;
+		letter-spacing: .02em;
+		text-transform: uppercase;
+		color: $dark-blue-80;
+		margin: 0;
 	}
 }
 
-.project-page {
+//-------------------------------------
+//	HERO AREA
+//-------------------------------------
+.project-page .hero-area {
+	height: 400px;
+	margin: 100px auto;
+	background-color: $dark-blue-05;
+	background-size: cover;
+	background-position: center;
 }
 
 //-------------------------------------
-//	SECTION
+//	PRESENTATION
 //-------------------------------------
-.project-page section {
-	margin: 50px auto;
-}
 
-.project__intro-wrapper {
-	overflow: hidden;
-}
-
-.project__intro {
-	width: 80%;
+.intro__content {
 	max-width: 640px;
-	margin: 0 auto 14px auto;
+	margin: 0 auto;
 	text-align: center;
 
 	h2 {
@@ -114,9 +156,234 @@
 }
 
 //-------------------------------------
-//	NEXT PROJECT
+//	PICTURE
 //-------------------------------------
-.next-project__wrapper {
+.project-picture {
+	text-align: center;
+	padding: 70px;
+	background-color: $dark-blue-05;
+
+	&:nth-child(3) {
+		margin-top: 170px !important
+	}
+
+	img {
+		width: 100%;
+		margin-top: -140px;
+		border-radius: 4px;
+		box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
+	}
+}
+
+//-------------------------------------
+//	PICTURE • SIMPLE
+//-------------------------------------
+.project-picture--simple {
+	margin-top: 210px !important;
+
+	img {
+		max-width: 980px;
+	}
+}
+
+//-------------------------------------
+//	PICTURE • DOUBLE
+//-------------------------------------
+.project-picture--double {
+	padding-bottom: 150px;
+	margin-top: 210px !important;
+
+	img {
+		display: inline-block;
+		width: calc(50% - 33px);
+
+		&:last-child {
+			margin-left: 60px;
+			margin-bottom: -80px;
+		}
+	}
+}
+
+//-------------------------------------
+//	PICTURE • ALL
+//-------------------------------------
+.project-picture--all {
+	height: 600px;
+}
+
+//-------------------------------------
+//	PICTURE • EXPLAIN
+//-------------------------------------
+.project-picture--explain {
+	background-color: $dark-blue-05;
+	padding: 70px;
+	margin-top: 210px !important;
+
+	img {
+		width: 100%;
+	}
+}
+
+.explain {
+	width: 100%;
+	max-width: calc(100% - 330px);
+	margin: auto;
+	margin-top: -140px;
+	border-radius: 4px;
+	box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
+}
+
+.explain__picture {
+	position: relative;
+
+	&:first-child img {
+		border-radius: 4px 4px 0 0;
+	}
+
+	&:last-child img {
+		border-radius: 0 0 4px 4px;
+
+	}
+}
+
+.explain__text {
+	position: absolute;
+	top: 0;
+	width: 265px;
+	padding-bottom: 10px;
+	border-bottom: 1px solid $dark-blue-50;
+
+	&:after {
+		content: '';
+		position: absolute;
+		bottom: -3px;
+		width: 5px;
+		height: 5px;
+		background: $dark-blue-50;
+		border-radius: 50%;
+	}
+
+
+
+	p {
+		font-size: .75em;
+		font-weight: 300;
+		color: $dark-blue-50;
+		margin: 0;
+	}
+}
+
+.explain__text--left {
+	left: -205px;
+	text-align: left;
+	padding-right: 80px;
+
+	&:after {
+		right: 0;
+	}
+}
+
+.explain__text--right {
+	right: -205px;
+	text-align: right;
+	padding-left: 80px;
+
+	&:after {
+		left: 0;
+	}
+}
+
+//-------------------------------------
+//	PICTURE • SLIDER
+//-------------------------------------
+.container-fluid.project-slider {
+	padding: 70px 0;
+}
+
+.slider__content {
+	margin-top: -140px;
+}
+
+.slider__pictures {
+	display: flex;
+
+	h4 {
+		text-align: center;
+		margin: 0 0 30px 0;
+	}
+
+	img {
+		width: 100%;
+		border-radius: 4px;
+	}
+}
+
+.slide {
+	width: 100%;
+	max-width: 980px;
+	margin: 0 25px;;
+}
+
+.slider__nav {
+	width: 100%;
+	margin: 50px auto 0 auto;
+
+	.slider-nav__bullet {
+		position: relative;
+		cursor: pointer;
+		display: inline-block;
+		width: 6px;
+		height: 6px;
+		border-radius: 50%;
+		background-color: $primary-color;
+		opacity: 0.5;
+		margin: 0 5px;
+		@include transition(opacity 0.2s ease-in-out);
+
+		&:hover {
+			opacity: 1;
+		}
+
+		&.bullet--active {
+			opacity: 1;
+
+			&:after {
+				content: '';
+				position: absolute;
+				top: -8px;
+				left: -8px;
+				width: 20px;
+				height: 20px;
+				border: 1px solid $primary-color;
+				border-radius: 50%;
+			}
+		}
+	}
+}
+
+//-------------------------------------
+//	DESCRIPTION • SUBTITLE
+//-------------------------------------
+.container.project-description {
+	width: 80%;
+	max-width: 600px;
+	text-align: center;
+
+	h3 {
+		font-size: .75em;
+		font-weight: 700;
+		text-transform: uppercase;
+		letter-spacing: .02em;
+		color: $primary-color;
+		margin: 0 0 5px 0;
+	}
+
+	p {
+		font-size: .875em;
+		font-weight: 300;
+		color: $dark-blue-50;
+		margin: 0;
+	}
 }
 
 //-------------------------------------
@@ -127,7 +394,7 @@
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
-	margin: 40px 50px;
+	margin: 140px 50px 40px 50px;
 	line-height: 38px;
 
 	.links {
@@ -193,6 +460,34 @@
 
 		&:hover {
 			@include animation(1.5s contact ease-in-out);
+		}
+	}
+}
+
+//-------------------------------------
+//	VARIABLES PROJECT
+//-------------------------------------
+.project-page#project-04 {
+
+	header h1,
+	section h3,
+	section h4 {
+		color: $project-04;
+	}
+
+	.hero-area {
+		background-image: url(../img/le-trianon__hero-picture.jpg);
+	}
+
+	.project-picture--all {
+		background-image: url(../img/le-trianon__picture--all.jpg);
+	}
+
+	.slider-nav__bullet {
+		background-color: $project-04;
+
+		&.bullet--active:after {
+			border-color: $project-04;
 		}
 	}
 }

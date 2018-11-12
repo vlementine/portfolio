@@ -34,7 +34,7 @@ const projects = [
   {
     number: '04',
     title: 'Le Trianon',
-    keywords: '2018 • User Interface • Concert',
+    keywords: '2018 — User Interface • Concert',
     description:
       "Option A, you kill me right here and now. Apparently I've made that very easy for you. You can kill me, no witnesses and then spend the next few weeks or months tracking down Jesse Pinkman and you kill him too. A pointless exercise it seems…",
     image: 'le-trianon',

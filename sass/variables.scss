@@ -1,8 +1,12 @@
-//-------------------------------------
-//	VARIABLES
-//-------------------------------------
+// -----------------------------------
+//
+//   VARIABLES
+//
+// -----------------------------------
 
-//-- Fonts
+//-------------------------------------
+//	FONTS
+//-------------------------------------
 @import url('https://fonts.googleapis.com/css?family=Work+Sans:300,400,500,600,700');
 @import url('https://fonts.googleapis.com/css?family=Playfair+Display:400,400i,700,900');
 
@@ -14,9 +18,12 @@
   font-style: normal;
 }
 
-//-- Colors
+//-------------------------------------
+//	COLORS
+//-------------------------------------
 $primary-color: #2286b6;
 
+//-- Blacks
 $dark-blue-80: rgba(6, 10, 46, 0.8);
 $dark-blue-50: rgba(6, 10, 46, 0.5);
 $dark-blue-30: rgba(6, 10, 46, 0.3);
@@ -24,17 +31,20 @@ $dark-blue-20: rgba(6, 10, 46, 0.2);
 $dark-blue-10: rgba(6, 10, 46, 0.1);
 $dark-blue-05: rgba(6, 10, 46, 0.05);
 
+//-- Project's color
 $project-01: #2286b6;
 $project-02: #F59E64;
 $project-03: #2286b6;
 $project-04: #cd3557;
 
+//-- Project's gradient
 $gradient-primary: linear-gradient(45deg, #7BB7D4, #2286b6);
 $gradient-project-01: linear-gradient(45deg, #1d7d90, #5dd5c3);
 $gradient-project-02: linear-gradient(45deg, #f59e64, #eb5160);
 $gradient-project-03: linear-gradient(45deg, #7BB7D4, #2286b6);
 $gradient-project-04: linear-gradient(45deg, #CD3557, #D75D79);
 
+//-- Social network's color
 $behance: #0057ff;
 $dribbble: #ea4c89;
 $linkedin: #0077b5;

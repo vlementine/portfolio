@@ -1,9 +1,17 @@
 @import 'mixins.scss';
 @import 'variables.scss';
+
+// -----------------------------------
+//
+//   MEDIA
+//
+// -----------------------------------
+
 //-------------------------------------
 //	MEDIA QUERIES : 1000px
 //-------------------------------------
 @media screen and (max-width: 1000px) {
+
 	//-- PROJECTS
 	.project {
 		flex-direction: column;
@@ -72,6 +80,7 @@
 		.description__wrapper {
 			width: calc(100vw - 40px);
 			margin: 70px auto 50px;
+
 			.description__number {
 				top: -22px;
 				font-size: 5rem;
@@ -85,6 +94,7 @@
 
 	.contact__form {
 		flex-grow: 1;
+
 		form {
 			margin: 0 20px 40px;
 			width: calc(100% - 40px);
@@ -94,12 +104,22 @@
 	.menu__projects-wrapper .menu__projects .menu__project {
 		flex-direction: column;
 	}
+
+	//-- PROJECT PAGE
+	.explain {
+		max-width: 100%;
+	}
+
+	.explain__text {
+		display: none;
+	}
 }
 
 //-------------------------------------
 //	MEDIA QUERIES : 800px
 //-------------------------------------
 @media screen and (max-width: 800px) {
+
 	//-- FOOTER
 	.links {
 		margin-left: auto;
@@ -151,6 +171,22 @@
 		img {
 			max-width: 400px;
 			width: 100%;
+		}
+	}
+
+	//-- PROJECT PAGE
+	.project-picture--double {
+		padding-bottom: 70px;
+
+		img {
+			display: block;
+			width: 100%;
+
+			&:last-child {
+				margin-left: 0;
+				margin-bottom: 0;
+				margin-top: 40px;
+			}
 		}
 	}
 }
@@ -217,26 +253,6 @@
 		display: inline-block;
 	}
 
-	//-- PROJECT PAGE
-	.project__img {
-		width: 80%;
-		margin: 90px auto 50px;
-		padding: 30px;
-
-		img {
-			width: 100%;
-			margin: -70px auto 0 auto;
-		}
-	}
-
-	.project-page .project__info .info {
-		width: calc(33.333% - 50px);
-	}
-
-	.next-project__wrapper {
-		width: 80%;
-	}
-
 	//-- MENU
 	.menu__projects-wrapper {
 		display: none;
@@ -256,14 +272,79 @@
 	.menu__category {
 		margin: 10px auto;
 	}
+
+	//-- PROJECT PAGE
+	.project-page .container {
+		width: calc(100% - 60px);
+		margin: 40px auto;
+	}
+
+	.project-picture--explain {
+		padding: 40px;
+
+		.explain {
+			margin-top: -80px;
+
+		}
+	}
+
+	.project-picture {
+		padding: 40px;
+
+		&:nth-child(3) {
+			margin-top: 80px !important;
+		}
+
+
+		img {
+			margin-top: -80px;
+		}
+	}
+
+	.project-picture--simple,
+	.project-picture--double,
+	.project-picture--explain {
+		margin-top: 100px !important;
+	}
 }
 
 //-------------------------------------
 //	MEDIA QUERIES : 400px
 //-------------------------------------
 @media screen and (max-width: 400px) {
+
 	//-- HOME
 	.home img {
 		max-width: 80%;
 	}
+
+	//-- PROJECT PAGE
+	.project-page nav {
+		padding: 20px 20px 0 20px;
+	}
+
+	.project-page .container {
+		width: calc(100% - 40px);
+
+		&.project-description {
+			width: calc(100% - 80px);
+		}
+	}
+
+	.project-picture--simple,
+	.project-picture--double,
+	.project-picture--explain {
+		margin-top: 110px !important;
+	}
+
+	.project-picture,
+	.project-picture--explain {
+		padding: 10px;
+	}
+
+	.project-picture--doubleimg:last-child {
+		margin-top: 10px;
+	}
+
+
 }
