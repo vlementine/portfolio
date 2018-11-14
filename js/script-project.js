@@ -35,15 +35,18 @@ const calcHeightSlider = () => {
 };
 
 const slider = number => {
+	let windowWidth = window.innerWidth;
+
 	let slide = document.querySelector('.slide');
 	let slideW = slide.clientWidth;
 	let slideM =
 		parseInt(getComputedStyle(slide).marginLeft) +
 		parseInt(getComputedStyle(slide).marginRight);
-	let calcTranslate =
-		'calc((-60vw * ' + number + ') - (' + slideM + 'px * ' + number + '))';
 
-  console.log(calcTranslate);
+	let calcTranslate =
+		windowWidth <= 650
+			? 'calc((-80vw * ' + number + ') - (' + slideM + 'px * ' + number + '))'
+			: 'calc((-60vw * ' + number + ') - (' + slideM + 'px * ' + number + '))';
 
 	let bulletLength = document.querySelectorAll('.slider-nav__bullet').length;
 
@@ -68,7 +71,29 @@ const slider = number => {
 //	RESPONSIVE
 //-------------------------------------
 const responsive = () => {
-	calcHeightSlider();
+  calcHeightSlider();
+
+  let windowWidth = window.innerWidth;
+
+	// Align slider on responsive
+	let bulletsSlider = document.querySelectorAll('.slider-nav__bullet');
+
+	bulletsSlider.forEach(element => {
+		if (element.classList.contains('bullet--active')) {
+      let slideActive = element.textContent - 1;
+      console.log(slideActive);
+
+      let calcTranslate =
+        windowWidth <= 650
+          ? 'calc((-80vw * ' + slideActive + ') - (' + '20px * ' + slideActive + '))'
+          : 'calc((-60vw * ' + slideActive + ') - (' + '50px * ' + slideActive + '))';
+      console.log(calcTranslate);
+      
+      // Move slides
+      document.querySelector('.slider__pictures').style.transform =
+        'translate(' + calcTranslate + ')';
+		}
+	});
 };
 
 //-------------------------------------
@@ -87,13 +112,13 @@ const main = () => {
 	// document.querySelector('.project__img span').classList.add('enable');
 	// document.querySelector('.project__img img').classList.add('enable');
 
-	//Generate good project ID from URL
+	// Generate good project ID from URL
 	let initialURL = window.location.href;
 	let positionAfterHyphen = initialURL.lastIndexOf('/') + 1;
 	let positionHtml = initialURL.lastIndexOf('.html') + 1;
 	let nameProject = initialURL.substring(positionAfterHyphen, positionHtml - 1);
 
-	//Height of slider
+	// Height of slider
 	calcHeightSlider();
 
 	let idProject = 0;

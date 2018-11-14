@@ -334,8 +334,9 @@
 	margin: 50px auto 0 auto;
 
 	.slider-nav__bullet {
-		position: relative;
+		color: transparent;
 		cursor: pointer;
+		position: relative;
 		display: inline-block;
 		width: 6px;
 		height: 6px;
