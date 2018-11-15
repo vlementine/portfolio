@@ -187,6 +187,19 @@
 			}
 		}
 	}
+
+	.project-mobile {
+		display: flex;
+		flex-direction: column;
+
+		img {
+			margin: auto;
+
+			&:last-child {
+				margin: 40px auto 0 auto;
+			}
+		}
+	}
 }
 
 //-------------------------------------
@@ -383,7 +396,7 @@
 	}
 
 	.slider__pictures {
-		width: calc(240vw + 60px);
+		width: calc((80vw * 3) + (20px * 3));
 		left: calc(50% - (80vw / 2) - 10px);
 
 		h4 {

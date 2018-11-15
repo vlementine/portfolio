@@ -209,6 +209,8 @@
 //-------------------------------------
 .project-picture--all {
 	height: 600px;
+	background-size: cover;
+	background-position: center;
 }
 
 //-------------------------------------
@@ -291,15 +293,34 @@
 }
 
 //-------------------------------------
+//	PICTURE • MOBILE
+//-------------------------------------
+.project-mobile {
+	text-align: center;
+	margin-bottom: 80px !important;
+
+	img {
+		display: inline-block;
+		width: 300px;
+
+		&:last-child {
+			margin-left: 60px;
+			margin-bottom: -80px;
+		}
+	}
+}
+
+//-------------------------------------
 //	PICTURE • SLIDER
 //-------------------------------------
 .container-fluid.project-slider {
-	padding: 70px 0;
+	padding: 40px 0;
 	margin-top: 210px !important;
 }
 
 .slider__content {
-	margin-top: calc(-140px - 37px);
+	margin-top: calc((-40px - 70px) - 47px);
+	// - Padding - decalage - taille titre
 }
 
 .slider__wrapper {
@@ -308,7 +329,7 @@
 
 .slider__pictures {
 	position: absolute;
-	width: calc(180vw + 150px);
+	width: calc((60vw * 3) + (50px * 3));
 	display: flex;
 	left: calc(50% - (60vw / 2) - 25px);
 	@include transition(transform 0.6s cubic-bezier(0.65, 0.03, 0.5, 0.99));
@@ -376,10 +397,6 @@
 	text-align: center;
 
 	h3 {
-		font-size: 0.75em;
-		font-weight: 700;
-		text-transform: uppercase;
-		letter-spacing: 0.02em;
 		color: $primary-color;
 		margin: 0 0 5px 0;
 	}
@@ -389,6 +406,29 @@
 		font-weight: 300;
 		color: $dark-blue-50;
 		margin: 0;
+	}
+}
+
+//-------------------------------------
+//	NEXT PROJECT
+//-------------------------------------
+.next-project {
+	text-align: center;
+	margin: 140px 0;
+
+	h3.next-project__title {
+		font-weight: 400;
+		color: $dark-blue-30;
+		margin: 0 0 -5px 0;
+	}
+
+	.next-project__name {
+		font-family: 'Playfair Display', serif;
+		font-size: 2.25em;
+		font-weight: 700;
+		font-style: italic;
+		margin: 0;
+		@include transition(color 0.2s ease-in-out);
 	}
 }
 
@@ -475,8 +515,9 @@
 //-------------------------------------
 .project-page#project-04 {
 	header h1,
-	section h3,
-	section h4 {
+	section .container h3,
+	section h4,
+	.next-project__name:hover {
 		color: $project-04;
 	}
 

@@ -17,6 +17,7 @@ html {
 body {
 	font-family: 'Work Sans', sans-serif;
 	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
 	color: $dark-blue-80;
 	line-height: 1.5;
 	margin: 0;
