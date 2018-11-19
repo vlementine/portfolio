@@ -32,7 +32,7 @@
 
 	h4 {
 		font-size: 0.72em;
-		font-weight: 700;
+		font-weight: 400;
 		color: $primary-color;
 		margin: 0;
 	}
@@ -88,15 +88,23 @@
 //	HEADER
 //-------------------------------------
 .project-page header {
-	text-align: center;
-	margin-bottom: 50px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+	width: calc(100% - 100px);
+	margin: 24px auto 100px auto;
+	height: 400px;
+	background-color: $dark-blue-05;
+	background-size: cover;
+	background-position: center;
+	color: #ffffff;
 
 	h1 {
 		font-family: 'Playfair Display', serif;
 		font-size: 3em;
 		font-weight: 300;
 		font-style: italic;
-		color: $primary-color;
 		margin: 0 0 5px 0;
 	}
 
@@ -105,20 +113,8 @@
 		font-weight: 600;
 		letter-spacing: 0.02em;
 		text-transform: uppercase;
-		color: $dark-blue-80;
 		margin: 0;
 	}
-}
-
-//-------------------------------------
-//	HERO AREA
-//-------------------------------------
-.project-page .hero-area {
-	height: 400px;
-	margin: 100px auto;
-	background-color: $dark-blue-05;
-	background-size: cover;
-	background-position: center;
 }
 
 //-------------------------------------
@@ -211,6 +207,8 @@
 	height: 600px;
 	background-size: cover;
 	background-position: center;
+	background-attachment: fixed;
+	background-repeat: no-repeat;
 }
 
 //-------------------------------------
@@ -336,6 +334,7 @@
 
 	h4 {
 		text-align: center;
+		font-weight: 600;
 		margin: 0 0 30px 0;
 	}
 
@@ -514,14 +513,13 @@
 //	VARIABLES PROJECT
 //-------------------------------------
 .project-page#project-04 {
-	header h1,
 	section .container h3,
 	section h4,
 	.next-project__name:hover {
 		color: $project-04;
 	}
 
-	.hero-area {
+	header {
 		background-image: url(../img/le-trianon__hero-picture.jpg);
 	}
 
