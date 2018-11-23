@@ -9,7 +9,7 @@
     <link rel="stylesheet" href="../css/main.min.css" />
 </head>
 
-<body id="project-04" class="project-page">
+<body id="project-04" class="project-page" onscroll="scrolled(this)">
     <div>
         <span class="white-screen"></span>
 
@@ -80,7 +80,7 @@
             <h1>Titre du projet</h1>
             <p class="subtitle">Date • Type de projet</p>
         </header>
-
+                
         <!-- PROJECT CONTENT -->
         <section>
             <div class="container project-intro">
@@ -101,7 +101,22 @@
                 <img src="../img/le-trianon__project-animate-picture-01.gif" alt="" />
             </div>
 
-            <div class="parallax-window project-picture--all" data-parallax="scroll" data-image-src="../img/le-trianon__picture--all.jpg" ></div>
+            <!-- 
+            <div class="parallax">
+                <div class="parallax__group">
+                    <div class="parallax__layer parallax__layer--back">
+                        <div class="title">This is the background</div>
+                    </div>
+                    <div class="parallax__layer parallax__layer--base">
+                        <div class="title">This is the foreground</div>
+                    </div>
+                </div>
+                <div class="parallax__group">
+                    ...
+                </div>
+            </div> -->
+
+            <div class="project-picture--all"></div>
 
             <div class="container project-description">
                 <h3>Sous titre</h3>
@@ -284,11 +299,21 @@
                     pointless exercise it.
                 </p>
             </div>
-
-            <div class="container project-mobile">
-                <img src="../img/le-trianon__project-picture-mobile-01.png" alt="" />
-                <img src="../img/le-trianon__project-picture-mobile-02.png" alt="" />
+            
+            <!-- <div class="relative-box">
+                <div class="wrapper-parallax">
+                    <div class="wrapper">
+                        <img class="img-01" src="../img/le-trianon__project-picture-mobile-01.png" alt="" />
+                        <img class="img-02" src="../img/le-trianon__project-picture-mobile-02.png" alt="" />
+                    </div>
+                </div>
+            </div> -->
+            
+            <div id="parallax" class="container project-mobile">
+                <img class="img-01" src="../img/le-trianon__project-picture-mobile-01.png" alt="" />
+                <img class="img-02" src="../img/le-trianon__project-picture-mobile-02.png" alt="" />
             </div>
+            
 
     </div>
     </section>
@@ -315,13 +340,70 @@
         </div>
     </footer>
     </div>
-    
+
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
     <script src="../js/data-json.js"></script>
     <script src="../js/nav.js"></script>
     <script src="../js/script-project.js"></script>
-    <!-- <script src="../vendor/dragscroll.js"></script> -->
-    <script src="../js/vendor/parallax.min.js"></script>
+    <!-- <script src="../js/vendor/picasso.js"></script> -->
+
+    <script>
+        this.addEventListener("load", doSomething, true);
+
+        var myElement = document.querySelector("#parallax");
+        var position;
+
+        function doSomething(e) {
+            position = getPosition(myElement);
+            console.log("The image is located at: y ->" + position.y);
+        }
+
+        // deal with the page getting resized or scrolled
+        window.addEventListener("scroll", updatePosition, false);
+        window.addEventListener("resize", updatePosition, false);
+
+        function updatePosition() {
+            position = getPosition(myElement);
+        }
+
+        // helper function to get an element's exact position
+        function getPosition(el) {
+            var yPosition = 0;
+
+            while (el) {
+                if (el.tagName == "BODY") {
+                    // deal with browser quirks with body/window/document and page scroll
+                    var yScrollPos = el.scrollTop || document.documentElement.scrollTop;
+                    yPosition += (el.offsetTop - yScrollPos + el.clientTop);
+                } else {
+                    yPosition += (el.offsetTop - el.scrollTop + el.clientTop);
+                }
+
+                el = el.offsetParent;
+            }
+            return {
+                y: yPosition
+            };
+        }
+
+        function scrolled(o) {
+                position = getPosition(myElement);
+                console.log("Position Y : " + position.y);
+
+                let plop = position.y - window.innerHeight;
+                console.log(plop);
+
+                if(plop < 100 || plop < 0) {
+                    console.log('Youhou')
+                }
+            }
+
+    </script>
+    <!-- <script src="../js/vendor/dragscroll.js"></script> -->
+    <!-- <script src="../js/vendor/parallax.min.js"></script> -->
+    <!-- <script src="../js/vendor/jquery.parallax.js"></script> -->
+
+
 
 </body>
 

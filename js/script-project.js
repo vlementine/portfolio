@@ -81,13 +81,11 @@ const responsive = () => {
 	bulletsSlider.forEach(element => {
 		if (element.classList.contains('bullet--active')) {
       let slideActive = element.textContent - 1;
-      console.log(slideActive);
 
       let calcTranslate =
         windowWidth <= 650
           ? 'calc((-80vw * ' + slideActive + ') - (' + '20px * ' + slideActive + '))'
           : 'calc((-60vw * ' + slideActive + ') - (' + '50px * ' + slideActive + '))';
-      console.log(calcTranslate);
       
       // Move slides
       document.querySelector('.slider__pictures').style.transform =

@@ -523,9 +523,9 @@
 		background-image: url(../img/le-trianon__hero-picture.jpg);
 	}
 
-	// .project-picture--all {
-	// 	background-image: url(../img/le-trianon__picture--all.jpg);
-	// }
+	.project-picture--all {
+		background-image: url(../img/le-trianon__picture--all.jpg);
+	}
 
 	.slider-nav__bullet {
 		background-color: $project-04;
@@ -535,3 +535,64 @@
 		}
 	}
 }
+
+// .parallax {
+// 	height: 500px;
+// 	overflow-x: hidden;
+// 	overflow-y: auto;
+// 	-webkit-perspective: 1px;
+// 	perspective: 1px;
+
+// }
+
+// .parallax__layer {
+// 	position: absolute;
+// 	top: 0;
+// 	right: 0;
+// 	bottom: 0;
+// 	left: 0;
+// 	color: white;
+// 	padding: 100vh 0;
+// }
+
+// .title {
+//     position: absolute;
+//     left: 50%;
+//     top: 50%;
+//     -webkit-transform: translate(-50%, -50%);
+//     transform: translate(-50%, -50%);
+// }
+
+// .parallax__layer--base {
+// 	// background: red;
+// 	transform: translateZ(0);
+// }
+
+// .parallax__layer--back {
+// 	background-image: url(../img/le-trianon__picture--all.jpg);
+// 	transform: translateZ(-1px) scale(2);
+// 	background-size: cover;
+// }
+
+
+
+// .wrapper {
+// 	display: none;
+// }
+
+// /* 3. Images Keyframe
+// --------------------------------------- */
+
+// .img-01 {
+// 	position: fixed;
+// 	top: 30%;
+// 	right: 5%;
+// 	width: 300px;
+// }
+
+// .img-02 {
+// 	position: fixed;
+// 	top: 40%;
+// 	right: 40%;
+// 	width: 300px;
+// }
