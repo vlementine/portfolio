@@ -2274,14 +2274,6 @@ h3 {
   margin-bottom: -80px;
 }
 
-.project-picture--all {
-  height: 600px;
-  background-size: cover;
-  background-position: center;
-  background-attachment: fixed;
-  background-repeat: no-repeat;
-}
-
 .project-picture--explain {
   background-color: rgba(6, 10, 46, 0.05);
   padding: 70px;
@@ -2356,6 +2348,19 @@ h3 {
 
 .explain__text--right:after {
   left: 0;
+}
+
+.project-parallax--bg {
+  height: 450px;
+  overflow: hidden;
+}
+
+.project-parallax--bg div {
+  height: 200%;
+  position: relative;
+  top: -100%;
+  background-size: cover;
+  background-position: center;
 }
 
 .project-mobile {
@@ -2598,7 +2603,7 @@ h3 {
   background-image: url(../img/le-trianon__hero-picture.jpg);
 }
 
-.project-page#project-04 .project-picture--all {
+.project-page#project-04 #parallax-bg-01 div {
   background-image: url(../img/le-trianon__picture--all.jpg);
 }
 
@@ -2910,6 +2915,9 @@ h3 {
   }
   .container-fluid.project-slider .slider__content {
     margin-top: calc(-50px - 14px);
+  }
+  .project-mobile img {
+    width: 100%;
   }
   .slide {
     width: 80vw;

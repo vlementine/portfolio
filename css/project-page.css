@@ -196,14 +196,6 @@ h3 {
   margin-bottom: -80px;
 }
 
-.project-picture--all {
-  height: 600px;
-  background-size: cover;
-  background-position: center;
-  background-attachment: fixed;
-  background-repeat: no-repeat;
-}
-
 .project-picture--explain {
   background-color: rgba(6, 10, 46, 0.05);
   padding: 70px;
@@ -280,6 +272,19 @@ h3 {
   left: 0;
 }
 
+.project-parallax--bg {
+  height: 450px;
+  overflow: hidden;
+}
+
+.project-parallax--bg div {
+  height: 200%;
+  position: relative;
+  top: -100%;
+  background-size: cover;
+  background-position: center;
+}
+
 .project-mobile {
   text-align: center;
   margin-bottom: 80px !important;
@@ -293,89 +298,6 @@ h3 {
 .project-mobile img:last-child {
   margin-left: 60px;
   margin-bottom: -80px;
-}
-
-.container-fluid.project-slider {
-  padding: 40px 0;
-  margin-top: 210px !important;
-}
-
-.slider__content {
-  margin-top: calc((-40px - 70px) - 47px);
-}
-
-.slider__wrapper {
-  position: relative;
-}
-
-.slider__pictures {
-  position: absolute;
-  width: calc((60vw * 3) + (50px * 3));
-  display: flex;
-  left: calc(50% - (60vw / 2) - 25px);
-  -webkit-transition: transform 0.6s cubic-bezier(0.65, 0.03, 0.5, 0.99);
-  -moz-transition: transform 0.6s cubic-bezier(0.65, 0.03, 0.5, 0.99);
-  -ms-transition: transform 0.6s cubic-bezier(0.65, 0.03, 0.5, 0.99);
-  -o-transition: transform 0.6s cubic-bezier(0.65, 0.03, 0.5, 0.99);
-  transition: transform 0.6s cubic-bezier(0.65, 0.03, 0.5, 0.99);
-}
-
-.slider__pictures h4 {
-  text-align: center;
-  font-weight: 600;
-  margin: 0 0 30px 0;
-}
-
-.slider__pictures img {
-  width: 100%;
-  border-radius: 4px;
-}
-
-.slide {
-  width: 60vw;
-  margin: 0 25px;
-}
-
-.slider__nav {
-  width: 100%;
-  margin: 50px auto 0 auto;
-}
-
-.slider__nav .slider-nav__bullet {
-  color: transparent;
-  cursor: pointer;
-  position: relative;
-  display: inline-block;
-  width: 6px;
-  height: 6px;
-  border-radius: 50%;
-  background-color: #2286b6;
-  opacity: 0.5;
-  margin: 0 5px;
-  -webkit-transition: opacity 0.2s ease-in-out;
-  -moz-transition: opacity 0.2s ease-in-out;
-  -ms-transition: opacity 0.2s ease-in-out;
-  -o-transition: opacity 0.2s ease-in-out;
-  transition: opacity 0.2s ease-in-out;
-}
-
-.slider__nav .slider-nav__bullet:hover {
-  opacity: 1;
-}
-
-.slider__nav .slider-nav__bullet.bullet--active {
-  opacity: 1;
-}
-
-.slider__nav .slider-nav__bullet.bullet--active:after {
-  content: '';
-  position: absolute;
-  top: -8px;
-  left: -8px;
-  width: 20px;
-  height: 20px;
-  border: 1px solid #2286b6;
-  border-radius: 50%;
 }
 
 .container.project-description {
@@ -520,7 +442,7 @@ h3 {
   background-image: url(../img/le-trianon__hero-picture.jpg);
 }
 
-.project-page#project-04 .project-picture--all {
+.project-page#project-04 #parallax-bg-01 div {
   background-image: url(../img/le-trianon__picture--all.jpg);
 }
 

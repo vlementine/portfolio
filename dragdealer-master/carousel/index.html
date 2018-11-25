@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Dragdealer - Simple slider</title>
+
+  <!-- Jquery -->
+  <script src="../lib/jquery-1.10.2.js"></script>
+
+  <!-- Dragdealer JS -->
+  <script src="../src/dragdealer.js"></script>
+  <!-- Dragdealer CSS -->
+  <link  href="../src/dragdealer.css" rel="stylesheet" type="text/css">
+
+  <!-- Example style -->
+  <link href="style.css" rel="stylesheet" type="text/css">
+
+</head>
+<body>
+
+  <div id="image-carousel" class="dragdealer">
+
+    <div class="handle">
+
+      <div class="slide img1">
+        <div class="info">
+          <p class="title">Aston Martin DB4</p>
+          <p class="description"><strong>1959</strong> - 3.7L, 240hp</p>
+        </div>
+      </div>
+
+      <div class="slide img2">
+        <div class="info">
+          <p class="title">Mercedes-Benz 300SL</p>
+          <p class="description"><strong>1956</strong> - 2996cc, 212-222hp</p>
+        </div>
+      </div>
+
+      <div class="slide img3">
+        <div class="info">
+          <p class="title">Jaguar E-Type</p>
+          <p class="description"><strong>1966</strong> - 3.8L, 265bhp</p>
+        </div>
+      </div>
+
+    </div>
+
+  </div>
+
+  <script type="text/javascript">
+    $(function() {
+      new Dragdealer('image-carousel', {
+        steps: 4,
+        speed: 0.3,
+        loose: true
+      });
+    })
+  </script>
+
+</body>
+</html>

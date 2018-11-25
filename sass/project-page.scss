@@ -201,17 +201,6 @@
 }
 
 //-------------------------------------
-//	PICTURE • ALL
-//-------------------------------------
-.project-picture--all {
-	height: 600px;
-	background-size: cover;
-	background-position: center;
-	background-attachment: fixed;
-	background-repeat: no-repeat;
-}
-
-//-------------------------------------
 //	PICTURE • EXPLAIN
 //-------------------------------------
 .project-picture--explain {
@@ -289,6 +278,21 @@
 		left: 0;
 	}
 }
+//-------------------------------------
+//	PARALLAX • BACKGROUND
+//-------------------------------------
+.project-parallax--bg {
+	height: 450px;
+	overflow: hidden;
+}
+
+.project-parallax--bg div {
+	height: 200%;
+	position: relative;
+	top: -100%;
+	background-size: cover;
+	background-position: center;
+}
 
 //-------------------------------------
 //	PICTURE • MOBILE
@@ -311,81 +315,81 @@
 //-------------------------------------
 //	PICTURE • SLIDER
 //-------------------------------------
-.container-fluid.project-slider {
-	padding: 40px 0;
-	margin-top: 210px !important;
-}
+// .container-fluid.project-slider {
+// 	padding: 40px 0;
+// 	margin-top: 210px !important;
+// }
 
-.slider__content {
-	margin-top: calc((-40px - 70px) - 47px);
-	// - Padding - decalage - taille titre
-}
+// .slider__content {
+// 	margin-top: calc((-40px - 70px) - 47px);
+// 	// - Padding - decalage - taille titre
+// }
 
-.slider__wrapper {
-	position: relative;
-}
+// .slider__wrapper {
+// 	position: relative;
+// }
 
-.slider__pictures {
-	position: absolute;
-	width: calc((60vw * 3) + (50px * 3));
-	display: flex;
-	left: calc(50% - (60vw / 2) - 25px);
-	@include transition(transform 0.6s cubic-bezier(0.65, 0.03, 0.5, 0.99));
+// .slider__pictures {
+// 	position: absolute;
+// 	width: calc((60vw * 3) + (50px * 3));
+// 	display: flex;
+// 	left: calc(50% - (60vw / 2) - 25px);
+// 	@include transition(transform 0.6s cubic-bezier(0.65, 0.03, 0.5, 0.99));
 
-	h4 {
-		text-align: center;
-		font-weight: 600;
-		margin: 0 0 30px 0;
-	}
+// 	h4 {
+// 		text-align: center;
+// 		font-weight: 600;
+// 		margin: 0 0 30px 0;
+// 	}
 
-	img {
-		width: 100%;
-		border-radius: 4px;
-	}
-}
+// 	img {
+// 		width: 100%;
+// 		border-radius: 4px;
+// 	}
+// }
 
-.slide {
-	width: 60vw;
-	margin: 0 25px;
-}
+// .slide {
+// 	width: 60vw;
+// 	margin: 0 25px;
+// }
 
-.slider__nav {
-	width: 100%;
-	margin: 50px auto 0 auto;
+// .slider__nav {
+// 	width: 100%;
+// 	margin: 50px auto 0 auto;
 
-	.slider-nav__bullet {
-		color: transparent;
-		cursor: pointer;
-		position: relative;
-		display: inline-block;
-		width: 6px;
-		height: 6px;
-		border-radius: 50%;
-		background-color: $primary-color;
-		opacity: 0.5;
-		margin: 0 5px;
-		@include transition(opacity 0.2s ease-in-out);
+// 	.slider-nav__bullet {
+// 		color: transparent;
+// 		cursor: pointer;
+// 		position: relative;
+// 		display: inline-block;
+// 		width: 6px;
+// 		height: 6px;
+// 		border-radius: 50%;
+// 		background-color: $primary-color;
+// 		opacity: 0.5;
+// 		margin: 0 5px;
+// 		@include transition(opacity 0.2s ease-in-out);
 
-		&:hover {
-			opacity: 1;
-		}
+// 		&:hover {
+// 			opacity: 1;
+// 		}
 
-		&.bullet--active {
-			opacity: 1;
+// 		&.bullet--active {
+// 			opacity: 1;
 
-			&:after {
-				content: '';
-				position: absolute;
-				top: -8px;
-				left: -8px;
-				width: 20px;
-				height: 20px;
-				border: 1px solid $primary-color;
-				border-radius: 50%;
-			}
-		}
-	}
-}
+// 			&:after {
+// 				content: '';
+// 				position: absolute;
+// 				top: -8px;
+// 				left: -8px;
+// 				width: 20px;
+// 				height: 20px;
+// 				border: 1px solid $primary-color;
+// 				border-radius: 50%;
+// 			}
+// 		}
+// 	}
+// }
 
 //-------------------------------------
 //	DESCRIPTION • SUBTITLE
@@ -513,6 +517,7 @@
 //	VARIABLES PROJECT
 //-------------------------------------
 .project-page#project-04 {
+
 	section .container h3,
 	section h4,
 	.next-project__name:hover {
@@ -523,7 +528,7 @@
 		background-image: url(../img/le-trianon__hero-picture.jpg);
 	}
 
-	.project-picture--all {
+	#parallax-bg-01 div {
 		background-image: url(../img/le-trianon__picture--all.jpg);
 	}
 
@@ -535,64 +540,3 @@
 		}
 	}
 }
-
-// .parallax {
-// 	height: 500px;
-// 	overflow-x: hidden;
-// 	overflow-y: auto;
-// 	-webkit-perspective: 1px;
-// 	perspective: 1px;
-
-// }
-
-// .parallax__layer {
-// 	position: absolute;
-// 	top: 0;
-// 	right: 0;
-// 	bottom: 0;
-// 	left: 0;
-// 	color: white;
-// 	padding: 100vh 0;
-// }
-
-// .title {
-//     position: absolute;
-//     left: 50%;
-//     top: 50%;
-//     -webkit-transform: translate(-50%, -50%);
-//     transform: translate(-50%, -50%);
-// }
-
-// .parallax__layer--base {
-// 	// background: red;
-// 	transform: translateZ(0);
-// }
-
-// .parallax__layer--back {
-// 	background-image: url(../img/le-trianon__picture--all.jpg);
-// 	transform: translateZ(-1px) scale(2);
-// 	background-size: cover;
-// }
-
-
-
-// .wrapper {
-// 	display: none;
-// }
-
-// /* 3. Images Keyframe
-// --------------------------------------- */
-
-// .img-01 {
-// 	position: fixed;
-// 	top: 30%;
-// 	right: 5%;
-// 	width: 300px;
-// }
-
-// .img-02 {
-// 	position: fixed;
-// 	top: 40%;
-// 	right: 40%;
-// 	width: 300px;
-// }
