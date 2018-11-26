@@ -1,60 +1,78 @@
 <!DOCTYPE html>
 <html>
-<head>
-  <title>Dragdealer - Simple slider</title>
+	<head>
+		<title>Dragdealer - Simple slider</title>
 
-  <!-- Jquery -->
-  <script src="../lib/jquery-1.10.2.js"></script>
+		<!-- Jquery -->
+		<script src="../lib/jquery-1.10.2.js"></script>
 
-  <!-- Dragdealer JS -->
-  <script src="../src/dragdealer.js"></script>
-  <!-- Dragdealer CSS -->
-  <link  href="../src/dragdealer.css" rel="stylesheet" type="text/css">
+		<!-- Dragdealer JS -->
+		<script src="../src/dragdealer.js"></script>
 
-  <!-- Example style -->
-  <link href="style.css" rel="stylesheet" type="text/css">
+		<!-- Example style -->
+		<link href="style.css" rel="stylesheet" type="text/css" />
+	</head>
+	<body>
+		<div class="container-fluid project-slider">
+			<div class="slider__content">
+				<div id="image-carousel" class="slider__wrapper dragdealer">
+					<div class="handle slider__pictures">
+						<div class="slide img1">
+							<h4>Titre slide</h4>
+							<img src="../../img/le-trianon__project-slide-03.jpg" alt="" />
+						</div>
 
-</head>
-<body>
+						<div class="slide img2">
+							<h4>Titre slide</h4>
+							<img src="../../img/le-trianon__project-slide-03.jpg" alt="" />
+						</div>
 
-  <div id="image-carousel" class="dragdealer">
-
-    <div class="handle">
-
-      <div class="slide img1">
-        <div class="info">
-          <p class="title">Aston Martin DB4</p>
-          <p class="description"><strong>1959</strong> - 3.7L, 240hp</p>
+						<div class="slide img3">
+							<h4>Titre slide</h4>
+							<img src="../../img/le-trianon__project-slide-03.jpg" alt="" />
+						</div>
+					</div>
         </div>
-      </div>
+        
+			</div>
+		</div>
 
-      <div class="slide img2">
-        <div class="info">
-          <p class="title">Mercedes-Benz 300SL</p>
-          <p class="description"><strong>1956</strong> - 2996cc, 212-222hp</p>
-        </div>
-      </div>
+		<script type="text/javascript">
+			const calcHeightSlider = () => {
+				console.log(document.querySelector('.slider__pictures').clientHeight);
 
-      <div class="slide img3">
-        <div class="info">
-          <p class="title">Jaguar E-Type</p>
-          <p class="description"><strong>1966</strong> - 3.8L, 265bhp</p>
-        </div>
-      </div>
+				document.querySelector(
+					'.slider__wrapper'
+				).style.height = document.querySelector(
+					'.slider__pictures'
+				).clientHeight;
+			};
 
-    </div>
+			//-------------------------------------
+			//	MAIN FUNCTION
+			//-------------------------------------
+			const main = () => {
+				// Height of slider
+				calcHeightSlider();
+			};
 
-  </div>
+			//-------------------------------------
+			//	RESPONSIVE
+			//-------------------------------------
+			const responsive = () => {
+				calcHeightSlider();
+			};
 
-  <script type="text/javascript">
-    $(function() {
-      new Dragdealer('image-carousel', {
-        steps: 4,
-        speed: 0.3,
-        loose: true
-      });
-    })
-  </script>
+			document.onload = main();
+			window.onresize = responsive;
 
-</body>
+			$(function() {
+				new Dragdealer('image-carousel', {
+					steps: 3,
+					speed: 0.3,
+					loose: true
+				});
+			});
+		</script>
+	</body>
 </html>
