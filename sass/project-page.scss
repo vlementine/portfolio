@@ -321,76 +321,63 @@
 	margin-top: 210px !important;
 }
 
-.slider__content {
+.slider.slider__content {
 	margin-top: calc((-40px - 70px) - 47px);
 	// - Padding - decalage - taille titre
-}
-
-.slider__wrapper {
-	position: relative;
-}
-
-.slider__pictures {
-	position: absolute;
-	width: calc((60vw * 3) + (50px * 3));
-	display: flex;
-	left: calc(50% - (60vw / 2) - 25px);
-	@include transition(transform 0.6s cubic-bezier(0.65, 0.03, 0.5, 0.99));
 
 	h4 {
 		text-align: center;
 		font-weight: 600;
 		margin: 0 0 30px 0;
 	}
-
-	img {
-		width: 100%;
-		border-radius: 4px;
-	}
 }
 
-.slide {
-	width: 60vw;
-	margin: 0 25px;
-}
+// .slider__wrapper {
+// 	position: relative;
+// }
 
-.slider__nav {
-	width: 100%;
-	margin: 50px auto 0 auto;
+// .slide {
+// 	width: 60vw;
+// 	margin: 0 25px;
+// }
 
-	.slider-nav__bullet {
-		color: transparent;
-		cursor: pointer;
-		position: relative;
-		display: inline-block;
-		width: 6px;
-		height: 6px;
-		border-radius: 50%;
-		background-color: $primary-color;
-		opacity: 0.5;
-		margin: 0 5px;
-		@include transition(opacity 0.2s ease-in-out);
+// .slider__nav {
+// 	width: 100%;
+// 	margin: 50px auto 0 auto;
 
-		&:hover {
-			opacity: 1;
-		}
+// 	.slider-nav__bullet {
+// 		color: transparent;
+// 		cursor: pointer;
+// 		position: relative;
+// 		display: inline-block;
+// 		width: 6px;
+// 		height: 6px;
+// 		border-radius: 50%;
+// 		background-color: $primary-color;
+// 		opacity: 0.5;
+// 		margin: 0 5px;
+// 		@include transition(opacity 0.2s ease-in-out);
 
-		&.bullet--active {
-			opacity: 1;
+// 		&:hover {
+// 			opacity: 1;
+// 		}
 
-			&:after {
-				content: '';
-				position: absolute;
-				top: -8px;
-				left: -8px;
-				width: 20px;
-				height: 20px;
-				border: 1px solid $primary-color;
-				border-radius: 50%;
-			}
-		}
-	}
-}
+// 		&.bullet--active {
+// 			opacity: 1;
+
+// 			&:after {
+// 				content: '';
+// 				position: absolute;
+// 				top: -8px;
+// 				left: -8px;
+// 				width: 20px;
+// 				height: 20px;
+// 				border: 1px solid $primary-color;
+// 				border-radius: 50%;
+// 			}
+// 		}
+// 	}
+// }
 
 //-------------------------------------
 //	DESCRIPTION • SUBTITLE
@@ -532,11 +519,13 @@
 		background-image: url(../img/le-trianon__picture--all.jpg);
 	}
 
-	.slider-nav__bullet {
+	.slick-dots li button {
 		background-color: $project-04;
+		@include transition(opacity 0.2s ease-in-out);
 
-		&.bullet--active:after {
+		&:after {
 			border-color: $project-04;
+			@include transition(opacity 0.2s ease-in-out);
 		}
 	}
 

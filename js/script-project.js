@@ -27,43 +27,43 @@ const redirectionProject = varURL => {
 //-------------------------------------
 //	SLIDER
 //-------------------------------------
-const calcHeightSlider = () => {
-  document.querySelector(
-    '.slider__wrapper'
-  ).style.height = document.querySelector('.slider__pictures').clientHeight;
-};
+// const calcHeightSlider = () => {
+//   document.querySelector(
+//     '.slider__wrapper'
+//   ).style.height = document.querySelector('.slider__pictures').clientHeight;
+// };
 
-const slider = number => {
-  let windowWidth = window.innerWidth;
+// const slider = number => {
+//   let windowWidth = window.innerWidth;
 
-  let slide = document.querySelector('.slide');
-  let slideW = slide.clientWidth;
-  let slideM =
-    parseInt(getComputedStyle(slide).marginLeft) +
-    parseInt(getComputedStyle(slide).marginRight);
+//   let slide = document.querySelector('.slide');
+//   let slideW = slide.clientWidth;
+//   let slideM =
+//     parseInt(getComputedStyle(slide).marginLeft) +
+//     parseInt(getComputedStyle(slide).marginRight);
 
-  let calcTranslate =
-    windowWidth <= 650 ?
-    'calc((-80vw * ' + number + ') - (' + slideM + 'px * ' + number + '))' :
-    'calc((-60vw * ' + number + ') - (' + slideM + 'px * ' + number + '))';
+//   let calcTranslate =
+//     windowWidth <= 650 ?
+//     'calc((-80vw * ' + number + ') - (' + slideM + 'px * ' + number + '))' :
+//     'calc((-60vw * ' + number + ') - (' + slideM + 'px * ' + number + '))';
 
-  let bulletLength = document.querySelectorAll('.slider-nav__bullet').length;
+//   let bulletLength = document.querySelectorAll('.slider-nav__bullet').length;
 
-  // Remove class active to all bullets
-  for (let i = 0; i < bulletLength; i++) {
-    document
-      .querySelectorAll('.slider-nav__bullet')[i].classList.remove('bullet--active');
-  }
+//   // Remove class active to all bullets
+//   for (let i = 0; i < bulletLength; i++) {
+//     document
+//       .querySelectorAll('.slider-nav__bullet')[i].classList.remove('bullet--active');
+//   }
 
-  // Add active class to bullet
-  document
-    .querySelector('.slider-nav__bullet:nth-child(' + (number + 1) + ')')
-    .classList.add('bullet--active');
+//   // Add active class to bullet
+//   document
+//     .querySelector('.slider-nav__bullet:nth-child(' + (number + 1) + ')')
+//     .classList.add('bullet--active');
 
-  // Move slides
-  document.querySelector('.slider__pictures').style.transform =
-    'translate(' + calcTranslate + ')';
-};
+//   // Move slides
+//   document.querySelector('.slider__pictures').style.transform =
+//     'translate(' + calcTranslate + ')';
+// };
 
 //-------------------------------------
 //	ParallaxMobile
@@ -105,7 +105,7 @@ const responsive = () => {
 
   parallaxMobile();
 
-  calcHeightSlider();
+  // calcHeightSlider();
 
   // Align slider on responsive
   let bulletsSlider = document.querySelectorAll('.slider-nav__bullet');
@@ -149,7 +149,7 @@ const main = () => {
   let nameProject = initialURL.substring(positionAfterHyphen, positionHtml - 1);
 
   // Height of slider
-  calcHeightSlider();
+  // calcHeightSlider();
 
   // Parallax mobile
   parallaxMobile();

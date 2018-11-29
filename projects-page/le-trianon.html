@@ -7,6 +7,7 @@
   <title>Project name • Clémentine Bertrand</title>
   <link rel="icon" type="image/png" href="../img/favicon-pro.png" />
   <link rel="stylesheet" href="../css/main.min.css" />
+  <link rel="stylesheet" href="../css/slick.css" />
 </head>
 
 <body id="project-04" class="project-page">
@@ -210,40 +211,24 @@
         </p>
       </div>
 
-      <div class="container-fluid project-slider">
-        <div class="slider__content">
-
-          <div class="slider__wrapper dragdealer" >
-
-            <div class="slider__pictures">
-
-              <div class="slide slide--active">
+    <div class="container-fluid project-slider">
+        <div class="slider__content center slider">
+            <div>
                 <h4>Titre slide</h4>
-                <img src="../img/le-trianon__project-slide-01.jpg" alt="">
-              </div>
-
-              <div class="slide slide--active">
-                <h4>Titre slide</h4>
-                <img src="../img/le-trianon__project-slide-02.jpg" alt="">
-              </div>
-
-              <div class="slide slide--active">
-                <h4>Titre slide</h4>
-                <img src="../img/le-trianon__project-slide-03.jpg" alt="">
-              </div>
-
+                <img src="../img/le-trianon__project-slide-01.jpg" alt="" />
             </div>
-
-          </div>
-
-          <div class="slider__nav">
-            <span class="slider-nav__bullet bullet--active" onclick="slider(0)">1</span>
-            <span class="slider-nav__bullet" onclick="slider(1)">2</span>
-            <span class="slider-nav__bullet" onclick="slider(2)">3</span>
-          </div>
+    
+            <div>
+                <h4>Titre slide</h4>
+                <img src="../img/le-trianon__project-slide-02.jpg" alt="" />
+            </div>
+    
+            <div>
+                <h4>Titre slide</h4>
+                <img src="../img/le-trianon__project-slide-03.jpg" alt="" />
+            </div>
         </div>
-
-      </div>
+    </div>
 
       <div class="container project-description">
         <h3>Page évévements</h3>
@@ -319,7 +304,7 @@
   </footer>
   </div>
 
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+  <script src="https://code.jquery.com/jquery-2.2.0.min.js"></script>
 
   <!-- <script src="../js/vendor/getPosition.js"></script> -->
 
@@ -331,16 +316,19 @@
   <script src="../js/data-json.js"></script>
   <script src="../js/nav.js"></script>
   <script src="../js/script-project.js"></script>
-  <script src="../js/vendor/dragdealer.js"></script>
+  <script src="../js/vendor/slick.js"></script>
 
   <script type="text/javascript">
-    $(function () {
-      new Dragdealer('image-carousel', {
-        steps: 4,
-        speed: 0.3,
-        loose: true
-      });
-    })
+    $(document).on('ready', function () {
+            $('.center').slick({
+                arrows: false,
+                dots: true,
+                infinite: true,
+                centerMode: true,
+                slidesToShow: 1,
+                slidesToScroll: 3
+            });
+        });
   </script>
   <!-- <script src="../js/vendor/dragscroll.js"></script> -->
 </body>

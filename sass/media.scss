@@ -292,6 +292,10 @@
 	.project-page .container {
 		width: calc(100% - 40px);
 		margin: 100px auto;
+
+		&.project-description {
+			width: calc(100% - 60px);
+		}
 	}
 
 	.project-picture {
