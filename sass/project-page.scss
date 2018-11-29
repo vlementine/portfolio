@@ -175,7 +175,8 @@
 //	PICTURE • SIMPLE
 //-------------------------------------
 .project-picture--simple {
-	margin-top: 210px !important;
+	margin-top: calc(140px + 70px) !important;
+	// margin-top + padding
 
 	img {
 		max-width: 980px;
@@ -187,7 +188,8 @@
 //-------------------------------------
 .project-picture--double {
 	padding-bottom: 150px;
-	margin-top: 210px !important;
+	margin-top: calc(140px + 70px) !important;
+	// margin-top + padding
 
 	img {
 		display: inline-block;
@@ -206,7 +208,8 @@
 .project-picture--explain {
 	background-color: $dark-blue-05;
 	padding: 70px;
-	margin-top: 210px !important;
+	margin-top: calc(140px + 70px) !important;
+	// margin-top + padding
 
 	img {
 		width: 100%;
@@ -317,13 +320,15 @@
 //	PICTURE • SLIDER
 //-------------------------------------
 .container-fluid.project-slider {
-	padding: 40px 0;
-	margin-top: 210px !important;
+	padding: 70px 0;
+	margin-top: calc(140px + 70px) !important;
+	// margin-top + padding
 }
 
 .slider.slider__content {
-	margin-top: calc((-40px - 70px) - 47px);
-	// - Padding - decalage - taille titre
+	margin-top: calc(-70px - 70px);
+	// - Padding - decalage
+	margin-bottom: 40px;
 
 	h4 {
 		text-align: center;
@@ -331,53 +336,6 @@
 		margin: 0 0 30px 0;
 	}
 }
-
-// .slider__wrapper {
-// 	position: relative;
-// }
-
-// .slide {
-// 	width: 60vw;
-// 	margin: 0 25px;
-// }
-
-// .slider__nav {
-// 	width: 100%;
-// 	margin: 50px auto 0 auto;
-
-// 	.slider-nav__bullet {
-// 		color: transparent;
-// 		cursor: pointer;
-// 		position: relative;
-// 		display: inline-block;
-// 		width: 6px;
-// 		height: 6px;
-// 		border-radius: 50%;
-// 		background-color: $primary-color;
-// 		opacity: 0.5;
-// 		margin: 0 5px;
-// 		@include transition(opacity 0.2s ease-in-out);
-
-// 		&:hover {
-// 			opacity: 1;
-// 		}
-
-// 		&.bullet--active {
-// 			opacity: 1;
-
-// 			&:after {
-// 				content: '';
-// 				position: absolute;
-// 				top: -8px;
-// 				left: -8px;
-// 				width: 20px;
-// 				height: 20px;
-// 				border: 1px solid $primary-color;
-// 				border-radius: 50%;
-// 			}
-// 		}
-// 	}
-// }
 
 //-------------------------------------
 //	DESCRIPTION • SUBTITLE

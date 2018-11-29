@@ -306,7 +306,8 @@
 		}
 
 		img {
-			margin-top: -60px;
+      margin-top: calc(-10px - 60px);
+      // - Padding - decalage
 		}
 	}
 
@@ -325,11 +326,13 @@
 	}
 
 	.container-fluid.project-slider {
-		padding: 20px 0;
-		margin-top: calc(100px + 60px + 37px - 20px) !important;
+		padding: 40px 0;
+		margin-top: calc(100px + 60px) !important;
+    // margin-top + padding
 
 		.slider__content {
-			margin-top: calc(-60px - 37px);
+      margin-top: calc(-40px - 60px);
+      // - Padding - decalage
 		}
 	}
 
