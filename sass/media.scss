@@ -293,7 +293,8 @@
 		width: calc(100% - 40px);
 		margin: 100px auto;
 
-		&.project-description {
+    &.project-description,
+    &.project-intro {
 			width: calc(100% - 60px);
 		}
 	}
@@ -306,8 +307,8 @@
 		}
 
 		img {
-      margin-top: calc(-10px - 60px);
-      // - Padding - decalage
+			margin-top: calc(-10px - 60px);
+			// - padding - gap
 		}
 	}
 
@@ -315,43 +316,31 @@
 		padding: 10px;
 
 		.explain {
-			margin-top: -60px;
+			margin-top: calc(-10px - 60px);
+			// - padding - gap
 		}
 	}
 
 	.project-picture--simple,
 	.project-picture--double,
 	.project-picture--explain {
-		margin-top: calc(100px + 60px - 10px) !important;
+		margin-top: calc(100px + 60px) !important;
+		// margin-top + gap
+	}
+
+	.project-picture--double img:last-child {
+		margin-top: 10px;
 	}
 
 	.container-fluid.project-slider {
 		padding: 40px 0;
 		margin-top: calc(100px + 60px) !important;
-    // margin-top + padding
+		// margin-top + gap
 
 		.slider__content {
-      margin-top: calc(-40px - 60px);
-      // - Padding - decalage
+			margin-top: calc(-40px - 60px);
+			// - padding - gap
 		}
-	}
-
-	.slide {
-		width: 80vw;
-		margin: 0 10px;
-	}
-
-	.slider__pictures {
-		width: calc(240vw + 60px);
-		left: calc(50% - (80vw / 2) - 10px);
-
-		h4 {
-			margin: 0 0 10px 0;
-		}
-	}
-
-	.slider__nav {
-		margin: 30px auto 0 auto;
 	}
 }
 
@@ -369,57 +358,11 @@
 		padding: 20px 20px 0 20px;
 	}
 
-	.project-page .container {
-		width: calc(100% - 40px);
-
-		&.project-description {
-			width: calc(100% - 80px);
-		}
-	}
-
-	.project-picture--simple,
-	.project-picture--double,
-	.project-picture--explain {
-		margin-top: 110px !important;
-	}
-
-	.project-picture,
-	.project-picture--explain {
-		padding: 10px;
-	}
-
-	.project-picture--double img:last-child {
-		margin-top: 10px;
-	}
-
-	.container-fluid.project-slider {
-		padding: 15px 0;
-		margin-top: 84px !important;
-
-		.slider__content {
-			margin-top: calc(-50px - 14px);
-		}
-	}
-
 	.project-mobile img {
 		width: 100%;
-	}
-
-	.slide {
-		width: 80vw;
-		margin: 0 10px;
-	}
-
-	.slider__pictures {
-		width: calc((80vw * 3) + (20px * 3));
-		left: calc(50% - (80vw / 2) - 10px);
-
-		h4 {
-			margin: 0 0 10px 0;
-		}
-	}
-
-	.slider__nav {
-		margin: 25px auto 0 auto;
-	}
+  }
+  
+  .slick-track .slick-slide {
+    margin: 0 5px;
+  }
 }
