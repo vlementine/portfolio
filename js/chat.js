@@ -93,7 +93,7 @@ const sendEmail = () => {
   let messageAnswer = document.getElementById('messageAnswer').value;
 
   xhr = new XMLHttpRequest();
-  xhr.open('POST', '../sendEmail.php');
+  xhr.open('POST', 'sendEmail.php');
   xhr.setRequestHeader('Content-Type', 'application/json');
   xhr.send(
     JSON.stringify({
