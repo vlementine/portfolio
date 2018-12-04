@@ -289,12 +289,16 @@
 		width: calc(100% - 40px);
 	}
 
+	.project-page nav {
+		padding: 20px 20px 0 20px;
+	}
+
 	.project-page .container {
 		width: calc(100% - 40px);
 		margin: 100px auto;
 
-    &.project-description,
-    &.project-intro {
+		&.project-description,
+		&.project-intro {
 			width: calc(100% - 60px);
 		}
 	}
@@ -360,9 +364,9 @@
 
 	.project-mobile img {
 		width: 100%;
-  }
-  
-  .slick-track .slick-slide {
-    margin: 0 5px;
-  }
+	}
+
+	.slick-track .slick-slide {
+		margin: 0 5px;
+	}
 }
