@@ -439,11 +439,11 @@ h3 {
 }
 
 .project-page#project-04 header {
-  background-image: url(../img/le-trianon__hero-picture.jpg);
+  background-image: url(../img/le-trianon/le-trianon__hero-picture.jpg);
 }
 
 .project-page#project-04 #parallax-bg-01 div {
-  background-image: url(../img/le-trianon__picture--all.jpg);
+  background-image: url(../img/le-trianon/le-trianon__picture--all.jpg);
 }
 
 .project-page#project-04 .slider-nav__bullet {
