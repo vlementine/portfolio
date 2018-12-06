@@ -28,11 +28,15 @@
 		@include transition(transform 0.8s ease-in-out);
 	}
 
+	.presentation__wrapper {
+		width: 100%;
+	}
+
 	.home__presentation {
 		width: 80%;
 		max-width: 700px;
 		text-align: center;
-		margin-top: -80px;
+		margin: -60px auto 0;
 
 		h1 {
 			font-size: 0.6rem;
@@ -55,12 +59,31 @@
 		}
 	}
 
-	img {
+	.home__illustration {
+		position: relative;
 		z-index: -1;
-		height: auto;
+		height: 290px;
 		max-height: 60%;
 		width: auto;
-		max-width: 350px;
+		max-width: 300px;
+		margin: auto;
+
+		img {
+			width: 100%;
+			position: absolute;
+			top: 0;
+			left: 0;
+
+			&:first-child {
+				top: 30px;
+			}
+
+			&:last-child {
+				width: 170px;
+				left: 50%;
+				margin-left: -85px;
+			}
+		}
 	}
 }
 
@@ -192,7 +215,6 @@
 	width: 100%;
 	color: $dark-blue-80;
 }
-
 
 //-------------------------------------
 //	NAVIGATION • MOBILE
@@ -331,7 +353,7 @@
 .project--mobile#project-01 .project__content,
 .menu__projects .menu__project:nth-child(1) h3:after,
 #menu__project-01 .menu__project-visuel--mobile,
-.menu__projects-wrapper #menu__project-01{
+.menu__projects-wrapper #menu__project-01 {
 	background: $gradient-project-01;
 }
 
@@ -391,7 +413,7 @@
 .project--mobile#project-03 .project__content,
 .menu__projects .menu__project:nth-child(3) h3:after,
 #menu__project-03 .menu__project-visuel--mobile,
-.menu__projects-wrapper #menu__project-03{
+.menu__projects-wrapper #menu__project-03 {
 	background: $gradient-project-03;
 }
 
@@ -424,7 +446,7 @@
 .project--mobile#project-04 .project__content,
 .menu__projects .menu__project:nth-child(4) h3:after,
 #menu__project-04 .menu__project-visuel--mobile,
-.menu__projects-wrapper #menu__project-04{
+.menu__projects-wrapper #menu__project-04 {
 	background: $gradient-project-04;
 }
 
@@ -693,7 +715,7 @@
 		z-index: -2;
 		background-image: url(../img/noise-pattern.png);
 	}
-} 
+}
 
 //-- Project description
 .project__description--mobile {
