@@ -36,7 +36,7 @@
 		width: 80%;
 		max-width: 700px;
 		text-align: center;
-		margin: -60px auto 0;
+		margin: -110px auto 0;
 
 		h1 {
 			font-size: 0.6rem;
@@ -67,21 +67,24 @@
 		width: auto;
 		max-width: 300px;
 		margin: auto;
+		text-align: center;
 
 		img {
-			width: 100%;
-			position: absolute;
-			top: 0;
-			left: 0;
+			// width: 100%;
+			// position: absolute;
+			// top: 0;
+			// left: 0;
 
 			&:first-child {
-				top: 30px;
+				width: 170px;
+				left: 50%;
+				top: -40px;
+				margin-left: -85px;
+				position: absolute;
 			}
 
 			&:last-child {
-				width: 170px;
-				left: 50%;
-				margin-left: -85px;
+				width: 100%;
 			}
 		}
 	}
