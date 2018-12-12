@@ -3,7 +3,7 @@
 
 // -----------------------------------
 //
-//   MEDIA
+//	MEDIA
 //
 // -----------------------------------
 
@@ -368,5 +368,29 @@
 
 	.slick-track .slick-slide {
 		margin: 0 5px;
+	}
+}
+
+//-------------------------------------
+//	MEDIA QUERIES : 320px
+//-------------------------------------
+@media screen and (max-width: 320px) {
+	//-- HOME
+	.project__description--mobile {
+		margin-bottom: 20px;
+	}
+
+	.description__title--mobile {
+		margin: 35px 0 5px 0;
+
+		h2 {
+			font-size: 2.4rem;
+		}
+	}
+	.project--mobile .btn {
+		margin-top: 35px;
+	}
+	.nav--mobile {
+		margin: 16px auto;
 	}
 }

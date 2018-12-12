@@ -3,7 +3,7 @@
 
 // -----------------------------------
 //
-//   HOME
+//	HOME
 //
 // -----------------------------------
 
@@ -352,132 +352,6 @@
 	}
 }
 
-#project-01 .project__visuel,
-.project--mobile#project-01 .project__content,
-.menu__projects .menu__project:nth-child(1) h3:after,
-#menu__project-01 .menu__project-visuel--mobile,
-.menu__projects-wrapper #menu__project-01 {
-	background: $gradient-project-01;
-}
-
-#project-01 .description__number-wrapper--mobile .description__number--mobile,
-.project-page#project-01 .project__summary .summary__type .type {
-	background: $gradient-project-01;
-	-webkit-background-clip: text;
-	-webkit-text-fill-color: transparent;
-}
-
-#menu__project-01 .nav__arrow {
-	border-color: $project-01;
-
-	.arrow__circle {
-		background: lighten($project-01, 30%);
-
-		&:after {
-			background: lighten($project-01, 45%);
-		}
-	}
-}
-
-#project-02 .project__visuel,
-.project--mobile#project-02 .project__content,
-.menu__projects .menu__project:nth-child(2) h3:after,
-#menu__project-02 .menu__project-visuel--mobile,
-.menu__projects-wrapper #menu__project-02 {
-	background: $gradient-project-02;
-}
-
-#project-02 .description__number-wrapper--mobile .description__number--mobile,
-.project-page#project-02 .project__summary .summary__type .type {
-	background: $gradient-project-02;
-	-webkit-background-clip: text;
-	-webkit-text-fill-color: transparent;
-}
-
-#project-02
-	.description__number-wrapper--mobile
-	.description__number--mobile:after {
-	content: '02.';
-}
-
-#menu__project-02 .nav__arrow {
-	border-color: $project-02;
-
-	.arrow__circle {
-		background: lighten($project-02, 10%);
-
-		&:after {
-			background: lighten($project-02, 20%);
-		}
-	}
-}
-
-#project-03 .project__visuel,
-.project--mobile#project-03 .project__content,
-.menu__projects .menu__project:nth-child(3) h3:after,
-#menu__project-03 .menu__project-visuel--mobile,
-.menu__projects-wrapper #menu__project-03 {
-	background: $gradient-project-03;
-}
-
-#project-03 .description__number-wrapper--mobile .description__number--mobile,
-.project-page#project-03 .project__summary .summary__type .type {
-	background: $gradient-project-03;
-	-webkit-background-clip: text;
-	-webkit-text-fill-color: transparent;
-}
-
-#project-03
-	.description__number-wrapper--mobile
-	.description__number--mobile:after {
-	content: '03.';
-}
-
-#menu__project-03 .nav__arrow {
-	border-color: $project-03;
-
-	.arrow__circle {
-		background: lighten($project-03, 30%);
-
-		&:after {
-			background: lighten($project-03, 45%);
-		}
-	}
-}
-
-#project-04 .project__visuel,
-.project--mobile#project-04 .project__content,
-.menu__projects .menu__project:nth-child(4) h3:after,
-#menu__project-04 .menu__project-visuel--mobile,
-.menu__projects-wrapper #menu__project-04 {
-	background: $gradient-project-04;
-}
-
-#project-04
-	.description__number-wrapper--mobile
-	.description__number--mobile:after {
-	content: '04.';
-}
-
-#project-04 .description__number-wrapper--mobile .description__number--mobile,
-.project-page#project-04 .project__summary .summary__type .type {
-	background: $gradient-project-04;
-	-webkit-background-clip: text;
-	-webkit-text-fill-color: transparent;
-}
-
-#menu__project-04 .nav__arrow {
-	border-color: $project-04;
-
-	.arrow__circle {
-		background: lighten($project-04, 30%);
-
-		&:after {
-			background: lighten($project-04, 45%);
-		}
-	}
-}
-
 //-- Project visuel
 .project__visuel {
 	display: flex;
@@ -690,11 +564,11 @@
 
 .project__content {
 	display: flex;
-	position: relative;
+	position: fixed;
 	flex-direction: column;
 	justify-content: center;
-	height: calc(100vh - 30px);
-	width: calc(100vw - 30px);
+	height: calc(100% - 30px);
+	width: calc(100% - 30px);
 	margin: 15px;
 	padding: 20px 20px 90px 20px;
 	background: $gradient-primary;
@@ -1052,7 +926,6 @@
 	background: $dark-blue-50;
 	color: #fff;
 	align-self: flex-end;
-	//margin-left: calc(100% - 280px);
 
 	&.enable {
 		@include animation(0.3s bubble ease-in-out forwards 0.6s);
@@ -1140,6 +1013,164 @@
 		&.enable__choice {
 			@include animation(0.3s bubble ease-in-out forwards 0.9s);
 			display: flex;
+		}
+	}
+}
+
+//-------------------------------------
+//	VARIABLES
+//-------------------------------------
+//-- Project 01
+#project-01 {
+	.btn {
+		color: $project-01;
+	}
+
+	.project__visuel,
+	.project__content {
+		background: $gradient-project-01;
+	}
+
+	.description__number--mobile {
+		background: $gradient-project-01;
+		-webkit-background-clip: text;
+		-webkit-text-fill-color: transparent;
+	}
+}
+
+#menu__project-01 h3:after,
+#menu__project--mobile-01 .menu__project-visuel--mobile {
+	background: $gradient-project-01;
+}
+
+#menu__project--mobile-01 .nav__arrow {
+	border-color: $project-01;
+
+	.arrow__circle {
+		background: lighten($project-01, 30%);
+
+		&:after {
+			background: lighten($project-01, 45%);
+		}
+	}
+}
+
+//-- Project 02
+#project-02 {
+	.btn {
+		color: $project-02;
+	}
+
+	.project__visuel,
+	.project__content {
+		background: $gradient-project-02;
+	}
+
+	.description__number--mobile:after {
+		content: '02.';
+	}
+
+	.description__number--mobile {
+		background: $gradient-project-02;
+		-webkit-background-clip: text;
+		-webkit-text-fill-color: transparent;
+	}
+}
+
+#menu__project-02 h3:after,
+#menu__project-visuel-02,
+#menu__project--mobile-02 .menu__project-visuel--mobile {
+	background: $gradient-project-02;
+}
+
+#menu__project--mobile-02 .nav__arrow {
+	border-color: $project-02;
+
+	.arrow__circle {
+		background: lighten($project-02, 10%);
+
+		&:after {
+			background: lighten($project-02, 20%);
+		}
+	}
+}
+
+//-- Project 03
+#project-03 {
+	.btn {
+		color: $project-03;
+	}
+
+	.project__visuel,
+	.project__content {
+		background: $gradient-project-03;
+	}
+
+	.description__number--mobile:after {
+		content: '03.';
+	}
+
+	.description__number--mobile {
+		background: $gradient-project-03;
+		-webkit-background-clip: text;
+		-webkit-text-fill-color: transparent;
+	}
+}
+
+#menu__project-03 h3:after,
+#menu__project-visuel-03,
+#menu__project--mobile-03 .menu__project-visuel--mobile {
+	background: $gradient-project-03;
+}
+
+#menu__project--mobile-03 .nav__arrow {
+	border-color: $project-03;
+
+	.arrow__circle {
+		background: lighten($project-03, 30%);
+
+		&:after {
+			background: lighten($project-03, 45%);
+		}
+	}
+}
+
+//-- Project 04
+#project-04 {
+	.btn {
+		color: $project-04;
+	}
+
+	.project__visuel,
+	.project__content {
+		background: $gradient-project-04;
+	}
+
+	.description__number--mobile:after {
+		content: '04.';
+	}
+
+	.description__number--mobile {
+		background: $gradient-project-04;
+		-webkit-background-clip: text;
+		-webkit-text-fill-color: transparent;
+	}
+}
+
+#menu__project-04 h3:after,
+#menu__project-visuel-04,
+#menu__project--mobile-04 .menu__project-visuel--mobile {
+	background: $gradient-project-04;
+}
+
+#menu__project--mobile-04 .nav__arrow {
+	border-color: $project-04;
+
+	.arrow__circle {
+		background: lighten($project-04, 30%);
+
+		&:after {
+			background: lighten($project-04, 45%);
 		}
 	}
 }

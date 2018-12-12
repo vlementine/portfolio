@@ -3,7 +3,7 @@
 
 // -----------------------------------
 //
-//   BASICS
+//	BASICS
 //
 // -----------------------------------
 * {
@@ -413,6 +413,7 @@ a {
 	h3 {
 		font-family: 'Playfair Display', serif;
 		font-weight: 900;
+		text-transform: initial;
 		font-size: 1.125rem;
 		color: $dark-blue-80;
 		margin: 0;
@@ -423,9 +424,6 @@ a {
 		text-transform: uppercase;
 		color: $dark-blue-30;
 	}
-}
-
-.menu__project-title {
 }
 
 //-------------------------------------
@@ -520,4 +518,15 @@ footer,
 			@include animation(0.6s fadeIn ease-in-out forwards);
 		}
 	}
+}
+
+//-------------------------------------
+//	FONT
+//-------------------------------------
+//-- Title
+h3 {
+	font-size: 0.75em;
+	font-weight: 600;
+	text-transform: uppercase;
+	letter-spacing: 0.02em;
 }
