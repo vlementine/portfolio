@@ -95,8 +95,8 @@
 		flex-grow: 1;
 
 		form {
-			margin: 0 20px 40px;
-			width: calc(100% - 40px);
+			margin: 0 10px 40px;
+			width: calc(100% - 20px);
 		}
 	}
 
@@ -264,6 +264,18 @@
 		display: inline-block;
 	}
 
+	.bubble--group__choice {
+		flex-direction: column;
+
+		.bubble {
+			width: 100%;
+			margin-bottom: 0;
+			
+			&:last-child {
+				margin-bottom: 20px;
+			}
+		}
+	}
 	//-- MENU
 	.menu__projects-wrapper {
 		display: none;
