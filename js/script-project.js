@@ -185,7 +185,7 @@ const main = () => {
       triggerElement: "#parallax-bg-01"
     })
     .setTween("#parallax-bg-01 div", {
-      y: "20%",
+      y: "30%",
       ease: Linear.easeNone
     })
     .addTo(controller);

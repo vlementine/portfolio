@@ -96,7 +96,7 @@
 .nav__wrapper {
 	position: absolute;
 	z-index: 22;
-	right: 28px;
+	right: 23px;
 	top: 50%;
 	margin-top: -37px;
 	background: #fff;
@@ -342,7 +342,7 @@
 	position: relative;
 	height: 100vh;
 	width: 100vw;
-	padding: 15px;
+	padding: 10px;
 	z-index: 0;
 	display: none;
 
@@ -767,7 +767,7 @@
 	left: 0;
 	height: 100vh;
 	width: 100vw;
-	padding: 15px;
+	padding: 10px;
 	z-index: 30;
 	display: flex;
 	background: #fff;
@@ -778,7 +778,7 @@
 		padding: 0 10px;
 		background: #fff;
 		position: absolute;
-		top: 38px;
+		top: 33px;
 		left: 50px;
 	}
 
@@ -850,8 +850,8 @@
 	}
 
 	form {
-		margin: 0 80px 40px;
-		width: calc(100% - 160px);
+		margin: 0 60px 40px;
+		width: calc(100% - 120px);
 		position: relative;
 		overflow-y: auto;
 	}

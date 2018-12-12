@@ -66,9 +66,9 @@ a {
 		top: 0;
 		left: 0;
 		border: 1px solid $dark-blue-05;
-		width: calc(100vw - 90px);
-		height: calc(100vh - 90px);
-		@include transform(translate(45px, 45px));
+		width: calc(100vw - 80px);
+		height: calc(100vh - 80px);
+		@include transform(translate(40px, 40px));
 	}
 }
 
@@ -107,8 +107,8 @@ a {
 .logo {
 	position: fixed;
 	z-index: 52;
-	top: 30px;
-	left: 30px;
+	top: 25px;
+	left: 25px;
 	width: 28px;
 }
 
@@ -124,8 +124,8 @@ a {
 	border-radius: 50%;
 	position: fixed;
 	z-index: 52;
-	top: 20px;
-	right: 20px;
+	top: 15px;
+	right: 15px;
 	cursor: pointer;
 	display: flex;
 	justify-content: center;
