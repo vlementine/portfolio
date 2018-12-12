@@ -567,9 +567,9 @@
 	position: fixed;
 	flex-direction: column;
 	justify-content: center;
-	height: calc(100% - 30px);
-	width: calc(100% - 30px);
-	margin: 15px;
+	height: calc(100% - 20px);
+	width: calc(100% - 20px);
+	margin: 10px;
 	padding: 20px 20px 90px 20px;
 	background: $gradient-primary;
 	background-size: 400% 400%;
@@ -630,11 +630,11 @@
 	.description__number--mobile {
 		position: absolute;
 		display: block;
-		top: -80px;
-		left: -35px;
-		height: calc(100vh - 30px);
-		width: calc(100vw - 30px);
-		margin: 15px;
+		top: -75px;
+		left: -30px;
+		height: calc(100vh - 20px);
+		width: calc(100vw - 20px);
+		margin: 10px;
 		z-index: -1;
 		font-family: 'Work Sans', sans-serif;
 		font-weight: 700;

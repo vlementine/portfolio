@@ -122,10 +122,10 @@
 	.links {
 		margin-left: auto;
 		position: fixed;
-		bottom: 30px;
+		bottom: 20px;
 		left: 0;
-		width: calc(100% - 60px);
-		margin: auto 30px;
+		width: calc(100% - 40px);
+		margin: auto 20px;
 		text-align: center;
 		padding: 0;
 
@@ -355,6 +355,13 @@
 	//-- HOME
 	.home img {
 		max-width: 80%;
+	}
+
+	.home .home__illustration img:first-child {
+		width: 130px;
+		left: 50%;
+		top: 35px;
+		margin-left: -65px;
 	}
 
 	//-- PROJECT PAGE
