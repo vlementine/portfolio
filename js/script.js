@@ -152,10 +152,10 @@ const main = () => {
         scrollDirection('prev');
       }
     } else {
-      if (e.deltaY > 30) {
-        scrollDirection('prev');
-      } else if (e.deltaY < -30) {
+      if (e.deltaY > 50) {
         scrollDirection('next');
+      } else if (e.deltaY < -50) {
+        scrollDirection('prev');
       }
     }
   });
