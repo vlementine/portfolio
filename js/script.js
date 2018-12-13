@@ -179,9 +179,9 @@ const main = () => {
     offsetX = startX - event.touches[0].pageX;
     offsetY = startY - event.touches[0].pageY;
 
-    if (offsetX > 80) {
+    if (offsetX > 90) {
       scrollDirection('next');
-    } else if (offsetX < -80) {
+    } else if (offsetX < -90) {
       scrollDirection('prev');
     } else if (document.querySelector('.number--active').textContent == '01' && offsetY > 80) {
       seeMyWork();
