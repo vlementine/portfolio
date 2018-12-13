@@ -270,7 +270,7 @@
 		.bubble {
 			width: 100%;
 			margin-bottom: 0;
-			
+
 			&:last-child {
 				margin-bottom: 20px;
 			}
@@ -411,5 +411,16 @@
 	}
 	.nav--mobile {
 		margin: 16px auto;
+	}
+
+	.description__number-wrapper--mobile .description__number--mobile {
+		font-size: 5rem;
+		top: -55px;
+		height: calc(100vh - 50px);
+	}
+
+	.description__number-wrapper--mobile .description__number-shadow--mobile {
+		font-size: 5rem;
+		top: -45px;
 	}
 }
