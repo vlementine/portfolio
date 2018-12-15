@@ -288,6 +288,17 @@
   <script src="js/chat.js"></script>
   <script src="js/nav.js"></script>
   <script src="js/script.js"></script>
+
+  <script>
+    var bg = $(".home, .projects, .contact__wrapper");
+
+    function resizeBackground() {
+      bg.height($(window).height());
+    }
+
+    $(window).resize(resizeBackground);
+    resizeBackground();
+  </script>
 </body>
 
 </html>

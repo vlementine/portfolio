@@ -7,13 +7,6 @@
   font-style: normal;
 }
 
-h3 {
-  font-size: 0.75em;
-  font-weight: 600;
-  text-transform: uppercase;
-  letter-spacing: 0.02em;
-}
-
 @media screen and (max-width: 1000px) {
   .project {
     flex-direction: column;
@@ -81,8 +74,8 @@ h3 {
     flex-grow: 1;
   }
   .contact__form form {
-    margin: 0 20px 40px;
-    width: calc(100% - 40px);
+    margin: 0 10px 40px;
+    width: calc(100% - 20px);
   }
   .menu__projects-wrapper .menu__projects .menu__project {
     flex-direction: column;
@@ -99,10 +92,10 @@ h3 {
   .links {
     margin-left: auto;
     position: fixed;
-    bottom: 30px;
+    bottom: 20px;
     left: 0;
-    width: calc(100% - 60px);
-    margin: auto 30px;
+    width: calc(100% - 40px);
+    margin: auto 20px;
     text-align: center;
     padding: 0;
   }
@@ -207,6 +200,16 @@ h3 {
     animation: bubble ease-in-out forwards 0.6s;
     display: inline-block;
   }
+  .bubble--group__choice {
+    flex-direction: column;
+  }
+  .bubble--group__choice .bubble {
+    width: 100%;
+    margin-bottom: 0;
+  }
+  .bubble--group__choice .bubble:last-child {
+    margin-bottom: 20px;
+  }
   .menu__projects-wrapper {
     display: none;
   }
@@ -222,50 +225,48 @@ h3 {
   .menu__category {
     margin: 10px auto;
   }
+  .project-page header {
+    width: calc(100% - 40px);
+  }
+  .project-page nav {
+    padding: 20px 20px 0 20px;
+  }
   .project-page .container {
+    width: calc(100% - 40px);
+    margin: 100px auto;
+  }
+  .project-page .container.project-description, .project-page .container.project-intro {
     width: calc(100% - 60px);
-    margin: 40px auto;
   }
   .project-picture {
-    padding: 40px;
+    padding: 10px;
   }
   .project-picture:nth-child(3) {
     margin-top: 80px !important;
   }
   .project-picture img {
-    margin-top: -80px;
+    margin-top: calc(-10px - 60px);
   }
   .project-picture--explain {
-    padding: 40px;
+    padding: 10px;
   }
   .project-picture--explain .explain {
-    margin-top: -80px;
+    margin-top: calc(-10px - 60px);
   }
   .project-picture--simple,
   .project-picture--double,
   .project-picture--explain {
-    margin-top: 100px !important;
+    margin-top: calc(100px + 60px) !important;
+  }
+  .project-picture--double img:last-child {
+    margin-top: 10px;
   }
   .container-fluid.project-slider {
     padding: 40px 0;
-    margin-top: 117px !important;
+    margin-top: calc(100px + 60px) !important;
   }
   .container-fluid.project-slider .slider__content {
-    margin-top: calc(-80px - 37px);
-  }
-  .slide {
-    width: 80vw;
-    margin: 0 10px;
-  }
-  .slider__pictures {
-    width: calc(240vw + 60px);
-    left: calc(50% - (80vw / 2) - 10px);
-  }
-  .slider__pictures h4 {
-    margin: 0 0 10px 0;
-  }
-  .slider__nav {
-    margin: 40px auto 0 auto;
+    margin-top: calc(-40px - 60px);
   }
 }
 
@@ -273,49 +274,46 @@ h3 {
   .home img {
     max-width: 80%;
   }
+  .home .home__illustration img:first-child {
+    width: 130px;
+    left: 50%;
+    top: 35px;
+    margin-left: -65px;
+  }
   .project-page nav {
     padding: 20px 20px 0 20px;
-  }
-  .project-page .container {
-    width: calc(100% - 40px);
-  }
-  .project-page .container.project-description {
-    width: calc(100% - 80px);
-  }
-  .project-picture--simple,
-  .project-picture--double,
-  .project-picture--explain {
-    margin-top: 110px !important;
-  }
-  .project-picture,
-  .project-picture--explain {
-    padding: 10px;
-  }
-  .project-picture--double img:last-child {
-    margin-top: 10px;
-  }
-  .container-fluid.project-slider {
-    padding: 15px 0;
-    margin-top: 84px !important;
-  }
-  .container-fluid.project-slider .slider__content {
-    margin-top: calc(-50px - 14px);
   }
   .project-mobile img {
     width: 100%;
   }
-  .slide {
-    width: 80vw;
-    margin: 0 10px;
+  .slick-track .slick-slide {
+    margin: 0 5px;
   }
-  .slider__pictures {
-    width: calc((80vw * 3) + (20px * 3));
-    left: calc(50% - (80vw / 2) - 10px);
+}
+
+@media screen and (max-width: 320px) {
+  .project__description--mobile {
+    margin-bottom: 20px;
   }
-  .slider__pictures h4 {
-    margin: 0 0 10px 0;
+  .description__title--mobile {
+    margin: 35px 0 5px 0;
   }
-  .slider__nav {
-    margin: 25px auto 0 auto;
+  .description__title--mobile h2 {
+    font-size: 2.4rem;
+  }
+  .project--mobile .btn {
+    margin-top: 35px;
+  }
+  .nav--mobile {
+    margin: 16px auto;
+  }
+  .description__number-wrapper--mobile .description__number--mobile {
+    font-size: 5rem;
+    top: -55px;
+    height: calc(100vh - 50px);
+  }
+  .description__number-wrapper--mobile .description__number-shadow--mobile {
+    font-size: 5rem;
+    top: -45px;
   }
 }
