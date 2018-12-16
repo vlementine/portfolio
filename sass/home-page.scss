@@ -424,13 +424,16 @@
 		}
 	}
 
-	.visuel__letter {
+	img:last-child {
 		position: absolute;
 		z-index: 5;
 		height: auto;
 		max-height: 500px;
 		width: auto;
 		max-width: 60%;
+	}
+
+	.visuel__letter {
 		left: 50%;
 	}
 }

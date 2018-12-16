@@ -506,13 +506,16 @@
   animation: 0.6s slideRightBis ease-out forwards 0.6s;
 }
 
-.project__visuel .visuel__letter {
+.project__visuel img:last-child {
   position: absolute;
   z-index: 5;
   height: auto;
   max-height: 500px;
   width: auto;
   max-width: 60%;
+}
+
+.project__visuel .visuel__letter {
   left: 50%;
 }
 
