@@ -250,7 +250,6 @@ const letterAlgmt = () => {
       letter[n].style.marginTop = "0px";
     }
   }
-
 }
 
 //-------------------------------------
