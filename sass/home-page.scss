@@ -424,13 +424,14 @@
 		}
 	}
 
-	img:last-child {
+	.visuel__letter {
 		position: absolute;
 		z-index: 5;
 		height: auto;
 		max-height: 500px;
 		width: auto;
 		max-width: 60%;
+		left: 50%;
 	}
 }
 
@@ -734,10 +735,10 @@
 		}
 
 		.mockup--mobile {
-			position: relative;
+			position: absolute;
 			z-index: 22;
 			width: 100%;
-			bottom: 0;
+			top: 0;
 			right: 0;
 			opacity: 0;
 			@include animation(0.4s slideLeft ease-in-out forwards);

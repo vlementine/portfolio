@@ -4,6 +4,13 @@
 function displayProject(project) {
   let windowWidth = window.innerWidth;
 
+  let letter = document.querySelectorAll(".visuel__letter");
+  for (let n = 0; n < letter.length; n++) {
+        let letterW = letter[n].offsetWidth;
+    console.log(letterW);
+    document.querySelectorAll(".visuel__letter")[n].style.marginLeft = -(letterW / 2) + "px";
+  }
+
   //Mobile
   if (windowWidth <= 650) {
     let imgNumber = document.querySelectorAll(project + ' .project__visuel--mobile img').length;
@@ -92,11 +99,13 @@ function returnProjects() {
   let windowWidth = window.innerWidth;
   document.querySelector('.contact__wrapper').classList.add('disable');
   document.querySelector('#project-04').classList.add('enable');
+
   //Mobile
   if (windowWidth <= 650) {
     document.querySelector('.number--active').textContent = '05';
     displayProject('#project-04');
     //Desktop
+
   } else {
     navActiveItem(5);
     displayProject('#project-04');
@@ -143,7 +152,7 @@ function navDesktop(direction = null, param = null) {
   //Display projects
   if (projectClicked < totalItemNav - 1 && projectClicked !== 0 && projectClicked !== projectActive) {
     hideProject(idToHide);
-    setTimeout(function() {
+    setTimeout(function () {
       document.querySelector(idToHide).classList.remove('enable');
       document.querySelector(idToDisplay).classList.add('enable');
       displayProject(idToDisplay);
@@ -153,14 +162,14 @@ function navDesktop(direction = null, param = null) {
   } else if (projectClicked === 0) {
     document.querySelector('.home').classList.remove('disable');
     hideProject(idToHide);
-    setTimeout(function() {
+    setTimeout(function () {
       document.querySelector(idToHide).classList.remove('enable');
     }, 700);
     //Display contact
   } else if (itemClicked == totalItemNav) {
     document.querySelector('.contact__wrapper').classList.remove('disable');
     hideProject(idToHide);
-    setTimeout(function() {
+    setTimeout(function () {
       document.querySelector(idToHide).classList.remove('enable');
       document.querySelector('.bubble--group:nth-child(1) .bubble').classList.add('enable');
       document.querySelector('.bubble--group:nth-child(1) .bubble--answer').classList.add('enable');
@@ -187,7 +196,7 @@ function navMobile(param) {
   if (itemClicked < totalItemNav && itemClicked !== 1) {
     document.querySelector('.number--active').textContent = '0' + itemClicked;
     hideProject(idToHide);
-    setTimeout(function() {
+    setTimeout(function () {
       document.querySelector(idToHide).classList.remove('enable');
       document.querySelector(idToDisplay).classList.add('enable');
       displayProject(idToDisplay);
@@ -306,21 +315,21 @@ const generateMenu = () => {
   let urlPage = window.location.href;
   let positionSlash = urlPage.lastIndexOf('/') + 1;
   let imgPath = urlPage.substring(positionSlash) === 'index.html' ? './img/' : '../img/';
-  
+
   // MENU
   let menuProjects = '';
   let menuProjectsMobile = '';
-  
+
   projects.forEach(menuProject => {
-    menuProjects += 
+    menuProjects +=
       `<div class="menu__project" id="menu__project-${menuProject.number }">
           <h3 onMouseenter="menuHoverProject(${menuProject.number}, '${ menuProject.image }')" onClick="redirectToPageProject('${menuProject.href}')">${menuProject.title}</h3>
           <span>${menuProject.keywords}</span>
       </div>`;
   });
-  
+
   document.querySelector('.menu__projects').innerHTML = menuProjects;
-  
+
   projects.forEach(menuProjectMobile => {
     menuProjectsMobile +=
       `<div class="menu__project--mobile" id="menu__project--mobile-${ menuProjectMobile.number }" onClick="redirectToPageProject('${menuProjectMobile.href}')">
@@ -339,8 +348,6 @@ const generateMenu = () => {
         </span>
       </div>`;
   });
-  
+
   document.querySelector('.menu__projects-wrapper--mobile').innerHTML = menuProjectsMobile;
 }
-
-

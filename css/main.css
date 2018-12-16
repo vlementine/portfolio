@@ -1150,13 +1150,14 @@ button {
   animation: 0.6s slideRightBis ease-out forwards 0.6s;
 }
 
-.project__visuel img:last-child {
+.project__visuel .visuel__letter {
   position: absolute;
   z-index: 5;
   height: auto;
   max-height: 500px;
   width: auto;
   max-width: 60%;
+  left: 50%;
 }
 
 .project__description {
@@ -1569,10 +1570,10 @@ button {
 }
 
 .project__visuel--mobile .visuel__mockup .mockup--mobile {
-  position: relative;
+  position: absolute;
   z-index: 22;
   width: 100%;
-  bottom: 0;
+  top: 0;
   right: 0;
   opacity: 0;
   -webkit-animation: 0.4s slideLeft ease-in-out forwards;
