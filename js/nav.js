@@ -6,9 +6,10 @@ function displayProject(project) {
 
   let letter = document.querySelectorAll(".visuel__letter");
   for (let n = 0; n < letter.length; n++) {
-        let letterW = letter[n].offsetWidth;
-    console.log(letterW);
+    let letterW = letter[n].offsetWidth;
+    let letterH= letter[n].offsetHeight;
     document.querySelectorAll(".visuel__letter")[n].style.marginLeft = -(letterW / 2) + "px";
+    document.querySelectorAll(".visuel__letter")[n].style.marginTop = -(letterH / 2) + "px";
   }
 
   //Mobile
@@ -250,7 +251,7 @@ function navMenu(param) {
     } else {
       initProject('.project');
     }
-    
+
   } else if (param == 'work') {
     //Work
     document.querySelector('.home').classList.add('disable');
