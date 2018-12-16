@@ -7,13 +7,6 @@
   font-style: normal;
 }
 
-h3 {
-  font-size: 0.75em;
-  font-weight: 600;
-  text-transform: uppercase;
-  letter-spacing: 0.02em;
-}
-
 .project-page .container {
   width: calc(100% - 100px);
   max-width: 1340px;
@@ -37,7 +30,7 @@ h3 {
 .project-page h4 {
   font-size: 0.72em;
   font-weight: 600;
-  color: #2286b6;
+  color: #333366;
   margin: 0;
 }
 
@@ -174,7 +167,7 @@ h3 {
 }
 
 .project-picture--simple {
-  margin-top: 210px !important;
+  margin-top: calc(140px + 70px) !important;
 }
 
 .project-picture--simple img {
@@ -183,7 +176,7 @@ h3 {
 
 .project-picture--double {
   padding-bottom: 150px;
-  margin-top: 210px !important;
+  margin-top: calc(140px + 70px) !important;
 }
 
 .project-picture--double img {
@@ -199,7 +192,7 @@ h3 {
 .project-picture--explain {
   background-color: rgba(6, 10, 46, 0.05);
   padding: 70px;
-  margin-top: 210px !important;
+  margin-top: calc(140px + 70px) !important;
 }
 
 .project-picture--explain img {
@@ -243,6 +236,7 @@ h3 {
   height: 5px;
   background: rgba(6, 10, 46, 0.5);
   border-radius: 50%;
+  box-shadow: 0 0 0 3px rgba(6, 10, 46, 0.1);
 }
 
 .explain__text p {
@@ -259,7 +253,7 @@ h3 {
 }
 
 .explain__text--left:after {
-  right: 0;
+  right: -5px;
 }
 
 .explain__text--right {
@@ -269,7 +263,7 @@ h3 {
 }
 
 .explain__text--right:after {
-  left: 0;
+  left: -5px;
 }
 
 .project-parallax--bg {
@@ -300,6 +294,22 @@ h3 {
   margin-bottom: -80px;
 }
 
+.container-fluid.project-slider {
+  padding: 70px 0;
+  margin-top: calc(140px + 70px) !important;
+}
+
+.slider.slider__content {
+  margin-top: calc(-70px - 70px);
+  margin-bottom: 40px;
+}
+
+.slider.slider__content h4 {
+  text-align: center;
+  font-weight: 600;
+  margin: 0 0 30px 0;
+}
+
 .container.project-description {
   width: 80%;
   max-width: 600px;
@@ -307,7 +317,7 @@ h3 {
 }
 
 .container.project-description h3 {
-  color: #2286b6;
+  color: #333366;
   margin: 0 0 5px 0;
 }
 
@@ -446,10 +456,59 @@ h3 {
   background-image: url(../img/le-trianon/le-trianon__picture--all.jpg);
 }
 
-.project-page#project-04 .slider-nav__bullet {
+.project-page#project-04 .slick-dots li button {
   background-color: #cd3557;
+  -webkit-transition: opacity 0.2s ease-in-out;
+  -moz-transition: opacity 0.2s ease-in-out;
+  -ms-transition: opacity 0.2s ease-in-out;
+  -o-transition: opacity 0.2s ease-in-out;
+  transition: opacity 0.2s ease-in-out;
 }
 
-.project-page#project-04 .slider-nav__bullet.bullet--active:after {
+.project-page#project-04 .slick-dots li button:after {
   border-color: #cd3557;
+  -webkit-transition: opacity 0.2s ease-in-out;
+  -moz-transition: opacity 0.2s ease-in-out;
+  -ms-transition: opacity 0.2s ease-in-out;
+  -o-transition: opacity 0.2s ease-in-out;
+  transition: opacity 0.2s ease-in-out;
+}
+
+.project-page#project-04 #explain__text-01 {
+  top: 50%;
+}
+
+.project-page#project-04 #explain__text-02 {
+  top: 30%;
+  width: 245px;
+  padding-left: 60px;
+}
+
+.project-page#project-04 #explain__text-03 {
+  top: 0px;
+  width: 235px;
+  padding-right: 50px;
+}
+
+.project-page#project-04 #explain__text-04 {
+  top: -30px;
+  width: 225px;
+  padding-left: 30px;
+}
+
+.project-page#project-04 #explain__text-05 {
+  top: 40px;
+  width: 245px;
+  padding-right: 60px;
+}
+
+.project-page#project-04 #explain__text-06 {
+  top: 50px;
+  width: 235px;
+  padding-left: 50px;
+}
+
+.project-page#project-04 #explain__text-07 {
+  width: 295px;
+  padding-right: 110px;
 }
