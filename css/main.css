@@ -622,7 +622,7 @@ button {
 .btn {
   display: inline-block;
   border: 1px solid rgba(6, 10, 46, 0.1);
-  font-size: 0.65rem;
+  font-size: 0.6rem;
   font-weight: 400;
   letter-spacing: 1.2px;
   text-transform: uppercase;
@@ -1107,7 +1107,6 @@ button {
 .project__visuel .visuel__mockup .mockup--desktop {
   max-width: 600px;
   width: 100%;
-  position: relative;
   z-index: 8;
   opacity: 0;
   -webkit-animation: 0.4s slideLeft ease-in-out forwards;
@@ -1128,7 +1127,6 @@ button {
 .project__visuel .visuel__mockup .mockup--mobile {
   max-width: 600px;
   width: 100%;
-  position: absolute;
   z-index: 16;
   bottom: 0;
   right: 0;
@@ -2921,6 +2919,15 @@ button {
   }
   .nav--mobile {
     margin: 16px auto;
+  }
+  .description__number-wrapper--mobile .description__number--mobile {
+    font-size: 5rem;
+    top: -55px;
+    height: calc(100vh - 50px);
+  }
+  .description__number-wrapper--mobile .description__number-shadow--mobile {
+    font-size: 5rem;
+    top: -45px;
   }
 }
 

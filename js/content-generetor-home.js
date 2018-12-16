@@ -5,40 +5,49 @@ let content = '';
 let contentMobile = '';
 
 // DESKTOP
-projects.forEach(project => {
-  content += `<div class="project" id="project-${project.number}">
-          <div class="project__visuel">
-            <div class="visuel__mockup">
-              <img class="mockup--desktop" src="img/${
-                project.image
-              }_visuel-home.png" alt="Visuel du Blog Zenchef" draggable="false">
-            </div>
-            <img src="img/${project.image}_letter.png" alt="B" draggable="false">
-          </div>
+projects.forEach(projectDesktop => {
+  content += `
+  <div class="project" id="project-${projectDesktop.number}">
+    <div class="project__visuel">
+      <div class="visuel__mockup">
+        <img class="mockup--desktop"
+        src="img/${ projectDesktop.image}_visuel-home.png" 
+        alt="Visuel du Blog Zenchef" 
+        draggable="false">
+         <img class = "mockup--mobile"
+         src = "img/${ projectDesktop.image}_visuel-home-2.png"
+         alt = "Visuel du Blog Zenchef"
+         draggable = "false" >
+      </div>
+      <img src="img/${projectDesktop.image}_letter.png" alt="B" draggable="false">
+    </div>
 
-          <div class="project__description">
-            <div class="description__wrapper">
-              <div class="description__title">
-                <h2> ${project.title} </h2>
-              </div>
-              <span class="description__number">${project.number}.</span>
-              <div class="description__info">
-                <p>${project.keywords}</p>
-              </div>
-              <div class="description">
-                <p>${project.description}</p>
-              </div>
-              <button class="btn btn--project" onClick="redirectionProject('${
-                project.href
-              }')">Découvrir le projet</button>
-            </div>
-          </div>
-        </div>`;
+    <div class="project__description">
+      <div class="description__wrapper">
+        <div class="description__title">
+          <h2> ${projectDesktop.title} </h2>
+        </div>
+
+        <span class="description__number">${projectDesktop.number}.</span>
+
+        <div class="description__info">
+          <p>${projectDesktop.keywords}</p>
+        </div>
+
+        <div class="description">
+          <p>${projectDesktop.description}</p>
+        </div>
+
+        <button class="btn btn--project" onClick="redirectionProject('${ projectDesktop.href}')">Découvrir le projet</button>
+      </div>
+    </div>
+  </div>`;
 });
 
 // MOBILE
 projects.forEach(projectMobile => {
-  contentMobile += `<div class="project--mobile" id="project-${projectMobile.number}">
+  contentMobile += `
+  <div class="project--mobile" id="project-${projectMobile.number}">
     <div class="project__content">
       <div class="project__description--mobile">
           <div>
@@ -64,7 +73,7 @@ projects.forEach(projectMobile => {
       </div>
       <button class="btn" onClick="redirectionProject('${projectMobile.href}')">Découvrir le projet</button>
     </div>
-</div>`;
+  </div>`;
 });
 
 //-------------------------------------
@@ -73,9 +82,10 @@ projects.forEach(projectMobile => {
 let navigation = '';
 
 nav.forEach(itemNav => {
-  navigation += `<p onClick="navDesktop(null, ${itemNav.number})">${itemNav.number}
-  <span class="item__title">${itemNav.title}</span>
-</p>`;
+  navigation += `
+  <p onClick="navDesktop(null, ${itemNav.number})">${itemNav.number}
+    <span class="item__title">${itemNav.title}</span>
+  </p>`;
 });
 
 document.querySelector('.nav__items').innerHTML = navigation;

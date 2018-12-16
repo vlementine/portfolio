@@ -463,7 +463,6 @@
 .project__visuel .visuel__mockup .mockup--desktop {
   max-width: 600px;
   width: 100%;
-  position: relative;
   z-index: 8;
   opacity: 0;
   -webkit-animation: 0.4s slideLeft ease-in-out forwards;
@@ -484,7 +483,6 @@
 .project__visuel .visuel__mockup .mockup--mobile {
   max-width: 600px;
   width: 100%;
-  position: absolute;
   z-index: 16;
   bottom: 0;
   right: 0;

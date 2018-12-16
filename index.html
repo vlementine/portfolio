@@ -98,14 +98,15 @@
           <h1>Hola !
             <span>👋</span>
           </h1>
-          <p>Je suis Clémentine, une designer française. Je travaille acctuellement chez Zenchef. Spécialisée dans l’UI/UX
+          <p>Je suis Clémentine, une designer française. Je travaille acctuellement chez Zenchef. Spécialisée dans
+            l’UI/UX
             design, j'ai aussi un intéret particulier pour l’illustration et le dessin.</p>
           <button class="btn btn__home">Voir mes projets</button>
         </div>
 
 
       </div>
-      
+
     </section>
 
     <!-- PROJECT -->
@@ -141,7 +142,8 @@
           </div>
           <span class="description__number">Contact</span>
           <div class="description description--contact">
-            <p>Low-key, no pressure, just hang with me and my weather ! Rose-colored boy I hear you making all that noise about
+            <p>Low-key, no pressure, just hang with me and my weather ! Rose-colored boy I hear you making all that
+              noise about
               the world you want to see</p>
           </div>
         </div>
@@ -166,8 +168,8 @@
             </div>
 
             <div class="bubble bubble--answer">
-              <input type="text" id="nameAnswer" name="name" placeholder="Écris ton nom ici" autocomplete="off" onKeyPress="if(event.keyCode == 13) getAnswer(name,3,3);"
-              />
+              <input type="text" id="nameAnswer" name="name" placeholder="Écris ton nom ici" autocomplete="off"
+                onKeyPress="if(event.keyCode == 13) getAnswer(name,3,3);" />
             </div>
           </div>
 
@@ -223,8 +225,8 @@
 
             <div class="bubble bubble--answer">
               <p id="result"></p>
-              <input type="email" id="mailAnswer" name="mail" autocomplete="off" placeholder="Écris ton mail ici" onKeyPress="if(event.keyCode == 13) validate(6,1);"
-              />
+              <input type="email" id="mailAnswer" name="mail" autocomplete="off" placeholder="Écris ton mail ici"
+                onKeyPress="if(event.keyCode == 13) validate(6,1);" />
             </div>
           </div>
 
@@ -290,13 +292,19 @@
   <script src="js/script.js"></script>
 
   <script>
-    var bg = $(".home, .projects, .contact__wrapper");
+    //Fix scroll adress bar on Mobile
+    var homeH = document.querySelector(".home");
+    var projectsH = document.querySelector(".projects");
+    var contactH = document.querySelector(".contact__wrapper");
 
-    function resizeBackground() {
-      bg.height($(window).height());
+    const resizeBackground = () => {
+      console.log("Hello");
+      homeH.style.height = window.innerHeight + "px";
+      projectsH.style.height = window.innerHeight + "px";
+      contactH.style.height = window.innerHeight + "px";
     }
 
-    $(window).resize(resizeBackground);
+    window.onresize = resizeBackground;
     resizeBackground();
   </script>
 </body>
