@@ -292,32 +292,29 @@
   <script src="js/script.js"></script>
 
   <script>
-    //Fix scroll adress bar on Mobile
-    let homeH = document.querySelector(".home");
-    let projectsH = document.querySelector(".projects");
-    let projectH = document.querySelectorAll(".project");
-    let contactH = document.querySelector(".contact__wrapper");
+    var bg = $(".home, .projects, .contact__wrapper");
 
-    const resizeBackground = () => {
-      console.log("Hello");
-      homeH.style.height = window.innerHeight + "px";
-      projectsH.style.height = window.innerHeight + "px";
-
-      for (let n = 0; n < projectH.length; n++) {
-        projectH[n].style.height = window.innerHeight + "px";
-      }
-      contactH.style.height = window.innerHeight + "px";
+    function resizeBackground() {
+      bg.height($(window).height());
     }
 
-    window.onresize = resizeBackground;
+    $(window).resize(resizeBackground);
     resizeBackground();
 
-    // let beforeContactH = document.querySelector('.contact__wrapper:before');
-    // let beforeProjectH = document.querySelector('.projects__wrapper:before');
 
-    // beforeContactH.style.height = window.innerHeight + "px";
-    // beforeProjectH.style.height = window.innerHeight + "px";
+    //Fix scroll adress bar on Mobile
+    // let homeH = document.querySelector(".home");
+    // let projectsH = document.querySelector(".projects");
+    // let projectH = document.querySelectorAll(".project");
+    // let contactH = document.querySelector(".contact__wrapper");
 
+    // const resizeBackground = () => {
+    // console.log("Hello");
+    // homeH.style.height = window.innerHeight + "px";
+    // projectsH.style.height = window.innerHeight + "px";
+
+    // for (let n = 0; n < projectH.length; n++) { projectH[n].style.height=window.innerHeight + "px" ; }
+    //   contactH.style.height=window.innerHeight + "px" ; } window.onresize=resizeBackground; resizeBackground();
   </script>
 </body>
 

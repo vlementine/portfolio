@@ -27,8 +27,17 @@
     max-height: initial;
     display: block;
   }
+  .project__visuel .visuel__mockup .mockup--mobile {
+    display: none;
+  }
+  .project__visuel .visuels__wrapper {
+    height: 40vh;
+  }
   .project__visuel img:last-child {
-    max-height: 90%;
+    margin-left: -20vh;
+    margin-top: 3vh;
+    height: 40vh;
+    top: 0;
   }
   .description__wrapper {
     margin-left: 0;

@@ -4,14 +4,6 @@
 function displayProject(project) {
   let windowWidth = window.innerWidth;
 
-  let letter = document.querySelectorAll(".visuel__letter");
-  for (let n = 0; n < letter.length; n++) {
-    let letterW = letter[n].offsetWidth;
-    let letterH= letter[n].offsetHeight;
-    document.querySelectorAll(".visuel__letter")[n].style.marginLeft = -(letterW / 2) + "px";
-    document.querySelectorAll(".visuel__letter")[n].style.marginTop = -(letterH / 2) + "px";
-  }
-
   //Mobile
   if (windowWidth <= 650) {
     let imgNumber = document.querySelectorAll(project + ' .project__visuel--mobile img').length;

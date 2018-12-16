@@ -4,6 +4,24 @@
 const responsive = () => {
   let windowWidth = window.innerWidth;
 
+  if (windowWidth > 1000) {
+    verticalAlignmentLetter();
+  }
+  
+  //-------------------------------------
+  //	VERTICAL ALIGNMENT LETTER
+  //-------------------------------------
+  const verticalAlignmentLetter = () => {
+    let letter = document.querySelectorAll(".visuel__letter");
+
+    for (let n = 0; n < letter.length; n++) {
+      let letterW = letter[n].offsetWidth;
+      let letterH = letter[n].offsetHeight;
+      document.querySelectorAll(".visuel__letter")[n].style.marginLeft = -(letterW / 2) + "px";
+      document.querySelectorAll(".visuel__letter")[n].style.marginTop = -(letterH / 2) + "px";
+    }
+  }
+
   if (initialWidth !== windowWidth) {
     if (windowWidth <= 650) {
       document.querySelector(
@@ -225,6 +243,20 @@ const main = () => {
     navMenu(urlNumber);
   }
 };
+
+//-------------------------------------
+//	VERTICAL ALIGNMENT LETTER
+//-------------------------------------
+const verticalAlignmentLetter = () => {
+  let letter = document.querySelectorAll(".visuel__letter");
+
+  for (let n = 0; n < letter.length; n++) {
+    let letterW = letter[n].offsetWidth;
+    let letterH = letter[n].offsetHeight;
+    document.querySelectorAll(".visuel__letter")[n].style.marginLeft = -(letterW / 2) + "px";
+    document.querySelectorAll(".visuel__letter")[n].style.marginTop = -(letterH / 2) + "px";
+  }
+}
 
 //-------------------------------------
 //	INITIALIZE
