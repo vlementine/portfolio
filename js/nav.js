@@ -75,6 +75,18 @@ function seeMyWork() {
   document.querySelector('.home').classList.add('disable');
   document.querySelector('#project-01').classList.add('enable');
 
+  if (windowWidth > 1000) {
+    verticalAlignmentLetter();
+  } else {
+    let letter = document.querySelectorAll(".visuel__letter");
+
+    for (let n = 0; n < letter.length; n++) {
+      let letterW = letter[n].offsetWidth;
+      letter[n].style.marginLeft = -(letterW / 2) + "px";
+      letter[n].style.marginTop = "0px";
+    }
+  }
+
   //Mobile
   if (windowWidth <= 650) {
     document.querySelector('.number--active').textContent = '02';

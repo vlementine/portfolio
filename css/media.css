@@ -22,22 +22,13 @@
     max-width: 100%;
   }
   .project__visuel .visuel__mockup .mockup--desktop {
-    bottom: -110px;
-    position: absolute;
-    max-height: initial;
-    display: block;
+    margin-bottom: -35%;
   }
   .project__visuel .visuel__mockup .mockup--mobile {
     display: none;
   }
-  .project__visuel .visuels__wrapper {
-    height: 40vh;
-  }
   .project__visuel img:last-child {
-    margin-left: -20vh;
-    margin-top: 3vh;
-    height: 40vh;
-    top: 0;
+    top: -6vh;
   }
   .description__wrapper {
     margin-left: 0;

@@ -28,10 +28,7 @@
 			max-width: 100%;
 
 			.mockup--desktop {
-				bottom: -110px;
-				position: absolute;
-				max-height: initial;
-				display: block;
+				margin-bottom: -35%;
 			}
 
 			.mockup--mobile {
@@ -39,15 +36,8 @@
 			}
 		}
 
-		.visuels__wrapper {
-			height: 40vh;
-		}
-
 		img:last-child {
-			margin-left: -20vh;
-			margin-top: 3vh;
-			height: 40vh;
-			top: 0;
+			top: -6vh;
 		}
 	}
 

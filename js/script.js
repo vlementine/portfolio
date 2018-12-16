@@ -3,24 +3,21 @@
 //-------------------------------------
 const responsive = () => {
   let windowWidth = window.innerWidth;
+  resizeBackground();
 
   if (windowWidth > 1000) {
     verticalAlignmentLetter();
-  }
-  
-  //-------------------------------------
-  //	VERTICAL ALIGNMENT LETTER
-  //-------------------------------------
-  const verticalAlignmentLetter = () => {
+  } else {
     let letter = document.querySelectorAll(".visuel__letter");
 
     for (let n = 0; n < letter.length; n++) {
       let letterW = letter[n].offsetWidth;
-      let letterH = letter[n].offsetHeight;
-      document.querySelectorAll(".visuel__letter")[n].style.marginLeft = -(letterW / 2) + "px";
-      document.querySelectorAll(".visuel__letter")[n].style.marginTop = -(letterH / 2) + "px";
+      letter[n].style.marginLeft = -(letterW / 2) + "px";
+      letter[n].style.marginTop = "0px";
     }
   }
+
+
 
   if (initialWidth !== windowWidth) {
     if (windowWidth <= 650) {
@@ -59,8 +56,11 @@ const redirectionProject = varURL => {
 //	MAIN FUNCTION
 //-------------------------------------
 const main = () => {
+  resizeBackground();
+
   let windowWidth = window.innerWidth;
   document.querySelector('.nav__items p:nth-child(1)').classList.add('item--active');
+
 
   if (windowWidth <= 650) {
     document.querySelector(
@@ -248,14 +248,32 @@ const main = () => {
 //	VERTICAL ALIGNMENT LETTER
 //-------------------------------------
 const verticalAlignmentLetter = () => {
+
   let letter = document.querySelectorAll(".visuel__letter");
 
   for (let n = 0; n < letter.length; n++) {
     let letterW = letter[n].offsetWidth;
     let letterH = letter[n].offsetHeight;
-    document.querySelectorAll(".visuel__letter")[n].style.marginLeft = -(letterW / 2) + "px";
-    document.querySelectorAll(".visuel__letter")[n].style.marginTop = -(letterH / 2) + "px";
+    letter[n].style.marginLeft = -(letterW / 2) + "px";
+    letter[n].style.marginTop = -(letterH / 2) + "px";
   }
+}
+
+//-------------------------------------
+//	FIX ADRESS BAR BUG ON MOBILE
+//-------------------------------------
+const resizeBackground = () => {
+  let homeH = document.querySelector(".home");
+  let projectsH = document.querySelector(".projects");
+  let projectH = document.querySelectorAll(".project");
+  let contactH = document.querySelector(".contact__wrapper");
+
+  homeH.style.height = window.innerHeight + "px";
+  projectsH.style.height = window.innerHeight + "px";
+  for (let n = 0; n < projectH.length; n++) {
+    projectH[n].style.height = window.innerHeight + "px";
+  }
+  contactH.style.height = window.innerHeight + "px";
 }
 
 //-------------------------------------
