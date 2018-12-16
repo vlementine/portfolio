@@ -5,19 +5,7 @@ const responsive = () => {
   let windowWidth = window.innerWidth;
   resizeBackground();
 
-  if (windowWidth > 1000) {
-    verticalAlignmentLetter();
-  } else {
-    let letter = document.querySelectorAll(".visuel__letter");
-
-    for (let n = 0; n < letter.length; n++) {
-      let letterW = letter[n].offsetWidth;
-      letter[n].style.marginLeft = -(letterW / 2) + "px";
-      letter[n].style.marginTop = "0px";
-    }
-  }
-
-
+  letterAlgmt();
 
   if (initialWidth !== windowWidth) {
     if (windowWidth <= 650) {
@@ -245,18 +233,24 @@ const main = () => {
 };
 
 //-------------------------------------
-//	VERTICAL ALIGNMENT LETTER
+//	ALIGNMENT LETTER
 //-------------------------------------
-const verticalAlignmentLetter = () => {
-
+const letterAlgmt = () => {
+  let windowWidth = window.innerWidth;
   let letter = document.querySelectorAll(".visuel__letter");
 
-  for (let n = 0; n < letter.length; n++) {
-    let letterW = letter[n].offsetWidth;
-    let letterH = letter[n].offsetHeight;
-    letter[n].style.marginLeft = -(letterW / 2) + "px";
-    letter[n].style.marginTop = -(letterH / 2) + "px";
+  if (windowWidth > 1000) {
+    for (let n = 0; n < letter.length; n++) {
+      letter[n].style.marginLeft = -(letter[n].offsetWidth / 2) + "px";
+      letter[n].style.marginTop = -(letter[n].offsetHeight / 2) + "px";
+    }
+  } else {
+    for (let n = 0; n < letter.length; n++) {
+      letter[n].style.marginLeft = -(letter[n].offsetWidth / 2) + "px";
+      letter[n].style.marginTop = "0px";
+    }
   }
+
 }
 
 //-------------------------------------
