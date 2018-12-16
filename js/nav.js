@@ -250,6 +250,7 @@ function navMenu(param) {
     } else {
       initProject('.project');
     }
+    
   } else if (param == 'work') {
     //Work
     document.querySelector('.home').classList.add('disable');
@@ -258,6 +259,7 @@ function navMenu(param) {
       document.querySelector('#project-01').classList.add('enable');
       displayProject('#project-01');
     }, 500);
+
     if (windowWidth <= 650) {
       initProject('.project--mobile');
       document.querySelector('.number--active').textContent = '02';
@@ -265,6 +267,7 @@ function navMenu(param) {
       initProject('.project');
       navActiveItem(2);
     }
+
   } else if (param == 'contact') {
     // Contact
     initProject('.project');
