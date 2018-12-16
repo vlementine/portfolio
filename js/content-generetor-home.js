@@ -8,18 +8,24 @@ let contentMobile = '';
 projects.forEach(projectDesktop => {
   content += `
   <div class="project" id="project-${projectDesktop.number}">
+
     <div class="project__visuel">
-      <div class="visuel__mockup">
-        <img class="mockup--desktop"
-        src="img/${ projectDesktop.image}_visuel-home.png" 
-        alt="Visuel du Blog Zenchef" 
-        draggable="false">
-         <img class = "mockup--mobile"
-         src = "img/${ projectDesktop.image}_visuel-home-2.png"
-         alt = "Visuel du Blog Zenchef"
-         draggable = "false" >
+
+      <div class="visuels__wrapper">
+        <div class="visuel__mockup">
+          <img class="mockup--desktop"
+          src="img/${ projectDesktop.image}_visuel-home.png" 
+          alt="Visuel du Blog Zenchef" 
+          draggable="false">
+
+          <img class="mockup--mobile"
+          src = "img/${ projectDesktop.image}_visuel-home-2.png"
+          alt = "Visuel du Blog Zenchef"
+          draggable = "false" >
+        </div>
+
+        <img class="visuel__letter" src="img/${projectDesktop.image}_letter.png" alt="B" draggable="false">
       </div>
-      <img src="img/${projectDesktop.image}_letter.png" alt="B" draggable="false">
     </div>
 
     <div class="project__description">
