@@ -4,7 +4,8 @@
 function displayProject(project) {
 	let windowWidth = window.innerWidth;
 
-	letterAlgmt();
+  letterAlgmt();
+  resizeBackground();
 
 	//Mobile
 	if (windowWidth <= 650) {

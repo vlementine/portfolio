@@ -438,7 +438,14 @@ footer,
 	font-weight: 400;
 	letter-spacing: 0.12em;
 	text-transform: uppercase;
-	// margin: 40px 50px 40px 50px !important;
+}
+
+.menu__footer {
+	display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 40px 50px 40px 50px;
+    line-height: 38px;
 }
 
 .links {
