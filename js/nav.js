@@ -4,8 +4,9 @@
 function displayProject(project) {
 	let windowWidth = window.innerWidth;
 
-  letterAlgmt();
-  resizeBackground();
+	letterAlgmt();
+	resizeBackground();
+	changeLogoColor();
 
 	//Mobile
 	if (windowWidth <= 650) {
@@ -231,13 +232,18 @@ function navDesktop(direction = null, param = null) {
 		//Display home
 	} else if (projectClicked === 0) {
 		document.querySelector('.home').classList.remove('disable');
+		changeLogoColor();
+
 		hideProject(idToHide);
 		setTimeout(function() {
 			document.querySelector(idToHide).classList.remove('enable');
 		}, 700);
+
 		//Display contact
 	} else if (itemClicked == totalItemNav) {
 		document.querySelector('.contact__wrapper').classList.remove('disable');
+		changeLogoColor();
+
 		hideProject(idToHide);
 		setTimeout(function() {
 			document.querySelector(idToHide).classList.remove('enable');
@@ -282,10 +288,12 @@ function navMobile(param) {
 	} else if (itemClicked == 1) {
 		document.querySelector('.number--active').textContent = '01';
 		document.querySelector('.home').classList.remove('disable');
+		changeLogoColor();
 
 		//Display contact
 	} else if (itemClicked == totalItemNav) {
 		document.querySelector('.contact__wrapper').classList.remove('disable');
+		changeLogoColor();
 	}
 }
 
@@ -304,11 +312,10 @@ function displayMenu() {
 	if (windowWidth <= 650) {
 		document.querySelector('.links').classList.toggle('menu-visible');
 		document.querySelector('.links').classList.toggle('enable');
-  }
-  
-  letterAlgmtMenu();
-}
+	}
 
+	letterAlgmtMenu();
+}
 
 function initProject(param) {
 	document
@@ -328,6 +335,8 @@ function navMenu(param) {
 	if (param == 'home') {
 		document.querySelector('.home').classList.remove('disable');
 		document.querySelector('.contact__wrapper').classList.add('disable');
+		changeLogoColor();
+
 		if (windowWidth <= 650) {
 			initProject('.project--mobile');
 		} else {
@@ -361,6 +370,7 @@ function navMenu(param) {
 				.querySelector('.bubble--group:nth-child(1) .bubble--answer')
 				.classList.add('enable');
 			document.querySelector('.home').classList.add('disable');
+			changeLogoColor();
 		}, 500);
 	}
 }
@@ -405,12 +415,27 @@ redirectToPageProject = varURL => {
 //	ALIGNMENT LETTER MENU
 //-------------------------------------
 const letterAlgmtMenu = () => {
-	let windowWidth = window.innerWidth;
 	let letter = document.querySelectorAll('.menu__wrapper .visuel__letter');
 
 	for (let n = 0; n < letter.length; n++) {
 		letter[n].style.marginLeft = -(letter[n].offsetWidth / 2) + 'px';
 		letter[n].style.marginTop = -(letter[n].offsetHeight / 2) + 'px';
+	}
+};
+
+//-------------------------------------
+//	CHANGE LOGO
+//-------------------------------------
+const changeLogoColor = () => {
+	if (
+		document.querySelector('.home').classList.contains('disable') &&
+		document.querySelector('.contact__wrapper').classList.contains('disable')
+	) {
+		document.querySelector('.logo').src = 'img/logo--white.gif';
+		document.querySelector('.logo').classList.remove('logo--color');
+	} else {
+		document.querySelector('.logo').src = 'img/logo.gif';
+		document.querySelector('.logo').classList.add('logo--color');
 	}
 };
 

@@ -49,6 +49,7 @@ const redirectionProject = varURL => {
 //-------------------------------------
 const main = () => {
 	resizeBackground();
+	changeLogoColor();
 
 	let windowWidth = window.innerWidth;
 	document
@@ -261,7 +262,7 @@ const main = () => {
 //-------------------------------------
 const letterAlgmt = () => {
 	let windowWidth = window.innerWidth;
-	let letter = document.querySelectorAll('.visuel__letter');
+	let letter = document.querySelectorAll('.projects .visuel__letter');
 
 	if (windowWidth > 1000) {
 		for (let n = 0; n < letter.length; n++) {

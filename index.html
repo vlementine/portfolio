@@ -126,15 +126,21 @@
 
     <!-- CONTACT -->
     <section class="contact__wrapper disable">
-      <div class="nav__return" onClick="returnProjects()">
-        <span class="nav__arrow nav__arrow--left">
-          <span class="arrow__circle"></span>
-        </span>
-        <div class="return__text">
-          <span class="text--top">Back to projects</span>
-          <span class="text--bottom">Back to projects</span>
+
+
+        <div class="nav__return">
+          <div class="arrow__clickable" onClick="returnProjects()">
+            <span class="nav__arrow nav__arrow--left">
+              <span class="arrow__circle"></span>
+            </span>
+          </div>
+          <div class="return__text">
+            <span class="text--top">Back to projects</span>
+            <span class="text--bottom">Back to projects</span>
+          </div>
         </div>
-      </div>
+
+
       <!-- Contact description -->
       <div class="contact__description">
         <div class="description__wrapper">
@@ -247,10 +253,13 @@
 
     <!-- NAV • MOBILE -->
     <div class="nav--mobile">
-      <div class="arrow__wrapper" onClick="navMobile(-1)">
-        <span class="nav__arrow nav__arrow--left">
-          <span class="arrow__circle"></span>
-        </span>
+
+      <div class="arrow__clickable" onClick="navMobile(-1)">
+        <div class="arrow__wrapper">
+          <span class="nav__arrow nav__arrow--left">
+            <span class="arrow__circle"></span>
+          </span>
+        </div>
       </div>
 
       <div class="nav__number">
@@ -259,12 +268,14 @@
         <span class="number number--total">06</span>
       </div>
 
-      <div class="arrow__wrapper" onClick="navMobile(+1)">
-        <span class="nav__arrow nav__arrow--right">
-          <span class="arrow__circle"></span>
-        </span>
+      <div class="arrow__clickable" onClick="navMobile(+1)">
+        <div class="arrow__wrapper">
+          <span class="nav__arrow nav__arrow--right">
+            <span class="arrow__circle"></span>
+          </span>
+        </div>
       </div>
-      </span>
+
     </div>
 
     <!-- FOOTER -->

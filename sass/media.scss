@@ -6,12 +6,38 @@
 //	MEDIA
 //
 // -----------------------------------
+//-------------------------------------
+//	MEDIA QUERIES : + 1000px
+//-------------------------------------
+@media screen and (min-width: 1000px) {
+	.contact__wrapper .nav__return {
+		.nav__arrow {
+			border-top: 2px solid rgba(255, 255, 255, 0.8);
+			border-left: 2px solid rgba(255, 255, 255, 0.8);
+		}
 
+		.arrow__circle {
+			background: rgba(255, 255, 255, 0.5);
+
+			&:after {
+				background: rgba(255, 255, 255, 0.3);
+			}
+		}
+
+		.return__text span {
+			color: rgba(255, 255, 255, 0.5);
+		}
+
+		&:hover .arrow__clickable + .return__text span:first-child,
+		&:hover .arrow__clickable+.return__text span:last-child {
+			color: rgba(255, 255, 255, 0.8);
+		}
+	}
+}
 //-------------------------------------
 //	MEDIA QUERIES : 1000px
 //-------------------------------------
 @media screen and (max-width: 1000px) {
-
 	//-- PROJECTS
 	.project {
 		flex-direction: column;
@@ -120,7 +146,6 @@
 //	MEDIA QUERIES : 800px
 //-------------------------------------
 @media screen and (max-width: 800px) {
-
 	//-- FOOTER
 	.links {
 		margin-left: auto;
@@ -242,11 +267,20 @@
 	//-- CONTACT
 	.contact__wrapper {
 		.nav__return {
-			left: 10px;
+			top: 23px;
+			background: transparent;
 			z-index: 10;
 
 			.return__text {
 				display: none;
+			}
+
+			.arrow__clickable {
+				width: 35px;
+				height: 35px;
+				display: flex;
+				justify-content: center;
+				align-items: center;
 			}
 		}
 	}
@@ -368,7 +402,6 @@
 //	MEDIA QUERIES : 400px
 //-------------------------------------
 @media screen and (max-width: 400px) {
-
 	//-- HOME
 	.home img {
 		max-width: 80%;
@@ -399,7 +432,6 @@
 //	MEDIA QUERIES : 320px
 //-------------------------------------
 @media screen and (max-width: 320px) {
-
 	//-- HOME
 	.project__description--mobile {
 		margin-bottom: 20px;
@@ -423,12 +455,68 @@
 
 	.description__number-wrapper--mobile .description__number--mobile {
 		font-size: 5rem;
-		top: -55px;
+		top: -50px;
 		height: calc(100vh - 50px);
 	}
 
 	.description__number-wrapper--mobile .description__number-shadow--mobile {
 		font-size: 5rem;
-		top: -45px;
+		top: -40px;
+	}
+}
+
+//-------------------------------------
+//	MEDIA QUERIES : 450px (height)
+//-------------------------------------
+@media (max-height: 540px) {
+	.home {
+		.home__illustration {
+			max-width: 260px;
+			height: 270px;
+
+			img {
+				max-width: 80%;
+
+				&:first-child {
+					width: 110px;
+					top: 25px;
+					margin-left: -55px;
+				}
+			}
+		}
+		.home__presentation {
+			width: calc(100% - 40px);
+			p {
+				font-size: 1.1rem;
+			}
+		}
+	}
+}
+
+@media (max-height: 470px) {
+	footer {
+		display: none;
+	}
+
+	.nav--mobile {
+		bottom: 10px;
+	}
+
+	.project__content {
+		padding: 20px 20px 60px 20px;
+	}
+
+	.btn {
+		padding: 15px;
+		height: auto;
+		line-height: normal;
+	}
+
+	.project__visuel--mobile .visuel__mockup .mockup--desktop {
+		width: 90%;
+	}
+
+	.contact__form form {
+		margin: 0 10px 10px;
 	}
 }

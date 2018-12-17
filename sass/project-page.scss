@@ -461,6 +461,54 @@
 //-------------------------------------
 //	VARIABLES PROJECT
 //-------------------------------------
+.project-page#project-01 {
+	section .container h3,
+	section h4,
+	.next-project__name:hover {
+		color: $project-01;
+	}
+
+	header {
+		background-image: url(../img/btyd/btyd__hero-picture.jpg);
+	}
+
+	#parallax-bg-01 div {
+		background-image: url(../img/btyd/btyd__picture--all.jpg);
+	}
+}
+
+.project-page#project-02 {
+	section .container h3,
+	section h4,
+	.next-project__name:hover {
+		color: $project-02;
+	}
+
+	header {
+		background-image: url(../img/blog-zenchef/blog-zenchef__hero-picture.jpg);
+	}
+
+	#parallax-bg-01 div {
+		background-image: url(../img/blog-zenchef/blog-zenchef__picture--all.jpg);
+	}
+}
+
+.project-page#project-03 {
+	section .container h3,
+	section h4,
+	.next-project__name:hover {
+		color: $project-03;
+	}
+
+	header {
+		background-image: url(../img/alcatraz/alcatraz__hero-picture.jpg);
+	}
+
+	#parallax-bg-01 div {
+		background-image: url(../img/alcatraz/alcatraz__picture--all.jpg);
+	}
+}
+
 .project-page#project-04 {
 	section .container h3,
 	section h4,

@@ -232,6 +232,14 @@
 	width: 100%;
 	margin: 24px auto;
 
+	.arrow__clickable {
+		width: 35px;
+		height: 35px;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+	}
+
 	.arrow__wrapper {
 		width: 20px;
 		padding: 10px 0;
@@ -606,7 +614,7 @@
 	text-align: center;
 	margin-bottom: 30px;
 
-	&>div {
+	& > div {
 		position: relative;
 	}
 }
@@ -786,10 +794,10 @@
 
 	.nav__return {
 		padding: 0 10px;
-		background: #fff;
 		position: absolute;
 		top: 33px;
-		left: 50px;
+		right: 70px;
+		z-index: 30;
 	}
 
 	&.disable {
@@ -968,12 +976,12 @@
 			opacity: 0;
 			cursor: pointer;
 
-			&:checked~div {
+			&:checked ~ div {
 				box-shadow: 0 4px 16px $dark-blue-10;
 				@include transform(scale(1));
 			}
 
-			&:not(:checked)~div {
+			&:not(:checked) ~ div {
 				@include transform(scale(0.9));
 
 				span,
