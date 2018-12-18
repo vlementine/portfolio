@@ -107,6 +107,9 @@ const main = () => {
   loadPartial('nav')
   loadPartial('footer')
 
+  let navHTML = document.getElementById('load-nav').innerHtml
+  document.getElementById('load-nav').innerHtml = navHTML.replace('[[projectId]]', 4)
+
 	//Display
 	// document.querySelector('header').classList.add('enable');
 	// document.querySelector('.project__summary h1').classList.add('enable');
@@ -124,9 +127,6 @@ const main = () => {
 	let positionAfterHyphen = initialURL.lastIndexOf('/') + 1;
 	let positionHtml = initialURL.lastIndexOf('.html') + 1;
 	let nameProject = initialURL.substring(positionAfterHyphen, positionHtml - 1);
-
-	// Height of slider
-	// calcHeightSlider();
 
 	// Parallax mobile
 	parallaxMobile();
