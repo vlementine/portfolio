@@ -162,7 +162,7 @@
   html {
     font-size: 13px;
   }
-  .white-screen {
+  .transition-screen {
     transition: all 0.8s ease-in-out;
   }
   .projects__wrapper:before,

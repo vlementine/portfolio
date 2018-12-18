@@ -12,8 +12,8 @@
 
 <body>
   <div>
-    <span class="white-screen"></span>
-
+    <span class="transition-screen"></span>
+    <span class="transition-screen transition-screen--white"></span>
     <nav>
       <!-- Logo  -->
       <img src="./img/logo--white.gif" alt="Logo Clémentine Bertrand" class="logo">
@@ -127,19 +127,17 @@
     <!-- CONTACT -->
     <section class="contact__wrapper disable">
 
-
-        <div class="nav__return">
-          <div class="arrow__clickable" onClick="returnProjects()">
-            <span class="nav__arrow nav__arrow--left">
-              <span class="arrow__circle"></span>
-            </span>
-          </div>
-          <div class="return__text">
-            <span class="text--top">Back to projects</span>
-            <span class="text--bottom">Back to projects</span>
-          </div>
+      <div class="nav__return" onClick="returnProjects()">
+        <div class="arrow__clickable">
+          <span class="nav__arrow nav__arrow--left">
+            <span class="arrow__circle"></span>
+          </span>
         </div>
-
+        <div class="return__text">
+          <span class="text--top">Back to projects</span>
+          <span class="text--bottom">Back to projects</span>
+        </div>
+      </div>
 
       <!-- Contact description -->
       <div class="contact__description">

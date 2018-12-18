@@ -38,7 +38,8 @@ const responsive = () => {
 //	REDIRECTION -> PROJECT
 //-------------------------------------
 const redirectionProject = varURL => {
-	document.querySelector('.white-screen').classList.add('redirect-page');
+	document.querySelector('.transition-screen').classList.add('redirect-page');
+	document.querySelector('.transition-screen--white').classList.add('redirect-page');
 	setTimeout(() => {
 		window.location.href = './projects-page/' + varURL + '.html';
 	}, 1500);
@@ -219,13 +220,12 @@ const main = () => {
 	//-------------------------------------
 	//	CLEAN URL
 	//-------------------------------------
-	const redirectionProject = varURL => {
-		document.querySelector('.white-screen').classList.add('redirect-page');
-		setTimeout(() => {
-			window.location.href =
-				'./projects-page/project-page--' + varURL + '.html';
-		}, 1500);
-	};
+	// const redirectionProject = varURL => {
+	// 	document.querySelector('.transition-screen').classList.add('redirect-page');
+	// 	setTimeout(() => {
+	// 		window.location.href = './projects-page/project-page--' + varURL + '.html';
+	// 	}, 1500);
+	// };
 
 	let urlNumber = window.location.hash.substring(1);
 	window.history.replaceState({}, '', 'index.html');
@@ -235,23 +235,22 @@ const main = () => {
 	if (urlNumber == 1 || urlNumber == 2 || urlNumber == 3 || urlNumber == 4) {
 		document.querySelector('.home').classList.add('disable');
 		document.querySelector('.contact__wrapper').classList.add('disable');
+
 		setTimeout(() => {
 			document.querySelector('#project-0' + urlNumber).classList.add('enable');
 			displayProject('#project-0' + urlNumber);
 		}, 500);
+
 		if (windowWidth <= 650) {
 			initProject('.project--mobile');
-			document.querySelector('.number--active').textContent =
-				'0' + (parseInt(urlNumber) + 1);
+			document.querySelector('.number--active').textContent = '0' + (parseInt(urlNumber) + 1);
+			
 		} else {
 			initProject('.project');
 			navActiveItem(parseInt(urlNumber) + 1);
 		}
-	} else if (
-		urlNumber == 'home' ||
-		urlNumber == 'work' ||
-		urlNumber == 'contact'
-	) {
+
+	} else if (urlNumber == 'home' || urlNumber == 'work' || urlNumber == 'contact') {
 		displayMenu();
 		navMenu(urlNumber);
 	}

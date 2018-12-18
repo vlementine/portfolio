@@ -318,32 +318,8 @@
 
 //-- Project
 
-.projects__wrapper .white-screen {
+.projects__wrapper .transition-screen {
 	transform: translate(-130%, 0) matrix(1, 0, -0.5, 1, 0, 0);
-}
-
-.white-screen {
-	transform: translate(130%, 0) matrix(1, 0, 0.5, 1, 0, 0);
-}
-
-.white-screen {
-	height: 100%;
-	width: 100%;
-	background: #fff;
-	transform-origin: center;
-	position: absolute;
-	top: 0;
-	left: 0;
-	z-index: -1;
-	margin-top: 0;
-	//@include transform(translate3d(100%, 0px, 0px));
-	transition: all 1.2s ease-in-out;
-
-	&.redirect-page {
-		margin-top: 0;
-		z-index: 100;
-		transform: translate(0, 0) matrix(1, 0, 0, 1, 0, 0);
-	}
 }
 
 .project {
@@ -791,14 +767,6 @@
 	background: #fff;
 	@include transform(translateY(0%));
 	@include transition(transform 0.8s ease-in-out);
-
-	.nav__return {
-		padding: 0 10px;
-		position: absolute;
-		top: 33px;
-		right: 70px;
-		z-index: 30;
-	}
 
 	&.disable {
 		@include transform(translateY(-100%));

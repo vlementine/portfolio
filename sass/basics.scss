@@ -77,6 +77,12 @@ a {
 	justify-content: center;
 	align-items: center;
 	cursor: pointer;
+	padding: 0 10px;
+	position: fixed;
+	top: 33px;
+	right: 70px;
+	z-index: 30;
+
 	&:hover .arrow__clickable + .return__text span {
 		&:first-child {
 			color: $dark-blue-80;
@@ -553,3 +559,30 @@ h3 {
 	text-transform: uppercase;
 	letter-spacing: 0.02em;
 }
+
+//-------------------------------------
+//	TRANSISTION PAGE
+//-------------------------------------
+
+.transition-screen {
+	height: 100%;
+	width: 100%;
+	background: $transition;
+	transform-origin: center;
+	position: absolute;
+	top: 0;
+	left: 0;
+	z-index: 56;
+	@include transition(transform 0.8s ease-in-out);
+	@include transform(translate(100%, 0));
+	 
+	&.transition-screen--white {
+		background: #fff;
+		@include transition(transform 1.4s ease-in-out);
+	}
+	&.redirect-page {
+		@include transform(translate(0, 0));
+	}
+}
+
+

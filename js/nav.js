@@ -399,7 +399,7 @@ menuHoverProject = (number, name) => {
 //	REDIRECTION -> PROJECT
 //-------------------------------------
 redirectToPageProject = varURL => {
-	document.querySelector('.white-screen').classList.add('redirect-page');
+	document.querySelector('.transition-screen').classList.add('redirect-page');
 	setTimeout(() => {
 		let urlPage = window.location.href;
 		let positionSlash = urlPage.lastIndexOf('/') + 1;

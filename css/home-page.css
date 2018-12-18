@@ -369,15 +369,15 @@
   left: 0;
 }
 
-.projects__wrapper .white-screen {
+.projects__wrapper .transition-screen {
   transform: translate(-130%, 0) matrix(1, 0, -0.5, 1, 0, 0);
 }
 
-.white-screen {
+.transition-screen {
   transform: translate(130%, 0) matrix(1, 0, 0.5, 1, 0, 0);
 }
 
-.white-screen {
+.transition-screen {
   height: 100%;
   width: 100%;
   background: #fff;
@@ -390,7 +390,7 @@
   transition: all 1.2s ease-in-out;
 }
 
-.white-screen.redirect-page {
+.transition-screen.redirect-page {
   margin-top: 0;
   z-index: 100;
   transform: translate(0, 0) matrix(1, 0, 0, 1, 0, 0);
