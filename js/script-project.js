@@ -4,27 +4,31 @@
 const displayContentPage = idProject => {
 	document.querySelector('h1').innerText = projects[idProject].title;
 	document.querySelector('p.subtitle').innerText = projects[idProject].keywords;
-	document.querySelector('.project-intro p').innerText =
-		projects[idProject].description;
-	document.querySelector('.project-intro a.btn').href =
-		projects[idProject].link;
+	document.querySelector('.project-intro p').innerText = projects[idProject].description;
+	document.querySelector('.project-intro a.btn').href = projects[idProject].href;
+	document.querySelector('.next-project__name').innerText = projects[idProject].nextProject;
+	document.querySelector('.next-project__name').href = projects[idProject].hrefNextProject;
 	generateMenu();
 };
 
-  function loadPartial(name) {
-    fetch(`/${name}.html`).then(res => res.text()).then((htmlString) => {
-      document.getElementById(`load-${name}`).innerHTML = htmlString
-    })
-  }
+function loadPartial(name) {
+	fetch(`/${name}.html`)
+		.then(res => res.text())
+		.then(htmlString => {
+			document.getElementById(`load-${name}`).innerHTML = htmlString;
+		});
+}
 
 //-------------------------------------
 //	REDIRECTION -> INDEX
 //-------------------------------------
-const redirectionProject = varURL => {
+const redirectionProject = () => {
 	document.querySelector('.transition-screen').classList.add('redirect-page');
-	document.querySelector('.transition-screen--white').classList.add('redirect-page');
+	document
+		.querySelector('.transition-screen--white')
+		.classList.add('redirect-page');
 	setTimeout(() => {
-    window.location.href = '../index.html#' + varURL;
+		window.location.href = '../index.html#' + (ploum + 1);
 	}, 1500);
 };
 
@@ -70,45 +74,72 @@ const responsive = () => {
 
 	// calcHeightSlider();
 
-	// Align slider on responsive
-	let bulletsSlider = document.querySelectorAll('.slider-nav__bullet');
+	// // Align slider on responsive
+	// let bulletsSlider = document.querySelectorAll('.slider-nav__bullet');
 
-	bulletsSlider.forEach(element => {
-		if (element.classList.contains('bullet--active')) {
-			let slideActive = element.textContent - 1;
+	// bulletsSlider.forEach(element => {
+	// 	if (element.classList.contains('bullet--active')) {
+	// 		let slideActive = element.textContent - 1;
 
-			let calcTranslate =
-				windowWidth <= 650
-					? 'calc((-80vw * ' +
-					  slideActive +
-					  ') - (' +
-					  '20px * ' +
-					  slideActive +
-					  '))'
-					: 'calc((-60vw * ' +
-					  slideActive +
-					  ') - (' +
-					  '50px * ' +
-					  slideActive +
-					  '))';
+	// 		let calcTranslate =
+	// 			windowWidth <= 650
+	// 				? 'calc((-80vw * ' + slideActive + ') - (' + '20px * ' + slideActive +
+	// 				  '))'
+	// 				: 'calc((-60vw * ' +
+	// 				  slideActive +
+	// 				  ') - (' +
+	// 				  '50px * ' +
+	// 				  slideActive +
+	// 				  '))';
 
-			// Move slides
-			document.querySelector('.slider__pictures').style.transform =
-				'translate(' + calcTranslate + ')';
-		}
-	});
+	// 		// Move slides
+	// 		document.querySelector('.slider__pictures').style.transform =
+	// 			'translate(' + calcTranslate + ')';
+	// 	}
+	// });
+};
+
+//-------------------------------------
+//	PROJECT'S ID
+//-------------------------------------
+const idProject = () => {
+	// Generate good project ID from URL
+	let initialURL = window.location.href;
+	let positionAfterHyphen = initialURL.lastIndexOf('/') + 1;
+	let positionHtml = initialURL.lastIndexOf('.html') + 1;
+	let nameProject = initialURL.substring(positionAfterHyphen, positionHtml - 1);
+
+	var idProject = 0;
+
+	switch (nameProject) {
+		case 'le-trianon':
+			idProject = 0;
+			break;
+		case 'blog-zenchef':
+			idProject = 1;
+			break;
+		case 'alcatraz-1962':
+			idProject = 2;
+			break;
+		case 'back-to-your-dream':
+			idProject = 3;
+			break;
+	}
+
+	return idProject;
 };
 
 //-------------------------------------
 //	MAIN FUNCTION
 //-------------------------------------
+var ploum = idProject();
+
 const main = () => {
-
-  loadPartial('nav')
-  loadPartial('footer')
-
-  let navHTML = document.getElementById('load-nav').innerHtml
-  document.getElementById('load-nav').innerHtml = navHTML.replace('[[projectId]]', 4)
+	// let navHTML = document.getElementById('load-nav').innerHtml;
+	// document.getElementById('load-nav').innerHtml = navHTML.replace(
+	// 	'[[projectId]]',
+	// 	4
+	// );
 
 	//Display
 	// document.querySelector('header').classList.add('enable');
@@ -122,33 +153,15 @@ const main = () => {
 	// document.querySelector('.project__img span').classList.add('enable');
 	// document.querySelector('.project__img img').classList.add('enable');
 
-	// Generate good project ID from URL
-	let initialURL = window.location.href;
-	let positionAfterHyphen = initialURL.lastIndexOf('/') + 1;
-	let positionHtml = initialURL.lastIndexOf('.html') + 1;
-	let nameProject = initialURL.substring(positionAfterHyphen, positionHtml - 1);
+	let ploum = idProject();
+
+	loadPartial('nav');
+	// loadPartial('footer');
+
+	displayContentPage(ploum);
 
 	// Parallax mobile
 	parallaxMobile();
-
-	let idProject = 0;
-
-	switch (nameProject) {
-		case 'back-to-your-dream':
-			idProject = 0;
-			break;
-		case 'blog-zenchef':
-			idProject = 1;
-			break;
-		case 'alcatraz-1962':
-			idProject = 2;
-			break;
-		case 'le-trianon':
-			idProject = 3;
-			break;
-	}
-
-	displayContentPage(idProject);
 
 	// Parallax section
 	var controller = new ScrollMagic.Controller({

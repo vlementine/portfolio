@@ -4,42 +4,50 @@
 
 // PROJECTS
 const projects = [
-  {
-    number: '01',
-    title: 'Back to your dream',
-    keywords: 'User Interface • Animation',
-    description:
-      "Option A, you kill me right here and now. Apparently I've made that very easy for you. You can kill me, no witnesses and then spend the next few weeks or months tracking down Jesse Pinkman and you kill him too. A pointless exercise it seems…",
-    image: 'btyd',
-    href: 'back-to-your-dream'
-  },
-  {
-    number: '02',
-    title: 'Le Blog Zenchef',
-    keywords: 'User Interface • Blog',
-    description:
-      "Option A, you kill me right here and now. Apparently I've made that very easy for you. You can kill me, no witnesses and then spend the next few weeks or months tracking down Jesse Pinkman and you kill him too. A pointless exercise it seems…",
-    image: 'blog-zenchef',
-    href: 'blog-zenchef'
-  },
-  {
-    number: '03',
-    title: 'Alcatraz, 1962',
-    keywords: 'User Interface • Webdoc',
-    description:
-      "Option A, you kill me right here and now. Apparently I've made that very easy for you. You can kill me, no witnesses and then spend the next few weeks or months tracking down Jesse Pinkman and you kill him too. A pointless exercise it seems…",
-    image: 'alcatraz',
-    href: 'alcatraz-1962'
-  },
-  {
-    number: '04',
-    title: 'Le Trianon',
-    keywords: '2018 — User Interface • Concert',
-    description:
-      "Option A, you kill me right here and now. Apparently I've made that very easy for you. You can kill me, no witnesses and then spend the next few weeks or months tracking down Jesse Pinkman and you kill him too. A pointless exercise it seems…",
-    image: 'le-trianon',
-    href: 'le-trianon'
-  }
+	{
+		number: '01',
+		title: 'Le Trianon',
+		keywords: '2018 — User Interface • Concert',
+		description:
+			'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus et arcu arcu. Curabitur varius fermentum gravida. Sed eleifend turpis vel lobortis pellentesque. Phasellus gravida sagittis mauris sit amet viverra.',
+		image: 'le-trianon',
+		href: 'le-trianon',
+		nextProject: 'Le Blog Zenchef',
+		hrefNextProject: 'blog-zenchef.html'
+	},
+	{
+		number: '02',
+		title: 'Le Blog Zenchef',
+		keywords: 'User Interface • Blog',
+		description:
+			'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus et arcu arcu. Curabitur varius fermentum gravida. Sed eleifend turpis vel lobortis pellentesque. Phasellus gravida sagittis mauris sit amet viverra.',
+		image: 'blog-zenchef',
+		href: 'blog-zenchef',
+		nextProject: 'Alcatraz, 1962',
+		hrefNextProject: 'alcatraz.html'
+	},
+	{
+		number: '03',
+		title: 'Alcatraz, 1962',
+		keywords: 'User Interface • Webdoc',
+		description:
+			'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus et arcu arcu. Curabitur varius fermentum gravida. Sed eleifend turpis vel lobortis pellentesque. Phasellus gravida sagittis mauris sit amet viverra.',
+		image: 'alcatraz',
+		href: 'alcatraz',
+		nextProject: 'Back To Your Dream',
+		hrefNextProject: 'back-to-your-dream'
+	},
+	{
+		number: '04',
+		title: 'Back to your dream',
+		keywords: 'User Interface • Animation',
+		description:
+			'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus et arcu arcu. Curabitur varius fermentum gravida. Sed eleifend turpis vel lobortis pellentesque. Phasellus gravida sagittis mauris sit amet viverra.',
+		image: 'btyd',
+		href: 'back-to-your-dream',
+		nextProject: 'Le Trianon',
+		hrefNextProject: 'le-trianon.html'
+	}
 ];
 
 // NAVIGATION
@@ -50,7 +58,7 @@ const nav = [
   },
   {
     number: '02',
-    title: 'Back to your dream'
+    title: 'Le Trianon'
   },
   {
     number: '03',
@@ -62,7 +70,7 @@ const nav = [
   },
   {
     number: '05',
-    title: 'Le Trianon'
+    title: 'Back To Your Dream'
   },
   {
     number: '06',

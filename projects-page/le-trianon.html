@@ -12,10 +12,11 @@
 
 <body id="project-04" class="project-page">
   <div>
-    <span class="transition-screen"></span>
-    <span class="transition-screen transition-screen--white"></span>
 
-    <!-- MENU -->
+    <!-- NAVIGATION -->
+    <div id="load-nav"></div>
+
+    <!-- Menu -->
     <div class="menu__wrapper disable">
       <div class="menu__categories">
         <div class="menu__category">
@@ -30,46 +31,49 @@
           <h2 onClick="redirectionProject('contact')">Contact</h2>
           <p>En savoir plus</p>
         </div>
-      </div>
-
-      <div class="menu__projects-wrapper--mobile"></div>
-
-      <div class="menu__projects-wrapper">
-        <div class="menu__project-visuel">
-          <div class="visuels__wrapper">
-            <div class="visuel__mockup">
-              <img class="mockup--desktop" src="../img/btyd_visuel-home.png" alt="Visuel du Blog Zenchef" draggable="false">
-            </div>
-            <img class="visuel__letter" src="../img/btyd_letter.png" alt="B" draggable="false">
-          </div>
-        </div>
-        <div class="menu__projects"></div>
-      </div>
-
-      <div class="menu__footer">
-        <span class="copyright">Clémentine Bertrand © 2018</span>
-        <div class="links">
-          <a class="link--behance" href="" target="_blank"> <span>Behance</span> </a>
-          <a class="link--dribbble" href="https://dribbble.com/cbertrand" target="_blank"> <span>Dribbble</span>
-          </a>
-          <a class="link--linkedin" href="https://www.linkedin.com/in/clementinebertrand" target="_blank">
-            <span>Linkedin</span>
-          </a>
-        </div>
-        <div class="footer__contact">
-          <span>Contactez-moi</span>
-          <div class="contact__link"><a href="mailto:hello@clementinebertrand.fr"> ✍️ </a></div>
-        </div>
-      </div>
     </div>
 
-    <div id="load-nav"></div>
-    
-    <div class="menu-btn menu-btn-open" onclick="displayMenu()">
-      <div class="menu__icon menu__icon--open enable"><span></span> <span></span> <span></span></div>
-      <div class="menu__icon menu__icon--close"><span></span> <span></span></div>
-    </div>
+  <div class="menu__projects-wrapper--mobile"></div>
 
+  <div class="menu__projects-wrapper">
+    <div class="menu__project-visuel">
+      <div class="visuels__wrapper">
+        <div class="visuel__mockup">
+          <img class="mockup--desktop" src="../img/le-trianon_visuel-home.png" alt="Visuel du Blog Zenchef" draggable="false" />
+        </div>
+        <img class="visuel__letter" src="../img/le-trianon_letter.png" alt="B" draggable="false" />
+      </div>
+    </div>
+    <div class="menu__projects"></div>
+  </div>
+
+  <div class="menu__footer">
+    <span class="copyright">Clémentine Bertrand © 2018</span>
+    <div class="links">
+      <a class="link--behance" href="" target="_blank">
+        <span>Behance</span>
+      </a>
+      <a class="link--dribbble" href="https://dribbble.com/cbertrand" target="_blank">
+        <span>Dribbble</span>
+      </a>
+      <a class="link--linkedin" href="https://www.linkedin.com/in/clementinebertrand" target="_blank">
+        <span>Linkedin</span>
+      </a>
+    </div>
+    <div class="footer__contact">
+      <span>Contactez-moi</span>
+      <div class="contact__link">
+        <a href="mailto:hello@clementinebertrand.fr"> ✍️ </a>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Menu icon -->
+<div class="menu-btn menu-btn-open" onclick="displayMenu()">
+  <div class="menu__icon menu__icon--open enable"><span></span> <span></span> <span></span></div>
+  <div class="menu__icon menu__icon--close"><span></span> <span></span></div>
+</div>
     <!-- HEADER -->
     <header>
       <h1>Titre du projet</h1>
@@ -268,14 +272,13 @@
         <img id="parallax-mobile-02" class="img-02" src="../img/le-trianon/le-trianon__project-picture-mobile-02.png" alt="" />
       </div>
 
-  </div>
   </section>
 
 
   <!-- NEXT PROJECT -->
   <section class="next-project">
     <h3 class="next-project__title">Prochain project</h3>
-    <a href="" class="next-project__name">Alcatraz, 1962</a>
+    <a href="" class="next-project__name">???</a>
   </section>
 
   <div id="load-footer"/> </div>
@@ -301,15 +304,6 @@
             slidesToScroll: 3
         });
     });
-  </script>
-  <script>
-  // function loadPartial(name) {
-  //   fetch(`/${name}.html`).then(res => res.text()).then((htmlString) => {
-  //     document.getElementById(`load-${name}`).innerHTML = htmlString
-  //   })
-  // }
-  // loadPartial('nav')
-  // loadPartial('footer')
   </script>
 
 </body>
