@@ -11,8 +11,30 @@
 
 	<body id="project-02" class="project-page">
 		<div>
+			<!-- Transition -->
 			<span class="transition-screen"></span>
 			<span class="transition-screen transition-screen--white"></span>
+
+			<!-- Navigation -->
+			<nav>
+				<img
+					src="../img/logo.gif"
+					alt="Logo Clémentine Bertrand"
+					class="logo"
+				/>
+
+				<div class="nav__return" onClick="redirectionProject()">
+					<div class="arrow__clickable">
+						<span class="nav__arrow nav__arrow--left">
+							<span class="arrow__circle"></span>
+						</span>
+					</div>
+					<div class="return__text">
+						<span class="text--top">Back to projects</span>
+						<span class="text--bottom">Back to projects</span>
+					</div>
+				</div>
+			</nav>
 
 			<!-- MENU -->
 			<div class="menu__wrapper disable">
@@ -84,9 +106,6 @@
 					</div>
 				</div>
 			</div>
-
-			<!-- NAVIGATION -->
-			<div id="load-nav"></div>
 
 			<div class="menu-btn menu-btn-open" onclick="displayMenu()">
 				<div class="menu__icon menu__icon--open enable">
