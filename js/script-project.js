@@ -11,14 +11,6 @@ const displayContentPage = idProject => {
 	generateMenu();
 };
 
-function loadPartial(name) {
-	fetch(`/${name}.html`)
-		.then(res => res.text())
-		.then(htmlString => {
-			document.getElementById(`load-${name}`).innerHTML = htmlString;
-		});
-}
-
 //-------------------------------------
 //	REDIRECTION -> INDEX
 //-------------------------------------
@@ -71,32 +63,6 @@ const responsive = () => {
 	let windowWidth = window.innerWidth;
 
 	parallaxMobile();
-
-	// calcHeightSlider();
-
-	// // Align slider on responsive
-	// let bulletsSlider = document.querySelectorAll('.slider-nav__bullet');
-
-	// bulletsSlider.forEach(element => {
-	// 	if (element.classList.contains('bullet--active')) {
-	// 		let slideActive = element.textContent - 1;
-
-	// 		let calcTranslate =
-	// 			windowWidth <= 650
-	// 				? 'calc((-80vw * ' + slideActive + ') - (' + '20px * ' + slideActive +
-	// 				  '))'
-	// 				: 'calc((-60vw * ' +
-	// 				  slideActive +
-	// 				  ') - (' +
-	// 				  '50px * ' +
-	// 				  slideActive +
-	// 				  '))';
-
-	// 		// Move slides
-	// 		document.querySelector('.slider__pictures').style.transform =
-	// 			'translate(' + calcTranslate + ')';
-	// 	}
-	// });
 };
 
 //-------------------------------------
@@ -135,12 +101,6 @@ const idProject = () => {
 var ploum = idProject();
 
 const main = () => {
-	// let navHTML = document.getElementById('load-nav').innerHtml;
-	// document.getElementById('load-nav').innerHtml = navHTML.replace(
-	// 	'[[projectId]]',
-	// 	4
-	// );
-
 	//Display
 	// document.querySelector('header').classList.add('enable');
 	// document.querySelector('.project__summary h1').classList.add('enable');
@@ -154,10 +114,6 @@ const main = () => {
 	// document.querySelector('.project__img img').classList.add('enable');
 
 	let ploum = idProject();
-
-	loadPartial('nav');
-	// loadPartial('footer');
-
 	displayContentPage(ploum);
 
 	// Parallax mobile
