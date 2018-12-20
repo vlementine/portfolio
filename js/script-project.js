@@ -102,7 +102,8 @@ var ploum = idProject();
 
 const main = () => {
 	//Display
-	// document.querySelector('header').classList.add('enable');
+	document.querySelector('header').classList.add('enable');
+	document.querySelector('.header--text').classList.add('enable');
 	// document.querySelector('.project__summary h1').classList.add('enable');
 	// document.querySelector('.type--shadow').classList.add('enable');
 	// for (let i = 0; i < 3; i++) {

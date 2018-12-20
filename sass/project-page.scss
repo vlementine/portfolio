@@ -92,13 +92,28 @@
 	justify-content: center;
 	align-items: center;
 	flex-direction: column;
-	width: calc(100% - 100px);
 	margin: 24px auto 100px auto;
 	height: 400px;
 	background-color: $dark-blue-05;
 	background-size: cover;
 	background-position: center;
-	color: #ffffff;
+	width: 0;
+	color: transparent;
+	@include transition(width 1.4s ease-in-out, 1.8s color 0.2s ease-in-out);
+
+	&.enable {
+		color: #ffffff;
+		width: calc(100% - 100px);
+	}
+
+	.header--text {
+		@include transform(translateY(30px));
+		@include transition(1.8s transform 0.2s ease-in-out);
+
+		&.enable {
+			@include transform(translateY(0));
+		}
+	}
 
 	h1 {
 		font-family: 'Playfair Display', serif;
@@ -469,11 +484,11 @@
 	}
 
 	header {
-		background-image: url(../img/btyd/btyd__hero-picture.jpg);
+		background-image: url(../img/le-trianon/le-trianon__hero-picture.jpg);
 	}
 
 	#parallax-bg-01 div {
-		background-image: url(../img/btyd/btyd__picture--all.jpg);
+		background-image: url(../img/le-trianon/le-trianon__picture--all.jpg);
 	}
 }
 
@@ -517,11 +532,11 @@
 	}
 
 	header {
-		background-image: url(../img/le-trianon/le-trianon__hero-picture.jpg);
+		background-image: url(../img/btyd/btyd__hero-picture.jpg);
 	}
 
 	#parallax-bg-01 div {
-		background-image: url(../img/le-trianon/le-trianon__picture--all.jpg);
+		background-image: url(../img/btyd/btyd__picture--all.jpg);
 	}
 
 	.slick-dots li button {

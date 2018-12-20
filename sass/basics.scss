@@ -573,12 +573,12 @@ h3 {
 	top: 0;
 	left: 0;
 	z-index: 56;
-	@include transition(transform 0.8s ease-in-out);
+	@include transition(transform 0.6s ease-in-out);
 	@include transform(translate(100%, 0));
 	 
 	&.transition-screen--white {
 		background: #fff;
-		@include transition(transform 1.4s ease-in-out);
+		@include transition(.6s transform .3s ease-in-out);
 	}
 	&.redirect-page {
 		@include transform(translate(0, 0));

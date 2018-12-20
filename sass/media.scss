@@ -239,7 +239,11 @@
 	}
 
 	.transition-screen {
-		transition: all 0.8s ease-in-out;
+		transition: all 0.5s ease-in-out;
+
+		&.transition-screen--white {
+			@include transition(.5s transform .3s ease-in-out);
+		}
 	}
 
 	.projects__wrapper,
