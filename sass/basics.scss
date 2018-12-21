@@ -577,7 +577,7 @@ h3 {
 	@include transform(translate(100%, 0));
 	 
 	&.transition-screen--white {
-		background: #fff;
+		background: #fff !important;
 		@include transition(.6s transform .3s ease-in-out);
 	}
 	&.redirect-page {

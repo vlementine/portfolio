@@ -400,12 +400,13 @@ menuHoverProject = (number, name) => {
 //-------------------------------------
 redirectToPageProject = varURL => {
 	document.querySelector('.transition-screen').classList.add('redirect-page');
+	document.querySelector('.transition-screen--white').classList.add('redirect-page');
 	setTimeout(() => {
 		let urlPage = window.location.href;
 		let positionSlash = urlPage.lastIndexOf('/') + 1;
 		let urlPath =
 			urlPage.substring(positionSlash) === 'index.html'
-				? './projects-page/'
+				? './projects/'
 				: './';
 		window.location.href = urlPath + varURL + '.html';
 	}, 1500);

@@ -38,10 +38,13 @@ const responsive = () => {
 //	REDIRECTION -> PROJECT
 //-------------------------------------
 const redirectionProject = varURL => {
+	//document.querySelector('.transition-screen').style.background = '$project-01';
 	document.querySelector('.transition-screen').classList.add('redirect-page');
-	document.querySelector('.transition-screen--white').classList.add('redirect-page');
+	document
+		.querySelector('.transition-screen--white')
+		.classList.add('redirect-page');
 	setTimeout(() => {
-		window.location.href = './projects-page/' + varURL + '.html';
+		window.location.href = './projects/' + varURL + '.html';
 	}, 1500);
 };
 
@@ -223,7 +226,7 @@ const main = () => {
 	// const redirectionProject = varURL => {
 	// 	document.querySelector('.transition-screen').classList.add('redirect-page');
 	// 	setTimeout(() => {
-	// 		window.location.href = './projects-page/project-page--' + varURL + '.html';
+	// 		window.location.href = './projects/project-page--' + varURL + '.html';
 	// 	}, 1500);
 	// };
 
@@ -243,14 +246,17 @@ const main = () => {
 
 		if (windowWidth <= 650) {
 			initProject('.project--mobile');
-			document.querySelector('.number--active').textContent = '0' + (parseInt(urlNumber) + 1);
-			
+			document.querySelector('.number--active').textContent =
+				'0' + (parseInt(urlNumber) + 1);
 		} else {
 			initProject('.project');
 			navActiveItem(parseInt(urlNumber) + 1);
 		}
-
-	} else if (urlNumber == 'home' || urlNumber == 'work' || urlNumber == 'contact') {
+	} else if (
+		urlNumber == 'home' ||
+		urlNumber == 'work' ||
+		urlNumber == 'contact'
+	) {
 		displayMenu();
 		navMenu(urlNumber);
 	}

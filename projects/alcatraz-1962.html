@@ -9,16 +9,20 @@
 		<link rel="stylesheet" href="../css/slick.css" />
 	</head>
 
-	<body id="project-04" class="project-page">
+	<body id="project-03" class="project-page">
 		<div>
 			<!-- Transition -->
 			<span class="transition-screen"></span>
 			<span class="transition-screen transition-screen--white"></span>
-			
+
 			<!-- Navigation -->
 			<nav>
-				<img src="../img/logo.gif" alt="Logo Clémentine Bertrand" class="logo" />
-			
+				<img
+					src="../img/logo.gif"
+					alt="Logo Clémentine Bertrand"
+					class="logo"
+				/>
+
 				<div class="nav__return" onClick="redirectionProject()">
 					<div class="arrow__clickable">
 						<span class="nav__arrow nav__arrow--left">
@@ -114,8 +118,10 @@
 
 			<!-- HEADER -->
 			<header>
-				<h1>Titre du projet</h1>
-				<p class="subtitle">Date • Type de projet</p>
+				<div class="header--text">
+					<h1>Titre du projet</h1>
+					<p class="subtitle">Date • Type de projet</p>
+				</div>
 			</header>
 
 			<!-- PROJECT CONTENT -->
@@ -134,7 +140,10 @@
 				</div>
 
 				<div class="container project-picture project-picture--simple">
-					<img src="../img/btyd/btyd__project-animate-picture-01.gif" alt="" />
+					<img
+						src="../img/alcatraz/alcatraz__project-animate-picture-01.gif"
+						alt=""
+					/>
 				</div>
 
 				<div id="parallax-bg-01" class="project-parallax--bg"><div></div></div>
@@ -150,14 +159,16 @@
 				</div>
 
 				<div class="container project-picture project-picture--simple">
-					<img src="../img/btyd/btyd__project-picture-01.jpg" alt="" />
+					<img src="../img/alcatraz/alcatraz__project-picture-01.jpg" alt="" />
 				</div>
 			</section>
 
 			<!-- NEXT PROJECT -->
 			<section class="next-project">
 				<h3 class="next-project__title">Prochain project</h3>
-				<a href="" class="next-project__name">Alcatraz, 1962</a>
+				<span class="next-project__name" onClick="redirectionNextProject()"
+					>Nom du prochain projet</span
+				>
 			</section>
 
 			<!-- FOOTER -->

@@ -14,6 +14,14 @@
 		width: calc(100% - 100px);
 		max-width: 1340px;
 		margin: 140px auto;
+		opacity: 0;
+		@include transform(translateY(30px));
+		@include transition(0.6s all 1.8s ease-in-out);
+
+		&.enable {
+			opacity: 1;
+			@include transform(translateY(0));
+		}
 
 		&:first-child {
 			margin-top: 0;
@@ -41,17 +49,28 @@
 //-------------------------------------
 //	NAVIGATION
 //-------------------------------------
-.project-page nav {
-	display: flex;
-	justify-content: space-between;
-	align-items: center;
-	padding: 20px 50px 0 50px;
-	height: 70px;
+.project-page {
+	nav {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		padding: 20px 50px 0 50px;
+		height: 70px;
+		opacity: 0;
+		@include transition(opacity 0.8s ease-in-out);
+
+		&.enable {
+			opacity: 1;
+		}
+	}
 
 	.menu-btn {
-		position: relative;
-		top: 0;
-		left: 0;
+		opacity: 0;
+		@include transition(opacity 0.8s ease-in-out);
+
+		&.enable {
+			opacity: 1;
+		}
 	}
 }
 
@@ -98,19 +117,23 @@
 	background-size: cover;
 	background-position: center;
 	width: 0;
-	color: transparent;
-	@include transition(width 1.4s ease-in-out, 1.8s color 0.2s ease-in-out);
+	@include transition(width 1.4s ease-in-out);
 
 	&.enable {
-		color: #ffffff;
 		width: calc(100% - 100px);
 	}
 
 	.header--text {
+		text-align: center;
+		color: transparent;
 		@include transform(translateY(30px));
-		@include transition(1.8s transform 0.2s ease-in-out);
+		@include transition(
+			0.4s transform 1.4s ease-in-out,
+			0.4s color 1.4s ease-in-out
+		);
 
 		&.enable {
+			color: #ffffff;
 			@include transform(translateY(0));
 		}
 	}
@@ -301,14 +324,14 @@
 //	PARALLAX • BACKGROUND
 //-------------------------------------
 .project-parallax--bg {
-	height: 450px;
+	height: 600px;
 	overflow: hidden;
 }
 
 .project-parallax--bg div {
-	height: 200%;
-	position: relative;
-	top: -100%;
+	height: 150%;
+    position: relative;
+    top: -45%;
 	background-size: cover;
 	background-position: center;
 }
@@ -392,6 +415,7 @@
 		font-weight: 700;
 		font-style: italic;
 		margin: 0;
+		cursor: pointer;
 		@include transition(color 0.2s ease-in-out);
 	}
 }
@@ -482,13 +506,50 @@
 	.next-project__name:hover {
 		color: $project-01;
 	}
-
+ 
 	header {
 		background-image: url(../img/le-trianon/le-trianon__hero-picture.jpg);
 	}
 
 	#parallax-bg-01 div {
 		background-image: url(../img/le-trianon/le-trianon__picture--all.jpg);
+	}
+
+	#explain__text-01 {
+		top: 50%;
+	}
+
+	#explain__text-02 {
+		top: 30%;
+		width: 245px;
+		padding-left: 60px;
+	}
+
+	#explain__text-03 {
+		top: 0px;
+		width: 235px;
+		padding-right: 50px;
+	}
+
+	#explain__text-04 {
+		top: -30px;
+		width: 225px;
+		padding-left: 30px;
+	}
+
+	#explain__text-05 {
+		top: 40px;
+		width: 245px;
+		padding-right: 60px;
+	}
+	#explain__text-06 {
+		top: 50px;
+		width: 235px;
+		padding-left: 50px;
+	}
+	#explain__text-07 {
+		width: 295px;
+		padding-right: 110px;
 	}
 }
 
@@ -547,42 +608,5 @@
 			border-color: $project-04;
 			@include transition(opacity 0.2s ease-in-out);
 		}
-	}
-
-	#explain__text-01 {
-		top: 50%;
-	}
-
-	#explain__text-02 {
-		top: 30%;
-		width: 245px;
-		padding-left: 60px;
-	}
-
-	#explain__text-03 {
-		top: 0px;
-		width: 235px;
-		padding-right: 50px;
-	}
-
-	#explain__text-04 {
-		top: -30px;
-		width: 225px;
-		padding-left: 30px;
-	}
-
-	#explain__text-05 {
-		top: 40px;
-		width: 245px;
-		padding-right: 60px;
-	}
-	#explain__text-06 {
-		top: 50px;
-		width: 235px;
-		padding-left: 50px;
-	}
-	#explain__text-07 {
-		width: 295px;
-		padding-right: 110px;
 	}
 }

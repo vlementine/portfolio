@@ -12,8 +12,7 @@ const projects = [
 			'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus et arcu arcu. Curabitur varius fermentum gravida. Sed eleifend turpis vel lobortis pellentesque. Phasellus gravida sagittis mauris sit amet viverra.',
 		image: 'le-trianon',
 		href: 'le-trianon',
-		nextProject: 'Le Blog Zenchef',
-		hrefNextProject: 'blog-zenchef.html'
+		nextProject: 'Le Blog Zenchef'
 	},
 	{
 		number: '02',
@@ -23,8 +22,7 @@ const projects = [
 			'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus et arcu arcu. Curabitur varius fermentum gravida. Sed eleifend turpis vel lobortis pellentesque. Phasellus gravida sagittis mauris sit amet viverra.',
 		image: 'blog-zenchef',
 		href: 'blog-zenchef',
-		nextProject: 'Alcatraz, 1962',
-		hrefNextProject: 'alcatraz.html'
+		nextProject: 'Alcatraz, 1962'
 	},
 	{
 		number: '03',
@@ -34,8 +32,7 @@ const projects = [
 			'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus et arcu arcu. Curabitur varius fermentum gravida. Sed eleifend turpis vel lobortis pellentesque. Phasellus gravida sagittis mauris sit amet viverra.',
 		image: 'alcatraz',
 		href: 'alcatraz',
-		nextProject: 'Back To Your Dream',
-		hrefNextProject: 'back-to-your-dream'
+		nextProject: 'Back To Your Dream'
 	},
 	{
 		number: '04',
@@ -45,8 +42,7 @@ const projects = [
 			'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus et arcu arcu. Curabitur varius fermentum gravida. Sed eleifend turpis vel lobortis pellentesque. Phasellus gravida sagittis mauris sit amet viverra.',
 		image: 'btyd',
 		href: 'back-to-your-dream',
-		nextProject: 'Le Trianon',
-		hrefNextProject: 'le-trianon.html'
+		nextProject: 'Le Trianon'
 	}
 ];
 

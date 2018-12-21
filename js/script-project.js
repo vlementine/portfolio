@@ -4,10 +4,14 @@
 const displayContentPage = idProject => {
 	document.querySelector('h1').innerText = projects[idProject].title;
 	document.querySelector('p.subtitle').innerText = projects[idProject].keywords;
-	document.querySelector('.project-intro p').innerText = projects[idProject].description;
-	document.querySelector('.project-intro a.btn').href = projects[idProject].href;
-	document.querySelector('.next-project__name').innerText = projects[idProject].nextProject;
-	document.querySelector('.next-project__name').href = projects[idProject].hrefNextProject;
+	document.querySelector('.project-intro p').innerText =
+		projects[idProject].description;
+	document.querySelector('.project-intro a.btn').href =
+		projects[idProject].href;
+	document.querySelector('.next-project__name').innerText =
+		projects[idProject].nextProject;
+	document.querySelector('.next-project__name').href =
+		projects[idProject].hrefNextProject;
 	generateMenu();
 };
 
@@ -20,7 +24,40 @@ const redirectionProject = () => {
 		.querySelector('.transition-screen--white')
 		.classList.add('redirect-page');
 	setTimeout(() => {
-		window.location.href = '../index.html#' + (ploum + 1);
+		window.location.href = '../index.html#' + (idProjectActive + 1);
+	}, 1500);
+};
+
+//-------------------------------------
+//	REDIRECTION -> NEXT PROJECT
+//-------------------------------------
+const redirectionNextProject = () => {
+	document.querySelector('.transition-screen').classList.add('redirect-page');
+	document
+		.querySelector('.transition-screen--white')
+		.classList.add('redirect-page');
+
+	if (idProjectActive == 4) {
+		idNextProject = 1;
+	}
+
+	switch (idNextProject) {
+		case 1:
+			nameNextProject = 'le-trianon';
+			break;
+		case 2:
+			nameNextProject = 'blog-zenchef';
+			break;
+		case 3:
+			nameNextProject = 'alcatraz-1962';
+			break;
+		case 4:
+			nameNextProject = 'back-to-your-dream';
+			break;
+	}
+
+	setTimeout(() => {
+		window.location.href = nameNextProject + '.html';
 	}, 1500);
 };
 
@@ -66,18 +103,25 @@ const responsive = () => {
 };
 
 //-------------------------------------
-//	PROJECT'S ID
+//	PROJECT'S NAME
 //-------------------------------------
-const idProject = () => {
+const nameProject = () => {
 	// Generate good project ID from URL
 	let initialURL = window.location.href;
 	let positionAfterHyphen = initialURL.lastIndexOf('/') + 1;
 	let positionHtml = initialURL.lastIndexOf('.html') + 1;
 	let nameProject = initialURL.substring(positionAfterHyphen, positionHtml - 1);
 
+	return nameProject;
+};
+
+//-------------------------------------
+//	PROJECT'S ID
+//-------------------------------------
+const idProject = (idProject = null) => {
 	var idProject = 0;
 
-	switch (nameProject) {
+	switch (nameProjectActive) {
 		case 'le-trianon':
 			idProject = 0;
 			break;
@@ -98,24 +142,17 @@ const idProject = () => {
 //-------------------------------------
 //	MAIN FUNCTION
 //-------------------------------------
-var ploum = idProject();
-
 const main = () => {
 	//Display
+	document.querySelector('nav').classList.add('enable');
+	document.querySelector('.menu-btn').classList.add('enable');
 	document.querySelector('header').classList.add('enable');
 	document.querySelector('.header--text').classList.add('enable');
-	// document.querySelector('.project__summary h1').classList.add('enable');
-	// document.querySelector('.type--shadow').classList.add('enable');
-	// for (let i = 0; i < 3; i++) {
-	//   document.querySelectorAll('.project-page .project__info .info span')[i].classList.add('enable');
-	//   document.querySelectorAll('.project-page .project__info .info p')[i].classList.add('enable');
-	// }
-	// document.querySelector('.project__intro').classList.add('enable');
-	// document.querySelector('.project__img span').classList.add('enable');
-	// document.querySelector('.project__img img').classList.add('enable');
+	for (let i = 0; i < document.querySelectorAll('.container').length; i++) {
+		document.querySelectorAll('.container')[i].classList.add('enable');
+	}
 
-	let ploum = idProject();
-	displayContentPage(ploum);
+	displayContentPage(idProjectContent);
 
 	// Parallax mobile
 	parallaxMobile();
@@ -141,5 +178,10 @@ const main = () => {
 //-------------------------------------
 //	INITIALIZE
 //-------------------------------------
+var nameProjectActive = nameProject();
+var idProjectContent = idProject();
+var idProjectActive = idProject() + 1;
+var idNextProject = idProject() + 2;
+
 document.onload = main();
 window.onresize = responsive;
