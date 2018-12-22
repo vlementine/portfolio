@@ -28,16 +28,18 @@
 			color: rgba(255, 255, 255, 0.5);
 		}
 
-		&:hover .arrow__clickable + .return__text span:first-child,
-		&:hover .arrow__clickable + .return__text span:last-child {
+		&:hover .arrow__clickable+.return__text span:first-child,
+		&:hover .arrow__clickable+.return__text span:last-child {
 			color: rgba(255, 255, 255, 0.8);
 		}
 	}
 }
+
 //-------------------------------------
 //	MEDIA QUERIES : 1000px
 //-------------------------------------
 @media screen and (max-width: 1000px) {
+
 	//-- PROJECTS
 	.project {
 		flex-direction: column;
@@ -146,6 +148,7 @@
 //	MEDIA QUERIES : 800px
 //-------------------------------------
 @media screen and (max-width: 800px) {
+
 	//-- FOOTER
 	.links {
 		margin-left: auto;
@@ -239,10 +242,16 @@
 	}
 
 	.transition-screen {
-		transition: all 0.5s ease-in-out;
+		
+		@include transform(translate(0, -100%));
+		transition: all 0.8s ease-in-out;
 
 		&.transition-screen--white {
-			@include transition(.5s transform .3s ease-in-out);
+			@include transition(.8s transform .3s ease-in-out);
+		}
+
+		&.enable {
+			@include transform(translate(0%));
 		}
 	}
 
@@ -338,7 +347,16 @@
 
 	//-- PROJECT PAGE
 	.project-page header {
-		width: calc(100% - 40px);
+		@include transition(width 1s ease-in-out, padding 1s ease-in-out);
+
+		&.enable {
+			padding: 20px;	
+			width: calc(100% - 40px);
+		}
+
+		.header--text {
+			@include transition(0.4s transform 1s ease-in-out, 0.4s color 1s ease-in-out);
+		}
 	}
 
 	.project-page nav {
@@ -353,6 +371,10 @@
 		&.project-intro {
 			width: calc(100% - 60px);
 		}
+	}
+
+	.project-parallax--bg {
+		height: 450px;
 	}
 
 	.project-picture {
@@ -404,6 +426,7 @@
 //	MEDIA QUERIES : 400px
 //-------------------------------------
 @media screen and (max-width: 400px) {
+
 	//-- HOME
 	.home img {
 		max-width: 80%;
@@ -434,6 +457,7 @@
 //	MEDIA QUERIES : 320px
 //-------------------------------------
 @media screen and (max-width: 320px) {
+
 	//-- HOME
 	.project__description--mobile {
 		margin-bottom: 20px;
@@ -486,8 +510,10 @@
 				}
 			}
 		}
+
 		.home__presentation {
 			width: calc(100% - 40px);
+
 			p {
 				font-size: 1.1rem;
 			}

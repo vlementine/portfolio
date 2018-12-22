@@ -11,6 +11,26 @@
   width: calc(100% - 100px);
   max-width: 1340px;
   margin: 140px auto;
+  opacity: 0;
+  -webkit-transform: translateY(30px);
+  -moz-transform: translateY(30px);
+  -ms-transform: translateY(30px);
+  -o-transform: translateY(30px);
+  transform: translateY(30px);
+  -webkit-transition: 0.6s all 1.8s ease-in-out;
+  -moz-transition: 0.6s all 1.8s ease-in-out;
+  -ms-transition: 0.6s all 1.8s ease-in-out;
+  -o-transition: 0.6s all 1.8s ease-in-out;
+  transition: 0.6s all 1.8s ease-in-out;
+}
+
+.project-page .container.enable {
+  opacity: 1;
+  -webkit-transform: translateY(0);
+  -moz-transform: translateY(0);
+  -ms-transform: translateY(0);
+  -o-transform: translateY(0);
+  transform: translateY(0);
 }
 
 .project-page .container:first-child {
@@ -40,12 +60,29 @@
   align-items: center;
   padding: 20px 50px 0 50px;
   height: 70px;
+  opacity: 0;
+  -webkit-transition: opacity 0.8s ease-in-out;
+  -moz-transition: opacity 0.8s ease-in-out;
+  -ms-transition: opacity 0.8s ease-in-out;
+  -o-transition: opacity 0.8s ease-in-out;
+  transition: opacity 0.8s ease-in-out;
 }
 
-.project-page nav .menu-btn {
-  position: relative;
-  top: 0;
-  left: 0;
+.project-page nav.enable {
+  opacity: 1;
+}
+
+.project-page .menu-btn {
+  opacity: 0;
+  -webkit-transition: opacity 0.8s ease-in-out;
+  -moz-transition: opacity 0.8s ease-in-out;
+  -ms-transition: opacity 0.8s ease-in-out;
+  -o-transition: opacity 0.8s ease-in-out;
+  transition: opacity 0.8s ease-in-out;
+}
+
+.project-page .menu-btn.enable {
+  opacity: 1;
 }
 
 .return__text {
@@ -94,17 +131,50 @@
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  width: calc(100% - 100px);
   margin: 24px auto 100px auto;
   height: 400px;
   background-color: rgba(6, 10, 46, 0.05);
   background-size: cover;
   background-position: center;
+  width: 0;
+  -webkit-transition: width 1.4s ease-in-out;
+  -moz-transition: width 1.4s ease-in-out;
+  -ms-transition: width 1.4s ease-in-out;
+  -o-transition: width 1.4s ease-in-out;
+  transition: width 1.4s ease-in-out;
+}
+
+.project-page header.enable {
+  width: calc(100% - 100px);
+}
+
+.project-page header .header--text {
+  text-align: center;
+  color: transparent;
+  -webkit-transform: translateY(30px);
+  -moz-transform: translateY(30px);
+  -ms-transform: translateY(30px);
+  -o-transform: translateY(30px);
+  transform: translateY(30px);
+  -webkit-transition: 0.4s transform 1.4s ease-in-out, 0.4s color 1.4s ease-in-out;
+  -moz-transition: 0.4s transform 1.4s ease-in-out, 0.4s color 1.4s ease-in-out;
+  -ms-transition: 0.4s transform 1.4s ease-in-out, 0.4s color 1.4s ease-in-out;
+  -o-transition: 0.4s transform 1.4s ease-in-out, 0.4s color 1.4s ease-in-out;
+  transition: 0.4s transform 1.4s ease-in-out, 0.4s color 1.4s ease-in-out;
+}
+
+.project-page header .header--text.enable {
   color: #ffffff;
+  -webkit-transform: translateY(0);
+  -moz-transform: translateY(0);
+  -ms-transform: translateY(0);
+  -o-transform: translateY(0);
+  transform: translateY(0);
 }
 
 .project-page header h1 {
   font-family: 'Playfair Display', serif;
+  line-height: 1.3;
   font-size: 3em;
   font-weight: 300;
   font-style: italic;
@@ -267,14 +337,14 @@
 }
 
 .project-parallax--bg {
-  height: 450px;
+  height: 600px;
   overflow: hidden;
 }
 
 .project-parallax--bg div {
-  height: 200%;
+  height: 150%;
   position: relative;
-  top: -100%;
+  top: -45%;
   background-size: cover;
   background-position: center;
 }
@@ -345,6 +415,7 @@
   font-weight: 700;
   font-style: italic;
   margin: 0;
+  cursor: pointer;
   -webkit-transition: color 0.2s ease-in-out;
   -moz-transition: color 0.2s ease-in-out;
   -ms-transition: color 0.2s ease-in-out;
@@ -352,8 +423,7 @@
   transition: color 0.2s ease-in-out;
 }
 
-.project-page footer,
-.menu__footer {
+.project-page footer {
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -361,8 +431,7 @@
   line-height: 38px;
 }
 
-.project-page footer .links,
-.menu__footer .links {
+.project-page footer .links {
   position: initial;
   margin: auto 20px;
   text-align: center;
@@ -442,22 +511,103 @@
   animation: 1.5s contact ease-in-out;
 }
 
-.project-page#project-04 section .container h3,
-.project-page#project-04 section h4,
-.project-page#project-04 .next-project__name:hover {
+.project-page#project-01 section .container h3,
+.project-page#project-01 section h4,
+.project-page#project-01 .next-project__name:hover {
   color: #cd3557;
 }
 
-.project-page#project-04 header {
+.project-page#project-01 header {
   background-image: url(../img/le-trianon/le-trianon__hero-picture.jpg);
 }
 
-.project-page#project-04 #parallax-bg-01 div {
+.project-page#project-01 #parallax-bg-01 div {
   background-image: url(../img/le-trianon/le-trianon__picture--all.jpg);
 }
 
+.project-page#project-01 #explain__text-01 {
+  top: 50%;
+}
+
+.project-page#project-01 #explain__text-02 {
+  top: 30%;
+  width: 245px;
+  padding-left: 60px;
+}
+
+.project-page#project-01 #explain__text-03 {
+  top: 0px;
+  width: 235px;
+  padding-right: 50px;
+}
+
+.project-page#project-01 #explain__text-04 {
+  top: -30px;
+  width: 225px;
+  padding-left: 30px;
+}
+
+.project-page#project-01 #explain__text-05 {
+  top: 40px;
+  width: 245px;
+  padding-right: 60px;
+}
+
+.project-page#project-01 #explain__text-06 {
+  top: 50px;
+  width: 235px;
+  padding-left: 50px;
+}
+
+.project-page#project-01 #explain__text-07 {
+  width: 295px;
+  padding-right: 110px;
+}
+
+.project-page#project-02 section .container h3,
+.project-page#project-02 section h4,
+.project-page#project-02 .next-project__name:hover {
+  color: #f59e64;
+}
+
+.project-page#project-02 header {
+  background-image: url(../img/blog-zenchef/blog-zenchef__hero-picture.jpg);
+}
+
+.project-page#project-02 #parallax-bg-01 div {
+  background-image: url(../img/blog-zenchef/blog-zenchef__picture--all.jpg);
+}
+
+.project-page#project-03 section .container h3,
+.project-page#project-03 section h4,
+.project-page#project-03 .next-project__name:hover {
+  color: #2286b6;
+}
+
+.project-page#project-03 header {
+  background-image: url(../img/alcatraz/alcatraz__hero-picture.jpg);
+}
+
+.project-page#project-03 #parallax-bg-01 div {
+  background-image: url(../img/alcatraz/alcatraz__picture--all.jpg);
+}
+
+.project-page#project-04 section .container h3,
+.project-page#project-04 section h4,
+.project-page#project-04 .next-project__name:hover {
+  color: #2286b6;
+}
+
+.project-page#project-04 header {
+  background-image: url(../img/btyd/btyd__hero-picture.jpg);
+}
+
+.project-page#project-04 #parallax-bg-01 div {
+  background-image: url(../img/btyd/btyd__picture--all.jpg);
+}
+
 .project-page#project-04 .slick-dots li button {
-  background-color: #cd3557;
+  background-color: #2286b6;
   -webkit-transition: opacity 0.2s ease-in-out;
   -moz-transition: opacity 0.2s ease-in-out;
   -ms-transition: opacity 0.2s ease-in-out;
@@ -466,49 +616,10 @@
 }
 
 .project-page#project-04 .slick-dots li button:after {
-  border-color: #cd3557;
+  border-color: #2286b6;
   -webkit-transition: opacity 0.2s ease-in-out;
   -moz-transition: opacity 0.2s ease-in-out;
   -ms-transition: opacity 0.2s ease-in-out;
   -o-transition: opacity 0.2s ease-in-out;
   transition: opacity 0.2s ease-in-out;
-}
-
-.project-page#project-04 #explain__text-01 {
-  top: 50%;
-}
-
-.project-page#project-04 #explain__text-02 {
-  top: 30%;
-  width: 245px;
-  padding-left: 60px;
-}
-
-.project-page#project-04 #explain__text-03 {
-  top: 0px;
-  width: 235px;
-  padding-right: 50px;
-}
-
-.project-page#project-04 #explain__text-04 {
-  top: -30px;
-  width: 225px;
-  padding-left: 30px;
-}
-
-.project-page#project-04 #explain__text-05 {
-  top: 40px;
-  width: 245px;
-  padding-right: 60px;
-}
-
-.project-page#project-04 #explain__text-06 {
-  top: 50px;
-  width: 235px;
-  padding-left: 50px;
-}
-
-.project-page#project-04 #explain__text-07 {
-  width: 295px;
-  padding-right: 110px;
 }

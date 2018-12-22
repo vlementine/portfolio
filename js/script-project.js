@@ -2,6 +2,7 @@
 //	GENERATE CONTENT PAGE
 //-------------------------------------
 const displayContentPage = idProject => {
+	console.log(idProject);
 	document.querySelector('h1').innerText = projects[idProject].title;
 	document.querySelector('p.subtitle').innerText = projects[idProject].keywords;
 	document.querySelector('.project-intro p').innerText =
@@ -49,7 +50,7 @@ const redirectionNextProject = () => {
 			nameNextProject = 'blog-zenchef';
 			break;
 		case 3:
-			nameNextProject = 'alcatraz-1962';
+			nameNextProject = 'alcatraz';
 			break;
 		case 4:
 			nameNextProject = 'back-to-your-dream';
@@ -118,7 +119,7 @@ const nameProject = () => {
 //-------------------------------------
 //	PROJECT'S ID
 //-------------------------------------
-const idProject = (idProject = null) => {
+const idProject = () => {
 	var idProject = 0;
 
 	switch (nameProjectActive) {
@@ -128,7 +129,7 @@ const idProject = (idProject = null) => {
 		case 'blog-zenchef':
 			idProject = 1;
 			break;
-		case 'alcatraz-1962':
+		case 'alcatraz':
 			idProject = 2;
 			break;
 		case 'back-to-your-dream':
