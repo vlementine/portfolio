@@ -528,6 +528,14 @@
 		color: $project-01;
 	}
 
+	.slick-dots li button {
+		background-color: $project-01;
+		
+		&:after {
+			border-color: $project-01;
+		}
+	}
+
 	header {
 		background-image: url(../img/le-trianon/le-trianon__hero-picture.jpg);
 	}

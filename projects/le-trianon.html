@@ -461,8 +461,21 @@
 					dots: true,
 					infinite: true,
 					centerMode: true,
-					slidesToShow: 1,
-					slidesToScroll: 3
+					slidesToShow: 2,
+					slidesToScroll: 1,
+					responsive: [
+						{
+							breakpoint: 1224,
+							settings: {
+								arrows: false,
+								dots: true,
+								infinite: true,
+								centerMode: true,
+								slidesToShow: 1,
+								slidesToScroll: 3
+							}
+						}
+					]
 				});
 			});
 		</script>
