@@ -127,8 +127,10 @@
 		text-align: center;
 		color: transparent;
 		@include transform(translateY(30px));
-		@include transition(0.4s transform 1.4s ease-in-out,
-		0.4s color 1.4s ease-in-out);
+		@include transition(
+			0.4s transform 1.4s ease-in-out,
+			0.4s color 1.4s ease-in-out
+		);
 
 		&.enable {
 			color: #ffffff;
@@ -336,6 +338,25 @@
 	background-position: center;
 }
 
+.project-parallax--bg--mobile .parallax-visuel {
+	background-attachment: fixed;
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
+	height: 100%;
+	@include transform(scale(0.1));
+}
+
+.parallax-visuel__wrapper {
+	@include transform(scale(10));
+}
+
+.project-parallax--bg--mobile {
+	display: none;
+	height: 350px;
+	overflow: hidden;
+}
+
 //-------------------------------------
 //	PICTURE • MOBILE
 //-------------------------------------
@@ -501,7 +522,6 @@
 //	VARIABLES PROJECT
 //-------------------------------------
 .project-page#project-01 {
-
 	section .container h3,
 	section h4,
 	.next-project__name:hover {
@@ -512,7 +532,8 @@
 		background-image: url(../img/le-trianon/le-trianon__hero-picture.jpg);
 	}
 
-	#parallax-bg-01 div {
+	#parallax-bg-01 div,
+	.project-parallax--bg--mobile .parallax-visuel {
 		background-image: url(../img/le-trianon/le-trianon__picture--all.jpg);
 	}
 
@@ -557,7 +578,6 @@
 }
 
 .project-page#project-02 {
-
 	section .container h3,
 	section h4,
 	.next-project__name:hover {
@@ -574,7 +594,6 @@
 }
 
 .project-page#project-03 {
-
 	section .container h3,
 	section h4,
 	.next-project__name:hover {
@@ -591,7 +610,6 @@
 }
 
 .project-page#project-04 {
-
 	section .container h3,
 	section h4,
 	.next-project__name:hover {

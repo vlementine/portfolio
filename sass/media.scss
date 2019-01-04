@@ -242,16 +242,10 @@
 	}
 
 	.transition-screen {
-		
-		@include transform(translate(0, -100%));
-		transition: all 0.8s ease-in-out;
+		transition: all 0.5s ease-in-out;
 
 		&.transition-screen--white {
-			@include transition(.8s transform .3s ease-in-out);
-		}
-
-		&.enable {
-			@include transform(translate(0%));
+			@include transition(.5s transform .3s ease-in-out);
 		}
 	}
 
@@ -374,7 +368,11 @@
 	}
 
 	.project-parallax--bg {
-		height: 450px;
+		display: none;
+	}
+
+	.project-parallax--bg--mobile {
+		display: block;
 	}
 
 	.project-picture {
