@@ -1,305 +1,345 @@
 <!DOCTYPE html>
 <html lang="fr">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<meta http-equiv="X-UA-Compatible" content="ie=edge" />
+		<title>Clémentine Bertrand — Designer</title>
+		<link rel="icon" type="image/png" href="img/favicon.png" />
+		<link rel="stylesheet" href="css/main.min.css" />
+	</head>
 
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>Clémentine Bertrand — Designer</title>
-  <link rel="icon" type="image/png" href="img/favicon.png" />
-  <link rel="stylesheet" href="css/main.min.css">
-</head>
+	<body>
+		<div>
+			<span class="transition-screen"></span>
+			<span class="transition-screen transition-screen--white"></span>
+			<nav>
+				<!-- Logo  -->
+				<a href="../index.html">
+					<img
+						src="img/logo.gif"
+						alt="Logo Clémentine Bertrand"
+						class="logo"
+				/></a>
 
-<body>
-  <div>
-    <span class="transition-screen"></span>
-    <span class="transition-screen transition-screen--white"></span>
-    <nav>
-      <!-- Logo  -->
-      <img src="./img/logo--white.gif" alt="Logo Clémentine Bertrand" class="logo">
+				<!-- Button menu  -->
+				<div class="menu-btn menu-btn-open" onclick="displayMenu()">
+					<div class="menu__icon menu__icon--open enable">
+						<span></span> <span></span> <span></span>
+					</div>
+					<div class="menu__icon menu__icon--close">
+						<span></span> <span></span>
+					</div>
+				</div>
+			</nav>
 
-      <!-- Button menu  -->
-      <div class="menu-btn menu-btn-open" onclick="displayMenu()">
-        <div class="menu__icon menu__icon--open enable">
-          <span></span>
-          <span></span>
-          <span></span>
-        </div>
-        <div class="menu__icon menu__icon--close">
-          <span></span>
-          <span></span>
-        </div>
-      </div>
-    </nav>
+			<!-- Menu  -->
+			<div class="menu__wrapper disable">
+				<div class="menu__categories">
+					<div class="menu__category">
+						<h2 onClick="navMenu('home')">Accueil</h2>
+						<p>Présentation</p>
+					</div>
+					<div class="menu__category">
+						<h2 onClick="navMenu('work')">Projets</h2>
+						<p>Découvrez mes travaux</p>
+					</div>
+					<div class="menu__category">
+						<h2 onClick="navMenu('contact')">Contact</h2>
+						<p>En savoir plus</p>
+					</div>
+				</div>
 
-    <!-- Menu  -->
-    <div class="menu__wrapper disable">
-      <div class="menu__categories">
-        <div class="menu__category">
-          <h2 onClick="navMenu('home')">Accueil</h2>
-          <p>Présentation</p>
-        </div>
-        <div class="menu__category">
-          <h2 onClick="navMenu('work')">Projets</h2>
-          <p>Découvrez mes travaux</p>
-        </div>
-        <div class="menu__category">
-          <h2 onClick="navMenu('contact')">Contact</h2>
-          <p>En savoir plus</p>
-        </div>
-      </div>
+				<div class="menu__projects-wrapper--mobile"></div>
 
-      <div class="menu__projects-wrapper--mobile"></div>
+				<div class="menu__projects-wrapper">
+					<div class="menu__project-visuel">
+						<div class="visuels__wrapper">
+							<div class="visuel__mockup">
+								<img
+									class="mockup--desktop"
+									src="./img/btyd_visuel-home.png"
+									alt="Visuel du Blog Zenchef"
+									draggable="false"
+								/>
+							</div>
+							<img
+								class="visuel__letter"
+								src="./img/btyd_letter.png"
+								alt="B"
+								draggable="false"
+							/>
+						</div>
+					</div>
+					<div class="menu__projects"></div>
+				</div>
 
-      <div class="menu__projects-wrapper">
-        <div class="menu__project-visuel">
-          <div class="visuels__wrapper">
-            <div class="visuel__mockup">
-              <img class="mockup--desktop" src="./img/btyd_visuel-home.png" alt="Visuel du Blog Zenchef" draggable="false">
-            </div>
-            <img class="visuel__letter" src="./img/btyd_letter.png" alt="B" draggable="false">
-          </div>
-        </div>
-        <div class="menu__projects"></div>
-      </div>
+				<div class="menu__footer">
+					<span class="copyright">Clémentine Bertrand © 2018</span>
+					<div class="links">
+						<a class="link--behance" href="" target="_blank">
+							<span>Behance</span>
+						</a>
+						<a
+							class="link--dribbble"
+							href="https://dribbble.com/cbertrand"
+							target="_blank"
+						>
+							<span>Dribbble</span>
+						</a>
+						<a
+							class="link--linkedin"
+							href="https://www.linkedin.com/in/clementinebertrand"
+							target="_blank"
+						>
+							<span>Linkedin</span>
+						</a>
+					</div>
+					<div class="footer__contact">
+						<span>Contactez-moi</span>
+						<div class="contact__link">
+							<a href="mailto:hello@clementinebertrand.fr"> ✍️ </a>
+						</div>
+					</div>
+				</div>
+			</div>
 
-      <div class="menu__footer">
-        <span class="copyright">Clémentine Bertrand © 2018</span>
-        <div class="links">
-          <a class="link--behance" href="" target="_blank">
-            <span>Behance</span>
-          </a>
-          <a class="link--dribbble" href="https://dribbble.com/cbertrand" target="_blank">
-            <span>Dribbble</span>
-          </a>
-          <a class="link--linkedin" href="https://www.linkedin.com/in/clementinebertrand" target="_blank">
-            <span>Linkedin</span>
-          </a>
-        </div>
-        <div class="footer__contact">
-          <span>Contactez-moi</span>
-          <div class="contact__link">
-            <a href="mailto:hello@clementinebertrand.fr">
-              ✍️
-            </a>
-          </div>
+			<!-- HOME -->
+			<section class="home">
+				<div class="presentation__wrapper">
+					<div class="home__illustration">
+						<img
+							src="img/presentation__draw.png"
+							alt="Dessin de présentation"
+							draggable="false"
+						/>
+						<img
+							src="img/presentation__bg.gif"
+							alt="Dessin de présentation"
+							draggable="false"
+						/>
+					</div>
+					<div class="home__presentation">
+						<h1>Halo ! <span>👋</span></h1>
+						<p>
+							Je suis Clémentine, une designer française travaillant
+							acctuellement chez Zenchef. Spécialisée dans l’UI/UX design, j'ai
+							aussi un intéret particulier pour l’illustration et le dessin.
+						</p>
+						<button class="btn btn__home">Voir mes projets</button>
+					</div>
+				</div>
+			</section>
 
-        </div>
-      </div>
-    </div>
+			<!-- PROJECT -->
+			<section class="projects__wrapper">
+				<div class="nav__wrapper">
+					<div class="nav__items"></div>
+					<span class="nav__separator"></span>
+					<div class="nav__total"><p class="item--total">06</p></div>
+				</div>
+				<div class="projects"></div>
+			</section>
 
-    <!-- HOME -->
-    <section class="home">
+			<!-- CONTACT -->
+			<section class="contact__wrapper disable">
+				<div class="nav__return" onClick="returnProjects()">
+					<div class="arrow__clickable">
+						<span class="nav__arrow nav__arrow--left">
+							<span class="arrow__circle"></span>
+						</span>
+					</div>
+					<div class="return__text">
+						<span class="text--top">Back to projects</span>
+						<span class="text--bottom">Back to projects</span>
+					</div>
+				</div>
 
-      <div class="presentation__wrapper">
-        <div class="home__illustration">
-          <img src="img/presentation__draw.png" alt="Dessin de présentation" draggable="false">
-          <img src="img/presentation__bg.gif" alt="Dessin de présentation" draggable="false">
-        </div>
-        <div class="home__presentation">
-          <h1>Halo !
-            <span>👋</span>
-          </h1>
-          <p>Je suis Clémentine, une designer française travaillant acctuellement chez Zenchef. Spécialisée dans
-            l’UI/UX
-            design, j'ai aussi un intéret particulier pour l’illustration et le dessin.</p>
-          <button class="btn btn__home">Voir mes projets</button>
-        </div>
+				<!-- Contact description -->
+				<div class="contact__description">
+					<div class="description__wrapper">
+						<div class="description__title description__title--contact">
+							<h2>Pour me contacter, <br />c’est par ici 👉</h2>
+						</div>
+						<span class="description__number">Contact</span>
+						<div class="description description--contact">
+							<p>
+								Low-key, no pressure, just hang with me and my weather !
+								Rose-colored boy I hear you making all that noise about the
+								world you want to see
+							</p>
+						</div>
+					</div>
+				</div>
 
+				<!-- Contact form -->
+				<div class="contact__form">
+					<form onsubmit="return false" class="invisible-scrollbar">
+						<div class="bubble--group">
+							<div class="bubble"><p>Hello ! 👋</p></div>
 
-      </div>
+							<div class="bubble bubble--answer" onclick="displayBubble(2,2);">
+								<p>J'aimerais te contacter</p>
+							</div>
+						</div>
 
-    </section>
+						<div class="bubble--group">
+							<div class="bubble"><p>Cool ! Comment t’appelles-tu ?</p></div>
 
-    <!-- PROJECT -->
-    <section class="projects__wrapper">
-      <div class="nav__wrapper">
-        <div class="nav__items">
-        </div>
-        <span class="nav__separator"></span>
-        <div class="nav__total">
-          <p class="item--total">06</p>
-        </div>
-      </div>
-      <div class="projects"></div>
-    </section>
+							<div class="bubble bubble--answer">
+								<input
+									type="text"
+									id="nameAnswer"
+									name="name"
+									placeholder="Écris ton nom ici"
+									autocomplete="off"
+									onKeyPress="if(event.keyCode == 13) getAnswer(name,3,3);"
+								/>
+							</div>
+						</div>
 
-    <!-- CONTACT -->
-    <section class="contact__wrapper disable">
+						<div class="bubble--group">
+							<div class="bubble">
+								<p>
+									Bienvenue <span id="nameQuestion"></span> ! <br />
+									Que puis-je faire pour toi ?
+								</p>
+							</div>
 
-      <div class="nav__return" onClick="returnProjects()">
-        <div class="arrow__clickable">
-          <span class="nav__arrow nav__arrow--left">
-            <span class="arrow__circle"></span>
-          </span>
-        </div>
-        <div class="return__text">
-          <span class="text--top">Back to projects</span>
-          <span class="text--bottom">Back to projects</span>
-        </div>
-      </div>
+							<div class="bubble--group__choice">
+								<label class="bubble" onclick="displayBubble(4,2)">
+									<input type="radio" name="project" id="project-1" />
+									<div class="choice">
+										<span>🤔</span>
+										<p>
+											Tu as <br />
+											une question ?
+										</p>
+									</div>
+								</label>
 
-      <!-- Contact description -->
-      <div class="contact__description">
-        <div class="description__wrapper">
-          <div class="description__title description__title--contact">
-            <h2>Pour me contacter,
-              <br>c’est par ici 👉</h2>
-          </div>
-          <span class="description__number">Contact</span>
-          <div class="description description--contact">
-            <p>Low-key, no pressure, just hang with me and my weather ! Rose-colored boy I hear you making all that
-              noise about
-              the world you want to see</p>
-          </div>
-        </div>
-      </div>
+								<label class="bubble" onclick="displayBubble(4,2)">
+									<input type="radio" name="project" id="project-2" />
+									<div class="choice">
+										<span>📦</span>
+										<p>Tu as un projet dans les cartons</p>
+									</div>
+								</label>
 
-      <!-- Contact form -->
-      <div class="contact__form">
-        <form onsubmit="return false" class="invisible-scrollbar">
-          <div class="bubble--group">
-            <div class="bubble">
-              <p>Hello ! 👋 </p>
-            </div>
+								<label class="bubble" onclick="displayBubble(4,2)">
+									<input type="radio" name="project" id="project-3" />
+									<div class="choice">
+										<span>🤗</span>
+										<p>Tu as seulement envie de me dire bonjour</p>
+									</div>
+								</label>
+							</div>
+						</div>
 
-            <div class="bubble bubble--answer" onclick="displayBubble(2,2);">
-              <p>J'aimerais te contacter</p>
-            </div>
-          </div>
+						<div class="bubble--group">
+							<div class="bubble"><p>Super ! Tu peux m’en dire plus ?</p></div>
 
-          <div class="bubble--group">
-            <div class="bubble">
-              <p>Cool ! Comment t’appelles-tu ?</p>
-            </div>
+							<div class="bubble bubble--answer">
+								<textarea
+									type="text"
+									id="messageAnswer"
+									name="message"
+									placeholder="Écris ton message ici"
+									onKeyPress="if(event.keyCode == 13) getAnswer(name,5,2);"
+								></textarea>
+							</div>
+						</div>
 
-            <div class="bubble bubble--answer">
-              <input type="text" id="nameAnswer" name="name" placeholder="Écris ton nom ici" autocomplete="off"
-                onKeyPress="if(event.keyCode == 13) getAnswer(name,3,3);" />
-            </div>
-          </div>
+						<div class="bubble--group">
+							<div class="bubble">
+								<p>
+									Je prends note ! ✍️ Tu aurais une adresse mail pour que je
+									puisse te recontacter plus tard ?
+								</p>
+							</div>
 
-          <div class="bubble--group">
-            <div class="bubble">
-              <p>Bienvenue
-                <span id="nameQuestion"></span> !
-                <br> Que puis-je faire pour toi ?</p>
-            </div>
+							<div class="bubble bubble--answer">
+								<p id="result"></p>
+								<input
+									type="email"
+									id="mailAnswer"
+									name="mail"
+									autocomplete="off"
+									placeholder="Écris ton mail ici"
+									onKeyPress="if(event.keyCode == 13) validate(6,1);"
+								/>
+							</div>
+						</div>
 
-            <div class="bubble--group__choice">
-              <label class="bubble" onclick="displayBubble(4,2)">
-                <input type="radio" name="project" id="project-1" />
-                <div class="choice">
-                  <span>🤔</span>
-                  <p> Tu as
-                    <br> une question ? </p>
-                </div>
-              </label>
+						<div class="bubble--group">
+							<div class="bubble">
+								<p>Parfait, je te recontacte au plus vite !</p>
+							</div>
 
-              <label class="bubble" onclick="displayBubble(4,2)">
-                <input type="radio" name="project" id="project-2" />
-                <div class="choice">
-                  <span>📦</span>
-                  <p> Tu as un projet dans les cartons </p>
-                </div>
-              </label>
+							<div class="bubble bubble--delay">
+								<p>En te souhaitant une excellente journée ! 👌</p>
+							</div>
+						</div>
+					</form>
+				</div>
+			</section>
 
-              <label class="bubble" onclick="displayBubble(4,2)">
-                <input type="radio" name="project" id="project-3" />
-                <div class="choice">
-                  <span>🤗</span>
-                  <p> Tu as seulement envie de me dire bonjour </p>
-                </div>
-              </label>
-            </div>
-          </div>
+			<!-- NAV • MOBILE -->
+			<div class="nav--mobile">
+				<div class="arrow__clickable" onClick="navMobile(-1)">
+					<div class="arrow__wrapper">
+						<span class="nav__arrow nav__arrow--left">
+							<span class="arrow__circle"></span>
+						</span>
+					</div>
+				</div>
 
-          <div class="bubble--group">
-            <div class="bubble">
-              <p>Super ! Tu peux m’en dire plus ?</p>
-            </div>
+				<div class="nav__number">
+					<span class="number number--active">01</span>
+					<span class="number__separator">/</span>
+					<span class="number number--total">06</span>
+				</div>
 
-            <div class="bubble bubble--answer">
-              <textarea type="text" id="messageAnswer" name="message" placeholder="Écris ton message ici" onKeyPress="if(event.keyCode == 13) getAnswer(name,5,2);"></textarea>
-            </div>
-          </div>
+				<div class="arrow__clickable" onClick="navMobile(+1)">
+					<div class="arrow__wrapper">
+						<span class="nav__arrow nav__arrow--right">
+							<span class="arrow__circle"></span>
+						</span>
+					</div>
+				</div>
+			</div>
 
-          <div class="bubble--group">
-            <div class="bubble">
-              <p>Je prends note ! ✍️ Tu aurais une adresse mail pour que je puisse te recontacter plus tard ?</p>
-            </div>
+			<!-- FOOTER -->
+			<footer>
+				<div class="links">
+					<a class="link--behance" href="" target="_blank">
+						<span>Behance</span>
+					</a>
+					<a
+						class="link--dribbble"
+						href="https://dribbble.com/cbertrand"
+						target="_blank"
+					>
+						<span>Dribbble</span>
+					</a>
+					<a
+						class="link--linkedin"
+						href="https://www.linkedin.com/in/clementinebertrand"
+						target="_blank"
+					>
+						<span>Linkedin</span>
+					</a>
+					<a href="mailto:hello@clementinebertrand.fr" target="_blank">
+						<span>Email</span>
+					</a>
+				</div>
+			</footer>
+		</div>
 
-            <div class="bubble bubble--answer">
-              <p id="result"></p>
-              <input type="email" id="mailAnswer" name="mail" autocomplete="off" placeholder="Écris ton mail ici"
-                onKeyPress="if(event.keyCode == 13) validate(6,1);" />
-            </div>
-          </div>
-
-          <div class="bubble--group">
-            <div class="bubble">
-              <p>Parfait, je te recontacte au plus vite !</p>
-            </div>
-
-            <div class="bubble bubble--delay">
-              <p>En te souhaitant une excellente journée ! 👌</p>
-            </div>
-          </div>
-        </form>
-      </div>
-    </section>
-
-    <!-- NAV • MOBILE -->
-    <div class="nav--mobile">
-
-      <div class="arrow__clickable" onClick="navMobile(-1)">
-        <div class="arrow__wrapper">
-          <span class="nav__arrow nav__arrow--left">
-            <span class="arrow__circle"></span>
-          </span>
-        </div>
-      </div>
-
-      <div class="nav__number">
-        <span class="number number--active">01</span>
-        <span class="number__separator">/</span>
-        <span class="number number--total">06</span>
-      </div>
-
-      <div class="arrow__clickable" onClick="navMobile(+1)">
-        <div class="arrow__wrapper">
-          <span class="nav__arrow nav__arrow--right">
-            <span class="arrow__circle"></span>
-          </span>
-        </div>
-      </div>
-
-    </div>
-
-    <!-- FOOTER -->
-    <footer>
-      <div class="links">
-        <a class="link--behance" href="" target="_blank">
-          <span>Behance</span>
-        </a>
-        <a class="link--dribbble" href="https://dribbble.com/cbertrand" target="_blank">
-          <span>Dribbble</span>
-        </a>
-        <a class="link--linkedin" href="https://www.linkedin.com/in/clementinebertrand" target="_blank">
-          <span>Linkedin</span>
-        </a>
-        <a href="mailto:hello@clementinebertrand.fr" target="_blank">
-          <span>Email</span>
-        </a>
-      </div>
-    </footer>
-  </div>
-
-  <script src="js/data-json.js"></script>
-  <script src="js/content-generetor-home.js"></script>
-  <script src="js/chat.js"></script>
-  <script src="js/nav.js"></script>
-  <script src="js/script.js"></script>
-</body>
-
+		<script src="js/data-json.js"></script>
+		<script src="js/content-generetor-home.js"></script>
+		<script src="js/chat.js"></script>
+		<script src="js/nav.js"></script>
+		<script src="js/script.js"></script>
+	</body>
 </html>

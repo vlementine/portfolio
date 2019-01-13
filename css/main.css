@@ -2490,6 +2490,33 @@ button {
   background-position: center;
 }
 
+.project-parallax--bg--mobile .parallax-visuel {
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 100%;
+  -webkit-transform: scale(0.1);
+  -moz-transform: scale(0.1);
+  -ms-transform: scale(0.1);
+  -o-transform: scale(0.1);
+  transform: scale(0.1);
+}
+
+.parallax-visuel__wrapper {
+  -webkit-transform: scale(10);
+  -moz-transform: scale(10);
+  -ms-transform: scale(10);
+  -o-transform: scale(10);
+  transform: scale(10);
+}
+
+.project-parallax--bg--mobile {
+  display: none;
+  height: 350px;
+  overflow: hidden;
+}
+
 .project-mobile {
   text-align: center;
   margin-bottom: 80px !important;
@@ -2658,11 +2685,20 @@ button {
   color: #cd3557;
 }
 
+.project-page#project-01 .slick-dots li button {
+  background-color: #cd3557;
+}
+
+.project-page#project-01 .slick-dots li button:after {
+  border-color: #cd3557;
+}
+
 .project-page#project-01 header {
   background-image: url(../img/le-trianon/le-trianon__hero-picture.jpg);
 }
 
-.project-page#project-01 #parallax-bg-01 div {
+.project-page#project-01 #parallax-bg-01 div,
+.project-page#project-01 .project-parallax--bg--mobile .parallax-visuel {
   background-image: url(../img/le-trianon/le-trianon__picture--all.jpg);
 }
 
@@ -2824,6 +2860,12 @@ button {
   src: url("../font/butler_extrabold_stencil-webfont.woff2") format("woff2"), url("../font/butler_extrabold_stencil-webfont.woff") format("woff");
   font-weight: normal;
   font-style: normal;
+}
+
+@media screen and (min-width: 1224px) {
+  .slick-slide {
+    opacity: 1 !important;
+  }
 }
 
 @media screen and (min-width: 1000px) {
@@ -3098,7 +3140,10 @@ button {
     width: calc(100% - 60px);
   }
   .project-parallax--bg {
-    height: 450px;
+    display: none;
+  }
+  .project-parallax--bg--mobile {
+    display: block;
   }
   .project-picture {
     padding: 10px;

@@ -5,7 +5,15 @@
 //
 //	MEDIA
 //
-// -----------------------------------
+// ----------------------------------
+//-------------------------------------
+//	MEDIA QUERIES : 1224px
+//-------------------------------------
+@media screen and (min-width: 1224px) {
+	.slick-slide {
+		opacity: 1 !important;
+	}
+}
 //-------------------------------------
 //	MEDIA QUERIES : + 1000px
 //-------------------------------------
@@ -28,8 +36,8 @@
 			color: rgba(255, 255, 255, 0.5);
 		}
 
-		&:hover .arrow__clickable+.return__text span:first-child,
-		&:hover .arrow__clickable+.return__text span:last-child {
+		&:hover .arrow__clickable + .return__text span:first-child,
+		&:hover .arrow__clickable + .return__text span:last-child {
 			color: rgba(255, 255, 255, 0.8);
 		}
 	}
@@ -39,7 +47,6 @@
 //	MEDIA QUERIES : 1000px
 //-------------------------------------
 @media screen and (max-width: 1000px) {
-
 	//-- PROJECTS
 	.project {
 		flex-direction: column;
@@ -148,7 +155,6 @@
 //	MEDIA QUERIES : 800px
 //-------------------------------------
 @media screen and (max-width: 800px) {
-
 	//-- FOOTER
 	.links {
 		margin-left: auto;
@@ -341,7 +347,10 @@
 		}
 
 		.header--text {
-			@include transition(0.4s transform 1s ease-in-out, 0.4s color 1s ease-in-out);
+			@include transition(
+				0.4s transform 1s ease-in-out,
+				0.4s color 1s ease-in-out
+			);
 		}
 	}
 
@@ -360,7 +369,11 @@
 	}
 
 	.project-parallax--bg {
-		height: 450px;
+		display: none;
+	}
+
+	.project-parallax--bg--mobile {
+		display: block;
 	}
 
 	.project-picture {
@@ -412,7 +425,6 @@
 //	MEDIA QUERIES : 400px
 //-------------------------------------
 @media screen and (max-width: 400px) {
-
 	//-- HOME
 	.home img {
 		max-width: 80%;
@@ -443,7 +455,6 @@
 //	MEDIA QUERIES : 320px
 //-------------------------------------
 @media screen and (max-width: 320px) {
-
 	//-- HOME
 	.project__description--mobile {
 		margin-bottom: 20px;

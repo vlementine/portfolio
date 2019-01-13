@@ -17,11 +17,9 @@
 
 			<!-- Navigation -->
 			<nav>
-				<img
-					src="../img/logo.gif"
-					alt="Logo Clémentine Bertrand"
-					class="logo"
-				/>
+				<a href="../index.html">
+					<img src="../img/logo.gif" alt="Logo Clémentine Bertrand" class="logo"
+				/></a>
 
 				<div class="nav__return" onClick="redirectionProject()">
 					<div class="arrow__clickable">
@@ -147,6 +145,11 @@
 				</div>
 
 				<div id="parallax-bg-01" class="project-parallax--bg"><div></div></div>
+				<div class="project-parallax--bg--mobile">
+					<div class="parallax-visuel__wrapper">
+						<div class="parallax-visuel"></div>
+					</div>
+				</div>
 
 				<div class="container project-description">
 					<h3>Page d'accueil</h3>
@@ -406,7 +409,9 @@
 			<!-- NEXT PROJECT -->
 			<section class="next-project">
 				<h3 class="next-project__title">Prochain project</h3>
-				<span class="next-project__name" onClick="redirectionNextProject()">Nom du prochain projet</span>
+				<span class="next-project__name" onClick="redirectionNextProject()"
+					>Nom du prochain projet</span
+				>
 			</section>
 
 			<!-- FOOTER -->
@@ -456,8 +461,21 @@
 					dots: true,
 					infinite: true,
 					centerMode: true,
-					slidesToShow: 1,
-					slidesToScroll: 3
+					slidesToShow: 2,
+					slidesToScroll: 1,
+					responsive: [
+						{
+							breakpoint: 1224,
+							settings: {
+								arrows: false,
+								dots: true,
+								infinite: true,
+								centerMode: true,
+								slidesToShow: 1,
+								slidesToScroll: 3
+							}
+						}
+					]
 				});
 			});
 		</script>
