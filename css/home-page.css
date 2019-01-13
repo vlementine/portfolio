@@ -273,6 +273,14 @@
   margin: 24px auto;
 }
 
+.nav--mobile .arrow__clickable {
+  width: 35px;
+  height: 35px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
 .nav--mobile .arrow__wrapper {
   width: 20px;
   padding: 10px 0;
@@ -371,29 +379,6 @@
 
 .projects__wrapper .transition-screen {
   transform: translate(-130%, 0) matrix(1, 0, -0.5, 1, 0, 0);
-}
-
-.transition-screen {
-  transform: translate(130%, 0) matrix(1, 0, 0.5, 1, 0, 0);
-}
-
-.transition-screen {
-  height: 100%;
-  width: 100%;
-  background: #fff;
-  transform-origin: center;
-  position: absolute;
-  top: 0;
-  left: 0;
-  z-index: -1;
-  margin-top: 0;
-  transition: all 1.2s ease-in-out;
-}
-
-.transition-screen.redirect-page {
-  margin-top: 0;
-  z-index: 100;
-  transform: translate(0, 0) matrix(1, 0, 0, 1, 0, 0);
 }
 
 .project {
@@ -499,11 +484,11 @@
 }
 
 .project__visuel .visuel__mockup .mockup--mobile.enable {
-  -webkit-animation: 0.6s slideRightBis ease-out forwards 0.6s;
-  -moz-animation: 0.6s slideRightBis ease-out forwards 0.6s;
-  -ms-animation: 0.6s slideRightBis ease-out forwards 0.6s;
-  -o-transition: 0.6s slideRightBis ease-out forwards 0.6s;
-  animation: 0.6s slideRightBis ease-out forwards 0.6s;
+  -webkit-animation: 0.6s slideRightBis ease-out forwards 0.8s;
+  -moz-animation: 0.6s slideRightBis ease-out forwards 0.8s;
+  -ms-animation: 0.6s slideRightBis ease-out forwards 0.8s;
+  -o-transition: 0.6s slideRightBis ease-out forwards 0.8s;
+  animation: 0.6s slideRightBis ease-out forwards 0.8s;
 }
 
 .project__visuel img:last-child {
@@ -680,7 +665,6 @@
   z-index: 0;
   display: none;
   position: relative;
-  overflow: hidden;
 }
 
 .project--mobile.enable {
@@ -994,14 +978,6 @@
   -ms-transition: transform 0.8s ease-in-out;
   -o-transition: transform 0.8s ease-in-out;
   transition: transform 0.8s ease-in-out;
-}
-
-.contact__wrapper .nav__return {
-  padding: 0 10px;
-  background: #fff;
-  position: absolute;
-  top: 33px;
-  left: 50px;
 }
 
 .contact__wrapper.disable {
@@ -1323,35 +1299,35 @@
 }
 
 #project-01 .btn {
-  color: #2286b6;
+  color: #cd3557;
 }
 
 #project-01 .project__visuel,
 #project-01 .project__content {
-  background: linear-gradient(45deg, #1d7d90, #5dd5c3);
+  background: linear-gradient(45deg, #cd3557, #d75d79);
 }
 
 #project-01 .description__number--mobile {
-  background: linear-gradient(45deg, #1d7d90, #5dd5c3);
+  background: linear-gradient(45deg, #cd3557, #d75d79);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
 
 #menu__project-01 h3:after,
 #menu__project--mobile-01 .menu__project-visuel--mobile {
-  background: linear-gradient(45deg, #1d7d90, #5dd5c3);
+  background: linear-gradient(45deg, #cd3557, #d75d79);
 }
 
 #menu__project--mobile-01 .nav__arrow {
-  border-color: #2286b6;
+  border-color: #cd3557;
 }
 
 #menu__project--mobile-01 .nav__arrow .arrow__circle {
-  background: #88c9e9;
+  background: #e1879b;
 }
 
 #menu__project--mobile-01 .nav__arrow .arrow__circle:after {
-  background: #c9e7f5;
+  background: #f5d9df;
 }
 
 #project-02 .btn {
@@ -1392,12 +1368,12 @@
 }
 
 #project-03 .btn {
-  color: #2286b6;
+  color: #5691FF;
 }
 
 #project-03 .project__visuel,
 #project-03 .project__content {
-  background: linear-gradient(45deg, #7bb7d4, #2286b6);
+  background: linear-gradient(45deg, #5691FF, #3872E0);
 }
 
 #project-03 .description__number--mobile:after {
@@ -1405,7 +1381,7 @@
 }
 
 #project-03 .description__number--mobile {
-  background: linear-gradient(45deg, #7bb7d4, #2286b6);
+  background: linear-gradient(45deg, #5691FF, #3872E0);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
@@ -1413,28 +1389,28 @@
 #menu__project-03 h3:after,
 #menu__project-visuel-03,
 #menu__project--mobile-03 .menu__project-visuel--mobile {
-  background: linear-gradient(45deg, #7bb7d4, #2286b6);
+  background: linear-gradient(45deg, #5691FF, #3872E0);
 }
 
 #menu__project--mobile-03 .nav__arrow {
-  border-color: #2286b6;
+  border-color: #5691FF;
 }
 
 #menu__project--mobile-03 .nav__arrow .arrow__circle {
-  background: #88c9e9;
+  background: #a3c3ff;
 }
 
 #menu__project--mobile-03 .nav__arrow .arrow__circle:after {
-  background: #c9e7f5;
+  background: #d6e4ff;
 }
 
 #project-04 .btn {
-  color: #cd3557;
+  color: #5dd5c3;
 }
 
 #project-04 .project__visuel,
 #project-04 .project__content {
-  background: linear-gradient(45deg, #cd3557, #d75d79);
+  background: linear-gradient(45deg, #1d7d90, #5dd5c3);
 }
 
 #project-04 .description__number--mobile:after {
@@ -1442,7 +1418,7 @@
 }
 
 #project-04 .description__number--mobile {
-  background: linear-gradient(45deg, #cd3557, #d75d79);
+  background: linear-gradient(45deg, #1d7d90, #5dd5c3);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
@@ -1450,17 +1426,17 @@
 #menu__project-04 h3:after,
 #menu__project-visuel-04,
 #menu__project--mobile-04 .menu__project-visuel--mobile {
-  background: linear-gradient(45deg, #cd3557, #d75d79);
+  background: linear-gradient(45deg, #1d7d90, #5dd5c3);
 }
 
 #menu__project--mobile-04 .nav__arrow {
-  border-color: #cd3557;
+  border-color: #5dd5c3;
 }
 
 #menu__project--mobile-04 .nav__arrow .arrow__circle {
-  background: #ebb0bd;
+  background: #9ae5da;
 }
 
 #menu__project--mobile-04 .nav__arrow .arrow__circle:after {
-  background: #fbedf0;
+  background: #c2efe9;
 }

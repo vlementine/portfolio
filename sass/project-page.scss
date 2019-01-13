@@ -516,6 +516,16 @@
 		background-image: url(../img/le-trianon/le-trianon__picture--all.jpg);
 	}
 
+	.slick-dots li button {
+		background-color: $project-01;
+		@include transition(opacity 0.2s ease-in-out);
+
+		&:after {
+			border-color: $project-01;
+			@include transition(opacity 0.2s ease-in-out);
+		}
+	}
+
 	#explain__text-01 {
 		top: 50%;
 	}
@@ -565,11 +575,21 @@
 	}
 
 	header {
-		background-image: url(../img/blog-zenchef/blog-zenchef__hero-picture.jpg);
+		background-image: url(../img/zenchef/zenchef__hero-picture.jpg);
 	}
 
 	#parallax-bg-01 div {
-		background-image: url(../img/blog-zenchef/blog-zenchef__picture--all.jpg);
+		background-image: url(../img/zenchef/zenchef__picture--all.jpg);
+	}
+
+	.slick-dots li button {
+		background-color: $project-02;
+		@include transition(opacity 0.2s ease-in-out);
+
+		&:after {
+			border-color: $project-02;
+			@include transition(opacity 0.2s ease-in-out);
+		}
 	}
 }
 
@@ -587,6 +607,16 @@
 
 	#parallax-bg-01 div {
 		background-image: url(../img/alcatraz/alcatraz__picture--all.jpg);
+	}
+
+	.slick-dots li button {
+		background-color: $project-03;
+		@include transition(opacity 0.2s ease-in-out);
+
+		&:after {
+			border-color: $project-03;
+			@include transition(opacity 0.2s ease-in-out);
+		}
 	}
 }
 

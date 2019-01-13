@@ -525,6 +525,24 @@
   background-image: url(../img/le-trianon/le-trianon__picture--all.jpg);
 }
 
+.project-page#project-01 .slick-dots li button {
+  background-color: #cd3557;
+  -webkit-transition: opacity 0.2s ease-in-out;
+  -moz-transition: opacity 0.2s ease-in-out;
+  -ms-transition: opacity 0.2s ease-in-out;
+  -o-transition: opacity 0.2s ease-in-out;
+  transition: opacity 0.2s ease-in-out;
+}
+
+.project-page#project-01 .slick-dots li button:after {
+  border-color: #cd3557;
+  -webkit-transition: opacity 0.2s ease-in-out;
+  -moz-transition: opacity 0.2s ease-in-out;
+  -ms-transition: opacity 0.2s ease-in-out;
+  -o-transition: opacity 0.2s ease-in-out;
+  transition: opacity 0.2s ease-in-out;
+}
+
 .project-page#project-01 #explain__text-01 {
   top: 50%;
 }
@@ -571,17 +589,35 @@
 }
 
 .project-page#project-02 header {
-  background-image: url(../img/blog-zenchef/blog-zenchef__hero-picture.jpg);
+  background-image: url(../img/zenchef/zenchef__hero-picture.jpg);
 }
 
 .project-page#project-02 #parallax-bg-01 div {
-  background-image: url(../img/blog-zenchef/blog-zenchef__picture--all.jpg);
+  background-image: url(../img/zenchef/zenchef__picture--all.jpg);
+}
+
+.project-page#project-02 .slick-dots li button {
+  background-color: #f59e64;
+  -webkit-transition: opacity 0.2s ease-in-out;
+  -moz-transition: opacity 0.2s ease-in-out;
+  -ms-transition: opacity 0.2s ease-in-out;
+  -o-transition: opacity 0.2s ease-in-out;
+  transition: opacity 0.2s ease-in-out;
+}
+
+.project-page#project-02 .slick-dots li button:after {
+  border-color: #f59e64;
+  -webkit-transition: opacity 0.2s ease-in-out;
+  -moz-transition: opacity 0.2s ease-in-out;
+  -ms-transition: opacity 0.2s ease-in-out;
+  -o-transition: opacity 0.2s ease-in-out;
+  transition: opacity 0.2s ease-in-out;
 }
 
 .project-page#project-03 section .container h3,
 .project-page#project-03 section h4,
 .project-page#project-03 .next-project__name:hover {
-  color: #2286b6;
+  color: #5691FF;
 }
 
 .project-page#project-03 header {
@@ -592,10 +628,28 @@
   background-image: url(../img/alcatraz/alcatraz__picture--all.jpg);
 }
 
+.project-page#project-03 .slick-dots li button {
+  background-color: #5691FF;
+  -webkit-transition: opacity 0.2s ease-in-out;
+  -moz-transition: opacity 0.2s ease-in-out;
+  -ms-transition: opacity 0.2s ease-in-out;
+  -o-transition: opacity 0.2s ease-in-out;
+  transition: opacity 0.2s ease-in-out;
+}
+
+.project-page#project-03 .slick-dots li button:after {
+  border-color: #5691FF;
+  -webkit-transition: opacity 0.2s ease-in-out;
+  -moz-transition: opacity 0.2s ease-in-out;
+  -ms-transition: opacity 0.2s ease-in-out;
+  -o-transition: opacity 0.2s ease-in-out;
+  transition: opacity 0.2s ease-in-out;
+}
+
 .project-page#project-04 section .container h3,
 .project-page#project-04 section h4,
 .project-page#project-04 .next-project__name:hover {
-  color: #2286b6;
+  color: #5dd5c3;
 }
 
 .project-page#project-04 header {
@@ -607,7 +661,7 @@
 }
 
 .project-page#project-04 .slick-dots li button {
-  background-color: #2286b6;
+  background-color: #5dd5c3;
   -webkit-transition: opacity 0.2s ease-in-out;
   -moz-transition: opacity 0.2s ease-in-out;
   -ms-transition: opacity 0.2s ease-in-out;
@@ -616,7 +670,7 @@
 }
 
 .project-page#project-04 .slick-dots li button:after {
-  border-color: #2286b6;
+  border-color: #5dd5c3;
   -webkit-transition: opacity 0.2s ease-in-out;
   -moz-transition: opacity 0.2s ease-in-out;
   -ms-transition: opacity 0.2s ease-in-out;

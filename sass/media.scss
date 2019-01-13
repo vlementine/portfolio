@@ -241,20 +241,6 @@
 		font-size: 13px;
 	}
 
-	.transition-screen {
-		
-		@include transform(translate(0, -100%));
-		transition: all 0.8s ease-in-out;
-
-		&.transition-screen--white {
-			@include transition(.8s transform .3s ease-in-out);
-		}
-
-		&.enable {
-			@include transform(translate(0%));
-		}
-	}
-
 	.projects__wrapper,
 	.contact__wrapper {
 		&:before {
@@ -350,7 +336,7 @@
 		@include transition(width 1s ease-in-out, padding 1s ease-in-out);
 
 		&.enable {
-			padding: 20px;	
+			padding: 20px;
 			width: calc(100% - 40px);
 		}
 

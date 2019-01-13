@@ -1184,11 +1184,11 @@ button {
 }
 
 .project__visuel .visuel__mockup .mockup--mobile.enable {
-  -webkit-animation: 0.6s slideRightBis ease-out forwards 0.6s;
-  -moz-animation: 0.6s slideRightBis ease-out forwards 0.6s;
-  -ms-animation: 0.6s slideRightBis ease-out forwards 0.6s;
-  -o-transition: 0.6s slideRightBis ease-out forwards 0.6s;
-  animation: 0.6s slideRightBis ease-out forwards 0.6s;
+  -webkit-animation: 0.6s slideRightBis ease-out forwards 0.8s;
+  -moz-animation: 0.6s slideRightBis ease-out forwards 0.8s;
+  -ms-animation: 0.6s slideRightBis ease-out forwards 0.8s;
+  -o-transition: 0.6s slideRightBis ease-out forwards 0.8s;
+  animation: 0.6s slideRightBis ease-out forwards 0.8s;
 }
 
 .project__visuel img:last-child {
@@ -2023,11 +2023,11 @@ button {
 }
 
 #menu__project--mobile-01 .nav__arrow .arrow__circle {
-  background: #ebb0bd;
+  background: #e1879b;
 }
 
 #menu__project--mobile-01 .nav__arrow .arrow__circle:after {
-  background: #fbedf0;
+  background: #f5d9df;
 }
 
 #project-02 .btn {
@@ -2068,12 +2068,12 @@ button {
 }
 
 #project-03 .btn {
-  color: #2286b6;
+  color: #5691FF;
 }
 
 #project-03 .project__visuel,
 #project-03 .project__content {
-  background: linear-gradient(45deg, #7bb7d4, #2286b6);
+  background: linear-gradient(45deg, #5691FF, #3872E0);
 }
 
 #project-03 .description__number--mobile:after {
@@ -2081,7 +2081,7 @@ button {
 }
 
 #project-03 .description__number--mobile {
-  background: linear-gradient(45deg, #7bb7d4, #2286b6);
+  background: linear-gradient(45deg, #5691FF, #3872E0);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
@@ -2089,23 +2089,23 @@ button {
 #menu__project-03 h3:after,
 #menu__project-visuel-03,
 #menu__project--mobile-03 .menu__project-visuel--mobile {
-  background: linear-gradient(45deg, #7bb7d4, #2286b6);
+  background: linear-gradient(45deg, #5691FF, #3872E0);
 }
 
 #menu__project--mobile-03 .nav__arrow {
-  border-color: #2286b6;
+  border-color: #5691FF;
 }
 
 #menu__project--mobile-03 .nav__arrow .arrow__circle {
-  background: #88c9e9;
+  background: #a3c3ff;
 }
 
 #menu__project--mobile-03 .nav__arrow .arrow__circle:after {
-  background: #c9e7f5;
+  background: #d6e4ff;
 }
 
 #project-04 .btn {
-  color: #2286b6;
+  color: #5dd5c3;
 }
 
 #project-04 .project__visuel,
@@ -2130,15 +2130,15 @@ button {
 }
 
 #menu__project--mobile-04 .nav__arrow {
-  border-color: #2286b6;
+  border-color: #5dd5c3;
 }
 
 #menu__project--mobile-04 .nav__arrow .arrow__circle {
-  background: #88c9e9;
+  background: #9ae5da;
 }
 
 #menu__project--mobile-04 .nav__arrow .arrow__circle:after {
-  background: #c9e7f5;
+  background: #c2efe9;
 }
 
 @font-face {
@@ -2666,6 +2666,24 @@ button {
   background-image: url(../img/le-trianon/le-trianon__picture--all.jpg);
 }
 
+.project-page#project-01 .slick-dots li button {
+  background-color: #cd3557;
+  -webkit-transition: opacity 0.2s ease-in-out;
+  -moz-transition: opacity 0.2s ease-in-out;
+  -ms-transition: opacity 0.2s ease-in-out;
+  -o-transition: opacity 0.2s ease-in-out;
+  transition: opacity 0.2s ease-in-out;
+}
+
+.project-page#project-01 .slick-dots li button:after {
+  border-color: #cd3557;
+  -webkit-transition: opacity 0.2s ease-in-out;
+  -moz-transition: opacity 0.2s ease-in-out;
+  -ms-transition: opacity 0.2s ease-in-out;
+  -o-transition: opacity 0.2s ease-in-out;
+  transition: opacity 0.2s ease-in-out;
+}
+
 .project-page#project-01 #explain__text-01 {
   top: 50%;
 }
@@ -2712,17 +2730,35 @@ button {
 }
 
 .project-page#project-02 header {
-  background-image: url(../img/blog-zenchef/blog-zenchef__hero-picture.jpg);
+  background-image: url(../img/zenchef/zenchef__hero-picture.jpg);
 }
 
 .project-page#project-02 #parallax-bg-01 div {
-  background-image: url(../img/blog-zenchef/blog-zenchef__picture--all.jpg);
+  background-image: url(../img/zenchef/zenchef__picture--all.jpg);
+}
+
+.project-page#project-02 .slick-dots li button {
+  background-color: #f59e64;
+  -webkit-transition: opacity 0.2s ease-in-out;
+  -moz-transition: opacity 0.2s ease-in-out;
+  -ms-transition: opacity 0.2s ease-in-out;
+  -o-transition: opacity 0.2s ease-in-out;
+  transition: opacity 0.2s ease-in-out;
+}
+
+.project-page#project-02 .slick-dots li button:after {
+  border-color: #f59e64;
+  -webkit-transition: opacity 0.2s ease-in-out;
+  -moz-transition: opacity 0.2s ease-in-out;
+  -ms-transition: opacity 0.2s ease-in-out;
+  -o-transition: opacity 0.2s ease-in-out;
+  transition: opacity 0.2s ease-in-out;
 }
 
 .project-page#project-03 section .container h3,
 .project-page#project-03 section h4,
 .project-page#project-03 .next-project__name:hover {
-  color: #2286b6;
+  color: #5691FF;
 }
 
 .project-page#project-03 header {
@@ -2733,10 +2769,28 @@ button {
   background-image: url(../img/alcatraz/alcatraz__picture--all.jpg);
 }
 
+.project-page#project-03 .slick-dots li button {
+  background-color: #5691FF;
+  -webkit-transition: opacity 0.2s ease-in-out;
+  -moz-transition: opacity 0.2s ease-in-out;
+  -ms-transition: opacity 0.2s ease-in-out;
+  -o-transition: opacity 0.2s ease-in-out;
+  transition: opacity 0.2s ease-in-out;
+}
+
+.project-page#project-03 .slick-dots li button:after {
+  border-color: #5691FF;
+  -webkit-transition: opacity 0.2s ease-in-out;
+  -moz-transition: opacity 0.2s ease-in-out;
+  -ms-transition: opacity 0.2s ease-in-out;
+  -o-transition: opacity 0.2s ease-in-out;
+  transition: opacity 0.2s ease-in-out;
+}
+
 .project-page#project-04 section .container h3,
 .project-page#project-04 section h4,
 .project-page#project-04 .next-project__name:hover {
-  color: #2286b6;
+  color: #5dd5c3;
 }
 
 .project-page#project-04 header {
@@ -2748,7 +2802,7 @@ button {
 }
 
 .project-page#project-04 .slick-dots li button {
-  background-color: #2286b6;
+  background-color: #5dd5c3;
   -webkit-transition: opacity 0.2s ease-in-out;
   -moz-transition: opacity 0.2s ease-in-out;
   -ms-transition: opacity 0.2s ease-in-out;
@@ -2757,7 +2811,7 @@ button {
 }
 
 .project-page#project-04 .slick-dots li button:after {
-  border-color: #2286b6;
+  border-color: #5dd5c3;
   -webkit-transition: opacity 0.2s ease-in-out;
   -moz-transition: opacity 0.2s ease-in-out;
   -ms-transition: opacity 0.2s ease-in-out;
@@ -2946,28 +3000,6 @@ button {
 @media screen and (max-width: 650px) {
   html {
     font-size: 13px;
-  }
-  .transition-screen {
-    -webkit-transform: translate(0, -100%);
-    -moz-transform: translate(0, -100%);
-    -ms-transform: translate(0, -100%);
-    -o-transform: translate(0, -100%);
-    transform: translate(0, -100%);
-    transition: all 0.8s ease-in-out;
-  }
-  .transition-screen.transition-screen--white {
-    -webkit-transition: 0.8s transform 0.3s ease-in-out;
-    -moz-transition: 0.8s transform 0.3s ease-in-out;
-    -ms-transition: 0.8s transform 0.3s ease-in-out;
-    -o-transition: 0.8s transform 0.3s ease-in-out;
-    transition: 0.8s transform 0.3s ease-in-out;
-  }
-  .transition-screen.enable {
-    -webkit-transform: translate(0%);
-    -moz-transform: translate(0%);
-    -ms-transform: translate(0%);
-    -o-transform: translate(0%);
-    transform: translate(0%);
   }
   .projects__wrapper:before,
   .contact__wrapper:before {

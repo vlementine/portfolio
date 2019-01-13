@@ -16,12 +16,12 @@ const projects = [
 	},
 	{
 		number: '02',
-		title: 'Le Blog Zenchef',
+		title: 'Zenchef',
 		keywords: 'User Interface • Blog',
 		description:
 			'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus et arcu arcu. Curabitur varius fermentum gravida. Sed eleifend turpis vel lobortis pellentesque. Phasellus gravida sagittis mauris sit amet viverra.',
-		image: 'blog-zenchef',
-		href: 'blog-zenchef',
+		image: 'zenchef',
+		href: 'zenchef',
 		nextProject: 'Alcatraz, 1962'
 	},
 	{
@@ -58,7 +58,7 @@ const nav = [
   },
   {
     number: '03',
-    title: 'Le Blog Zenchef'
+    title: 'Zenchef'
   },
   {
     number: '04',

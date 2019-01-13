@@ -25,7 +25,7 @@ const redirectionProject = () => {
 		.querySelector('.transition-screen--white')
 		.classList.add('redirect-page');
 	setTimeout(() => {
-		window.location.href = '../index.html#' + (idProjectActive + 1);
+		window.location.href = '../index.html#' + (idProjectContent + 1);
 	}, 1500);
 };
 
@@ -47,7 +47,7 @@ const redirectionNextProject = () => {
 			nameNextProject = 'le-trianon';
 			break;
 		case 2:
-			nameNextProject = 'blog-zenchef';
+			nameNextProject = 'zenchef';
 			break;
 		case 3:
 			nameNextProject = 'alcatraz';
@@ -126,7 +126,7 @@ const idProject = () => {
 		case 'le-trianon':
 			idProject = 0;
 			break;
-		case 'blog-zenchef':
+		case 'zenchef':
 			idProject = 1;
 			break;
 		case 'alcatraz':

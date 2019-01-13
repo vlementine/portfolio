@@ -403,7 +403,7 @@
 			@include animation(0.4s slideLeft ease-in-out forwards);
 
 			&.enable {
-				@include animation(0.6s slideRightBis ease-out forwards 0.6s);
+				@include animation(0.6s slideRightBis ease-out forwards 0.8s);
 			}
 		}
 	}
@@ -1034,10 +1034,10 @@
 	border-color: $project-01;
 
 	.arrow__circle {
-		background: lighten($project-01, 30%);
+		background: lighten($project-01, 20%);
 
 		&:after {
-			background: lighten($project-01, 45%);
+			background: lighten($project-01, 40%);
 		}
 	}
 }
@@ -1114,10 +1114,10 @@
 	border-color: $project-03;
 
 	.arrow__circle {
-		background: lighten($project-03, 30%);
+		background: lighten($project-03, 15%);
 
 		&:after {
-			background: lighten($project-03, 45%);
+			background: lighten($project-03, 25%);
 		}
 	}
 }
@@ -1154,10 +1154,10 @@
 	border-color: $project-04;
 
 	.arrow__circle {
-		background: lighten($project-04, 30%);
+		background: lighten($project-04, 15%);
 
 		&:after {
-			background: lighten($project-04, 45%);
+			background: lighten($project-04, 25%);
 		}
 	}
 }
