@@ -211,10 +211,10 @@
 
 	//-- PROJECT PAGE
 	.project-picture--double {
+		flex-direction: column;
 		padding-bottom: 70px;
 
-		img {
-			display: block;
+		.picture-double__wrapper {
 			width: 100%;
 
 			&:last-child {

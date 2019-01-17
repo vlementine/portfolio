@@ -127,10 +127,7 @@
 		text-align: center;
 		color: transparent;
 		@include transform(translateY(30px));
-		@include transition(
-			0.4s transform 1.4s ease-in-out,
-			0.4s color 1.4s ease-in-out
-		);
+		@include transition(0.4s transform 1.4s ease-in-out, 0.4s color 1.4s ease-in-out);
 
 		&.enable {
 			color: #ffffff;
@@ -207,6 +204,16 @@
 		margin-top: -140px;
 		border-radius: 4px;
 		box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
+
+		&.mockup {
+			// border-radius: 48px;
+			// border: 15px solid #2F3039;
+			box-shadow: 0 10px 10px rgba(93, 97, 104, 0.1), 
+			0 20px 30px rgba(191, 197, 209, 0.2),
+			inset 0 1px 2px #000000,
+			inset 0 -21 32px rgba(0, 0, 0, 0.7);
+			box-shadow: none;
+		}
 	}
 }
 
@@ -226,17 +233,33 @@
 //	PICTURE • DOUBLE
 //-------------------------------------
 .project-picture--double {
-	padding-bottom: 150px;
+	display: flex;
+	justify-content: space-between;
+	align-items: flex-start;
 	margin-top: calc(140px + 70px) !important;
 	// margin-top + padding
 
 	img {
 		display: inline-block;
+	}
+
+	.picture-double__wrapper {
 		width: calc(50% - 33px);
+
+		img {
+			margin-top: 40px;
+
+			&:first-child {
+				margin-top: 0;
+			}
+		}
+
+		&:first-child {
+			margin-top: -140px;
+		}
 
 		&:last-child {
 			margin-left: 60px;
-			margin-bottom: -80px;
 		}
 	}
 }
@@ -530,7 +553,7 @@
 
 	.slick-dots li button {
 		background-color: $project-01;
-		
+
 		&:after {
 			border-color: $project-01;
 		}
@@ -644,6 +667,22 @@
 			border-color: $project-03;
 			@include transition(opacity 0.2s ease-in-out);
 		}
+	}
+
+	#explain__text-01 {
+		top: 28%;
+	}
+
+	#explain__text-02 {
+		top: 22%;
+		width: 495px;
+		padding-right: 310px;
+	}
+
+	#explain__text-03 {
+		top: 29%;
+		width: 215px;
+		padding-left: 30px;
 	}
 }
 
