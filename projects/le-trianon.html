@@ -408,18 +408,20 @@
 					dots: true,
 					infinite: true,
 					centerMode: true,
-					slidesToShow: 2,
+					slidesToShow: 1,
 					slidesToScroll: 1,
+					mobileFirst: true,
 					responsive: [
 						{
 							breakpoint: 1224,
 							settings: {
-								arrows: false,
-								dots: true,
-								infinite: true,
-								centerMode: true,
-								slidesToShow: 1,
-								slidesToScroll: 3
+								centerPadding: '18%'
+							}
+						},
+						{
+							breakpoint: 600,
+							settings: {
+								centerPadding: '10%'
 							}
 						}
 					]
