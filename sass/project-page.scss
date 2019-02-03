@@ -208,10 +208,8 @@
 		&.mockup {
 			// border-radius: 48px;
 			// border: 15px solid #2F3039;
-			box-shadow: 0 10px 10px rgba(93, 97, 104, 0.1), 
-			0 20px 30px rgba(191, 197, 209, 0.2),
-			inset 0 1px 2px #000000,
-			inset 0 -21 32px rgba(0, 0, 0, 0.7);
+			box-shadow: 0 10px 10px rgba(93, 97, 104, 0.1), 0 20px 30px rgba(191, 197, 209, 0.2),
+				inset 0 1px 2px #000000, inset 0 -21 32px rgba(0, 0, 0, 0.7);
 			box-shadow: none;
 		}
 	}
@@ -629,7 +627,8 @@
 		background-image: url(../img/zenchef/zenchef__hero-picture.jpg);
 	}
 
-	#parallax-bg-01 div {
+	#parallax-bg-01 div,
+	#parallax-bg-02 div {
 		background-image: url(../img/zenchef/zenchef__picture--all.jpg);
 	}
 

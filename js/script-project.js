@@ -81,15 +81,15 @@ const parallaxMobile = () => {
 	});
 
 	let scene = new ScrollMagic.Scene({
-		triggerElement: '#trigger',
-		duration: '140%'
-	})
+			triggerElement: '#trigger',
+			duration: '140%'
+		})
 		.setTween(mobile1)
 		.addTo(controller);
 	let scene2 = new ScrollMagic.Scene({
-		triggerElement: '#trigger',
-		duration: '140%'
-	})
+			triggerElement: '#trigger',
+			duration: '140%'
+		})
 		.setTween(mobile2)
 		.addTo(controller);
 };
@@ -167,9 +167,18 @@ const main = () => {
 	});
 
 	new ScrollMagic.Scene({
-		triggerElement: '#parallax-bg-01'
-	})
+			triggerElement: '#parallax-bg-01'
+		})
 		.setTween('#parallax-bg-01 div', {
+			y: '30%',
+			ease: Linear.easeNone
+		})
+		.addTo(controller);
+	
+	new ScrollMagic.Scene({
+			triggerElement: '#parallax-bg-02'
+		})
+		.setTween('#parallax-bg-02 div', {
 			y: '30%',
 			ease: Linear.easeNone
 		})

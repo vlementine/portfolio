@@ -1,17 +1,52 @@
 @import url("https://fonts.googleapis.com/css?family=Work+Sans:300,400,500,600,700");
+@import url("https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,500,600,700");
+@import url("https://fonts.googleapis.com/css?family=Asap:300,400,500,600,700");
+@import url("https://fonts.googleapis.com/css?family=Rubik:300,400,500,600,700");
+@import url("https://fonts.googleapis.com/css?family=Muli:300,400,500,600,700");
 @import url("https://fonts.googleapis.com/css?family=Playfair+Display:400,400i,700,700i,900");
+@import url("https://fonts.googleapis.com/css?family=Zilla+Slab:400,400i,700,700i,900");
 @import url("https://fonts.googleapis.com/css?family=Work+Sans:300,400,500,600,700");
+@import url("https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,500,600,700");
+@import url("https://fonts.googleapis.com/css?family=Asap:300,400,500,600,700");
+@import url("https://fonts.googleapis.com/css?family=Rubik:300,400,500,600,700");
+@import url("https://fonts.googleapis.com/css?family=Muli:300,400,500,600,700");
 @import url("https://fonts.googleapis.com/css?family=Playfair+Display:400,400i,700,700i,900");
+@import url("https://fonts.googleapis.com/css?family=Zilla+Slab:400,400i,700,700i,900");
 @import url("https://fonts.googleapis.com/css?family=Work+Sans:300,400,500,600,700");
+@import url("https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,500,600,700");
+@import url("https://fonts.googleapis.com/css?family=Asap:300,400,500,600,700");
+@import url("https://fonts.googleapis.com/css?family=Rubik:300,400,500,600,700");
+@import url("https://fonts.googleapis.com/css?family=Muli:300,400,500,600,700");
 @import url("https://fonts.googleapis.com/css?family=Playfair+Display:400,400i,700,700i,900");
+@import url("https://fonts.googleapis.com/css?family=Zilla+Slab:400,400i,700,700i,900");
 @import url("https://fonts.googleapis.com/css?family=Work+Sans:300,400,500,600,700");
+@import url("https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,500,600,700");
+@import url("https://fonts.googleapis.com/css?family=Asap:300,400,500,600,700");
+@import url("https://fonts.googleapis.com/css?family=Rubik:300,400,500,600,700");
+@import url("https://fonts.googleapis.com/css?family=Muli:300,400,500,600,700");
 @import url("https://fonts.googleapis.com/css?family=Playfair+Display:400,400i,700,700i,900");
+@import url("https://fonts.googleapis.com/css?family=Zilla+Slab:400,400i,700,700i,900");
 @import url("https://fonts.googleapis.com/css?family=Work+Sans:300,400,500,600,700");
+@import url("https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,500,600,700");
+@import url("https://fonts.googleapis.com/css?family=Asap:300,400,500,600,700");
+@import url("https://fonts.googleapis.com/css?family=Rubik:300,400,500,600,700");
+@import url("https://fonts.googleapis.com/css?family=Muli:300,400,500,600,700");
 @import url("https://fonts.googleapis.com/css?family=Playfair+Display:400,400i,700,700i,900");
+@import url("https://fonts.googleapis.com/css?family=Zilla+Slab:400,400i,700,700i,900");
 @import url("https://fonts.googleapis.com/css?family=Work+Sans:300,400,500,600,700");
+@import url("https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,500,600,700");
+@import url("https://fonts.googleapis.com/css?family=Asap:300,400,500,600,700");
+@import url("https://fonts.googleapis.com/css?family=Rubik:300,400,500,600,700");
+@import url("https://fonts.googleapis.com/css?family=Muli:300,400,500,600,700");
 @import url("https://fonts.googleapis.com/css?family=Playfair+Display:400,400i,700,700i,900");
+@import url("https://fonts.googleapis.com/css?family=Zilla+Slab:400,400i,700,700i,900");
 @import url("https://fonts.googleapis.com/css?family=Work+Sans:300,400,500,600,700");
+@import url("https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,500,600,700");
+@import url("https://fonts.googleapis.com/css?family=Asap:300,400,500,600,700");
+@import url("https://fonts.googleapis.com/css?family=Rubik:300,400,500,600,700");
+@import url("https://fonts.googleapis.com/css?family=Muli:300,400,500,600,700");
 @import url("https://fonts.googleapis.com/css?family=Playfair+Display:400,400i,700,700i,900");
+@import url("https://fonts.googleapis.com/css?family=Zilla+Slab:400,400i,700,700i,900");
 @font-face {
   font-family: 'butler_stencilextrabold';
   src: url("../font/butler_extrabold_stencil-webfont.woff2") format("woff2"), url("../font/butler_extrabold_stencil-webfont.woff") format("woff");
@@ -35,7 +70,7 @@ html {
 }
 
 body {
-  font-family: 'Work Sans', sans-serif;
+  font-family: 'Asap', sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   color: rgba(6, 10, 46, 0.8);
@@ -2377,6 +2412,11 @@ button {
   box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
 }
 
+.project-picture img.mockup {
+  box-shadow: 0 10px 10px rgba(93, 97, 104, 0.1), 0 20px 30px rgba(191, 197, 209, 0.2), inset 0 1px 2px #000000, inset 0 -21 32px rgba(0, 0, 0, 0.7);
+  box-shadow: none;
+}
+
 .project-picture--simple {
   margin-top: calc(140px + 70px) !important;
 }
@@ -2386,18 +2426,34 @@ button {
 }
 
 .project-picture--double {
-  padding-bottom: 150px;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
   margin-top: calc(140px + 70px) !important;
 }
 
 .project-picture--double img {
   display: inline-block;
+}
+
+.project-picture--double .picture-double__wrapper {
   width: calc(50% - 33px);
 }
 
-.project-picture--double img:last-child {
+.project-picture--double .picture-double__wrapper img {
+  margin-top: 40px;
+}
+
+.project-picture--double .picture-double__wrapper img:first-child {
+  margin-top: 0;
+}
+
+.project-picture--double .picture-double__wrapper:first-child {
+  margin-top: -140px;
+}
+
+.project-picture--double .picture-double__wrapper:last-child {
   margin-left: 60px;
-  margin-bottom: -80px;
 }
 
 .project-picture--explain {
@@ -2769,7 +2825,8 @@ button {
   background-image: url(../img/zenchef/zenchef__hero-picture.jpg);
 }
 
-.project-page#project-02 #parallax-bg-01 div {
+.project-page#project-02 #parallax-bg-01 div,
+.project-page#project-02 #parallax-bg-02 div {
   background-image: url(../img/zenchef/zenchef__picture--all.jpg);
 }
 
@@ -2823,6 +2880,22 @@ button {
   transition: opacity 0.2s ease-in-out;
 }
 
+.project-page#project-03 #explain__text-01 {
+  top: 28%;
+}
+
+.project-page#project-03 #explain__text-02 {
+  top: 22%;
+  width: 495px;
+  padding-right: 310px;
+}
+
+.project-page#project-03 #explain__text-03 {
+  top: 29%;
+  width: 215px;
+  padding-left: 30px;
+}
+
 .project-page#project-04 section .container h3,
 .project-page#project-04 section h4,
 .project-page#project-04 .next-project__name:hover {
@@ -2860,12 +2933,6 @@ button {
   src: url("../font/butler_extrabold_stencil-webfont.woff2") format("woff2"), url("../font/butler_extrabold_stencil-webfont.woff") format("woff");
   font-weight: normal;
   font-style: normal;
-}
-
-@media screen and (min-width: 1224px) {
-  .slick-slide {
-    opacity: 1 !important;
-  }
 }
 
 @media screen and (min-width: 1000px) {
@@ -3016,13 +3083,13 @@ button {
     width: 100%;
   }
   .project-picture--double {
+    flex-direction: column;
     padding-bottom: 70px;
   }
-  .project-picture--double img {
-    display: block;
+  .project-picture--double .picture-double__wrapper {
     width: 100%;
   }
-  .project-picture--double img:last-child {
+  .project-picture--double .picture-double__wrapper:last-child {
     margin-left: 0;
     margin-bottom: 0;
     margin-top: 40px;
