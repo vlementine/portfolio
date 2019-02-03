@@ -398,7 +398,8 @@
 		// margin-top + gap
 	}
 
-	.project-picture--double img:last-child {
+	.project-picture--double .picture-double__wrapper:last-child,
+	.project-picture--double .picture-double__wrapper img {
 		margin-top: 10px;
 	}
 

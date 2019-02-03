@@ -543,6 +543,7 @@
 //	VARIABLES PROJECT
 //-------------------------------------
 .project-page#project-01 {
+
 	section .container h3,
 	section h4,
 	.next-project__name:hover {
@@ -617,6 +618,7 @@
 }
 
 .project-page#project-02 {
+
 	section .container h3,
 	section h4,
 	.next-project__name:hover {
@@ -628,7 +630,8 @@
 	}
 
 	#parallax-bg-01 div,
-	#parallax-bg-02 div {
+	#parallax-bg-02 div,
+	.project-parallax--bg--mobile .parallax-visuel {
 		background-image: url(../img/zenchef/zenchef__picture--all.jpg);
 	}
 
@@ -644,6 +647,7 @@
 }
 
 .project-page#project-03 {
+
 	section .container h3,
 	section h4,
 	.next-project__name:hover {
@@ -654,7 +658,8 @@
 		background-image: url(../img/alcatraz/alcatraz__hero-picture.jpg);
 	}
 
-	#parallax-bg-01 div {
+	#parallax-bg-01 div,
+	.project-parallax--bg--mobile .parallax-visuel {
 		background-image: url(../img/alcatraz/alcatraz__picture--all.jpg);
 	}
 
@@ -686,6 +691,7 @@
 }
 
 .project-page#project-04 {
+
 	section .container h3,
 	section h4,
 	.next-project__name:hover {

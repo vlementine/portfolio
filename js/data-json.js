@@ -17,7 +17,7 @@ const projects = [
 	{
 		number: '02',
 		title: 'Zenchef',
-		keywords: 'User Interface • Blog',
+		keywords: 'User Interface',
 		description:
 			'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus et arcu arcu. Curabitur varius fermentum gravida. Sed eleifend turpis vel lobortis pellentesque. Phasellus gravida sagittis mauris sit amet viverra.',
 		image: 'zenchef',
