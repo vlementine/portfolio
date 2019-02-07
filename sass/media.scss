@@ -340,10 +340,7 @@
 		}
 
 		.header--text {
-			@include transition(
-				0.4s transform 1s ease-in-out,
-				0.4s color 1s ease-in-out
-			);
+			@include transition(0.4s transform 1s ease-in-out, 0.4s color 1s ease-in-out);
 		}
 	}
 
@@ -396,6 +393,11 @@
 	.project-picture--explain {
 		margin-top: calc(100px + 60px) !important;
 		// margin-top + gap
+	}
+
+	.project-picture--double .picture-double__wrapper:first-child {
+		margin-top: calc(-10px - 60px);
+		// - padding - gap
 	}
 
 	.project-picture--double .picture-double__wrapper:last-child,
