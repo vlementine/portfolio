@@ -5,8 +5,6 @@ const displayContentPage = idProject => {
 	console.log(idProject);
 	document.querySelector('h1').innerText = projects[idProject].title;
 	document.querySelector('p.subtitle').innerText = projects[idProject].keywords;
-	document.querySelector('.project-intro p').innerText =
-		projects[idProject].description;
 	document.querySelector('.project-intro a.btn').href =
 		projects[idProject].href;
 	document.querySelector('.next-project__name').innerText =

@@ -53,7 +53,7 @@
 }
 
 .project-page h4 {
-  font-size: 0.72em;
+  font-size: 0.75em;
   font-weight: 600;
   color: #333366;
   margin: 0;
@@ -195,7 +195,7 @@
 }
 
 .intro__content {
-  max-width: 640px;
+  max-width: 580px;
   margin: 0 auto;
   text-align: center;
 }
@@ -207,11 +207,9 @@
 }
 
 .intro__content p {
-  letter-spacing: 0.03em;
-  font-family: 'Playfair Display', serif;
+  font-family: 'Zilla Slab', serif;
   color: rgba(6, 10, 46, 0.5);
   text-align: left;
-  line-height: 1.7;
   margin: 10px auto 30px;
 }
 
@@ -219,9 +217,11 @@
   font-size: 3.2rem;
   float: left;
   margin-top: 12px;
-  margin-right: 10px;
+  margin-right: 5px;
   font-weight: 700;
   line-height: 0.6;
+  color: #F59E64;
+  opacity: 0.4;
 }
 
 .project-picture {
@@ -655,9 +655,13 @@
 }
 
 .project-page#project-02 #parallax-bg-01 div,
+.project-page#project-02 .project-parallax--bg--mobile .parallax-visuel {
+  background-image: url(../img/zenchef/zenchef__picture-all-01.jpg);
+}
+
 .project-page#project-02 #parallax-bg-02 div,
 .project-page#project-02 .project-parallax--bg--mobile .parallax-visuel {
-  background-image: url(../img/zenchef/zenchef__picture--all.jpg);
+  background-image: url(../img/zenchef/zenchef__picture-all-02.jpg);
 }
 
 .project-page#project-02 .slick-dots li button {
@@ -676,6 +680,72 @@
   -ms-transition: opacity 0.2s ease-in-out;
   -o-transition: opacity 0.2s ease-in-out;
   transition: opacity 0.2s ease-in-out;
+}
+
+.project-page#project-02 #explain__text-01 {
+  top: -46%;
+  width: 235px;
+  padding-right: 50px;
+}
+
+.project-page#project-02 #explain__text-02 {
+  top: -70%;
+  width: 285px;
+  padding-left: 100px;
+}
+
+.project-page#project-02 #explain__text-03 {
+  top: -29%;
+  width: 215px;
+  padding-right: 30px;
+}
+
+.project-page#project-02 #explain__text-04 {
+  top: 0%;
+  width: 212px;
+  padding-left: 42px;
+}
+
+.project-page#project-02 #explain__text-2-01 {
+  top: 12%;
+  width: 215px;
+  padding-left: 40px;
+}
+
+.project-page#project-02 #explain__text-2-02 {
+  top: -25%;
+  width: 375px;
+  padding-right: 190px;
+}
+
+.project-page#project-02 #explain__text-2-03 {
+  top: -11%;
+  width: 305px;
+  padding-left: 120px;
+}
+
+.project-page#project-02 #explain__text-2-04 {
+  top: 33%;
+  width: 365px;
+  padding-right: 180px;
+}
+
+.project-page#project-02 #explain__text-3-01 {
+  top: 11%;
+  width: 215px;
+  padding-right: 40px;
+}
+
+.project-page#project-02 #explain__text-3-02 {
+  top: 0%;
+  width: 285px;
+  padding-left: 100px;
+}
+
+.project-page#project-02 #explain__text-3-03 {
+  top: -71%;
+  width: 347px;
+  padding-right: 160px;
 }
 
 .project-page#project-03 section .container h3,
