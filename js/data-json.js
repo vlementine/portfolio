@@ -3,11 +3,13 @@
 //-------------------------------------
 
 // PROJECTS
-const projects = [{
+const projects = [
+	{
 		number: '01',
 		title: 'Le Trianon',
 		keywords: '2018 — User Interface • Concert',
-		description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus et arcu arcu. Curabitur varius fermentum gravida. Sed eleifend turpis vel lobortis pellentesque. Phasellus gravida sagittis mauris sit amet viverra.',
+		description:
+			'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus et arcu arcu. Curabitur varius fermentum gravida. Sed eleifend turpis vel lobortis pellentesque. Phasellus gravida sagittis mauris sit amet viverra.',
 		image: 'le-trianon',
 		href: 'le-trianon',
 		nextProject: 'Zenchef'
@@ -15,8 +17,9 @@ const projects = [{
 	{
 		number: '02',
 		title: 'Zenchef',
-		keywords: '2019 — Product Design & Marketing',
-		description: 'Zenchef est une entreprise française qui permet aux restaurateurs de gérez leurs réservations sans commisssions ni intermédiaires, fidélisez leurs clients et maîtrisez leur réputation en ligne.',
+		keywords: '2019 — Product Design & Marketing • Food tech',
+		description:
+			'Zenchef est une entreprise française qui permet aux restaurateurs de gérez leurs réservations sans commisssions ni intermédiaires, fidélisez leurs clients et maîtrisez leur réputation en ligne.',
 		image: 'zenchef',
 		href: 'zenchef',
 		nextProject: 'Alcatraz, 1962'
@@ -24,8 +27,9 @@ const projects = [{
 	{
 		number: '03',
 		title: 'Alcatraz, 1962',
-		keywords: 'User Interface • Webdoc',
-		description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus et arcu arcu. Curabitur varius fermentum gravida. Sed eleifend turpis vel lobortis pellentesque. Phasellus gravida sagittis mauris sit amet viverra.',
+		keywords: '2018 — User Interface • Webdoc',
+		description:
+			'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus et arcu arcu. Curabitur varius fermentum gravida. Sed eleifend turpis vel lobortis pellentesque. Phasellus gravida sagittis mauris sit amet viverra.',
 		image: 'alcatraz',
 		href: 'alcatraz',
 		nextProject: 'Back To Your Dream'
@@ -33,8 +37,9 @@ const projects = [{
 	{
 		number: '04',
 		title: 'Back to your dream',
-		keywords: 'User Interface • Animation',
-		description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus et arcu arcu. Curabitur varius fermentum gravida. Sed eleifend turpis vel lobortis pellentesque. Phasellus gravida sagittis mauris sit amet viverra.',
+		keywords: '2017 — User Interface • E-commerce',
+		description:
+			'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus et arcu arcu. Curabitur varius fermentum gravida. Sed eleifend turpis vel lobortis pellentesque. Phasellus gravida sagittis mauris sit amet viverra.',
 		image: 'btyd',
 		href: 'back-to-your-dream',
 		nextProject: 'Le Trianon'
