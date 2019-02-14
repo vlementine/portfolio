@@ -40,9 +40,7 @@ const responsive = () => {
 const redirectionProject = varURL => {
 	//document.querySelector('.transition-screen').style.background = '$project-01';
 	document.querySelector('.transition-screen').classList.add('redirect-page');
-	document
-		.querySelector('.transition-screen--white')
-		.classList.add('redirect-page');
+	document.querySelector('.transition-screen--white').classList.add('redirect-page');
 	setTimeout(() => {
 		window.location.href = './projects/' + varURL + '.html';
 	}, 1500);
@@ -55,10 +53,13 @@ const main = () => {
 	resizeBackground();
 	changeLogoColor();
 
+	// Copyright
+	const day = new Date();
+	const year = day.getFullYear();
+	document.querySelector('.year-copyright').textContent = year;
+
 	let windowWidth = window.innerWidth;
-	document
-		.querySelector('.nav__items p:nth-child(1)')
-		.classList.add('item--active');
+	document.querySelector('.nav__items p:nth-child(1)').classList.add('item--active');
 
 	if (windowWidth <= 650) {
 		document.querySelector(
@@ -106,13 +107,9 @@ const main = () => {
 				if (windowWidth <= 650) {
 					if (document.querySelector('.number--active').textContent != '01') {
 						navMobile(-1);
-					} else if (
-						document.querySelector('.contact__wrapper:not(.disable)')
-					) {
+					} else if (document.querySelector('.contact__wrapper:not(.disable)')) {
 						document.querySelector('.home').classList.add('disable');
-						document
-							.querySelector('.contact__wrapper')
-							.classList.add('disable');
+						document.querySelector('.contact__wrapper').classList.add('disable');
 						setTimeout(() => {
 							document.querySelector('#project-04').classList.add('enable');
 							displayProject('#project-04');
@@ -123,20 +120,14 @@ const main = () => {
 					//DESKTOP
 				} else {
 					if (
-						document.querySelector(
-							'.nav__items p:nth-child(1):not(.item--active)'
-						) &&
+						document.querySelector('.nav__items p:nth-child(1):not(.item--active)') &&
 						document.querySelector('.contact__wrapper.disable') &&
 						document.querySelector('.home.disable')
 					) {
 						navDesktop(direction);
-					} else if (
-						document.querySelector('.contact__wrapper:not(.disable)')
-					) {
+					} else if (document.querySelector('.contact__wrapper:not(.disable)')) {
 						document.querySelector('.home').classList.add('disable');
-						document
-							.querySelector('.contact__wrapper')
-							.classList.add('disable');
+						document.querySelector('.contact__wrapper').classList.add('disable');
 						setTimeout(() => {
 							document.querySelector('#project-04').classList.add('enable');
 							displayProject('#project-04');
@@ -252,11 +243,7 @@ const main = () => {
 			initProject('.project');
 			navActiveItem(parseInt(urlNumber) + 1);
 		}
-	} else if (
-		urlNumber == 'home' ||
-		urlNumber == 'work' ||
-		urlNumber == 'contact'
-	) {
+	} else if (urlNumber == 'home' || urlNumber == 'work' || urlNumber == 'contact') {
 		displayMenu();
 		navMenu(urlNumber);
 	}

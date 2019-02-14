@@ -5,8 +5,7 @@ const displayContentPage = idProject => {
 	console.log(idProject);
 	document.querySelector('h1').innerText = projects[idProject].title;
 	document.querySelector('p.subtitle').innerText = projects[idProject].keywords;
-	document.querySelector('.project-intro a.btn').href =
-		projects[idProject].href;
+	document.querySelector('.project-intro a.btn').href = projects[idProject].href;
 	document.querySelector('.next-project__name').innerText =
 		projects[idProject].nextProject;
 	document.querySelector('.next-project__name').href =
@@ -19,9 +18,7 @@ const displayContentPage = idProject => {
 //-------------------------------------
 const redirectionProject = () => {
 	document.querySelector('.transition-screen').classList.add('redirect-page');
-	document
-		.querySelector('.transition-screen--white')
-		.classList.add('redirect-page');
+	document.querySelector('.transition-screen--white').classList.add('redirect-page');
 	setTimeout(() => {
 		window.location.href = '../index.html#' + (idProjectContent + 1);
 	}, 1500);
@@ -32,9 +29,7 @@ const redirectionProject = () => {
 //-------------------------------------
 const redirectionNextProject = () => {
 	document.querySelector('.transition-screen').classList.add('redirect-page');
-	document
-		.querySelector('.transition-screen--white')
-		.classList.add('redirect-page');
+	document.querySelector('.transition-screen--white').classList.add('redirect-page');
 
 	if (idProjectActive == 4) {
 		idNextProject = 1;
@@ -79,15 +74,15 @@ const parallaxMobile = () => {
 	});
 
 	let scene = new ScrollMagic.Scene({
-			triggerElement: '#trigger',
-			duration: '140%'
-		})
+		triggerElement: '#trigger',
+		duration: '140%'
+	})
 		.setTween(mobile1)
 		.addTo(controller);
 	let scene2 = new ScrollMagic.Scene({
-			triggerElement: '#trigger',
-			duration: '140%'
-		})
+		triggerElement: '#trigger',
+		duration: '140%'
+	})
 		.setTween(mobile2)
 		.addTo(controller);
 };
@@ -142,7 +137,7 @@ const idProject = () => {
 //	MAIN FUNCTION
 //-------------------------------------
 const main = () => {
-	//Display
+	// Display
 	document.querySelector('nav').classList.add('enable');
 	document.querySelector('.menu-btn').classList.add('enable');
 	document.querySelector('header').classList.add('enable');
@@ -165,17 +160,17 @@ const main = () => {
 	});
 
 	new ScrollMagic.Scene({
-			triggerElement: '#parallax-bg-01'
-		})
+		triggerElement: '#parallax-bg-01'
+	})
 		.setTween('#parallax-bg-01 div', {
 			y: '30%',
 			ease: Linear.easeNone
 		})
 		.addTo(controller);
-	
+
 	new ScrollMagic.Scene({
-			triggerElement: '#parallax-bg-02'
-		})
+		triggerElement: '#parallax-bg-02'
+	})
 		.setTween('#parallax-bg-02 div', {
 			y: '30%',
 			ease: Linear.easeNone
