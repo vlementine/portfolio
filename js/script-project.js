@@ -56,6 +56,81 @@ const redirectionNextProject = () => {
 };
 
 //-------------------------------------
+//	PROJECT'S NAME
+//-------------------------------------
+const nameProject = () => {
+	// Generate good project ID from URL
+	let initialURL = window.location.href;
+	let positionAfterHyphen = initialURL.lastIndexOf('/') + 1;
+	let positionHtml = initialURL.lastIndexOf('.html') + 1;
+	let nameProject = initialURL.substring(positionAfterHyphen, positionHtml - 1);
+
+	return nameProject;
+};
+
+//-------------------------------------
+//	PROJECT'S ID
+//-------------------------------------
+const idProject = () => {
+	var idProject = 0;
+
+	switch (nameProjectActive) {
+		case 'le-trianon':
+			idProject = 0;
+			break;
+		case 'zenchef':
+			idProject = 1;
+			break;
+		case 'alcatraz':
+			idProject = 2;
+			break;
+		case 'back-to-your-dream':
+			idProject = 3;
+			break;
+	}
+
+	return idProject;
+};
+
+//-------------------------------------
+//	VIDEO
+//-------------------------------------
+
+var video = document.querySelector('.video');
+var juice = document.querySelector('.orange-juice');
+var btn = document.querySelector('#play-pause');
+
+const togglePlayPause = () => {
+	if (video.paused) {
+		btn.className = 'pause';
+		video.play();
+	}
+	else {
+		btn.className = "play";
+		video.pause();
+	}
+};
+
+btn.onclick = function () {
+	togglePlayPause();
+}
+
+video.addEventListener('timeupdate', function () {
+	var juicePos = video.currentTime / video.duration;
+	juice.style.width = juicePos * 100 + '%';
+	if (video.ended) {
+		btn.className = 'play';
+	}
+	document.querySelector('.duration').innerText = video.currentTime;
+})
+
+video.addEventListener('timeupdate', function () {
+	if (!progress.getAttribute('max')) progress.setAttribute('max', video.duration);
+	progress.value = video.currentTime;
+	progressBar.style.width = Math.floor((video.currentTime / video.duration) * 100) + '%';
+});
+
+//-------------------------------------
 //	PARALLAX MOBILE
 //-------------------------------------
 const parallaxMobile = () => {
@@ -91,46 +166,8 @@ const parallaxMobile = () => {
 //	RESPONSIVE
 //-------------------------------------
 const responsive = () => {
-	let windowWidth = window.innerWidth;
-
+	// Parallax mobile
 	parallaxMobile();
-};
-
-//-------------------------------------
-//	PROJECT'S NAME
-//-------------------------------------
-const nameProject = () => {
-	// Generate good project ID from URL
-	let initialURL = window.location.href;
-	let positionAfterHyphen = initialURL.lastIndexOf('/') + 1;
-	let positionHtml = initialURL.lastIndexOf('.html') + 1;
-	let nameProject = initialURL.substring(positionAfterHyphen, positionHtml - 1);
-
-	return nameProject;
-};
-
-//-------------------------------------
-//	PROJECT'S ID
-//-------------------------------------
-const idProject = () => {
-	var idProject = 0;
-
-	switch (nameProjectActive) {
-		case 'le-trianon':
-			idProject = 0;
-			break;
-		case 'zenchef':
-			idProject = 1;
-			break;
-		case 'alcatraz':
-			idProject = 2;
-			break;
-		case 'back-to-your-dream':
-			idProject = 3;
-			break;
-	}
-
-	return idProject;
 };
 
 //-------------------------------------
