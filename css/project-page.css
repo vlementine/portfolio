@@ -235,6 +235,7 @@
 
 .project-picture video {
   width: 100%;
+  max-width: 980px;
   margin-top: -140px;
   border: 10px solid #2f3039;
   border-radius: 24px;
@@ -251,6 +252,66 @@
 .project-picture img.mockup {
   box-shadow: 0 10px 10px rgba(93, 97, 104, 0.1), 0 20px 30px rgba(191, 197, 209, 0.2), inset 0 1px 2px #000000, inset 0 -21 32px rgba(0, 0, 0, 0.7);
   box-shadow: none;
+}
+
+.controls {
+  font-size: 13px;
+  color: #fff;
+  width: calc(100% - 60px);
+  margin: 0 30px;
+  position: relative;
+  justify-content: space-between;
+  align-items: center;
+  -webkit-transform: translateY(-45px);
+  -moz-transform: translateY(-45px);
+  -ms-transform: translateY(-45px);
+  -o-transform: translateY(-45px);
+  transform: translateY(-45px);
+}
+
+.controls button {
+  font-size: 13px;
+  color: #fff;
+  cursor: pointer;
+  border: none;
+  background: transparent;
+  padding: 0;
+}
+
+.controls button#playpause {
+  width: 10px;
+  height: 10px;
+  background: white;
+  padding: 15px;
+  display: flex;
+  justify-content: center;
+  color: #5691FF;
+  line-height: 0px;
+  border-radius: 50%;
+  font-size: 10px;
+}
+
+.controls .duration {
+  margin-left: 10px;
+  margin-right: 10px;
+}
+
+.controls #progress {
+  display: block;
+  width: 100%;
+  height: 2px;
+  border: none;
+  border-radius: 2px;
+  cursor: pointer;
+  background: grey;
+  text-align: left;
+}
+
+.controls #progress span {
+  width: 0%;
+  height: 100%;
+  display: inline-block;
+  background: #333366;
 }
 
 .project-picture--simple {
@@ -595,6 +656,10 @@
   background-image: url(../img/le-trianon/le-trianon__picture--all.jpg);
 }
 
+.project-page#project-01 .controls #progress span {
+  background-color: #cd3557;
+}
+
 .project-page#project-01 .slick-dots li button {
   background-color: #cd3557;
   -webkit-transition: opacity 0.2s ease-in-out;
@@ -666,6 +731,10 @@
 .project-page#project-02 #parallax-bg-01 div,
 .project-page#project-02 .project-parallax--bg--mobile .parallax-visuel {
   background-image: url(../img/zenchef/zenchef__picture-all-01.jpg);
+}
+
+.project-page#project-02 .controls #progress span {
+  background-color: #f59e64;
 }
 
 .project-page#project-02 #parallax-bg-02,
@@ -778,6 +847,10 @@
   background-image: url(../img/alcatraz/alcatraz__picture--all.jpg);
 }
 
+.project-page#project-03 .controls #progress span {
+  background-color: #5691FF;
+}
+
 .project-page#project-03 .slick-dots li button {
   background-color: #5691FF;
   -webkit-transition: opacity 0.2s ease-in-out;
@@ -827,6 +900,10 @@
 
 .project-page#project-04 #parallax-bg-01 div {
   background-image: url(../img/btyd/btyd__picture--all.jpg);
+}
+
+.project-page#project-04 .controls #progress span {
+  background-color: #5dd5c3;
 }
 
 .project-page#project-04 .slick-dots li button {

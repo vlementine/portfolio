@@ -232,19 +232,41 @@
 }
 
 .controls {
-	font-size: 14px;
-	width: 100%;
+	font-size: 13px;
+	color: #fff;
+	width: calc(100% - 60px);
+	margin: 0 30px;
 	position: relative;
 	justify-content: space-between;
 	align-items: center;
+	@include transform(translateY(-45px));
 }
 
 .controls button {
-	border: none;
+	font-size: 13px;
+	color: #fff;
 	cursor: pointer;
+	border: none;
 	background: transparent;
-	background-size: contain;
-	background-repeat: no-repeat;
+	padding: 0;
+
+	&#playpause {
+		width: 10px;
+		height: 10px;
+		background: white;
+		padding: 15px;
+		display: flex;
+		justify-content: center;
+		color: $project-03;
+		line-height: 0px;
+		border-radius: 50%;
+		font-size: 10px;
+	}
+}
+
+.controls .duration {
+	margin-left: 10px;
+	margin-right: 10px;
 }
 
 .controls #progress {
@@ -596,7 +618,6 @@
 	section .container h3,
 	section h4,
 	.intro__content p:first-of-type:first-letter,
-	.controls #progress span,
 	.next-project__name:hover {
 		color: $project-01;
 	}
@@ -616,6 +637,10 @@
 	#parallax-bg-01 div,
 	.project-parallax--bg--mobile .parallax-visuel {
 		background-image: url(../img/le-trianon/le-trianon__picture--all.jpg);
+	}
+
+	.controls #progress span {
+		background-color: $project-01;
 	}
 
 	.slick-dots li button {
@@ -672,7 +697,6 @@
 	section .container h3,
 	section h4,
 	.intro__content p:first-of-type:first-letter,
-	.controls #progress span,
 	.next-project__name:hover {
 		color: $project-02;
 	}
@@ -684,6 +708,10 @@
 	#parallax-bg-01 div,
 	.project-parallax--bg--mobile .parallax-visuel {
 		background-image: url(../img/zenchef/zenchef__picture-all-01.jpg);
+	}
+
+	.controls #progress span {
+		background-color: $project-02;
 	}
 
 	#parallax-bg-02,
@@ -777,7 +805,6 @@
 	section .container h3,
 	section h4,
 	.intro__content p:first-of-type:first-letter,
-	.controls #progress span,
 	.next-project__name:hover {
 		color: $project-03;
 	}
@@ -789,6 +816,10 @@
 	#parallax-bg-01 div,
 	.project-parallax--bg--mobile .parallax-visuel {
 		background-image: url(../img/alcatraz/alcatraz__picture--all.jpg);
+	}
+
+	.controls #progress span {
+		background-color: $project-03;
 	}
 
 	.slick-dots li button {
@@ -824,7 +855,6 @@
 	section .container h3,
 	section h4,
 	.intro__content p:first-of-type:first-letter,
-	.controls #progress span,
 	.next-project__name:hover {
 		color: $project-04;
 	}
@@ -835,6 +865,10 @@
 
 	#parallax-bg-01 div {
 		background-image: url(../img/btyd/btyd__picture--all.jpg);
+	}
+
+	.controls #progress span {
+		background-color: $project-04;
 	}
 
 	.slick-dots li button {

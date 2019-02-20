@@ -150,11 +150,11 @@ if (supportsVideo) {
 	// Play & Pause
 	playpause.addEventListener('click', function(e) {
 		if (video.paused || video.ended) {
-			this.innerText = 'Pause';
+			this.className = 'fas fa-pause';
 			video.play();
 		}
 		else {
-			this.innerText = 'Lecture';
+			this.className = 'fas fa-play';
 			video.pause();
 		}
 	});
