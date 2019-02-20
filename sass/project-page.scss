@@ -201,61 +201,6 @@
 		margin-top: 170px !important;
 	}
 
-	.c-video {
-		position: relative;
-
-		&:hover {
-			opacity: 1;
-		}
-	}
-
-	.controls {
-		display: flex;
-		position: absolute;
-		bottom: 0;
-		width: 100%;
-		flex-wrap: wrap;
-		color: #FFF;
-		background: black;
-		transform: translateY(100%);
-	}
-
-	.buttons button {
-		background: none;
-		border: 0;
-		outline: 0;
-		cursor: pointer;
-	}
-
-	.buttons button:before {
-		content: 'play';
-		width: 30px;
-		height: 30px;
-		display: inline-block;
-		font-size: 18px;
-		color: #fff;
-	}
-
-	.buttons button.play:before {
-		content: 'pause';
-	}
-
-	.buttons button.pause:before {
-		content: 'play';
-	}
-
-	.orange-bar {
-		height: 10px;
-		top: 0;
-		left: 0;
-		width: 100%;
-	}
-
-	.orange-juice {
-		height: 2px;
-		background: crimson;
-	}
-
 	video {
 		width: 100%;
 		max-width: 980px;
@@ -284,6 +229,40 @@
 			box-shadow: none;
 		}
 	}
+}
+
+.controls {
+	font-size: 14px;
+	width: 100%;
+	position: relative;
+	justify-content: space-between;
+	align-items: center;
+}
+
+.controls button {
+	border: none;
+	cursor: pointer;
+	background: transparent;
+	background-size: contain;
+	background-repeat: no-repeat;
+}
+
+.controls #progress {
+	display: block;
+	width: 100%;
+	height: 2px;
+	border: none;
+	border-radius: 2px;
+	cursor: pointer;
+	background: grey;
+	text-align: left;
+}
+
+.controls #progress span {
+	width: 0%;
+	height: 100%;
+	display: inline-block;
+	background: $primary-color;
 }
 
 //-------------------------------------
@@ -617,6 +596,7 @@
 	section .container h3,
 	section h4,
 	.intro__content p:first-of-type:first-letter,
+	.controls #progress span,
 	.next-project__name:hover {
 		color: $project-01;
 	}
@@ -692,6 +672,7 @@
 	section .container h3,
 	section h4,
 	.intro__content p:first-of-type:first-letter,
+	.controls #progress span,
 	.next-project__name:hover {
 		color: $project-02;
 	}
@@ -796,6 +777,7 @@
 	section .container h3,
 	section h4,
 	.intro__content p:first-of-type:first-letter,
+	.controls #progress span,
 	.next-project__name:hover {
 		color: $project-03;
 	}
@@ -842,6 +824,7 @@
 	section .container h3,
 	section h4,
 	.intro__content p:first-of-type:first-letter,
+	.controls #progress span,
 	.next-project__name:hover {
 		color: $project-04;
 	}

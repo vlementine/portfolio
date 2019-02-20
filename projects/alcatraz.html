@@ -134,18 +134,50 @@
 				</div>
 
 				<div class="container project-picture project-picture--simple">
-					<div class="c-video">
-						<video class="video" controls>
-							<source src="../vid/Animation_Alcatraz_Ending.mp4" type="video/mp4" />
+					<div id="videoContainer" class="c-video">
+						<video
+							class="video"
+							id="video"
+							controls
+							preload="metadata"
+							poster="img/poster.jpg"
+						>
+							<source src="../vid/Animation_Alcatraz_Opening.mp4" type="video/mp4" />
 						</video>
-						<div class="controls">
-							<div class="orange-bar">
-								<div class="orange-juice"></div>
+						<!-- <object
+							type="application/x-shockwave-flash"
+							data="flash-player.swf?videoUrl=video/tears-of-steel-battle-clip-medium.mp4"
+							width="1024"
+							height="576"
+						>
+							<param
+								name="movie"
+								value="flash-player.swf?videoUrl=video/tears-of-steel-battle-clip-medium.mp4"
+							/>
+							<param name="allowfullscreen" value="true" />
+							<param name="wmode" value="transparent" />
+							<param
+								name="flashvars"
+								value="controlbar=over&amp;image=img/poster.jpg&amp;file=flash-player.swf?videoUrl=video/tears-of-steel-battle-clip-medium.mp4"
+							/>
+							<img
+								alt="Tears of Steel poster image"
+								src="img/poster.jpg"
+								width="1024"
+								height="428"
+								title="No video playback possible, please download the video from the link below"
+							/>
+						</object> -->
+						
+						<div id="video-controls" class="controls">
+							<button id="playpause" type="button">Lecture</button>
+							<button id="mute" type="button">Mute</button>
+							<div id="progress">
+								
+									<span id="progress-bar"></span>
+								
 							</div>
-							<div class="buttons">
-								<button id="play-pause"></button>
-							</div>
-							<span class="duration">Duration</span>
+							<span class="duration"></span>
 						</div>
 					</div>
 				</div>
