@@ -560,6 +560,40 @@ h3 {
 	letter-spacing: 0.02em;
 }
 
+//-- Icomoon
+
+[class^="icon-"], [class*=" icon-"] {
+  font-family: 'icomoon' !important;
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-fullscreen_exit:before {
+  content: "\e900";
+}
+.icon-fullscreen:before {
+  content: "\e901";
+}
+.icon-pause:before {
+  content: "\e902";
+}
+.icon-play:before {
+  content: "\e903";
+}
+.icon-volume_off:before {
+  content: "\e904";
+}
+.icon-volume_up:before {
+  content: "\e905";
+}
+
+
 //-------------------------------------
 //	TRANSISTION PAGE
 //-------------------------------------

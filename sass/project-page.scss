@@ -201,20 +201,6 @@
 		margin-top: 170px !important;
 	}
 
-	video {
-		width: 100%;
-		max-width: 980px;
-		margin-top: -140px;
-		border: 10px solid #2f3039;
-		border-radius: 24px;
-		// box-shadow: 0 10px 10px 0 rgba(93, 97, 104, 0.1),
-		//  0 20px 30px 0 rgba(191, 197, 209, 0.2),
-		// 	inset 0 1px 2px 0 #000,
-		// 	inset 0 -21 32px 0 rgba(0, 0, 0, 0.7);
-		box-shadow: 0 9px 9px 0 rgba(0, 0, 0, 0.1), 0 17px 26px 0 rgba(0, 0, 0, 0.2),
-			0 1px 3px 0 #000 inset, 0 -17px 26px 0 #000 inset;
-	}
-
 	img {
 		width: 100%;
 		margin-top: -140px;
@@ -231,60 +217,78 @@
 	}
 }
 
-.controls {
-	font-size: 13px;
-	color: #fff;
-	width: calc(100% - 60px);
-	margin: 0 30px;
-	position: relative;
-	justify-content: space-between;
-	align-items: center;
-	@include transform(translateY(-45px));
-}
-
-.controls button {
-	font-size: 13px;
-	color: #fff;
-	cursor: pointer;
-	border: none;
-	background: transparent;
-	padding: 0;
-
-	&#playpause {
-		width: 10px;
-		height: 10px;
-		background: white;
-		padding: 15px;
-		display: flex;
-		justify-content: center;
-		color: $project-03;
-		line-height: 0px;
-		border-radius: 50%;
-		font-size: 10px;
-	}
-}
-
-.controls .duration {
-	margin-left: 10px;
-	margin-right: 10px;
-}
-
-.controls #progress {
-	display: block;
+//-------------------------------------
+//	VIDEO
+//-------------------------------------
+.video-wrapper {
 	width: 100%;
-	height: 2px;
-	border: none;
-	border-radius: 2px;
-	cursor: pointer;
-	background: grey;
-	text-align: left;
-}
+	max-width: 980px;
+	margin: -140px auto 0 auto;
 
-.controls #progress span {
-	width: 0%;
-	height: 100%;
-	display: inline-block;
-	background: $primary-color;
+	&:hover .controls {
+		opacity: 1;
+	}
+
+	video {
+		width: 100%;
+		border: 10px solid #2f3039;
+		border-radius: 24px;
+		// box-shadow: 0 10px 10px 0 rgba(93, 97, 104, 0.1),
+		//  0 20px 30px 0 rgba(191, 197, 209, 0.2),
+		// 	inset 0 1px 2px 0 #000,
+		// 	inset 0 -21 32px 0 rgba(0, 0, 0, 0.7);
+		box-shadow: 0 9px 9px 0 rgba(0, 0, 0, 0.1), 0 17px 26px 0 rgba(0, 0, 0, 0.2),
+			0 1px 3px 0 #000 inset, 0 -17px 26px 0 #000 inset;
+	}
+
+	.controls {
+		font-size: 13px;
+		color: #fff;
+		width: calc(100% - 60px);
+		margin: 0 30px;
+		position: relative;
+		justify-content: space-between;
+		align-items: center;
+		opacity: 0;
+		@include transform(translateY(-45px));
+		@include transition(0.3s opacity ease-in-out);
+
+		button {
+			font-size: 20px;
+			color: #fff;
+			cursor: pointer;
+			border: none;
+			background: transparent;
+			padding: 0;
+
+			&.icon-play, 
+			&.icon-pause {
+				margin-right: 20px;
+			}
+		}
+
+		.duration {
+			margin: 0 20px;
+		}
+
+		.progress {
+			display: block;
+			width: 100%;
+			height: 3px;
+			border: none;
+			border-radius: 2px;
+			cursor: pointer;
+			background: grey;
+			text-align: left;
+			
+			span {
+				width: 0%;
+				height: 100%;
+				display: inline-block;
+				background: $primary-color;
+			}
+		}
+	}
 }
 
 //-------------------------------------
@@ -622,7 +626,8 @@
 		color: $project-01;
 	}
 
-	.slick-dots li button {
+	.slick-dots li button,
+	.controls .progress span {
 		background-color: $project-01;
 
 		&:after {
@@ -710,7 +715,7 @@
 		background-image: url(../img/zenchef/zenchef__picture-all-01.jpg);
 	}
 
-	.controls #progress span {
+	.controls .progress span {
 		background-color: $project-02;
 	}
 
@@ -818,7 +823,7 @@
 		background-image: url(../img/alcatraz/alcatraz__picture--all.jpg);
 	}
 
-	.controls #progress span {
+	.controls .progress span {
 		background-color: $project-03;
 	}
 
@@ -867,7 +872,7 @@
 		background-image: url(../img/btyd/btyd__picture--all.jpg);
 	}
 
-	.controls #progress span {
+	.controls .progress span {
 		background-color: $project-04;
 	}
 

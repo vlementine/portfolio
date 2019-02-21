@@ -95,110 +95,95 @@ const idProject = () => {
 //-------------------------------------
 //	VIDEO
 //-------------------------------------
+const videoPlayer = (param) => {
+	var supportsVideo = !!document.createElement('video').canPlayType;
+	if (supportsVideo) {
+		var video = document.querySelector('.video--' + param);
+		var videoControls = document.querySelector('.video-controls--' + param);
+		var playpause = document.querySelector('.playpause--' + param);
+		var mute = document.querySelector('.mute--' + param);
+		var progress = document.querySelector('.progress--' + param);
+		var progressBar = document.querySelector('.progress-bar--' + param);
 
-// var video = document.querySelector('.video');
-// var juice = document.querySelector('.orange-juice');
-// var progress = document.querySelector('.orange-juice');
-// var btn = document.querySelector('#play-pause');
+		// Hide the default controls
+		video.controls = false;
 
-// const togglePlayPause = () => {
-// 	if (video.paused) {
-// 		btn.className = 'pause';
-// 		video.play();
-// 	}
-// 	else {
-// 		btn.className = "play";
-// 		video.pause();
-// 	}
-// };
+		// Display the user defined video controls
+		videoControls.style.display = 'flex';
 
-// btn.onclick = function () {
-// 	togglePlayPause();
-// }
+		// Play & Pause
+		playpause.addEventListener('click', function(e) {
+			if (video.paused || video.ended) {
+				this.className = 'icon-pause';
+				video.play();
+			} else {
+				this.className = 'icon-play';
+				video.pause();
+			}
+		});
 
-// video.addEventListener('timeupdate', function () {
-// 	var juicePos = video.currentTime / video.duration;
-// 	juice.style.width = juicePos * 100 + '%';
-// 	if (video.ended) {
-// 		btn.className = 'play';
-// 	}
-// 	document.querySelector('.duration').innerText = video.currentTime;
-// })
+		video.addEventListener('click', function(e) {
+			if (video.paused || video.ended) {
+				playpause.className = 'icon-pause';
+				video.play();
+			} else {
+				playpause.className = 'icon-play';
+				video.pause();
+			}
+		});
 
-// video.addEventListener('timeupdate', function () {
-// 	if (!progress.getAttribute('max')) progress.setAttribute('max', video.duration);
-// 	progress.value = video.currentTime;
-// 	progressBar.style.width = Math.floor((video.currentTime / video.duration) * 100) + '%';
-// });
+		// Volume
+		mute.addEventListener('click', function(e) {
+			if (video.muted == false) {
+				this.className = 'icon-volume_off';
+				video.muted = true;
+			} else {
+				this.className = 'icon-volume_up';
+				video.muted = false;
+			}
+		});
 
-var supportsVideo = !!document.createElement('video').canPlayType;
-if (supportsVideo) {
-	var video = document.getElementById('video');
-	var videoControls = document.getElementById('video-controls');
+		// Progress bar & duration
+		video.addEventListener('loadedmetadata', function() {
+			progress.setAttribute('max', video.duration);
+		});
 
-	var playpause = document.getElementById('playpause');
-	var mute = document.getElementById('mute');
-	var progress = document.getElementById('progress');
-	var progressBar = document.getElementById('progress-bar');
+		video.addEventListener('timeupdate', function() {
+			if (!progress.getAttribute('max')) progress.setAttribute('max', video.duration);
+			if (video.ended) {
+				video.currentTime = 0;
+				playpause.className = 'icon-play';
+			}
 
-	// Hide the default controls
-	video.controls = false;
+			progress.value = video.currentTime;
+			progressBar.style.width =
+				Math.floor((video.currentTime / video.duration) * 100) + '%';
 
-	// Display the user defined video controls
-	videoControls.style.display = 'flex';
+			var sec_num = parseInt(video.currentTime, 10);
+			var hours = Math.floor(sec_num / 3600);
+			var minutes = Math.floor((sec_num - hours * 3600) / 60);
+			var seconds = sec_num - hours * 3600 - minutes * 60;
 
-	// Play & Pause
-	playpause.addEventListener('click', function(e) {
-		if (video.paused || video.ended) {
-			this.className = 'fas fa-pause';
-			video.play();
-		}
-		else {
-			this.className = 'fas fa-play';
-			video.pause();
-		}
-	});
+			if (hours < 10) {
+				hours = '0' + hours;
+			}
+			if (minutes < 10) {
+				minutes = '0' + minutes;
+			}
+			if (seconds < 10) {
+				seconds = '0' + seconds;
+			}
 
-	// Volume
-	mute.addEventListener('click', function(e) {
-		video.muted = !video.muted;
-	});
+			document.querySelector('.duration--'+ param).innerText = minutes + ':' + seconds;
+		});
 
-	// Progress bar & duration
-	video.addEventListener('loadedmetadata', function() {
-		progress.setAttribute('max', video.duration);
-	});
-
-	video.addEventListener('timeupdate', function() {
-		if (!progress.getAttribute('max')) progress.setAttribute('max', video.duration);
-		progress.value = video.currentTime;
-		progressBar.style.width =
-			Math.floor((video.currentTime / video.duration) * 100) + '%';
-
-		var sec_num = parseInt(video.currentTime, 10);
-		var hours = Math.floor(sec_num / 3600);
-		var minutes = Math.floor((sec_num - hours * 3600) / 60);
-		var seconds = sec_num - hours * 3600 - minutes * 60;
-
-		if (hours < 10) {
-			hours = '0' + hours;
-		}
-		if (minutes < 10) {
-			minutes = '0' + minutes;
-		}
-		if (seconds < 10) {
-			seconds = '0' + seconds;
-		}
-
-		document.querySelector('.duration').innerText = minutes + ':' + seconds;
-	});
-
-	progress.addEventListener('click', function(e) {
-		var percent = e.offsetX / this.offsetWidth;
-		video.currentTime = percent * video.duration;
-		progress.value = percent / 100;
-	});
-}
+		progress.addEventListener('click', function(e) {
+			var percent = e.offsetX / this.offsetWidth;
+			video.currentTime = percent * video.duration;
+			progress.value = percent / 100;
+		});
+	}
+};
 
 //-------------------------------------
 //	PARALLAX MOBILE

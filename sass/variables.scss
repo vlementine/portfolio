@@ -19,10 +19,21 @@
 
 @font-face {
 	font-family: 'butler_stencilextrabold';
-	src: url('../font/butler_extrabold_stencil-webfont.woff2') format('woff2'),
-		url('../font/butler_extrabold_stencil-webfont.woff') format('woff');
+	src: url('../fonts/butler/butler_extrabold_stencil-webfont.woff2') format('woff2'),
+		url('../fonts/butler/butler_extrabold_stencil-webfont.woff') format('woff');
 	font-weight: normal;
 	font-style: normal;
+}
+
+@font-face {
+  font-family: 'icomoon';
+  src:  url('../fonts/icomoon/icomoon.eot?e3yhn3');
+  src:  url('../fonts/icomoon/icomoon.eot?e3yhn3#iefix') format('embedded-opentype'),
+    url('../fonts/icomoon/icomoon.ttf?e3yhn3') format('truetype'),
+    url('../fonts/icomoon/icomoon.woff?e3yhn3') format('woff'),
+    url('../fonts/icomoon/icomoon.svg?e3yhn3#icomoon') format('svg');
+  font-weight: normal;
+  font-style: normal;
 }
 
 //-------------------------------------
