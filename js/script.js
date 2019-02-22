@@ -53,11 +53,6 @@ const main = () => {
 	resizeBackground();
 	changeLogoColor();
 
-	// Copyright
-	const day = new Date();
-	const year = day.getFullYear();
-	document.querySelector('.year-copyright').textContent = year;
-
 	let windowWidth = window.innerWidth;
 	document.querySelector('.nav__items p:nth-child(1)').classList.add('item--active');
 
