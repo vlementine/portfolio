@@ -71,9 +71,15 @@ projects.forEach(projectMobile => {
       </div>
       <div class="project__visuel--mobile">
           <div class="visuel__mockup">
-              <img class="mockup--desktop" src="img/${
-                projectMobile.image
-              }_visuel-home.png" alt="Visuel Zenchef" draggable="false">
+            <img class = "mockup--desktop"
+            src = "img/${ projectMobile.image}_visuel-home.png"
+            alt = "Visuel Zenchef"
+            draggable = "false" >
+
+            <img class = "mockup--mobile"
+            src = "img/${ projectMobile.image}_visuel-home-2.png"
+            alt = "Visuel Zenchef"
+            draggable = "false" >
           </div>
           <img class="visuel__letter" src="img/${projectMobile.image}_letter.png" alt="B" draggable="false">
       </div>
