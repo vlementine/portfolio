@@ -9,7 +9,7 @@ const projects = [
 		title: 'Le Trianon',
 		keywords: '2018 — User Interface • Concert',
 		description:
-			'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus et arcu arcu. Curabitur varius fermentum gravida. Sed eleifend turpis vel lobortis pellentesque. Phasellus gravida sagittis mauris sit amet viverra.',
+			'Le Trianon est une salle de spectacle parisienne située au pied de la butte Montmartre.',
 		image: 'le-trianon',
 		href: 'le-trianon',
 		nextProject: 'Zenchef'
@@ -29,7 +29,7 @@ const projects = [
 		title: 'Alcatraz, 1962',
 		keywords: '2018 — User Interface • Webdoc',
 		description:
-			'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus et arcu arcu. Curabitur varius fermentum gravida. Sed eleifend turpis vel lobortis pellentesque. Phasellus gravida sagittis mauris sit amet viverra.',
+			'Alcatraz, 1962 est un web documentaire qui relate les préparatifs ainsi que le déroulement de l\'évasion de 3 prisonniers d\'Alcatraz. La seule évasion ayant atteint son but depuis l\'ouverture de la célèbre prison !',
 		image: 'alcatraz',
 		href: 'alcatraz',
 		nextProject: 'Back To Your Dream'
