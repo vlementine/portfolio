@@ -35,7 +35,6 @@
 	.container-fluid {
 		width: 100%;
 		text-align: center;
-		background-color: $dark-blue-05;
 	}
 
 	h4 {
@@ -190,103 +189,69 @@
 }
 
 //-------------------------------------
-//	PICTURE
+//	DESCRIPTION • SUBTITLE
 //-------------------------------------
-.project-picture {
+.container.project-description {
+	width: 80%;
+	max-width: 600px;
 	text-align: center;
-	padding: 70px;
-	background-color: $dark-blue-05;
 
-	&:nth-child(3) {
-		margin-top: 170px !important;
+	h3 {
+		color: $primary-color;
+		margin: 0 0 5px 0;
 	}
 
-	img {
-		width: 100%;
-		margin-top: -140px;
-		border-radius: 4px;
-		box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
-
-		&.mockup {
-			// border-radius: 48px;
-			// border: 15px solid #2F3039;
-			box-shadow: 0 10px 10px rgba(93, 97, 104, 0.1), 0 20px 30px rgba(191, 197, 209, 0.2),
-				inset 0 1px 2px #000000, inset 0 -21 32px rgba(0, 0, 0, 0.7);
-			box-shadow: none;
-		}
+	p {
+		font-size: 0.875em;
+		font-weight: 300;
+		color: $dark-blue-50;
+		margin: 0;
 	}
 }
 
 //-------------------------------------
-//	VIDEO
+//	PICTURE
 //-------------------------------------
-.video-wrapper {
-	width: 100%;
-	max-width: 980px;
-	margin: -140px auto 0 auto;
+.project-picture {
+	text-align: center;
+	padding: 0 70px;
 
-	&:hover .controls {
-		opacity: 1;
+	&.padding {
+		padding: 0 70px 70px 70px;
+
+		&:after {
+			height: calc(100% - 70px);
+		}
 	}
 
-	video {
+	&.shadow {
+		img, .explain {
+			box-shadow: 0 4px 50px $dark-blue-10;
+		}
+
+		&:after {
+			display: none;
+		}
+	}
+
+	&:after {
+		content: '';
+		position: absolute;
+		z-index: -1;
 		width: 100%;
-		border: 10px solid #2f3039;
-		border-radius: 24px;
-		// box-shadow: 0 10px 10px 0 rgba(93, 97, 104, 0.1),
-		//  0 20px 30px 0 rgba(191, 197, 209, 0.2),
-		// 	inset 0 1px 2px 0 #000,
-		// 	inset 0 -21 32px 0 rgba(0, 0, 0, 0.7);
-		box-shadow: 0 9px 9px 0 rgba(0, 0, 0, 0.1), 0 17px 26px 0 rgba(0, 0, 0, 0.2),
-			0 1px 3px 0 #000 inset, 0 -17px 26px 0 #000 inset;
+		height: calc(100% - 140px);
+		background: $dark-blue-03;
+		top: 70px;
+		left: 0;
 	}
 
-	.controls {
-		font-size: 13px;
-		color: #fff;
-		width: calc(100% - 60px);
-		margin: 0 30px;
-		position: relative;
-		justify-content: space-between;
-		align-items: center;
-		opacity: 0;
-		@include transform(translateY(-45px));
-		@include transition(0.3s opacity ease-in-out);
+	img {
+		width: 100%;
+		border-radius: 4px;
+		box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
 
-		button {
-			font-size: 20px;
-			color: #fff;
-			cursor: pointer;
-			border: none;
-			background: transparent;
-			padding: 0;
-
-			&.icon-play, 
-			&.icon-pause {
-				margin-right: 20px;
-			}
-		}
-
-		.duration {
-			margin: 0 20px;
-		}
-
-		.progress {
-			display: block;
-			width: 100%;
-			height: 3px;
-			border: none;
-			border-radius: 2px;
-			cursor: pointer;
-			background: grey;
-			text-align: left;
-			
-			span {
-				width: 0%;
-				height: 100%;
-				display: inline-block;
-				background: $primary-color;
-			}
+		&.mockup {
+			box-shadow: none;
 		}
 	}
 }
@@ -295,9 +260,6 @@
 //	PICTURE • SIMPLE
 //-------------------------------------
 .project-picture--simple {
-	margin-top: calc(140px + 70px) !important;
-	// margin-top + padding
-
 	img {
 		max-width: 980px;
 	}
@@ -310,30 +272,22 @@
 	display: flex;
 	justify-content: space-between;
 	align-items: flex-start;
-	margin-top: calc(140px + 70px) !important;
-	// margin-top + padding
 
 	img {
 		display: inline-block;
+		margin-top: 40px;
+
+		&:first-child {
+			margin-top: 0;
+		}
 	}
 
 	.picture-double__wrapper {
 		width: calc(50% - 33px);
 
-		img {
-			margin-top: 40px;
-
-			&:first-child {
-				margin-top: 0;
-			}
-		}
-
-		&:first-child {
-			margin-top: -140px;
-		}
-
 		&:last-child {
 			margin-left: 60px;
+			margin-top: 140px;
 		}
 	}
 }
@@ -342,13 +296,9 @@
 //	PICTURE • EXPLAIN
 //-------------------------------------
 .project-picture--explain {
-	background-color: $dark-blue-05;
-	padding: 70px;
-	margin-top: calc(140px + 70px) !important;
-	// margin-top + padding
-
 	img {
-		width: 100%;
+		box-shadow: none !important;
+		border-radius: 0;
 	}
 }
 
@@ -356,7 +306,6 @@
 	width: 100%;
 	max-width: calc(100% - 330px);
 	margin: auto;
-	margin-top: -140px;
 	border-radius: 4px;
 	box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
 }
@@ -378,7 +327,7 @@
 	top: 0;
 	width: 265px;
 	padding-bottom: 10px;
-	border-bottom: 1px solid $dark-blue-50;
+	border-bottom: 1px solid $dark-blue-30;
 
 	&:after {
 		content: '';
@@ -420,6 +369,24 @@
 }
 
 //-------------------------------------
+//	PICTURE • MOBILE
+//-------------------------------------
+.project-mobile {
+	text-align: center;
+	margin-bottom: 80px !important;
+
+	img {
+		display: inline-block;
+		width: 300px;
+
+		&:last-child {
+			margin-left: 60px;
+			margin-bottom: -80px;
+		}
+	}
+}
+
+//-------------------------------------
 //	PARALLAX • BACKGROUND
 //-------------------------------------
 .project-parallax--bg {
@@ -454,63 +421,103 @@
 	overflow: hidden;
 }
 
-//-------------------------------------
-//	PICTURE • MOBILE
-//-------------------------------------
-.project-mobile {
-	text-align: center;
-	margin-bottom: 80px !important;
 
-	img {
-		display: inline-block;
-		width: 300px;
-
-		&:last-child {
-			margin-left: 60px;
-			margin-bottom: -80px;
-		}
-	}
-}
 
 //-------------------------------------
 //	PICTURE • SLIDER
 //-------------------------------------
 .container-fluid.project-slider {
-	padding: 70px 0;
-	margin-top: calc(140px + 70px) !important;
-	// margin-top + padding
+	position: relative;
+	padding: 70px 0 118px;
+	margin-bottom: calc(140px + 40px + 8px);
+
+	&:after {
+		content: '';
+		position: absolute;
+		z-index: -1;
+		width: 100%;
+		height: calc(100% - 0px);
+		background: $dark-blue-03;
+		top: 0;
+		left: 0;
+	}
 }
 
 .slider.slider__content {
-	margin-top: calc(-70px - 70px);
-	// - Padding - decalage
-	margin-bottom: 40px;
 
 	h4 {
 		text-align: center;
 		font-weight: 600;
-		margin: 0 0 30px 0;
+		margin: 0 0 15px 0;
 	}
 }
 
 //-------------------------------------
-//	DESCRIPTION • SUBTITLE
+//	VIDEO
 //-------------------------------------
-.container.project-description {
-	width: 80%;
-	max-width: 600px;
-	text-align: center;
+.video-wrapper {
+	width: 100%;
+	max-width: 980px;
+	margin: auto;
 
-	h3 {
-		color: $primary-color;
-		margin: 0 0 5px 0;
+	&:hover .controls {
+		opacity: 1;
 	}
 
-	p {
-		font-size: 0.875em;
-		font-weight: 300;
-		color: $dark-blue-50;
-		margin: 0;
+	video {
+		width: 100%;
+		border: 10px solid #2f3039;
+		border-radius: 24px;
+		box-shadow: 0 9px 9px 0 rgba(0, 0, 0, 0.1), 0 17px 26px 0 rgba(0, 0, 0, 0.2),
+			0 1px 3px 0 #000 inset, 0 -17px 26px 0 #000 inset;
+	}
+
+	.controls {
+		font-size: 13px;
+		color: #fff;
+		width: calc(100% - 60px);
+		margin: 0 30px;
+		position: relative;
+		justify-content: space-between;
+		align-items: center;
+		opacity: 0;
+		@include transform(translateY(-45px));
+		@include transition(0.3s opacity ease-in-out);
+
+		button {
+			font-size: 20px;
+			color: #fff;
+			cursor: pointer;
+			border: none;
+			background: transparent;
+			padding: 0;
+
+			&.icon-play,
+			&.icon-pause {
+				margin-right: 20px;
+			}
+		}
+
+		.duration {
+			margin: 0 20px;
+		}
+
+		.progress {
+			display: block;
+			cursor: pointer;
+			text-align: left;
+			width: 100%;
+			height: 3px;
+			border-radius: 0;
+			background: rgba(255, 255, 255, .4);
+
+			span {
+				width: 0%;
+				height: 100%;
+				display: inline-block;
+				background: $primary-color;
+			}
+		}
 	}
 }
 
@@ -619,6 +626,7 @@
 //	VARIABLES PROJECT
 //-------------------------------------
 .project-page#project-01 {
+
 	section .container h3,
 	section h4,
 	.intro__content p:first-of-type:first-letter,
@@ -626,7 +634,6 @@
 		color: $project-01;
 	}
 
-	.slick-dots li button,
 	.controls .progress span {
 		background-color: $project-01;
 
@@ -648,14 +655,12 @@
 		background-color: $project-01;
 	}
 
-	.slick-dots li button {
+	.slick-dots li button:after {
 		background-color: $project-01;
-		@include transition(opacity 0.2s ease-in-out);
+	}
 
-		&:after {
-			border-color: $project-01;
-			@include transition(opacity 0.2s ease-in-out);
-		}
+	.slick-dots li button:hover:after {
+		width: 100%;
 	}
 
 	#explain__text-01 {
@@ -699,6 +704,7 @@
 }
 
 .project-page#project-02 {
+
 	section .container h3,
 	section h4,
 	.intro__content p:first-of-type:first-letter,
@@ -729,84 +735,84 @@
 		background-image: url(../img/zenchef/zenchef__picture-all-02.jpg);
 	}
 
-	.slick-dots li button {
+	.slick-dots li button:after {
 		background-color: $project-02;
-		@include transition(opacity 0.2s ease-in-out);
-
-		&:after {
-			border-color: $project-02;
-			@include transition(opacity 0.2s ease-in-out);
-		}
 	}
 
+	.slick-dots li button:hover:after {
+		width: 100%;
+	}
+
+
 	#explain__text-01 {
-		top: -46%;
+		top: calc(80% - 101px);
 		width: 235px;
 		padding-right: 50px;
 	}
 
 	#explain__text-02 {
-		top: -70%;
+		top: calc(53% - 65px);
 		width: 285px;
 		padding-left: 100px;
 	}
 
 	#explain__text-03 {
-		top: -29%;
+		top: calc(30% - 101px);
 		width: 215px;
 		padding-right: 30px;
 	}
 
 	#explain__text-04 {
-		top: 0%;
+		top: calc(30% - 65px);
 		width: 212px;
 		padding-left: 42px;
 	}
 
 	#explain__text-2-01 {
-		top: 12%;
+		top: calc(72% - 65px);
 		width: 215px;
 		padding-left: 40px;
 	}
 
 	#explain__text-2-02 {
-		top: -25%;
+		top: calc(50% - 101px);
 		width: 375px;
 		padding-right: 190px;
 	}
 
 	#explain__text-2-03 {
-		top: -11%;
+		top: calc(60% - 101px);
 		width: 305px;
 		padding-left: 120px;
 	}
 
 	#explain__text-2-04 {
-		top: 33%;
+		top: calc(93% - 65px);
 		width: 365px;
 		padding-right: 180px;
 	}
 
 	#explain__text-3-01 {
-		top: 11%;
+		top: calc(73% - 83px);
 		width: 215px;
 		padding-right: 40px;
 	}
 
 	#explain__text-3-02 {
-		top: 0%;
+		top: calc(50% - 83px);
 		width: 285px;
 		padding-left: 100px;
 	}
 
 	#explain__text-3-03 {
-		top: -71%;
+		top: calc(0% - 83px);
 		width: 347px;
 		padding-right: 160px;
 	}
 }
 
 .project-page#project-03 {
+
 	section .container h3,
 	section h4,
 	.intro__content p:first-of-type:first-letter,
@@ -827,14 +833,12 @@
 		background-color: $project-03;
 	}
 
-	.slick-dots li button {
+	.slick-dots li button:after {
 		background-color: $project-03;
-		@include transition(opacity 0.2s ease-in-out);
+	}
 
-		&:after {
-			border-color: $project-03;
-			@include transition(opacity 0.2s ease-in-out);
-		}
+	.slick-dots li button:hover:after {
+		width: 100%;
 	}
 
 	#explain__text-01 {
@@ -857,6 +861,7 @@
 }
 
 .project-page#project-04 {
+
 	section .container h3,
 	section h4,
 	.intro__content p:first-of-type:first-letter,
@@ -876,13 +881,11 @@
 		background-color: $project-04;
 	}
 
-	.slick-dots li button {
+	.slick-dots li button:after {
 		background-color: $project-04;
-		@include transition(opacity 0.2s ease-in-out);
+	}
 
-		&:after {
-			border-color: $project-04;
-			@include transition(opacity 0.2s ease-in-out);
-		}
+	.slick-dots li button:hover:after {
+		width: 100%;
 	}
 }
