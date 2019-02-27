@@ -492,11 +492,8 @@
 	overflow: hidden;
 
 	p {
-		font-family: 'Zilla Slab', serif;
 		font-weight: 400;
-		font-style: italic;
-		font-size: 1rem;
-		// letter-spacing: 0.15em;
+		font-size: 0.875rem;
 		color: $dark-blue-50;
 		margin: 15px 0 0 0;
 		@include transform(translateY(125%));

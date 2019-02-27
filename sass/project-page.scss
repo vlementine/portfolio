@@ -168,21 +168,20 @@
 	}
 
 	p {
-		font-family: serif;
-		// font-family: 'Zilla Slab', serif;
+		font-size: 0.875rem;
 		color: $dark-blue-50;
 		text-align: left;
-		// line-height: 1.7;
-		// letter-spacing: 0.03em;
 		margin: 10px auto 30px;
+		line-height: 1.6;
 
 		&:first-of-type:first-letter {
-			font-size: 3.2rem;
+			font-family: 'Playfair Display', serif;
+			font-size: 2.7rem;
 			float: left;
-			margin-top: 12px;
+			margin-top: 3px;
 			margin-right: 5px;
 			font-weight: 700;
-			line-height: 0.6;
+			line-height: 0.8;
 			opacity: 0.25;
 		}
 	}
@@ -225,7 +224,8 @@
 	}
 
 	&.shadow {
-		img, .explain {
+		img,
+		.explain {
 			box-shadow: 0 4px 50px $dark-blue-10;
 		}
 
@@ -421,8 +421,6 @@
 	overflow: hidden;
 }
 
-
-
 //-------------------------------------
 //	PICTURE • SLIDER
 //-------------------------------------
@@ -444,7 +442,6 @@
 }
 
 .slider.slider__content {
-
 	h4 {
 		text-align: center;
 		font-weight: 600;
@@ -509,7 +506,7 @@
 			width: 100%;
 			height: 3px;
 			border-radius: 0;
-			background: rgba(255, 255, 255, .4);
+			background: rgba(255, 255, 255, 0.4);
 
 			span {
 				width: 0%;
@@ -626,7 +623,6 @@
 //	VARIABLES PROJECT
 //-------------------------------------
 .project-page#project-01 {
-
 	section .container h3,
 	section h4,
 	.intro__content p:first-of-type:first-letter,
@@ -704,7 +700,6 @@
 }
 
 .project-page#project-02 {
-
 	section .container h3,
 	section h4,
 	.intro__content p:first-of-type:first-letter,
@@ -742,7 +737,6 @@
 	.slick-dots li button:hover:after {
 		width: 100%;
 	}
-
 
 	#explain__text-01 {
 		top: calc(80% - 101px);
@@ -812,7 +806,6 @@
 }
 
 .project-page#project-03 {
-
 	section .container h3,
 	section h4,
 	.intro__content p:first-of-type:first-letter,
@@ -861,7 +854,6 @@
 }
 
 .project-page#project-04 {
-
 	section .container h3,
 	section h4,
 	.intro__content p:first-of-type:first-letter,
