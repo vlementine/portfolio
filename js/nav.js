@@ -15,8 +15,7 @@ function displayProject(project) {
 		).length;
 		for (let i = 0; i < imgNumber; i++) {
 			document
-				.querySelectorAll(project + ' .project__visuel--mobile img')
-				[i].classList.add('enable');
+				.querySelectorAll(project + ' .project__visuel--mobile img')[i].classList.add('enable');
 		}
 		document
 			.querySelector(project + ' .project__visuel--mobile')
@@ -43,8 +42,7 @@ function displayProject(project) {
 			.length;
 		for (let i = 0; i < imgNumber; i++) {
 			document
-				.querySelectorAll(project + ' .project__visuel img')
-				[i].classList.add('enable');
+				.querySelectorAll(project + ' .project__visuel img')[i].classList.add('enable');
 		}
 		document
 			.querySelector(project + ' .project__visuel')
@@ -78,8 +76,7 @@ function hideProject(project) {
 		).length;
 		for (let i = 0; i < imgNumber; i++) {
 			document
-				.querySelectorAll(project + ' .project__visuel--mobile img')
-				[i].classList.remove('enable');
+				.querySelectorAll(project + ' .project__visuel--mobile img')[i].classList.remove('enable');
 		}
 		document
 			.querySelector(project + ' .project__visuel--mobile')
@@ -106,8 +103,7 @@ function hideProject(project) {
 			.length;
 		for (let i = 0; i < imgNumber; i++) {
 			document
-				.querySelectorAll(project + ' .project__visuel img')
-				[i].classList.remove('enable');
+				.querySelectorAll(project + ' .project__visuel img')[i].classList.remove('enable');
 		}
 		document
 			.querySelector(project + ' .project__visuel')
@@ -176,8 +172,7 @@ function returnProjects() {
 function navActiveItem(param) {
 	for (let n = 0; n < Object.keys(nav).length; n++) {
 		document
-			.querySelectorAll('.nav__items p')
-			[n].classList.remove('item--active');
+			.querySelectorAll('.nav__items p')[n].classList.remove('item--active');
 	}
 	document
 		.querySelector('.nav__items p:nth-child(' + param + ')')
@@ -223,7 +218,7 @@ function navDesktop(direction = null, param = null) {
 		projectClicked !== projectActive
 	) {
 		hideProject(idToHide);
-		setTimeout(function() {
+		setTimeout(function () {
 			document.querySelector(idToHide).classList.remove('enable');
 			document.querySelector(idToDisplay).classList.add('enable');
 			displayProject(idToDisplay);
@@ -235,7 +230,7 @@ function navDesktop(direction = null, param = null) {
 		changeLogoColor();
 
 		hideProject(idToHide);
-		setTimeout(function() {
+		setTimeout(function () {
 			document.querySelector(idToHide).classList.remove('enable');
 		}, 700);
 
@@ -245,7 +240,7 @@ function navDesktop(direction = null, param = null) {
 		changeLogoColor();
 
 		hideProject(idToHide);
-		setTimeout(function() {
+		setTimeout(function () {
 			document.querySelector(idToHide).classList.remove('enable');
 			document
 				.querySelector('.bubble--group:nth-child(1) .bubble')
@@ -278,7 +273,7 @@ function navMobile(param) {
 	if (itemClicked < totalItemNav && itemClicked !== 1) {
 		document.querySelector('.number--active').textContent = '0' + itemClicked;
 		hideProject(idToHide);
-		setTimeout(function() {
+		setTimeout(function () {
 			document.querySelector(idToHide).classList.remove('enable');
 			document.querySelector(idToDisplay).classList.add('enable');
 			displayProject(idToDisplay);
@@ -321,9 +316,9 @@ function initProject(param) {
 	document
 		.querySelectorAll(param)
 		.forEach(element =>
-			element.classList.contains('enable')
-				? element.classList.remove('enable')
-				: ''
+			element.classList.contains('enable') ?
+			element.classList.remove('enable') :
+			''
 		);
 }
 
@@ -405,9 +400,9 @@ redirectToPageProject = varURL => {
 		let urlPage = window.location.href;
 		let positionSlash = urlPage.lastIndexOf('/') + 1;
 		let urlPath =
-			urlPage.substring(positionSlash) === 'index.html'
-				? './projects/'
-				: './';
+			urlPage.substring(positionSlash) === 'index.html' ?
+			'./projects/' :
+			'./';
 		window.location.href = urlPath + varURL + '.html';
 	}, 1500);
 };
@@ -470,7 +465,7 @@ const generateMenu = () => {
 
 	projects.forEach(menuProjectMobile => {
 		menuProjectsMobile +=
-		`<div class="menu__project--mobile" id="menu__project--mobile-${ menuProjectMobile.number}" onClick="redirectToPageProject('${menuProjectMobile.href}')">
+			`<div class="menu__project--mobile" id="menu__project--mobile-${ menuProjectMobile.number}" onClick="redirectToPageProject('${menuProjectMobile.href}')">
 			<div class="menu__project-info--mobile">
 				<div class="menu__project-visuel--mobile">
 					<img src="` + imgPath + `${menuProjectMobile.image}_letter.png" alt="">

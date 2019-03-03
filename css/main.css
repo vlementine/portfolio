@@ -511,12 +511,14 @@ a {
 
 .menu__project-info--mobile {
   display: flex;
+  align-items: center;
 }
 
 .menu__project-visuel--mobile {
   display: flex;
   justify-content: center;
   align-items: center;
+  flex-shrink: 0;
   width: 40px;
   height: 40px;
   border-radius: 2px;
@@ -547,6 +549,7 @@ a {
 
 .menu__project-title span {
   font-size: 0.75rem;
+  text-align: left;
   text-transform: uppercase;
   color: rgba(6, 10, 46, 0.3);
 }
@@ -677,7 +680,8 @@ h3 {
   letter-spacing: 0.02em;
 }
 
-[class^="icon-"], [class*=" icon-"] {
+[class^="icon-"],
+[class*=" icon-"] {
   font-family: 'icomoon' !important;
   speak: none;
   font-style: normal;
@@ -771,13 +775,14 @@ button {
 }
 
 .btn {
+  font-family: 'Asap', sans-serif;
   display: inline-block;
   border: 1px solid rgba(6, 10, 46, 0.1);
   font-size: 0.6rem;
   font-weight: 500;
   letter-spacing: 1px;
   text-transform: uppercase;
-  background: #FFF;
+  background: #fff;
   color: #333366;
   border-radius: 2px;
   height: 40px;
@@ -1085,7 +1090,6 @@ button {
 }
 
 .nav--mobile .arrow__wrapper {
-  width: 20px;
   padding: 10px 0;
   cursor: pointer;
 }
@@ -1405,10 +1409,8 @@ button {
 }
 
 .description p {
-  font-family: 'Zilla Slab', serif;
   font-weight: 400;
-  font-style: italic;
-  font-size: 1rem;
+  font-size: 0.875rem;
   color: rgba(6, 10, 46, 0.5);
   margin: 15px 0 0 0;
   -webkit-transform: translateY(125%);
@@ -1939,6 +1941,11 @@ button {
 
 .bubble textarea {
   height: auto;
+  width: 280px;
+}
+
+.bubble input#mailAnswer {
+  width: 220px;
 }
 
 .bubble ::-webkit-input-placeholder {
@@ -1995,18 +2002,23 @@ button {
 .bubble--group__choice {
   display: flex;
   justify-content: center;
-  align-self: center;
-  margin-bottom: 20px;
+  align-items: center;
 }
 
 .bubble--group__choice .bubble {
-  width: calc(33.333333333% - 20px);
+  width: calc(33.333333333% - 40px);
   text-align: center;
   padding: 0;
   cursor: pointer;
   box-shadow: none;
   background: none;
   flex-grow: 1;
+  margin-right: 20px;
+  align-self: stretch;
+}
+
+.bubble--group__choice .bubble:last-child {
+  margin-right: 0;
 }
 
 .bubble--group__choice .bubble input {
@@ -2015,26 +2027,48 @@ button {
   cursor: pointer;
 }
 
-.bubble--group__choice .bubble input:checked ~ div {
-  box-shadow: 0 4px 16px rgba(6, 10, 46, 0.1);
-  -webkit-transform: scale(1);
-  -moz-transform: scale(1);
-  -ms-transform: scale(1);
-  -o-transform: scale(1);
-  transform: scale(1);
+.bubble--group__choice .bubble input:checked ~ .checked {
+  opacity: 1;
 }
 
-.bubble--group__choice .bubble input:not(:checked) ~ div {
-  -webkit-transform: scale(0.9);
-  -moz-transform: scale(0.9);
-  -ms-transform: scale(0.9);
-  -o-transform: scale(0.9);
-  transform: scale(0.9);
+.bubble--group__choice .bubble input:not(:checked) ~ .choice {
+  opacity: 0.4;
 }
 
-.bubble--group__choice .bubble input:not(:checked) ~ div span,
-.bubble--group__choice .bubble input:not(:checked) ~ div p {
-  opacity: 0.5;
+.bubble--group__choice .bubble .checked {
+  opacity: 0;
+  position: absolute;
+  top: 18px;
+  right: 35px;
+  z-index: 10;
+  background: #FFF;
+  width: 20px;
+  height: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  -webkit-transition: opacity 0.2s ease-in-out;
+  -moz-transition: opacity 0.2s ease-in-out;
+  -ms-transition: opacity 0.2s ease-in-out;
+  -o-transition: opacity 0.2s ease-in-out;
+  transition: opacity 0.2s ease-in-out;
+}
+
+.bubble--group__choice .bubble .checked span {
+  display: block;
+  width: 6px;
+  height: 10px;
+  margin-top: -2px;
+  margin-right: 0;
+  height: 10px;
+  border-top: 2px solid #35c97b;
+  border-left: 2px solid #35c97b;
+  -webkit-transform: rotate(-130deg);
+  -moz-transform: rotate(-130deg);
+  -ms-transform: rotate(-130deg);
+  -o-transform: rotate(-130deg);
+  transform: rotate(-130deg);
 }
 
 .bubble--group__choice .bubble .choice {
@@ -2052,9 +2086,11 @@ button {
 
 .bubble--group__choice .bubble .choice span {
   position: relative;
-  display: block;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-shrink: 0;
   font-size: 1.25rem;
-  line-height: 64px;
   margin: 10px auto 20px;
   border-radius: 50%;
   width: 64px;
@@ -2452,19 +2488,21 @@ button {
 }
 
 .intro__content p {
-  font-family: serif;
+  font-size: 0.875rem;
   color: rgba(6, 10, 46, 0.5);
   text-align: left;
   margin: 10px auto 30px;
+  line-height: 1.6;
 }
 
 .intro__content p:first-of-type:first-letter {
-  font-size: 3.2rem;
+  font-family: 'Playfair Display', serif;
+  font-size: 2.7rem;
   float: left;
-  margin-top: 12px;
+  margin-top: 3px;
   margin-right: 5px;
   font-weight: 700;
-  line-height: 0.6;
+  line-height: 0.8;
   opacity: 0.25;
 }
 
@@ -2499,7 +2537,8 @@ button {
   height: calc(100% - 70px);
 }
 
-.project-picture.shadow img, .project-picture.shadow .explain {
+.project-picture.shadow img,
+.project-picture.shadow .explain {
   box-shadow: 0 4px 50px rgba(6, 10, 46, 0.1);
 }
 
@@ -2911,7 +2950,7 @@ button {
 
 .project-page#project-01 #parallax-bg-01 div,
 .project-page#project-01 .project-parallax--bg--mobile .parallax-visuel {
-  background-image: url(../img/le-trianon/le-trianon__picture--all.jpg);
+  background-image: url(../img/le-trianon/le-trianon__picture-parallax.jpg);
 }
 
 .project-page#project-01 .controls #progress span {
@@ -2978,7 +3017,7 @@ button {
 
 .project-page#project-02 #parallax-bg-01 div,
 .project-page#project-02 .project-parallax--bg--mobile .parallax-visuel {
-  background-image: url(../img/zenchef/zenchef__picture-all-01.jpg);
+  background-image: url(../img/zenchef/zenchef__picture-product-parallax.jpg);
 }
 
 .project-page#project-02 .controls .progress span {
@@ -2992,7 +3031,7 @@ button {
 
 .project-page#project-02 #parallax-bg-02 div,
 .project-page#project-02 #parallax-bg--mobile-02 .parallax-visuel {
-  background-image: url(../img/zenchef/zenchef__picture-all-02.jpg);
+  background-image: url(../img/zenchef/zenchef__picture-mkt-parallax.jpg);
 }
 
 .project-page#project-02 .slick-dots li button:after {
@@ -3253,8 +3292,8 @@ button {
     flex-grow: 1;
   }
   .contact__form form {
-    margin: 0 10px 40px;
-    width: calc(100% - 20px);
+    margin: 0 30px 40px;
+    width: calc(100% - 60px);
   }
   .menu__projects-wrapper .menu__projects .menu__project {
     flex-direction: column;
@@ -3355,6 +3394,10 @@ button {
   .contact__description .description__wrapper .description {
     display: none;
   }
+  .contact__form form {
+    margin: 0 15px 40px;
+    width: calc(100% - 30px);
+  }
   .bubble--group:nth-child(1) .bubble,
   .bubble--group:nth-child(1) .bubble--answer {
     -webkit-animation: bubble ease-in-out forwards 0.6s;
@@ -3366,10 +3409,12 @@ button {
   }
   .bubble--group__choice {
     flex-direction: column;
+    width: 100%;
+    align-items: flex-start;
   }
   .bubble--group__choice .bubble {
     width: 100%;
-    margin-bottom: 0;
+    margin: 0 0 20px 0;
   }
   .bubble--group__choice .bubble:last-child {
     margin-bottom: 20px;
@@ -3420,6 +3465,9 @@ button {
   }
   .project-page .container.project-description, .project-page .container.project-intro {
     width: calc(100% - 60px);
+  }
+  .project-picture--double img {
+    margin-top: 10px;
   }
   .project-parallax--bg {
     display: none;

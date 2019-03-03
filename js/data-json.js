@@ -19,7 +19,7 @@ const projects = [
 		title: 'Zenchef',
 		keywords: '2019 — Product Design & Marketing • Food tech',
 		description:
-			'Zenchef est une entreprise française qui permet aux restaurateurs de gérez leurs réservations sans commisssions ni intermédiaires, fidélisez leurs clients et maîtrisez leur réputation en ligne.',
+			'Zenchef est une entreprise française qui permet aux restaurateurs de gérez leurs réservations sans commissions ni intermédiaires, fidélisez leurs clients et maîtrisez leur réputation en ligne.',
 		image: 'zenchef',
 		href: 'zenchef',
 		nextProject: 'Alcatraz, 1962'

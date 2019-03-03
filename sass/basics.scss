@@ -27,7 +27,7 @@ body {
 		overflow: hidden;
 	}
 
-	& > div {
+	&>div {
 		overflow: hidden;
 		position: relative;
 	}
@@ -83,26 +83,23 @@ a {
 	right: 70px;
 	z-index: 30;
 
-	&:hover .arrow__clickable + .return__text span {
+	&:hover .arrow__clickable+.return__text span {
 		&:first-child {
 			color: $dark-blue-80;
 			opacity: 0;
 			@include transform(translateY(-15px));
-			@include transition(
-				color 0.4s ease-in-out 0.2s,
-				opacity 0.4s ease-in-out 0.2s,
-				transform 0.4s ease-in-out 0.2s
-			);
+			@include transition(color 0.4s ease-in-out 0.2s,
+			opacity 0.4s ease-in-out 0.2s,
+			transform 0.4s ease-in-out 0.2s);
 		}
+
 		&:last-child {
 			color: $dark-blue-80;
 			opacity: 1;
 			@include transform(translateY(0));
-			@include transition(
-				color 0.4s ease-in-out 0.1s,
-				opacity 0.4s ease-in-out 0.1s,
-				transform 0.4s ease-in-out 0.1s
-			);
+			@include transition(color 0.4s ease-in-out 0.1s,
+			opacity 0.4s ease-in-out 0.1s,
+			transform 0.4s ease-in-out 0.1s);
 		}
 	}
 }
@@ -230,10 +227,8 @@ a {
 	&.disable {
 		opacity: 0;
 		z-index: -1;
-		@include transition(
-			opacity 0.4s ease-in-out,
-			z-index 0.4s ease-in-out 0.4s
-		);
+		@include transition(opacity 0.4s ease-in-out,
+		z-index 0.4s ease-in-out 0.4s);
 	}
 }
 
@@ -394,6 +389,7 @@ a {
 	justify-content: space-between;
 	align-items: center;
 	margin-bottom: 20px;
+
 	&:last-child {
 		margin-bottom: 0;
 	}
@@ -401,17 +397,20 @@ a {
 
 .menu__project-info--mobile {
 	display: flex;
+	align-items: center;
 }
 
 .menu__project-visuel--mobile {
 	display: flex;
 	justify-content: center;
 	align-items: center;
+	flex-shrink: 0;
 	width: 40px;
 	height: 40px;
 	border-radius: 2px;
 	box-shadow: 0 2px 16px $dark-blue-20;
 	background: $gradient-primary;
+
 	img {
 		height: 60%;
 	}
@@ -435,6 +434,7 @@ a {
 
 	span {
 		font-size: 0.75rem;
+		text-align: left;
 		text-transform: uppercase;
 		color: $dark-blue-30;
 	}
@@ -534,6 +534,7 @@ footer,
 			}
 		}
 	}
+
 	&.menu-visible {
 		// opacity: 0;
 		// position: fixed;
@@ -562,35 +563,41 @@ h3 {
 
 //-- Icomoon
 
-[class^="icon-"], [class*=" icon-"] {
-  font-family: 'icomoon' !important;
-  speak: none;
-  font-style: normal;
-  font-weight: normal;
-  font-variant: normal;
-  text-transform: none;
-  line-height: 1;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+[class^="icon-"],
+[class*=" icon-"] {
+	font-family: 'icomoon' !important;
+	speak: none;
+	font-style: normal;
+	font-weight: normal;
+	font-variant: normal;
+	text-transform: none;
+	line-height: 1;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
 }
 
 .icon-fullscreen_exit:before {
-  content: "\e900";
+	content: "\e900";
 }
+
 .icon-fullscreen:before {
-  content: "\e901";
+	content: "\e901";
 }
+
 .icon-pause:before {
-  content: "\e902";
+	content: "\e902";
 }
+
 .icon-play:before {
-  content: "\e903";
+	content: "\e903";
 }
+
 .icon-volume_off:before {
-  content: "\e904";
+	content: "\e904";
 }
+
 .icon-volume_up:before {
-  content: "\e905";
+	content: "\e905";
 }
 
 
@@ -609,14 +616,13 @@ h3 {
 	z-index: 56;
 	@include transition(transform 0.6s ease-in-out);
 	@include transform(translate(100%, 0));
-	 
+
 	&.transition-screen--white {
 		background: #fff !important;
 		@include transition(.6s transform .3s ease-in-out);
 	}
+
 	&.redirect-page {
 		@include transform(translate(0, 0));
 	}
 }
-
-
