@@ -41,7 +41,6 @@
 		h1 {
 			font-size: 0.6rem;
 			color: $dark-blue-30;
-			font-weight: 500;
 			text-transform: uppercase;
 			letter-spacing: 0.15em;
 			margin: 0;
@@ -56,6 +55,22 @@
 			font-weight: 300;
 			margin: 15px 0;
 			line-height: 1.3em;
+		}
+
+		a {
+			display: block;
+			font-family: 'Asap', sans-serif;
+			font-size: 0.6rem;
+			font-weight: 500;
+			letter-spacing: 1px;
+			text-transform: uppercase;
+			color: $dark-blue-30;
+			margin: 15px 0;
+			@include transition(color 0.2s ease-in-out);
+
+			&:hover {
+				color: $primary-color;
+			}
 		}
 	}
 
@@ -586,7 +601,7 @@
 	text-align: center;
 	margin-bottom: 30px;
 
-	&>div {
+	& > div {
 		position: relative;
 	}
 }
@@ -950,11 +965,11 @@
 			opacity: 0;
 			cursor: pointer;
 
-			&:checked~.checked {
+			&:checked ~ .choice .checked {
 				opacity: 1;
 			}
 
-			&:not(:checked)~.choice {
+			&:not(:checked) ~ .choice {
 				opacity: 0.4;
 			}
 		}
@@ -962,10 +977,10 @@
 		.checked {
 			opacity: 0;
 			position: absolute;
-			top: 18px;
-			right: 35px;
+			top: -7px;
+			right: -13px;
 			z-index: 10;
-			background: #FFF;
+			background: #fff;
 			width: 20px;
 			height: 20px;
 			display: flex;
@@ -995,7 +1010,7 @@
 			border-radius: 4px;
 			@include transition(transform 0.4s ease-in-out);
 
-			span {
+			.choice__emoji {
 				position: relative;
 				display: flex;
 				justify-content: center;
@@ -1004,8 +1019,8 @@
 				font-size: 1.25rem;
 				margin: 10px auto 20px;
 				border-radius: 50%;
-				width: 64px;
-				height: 64px;
+				width: 55px;
+				height: 55px;
 				box-shadow: 0 0 8px rgba($color: #000000, $alpha: 0.1);
 				@include transition(opacity 0.4s ease-in-out);
 
