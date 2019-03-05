@@ -967,6 +967,7 @@
 			cursor: pointer;
 			width: 0;
 
+			&:checked ~ .choice,
 			&:checked ~ .choice .checked {
 				opacity: 1;
 			}
