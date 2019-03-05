@@ -906,7 +906,7 @@
 
 	textarea {
 		height: auto;
-		width: 280px;
+		width: 230px;
 	}
 
 	input#mailAnswer {
@@ -964,6 +964,7 @@
 			position: absolute;
 			opacity: 0;
 			cursor: pointer;
+			width: 0;
 
 			&:checked ~ .choice .checked {
 				opacity: 1;
