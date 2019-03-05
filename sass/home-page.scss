@@ -891,14 +891,14 @@
 
 	input,
 	textarea {
+		font-size: initial;
 		font-family: 'Asap', sans-serif;
 		background: transparent;
 		border: transparent;
 		padding-bottom: 4px;
 		outline: none;
 		color: #fff;
-		font-size: 0.9rem;
-		line-height: 18px;
+		// font-size: 0.9rem;
 		font-weight: 600;
 		height: 16px;
 		resize: none;
@@ -906,6 +906,7 @@
 	}
 
 	textarea {
+		line-height: 18px;
 		height: auto;
 		width: 230px;
 	}
