@@ -894,7 +894,6 @@
 		font-family: 'Asap', sans-serif;
 		background: transparent;
 		border: transparent;
-		padding-bottom: 4px;
 		outline: none;
 		color: #fff;
 		line-height: 18px;
@@ -932,6 +931,20 @@
 
 	&.enable {
 		@include animation(0.3s bubble ease-in-out forwards 0.6s);
+	}
+
+	button {
+		display: none;
+		position: absolute;
+		position: absolute;
+		bottom: 14px;
+		right: 10px;
+		background: #fff;
+		width: 34px;
+		height: 34px;
+		border-radius: 50%;
+		border: none;
+		padding: 0 0 0 2px;
 	}
 }
 

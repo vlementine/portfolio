@@ -29,6 +29,7 @@ const displayBubble = (groupBubble, nbBubble) => {
 //	GET ANSWER
 //-------------------------------------
 const getAnswer = (name, groupBubble, nbBubble) => {
+	console.log(name);
 	let answer = document.getElementById(name + 'Answer').value;
 	displayBubble(groupBubble, nbBubble);
 

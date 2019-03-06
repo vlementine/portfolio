@@ -188,14 +188,16 @@
 							</div>
 
 							<div class="bubble bubble--answer">
-								<button>Enter</button>
+								<button onclick="getAnswer('name',3,3)">
+									<img src="img/send.svg" alt="Bouton envoyer" width="14" />
+								</button>
 								<input
 									type="text"
 									id="nameAnswer"
 									name="name"
 									placeholder="Écris ton nom ici"
 									autocomplete="off"
-									onKeyPress="if(event.keyCode == 13) { getAnswer(name,3,3); this.blur(); }"
+									onKeyPress="if(event.keyCode == 13 && window.innerWidth >=650) { getAnswer(name,3,3); this.blur(); }"
 								/>
 							</div>
 						</div>
@@ -253,7 +255,9 @@
 							</div>
 
 							<div class="bubble bubble--answer">
-								<button>Enter</button>
+								<button onclick="getAnswer('name',5,2)">
+									<img src="img/send.svg" alt="Bouton envoyer" width="14" />
+								</button>
 								<textarea
 									type="text"
 									id="messageAnswer"
@@ -274,7 +278,9 @@
 
 							<div class="bubble bubble--answer">
 								<p id="result"></p>
-								<button>Enter</button>
+								<button onclick="getAnswer('name',6,1)">
+									<img src="img/send.svg" alt="Bouton envoyer" width="14" />
+								</button>
 								<input
 									type="email"
 									id="mailAnswer"
