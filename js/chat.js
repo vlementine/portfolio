@@ -2,13 +2,14 @@
 //	DISPLAY BUBBLE
 //-------------------------------------
 const displayBubble = (groupBubble, nbBubble) => {
+	let contatcForm = document.querySelector('.contact__form form');
+
 	for (let n = 0; n < 2; n++) {
 		document
 			.querySelectorAll('.bubble--group:nth-child(' + groupBubble + ') .bubble')
 			[n].classList.add('enable');
-		document
-			.querySelector('.contact__form form')
-			.scrollTo(0, document.querySelector('.contact__form form').scrollHeight);
+
+		contatcForm.scrollTo(0, contatcForm.scrollHeight);
 	}
 
 	if (nbBubble == 3) {
@@ -18,9 +19,8 @@ const displayBubble = (groupBubble, nbBubble) => {
 					'.bubble--group:nth-child(' + groupBubble + ') .bubble--group__choice .bubble'
 				)
 				[n].classList.add('enable__choice');
-			document
-				.querySelector('.contact__form form')
-				.scrollTo(0, document.querySelector('.contact__form form').scrollHeight);
+
+			contatcForm.scrollTo(0, contatcForm.scrollHeight);
 		}
 	}
 };
