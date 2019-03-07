@@ -120,15 +120,6 @@ const main = () => {
 						document.querySelector('.home.disable')
 					) {
 						navDesktop(direction);
-					} else if (document.querySelector('.contact__wrapper:not(.disable)')) {
-						document.querySelector('.home').classList.add('disable');
-						document.querySelector('.contact__wrapper').classList.add('disable');
-						setTimeout(() => {
-							document.querySelector('#project-04').classList.add('enable');
-							displayProject('#project-04');
-						}, 500);
-						initProject('.project');
-						navActiveItem(5);
 					}
 				}
 			}

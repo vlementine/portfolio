@@ -287,6 +287,17 @@
 	.bubble--group:nth-child(1) .bubble--answer {
 		@include animation(bubble ease-in-out forwards 0.6s);
 		display: inline-block;
+		width: auto;
+		padding: 20px;
+	}
+
+	.bubble--answer {
+		width: 100%;
+		padding: 20px 64px 20px 20px;
+
+		button {
+			display: block;
+		}
 	}
 
 	.bubble--group__choice {
