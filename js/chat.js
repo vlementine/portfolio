@@ -25,6 +25,12 @@ const displayBubble = (groupBubble, nbBubble) => {
 	}
 };
 
+const test = () => {
+	
+	let contatcForm = document.querySelector('.contact__form form');
+	contatcForm.scrollTo(0, contatcForm.scrollHeight);
+};
+
 //-------------------------------------
 //	GET ANSWER
 //-------------------------------------

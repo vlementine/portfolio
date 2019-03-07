@@ -2,7 +2,7 @@
 <html lang="fr">
 	<head>
 		<meta charset="UTF-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
 		<meta http-equiv="X-UA-Compatible" content="ie=edge" />
 		<title>Clémentine Bertrand — Designer</title>
 		<link rel="icon" type="image/png" href="img/favicon.png" />
@@ -188,16 +188,17 @@
 							</div>
 
 							<div class="bubble bubble--answer">
-								<button onclick="getAnswer('name',3,3)">
+								<div class="btn-enter" onclick="document.getElementById('nameAnswer').blur(); getAnswer('name',3,3)">
 									<img src="img/send.svg" alt="Bouton envoyer" width="14" />
-								</button>
+								</div>
 								<input
 									type="text"
 									id="nameAnswer"
 									name="name"
 									placeholder="Écris ton nom ici"
 									autocomplete="off"
-									onKeyPress="if(event.keyCode == 13 && window.innerWidth >=650) { getAnswer(name,3,3); this.blur(); }"
+									onfocusin="test()"
+									onKeyPress="if(window.innerWidth >=650 && event.keyCode == 13) { this.blur(); getAnswer(name,3,3); }"
 								/>
 							</div>
 						</div>
@@ -255,15 +256,15 @@
 							</div>
 
 							<div class="bubble bubble--answer">
-								<button onclick="getAnswer('name',5,2)">
+								<div class="btn-enter" onclick="getAnswer('name',5,2)">
 									<img src="img/send.svg" alt="Bouton envoyer" width="14" />
-								</button>
+								</div>
 								<textarea
 									type="text"
 									id="messageAnswer"
 									name="message"
 									placeholder="Écris ton message ici"
-									onKeyPress="if(event.keyCode == 13 && !event.shiftKey) {getAnswer(name,5,2); this.blur();}"
+									onKeyPress="if(window.innerWidth >=650 && event.keyCode == 13 && !event.shiftKey) {getAnswer(name,5,2); this.blur();}"
 								></textarea>
 							</div>
 						</div>
@@ -278,9 +279,9 @@
 
 							<div class="bubble bubble--answer">
 								<p id="result"></p>
-								<button onclick="getAnswer('name',6,1)">
+								<div class="btn-enter" onclick="getAnswer('name',6,1)">
 									<img src="img/send.svg" alt="Bouton envoyer" width="14" />
-								</button>
+								</div>
 								<input
 									type="email"
 									id="mailAnswer"

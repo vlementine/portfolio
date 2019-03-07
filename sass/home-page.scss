@@ -933,7 +933,7 @@
 		@include animation(0.3s bubble ease-in-out forwards 0.6s);
 	}
 
-	button {
+	.btn-enter {
 		display: none;
 		position: absolute;
 		position: absolute;
@@ -944,7 +944,7 @@
 		height: 34px;
 		border-radius: 50%;
 		border: none;
-		padding: 0 0 0 2px;
+		padding: 2px 0 0 2px;
 	}
 }
 
