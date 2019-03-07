@@ -187,17 +187,11 @@
 								<p>Cool ! Comment t’appelles-tu ?</p>
 							</div>
 
-							<div class="bubble bubble--answer">
-								<input
-									type="text"
-									id="nameAnswer"
-									name="name"
-									placeholder="Écris ton nom ici"
-									autocomplete="off"
-									onKeyPress="if(event.keyCode == 13) { getAnswer(name,3,3); this.blur(); }"
-								/>
-							</div>
-						</div>
+            <div class="bubble bubble--answer">
+              <input type="text" id="nameAnswer" name="name" placeholder="Écris ton nom ici" autocomplete="off" onKeyPress="if(event.keyCode == 13) { getAnswer(name,3,3); this.blur(); }"
+              />
+            </div>
+          </div>
 
 						<div class="bubble--group">
 							<div class="bubble">
@@ -251,16 +245,10 @@
 								<p>Super ! Tu peux m’en dire plus ?</p>
 							</div>
 
-							<div class="bubble bubble--answer">
-								<textarea
-									type="text"
-									id="messageAnswer"
-									name="message"
-									placeholder="Écris ton message ici"
-									onKeyPress="if(event.keyCode == 13 && !event.shiftKey) {getAnswer(name,5,2); this.blur();}"
-								></textarea>
-							</div>
-						</div>
+            <div class="bubble bubble--answer">
+              <textarea type="text" id="messageAnswer" name="message" placeholder="Écris ton message ici" onKeyPress="if(event.keyCode == 13 && !event.shiftKey) {getAnswer(name,5,2); this.blur();}"></textarea>
+            </div>
+          </div>
 
 						<div class="bubble--group">
 							<div class="bubble">
@@ -270,18 +258,12 @@
 								</p>
 							</div>
 
-							<div class="bubble bubble--answer">
-								<p id="result"></p>
-								<input
-									type="email"
-									id="mailAnswer"
-									name="mail"
-									autocomplete="off"
-									placeholder="Écris ton mail ici"
-									onKeyPress="if(event.keyCode == 13) {validate(6,1); this.blur()};"
-								/>
-							</div>
-						</div>
+            <div class="bubble bubble--answer">
+              <p id="result"></p>
+              <input type="email" id="mailAnswer" name="mail" autocomplete="off" placeholder="Écris ton mail ici" onKeyPress="if(event.keyCode == 13) {validate(6,1); this.blur()};"
+              />
+            </div>
+          </div>
 
 						<div class="bubble--group">
 							<div class="bubble">
