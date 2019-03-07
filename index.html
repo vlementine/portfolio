@@ -263,7 +263,8 @@
 									type="text"
 									id="messageAnswer"
 									name="message"
-									placeholder="Écris ton message ici"
+                  placeholder="Écris ton message ici"
+                  onfocusin="test()"
 									onKeyPress="if(window.innerWidth >=650 && event.keyCode == 13 && !event.shiftKey) {getAnswer(name,5,2); this.blur();}"
 								></textarea>
 							</div>
@@ -287,7 +288,8 @@
 									id="mailAnswer"
 									name="mail"
 									autocomplete="off"
-									placeholder="Écris ton mail ici"
+                  placeholder="Écris ton mail ici"
+                  onfocusin="test()"
 									onKeyPress="if(window.innerWidth >=650 && event.keyCode == 13) {validate(6,1); this.blur()};"
 								/>
 							</div>
