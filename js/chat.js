@@ -9,7 +9,9 @@ const displayBubble = (groupBubble, nbBubble) => {
 			.querySelectorAll('.bubble--group:nth-child(' + groupBubble + ') .bubble')
 			[n].classList.add('enable');
 
-		contatcForm.scrollTo(0, contatcForm.scrollHeight);
+		setTimeout(() => {
+			contatcForm.scrollTo(0, contatcForm.scrollHeight);
+		}, 500);
 	}
 
 	if (nbBubble == 3) {
@@ -20,7 +22,9 @@ const displayBubble = (groupBubble, nbBubble) => {
 				)
 				[n].classList.add('enable__choice');
 
-			contatcForm.scrollTo(0, contatcForm.scrollHeight);
+			setTimeout(() => {
+				contatcForm.scrollTo(0, contatcForm.scrollHeight);
+			}, 500);
 		}
 	}
 };
@@ -35,7 +39,7 @@ const test = () => {
 //-------------------------------------
 const getAnswer = (name, groupBubble, nbBubble) => {
 	let answer = document.getElementById(name + 'Answer').value;
-	
+
 	document.querySelector('.btn-enter--' + groupBubble).style.display = 'none';
 
 	displayBubble(groupBubble, nbBubble);

@@ -851,6 +851,7 @@
 		width: calc(100% - 120px);
 		position: relative;
 		overflow-y: auto;
+		@include transition(height 5s ease-in-out);
 	}
 }
 
