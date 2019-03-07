@@ -1,3 +1,5 @@
+const globalHeight = window.innerHeight;
+
 //-------------------------------------
 //	DISPLAY BUBBLE
 //-------------------------------------
@@ -26,8 +28,13 @@ const displayBubble = (groupBubble, nbBubble) => {
 };
 
 const test = () => {
-	let contatcForm = document.querySelector('.contact__form form');
-	contatcForm.scrollTo(0, contatcForm.scrollHeight);
+  let contatcForm = document.querySelector('.contact__form form');
+  setTimeout(() => {
+    if (window.innerHeight < globalHeight) {
+      contatcForm.scrollTo(0, contatcForm.scrollHeight);
+    }
+  }, 500);
+  // contatcForm.scrollTo(0, contatcForm.scrollHeight);
 };
 
 //-------------------------------------
