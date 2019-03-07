@@ -188,7 +188,7 @@
 							</div>
 
 							<div class="bubble bubble--answer">
-								<div class="btn-enter" onclick="document.getElementById('nameAnswer').blur(); getAnswer('name',3,3)">
+								<div class="btn-enter btn-enter--3" onclick="document.getElementById('nameAnswer').blur(); getAnswer('name',3,3)">
 									<img src="img/send.svg" alt="Bouton envoyer" width="14" />
 								</div>
 								<input
@@ -256,7 +256,7 @@
 							</div>
 
 							<div class="bubble bubble--answer">
-								<div class="btn-enter" onclick="getAnswer('name',5,2)">
+								<div class="btn-enter btn-enter--5" onclick="getAnswer('name',5,2)">
 									<img src="img/send.svg" alt="Bouton envoyer" width="14" />
 								</div>
 								<textarea
@@ -279,7 +279,7 @@
 
 							<div class="bubble bubble--answer">
 								<p id="result"></p>
-								<div class="btn-enter" onclick="getAnswer('name',6,1)">
+								<div class="btn-enter btn-enter--6" onclick="getAnswer('name',6,1)">
 									<img src="img/send.svg" alt="Bouton envoyer" width="14" />
 								</div>
 								<input
@@ -288,7 +288,7 @@
 									name="mail"
 									autocomplete="off"
 									placeholder="Écris ton mail ici"
-									onKeyPress="if(event.keyCode == 13) {validate(6,1); this.blur()};"
+									onKeyPress="if(window.innerWidth >=650 && event.keyCode == 13) {validate(6,1); this.blur()};"
 								/>
 							</div>
 						</div>

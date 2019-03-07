@@ -26,7 +26,6 @@ const displayBubble = (groupBubble, nbBubble) => {
 };
 
 const test = () => {
-	
 	let contatcForm = document.querySelector('.contact__form form');
 	contatcForm.scrollTo(0, contatcForm.scrollHeight);
 };
@@ -36,6 +35,9 @@ const test = () => {
 //-------------------------------------
 const getAnswer = (name, groupBubble, nbBubble) => {
 	let answer = document.getElementById(name + 'Answer').value;
+	
+	document.querySelector('.btn-enter--' + groupBubble).style.display = 'none';
+
 	displayBubble(groupBubble, nbBubble);
 
 	if (answer !== '' && answer !== ' ') {
