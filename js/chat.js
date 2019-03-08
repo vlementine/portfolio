@@ -50,7 +50,7 @@ const androidScrollingFix = () => {
 				behavior: 'smooth'
 			});
 		}
-	}, 200);
+	}, 100);
 };
 
 //-------------------------------------
