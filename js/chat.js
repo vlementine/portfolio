@@ -111,7 +111,7 @@ const validate = (groupBubble, nbBubble) => {
 		displayBubble(groupBubble, nbBubble);
 		sendEmail();
 	} else {
-		result.innerText = "L'adresse n'est pas valide";
+		result.innerHTML = "<p class='chat-msg-error'>L'adresse mail n'est pas valide</p>";
 		result.style.color = 'crimson';
 	}
 	return false;

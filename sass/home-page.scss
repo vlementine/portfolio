@@ -850,8 +850,20 @@
 		margin: 0 60px 40px;
 		width: calc(100% - 120px);
 		position: relative;
-		overflow-y: auto;
+		overflow-y: scroll;
+		-webkit-overflow-scrolling: touch;
 		@include transition(height 5s ease-in-out);
+	}
+
+	.chat-msg-error {
+		color: #eb5160;
+		position: absolute;
+		bottom: -24px;
+		left: 8px;
+		font-size: 12px;
+		border-radius: 2px;
+		text-align: center;
+		font-weight: 500;
 	}
 }
 
@@ -926,8 +938,8 @@
 }
 
 .bubble--answer {
-	background: $dark-blue-50;
-	color: #fff;
+	background: $dark-blue-50 !important;
+	color: #fff !important;
 	align-self: flex-end;
 
 	&.enable {
