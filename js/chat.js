@@ -12,8 +12,12 @@ const displayBubble = (groupBubble, nbBubble) => {
 			[n].classList.add('enable');
 
 		setTimeout(() => {
-			contatcForm.scrollTo(0, contatcForm.scrollHeight);
-		}, 500);
+			contatcForm.scrollTo({
+				top: contatcForm.scrollHeight,
+				left: 0,
+				behavior: 'smooth'
+			});
+		}, 200);
 	}
 
 	if (nbBubble == 3) {
@@ -25,20 +29,28 @@ const displayBubble = (groupBubble, nbBubble) => {
 				[n].classList.add('enable__choice');
 
 			setTimeout(() => {
-				contatcForm.scrollTo(0, contatcForm.scrollHeight);
-			}, 500);
+				contatcForm.scrollTo({
+					top: contatcForm.scrollHeight,
+					left: 0,
+					behavior: 'smooth'
+				});
+			}, 200);
 		}
 	}
 };
 
-const test = () => {
-  let contatcForm = document.querySelector('.contact__form form');
-  setTimeout(() => {
-    if (window.innerHeight < globalHeight) {
-      contatcForm.scrollTo(0, contatcForm.scrollHeight);
-    }
-  }, 500);
-  // contatcForm.scrollTo(0, contatcForm.scrollHeight);
+const androidScrollingFix = () => {
+	let contatcForm = document.querySelector('.contact__form form');
+
+	setTimeout(() => {
+		if (window.innerHeight < globalHeight) {
+			contatcForm.scrollTo({
+				top: contatcForm.scrollHeight,
+				left: 0,
+				behavior: 'smooth'
+			});
+		}
+	}, 200);
 };
 
 //-------------------------------------
