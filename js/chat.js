@@ -12,7 +12,7 @@ const displayBubble = (groupBubble, nbBubble) => {
 			[n].classList.add('enable');
 
 		setTimeout(() => {
-			smooth_scroll_to(contatcForm,contatcForm.scrollHeight,600);
+			smooth_scroll_to(contatcForm,contatcForm.scrollHeight,800);
 			// contatcForm.scrollTo({
 			// 	top: contatcForm.scrollHeight,
 			// 	left: 0,
@@ -30,7 +30,7 @@ const displayBubble = (groupBubble, nbBubble) => {
 				[n].classList.add('enable__choice');
 
 			setTimeout(() => {
-				smooth_scroll_to(contatcForm,contatcForm.scrollHeight,600);
+				smooth_scroll_to(contatcForm,contatcForm.scrollHeight,800);
 				// contatcForm.scrollTo({
 				// 	top: contatcForm.scrollHeight,
 				// 	left: 0,
@@ -51,7 +51,7 @@ const androidScrollingFix = () => {
 			// 	left: 0,
 			// 	behavior: 'smooth'
 			// });
-			smooth_scroll_to(contatcForm,contatcForm.scrollHeight,600);
+			smooth_scroll_to(contatcForm,contatcForm.scrollHeight,800);
 		}
 	}, 100);
 };
