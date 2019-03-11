@@ -780,6 +780,7 @@
 	@include transition(transform 0.8s ease-in-out);
 
 	&.disable {
+		z-index: 0;
 		@include transform(translateY(-100%));
 		@include transition(transform 0.8s ease-in-out);
 	}
@@ -905,10 +906,10 @@
 	input,
 	textarea {
 		font-family: 'Asap', sans-serif;
-		background: transparent;
+		background: transparent !important;
 		border: transparent;
 		outline: none;
-		color: #fff;
+		color: #fff !important;
 		line-height: 18px;
 		font-size: 0.9rem;
 		font-weight: 600;
@@ -919,7 +920,8 @@
 	textarea {
 		height: 16px;
 		height: auto;
-		width: 230px;
+		width: 100%;
+		max-width: 230px;
 	}
 
 	input#mailAnswer {

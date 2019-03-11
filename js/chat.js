@@ -4,21 +4,12 @@ const globalHeight = window.innerHeight;
 //	DISPLAY BUBBLE
 //-------------------------------------
 const displayBubble = (groupBubble, nbBubble) => {
-	let contatcForm = document.querySelector('.contact__form form');
-
 	for (let n = 0; n < 2; n++) {
 		document
 			.querySelectorAll('.bubble--group:nth-child(' + groupBubble + ') .bubble')
 			[n].classList.add('enable');
 
-		setTimeout(() => {
-			smooth_scroll_to(contatcForm,contatcForm.scrollHeight,800);
-			// contatcForm.scrollTo({
-			// 	top: contatcForm.scrollHeight,
-			// 	left: 0,
-			// 	behavior: 'smooth'
-			// });
-		}, 200);
+		scrolling();
 	}
 
 	if (nbBubble == 3) {
@@ -29,116 +20,128 @@ const displayBubble = (groupBubble, nbBubble) => {
 				)
 				[n].classList.add('enable__choice');
 
-			setTimeout(() => {
-				smooth_scroll_to(contatcForm,contatcForm.scrollHeight,800);
-				// contatcForm.scrollTo({
-				// 	top: contatcForm.scrollHeight,
-				// 	left: 0,
-				// 	behavior: 'smooth'
-				// });
-			}, 200);
+			scrolling();
 		}
 	}
 };
 
 const androidScrollingFix = () => {
-	let contatcForm = document.querySelector('.contact__form form');
-
-	setTimeout(() => {
-		if (window.innerHeight < globalHeight) {
-			// contatcForm.scrollTo({
-			// 	top: contatcForm.scrollHeight,
-			// 	left: 0,
-			// 	behavior: 'smooth'
-			// });
-			smooth_scroll_to(contatcForm,contatcForm.scrollHeight,800);
-		}
-	}, 100);
+	scrolling();
 };
 
-var smooth_scroll_to = function(element, target, duration) {
-    target = Math.round(target);
-    duration = Math.round(duration);
-    if (duration < 0) {
-        return Promise.reject("bad duration");
-    }
-    if (duration === 0) {
-        element.scrollTop = target;
-        return Promise.resolve();
-    }
+//-------------------------------------
+//	SMOOTH SCROLL DEPENDING DEVICE
+//-------------------------------------
+function scrolling() {
+	let contatcForm = document.querySelector('.contact__form form');
+	var userAgent = navigator.userAgent || navigator.vendor || window.opera;
 
-    var start_time = Date.now();
-    var end_time = start_time + duration;
+	//Android
+	if (/android/i.test(userAgent)) {
+		setTimeout(() => {
+			contatcForm.scrollTo({
+				top: contatcForm.scrollHeight,
+				left: 0,
+				behavior: 'smooth'
+			});
+		}, 200);
+	}
 
-    var start_top = element.scrollTop;
-    var distance = target - start_top;
+	//iOS
+	else if (/iPad|iPhone|iPod/.test(userAgent) && !window.MSStream) {
+		setTimeout(() => {
+			smooth_scroll_to(contatcForm, contatcForm.scrollHeight, 1000);
+		}, 200);
+	}
 
-    // based on http://en.wikipedia.org/wiki/Smoothstep
-    var smooth_step = function(start, end, point) {
-        if(point <= start) { return 0; }
-        if(point >= end) { return 1; }
-        var x = (point - start) / (end - start); // interpolation
-        return x*x*(3 - 2*x);
-    }
-
-    return new Promise(function(resolve, reject) {
-        // This is to keep track of where the element's scrollTop is
-        // supposed to be, based on what we're doing
-        var previous_top = element.scrollTop;
-
-        // This is like a think function from a game loop
-        var scroll_frame = function() {
-            if(element.scrollTop != previous_top) {
-                reject("interrupted");
-                return;
-            }
-
-            // set the scrollTop for this frame
-            var now = Date.now();
-            var point = smooth_step(start_time, end_time, now);
-            var frameTop = Math.round(start_top + (distance * point));
-            element.scrollTop = frameTop;
-
-            // check if we're done!
-            if(now >= end_time) {
-                resolve();
-                return;
-            }
-
-            // If we were supposed to scroll but didn't, then we
-            // probably hit the limit, so consider it done; not
-            // interrupted.
-            if(element.scrollTop === previous_top
-                && element.scrollTop !== frameTop) {
-                resolve();
-                return;
-            }
-            previous_top = element.scrollTop;
-
-            // schedule next frame for execution
-            setTimeout(scroll_frame, 0);
-        }
-
-        // boostrap the animation process
-        setTimeout(scroll_frame, 0);
-    });
+	//Others
+	else {
+		setTimeout(() => {
+			smooth_scroll_to(contatcForm, contatcForm.scrollHeight, 1000);
+		}, 200);
+	}
 }
+
+//-------------------------------------
+//	SMOOTH SCROLL
+//-------------------------------------
+var smooth_scroll_to = function(element, target, duration) {
+	target = Math.round(target);
+	duration = Math.round(duration);
+
+	var start_time = Date.now();
+	var end_time = start_time + duration;
+
+	var start_top = element.scrollTop;
+	var distance = target - start_top;
+
+	var smooth_step = function(start, end, point) {
+		if (point <= start) {
+			return 0;
+		}
+		if (point >= end) {
+			return 1;
+		}
+		var x = (point - start) / (end - start);
+		return x * x * (3 - 2 * x);
+	};
+
+	return new Promise(function(resolve, reject) {
+		var previous_top = element.scrollTop;
+
+		var scroll_frame = function() {
+			if (element.scrollTop != previous_top) {
+				return;
+			}
+
+			var now = Date.now();
+			var point = smooth_step(start_time, end_time, now);
+			var frameTop = Math.round(start_top + distance * point);
+			element.scrollTop = frameTop;
+
+			if (now >= end_time) {
+				resolve();
+				return;
+			}
+
+			if (element.scrollTop === previous_top && element.scrollTop !== frameTop) {
+				resolve();
+				return;
+			}
+			previous_top = element.scrollTop;
+
+			setTimeout(scroll_frame, 0);
+		};
+
+		setTimeout(scroll_frame, 0);
+	});
+};
 
 //-------------------------------------
 //	GET ANSWER
 //-------------------------------------
 const getAnswer = (name, groupBubble, nbBubble) => {
-	let answer = document.getElementById(name + 'Answer').value;
-
-	document.querySelector('.btn-enter--' + groupBubble).style.display = 'none';
-
-	displayBubble(groupBubble, nbBubble);
+	let answerID = document.getElementById(name + 'Answer');
+	let answer = answerID.value;
 
 	if (answer !== '' && answer !== ' ') {
-		document.getElementById(name + 'Answer').setAttribute('readonly', true);
+		answerID.setAttribute('readonly', true);
 
 		if (name == 'name') {
 			document.getElementById(name + 'Question').innerHTML = answer;
+		}
+
+		document.querySelector('#' + name + 'Answer + p').innerText = '';
+		document.querySelector('.btn-enter--' + groupBubble).style.display = 'none';
+		displayBubble(groupBubble, nbBubble);
+	} else {
+		switch (name) {
+			case 'name':
+				document.querySelector('#' + name + 'Answer + p').innerText = 'Plop';
+				break;
+			case 'message':
+				document.querySelector('#' + name + 'Answer + p').innerText = 'Plop';
+				break;
 		}
 	}
 };
@@ -183,7 +186,6 @@ const validate = (groupBubble, nbBubble) => {
 		sendEmail();
 	} else {
 		result.innerHTML = "<p class='chat-msg-error'>L'adresse mail n'est pas valide</p>";
-		result.style.color = 'crimson';
 	}
 	return false;
 };

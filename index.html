@@ -144,7 +144,7 @@
 
 			<!-- CONTACT -->
 			<section class="contact__wrapper disable">
-				<div class="nav__return" onClick="returnProjects()">
+				<!-- <div class="nav__return" onClick="returnProjects()">
 					<div class="arrow__clickable">
 						<span class="nav__arrow nav__arrow--left">
 							<span class="arrow__circle"></span>
@@ -154,7 +154,7 @@
 						<span class="text--top">Back to projects</span>
 						<span class="text--bottom">Back to projects</span>
 					</div>
-				</div>
+				</div> -->
 
 				<!-- Contact description -->
 				<div class="contact__description">
@@ -206,6 +206,7 @@
 									onfocusin="androidScrollingFix()"
 									onKeyPress="if(window.innerWidth >=650 && event.keyCode == 13) { this.blur(); getAnswer(name,3,3); }"
 								/>
+								<p class="chat-msg-error"></p>
 							</div>
 						</div>
 
@@ -262,7 +263,7 @@
 							</div>
 
 							<div class="bubble bubble--answer">
-								<div class="btn-enter btn-enter--5" onclick="getAnswer('name',5,2)">
+								<div class="btn-enter btn-enter--5" onclick="getAnswer('message',5,2)">
 									<img src="img/send.svg" alt="Bouton envoyer" width="14" />
 								</div>
 								<textarea
@@ -273,6 +274,7 @@
 									onfocusin="androidScrollingFix()"
 									onKeyPress="if(window.innerWidth >=650 && event.keyCode == 13 && !event.shiftKey) {getAnswer(name,5,2); this.blur();}"
 								></textarea>
+								<p class="chat-msg-error"></p>
 							</div>
 						</div>
 
@@ -298,6 +300,7 @@
 									onfocusin="androidScrollingFix()"
 									onKeyPress="if(window.innerWidth >=650 && event.keyCode == 13) {validate(6,1); this.blur()};"
 								/>
+								<p class="chat-msg-error"></p>
 							</div>
 						</div>
 
