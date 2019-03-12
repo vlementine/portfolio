@@ -1083,41 +1083,6 @@
 //-------------------------------------
 //	VARIABLES
 //-------------------------------------
-//-- Project 01
-#project-01 {
-	.btn {
-		color: $project-01;
-	}
-
-	.project__visuel,
-	.project__content {
-		background: $gradient-project-01;
-	}
-
-	.description__number--mobile {
-		background: $gradient-project-01;
-		-webkit-background-clip: text;
-		-webkit-text-fill-color: transparent;
-	}
-}
-
-#menu__project-01 h3:after,
-#menu__project--mobile-01 .menu__project-visuel--mobile {
-	background: $gradient-project-01;
-}
-
-#menu__project--mobile-01 .nav__arrow {
-	border-color: $project-01;
-
-	.arrow__circle {
-		background: lighten($project-01, 20%);
-
-		&:after {
-			background: lighten($project-01, 40%);
-		}
-	}
-}
-
 //-- Project 02
 #project-02 {
 	.btn {
@@ -1127,10 +1092,6 @@
 	.project__visuel,
 	.project__content {
 		background: $gradient-project-02;
-	}
-
-	.description__number--mobile:after {
-		content: '02.';
 	}
 
 	.description__number--mobile {
@@ -1150,10 +1111,50 @@
 	border-color: $project-02;
 
 	.arrow__circle {
-		background: lighten($project-02, 10%);
+		background: lighten($project-02, 20%);
 
 		&:after {
-			background: lighten($project-02, 20%);
+			background: lighten($project-02, 40%);
+		}
+	}
+}
+
+//-- Project 01
+#project-01 {
+	.btn {
+		color: $project-01;
+	}
+
+	.project__visuel,
+	.project__content {
+		background: $gradient-project-01;
+	}
+
+	.description__number--mobile:after {
+		content: '01.';
+	}
+
+	.description__number--mobile {
+		background: $gradient-project-01;
+		-webkit-background-clip: text;
+		-webkit-text-fill-color: transparent;
+	}
+}
+
+#menu__project-01 h3:after,
+#menu__project-visuel-01,
+#menu__project--mobile-01 .menu__project-visuel--mobile {
+	background: $gradient-project-01;
+}
+
+#menu__project--mobile-01 .nav__arrow {
+	border-color: $project-01;
+
+	.arrow__circle {
+		background: lighten($project-01, 10%);
+
+		&:after {
+			background: lighten($project-01, 20%);
 		}
 	}
 }

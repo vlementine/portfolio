@@ -392,7 +392,7 @@ a {
   position: relative;
   width: 400px;
   height: 100%;
-  background: linear-gradient(45deg, #cd3557, #d75d79);
+  background: linear-gradient(45deg, #f59e64, #eb5160);
   border-radius: 2px;
   box-shadow: 0 2px 16px rgba(0, 0, 0, 0.2);
   margin-right: 50px;
@@ -1806,6 +1806,7 @@ button {
 }
 
 .contact__wrapper.disable {
+  z-index: 0;
   -webkit-transform: translateY(-100%);
   -moz-transform: translateY(-100%);
   -ms-transform: translateY(-100%);
@@ -1965,10 +1966,10 @@ button {
 .bubble input,
 .bubble textarea {
   font-family: 'Asap', sans-serif;
-  background: transparent;
+  background: transparent !important;
   border: transparent;
   outline: none;
-  color: #fff;
+  color: #fff !important;
   line-height: 18px;
   font-size: 0.9rem;
   font-weight: 600;
@@ -1979,7 +1980,8 @@ button {
 .bubble textarea {
   height: 16px;
   height: auto;
-  width: 230px;
+  width: 100%;
+  max-width: 230px;
 }
 
 .bubble input#mailAnswer {
@@ -2190,53 +2192,17 @@ button {
   display: flex;
 }
 
-#project-01 .btn {
-  color: #cd3557;
-}
-
-#project-01 .project__visuel,
-#project-01 .project__content {
-  background: linear-gradient(45deg, #cd3557, #d75d79);
-}
-
-#project-01 .description__number--mobile {
-  background: linear-gradient(45deg, #cd3557, #d75d79);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-}
-
-#menu__project-01 h3:after,
-#menu__project--mobile-01 .menu__project-visuel--mobile {
-  background: linear-gradient(45deg, #cd3557, #d75d79);
-}
-
-#menu__project--mobile-01 .nav__arrow {
-  border-color: #cd3557;
-}
-
-#menu__project--mobile-01 .nav__arrow .arrow__circle {
-  background: #e1879b;
-}
-
-#menu__project--mobile-01 .nav__arrow .arrow__circle:after {
-  background: #f5d9df;
-}
-
 #project-02 .btn {
-  color: #f59e64;
+  color: #cd3557;
 }
 
 #project-02 .project__visuel,
 #project-02 .project__content {
-  background: linear-gradient(45deg, #f59e64, #eb5160);
-}
-
-#project-02 .description__number--mobile:after {
-  content: '02.';
+  background: linear-gradient(45deg, #cd3557, #d75d79);
 }
 
 #project-02 .description__number--mobile {
-  background: linear-gradient(45deg, #f59e64, #eb5160);
+  background: linear-gradient(45deg, #cd3557, #d75d79);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
@@ -2244,18 +2210,55 @@ button {
 #menu__project-02 h3:after,
 #menu__project-visuel-02,
 #menu__project--mobile-02 .menu__project-visuel--mobile {
-  background: linear-gradient(45deg, #f59e64, #eb5160);
+  background: linear-gradient(45deg, #cd3557, #d75d79);
 }
 
 #menu__project--mobile-02 .nav__arrow {
-  border-color: #f59e64;
+  border-color: #cd3557;
 }
 
 #menu__project--mobile-02 .nav__arrow .arrow__circle {
-  background: #f8bc94;
+  background: #e1879b;
 }
 
 #menu__project--mobile-02 .nav__arrow .arrow__circle:after {
+  background: #f5d9df;
+}
+
+#project-01 .btn {
+  color: #f59e64;
+}
+
+#project-01 .project__visuel,
+#project-01 .project__content {
+  background: linear-gradient(45deg, #f59e64, #eb5160);
+}
+
+#project-01 .description__number--mobile:after {
+  content: '01.';
+}
+
+#project-01 .description__number--mobile {
+  background: linear-gradient(45deg, #f59e64, #eb5160);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+#menu__project-01 h3:after,
+#menu__project-visuel-01,
+#menu__project--mobile-01 .menu__project-visuel--mobile {
+  background: linear-gradient(45deg, #f59e64, #eb5160);
+}
+
+#menu__project--mobile-01 .nav__arrow {
+  border-color: #f59e64;
+}
+
+#menu__project--mobile-01 .nav__arrow .arrow__circle {
+  background: #f8bc94;
+}
+
+#menu__project--mobile-01 .nav__arrow .arrow__circle:after {
   background: #fbdac4;
 }
 
@@ -2983,113 +2986,36 @@ button {
   animation: 1.5s contact ease-in-out;
 }
 
-.project-page#project-01 section .container h3,
-.project-page#project-01 section h4,
-.project-page#project-01 .intro__content p:first-of-type:first-letter,
-.project-page#project-01 .next-project__name:hover {
-  color: #cd3557;
-}
-
-.project-page#project-01 .controls .progress span {
-  background-color: #cd3557;
-}
-
-.project-page#project-01 .controls .progress span:after {
-  border-color: #cd3557;
-}
-
-.project-page#project-01 header {
-  background-image: url(../img/le-trianon/le-trianon__hero-picture.jpg);
-}
-
-.project-page#project-01 #parallax-bg-01 div,
-.project-page#project-01 .project-parallax--bg--mobile .parallax-visuel {
-  background-image: url(../img/le-trianon/le-trianon__picture-parallax.jpg);
-}
-
-.project-page#project-01 .controls #progress span {
-  background-color: #cd3557;
-}
-
-.project-page#project-01 .slick-dots li button:after {
-  background-color: #cd3557;
-}
-
-.project-page#project-01 .slick-dots li button:hover:after {
-  width: 100%;
-}
-
-.project-page#project-01 #explain__text-01 {
-  top: 50%;
-}
-
-.project-page#project-01 #explain__text-02 {
-  top: 30%;
-  width: 245px;
-  padding-left: 60px;
-}
-
-.project-page#project-01 #explain__text-03 {
-  top: 0px;
-  width: 235px;
-  padding-right: 50px;
-}
-
-.project-page#project-01 #explain__text-04 {
-  top: -30px;
-  width: 225px;
-  padding-left: 30px;
-}
-
-.project-page#project-01 #explain__text-05 {
-  top: 40px;
-  width: 245px;
-  padding-right: 60px;
-}
-
-.project-page#project-01 #explain__text-06 {
-  top: 50px;
-  width: 235px;
-  padding-left: 50px;
-}
-
-.project-page#project-01 #explain__text-07 {
-  width: 295px;
-  padding-right: 110px;
-}
-
 .project-page#project-02 section .container h3,
 .project-page#project-02 section h4,
 .project-page#project-02 .intro__content p:first-of-type:first-letter,
 .project-page#project-02 .next-project__name:hover {
-  color: #f59e64;
+  color: #cd3557;
+}
+
+.project-page#project-02 .controls .progress span {
+  background-color: #cd3557;
+}
+
+.project-page#project-02 .controls .progress span:after {
+  border-color: #cd3557;
 }
 
 .project-page#project-02 header {
-  background-image: url(../img/zenchef/zenchef__hero-picture.jpg);
+  background-image: url(../img/le-trianon/le-trianon__hero-picture.jpg);
 }
 
 .project-page#project-02 #parallax-bg-01 div,
 .project-page#project-02 .project-parallax--bg--mobile .parallax-visuel {
-  background-image: url(../img/zenchef/zenchef__picture-product-parallax.jpg);
+  background-image: url(../img/le-trianon/le-trianon__picture-parallax.jpg);
 }
 
-.project-page#project-02 .controls .progress span {
-  background-color: #f59e64;
-}
-
-.project-page#project-02 #parallax-bg-02,
-.project-page#project-02 #parallax-bg--mobile-02 {
-  margin: 140px 0;
-}
-
-.project-page#project-02 #parallax-bg-02 div,
-.project-page#project-02 #parallax-bg--mobile-02 .parallax-visuel {
-  background-image: url(../img/zenchef/zenchef__picture-mkt-parallax.jpg);
+.project-page#project-02 .controls #progress span {
+  background-color: #cd3557;
 }
 
 .project-page#project-02 .slick-dots li button:after {
-  background-color: #f59e64;
+  background-color: #cd3557;
 }
 
 .project-page#project-02 .slick-dots li button:hover:after {
@@ -3097,66 +3023,143 @@ button {
 }
 
 .project-page#project-02 #explain__text-01 {
+  top: 50%;
+}
+
+.project-page#project-02 #explain__text-02 {
+  top: 30%;
+  width: 245px;
+  padding-left: 60px;
+}
+
+.project-page#project-02 #explain__text-03 {
+  top: 0px;
+  width: 235px;
+  padding-right: 50px;
+}
+
+.project-page#project-02 #explain__text-04 {
+  top: -30px;
+  width: 225px;
+  padding-left: 30px;
+}
+
+.project-page#project-02 #explain__text-05 {
+  top: 40px;
+  width: 245px;
+  padding-right: 60px;
+}
+
+.project-page#project-02 #explain__text-06 {
+  top: 50px;
+  width: 235px;
+  padding-left: 50px;
+}
+
+.project-page#project-02 #explain__text-07 {
+  width: 295px;
+  padding-right: 110px;
+}
+
+.project-page#project-01 section .container h3,
+.project-page#project-01 section h4,
+.project-page#project-01 .intro__content p:first-of-type:first-letter,
+.project-page#project-01 .next-project__name:hover {
+  color: #f59e64;
+}
+
+.project-page#project-01 header {
+  background-image: url(../img/zenchef/zenchef__hero-picture.jpg);
+}
+
+.project-page#project-01 #parallax-bg-01 div,
+.project-page#project-01 .project-parallax--bg--mobile .parallax-visuel {
+  background-image: url(../img/zenchef/zenchef__picture-product-parallax.jpg);
+}
+
+.project-page#project-01 .controls .progress span {
+  background-color: #f59e64;
+}
+
+.project-page#project-01 #parallax-bg-02,
+.project-page#project-01 #parallax-bg--mobile-02 {
+  margin: 140px 0;
+}
+
+.project-page#project-01 #parallax-bg-02 div,
+.project-page#project-01 #parallax-bg--mobile-02 .parallax-visuel {
+  background-image: url(../img/zenchef/zenchef__picture-mkt-parallax.jpg);
+}
+
+.project-page#project-01 .slick-dots li button:after {
+  background-color: #f59e64;
+}
+
+.project-page#project-01 .slick-dots li button:hover:after {
+  width: 100%;
+}
+
+.project-page#project-01 #explain__text-01 {
   top: calc(80% - 101px);
   width: 235px;
   padding-right: 50px;
 }
 
-.project-page#project-02 #explain__text-02 {
+.project-page#project-01 #explain__text-02 {
   top: calc(53% - 65px);
   width: 285px;
   padding-left: 100px;
 }
 
-.project-page#project-02 #explain__text-03 {
+.project-page#project-01 #explain__text-03 {
   top: calc(30% - 101px);
   width: 215px;
   padding-right: 30px;
 }
 
-.project-page#project-02 #explain__text-04 {
+.project-page#project-01 #explain__text-04 {
   top: calc(30% - 65px);
   width: 212px;
   padding-left: 42px;
 }
 
-.project-page#project-02 #explain__text-2-01 {
+.project-page#project-01 #explain__text-2-01 {
   top: calc(72% - 65px);
   width: 215px;
   padding-left: 40px;
 }
 
-.project-page#project-02 #explain__text-2-02 {
+.project-page#project-01 #explain__text-2-02 {
   top: calc(50% - 101px);
   width: 375px;
   padding-right: 190px;
 }
 
-.project-page#project-02 #explain__text-2-03 {
+.project-page#project-01 #explain__text-2-03 {
   top: calc(60% - 101px);
   width: 305px;
   padding-left: 120px;
 }
 
-.project-page#project-02 #explain__text-2-04 {
+.project-page#project-01 #explain__text-2-04 {
   top: calc(93% - 65px);
   width: 365px;
   padding-right: 180px;
 }
 
-.project-page#project-02 #explain__text-3-01 {
+.project-page#project-01 #explain__text-3-01 {
   top: calc(73% - 83px);
   width: 215px;
   padding-right: 40px;
 }
 
-.project-page#project-02 #explain__text-3-02 {
+.project-page#project-01 #explain__text-3-02 {
   top: calc(50% - 83px);
   width: 285px;
   padding-left: 100px;
 }
 
-.project-page#project-02 #explain__text-3-03 {
+.project-page#project-01 #explain__text-3-03 {
   top: calc(0% - 83px);
   width: 347px;
   padding-right: 160px;
@@ -3487,7 +3490,7 @@ button {
     justify-content: center;
     align-items: center;
     text-align: left;
-    padding: 20px 20px 20px 30px;
+    padding: 30px 20px 30px 30px;
   }
   .bubble--group__choice .bubble .choice .choice__emoji {
     margin: 0 20px 0 0;

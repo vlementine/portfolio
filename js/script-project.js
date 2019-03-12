@@ -44,10 +44,10 @@ const redirectionNextProject = () => {
 
 	switch (idNextProject) {
 		case 1:
-			nameNextProject = 'le-trianon';
+			nameNextProject = 'zenchef';
 			break;
 		case 2:
-			nameNextProject = 'zenchef';
+			nameNextProject = 'le-trianon';
 			break;
 		case 3:
 			nameNextProject = 'alcatraz';

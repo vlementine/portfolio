@@ -63,13 +63,12 @@
   width: 80%;
   max-width: 700px;
   text-align: center;
-  margin: -110px auto 0;
+  margin: -70px auto 0;
 }
 
 .home .home__presentation h1 {
   font-size: 0.6rem;
   color: rgba(6, 10, 46, 0.3);
-  font-weight: 500;
   text-transform: uppercase;
   letter-spacing: 0.15em;
   margin: 0;
@@ -84,6 +83,26 @@
   font-weight: 300;
   margin: 15px 0;
   line-height: 1.3em;
+}
+
+.home .home__presentation a {
+  display: block;
+  font-family: 'Asap', sans-serif;
+  font-size: 0.6rem;
+  font-weight: 500;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  color: rgba(6, 10, 46, 0.3);
+  margin: 15px 0;
+  -webkit-transition: color 0.2s ease-in-out;
+  -moz-transition: color 0.2s ease-in-out;
+  -ms-transition: color 0.2s ease-in-out;
+  -o-transition: color 0.2s ease-in-out;
+  transition: color 0.2s ease-in-out;
+}
+
+.home .home__presentation a:hover {
+  color: #333366;
 }
 
 .home .home__illustration {
@@ -990,6 +1009,7 @@
 }
 
 .contact__wrapper.disable {
+  z-index: 0;
   -webkit-transform: translateY(-100%);
   -moz-transform: translateY(-100%);
   -ms-transform: translateY(-100%);
@@ -1086,7 +1106,24 @@
   margin: 0 60px 40px;
   width: calc(100% - 120px);
   position: relative;
-  overflow-y: auto;
+  overflow-y: scroll;
+  -webkit-overflow-scrolling: touch;
+  -webkit-transition: height 5s ease-in-out;
+  -moz-transition: height 5s ease-in-out;
+  -ms-transition: height 5s ease-in-out;
+  -o-transition: height 5s ease-in-out;
+  transition: height 5s ease-in-out;
+}
+
+.contact__form .chat-msg-error {
+  color: #eb5160;
+  position: absolute;
+  bottom: -24px;
+  left: 8px;
+  font-size: 12px;
+  border-radius: 2px;
+  text-align: center;
+  font-weight: 500;
 }
 
 .bubble--group {
@@ -1111,7 +1148,7 @@
 .bubble {
   display: none;
   background: #fff;
-  max-width: 300px;
+  max-width: 270px;
   padding: 20px;
   border-radius: 4px;
   box-shadow: 0 4px 8px rgba(6, 10, 46, 0.1);
@@ -1131,22 +1168,23 @@
 
 .bubble input,
 .bubble textarea {
-  background: transparent;
+  font-family: 'Asap', sans-serif;
+  background: transparent !important;
   border: transparent;
-  padding-bottom: 4px;
   outline: none;
-  color: #fff;
-  font-size: 0.9rem;
+  color: #fff !important;
   line-height: 18px;
+  font-size: 0.9rem;
   font-weight: 600;
-  height: 16px;
   resize: none;
   width: 100%;
 }
 
 .bubble textarea {
+  height: 16px;
   height: auto;
-  width: 280px;
+  width: 100%;
+  max-width: 230px;
 }
 
 .bubble input#mailAnswer {
@@ -1183,8 +1221,8 @@
 }
 
 .bubble--answer {
-  background: rgba(6, 10, 46, 0.5);
-  color: #fff;
+  background: rgba(6, 10, 46, 0.5) !important;
+  color: #fff !important;
   align-self: flex-end;
 }
 
@@ -1194,6 +1232,20 @@
   -ms-animation: 0.3s bubble ease-in-out forwards 0.6s;
   -o-transition: 0.3s bubble ease-in-out forwards 0.6s;
   animation: 0.3s bubble ease-in-out forwards 0.6s;
+}
+
+.bubble--answer .btn-enter {
+  display: none;
+  position: absolute;
+  position: absolute;
+  bottom: 14px;
+  right: 10px;
+  background: #fff;
+  width: 34px;
+  height: 34px;
+  border-radius: 50%;
+  border: none;
+  padding: 9px 0 0 11px;
 }
 
 .bubble--delay.enable {
@@ -1230,9 +1282,11 @@
   position: absolute;
   opacity: 0;
   cursor: pointer;
+  width: 0;
 }
 
-.bubble--group__choice .bubble input:checked ~ .checked {
+.bubble--group__choice .bubble input:checked ~ .choice,
+.bubble--group__choice .bubble input:checked ~ .choice .checked {
   opacity: 1;
 }
 
@@ -1243,10 +1297,10 @@
 .bubble--group__choice .bubble .checked {
   opacity: 0;
   position: absolute;
-  top: 18px;
-  right: 35px;
+  top: -7px;
+  right: -13px;
   z-index: 10;
-  background: #FFF;
+  background: #fff;
   width: 20px;
   height: 20px;
   display: flex;
@@ -1289,7 +1343,7 @@
   transition: transform 0.4s ease-in-out;
 }
 
-.bubble--group__choice .bubble .choice span {
+.bubble--group__choice .bubble .choice .choice__emoji {
   position: relative;
   display: flex;
   justify-content: center;
@@ -1298,8 +1352,8 @@
   font-size: 1.25rem;
   margin: 10px auto 20px;
   border-radius: 50%;
-  width: 64px;
-  height: 64px;
+  width: 55px;
+  height: 55px;
   box-shadow: 0 0 8px rgba(0, 0, 0, 0.1);
   -webkit-transition: opacity 0.4s ease-in-out;
   -moz-transition: opacity 0.4s ease-in-out;
@@ -1308,7 +1362,7 @@
   transition: opacity 0.4s ease-in-out;
 }
 
-.bubble--group__choice .bubble .choice span:after {
+.bubble--group__choice .bubble .choice .choice__emoji:after {
   position: absolute;
   content: '';
   top: 0;
@@ -1341,53 +1395,17 @@
   display: flex;
 }
 
-#project-01 .btn {
-  color: #cd3557;
-}
-
-#project-01 .project__visuel,
-#project-01 .project__content {
-  background: linear-gradient(45deg, #cd3557, #d75d79);
-}
-
-#project-01 .description__number--mobile {
-  background: linear-gradient(45deg, #cd3557, #d75d79);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-}
-
-#menu__project-01 h3:after,
-#menu__project--mobile-01 .menu__project-visuel--mobile {
-  background: linear-gradient(45deg, #cd3557, #d75d79);
-}
-
-#menu__project--mobile-01 .nav__arrow {
-  border-color: #cd3557;
-}
-
-#menu__project--mobile-01 .nav__arrow .arrow__circle {
-  background: #e1879b;
-}
-
-#menu__project--mobile-01 .nav__arrow .arrow__circle:after {
-  background: #f5d9df;
-}
-
 #project-02 .btn {
-  color: #f59e64;
+  color: #cd3557;
 }
 
 #project-02 .project__visuel,
 #project-02 .project__content {
-  background: linear-gradient(45deg, #f59e64, #eb5160);
-}
-
-#project-02 .description__number--mobile:after {
-  content: '02.';
+  background: linear-gradient(45deg, #cd3557, #d75d79);
 }
 
 #project-02 .description__number--mobile {
-  background: linear-gradient(45deg, #f59e64, #eb5160);
+  background: linear-gradient(45deg, #cd3557, #d75d79);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
@@ -1395,18 +1413,55 @@
 #menu__project-02 h3:after,
 #menu__project-visuel-02,
 #menu__project--mobile-02 .menu__project-visuel--mobile {
-  background: linear-gradient(45deg, #f59e64, #eb5160);
+  background: linear-gradient(45deg, #cd3557, #d75d79);
 }
 
 #menu__project--mobile-02 .nav__arrow {
-  border-color: #f59e64;
+  border-color: #cd3557;
 }
 
 #menu__project--mobile-02 .nav__arrow .arrow__circle {
-  background: #f8bc94;
+  background: #e1879b;
 }
 
 #menu__project--mobile-02 .nav__arrow .arrow__circle:after {
+  background: #f5d9df;
+}
+
+#project-01 .btn {
+  color: #f59e64;
+}
+
+#project-01 .project__visuel,
+#project-01 .project__content {
+  background: linear-gradient(45deg, #f59e64, #eb5160);
+}
+
+#project-01 .description__number--mobile:after {
+  content: '01.';
+}
+
+#project-01 .description__number--mobile {
+  background: linear-gradient(45deg, #f59e64, #eb5160);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+#menu__project-01 h3:after,
+#menu__project-visuel-01,
+#menu__project--mobile-01 .menu__project-visuel--mobile {
+  background: linear-gradient(45deg, #f59e64, #eb5160);
+}
+
+#menu__project--mobile-01 .nav__arrow {
+  border-color: #f59e64;
+}
+
+#menu__project--mobile-01 .nav__arrow .arrow__circle {
+  background: #f8bc94;
+}
+
+#menu__project--mobile-01 .nav__arrow .arrow__circle:after {
   background: #fbdac4;
 }
 
@@ -1448,12 +1503,12 @@
 }
 
 #project-04 .btn {
-  color: #5dd5c3;
+  color: #08CCE3;
 }
 
 #project-04 .project__visuel,
 #project-04 .project__content {
-  background: linear-gradient(45deg, #1d7d90, #5dd5c3);
+  background: linear-gradient(45deg, #08CCE3, #1c9dac);
 }
 
 #project-04 .description__number--mobile:after {
@@ -1461,7 +1516,7 @@
 }
 
 #project-04 .description__number--mobile {
-  background: linear-gradient(45deg, #1d7d90, #5dd5c3);
+  background: linear-gradient(45deg, #08CCE3, #1c9dac);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
@@ -1469,17 +1524,17 @@
 #menu__project-04 h3:after,
 #menu__project-visuel-04,
 #menu__project--mobile-04 .menu__project-visuel--mobile {
-  background: linear-gradient(45deg, #1d7d90, #5dd5c3);
+  background: linear-gradient(45deg, #08CCE3, #1c9dac);
 }
 
 #menu__project--mobile-04 .nav__arrow {
-  border-color: #5dd5c3;
+  border-color: #08CCE3;
 }
 
 #menu__project--mobile-04 .nav__arrow .arrow__circle {
-  background: #9ae5da;
+  background: #3fe5f8;
 }
 
 #menu__project--mobile-04 .nav__arrow .arrow__circle:after {
-  background: #c2efe9;
+  background: #71ecfa;
 }

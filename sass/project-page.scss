@@ -622,19 +622,19 @@
 //-------------------------------------
 //	VARIABLES PROJECT
 //-------------------------------------
-.project-page#project-01 {
+.project-page#project-02 {
 	section .container h3,
 	section h4,
 	.intro__content p:first-of-type:first-letter,
 	.next-project__name:hover {
-		color: $project-01;
+		color: $project-02;
 	}
 
 	.controls .progress span {
-		background-color: $project-01;
+		background-color: $project-02;
 
 		&:after {
-			border-color: $project-01;
+			border-color: $project-02;
 		}
 	}
 
@@ -648,11 +648,11 @@
 	}
 
 	.controls #progress span {
-		background-color: $project-01;
+		background-color: $project-02;
 	}
 
 	.slick-dots li button:after {
-		background-color: $project-01;
+		background-color: $project-02;
 	}
 
 	.slick-dots li button:hover:after {
@@ -699,12 +699,12 @@
 	}
 }
 
-.project-page#project-02 {
+.project-page#project-01 {
 	section .container h3,
 	section h4,
 	.intro__content p:first-of-type:first-letter,
 	.next-project__name:hover {
-		color: $project-02;
+		color: $project-01;
 	}
 
 	header {
@@ -717,7 +717,7 @@
 	}
 
 	.controls .progress span {
-		background-color: $project-02;
+		background-color: $project-01;
 	}
 
 	#parallax-bg-02,
@@ -731,7 +731,7 @@
 	}
 
 	.slick-dots li button:after {
-		background-color: $project-02;
+		background-color: $project-01;
 	}
 
 	.slick-dots li button:hover:after {
