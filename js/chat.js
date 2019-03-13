@@ -137,12 +137,15 @@ const getAnswer = (name, groupBubble, nbBubble) => {
 	} else {
 		switch (name) {
 			case 'name':
-				document.querySelector('#' + name + 'Answer + p').innerText = 'Plop';
+				document.querySelector('#' + name + 'Answer + p').innerText =
+					"Oups, tu as oublié d'écrire ton nom";
 				break;
 			case 'message':
-				document.querySelector('#' + name + 'Answer + p').innerText = 'Plop';
+				document.querySelector('#' + name + 'Answer + p').innerText =
+					"Attention, tu n'as pas écris de message";
 				break;
 		}
+		scrolling();
 	}
 };
 
@@ -186,6 +189,7 @@ const validate = (groupBubble, nbBubble) => {
 		sendEmail();
 	} else {
 		result.innerHTML = "<p class='chat-msg-error'>L'adresse mail n'est pas valide</p>";
+		scrolling();
 	}
 	return false;
 };

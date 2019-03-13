@@ -300,6 +300,12 @@
 		}
 	}
 
+	.bubble input,
+	.bubble textarea {
+		width: 100%;
+		max-width: 230px;
+	}
+
 	.bubble--group__choice {
 		flex-direction: column;
 		width: 100%;
