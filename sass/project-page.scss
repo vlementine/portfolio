@@ -65,7 +65,7 @@
 
 	.menu-btn {
 		opacity: 0;
-		@include transition(opacity 0.8s ease-in-out);
+		@include transition(box-shadow 0.4s ease-in-out, opacity 0.8s ease-in-out);
 
 		&.enable {
 			opacity: 1;

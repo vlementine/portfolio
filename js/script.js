@@ -21,9 +21,15 @@ const responsive = () => {
 				document.querySelector('.number--active').textContent = '01';
 			}
 		} else {
-			document.querySelector(
-				'.contact__description .description__title h2'
-			).innerHTML = `Pour me contacter,<br>c’est par ici 👉`;
+			if (windowWidth <= 1000) {
+				document.querySelector(
+					'.contact__description .description__title h2'
+				).innerHTML = `Pour me contacter,<br>c’est par ici 👇`;
+			} else {
+				document.querySelector(
+					'.contact__description .description__title h2'
+				).innerHTML = `Pour me contacter,<br>c’est par ici 👉`;
+			}
 			document
 				.querySelector('.btn__home')
 				.classList.replace('btn__work--mobile', 'btn__work--desktop');
@@ -65,9 +71,15 @@ const main = () => {
 		document.querySelector('.btn__home').classList.remove('btn__work--desktop');
 		document.querySelector('.projects').innerHTML = contentMobile;
 	} else {
-		document.querySelector(
-			'.contact__description .description__title h2'
-		).innerHTML = `Pour me contacter,<br>c’est par ici 👉`;
+		if (windowWidth <= 1000) {
+			document.querySelector(
+				'.contact__description .description__title h2'
+			).innerHTML = `Pour me contacter,<br>c’est par ici 👇`;
+		} else {
+			document.querySelector(
+				'.contact__description .description__title h2'
+			).innerHTML = `Pour me contacter,<br>c’est par ici 👉`;
+		}
 		document.querySelector('.btn__home').classList.add('btn__work--desktop');
 		document.querySelector('.btn__home').classList.remove('btn__work--mobile');
 		document.querySelector('.projects').innerHTML = content;
