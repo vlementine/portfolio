@@ -3,11 +3,13 @@
 //-------------------------------------
 
 // PROJECTS
-const projects = [{
+const projects = [
+	{
 		number: '01',
 		title: 'Zenchef',
 		keywords: '2019 — Product Design & Marketing • Food tech',
-		description: 'Zenchef est une entreprise française qui permet aux restaurateurs de gérer leurs réservations sans commissions ni intermédiaires, fidéliser leurs clients et maîtriser leur réputation en ligne.',
+		description:
+			'Zenchef est une entreprise française qui permet aux restaurateurs de gérer leurs réservations sans commissions ni intermédiaires, fidéliser leurs clients et maîtriser leur réputation en ligne.',
 		image: 'zenchef',
 		href: 'zenchef',
 		nextProject: 'Le Trianon'
@@ -16,7 +18,8 @@ const projects = [{
 		number: '02',
 		title: 'Le Trianon',
 		keywords: '2018 — User Interface • Concert',
-		description: 'Le Trianon est une salle de spectacle parisienne située au pied de la butte Montmartre.',
+		description:
+			'Le Trianon est une salle de spectacle parisienne située au pied de la butte Montmartre.',
 		image: 'le-trianon',
 		href: 'le-trianon',
 		nextProject: 'Alcatraz, 1962'
@@ -25,7 +28,8 @@ const projects = [{
 		number: '03',
 		title: 'Alcatraz, 1962',
 		keywords: '2018 — User Interface • Webdoc',
-		description: 'Alcatraz, 1962 est un web documentaire qui relate les préparatifs ainsi que le déroulement de l\'évasion de 3 prisonniers d\'Alcatraz. La seule évasion ayant atteint son but depuis l\'ouverture de la célèbre prison !',
+		description:
+			"Alcatraz, 1962 est un web documentaire qui relate les préparatifs ainsi que le déroulement de l'évasion de 3 prisonniers d'Alcatraz. La seule évasion ayant atteint son but depuis l'ouverture de la célèbre prison !",
 		image: 'alcatraz',
 		href: 'alcatraz',
 		nextProject: 'Back To Your Dream'
@@ -34,7 +38,8 @@ const projects = [{
 		number: '04',
 		title: 'Back to your dream',
 		keywords: '2017 — User Interface • E-commerce',
-		description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus et arcu arcu. Curabitur varius fermentum gravida. Sed eleifend turpis vel lobortis pellentesque. Phasellus gravida sagittis mauris sit amet viverra.',
+		description:
+			'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus et arcu arcu. Curabitur varius fermentum gravida. Sed eleifend turpis vel lobortis pellentesque. Phasellus gravida sagittis mauris sit amet viverra.',
 		image: 'btyd',
 		href: 'back-to-your-dream',
 		nextProject: 'Zenchef'
@@ -42,7 +47,8 @@ const projects = [{
 ];
 
 // NAVIGATION
-const nav = [{
+const nav = [
+	{
 		number: '01',
 		title: 'Home'
 	},

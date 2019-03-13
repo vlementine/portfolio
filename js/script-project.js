@@ -82,10 +82,10 @@ const idProject = () => {
 	var idProject = 0;
 
 	switch (nameProjectActive) {
-		case 'le-trianon':
+		case 'zenchef':
 			idProject = 0;
 			break;
-		case 'zenchef':
+		case 'le-trianon':
 			idProject = 1;
 			break;
 		case 'alcatraz':
