@@ -399,6 +399,11 @@
 		padding: 10px;
 	}
 
+	.project-picture:after {
+		height: calc(100% - 60px);
+		top: 30px;
+	}
+
 	.project-picture--double .picture-double__wrapper:last-child {
 		margin-top: 10px;
 	}
