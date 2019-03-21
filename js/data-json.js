@@ -37,9 +37,9 @@ const projects = [
 	{
 		number: '04',
 		title: 'Back to your dream',
-		keywords: '2017 — User Interface • E-commerce',
+		keywords: '2016 — User Interface • E-commerce',
 		description:
-			'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus et arcu arcu. Curabitur varius fermentum gravida. Sed eleifend turpis vel lobortis pellentesque. Phasellus gravida sagittis mauris sit amet viverra.',
+			'Back To Your Dream, est une plateforme qui vous permet à vous ou à vos proches de réaliser votre rêve ultime.',
 		image: 'btyd',
 		href: 'back-to-your-dream',
 		nextProject: 'Zenchef'
