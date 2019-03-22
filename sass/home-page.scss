@@ -821,6 +821,12 @@
 		@include animation(none);
 		@include transform(none);
 	}
+
+	.description a {
+		font-weight: 400;
+		font-size: 0.875rem;
+		text-decoration: underline;
+	}
 }
 
 //-- Contact form
@@ -890,7 +896,7 @@
 .bubble {
 	display: none;
 	background: #fff;
-	max-width: 270px;
+	max-width: 260px;
 	padding: 20px;
 	border-radius: 4px;
 	box-shadow: 0 4px 8px $dark-blue-10;

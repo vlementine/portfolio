@@ -165,8 +165,10 @@
 						<span class="description__number">Contact</span>
 						<div class="description description--contact">
 							<p>
-								Low-key, no pressure, just hang with me and my weather ! Rose-colored boy
-								I hear you making all that noise about the world you want to see
+								Que ce soit pour un projet à me soumettre ou une simple question,
+								n’hésitez pas à me contacter via ce chat ou par
+								<a href="mailto:hello@clementinebertrand.fr">mail</a>
+								!
 							</p>
 						</div>
 					</div>
@@ -181,13 +183,13 @@
 							</div>
 
 							<div class="bubble bubble--answer" onclick="displayBubble(2,2);">
-								<p>J'aimerais te contacter</p>
+								<p>J'aimerais vous contacter</p>
 							</div>
 						</div>
 
 						<div class="bubble--group">
 							<div class="bubble">
-								<p>Cool ! Comment t’appelles-tu ?</p>
+								<p>Cool ! Comment vous appelez-vous ?</p>
 							</div>
 
 							<div class="bubble bubble--answer">
@@ -201,7 +203,7 @@
 									type="text"
 									id="nameAnswer"
 									name="name"
-									placeholder="Écris ton nom ici"
+									placeholder="Écrivez votre nom ici"
 									autocomplete="off"
 									onfocusin="androidScrollingFix()"
 									onKeyPress="if(window.innerWidth >=650 && event.keyCode == 13) { this.blur(); getAnswer(name,3,3); }"
@@ -214,7 +216,7 @@
 							<div class="bubble">
 								<p>
 									Bienvenue <span id="nameQuestion"></span> ! <br />
-									Que puis-je faire pour toi ?
+									Que puis-je faire pour vous ?
 								</p>
 							</div>
 
@@ -227,7 +229,7 @@
 											<div class="checked"><span></span></div>
 										</span>
 										<p>
-											Tu as <br />
+											Vous avez <br />
 											une question ?
 										</p>
 									</div>
@@ -240,7 +242,7 @@
 											📦
 											<div class="checked"><span></span></div>
 										</span>
-										<p>Tu as un projet dans les cartons</p>
+										<p>Vous avez un projet dans les cartons</p>
 									</div>
 								</label>
 
@@ -251,7 +253,7 @@
 											🤗
 											<div class="checked"><span></span></div>
 										</span>
-										<p>Tu as seulement envie de me dire bonjour</p>
+										<p>Vous avez seulement envie de me dire bonjour</p>
 									</div>
 								</label>
 							</div>
@@ -259,7 +261,7 @@
 
 						<div class="bubble--group">
 							<div class="bubble">
-								<p>Super ! Tu peux m’en dire plus ?</p>
+								<p>Super ! Vous pouvez m’en dire plus ?</p>
 							</div>
 
 							<div class="bubble bubble--answer">
@@ -270,7 +272,7 @@
 									type="text"
 									id="messageAnswer"
 									name="message"
-									placeholder="Écris ton message ici"
+									placeholder="Écrivez votre message ici"
 									onfocusin="androidScrollingFix()"
 									onKeyPress="if(window.innerWidth >=650 && event.keyCode == 13 && !event.shiftKey) {getAnswer(name,5,2); this.blur();}"
 								></textarea>
@@ -281,7 +283,7 @@
 						<div class="bubble--group">
 							<div class="bubble">
 								<p>
-									Je prends note ! ✍️ Tu aurais une adresse mail pour que je puisse te
+									Je prends note ! ✍️ Vous auriez une adresse mail pour que je puisse vous
 									recontacter plus tard ?
 								</p>
 							</div>
@@ -296,7 +298,7 @@
 									id="mailAnswer"
 									name="mail"
 									autocomplete="off"
-									placeholder="Écris ton mail ici"
+									placeholder="Écrivez votre mail ici"
 									onfocusin="androidScrollingFix()"
 									onKeyPress="if(window.innerWidth >=650 && event.keyCode == 13) {validate(6,1); this.blur()};"
 								/>
@@ -306,11 +308,11 @@
 
 						<div class="bubble--group">
 							<div class="bubble">
-								<p>Parfait, je te recontacte au plus vite !</p>
+								<p>Parfait, je vous recontacte au plus vite !</p>
 							</div>
 
 							<div class="bubble bubble--delay">
-								<p>En te souhaitant une excellente journée ! 👌</p>
+								<p>En vous souhaitant une excellente journée ! 👌</p>
 							</div>
 						</div>
 					</form>

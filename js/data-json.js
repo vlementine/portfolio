@@ -21,7 +21,6 @@ const projects = [
 		description:
 			'Le Trianon est une salle de spectacle parisienne située au pied de la butte Montmartre.',
 		image: 'le-trianon',
-		href: 'le-trianon',
 		nextProject: 'Alcatraz, 1962'
 	},
 	{
@@ -31,7 +30,6 @@ const projects = [
 		description:
 			"Alcatraz, 1962 est un web documentaire qui relate les préparatifs ainsi que le déroulement de l'évasion de 3 prisonniers d'Alcatraz. La seule évasion ayant atteint son but depuis l'ouverture de la célèbre prison !",
 		image: 'alcatraz',
-		href: 'alcatraz',
 		nextProject: 'Back To Your Dream'
 	},
 	{
@@ -41,7 +39,6 @@ const projects = [
 		description:
 			'Back To Your Dream, est une plateforme qui vous permet à vous ou à vos proches de réaliser votre rêve ultime.',
 		image: 'btyd',
-		href: 'back-to-your-dream',
 		nextProject: 'Zenchef'
 	}
 ];
