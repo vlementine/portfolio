@@ -124,7 +124,7 @@
 
 	.header--text {
 		text-align: center;
-		color: transparent;
+		color: rgba(255, 255, 255, 0);
 		@include transform(translateY(30px));
 		@include transition(0.4s transform 1.4s ease-in-out, 0.4s color 1.4s ease-in-out);
 
