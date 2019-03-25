@@ -224,6 +224,7 @@
 	}
 
 	&.shadow {
+
 		img,
 		.explain {
 			box-shadow: 0 4px 50px $dark-blue-10;
@@ -462,6 +463,7 @@
 	}
 
 	video {
+		cursor: pointer;
 		width: 100%;
 		border: 10px solid #2f3039;
 		border-radius: 24px;
@@ -623,6 +625,7 @@
 //	VARIABLES PROJECT
 //-------------------------------------
 .project-page#project-02 {
+
 	section .container h3,
 	section h4,
 	.intro__content p:first-of-type:first-letter,
@@ -700,6 +703,7 @@
 }
 
 .project-page#project-01 {
+
 	section .container h3,
 	section h4,
 	.intro__content p:first-of-type:first-letter,
@@ -806,6 +810,7 @@
 }
 
 .project-page#project-03 {
+
 	section .container h3,
 	section h4,
 	.intro__content p:first-of-type:first-letter,
@@ -854,6 +859,7 @@
 }
 
 .project-page#project-04 {
+
 	section .container h3,
 	section h4,
 	.intro__content p:first-of-type:first-letter,

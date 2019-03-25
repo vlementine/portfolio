@@ -392,6 +392,7 @@ a {
   position: relative;
   width: 400px;
   height: 100%;
+  max-height: 560px;
   background: linear-gradient(45deg, #f59e64, #eb5160);
   border-radius: 2px;
   box-shadow: 0 2px 16px rgba(0, 0, 0, 0.2);
@@ -755,6 +756,22 @@ h3 {
   -ms-transform: translate(0, 0);
   -o-transform: translate(0, 0);
   transform: translate(0, 0);
+}
+
+.loader {
+  position: fixed;
+  z-index: 9999;
+  background: #FFF;
+  top: 0px;
+  left: 0px;
+  height: 100%;
+  width: 100%;
+  opacity: 1;
+  -webkit-transition: 0.8s opacity 0.4s ease-in-out;
+  -moz-transition: 0.8s opacity 0.4s ease-in-out;
+  -ms-transition: 0.8s opacity 0.4s ease-in-out;
+  -o-transition: 0.8s opacity 0.4s ease-in-out;
+  transition: 0.8s opacity 0.4s ease-in-out;
 }
 
 @font-face {
@@ -1325,7 +1342,7 @@ button {
   height: auto;
   max-height: 500px;
   width: auto;
-  max-width: 60%;
+  max-width: 78%;
 }
 
 .project__visuel .visuel__letter {
@@ -1875,6 +1892,12 @@ button {
   transform: none;
 }
 
+.contact__description .description a {
+  font-weight: 400;
+  font-size: 0.875rem;
+  text-decoration: underline;
+}
+
 .contact__form {
   overflow: auto;
   display: flex;
@@ -1915,11 +1938,11 @@ button {
 .contact__form .chat-msg-error {
   color: #eb5160;
   position: absolute;
-  bottom: -24px;
+  height: 40px;
+  bottom: -44px;
   left: 8px;
   font-size: 12px;
   border-radius: 2px;
-  text-align: center;
   font-weight: 500;
 }
 
@@ -1945,7 +1968,7 @@ button {
 .bubble {
   display: none;
   background: #fff;
-  max-width: 270px;
+  max-width: 260px;
   padding: 20px;
   border-radius: 4px;
   box-shadow: 0 4px 8px rgba(6, 10, 46, 0.1);
@@ -1968,24 +1991,19 @@ button {
   font-family: 'Asap', sans-serif;
   background: transparent !important;
   border: transparent;
+  padding: 0;
   outline: none;
   color: #fff !important;
   line-height: 18px;
   font-size: 0.9rem;
   font-weight: 600;
   resize: none;
-  width: 100%;
+  width: 200px;
 }
 
 .bubble textarea {
   height: 16px;
   height: auto;
-  width: 100%;
-  max-width: 230px;
-}
-
-.bubble input#mailAnswer {
-  width: 220px;
 }
 
 .bubble ::-webkit-input-placeholder {
@@ -2417,11 +2435,11 @@ button {
 
 .project-page .menu-btn {
   opacity: 0;
-  -webkit-transition: opacity 0.8s ease-in-out;
-  -moz-transition: opacity 0.8s ease-in-out;
-  -ms-transition: opacity 0.8s ease-in-out;
-  -o-transition: opacity 0.8s ease-in-out;
-  transition: opacity 0.8s ease-in-out;
+  -webkit-transition: box-shadow 0.4s ease-in-out, opacity 0.8s ease-in-out;
+  -moz-transition: box-shadow 0.4s ease-in-out, opacity 0.8s ease-in-out;
+  -ms-transition: box-shadow 0.4s ease-in-out, opacity 0.8s ease-in-out;
+  -o-transition: box-shadow 0.4s ease-in-out, opacity 0.8s ease-in-out;
+  transition: box-shadow 0.4s ease-in-out, opacity 0.8s ease-in-out;
 }
 
 .project-page .menu-btn.enable {
@@ -2493,7 +2511,7 @@ button {
 
 .project-page header .header--text {
   text-align: center;
-  color: transparent;
+  color: rgba(255, 255, 255, 0);
   -webkit-transform: translateY(30px);
   -moz-transform: translateY(30px);
   -ms-transform: translateY(30px);
@@ -2507,7 +2525,7 @@ button {
 }
 
 .project-page header .header--text.enable {
-  color: #ffffff;
+  color: white;
   -webkit-transform: translateY(0);
   -moz-transform: translateY(0);
   -ms-transform: translateY(0);
@@ -2812,6 +2830,7 @@ button {
 }
 
 .video-wrapper video {
+  cursor: pointer;
   width: 100%;
   border: 10px solid #2f3039;
   border-radius: 24px;
@@ -3342,9 +3361,6 @@ button {
     top: -22px;
     font-size: 5rem;
   }
-  .contact__description .description__wrapper .description__title {
-    margin: 20px 0 0;
-  }
   .contact__form {
     flex-grow: 1;
   }
@@ -3473,6 +3489,11 @@ button {
   .bubble--answer .btn-enter {
     display: block;
   }
+  .bubble input,
+  .bubble textarea {
+    width: 100%;
+    max-width: 230px;
+  }
   .bubble--group__choice {
     flex-direction: column;
     width: 100%;
@@ -3554,6 +3575,10 @@ button {
   .project-picture,
   .project-picture.padding {
     padding: 10px;
+  }
+  .project-picture:after {
+    height: calc(100% - 60px);
+    top: 30px;
   }
   .project-picture--double .picture-double__wrapper:last-child {
     margin-top: 10px;

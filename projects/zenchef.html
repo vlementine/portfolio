@@ -1,535 +1,73 @@
 <html lang="fr">
-	<head>
-		<meta charset="UTF-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<meta http-equiv="X-UA-Compatible" content="ie=edge" />
-		<title>Project name • Clémentine Bertrand</title>
-		<link rel="icon" type="image/png" href="../img/favicon-pro.png" />
-		<link rel="stylesheet" href="../css/main.min.css" />
-		<link rel="stylesheet" href="../css/slick.css" />
-	</head>
 
-	<body id="project-01" class="project-page">
-		<div>
-			<!-- Transition -->
-			<span class="transition-screen"></span>
-			<span class="transition-screen transition-screen--white"></span>
+<head>
+	<meta charset="UTF-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<meta http-equiv="X-UA-Compatible" content="ie=edge" />
+	<title>Project name • Clémentine Bertrand</title>
+	<link rel="icon" type="image/png" href="../img/favicon-pro.png" />
+	<link rel="stylesheet" href="../css/main.min.css" />
+	<link rel="stylesheet" href="../css/slick.css" />
+</head>
 
-			<!-- Navigation -->
-			<nav>
-				<a href="../index.html">
-					<img src="../img/logo.gif" alt="Logo Clémentine Bertrand" class="logo"
-				/></a>
+<body id="project-01" class="project-page">
+	<div class="loader"></div>
+	<div>
+		<!-- Transition -->
+		<span class="transition-screen"></span>
+		<span class="transition-screen transition-screen--white"></span>
 
-				<div class="nav__return" onClick="redirectionProject()">
-					<div class="arrow__clickable">
-						<span class="nav__arrow nav__arrow--left">
-							<span class="arrow__circle"></span>
-						</span>
-					</div>
-					<div class="return__text">
-						<span class="text--top">Back to projects</span>
-						<span class="text--bottom">Back to projects</span>
-					</div>
+		<!-- Navigation -->
+		<nav>
+			<a href="../index.html">
+				<img src="../img/logo.gif" alt="Logo Clémentine Bertrand" class="logo" /></a>
+
+			<div class="nav__return" onClick="redirectionProject()">
+				<div class="arrow__clickable">
+					<span class="nav__arrow nav__arrow--left">
+						<span class="arrow__circle"></span>
+					</span>
 				</div>
-			</nav>
-
-			<!-- MENU -->
-			<div class="menu__wrapper disable">
-				<div class="menu__categories">
-					<div class="menu__category">
-						<h2 onClick="redirectionProject('home')">Accueil</h2>
-						<p>Présentation</p>
-					</div>
-					<div class="menu__category">
-						<h2 onClick="redirectionProject('work')">Projets</h2>
-						<p>Découvrez mes travaux</p>
-					</div>
-					<div class="menu__category">
-						<h2 onClick="redirectionProject('contact')">Contact</h2>
-						<p>En savoir plus</p>
-					</div>
+				<div class="return__text">
+					<span class="text--top">Back to projects</span>
+					<span class="text--bottom">Back to projects</span>
 				</div>
+			</div>
+		</nav>
 
-				<div class="menu__projects-wrapper--mobile"></div>
-
-				<div class="menu__projects-wrapper">
-					<div class="menu__project-visuel">
-						<div class="visuels__wrapper">
-							<div class="visuel__mockup">
-								<img
-									class="mockup--desktop"
-									src="../img/zenchef_visuel-home.png"
-									alt="Visuel Zenchef"
-									draggable="false"
-								/>
-							</div>
-							<img
-								class="visuel__letter"
-								src="../img/zenchef_letter.png"
-								alt="B"
-								draggable="false"
-							/>
-						</div>
-					</div>
-					<div class="menu__projects"></div>
+		<!-- MENU -->
+		<div class="menu__wrapper disable">
+			<div class="menu__categories">
+				<div class="menu__category">
+					<h2 onClick="redirectionProject('home')">Accueil</h2>
+					<p>Présentation</p>
 				</div>
-
-				<div class="menu__footer">
-					<span class="copyright">Clémentine Bertrand © 2019</span>
-					<div class="links">
-						<a class="link--behance" href="http://be.net/cbertrand" target="_blank">
-							<span>Behance</span>
-						</a>
-						<a
-							class="link--dribbble"
-							href="https://dribbble.com/cbertrand"
-							target="_blank"
-						>
-							<span>Dribbble</span>
-						</a>
-						<a
-							class="link--linkedin"
-							href="https://www.linkedin.com/in/clementinebertrand"
-							target="_blank"
-						>
-							<span>Linkedin</span>
-						</a>
-					</div>
-					<div class="footer__contact">
-						<span>Contactez-moi</span>
-						<div class="contact__link">
-							<a href="mailto:hello@clementinebertrand.fr"> ✍️ </a>
-						</div>
-					</div>
+				<div class="menu__category">
+					<h2 onClick="redirectionProject('work')">Projets</h2>
+					<p>Découvrez mes travaux</p>
+				</div>
+				<div class="menu__category">
+					<h2 onClick="redirectionProject('contact')">Contact</h2>
+					<p>En savoir plus</p>
 				</div>
 			</div>
 
-			<div class="menu-btn menu-btn-open" onclick="displayMenu()">
-				<div class="menu__icon menu__icon--open enable">
-					<span></span> <span></span> <span></span>
+			<div class="menu__projects-wrapper--mobile"></div>
+
+			<div class="menu__projects-wrapper">
+				<div class="menu__project-visuel">
+					<div class="visuels__wrapper">
+						<div class="visuel__mockup">
+							<img class="mockup--desktop" src="../img/zenchef_visuel-home.png" alt="Visuel Zenchef"
+								draggable="false" />
+						</div>
+						<img class="visuel__letter" src="../img/zenchef_letter.png" alt="B" draggable="false" />
+					</div>
 				</div>
-				<div class="menu__icon menu__icon--close"><span></span> <span></span></div>
+				<div class="menu__projects"></div>
 			</div>
 
-			<!-- HEADER -->
-			<header>
-				<div class="header--text">
-					<h1>Titre du projet</h1>
-					<p class="subtitle">Date • Type de projet</p>
-				</div>
-			</header>
-
-			<!-- PROJECT CONTENT -->
-			<section>
-				<div class="container project-intro">
-					<div class="intro__content">
-						<h2>Présentation</h2>
-						<p>
-							Zenchef est une entreprise française qui permet aux restaurateurs de gérer
-							leurs réservations sans commission ni intermédiaire, fidéliser leurs clients
-							et maîtriser leur réputation en ligne. Depuis plus de 3 ans, j'occupe le
-							poste de designer dans cette société en alternant les missions de product
-							design et de marketing.
-						</p>
-						<!-- <a class="btn" href="">Voir le site</a> -->
-					</div>
-				</div>
-
-				<div class="container project-picture project-picture--simple padding">
-					<img
-						class="mockup lazy"
-						alt=""
-						src="../img/placeholder-image.jpg"
-						data-src="image-to-lazy-load-1x.jpg"
-						data-srcset="../img/zenchef/zenchef__picture-product-01.png"
-					/>
-				</div>
-
-				<div id="parallax-bg-01" class="project-parallax--bg">
-					<div></div>
-				</div>
-				<div class="project-parallax--bg--mobile">
-					<div class="parallax-visuel__wrapper">
-						<div class="parallax-visuel"></div>
-					</div>
-				</div>
-
-				<div class="container project-description">
-					<h3>ZenBook — Plan de salle</h3>
-					<p>
-						Le plan de salle permet de simplifier la gestion des réservations. Il permet
-						au restaurateur d'assigner les réservations facilement sur la table de son
-						choix, d'avoir une vision claire des tables occupées, réservées ou libres de
-						son service et bien plus.
-					</p>
-				</div>
-
-				<div class="container project-picture project-picture--explain padding">
-					<div class="explain">
-						<div class="explain__picture">
-							<img
-								src="../img/zenchef/zenchef__picture-product-explain-1-01.jpg"
-								alt=""
-							/>
-							<div id="explain__text-01" class="explain__text explain__text--left">
-								<h4>Services et filtres</h4>
-								<p>
-									Sélection rapide d’un ou des services, avec possibilité de filtrer par
-									groupe de statut des réservations.
-								</p>
-							</div>
-						</div>
-
-						<div class="explain__picture">
-							<img
-								src="../img/zenchef/zenchef__picture-product-explain-1-02.jpg"
-								alt=""
-							/>
-
-							<div id="explain__text-02" class="explain__text explain__text--right">
-								<h4>Plan de salle</h4>
-								<p>Permet de préparer ses services puis de les suivre en temps-réel.</p>
-							</div>
-						</div>
-
-						<div class="explain__picture">
-							<img
-								src="../img/zenchef/zenchef__picture-product-explain-1-03.jpg"
-								alt=""
-							/>
-							<div id="explain__text-03" class="explain__text explain__text--left">
-								<h4>Liste des réservations</h4>
-								<p>
-									Champs personnalisables, permet aux restaurateurs d’avoir une liste
-									adaptée en fonction de leurs besoins.
-								</p>
-							</div>
-						</div>
-
-						<div class="explain__picture">
-							<img
-								src="../img/zenchef/zenchef__picture-product-explain-1-04.jpg"
-								alt=""
-							/>
-							<div id="explain__text-04" class="explain__text explain__text--right">
-								<h4>Mémos</h4>
-								<p>Permet de préparer ses services puis de les suivre en temps-réel.</p>
-							</div>
-						</div>
-					</div>
-				</div>
-
-				<div class="container-fluid project-slider">
-					<div class="slider__content center slider">
-						<div>
-							<h4>Détails d’une réservation</h4>
-							<img src="../img/zenchef/zenchef__slide-product-1-01.gif" alt="" />
-						</div>
-
-						<div>
-							<h4>Assignation/Désassignation à une table</h4>
-							<img src="../img/zenchef/zenchef__slide-product-1-02.gif" alt="" />
-						</div>
-
-						<div>
-							<h4>Changement de statut sur une table</h4>
-							<img src="../img/zenchef/zenchef__slide-product-1-03.gif" alt="" />
-						</div>
-					</div>
-				</div>
-
-				<div class="container project-description">
-					<h3>Adaptation sur iOS et Android</h3>
-					<p>L'application est disponible également sur iPhone, iPad et Android.</p>
-				</div>
-
-				<div class="container project-picture project-picture--simple padding">
-					<img src="../img/zenchef/zenchef__picture-product-02.png" alt="" /
-					class="mockup">
-				</div>
-
-				<div class="container project-description">
-					<h3>ZenBook — Timeline</h3>
-					<p>
-						???
-					</p>
-				</div>
-
-				<div class="container project-picture project-picture--explain padding">
-					<div class="explain">
-						<div class="explain__picture">
-							<img
-								src="../img/zenchef/zenchef__picture-product-explain-2-01.jpg"
-								alt=""
-							/>
-							<div id="explain__text-2-01" class="explain__text explain__text--right">
-								<h4>Timeline</h4>
-								<p>Permet de préparer ses services puis de les suivre en temps-réel.</p>
-							</div>
-						</div>
-
-						<div class="explain__picture">
-							<img
-								src="../img/zenchef/zenchef__picture-product-explain-2-02.jpg"
-								alt=""
-							/>
-
-							<div id="explain__text-2-02" class="explain__text explain__text--left">
-								<h4>Tables et nombres de pax</h4>
-								<p>
-									Sélection rapide d’un ou des services, avec possibilité de filtrer par
-									groupe de statut des réservations.
-								</p>
-							</div>
-						</div>
-
-						<div class="explain__picture">
-							<img
-								src="../img/zenchef/zenchef__picture-product-explain-2-03.jpg"
-								alt=""
-							/>
-							<div id="explain__text-2-03" class="explain__text explain__text--right">
-								<h4>Carte de réservation</h4>
-								<p>
-									Champs personnalisables, permet aux restaurateurs d’avoir une liste
-									adaptée en fonction de leurs besoins.
-								</p>
-							</div>
-						</div>
-
-						<div class="explain__picture">
-							<img
-								src="../img/zenchef/zenchef__picture-product-explain-2-04.jpg"
-								alt=""
-							/>
-							<div id="explain__text-2-04" class="explain__text explain__text--left">
-								<h4>Nombre de couverts/créneaux</h4>
-								<p>Permet de préparer ses services puis de les suivre en temps-réel.</p>
-							</div>
-						</div>
-					</div>
-				</div>
-
-				<div class="container project-description">
-					<h3>ZenMarketing — Campagne SMS</h3>
-					<p>
-						Pour mettre un maximum de chances du côté des restaurateurs de faire revenir
-						leurs clients, ils peuvent envoyer des campagnes par SMS, dont l’impact est
-						plus fort que celui des mails. Ces derniers peuvent être envoyés à partir de
-						leur plateforme Zenchef et des modèles de messages sont disponibles pour leur
-						faire gagner du temps.
-					</p>
-				</div>
-
-				<div class="container project-picture project-picture--explain padding">
-					<div class="explain">
-						<div class="explain__picture">
-							<img
-								src="../img/zenchef/zenchef__picture-product-explain-3-01.jpg"
-								alt=""
-							/>
-							<div id="explain__text-3-01" class="explain__text explain__text--left">
-								<h4>Navigation</h4>
-								<p>
-									Permet d’avoir une vision sur la campagne créée et de revenir aux étapes
-									précédentes.
-								</p>
-							</div>
-						</div>
-
-						<div class="explain__picture">
-							<img
-								src="../img/zenchef/zenchef__picture-product-explain-3-02.jpg"
-								alt=""
-							/>
-
-							<div id="explain__text-3-02" class="explain__text explain__text--right">
-								<h4>Prévisualisation</h4>
-								<p>
-									Permet d’avoir un exemple en temps réel du SMS qui sera envoyé aux
-									clients.
-								</p>
-							</div>
-						</div>
-
-						<div class="explain__picture">
-							<img
-								src="../img/zenchef/zenchef__picture-product-explain-3-03.jpg"
-								alt=""
-							/>
-							<div id="explain__text-3-03" class="explain__text explain__text--left">
-								<h4>Édition</h4>
-								<p>
-									Regroupe tous les paramètres utiles à la composition du SMS (Texte,
-									liens, variables, etc.)
-								</p>
-							</div>
-						</div>
-					</div>
-				</div>
-
-				<div class="container project-description">
-					<h3>ZenSite — Template d’ouverture de restaurant</h3>
-					<p>Réalisation de trois templates pour les ouvertures de restaurant.</p>
-				</div>
-
-				<div class="container-fluid project-slider">
-					<div class="slider__content center slider">
-						<div>
-							<h4>Template T1</h4>
-							<img src="../img/zenchef/zenchef__slide-product-2-01.png" alt="" />
-						</div>
-
-						<div>
-							<h4>Template T2</h4>
-							<img src="../img/zenchef/zenchef__slide-product-2-02.png" alt="" />
-						</div>
-
-						<div>
-							<h4>Template T3</h4>
-							<img src="../img/zenchef/zenchef__slide-product-2-03.png" alt="" />
-						</div>
-					</div>
-				</div>
-
-				<div id="parallax-bg-02" class="project-parallax--bg">
-					<div></div>
-				</div>
-				<div id="parallax-bg--mobile-02" class="project-parallax--bg--mobile">
-					<div class="parallax-visuel__wrapper">
-						<div class="parallax-visuel"></div>
-					</div>
-				</div>
-
-				<div class="container project-description">
-					<h3>Print — Flyers</h3>
-					<p>
-						Production de flyers destinés aux prospects, distribués lors des salons et
-						évènements.
-					</p>
-				</div>
-
-				<div class="container project-picture project-picture--double">
-					<div class="picture-double__wrapper">
-						<img src="../img/zenchef/zenchef__picture-mkt-01.jpg" alt="" />
-					</div>
-					<div class="picture-double__wrapper">
-						<img src="../img/zenchef/zenchef__picture-mkt-02.jpg" alt="" />
-					</div>
-				</div>
-
-				<div class="container project-description">
-					<h3>Print — Kakemono</h3>
-					<p>
-						Divers Kakemono créés pour présenter notre service pendant les salons et
-						autres événements, et mettre en valeur les informations clés de la société.
-					</p>
-				</div>
-
-				<div class="container project-picture project-picture--double">
-					<div class="picture-double__wrapper">
-						<img src="../img/zenchef/zenchef__picture-mkt-03.jpg" alt="" />
-					</div>
-					<div class="picture-double__wrapper">
-						<img src="../img/zenchef/zenchef__picture-mkt-04.jpg" alt="" />
-					</div>
-				</div>
-
-				<div class="container project-description">
-					<h3>Print — Divers projets</h3>
-					<p>
-						Production de prints sur divers supports(cartes de voeux, pubs, goodies,
-						etc.).
-					</p>
-				</div>
-
-				<div class="container project-picture project-picture--double">
-					<div class="picture-double__wrapper">
-						<img src="../img/zenchef/zenchef__picture-mkt-05.jpg" alt="" />
-
-						<img src="../img/zenchef/zenchef__picture-mkt-06.jpg" alt="" />
-						<img class="mockup" src="../img/zenchef/zenchef__picture-mkt-07.png" alt="" />
-					</div>
-					<div class="picture-double__wrapper">
-						<img src="../img/zenchef/zenchef__picture-mkt-08.jpg" alt="" />
-						<img class="mockup" src="../img/zenchef/zenchef__picture-mkt-09.png" alt="" />
-					</div>
-				</div>
-
-				<div class="container project-description">
-					<h3>Web — Emailing</h3>
-					<p>
-						Collaboration régulière avec le marketing pour la conception d'emailing, que
-						ce soit pour les communications sur le produit, les événements ou les salons.
-					</p>
-				</div>
-
-				<div class="container project-picture project-picture--double">
-					<div class="picture-double__wrapper">
-						<img src="../img/zenchef/zenchef__picture-mkt-10.jpg" alt="" />
-						<img src="../img/zenchef/zenchef__picture-mkt-11.jpg" alt="" />
-					</div>
-					<div class="picture-double__wrapper">
-						<img src="../img/zenchef/zenchef__picture-mkt-12.jpg" alt="" />
-						<img src="../img/zenchef/zenchef__picture-mkt-13.jpg" alt="" />
-					</div>
-				</div>
-
-				<div class="container project-description">
-					<h3>Web — Divers projets</h3>
-					<p>
-						Réalisation de projets web tels que des "Thank you page" pour les contenus
-						téléchargeables du blog, la refonte graphique du centre d'aide et du Blog
-						Zenchef, et des "Landing page" pour différents évènements.
-					</p>
-				</div>
-
-				<div class="container project-picture project-picture--double">
-					<div class="picture-double__wrapper">
-						<img src="../img/zenchef/zenchef__picture-mkt-14.jpg" alt="" />
-						<img src="../img/zenchef/zenchef__picture-mkt-15.jpg" alt="" />
-					</div>
-					<div class="picture-double__wrapper">
-						<img src="../img/zenchef/zenchef__picture-mkt-16.jpg" alt="" />
-						<img src="../img/zenchef/zenchef__picture-mkt-17.jpg" alt="" />
-					</div>
-				</div>
-
-				<div class="container project-description">
-					<h3>Réseaux sociaux</h3>
-					<p>
-						Production de visuels à destinations des réseaux sociaux,, notamment pour les
-						fêtes de fin d'année, événements saisonniers, salons etc.
-					</p>
-				</div>
-
-				<div class="container project-picture project-picture--double">
-					<div class="picture-double__wrapper">
-						<img src="../img/zenchef/zenchef__picture-mkt-18.jpg" alt="" />
-						<img src="../img/zenchef/zenchef__picture-mkt-19.jpg" alt="" />
-						<img src="../img/zenchef/zenchef__picture-mkt-20.jpg" alt="" />
-						<img src="../img/zenchef/zenchef__picture-mkt-21.jpg" alt="" />
-					</div>
-					<div class="picture-double__wrapper">
-						<img src="../img/zenchef/zenchef__picture-mkt-22.jpg" alt="" />
-						<img src="../img/zenchef/zenchef__picture-mkt-23.jpg" alt="" />
-						<img src="../img/zenchef/zenchef__picture-mkt-24.jpg" alt="" />
-						<img src="../img/zenchef/zenchef__picture-mkt-25.jpg" alt="" />
-					</div>
-				</div>
-			</section>
-
-			<!-- NEXT PROJECT -->
-			<section class="next-project">
-				<h3 class="next-project__title">Prochain project</h3>
-				<span class="next-project__name" onClick="redirectionNextProject()"
-					>Nom du prochain projet</span
-				>
-			</section>
-
-			<!-- FOOTER -->
-			<footer>
+			<div class="menu__footer">
 				<span class="copyright">Clémentine Bertrand © 2019</span>
 				<div class="links">
 					<a class="link--behance" href="http://be.net/cbertrand" target="_blank">
@@ -538,11 +76,7 @@
 					<a class="link--dribbble" href="https://dribbble.com/cbertrand" target="_blank">
 						<span>Dribbble</span>
 					</a>
-					<a
-						class="link--linkedin"
-						href="https://www.linkedin.com/in/clementinebertrand"
-						target="_blank"
-					>
+					<a class="link--linkedin" href="https://www.linkedin.com/in/clementinebertrand" target="_blank">
 						<span>Linkedin</span>
 					</a>
 				</div>
@@ -552,44 +86,448 @@
 						<a href="mailto:hello@clementinebertrand.fr"> ✍️ </a>
 					</div>
 				</div>
-			</footer>
+			</div>
 		</div>
 
-		<script src="https://code.jquery.com/jquery-2.2.0.min.js"></script>
-		<script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.6/ScrollMagic.min.js"></script>
-		<script src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
-		<script src="../js/vendor/TweenMax.min.js"></script>
-		<script src="../js/vendor/animation.gsap.min.js"></script>
-		<script src="../js/data-json.js"></script>
-		<script src="../js/nav.js"></script>
-		<script src="../js/script-project.js"></script>
+		<div class="menu-btn menu-btn-open" onclick="displayMenu()">
+			<div class="menu__icon menu__icon--open enable">
+				<span></span> <span></span> <span></span>
+			</div>
+			<div class="menu__icon menu__icon--close"><span></span> <span></span></div>
+		</div>
 
-		<script type="text/javascript">
-			$(document).on('ready', function() {
-				$('.center').slick({
-					arrows: false,
-					dots: true,
-					infinite: true,
-					centerMode: true,
-					slidesToShow: 1,
-					slidesToScroll: 1,
-					mobileFirst: true,
-					responsive: [
-						{
-							breakpoint: 1224,
-							settings: {
-								centerPadding: '18%'
-							}
-						},
-						{
-							breakpoint: 600,
-							settings: {
-								centerPadding: '10%'
-							}
+		<!-- HEADER -->
+		<header>
+			<div class="header--text">
+				<h1>Titre du projet</h1>
+				<p class="subtitle">Date • Type de projet</p>
+			</div>
+		</header>
+
+		<!-- PROJECT CONTENT -->
+		<section>
+			<div class="container project-intro">
+				<div class="intro__content">
+					<h2>Présentation</h2>
+					<p>
+						Zenchef est une entreprise française qui permet aux restaurateurs de gérer
+						leurs réservations sans commission ni intermédiaire, fidéliser leurs clients
+						et maîtriser leur réputation en ligne. Depuis plus de 3 ans, j'occupe le
+						poste de designer dans cette société en alternant les missions de product
+						design et de marketing.
+					</p>
+					<!-- <a class="btn" href="">Voir le site</a> -->
+				</div>
+			</div>
+
+			<div class="container project-picture project-picture--simple padding">
+				<img class="mockup" alt="" src="../img/zenchef/zenchef__picture-product-01.png" />
+			</div>
+
+			<div id="parallax-bg-01" class="project-parallax--bg">
+				<div></div>
+			</div>
+			<div class="project-parallax--bg--mobile">
+				<div class="parallax-visuel__wrapper">
+					<div class="parallax-visuel"></div>
+				</div>
+			</div>
+
+			<div class="container project-description">
+				<h3>ZenBook — Plan de salle</h3>
+				<p>
+					Le plan de salle permet de simplifier la gestion des réservations. Il permet
+					au restaurateur d'assigner les réservations facilement sur la table de son
+					choix, d'avoir une vision claire des tables occupées, réservées ou libres de
+					son service et bien plus.
+				</p>
+			</div>
+
+			<div class="container project-picture project-picture--explain padding">
+				<div class="explain">
+					<div class="explain__picture">
+						<img src="../img/zenchef/zenchef__picture-product-explain-1-01.jpg" alt="" />
+						<div id="explain__text-01" class="explain__text explain__text--left">
+							<h4>Services et filtres</h4>
+							<p>
+								Sélection rapide d’un ou des services, avec possibilité de filtrer par
+								groupe de statut des réservations.
+							</p>
+						</div>
+					</div>
+
+					<div class="explain__picture">
+						<img src="../img/zenchef/zenchef__picture-product-explain-1-02.jpg" alt="" />
+
+						<div id="explain__text-02" class="explain__text explain__text--right">
+							<h4>Plan de salle</h4>
+							<p>Permet de préparer ses services puis de les suivre en temps-réel.</p>
+						</div>
+					</div>
+
+					<div class="explain__picture">
+						<img src="../img/zenchef/zenchef__picture-product-explain-1-03.jpg" alt="" />
+						<div id="explain__text-03" class="explain__text explain__text--left">
+							<h4>Liste des réservations</h4>
+							<p>
+								Champs personnalisables, permet aux restaurateurs d’avoir une liste
+								adaptée en fonction de leurs besoins.
+							</p>
+						</div>
+					</div>
+
+					<div class="explain__picture">
+						<img src="../img/zenchef/zenchef__picture-product-explain-1-04.jpg" alt="" />
+						<div id="explain__text-04" class="explain__text explain__text--right">
+							<h4>Mémos</h4>
+							<p>Permet de préparer ses services puis de les suivre en temps-réel.</p>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<div class="container-fluid project-slider">
+				<div class="slider__content center slider">
+					<div>
+						<h4>Détails d’une réservation</h4>
+						<img src="../img/zenchef/zenchef__slide-product-1-01.gif" alt="" />
+					</div>
+
+					<div>
+						<h4>Assignation/Désassignation à une table</h4>
+						<img src="../img/zenchef/zenchef__slide-product-1-02.gif" alt="" />
+					</div>
+
+					<div>
+						<h4>Changement de statut sur une table</h4>
+						<img src="../img/zenchef/zenchef__slide-product-1-03.gif" alt="" />
+					</div>
+				</div>
+			</div>
+
+			<div class="container project-description">
+				<h3>Adaptation sur iOS et Android</h3>
+				<p>L'application est disponible également sur iPhone, iPad et Android.</p>
+			</div>
+
+			<div class="container project-picture project-picture--simple padding">
+				<img src="../img/zenchef/zenchef__picture-product-02.png" alt="" / class="mockup">
+			</div>
+
+			<div class="container project-description">
+				<h3>ZenBook — Timeline</h3>
+				<p>
+					???
+				</p>
+			</div>
+
+			<div class="container project-picture project-picture--explain padding">
+				<div class="explain">
+					<div class="explain__picture">
+						<img src="../img/zenchef/zenchef__picture-product-explain-2-01.jpg" alt="" />
+						<div id="explain__text-2-01" class="explain__text explain__text--right">
+							<h4>Timeline</h4>
+							<p>Permet de préparer ses services puis de les suivre en temps-réel.</p>
+						</div>
+					</div>
+
+					<div class="explain__picture">
+						<img src="../img/zenchef/zenchef__picture-product-explain-2-02.jpg" alt="" />
+
+						<div id="explain__text-2-02" class="explain__text explain__text--left">
+							<h4>Tables et nombres de pax</h4>
+							<p>
+								Sélection rapide d’un ou des services, avec possibilité de filtrer par
+								groupe de statut des réservations.
+							</p>
+						</div>
+					</div>
+
+					<div class="explain__picture">
+						<img src="../img/zenchef/zenchef__picture-product-explain-2-03.jpg" alt="" />
+						<div id="explain__text-2-03" class="explain__text explain__text--right">
+							<h4>Carte de réservation</h4>
+							<p>
+								Champs personnalisables, permet aux restaurateurs d’avoir une liste
+								adaptée en fonction de leurs besoins.
+							</p>
+						</div>
+					</div>
+
+					<div class="explain__picture">
+						<img src="../img/zenchef/zenchef__picture-product-explain-2-04.jpg" alt="" />
+						<div id="explain__text-2-04" class="explain__text explain__text--left">
+							<h4>Nombre de couverts/créneaux</h4>
+							<p>Permet de préparer ses services puis de les suivre en temps-réel.</p>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<div class="container project-description">
+				<h3>ZenMarketing — Campagne SMS</h3>
+				<p>
+					Pour mettre un maximum de chances du côté des restaurateurs de faire revenir
+					leurs clients, ils peuvent envoyer des campagnes par SMS, dont l’impact est
+					plus fort que celui des mails. Ces derniers peuvent être envoyés à partir de
+					leur plateforme Zenchef et des modèles de messages sont disponibles pour leur
+					faire gagner du temps.
+				</p>
+			</div>
+
+			<div class="container project-picture project-picture--explain padding">
+				<div class="explain">
+					<div class="explain__picture">
+						<img src="../img/zenchef/zenchef__picture-product-explain-3-01.jpg" alt="" />
+						<div id="explain__text-3-01" class="explain__text explain__text--left">
+							<h4>Navigation</h4>
+							<p>
+								Permet d’avoir une vision sur la campagne créée et de revenir aux étapes
+								précédentes.
+							</p>
+						</div>
+					</div>
+
+					<div class="explain__picture">
+						<img src="../img/zenchef/zenchef__picture-product-explain-3-02.jpg" alt="" />
+
+						<div id="explain__text-3-02" class="explain__text explain__text--right">
+							<h4>Prévisualisation</h4>
+							<p>
+								Permet d’avoir un exemple en temps réel du SMS qui sera envoyé aux
+								clients.
+							</p>
+						</div>
+					</div>
+
+					<div class="explain__picture">
+						<img src="../img/zenchef/zenchef__picture-product-explain-3-03.jpg" alt="" />
+						<div id="explain__text-3-03" class="explain__text explain__text--left">
+							<h4>Édition</h4>
+							<p>
+								Regroupe tous les paramètres utiles à la composition du SMS (Texte,
+								liens, variables, etc.)
+							</p>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<div class="container project-description">
+				<h3>ZenSite — Template d’ouverture de restaurant</h3>
+				<p>Réalisation de trois templates pour les ouvertures de restaurant.</p>
+			</div>
+
+			<div class="container-fluid project-slider">
+				<div class="slider__content center slider">
+					<div>
+						<h4>Template T1</h4>
+						<img src="../img/zenchef/zenchef__slide-product-2-01.png" alt="" />
+					</div>
+
+					<div>
+						<h4>Template T2</h4>
+						<img src="../img/zenchef/zenchef__slide-product-2-02.png" alt="" />
+					</div>
+
+					<div>
+						<h4>Template T3</h4>
+						<img src="../img/zenchef/zenchef__slide-product-2-03.png" alt="" />
+					</div>
+				</div>
+			</div>
+
+			<div id="parallax-bg-02" class="project-parallax--bg">
+				<div></div>
+			</div>
+			<div id="parallax-bg--mobile-02" class="project-parallax--bg--mobile">
+				<div class="parallax-visuel__wrapper">
+					<div class="parallax-visuel"></div>
+				</div>
+			</div>
+
+			<div class="container project-description">
+				<h3>Print — Flyers</h3>
+				<p>
+					Production de flyers destinés aux prospects, distribués lors des salons et
+					évènements.
+				</p>
+			</div>
+
+			<div class="container project-picture project-picture--double">
+				<div class="picture-double__wrapper">
+					<img src="../img/zenchef/zenchef__picture-mkt-01.jpg" alt="" />
+				</div>
+				<div class="picture-double__wrapper">
+					<img src="../img/zenchef/zenchef__picture-mkt-02.jpg" alt="" />
+				</div>
+			</div>
+
+			<div class="container project-description">
+				<h3>Print — Kakemono</h3>
+				<p>
+					Divers Kakemono créés pour présenter notre service pendant les salons et
+					autres événements, et mettre en valeur les informations clés de la société.
+				</p>
+			</div>
+
+			<div class="container project-picture project-picture--double">
+				<div class="picture-double__wrapper">
+					<img src="../img/zenchef/zenchef__picture-mkt-03.jpg" alt="" />
+				</div>
+				<div class="picture-double__wrapper">
+					<img src="../img/zenchef/zenchef__picture-mkt-04.jpg" alt="" />
+				</div>
+			</div>
+
+			<div class="container project-description">
+				<h3>Print — Divers projets</h3>
+				<p>
+					Production de prints sur divers supports(cartes de voeux, pubs, goodies,
+					etc.).
+				</p>
+			</div>
+
+			<div class="container project-picture project-picture--double">
+				<div class="picture-double__wrapper">
+					<img src="../img/zenchef/zenchef__picture-mkt-05.jpg" alt="" />
+
+					<img src="../img/zenchef/zenchef__picture-mkt-06.jpg" alt="" />
+					<img class="mockup" src="../img/zenchef/zenchef__picture-mkt-07.png" alt="" />
+				</div>
+				<div class="picture-double__wrapper">
+					<img src="../img/zenchef/zenchef__picture-mkt-08.jpg" alt="" />
+					<img class="mockup" src="../img/zenchef/zenchef__picture-mkt-09.png" alt="" />
+				</div>
+			</div>
+
+			<div class="container project-description">
+				<h3>Web — Emailing</h3>
+				<p>
+					Collaboration régulière avec le marketing pour la conception d'emailing, que
+					ce soit pour les communications sur le produit, les événements ou les salons.
+				</p>
+			</div>
+
+			<div class="container project-picture project-picture--double">
+				<div class="picture-double__wrapper">
+					<img src="../img/zenchef/zenchef__picture-mkt-10.jpg" alt="" />
+					<img src="../img/zenchef/zenchef__picture-mkt-11.jpg" alt="" />
+				</div>
+				<div class="picture-double__wrapper">
+					<img src="../img/zenchef/zenchef__picture-mkt-12.jpg" alt="" />
+					<img src="../img/zenchef/zenchef__picture-mkt-13.jpg" alt="" />
+				</div>
+			</div>
+
+			<div class="container project-description">
+				<h3>Web — Divers projets</h3>
+				<p>
+					Réalisation de projets web tels que des "Thank you page" pour les contenus
+					téléchargeables du blog, la refonte graphique du centre d'aide et du Blog
+					Zenchef, et des "Landing page" pour différents évènements.
+				</p>
+			</div>
+
+			<div class="container project-picture project-picture--double">
+				<div class="picture-double__wrapper">
+					<img src="../img/zenchef/zenchef__picture-mkt-14.jpg" alt="" />
+					<img src="../img/zenchef/zenchef__picture-mkt-15.jpg" alt="" />
+				</div>
+				<div class="picture-double__wrapper">
+					<img src="../img/zenchef/zenchef__picture-mkt-16.jpg" alt="" />
+					<img src="../img/zenchef/zenchef__picture-mkt-17.jpg" alt="" />
+				</div>
+			</div>
+
+			<div class="container project-description">
+				<h3>Réseaux sociaux</h3>
+				<p>
+					Production de visuels à destinations des réseaux sociaux,, notamment pour les
+					fêtes de fin d'année, événements saisonniers, salons etc.
+				</p>
+			</div>
+
+			<div class="container project-picture project-picture--double">
+				<div class="picture-double__wrapper">
+					<img src="../img/zenchef/zenchef__picture-mkt-18.jpg" alt="" />
+					<img src="../img/zenchef/zenchef__picture-mkt-19.jpg" alt="" />
+					<img src="../img/zenchef/zenchef__picture-mkt-20.jpg" alt="" />
+					<img src="../img/zenchef/zenchef__picture-mkt-21.jpg" alt="" />
+				</div>
+				<div class="picture-double__wrapper">
+					<img src="../img/zenchef/zenchef__picture-mkt-22.jpg" alt="" />
+					<img src="../img/zenchef/zenchef__picture-mkt-23.jpg" alt="" />
+					<img src="../img/zenchef/zenchef__picture-mkt-24.jpg" alt="" />
+					<img src="../img/zenchef/zenchef__picture-mkt-25.jpg" alt="" />
+				</div>
+			</div>
+		</section>
+
+		<!-- NEXT PROJECT -->
+		<section class="next-project">
+			<h3 class="next-project__title">Prochain project</h3>
+			<span class="next-project__name" onClick="redirectionNextProject()">Nom du prochain projet</span>
+		</section>
+
+		<!-- FOOTER -->
+		<footer>
+			<span class="copyright">Clémentine Bertrand © 2019</span>
+			<div class="links">
+				<a class="link--behance" href="http://be.net/cbertrand" target="_blank">
+					<span>Behance</span>
+				</a>
+				<a class="link--dribbble" href="https://dribbble.com/cbertrand" target="_blank">
+					<span>Dribbble</span>
+				</a>
+				<a class="link--linkedin" href="https://www.linkedin.com/in/clementinebertrand" target="_blank">
+					<span>Linkedin</span>
+				</a>
+			</div>
+			<div class="footer__contact">
+				<span>Contactez-moi</span>
+				<div class="contact__link">
+					<a href="mailto:hello@clementinebertrand.fr"> ✍️ </a>
+				</div>
+			</div>
+		</footer>
+	</div>
+
+	<script src="https://code.jquery.com/jquery-2.2.0.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.6/ScrollMagic.min.js"></script>
+	<script src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+	<script src="../js/vendor/TweenMax.min.js"></script>
+	<script src="../js/vendor/animation.gsap.min.js"></script>
+	<script src="../js/data-json.js"></script>
+	<script src="../js/nav.js"></script>
+	<script src="../js/script-project.js"></script>
+
+	<script type="text/javascript">
+		$(document).on('ready', function () {
+			$('.center').slick({
+				arrows: false,
+				dots: true,
+				infinite: true,
+				centerMode: true,
+				slidesToShow: 1,
+				slidesToScroll: 1,
+				mobileFirst: true,
+				responsive: [{
+						breakpoint: 1224,
+						settings: {
+							centerPadding: '18%'
 						}
-					]
-				});
+					},
+					{
+						breakpoint: 600,
+						settings: {
+							centerPadding: '10%'
+						}
+					}
+				]
 			});
-		</script>
-	</body>
+		});
+	</script>
+</body>
+
 </html>

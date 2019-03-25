@@ -86,11 +86,11 @@
 
 .project-page .menu-btn {
   opacity: 0;
-  -webkit-transition: opacity 0.8s ease-in-out;
-  -moz-transition: opacity 0.8s ease-in-out;
-  -ms-transition: opacity 0.8s ease-in-out;
-  -o-transition: opacity 0.8s ease-in-out;
-  transition: opacity 0.8s ease-in-out;
+  -webkit-transition: box-shadow 0.4s ease-in-out, opacity 0.8s ease-in-out;
+  -moz-transition: box-shadow 0.4s ease-in-out, opacity 0.8s ease-in-out;
+  -ms-transition: box-shadow 0.4s ease-in-out, opacity 0.8s ease-in-out;
+  -o-transition: box-shadow 0.4s ease-in-out, opacity 0.8s ease-in-out;
+  transition: box-shadow 0.4s ease-in-out, opacity 0.8s ease-in-out;
 }
 
 .project-page .menu-btn.enable {
@@ -162,7 +162,7 @@
 
 .project-page header .header--text {
   text-align: center;
-  color: transparent;
+  color: rgba(255, 255, 255, 0);
   -webkit-transform: translateY(30px);
   -moz-transform: translateY(30px);
   -ms-transform: translateY(30px);
@@ -176,7 +176,7 @@
 }
 
 .project-page header .header--text.enable {
-  color: #ffffff;
+  color: white;
   -webkit-transform: translateY(0);
   -moz-transform: translateY(0);
   -ms-transform: translateY(0);
@@ -481,6 +481,7 @@
 }
 
 .video-wrapper video {
+  cursor: pointer;
   width: 100%;
   border: 10px solid #2f3039;
   border-radius: 24px;

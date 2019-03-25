@@ -235,6 +235,12 @@ const responsive = () => {
 //	MAIN FUNCTION
 //-------------------------------------
 const main = () => {
+	// Loader
+	document.querySelector(".loader").style.opacity = 0;
+	setTimeout(() => {
+		document.querySelector(".loader").style.zIndex = -24;
+	}, 1200);
+
 	// Display
 	document.querySelector('nav').classList.add('enable');
 	document.querySelector('.menu-btn').classList.add('enable');

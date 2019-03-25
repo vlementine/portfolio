@@ -631,3 +631,18 @@ h3 {
 		@include transform(translate(0, 0));
 	}
 }
+
+//-------------------------------------
+//	LOADER
+//-------------------------------------
+.loader {
+	position: fixed;
+	z-index: 9999;
+	background: #FFF;
+	top: 0px;
+	left: 0px;
+	height: 100%;
+	width: 100%;
+	opacity: 1;
+	@include transition(.8s opacity .4s ease-in-out);
+}

@@ -56,6 +56,12 @@ const redirectionProject = varURL => {
 //	MAIN FUNCTION
 //-------------------------------------
 const main = () => {
+	// Loader
+	document.querySelector(".loader").style.opacity = 0;
+	setTimeout(() => {
+		document.querySelector(".loader").style.zIndex = -24;
+	}, 1200);
+
 	resizeBackground();
 	changeLogoColor();
 
