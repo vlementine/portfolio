@@ -907,3 +907,27 @@
 .project-page#project-04 .slick-dots li button:hover:after {
   width: 100%;
 }
+
+.map {
+  margin: auto;
+  position: relative;
+  display: inline-block;
+}
+
+.map img {
+  max-width: 100%;
+  display: block;
+}
+
+.box {
+  width: 5px;
+  height: 5px;
+  background: crimson;
+  position: absolute;
+  cursor: pointer;
+}
+
+#pin-1 {
+  top: 29%;
+  left: 36%;
+}

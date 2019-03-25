@@ -3257,6 +3257,30 @@ button {
   width: 100%;
 }
 
+.map {
+  margin: auto;
+  position: relative;
+  display: inline-block;
+}
+
+.map img {
+  max-width: 100%;
+  display: block;
+}
+
+.box {
+  width: 5px;
+  height: 5px;
+  background: crimson;
+  position: absolute;
+  cursor: pointer;
+}
+
+#pin-1 {
+  top: 29%;
+  left: 36%;
+}
+
 @font-face {
   font-family: 'butler_stencilextrabold';
   src: url("../fonts/butler/butler_extrabold_stencil-webfont.woff2") format("woff2"), url("../fonts/butler/butler_extrabold_stencil-webfont.woff") format("woff");
