@@ -129,7 +129,7 @@
 		@include transition(0.4s transform 1.4s ease-in-out, 0.4s color 1.4s ease-in-out);
 
 		&.enable {
-			color: #ffffff;
+			color: rgba(255, 255, 255, 1);
 			@include transform(translateY(0));
 		}
 	}

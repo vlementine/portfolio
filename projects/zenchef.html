@@ -169,11 +169,8 @@
 					<div class="explain">
 						<div class="explain__picture">
 							<img
-								class="lazy"
+								src="../img/zenchef/zenchef__picture-product-explain-1-01.jpg"
 								alt=""
-								src="../img/placeholder-image.jpg"
-								data-src="../img/zenchef/zenchef__picture-product-explain-1-01.jpg"
-								data-srcset="../img/zenchef/zenchef__picture-product-explain-1-01.jpg"
 							/>
 							<div id="explain__text-01" class="explain__text explain__text--left">
 								<h4>Services et filtres</h4>
@@ -227,13 +224,7 @@
 					<div class="slider__content center slider">
 						<div>
 							<h4>Détails d’une réservation</h4>
-							<img
-								class="lazy"
-								alt=""
-								src="../img/placeholder-image.jpg"
-								data-src="../img/zenchef/zenchef__slide-product-1-01.gif"
-								data-srcset="../img/zenchef/zenchef__slide-product-1-01.gif"
-							/>
+							<img src="../img/zenchef/zenchef__slide-product-1-01.gif" alt="" />
 						</div>
 
 						<div>
@@ -574,30 +565,6 @@
 		<script src="../js/script-project.js"></script>
 
 		<script type="text/javascript">
-			document.addEventListener('DOMContentLoaded', function() {
-				var lazyImages = [].slice.call(document.querySelectorAll('img.lazy'));
-
-				if ('IntersectionObserver' in window) {
-					let lazyImageObserver = new IntersectionObserver(function(entries, observer) {
-						entries.forEach(function(entry) {
-							if (entry.isIntersecting) {
-								let lazyImage = entry.target;
-								lazyImage.src = lazyImage.dataset.src;
-								lazyImage.srcset = lazyImage.dataset.srcset;
-								lazyImage.classList.remove('lazy');
-								lazyImageObserver.unobserve(lazyImage);
-							}
-						});
-					});
-
-					lazyImages.forEach(function(lazyImage) {
-						lazyImageObserver.observe(lazyImage);
-					});
-				} else {
-					// Possibly fall back to a more compatible method here
-				}
-			});
-
 			$(document).on('ready', function() {
 				$('.center').slick({
 					arrows: false,
