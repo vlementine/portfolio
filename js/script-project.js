@@ -2,63 +2,11 @@
 //	GENERATE CONTENT PAGE
 //-------------------------------------
 const displayContentPage = idProject => {
-	console.log(idProject);
-	document.querySelector('h1').innerText = projects[idProject].title;
-	document.querySelector('p.subtitle').innerText = projects[idProject].keywords;
-	document.querySelector('.next-project__name').innerText =
-		projects[idProject].nextProject;
-	document.querySelector('.next-project__name').href =
-		projects[idProject].hrefNextProject;
+	d.q('h1').innerText = projects[idProject].title;
+	d.q('p.subtitle').innerText = projects[idProject].keywords;
+	d.q('.next-project__name').innerText = projects[idProject].nextProject;
+	d.q('.next-project__name').href = projects[idProject].hrefNextProject;
 	generateMenu();
-};
-
-//-------------------------------------
-//	REDIRECTION -> INDEX
-//-------------------------------------
-const redirectionProject = (param) => {
-	document.querySelector('.transition-screen').classList.add('redirect-page');
-	document.querySelector('.transition-screen--white').classList.add('redirect-page');
-
-	setTimeout(() => {
-		if (param == 'home') {
-			window.location.href = '../index.html';
-		} else if (param == 'contact') {
-			window.location.href = '../index.html#contact';
-		} else {
-			window.location.href = '../index.html#' + (idProjectContent + 1);
-		}
-	}, 1500);
-};
-
-//-------------------------------------
-//	REDIRECTION -> NEXT PROJECT
-//-------------------------------------
-const redirectionNextProject = () => {
-	document.querySelector('.transition-screen').classList.add('redirect-page');
-	document.querySelector('.transition-screen--white').classList.add('redirect-page');
-
-	if (idProjectActive == 4) {
-		idNextProject = 1;
-	}
-
-	switch (idNextProject) {
-		case 1:
-			nameNextProject = 'zenchef';
-			break;
-		case 2:
-			nameNextProject = 'le-trianon';
-			break;
-		case 3:
-			nameNextProject = 'alcatraz';
-			break;
-		case 4:
-			nameNextProject = 'back-to-your-dream';
-			break;
-	}
-
-	setTimeout(() => {
-		window.location.href = nameNextProject + '.html';
-	}, 1500);
 };
 
 //-------------------------------------
@@ -99,17 +47,66 @@ const idProject = () => {
 };
 
 //-------------------------------------
-//	VIDEO
+//	REDIRECTION -> INDEX
 //-------------------------------------
-const videoPlayer = (param) => {
+const redirectionProject = param => {
+	d.q('.transition-screen').classList.add('redirect-page');
+	d.q('.transition-screen--white').classList.add('redirect-page');
+
+	setTimeout(() => {
+		if (param == 'home') {
+			window.location.href = '../index.html';
+		} else if (param == 'contact') {
+			window.location.href = '../index.html#contact';
+		} else {
+			window.location.href = '../index.html#' + (idProjectContent + 1);
+		}
+	}, 1500);
+};
+
+//-------------------------------------
+//	REDIRECTION -> NEXT PROJECT
+//-------------------------------------
+const redirectionNextProject = () => {
+	d.q('.transition-screen').classList.add('redirect-page');
+	d.q('.transition-screen--white').classList.add('redirect-page');
+
+	if (idProjectActive == 4) {
+		idNextProject = 1;
+	}
+
+	switch (idNextProject) {
+		case 1:
+			nameNextProject = 'zenchef';
+			break;
+		case 2:
+			nameNextProject = 'le-trianon';
+			break;
+		case 3:
+			nameNextProject = 'alcatraz';
+			break;
+		case 4:
+			nameNextProject = 'back-to-your-dream';
+			break;
+	}
+
+	setTimeout(() => {
+		window.location.href = nameNextProject + '.html';
+	}, 1500);
+};
+
+//-------------------------------------
+//	VIDEO PLAYER
+//-------------------------------------
+const videoPlayer = param => {
 	var supportsVideo = !!document.createElement('video').canPlayType;
 	if (supportsVideo) {
-		var video = document.querySelector('.video--' + param);
-		var videoControls = document.querySelector('.video-controls--' + param);
-		var playpause = document.querySelector('.playpause--' + param);
-		var mute = document.querySelector('.mute--' + param);
-		var progress = document.querySelector('.progress--' + param);
-		var progressBar = document.querySelector('.progress-bar--' + param);
+		var video = d.q('.video--' + param);
+		var videoControls = d.q('.video-controls--' + param);
+		var playpause = d.q('.playpause--' + param);
+		var mute = d.q('.mute--' + param);
+		var progress = d.q('.progress--' + param);
+		var progressBar = d.q('.progress-bar--' + param);
 
 		// Hide the default controls
 		video.controls = false;
@@ -118,7 +115,7 @@ const videoPlayer = (param) => {
 		videoControls.style.display = 'flex';
 
 		// Play & Pause
-		playpause.addEventListener('click', function (e) {
+		playpause.addEventListener('click', function(e) {
 			if (video.paused || video.ended) {
 				this.className = 'icon-pause';
 				video.play();
@@ -128,7 +125,7 @@ const videoPlayer = (param) => {
 			}
 		});
 
-		video.addEventListener('click', function (e) {
+		video.addEventListener('click', function(e) {
 			if (video.paused || video.ended) {
 				playpause.className = 'icon-pause';
 				video.play();
@@ -139,7 +136,7 @@ const videoPlayer = (param) => {
 		});
 
 		// Volume
-		mute.addEventListener('click', function (e) {
+		mute.addEventListener('click', function(e) {
 			if (video.muted == false) {
 				this.className = 'icon-volume_off';
 				video.muted = true;
@@ -150,11 +147,11 @@ const videoPlayer = (param) => {
 		});
 
 		// Progress bar & duration
-		video.addEventListener('loadedmetadata', function () {
+		video.addEventListener('loadedmetadata', function() {
 			progress.setAttribute('max', video.duration);
 		});
 
-		video.addEventListener('timeupdate', function () {
+		video.addEventListener('timeupdate', function() {
 			if (!progress.getAttribute('max')) progress.setAttribute('max', video.duration);
 			if (video.ended) {
 				video.currentTime = 0;
@@ -180,10 +177,10 @@ const videoPlayer = (param) => {
 				seconds = '0' + seconds;
 			}
 
-			document.querySelector('.duration--' + param).innerText = minutes + ':' + seconds;
+			d.q('.duration--' + param).innerText = minutes + ':' + seconds;
 		});
 
-		progress.addEventListener('click', function (e) {
+		progress.addEventListener('click', function(e) {
 			var percent = e.offsetX / this.offsetWidth;
 			video.currentTime = percent * video.duration;
 			progress.value = percent / 100;
@@ -210,15 +207,15 @@ const parallaxMobile = () => {
 	});
 
 	let scene = new ScrollMagic.Scene({
-			triggerElement: '#trigger',
-			duration: '140%'
-		})
+		triggerElement: '#trigger',
+		duration: '140%'
+	})
 		.setTween(mobile1)
 		.addTo(controller);
 	let scene2 = new ScrollMagic.Scene({
-			triggerElement: '#trigger',
-			duration: '140%'
-		})
+		triggerElement: '#trigger',
+		duration: '140%'
+	})
 		.setTween(mobile2)
 		.addTo(controller);
 };
@@ -236,16 +233,16 @@ const responsive = () => {
 //-------------------------------------
 const main = () => {
 	// Loader
-	document.querySelector(".loader").style.opacity = 0;
+	d.q('.loader').style.opacity = 0;
 	setTimeout(() => {
-		document.querySelector(".loader").style.zIndex = -24;
+		d.q('.loader').style.zIndex = -24;
 	}, 1200);
 
 	// Display
-	document.querySelector('nav').classList.add('enable');
-	document.querySelector('.menu-btn').classList.add('enable');
-	document.querySelector('header').classList.add('enable');
-	document.querySelector('.header--text').classList.add('enable');
+	d.q('nav').classList.add('enable');
+	d.q('.menu-btn').classList.add('enable');
+	d.q('header').classList.add('enable');
+	d.q('.header--text').classList.add('enable');
 	for (let i = 0; i < document.querySelectorAll('.container').length; i++) {
 		document.querySelectorAll('.container')[i].classList.add('enable');
 	}
@@ -264,8 +261,8 @@ const main = () => {
 	});
 
 	new ScrollMagic.Scene({
-			triggerElement: '#parallax-bg-01'
-		})
+		triggerElement: '#parallax-bg-01'
+	})
 		.setTween('#parallax-bg-01 div', {
 			y: '30%',
 			ease: Linear.easeNone
@@ -273,8 +270,8 @@ const main = () => {
 		.addTo(controller);
 
 	new ScrollMagic.Scene({
-			triggerElement: '#parallax-bg-02'
-		})
+		triggerElement: '#parallax-bg-02'
+	})
 		.setTween('#parallax-bg-02 div', {
 			y: '30%',
 			ease: Linear.easeNone
@@ -289,6 +286,9 @@ var nameProjectActive = nameProject();
 var idProjectContent = idProject();
 var idProjectActive = idProject() + 1;
 var idNextProject = idProject() + 2;
+
+var d = document;
+d.q = document.querySelector;
 
 document.onload = main();
 window.onresize = responsive;
