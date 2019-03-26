@@ -1,262 +1,202 @@
 <html lang="fr">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<meta http-equiv="X-UA-Compatible" content="ie=edge" />
+		<title>Project name • Clémentine Bertrand</title>
+		<link rel="icon" type="image/png" href="../img/favicon-pro.png" />
+		<link rel="stylesheet" href="../css/main.min.css" />
+		<link rel="stylesheet" href="../css/slick.css" />
+	</head>
 
-<head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <title>Project name • Clémentine Bertrand</title>
-    <link rel="icon" type="image/png" href="../img/favicon-pro.png" />
-    <link rel="stylesheet" href="../css/main.min.css" />
-    <link rel="stylesheet" href="../css/slick.css" />
-</head>
+	<body id="project-02" class="project-page">
+		<div class="loader"></div>
+		<div>
+			<!-- Transition -->
+			<span class="transition-screen"></span>
+			<span class="transition-screen transition-screen--white"></span>
 
-<body id="project-02" class="project-page">
-    <div class="loader"></div>
-    <div>
-        <!-- Transition -->
-        <span class="transition-screen"></span>
-        <span class="transition-screen transition-screen--white"></span>
+			<!-- Navigation -->
+			<nav>
+				<a href="../index.html">
+					<img src="../img/logo.gif" alt="Logo Clémentine Bertrand" class="logo"
+				/></a>
 
-        <!-- Navigation -->
-        <nav>
-            <a href="../index.html">
-                <img src="../img/logo.gif" alt="Logo Clémentine Bertrand" class="logo" /></a>
+				<div class="nav__return" onClick="redirectionProject()">
+					<div class="arrow__clickable">
+						<span class="nav__arrow nav__arrow--left">
+							<span class="arrow__circle"></span>
+						</span>
+					</div>
+					<div class="return__text">
+						<span class="text--top">Back to projects</span>
+						<span class="text--bottom">Back to projects</span>
+					</div>
+				</div>
+			</nav>
 
-            <div class="nav__return" onClick="redirectionProject()">
-                <div class="arrow__clickable">
-                    <span class="nav__arrow nav__arrow--left">
-                        <span class="arrow__circle"></span>
-                    </span>
-                </div>
-                <div class="return__text">
-                    <span class="text--top">Back to projects</span>
-                    <span class="text--bottom">Back to projects</span>
-                </div>
-            </div>
-        </nav>
+			<!-- Menu -->
+			<div class="menu__wrapper disable">
+				<div class="menu__categories">
+					<div class="menu__category">
+						<h2 onClick="redirectionProject('home')">Accueil</h2>
+						<p>Présentation</p>
+					</div>
+					<div class="menu__category">
+						<h2 onClick="redirectionProject('work')">Projets</h2>
+						<p>Découvrez mes travaux</p>
+					</div>
+					<div class="menu__category">
+						<h2 onClick="redirectionProject('contact')">Contact</h2>
+						<p>En savoir plus</p>
+					</div>
+				</div>
 
-        <!-- Menu -->
-        <div class="menu__wrapper disable">
-            <div class="menu__categories">
-                <div class="menu__category">
-                    <h2 onClick="redirectionProject('home')">Accueil</h2>
-                    <p>Présentation</p>
-                </div>
-                <div class="menu__category">
-                    <h2 onClick="redirectionProject('work')">Projets</h2>
-                    <p>Découvrez mes travaux</p>
-                </div>
-                <div class="menu__category">
-                    <h2 onClick="redirectionProject('contact')">Contact</h2>
-                    <p>En savoir plus</p>
-                </div>
-            </div>
+				<div class="menu__projects-wrapper--mobile"></div>
 
-            <div class="menu__projects-wrapper--mobile"></div>
+				<div class="menu__projects-wrapper">
+					<div class="menu__project-visuel">
+						<div class="visuels__wrapper">
+							<div class="visuel__mockup">
+								<img
+									class="mockup--desktop"
+									src="../img/zenchef_visuel-home.png"
+									alt="Visuel Zenchef"
+									draggable="false"
+								/>
+							</div>
+							<img
+								class="visuel__letter"
+								src="../img/zenchef_letter.png"
+								alt="B"
+								draggable="false"
+							/>
+						</div>
+					</div>
+					<div class="menu__projects"></div>
+				</div>
 
-            <div class="menu__projects-wrapper">
-                <div class="menu__project-visuel">
-                    <div class="visuels__wrapper">
-                        <div class="visuel__mockup">
-                            <img class="mockup--desktop" src="../img/zenchef_visuel-home.png" alt="Visuel Zenchef"
-                                draggable="false" />
-                        </div>
-                        <img class="visuel__letter" src="../img/zenchef_letter.png" alt="B" draggable="false" />
-                    </div>
-                </div>
-                <div class="menu__projects"></div>
-            </div>
+				<div class="menu__footer">
+					<span class="copyright">Clémentine Bertrand © 2018</span>
+					<div class="links">
+						<a class="link--behance" href="http://be.net/cbertrand" target="_blank">
+							<span>Behance</span>
+						</a>
+						<a
+							class="link--dribbble"
+							href="https://dribbble.com/cbertrand"
+							target="_blank"
+						>
+							<span>Dribbble</span>
+						</a>
+						<a
+							class="link--linkedin"
+							href="https://www.linkedin.com/in/clementinebertrand"
+							target="_blank"
+						>
+							<span>Linkedin</span>
+						</a>
+					</div>
+					<div class="footer__contact">
+						<span>Contactez-moi</span>
+						<div class="contact__link">
+							<a href="mailto:hello@clementinebertrand.fr"> ✍️ </a>
+						</div>
+					</div>
+				</div>
+			</div>
 
-            <div class="menu__footer">
-                <span class="copyright">Clémentine Bertrand © 2018</span>
-                <div class="links">
-                    <a class="link--behance" href="http://be.net/cbertrand" target="_blank">
-                        <span>Behance</span>
-                    </a>
-                    <a class="link--dribbble" href="https://dribbble.com/cbertrand" target="_blank">
-                        <span>Dribbble</span>
-                    </a>
-                    <a class="link--linkedin" href="https://www.linkedin.com/in/clementinebertrand" target="_blank">
-                        <span>Linkedin</span>
-                    </a>
-                </div>
-                <div class="footer__contact">
-                    <span>Contactez-moi</span>
-                    <div class="contact__link">
-                        <a href="mailto:hello@clementinebertrand.fr"> ✍️ </a>
-                    </div>
-                </div>
-            </div>
-        </div>
+			<!-- Menu icon -->
+			<div class="menu-btn menu-btn-open" onclick="displayMenu()">
+				<div class="menu__icon menu__icon--open enable">
+					<span></span> <span></span> <span></span>
+				</div>
+				<div class="menu__icon menu__icon--close"><span></span> <span></span></div>
+			</div>
 
-        <!-- Menu icon -->
-        <div class="menu-btn menu-btn-open" onclick="displayMenu()">
-            <div class="menu__icon menu__icon--open enable">
-                <span></span> <span></span> <span></span>
-            </div>
-            <div class="menu__icon menu__icon--close"><span></span> <span></span></div>
-        </div>
-        <!-- HEADER -->
-        <header>
-            <div class="header--text">
-                <h1>Titre du projet</h1>
-                <p class="subtitle">Date • Type de projet</p>
-            </div>
-        </header>
+			<!-- HEADER -->
+			<header>
+				<div class="header--text">
+					<h1>Titre du projet</h1>
+					<p class="subtitle">Date • Type de projet</p>
+				</div>
+			</header>
 
-        <!-- PROJECT CONTENT -->
-        <section>
-            <div class="container project-intro">
-                <div class="intro__content">
-                    <h2>Présentation</h2>
-                    <p>
-                        Lors d'un projet universitaire, nous devions réaliser la refonte du site de
-                        notre choix. Passionnée par la musique et les concerts, j'ai alors opté pour
-                        le site du Trianon, salle de spectacle parisienne située au pied de la butte
-                        Montmartre. Le site n'étant que trop peu ergonomique, le choix fut évident.
-                    </p>
-                </div>
-            </div>
+			<!-- PROJECT CONTENT -->
+			<section>
+				<div class="container project-intro">
+					<div class="intro__content">
+						<h2>Présentation</h2>
+						<p>
+							Lors d'un projet universitaire, nous devions réaliser la refonte du site de
+							notre choix. Passionnée par la musique et les concerts, j'ai alors opté pour
+							le site du Trianon, salle de spectacle parisienne située au pied de la butte
+							Montmartre. Le site n'étant que trop peu ergonomique, le choix fut évident.
+						</p>
+					</div>
+				</div>
 
-            <div class="container project-picture project-picture--simple">
-                <img src="../img/le-trianon/le-trianon__picture-animate-01.gif" alt="" />
-            </div>
+				<div class="container project-picture project-picture--simple">
+					<img src="../img/le-trianon/le-trianon__picture-animate-01.gif" alt="" />
+				</div>
 
-            <div class="map">
-                <img src="../img/le-trianon/le-trianon__picture-animate-01.gif" alt="" />
-                <div id="pin-1" class="box">
-                </div>
-            </div>
+				<div class="container project-picture project-picture--explain">
+					<div class="map explain__picture">
+						<img src="../img/le-trianon/le-trianon__picture-explain-01.jpg" alt="" />
 
+						<div id="explain__w-pin-01" class="explain__w-pin">
+							<div class="explain__pin"></div>
+							<div class="explain__text">
+								<h4>Têtes d’affiche</h4>
+								<p>Sélection des artistes les plus connus, sous forme de slider.</p>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
 
+			<!-- NEXT PROJECT -->
+			<section class="next-project">
+				<h3 class="next-project__title">Prochain project</h3>
+				<span class="next-project__name" onClick="redirectionNextProject()"
+					>Nom du prochain projet</span
+				>
+			</section>
 
-            <div class="container project-description">
-                <h3>Page d'accueil</h3>
-                <p>
-                    La page d'accueil est celle que j'ai le plus réorganiser. Dans l'actuelle,
-                    tout est mélangé et il est compliqué de savoir ce qui était cliquable ou non.
-                    Je me suis appuyée sur les éléments existants (les têtes d'affiche, la
-                    programmation, la newsletter, les réseaux sociaux) et y ai inclus des
-                    nouveaux.
-                </p>
-            </div>
+			<!-- FOOTER -->
+			<footer>
+				<p class="copyright">Clémentine Bertrand © 2018</p>
+				<div class="links">
+					<a class="link--behance" href="http://be.net/cbertrand" target="_blank">
+						<span>Behance</span>
+					</a>
+					<a class="link--dribbble" href="https://dribbble.com/cbertrand" target="_blank">
+						<span>Dribbble</span>
+					</a>
+					<a
+						class="link--linkedin"
+						href="https://www.linkedin.com/in/clementinebertrand"
+						target="_blank"
+					>
+						<span>Linkedin</span>
+					</a>
+				</div>
+				<div class="footer__contact">
+					<span>Contactez-moi</span>
+					<div class="contact__link">
+						<a href="mailto:hello@clementinebertrand.fr"> ✍️ </a>
+					</div>
+				</div>
+			</footer>
+		</div>
 
-            <div class="container project-picture project-picture--explain">
-                <div class="explain">
-                    <div class="explain__picture">
-                        <img src="../img/le-trianon/le-trianon__picture-explain-01.jpg" alt="" />
-                        <div id="explain__text-01" class="explain__text explain__text--left">
-                            <h4>Têtes d’affiche</h4>
-                            <p>Sélection des artistes les plus connus, sous forme de slider.</p>
-                        </div>
-                    </div>
-
-                    <div class="explain__picture">
-                        <img src="../img/le-trianon/le-trianon__picture-explain-02.jpg" alt="" />
-                        <div id="explain__text-02" class="explain__text explain__text--right">
-                            <h4>Artistes à l’affiche</h4>
-                            <p>
-                                Les 6 prochains artistes à venir, avec un CTA vers la programmation
-                                complète.
-                            </p>
-                        </div>
-                    </div>
-
-                    <div class="explain__picture">
-                        <img src="../img/le-trianon/le-trianon__picture-explain-03.jpg" alt="" />
-                        <div id="explain__text-03" class="explain__text explain__text--left">
-                            <h4>Histoire du Trianon</h4>
-                            <p>
-                                Mise en avant historique du Trianon, avec une description retraçant son
-                                histoire.
-                            </p>
-                        </div>
-                    </div>
-
-                    <div class="explain__picture">
-                        <img src="../img/le-trianon/le-trianon__picture-explain-04.jpg" alt="" />
-                        <div id="explain__text-04" class="explain__text explain__text--right">
-                            <h4>Newsletter</h4>
-                            <p>Formulaire d’inscription à la Newsletter.</p>
-                        </div>
-                    </div>
-
-                    <div class="explain__picture">
-                        <img src="../img/le-trianon/le-trianon__picture-explain-05.jpg" alt="" />
-                        <div id="explain__text-05" class="explain__text explain__text--left">
-                            <h4>Privatisation</h4>
-                            <p>
-                                Présentation des trois salles privatisables, avec un lien vers la page
-                                de « Événements » pour plus d’informations.
-                            </p>
-                        </div>
-                    </div>
-
-                    <div class="explain__picture">
-                        <img src="../img/le-trianon/le-trianon__picture-explain-06.jpg" alt="" />
-                        <div id="explain__text-06" class="explain__text explain__text--right">
-                            <h4>Réseaux sociaux</h4>
-                            <p>Mise en avant des derniers posts sur les réseaux sociaux.</p>
-                        </div>
-                    </div>
-
-                    <div class="explain__picture">
-                        <img src="../img/le-trianon/le-trianon__picture-explain-07.jpg" alt="" />
-                        <div id="explain__text-07" class="explain__text explain__text--left">
-                            <h4>Infos pratiques</h4>
-                            <p>Regroupement des informations pratiques concernant le Trianon.</p>
-                        </div>
-                    </div>
-
-                    <div class="explain__picture">
-                        <img src="../img/le-trianon/le-trianon__picture-explain-08.jpg" alt="" />
-                    </div>
-                </div>
-            </div>
-
-
-
-        </section>
-
-        <!-- NEXT PROJECT -->
-        <section class="next-project">
-            <h3 class="next-project__title">Prochain project</h3>
-            <span class="next-project__name" onClick="redirectionNextProject()">Nom du prochain projet</span>
-        </section>
-
-        <!-- FOOTER -->
-        <footer>
-            <p class="copyright">Clémentine Bertrand © 2018</p>
-            <div class="links">
-                <a class="link--behance" href="http://be.net/cbertrand" target="_blank">
-                    <span>Behance</span>
-                </a>
-                <a class="link--dribbble" href="https://dribbble.com/cbertrand" target="_blank">
-                    <span>Dribbble</span>
-                </a>
-                <a class="link--linkedin" href="https://www.linkedin.com/in/clementinebertrand" target="_blank">
-                    <span>Linkedin</span>
-                </a>
-            </div>
-            <div class="footer__contact">
-                <span>Contactez-moi</span>
-                <div class="contact__link">
-                    <a href="mailto:hello@clementinebertrand.fr"> ✍️ </a>
-                </div>
-            </div>
-        </footer>
-    </div>
-
-    <script src="https://code.jquery.com/jquery-2.2.0.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.6/ScrollMagic.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
-    <script src="../js/vendor/TweenMax.min.js"></script>
-    <script src="../js/vendor/animation.gsap.min.js"></script>
-    <script src="../js/data-json.js"></script>
-    <script src="../js/nav.js"></script>
-    <script src="../js/script-project.js"></script>
-
-
-</body>
-
+		<script src="https://code.jquery.com/jquery-2.2.0.min.js"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.6/ScrollMagic.min.js"></script>
+		<script src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+		<script src="../js/vendor/TweenMax.min.js"></script>
+		<script src="../js/vendor/animation.gsap.min.js"></script>
+		<script src="../js/data-json.js"></script>
+		<script src="../js/nav.js"></script>
+		<script src="../js/script-project.js"></script>
+	</body>
 </html>
