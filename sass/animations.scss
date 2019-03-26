@@ -1,5 +1,6 @@
 @import 'mixins.scss';
 @import 'variables.scss';
+
 //-------------------------------------
 //	ANIMATIONS
 //-------------------------------------
@@ -8,6 +9,7 @@
     @include transform(translateX(-15%));
     opacity: 0;
   }
+
   100% {
     @include transform(translateX(0%));
     opacity: 1;
@@ -19,6 +21,7 @@
     @include transform(translateX(-10%));
     opacity: 0;
   }
+
   100% {
     @include transform(translateX(0%));
     opacity: 1;
@@ -30,6 +33,7 @@
     @include transform(translateX(0%));
     opacity: 1;
   }
+
   100% {
     @include transform(translateX(-15%));
     opacity: 0;
@@ -41,6 +45,7 @@
     @include transform(translateX(0%));
     opacity: 1;
   }
+
   100% {
     @include transform(translateX(-10%));
     opacity: 0;
@@ -52,6 +57,7 @@
     @include transform(translateY(120%));
     opacity: 0;
   }
+
   100% {
     @include transform(translateY(0%));
     opacity: 1;
@@ -63,6 +69,7 @@
     @include transform(translateY(110%));
     opacity: 0;
   }
+
   100% {
     @include transform(translateY(0%));
     opacity: 1;
@@ -74,6 +81,7 @@
     @include transform(translateY(0%));
     opacity: 0;
   }
+
   100% {
     @include transform(translateY(120%));
     opacity: 1;
@@ -84,6 +92,7 @@
   0% {
     opacity: 0;
   }
+
   100% {
     opacity: 1;
   }
@@ -93,6 +102,7 @@
   0% {
     opacity: 1;
   }
+
   100% {
     opacity: 0;
   }
@@ -102,6 +112,7 @@
   0% {
     text-shadow: 0 0 0 $dark-blue-10;
   }
+
   100% {
     text-shadow: 0 0 20px $dark-blue-10;
   }
@@ -111,6 +122,7 @@
   0% {
     text-shadow: 0 0 20px $dark-blue-10;
   }
+
   100% {
     text-shadow: 0 0 0 $dark-blue-10;
   }
@@ -120,6 +132,7 @@
   0% {
     text-shadow: 0 0 0 $dark-blue-30;
   }
+
   100% {
     text-shadow: 0 0 20px $dark-blue-30;
   }
@@ -129,6 +142,7 @@
   0% {
     text-shadow: 0 0 20px $dark-blue-30;
   }
+
   100% {
     text-shadow: 0 0 0 $dark-blue-30;
   }
@@ -139,6 +153,7 @@
     @include transform(translateY(20%));
     opacity: 0;
   }
+
   100% {
     @include transform(translateY(0%));
     opacity: 1;
@@ -149,9 +164,11 @@
   0% {
     background-position: 0% 50%;
   }
+
   50% {
     background-position: 100% 50%;
   }
+
   100% {
     background-position: 0% 50%;
   }
@@ -161,24 +178,31 @@
   0% {
     @include transform(translateX(0) translateY(0) rotate(0));
   }
+
   15% {
     @include transform(translateX(0) translateY(-2px) rotate(20deg));
   }
+
   30% {
     @include transform(translateX(1px) translateY(0));
   }
+
   45% {
     @include transform(translateX(1px) translateY(-1px));
   }
+
   55% {
     @include transform(translateX(1.5px) translateY(0));
   }
+
   65% {
     @include transform(translateX(1.5px) translateY(-1px));
   }
+
   75% {
     @include transform(translateX(2px) translateY(0) rotate(0));
   }
+
   100% {
     @include transform(translateX(0) translateY(0) rotate(0));
   }
@@ -188,24 +212,31 @@
   0% {
     @include transform(rotate(0));
   }
+
   25% {
     @include transform(rotate(20deg));
   }
+
   50% {
     @include transform(rotate(-20deg));
   }
+
   60% {
     @include transform(rotate(0));
   }
+
   70% {
     @include transform(rotate(-20deg));
   }
+
   80% {
     @include transform(rotate(0));
   }
+
   90% {
     @include transform(rotate(-20deg));
   }
+
   100% {
     @include transform(rotate(0));
   }
@@ -215,6 +246,7 @@
   0% {
     @include transform(translate(-100%, -50%) rotate(15deg));
   }
+
   100% {
     @include transform(translate(0, -50%) rotate(0));
   }
@@ -224,6 +256,7 @@
   0% {
     @include transform(matrix(2, 1, -1, 2, 0, 1));
   }
+
   100% {
     @include transform(translate3d(100%, 0px, 0px));
   }
@@ -233,7 +266,24 @@
   0% {
     @include transform(translate(-100%, 0));
   }
+
   100% {
     @include transform(translate(0, 0));
+  }
+}
+
+@include keyframes(pinAnimation) {
+  0% {
+    opacity: 1;
+    transform: scale(0.1);
+  }
+
+  50% {
+    opacity: 1;
+  }
+
+  100% {
+    opacity: 0;
+    transform: scale(1.3);
   }
 }

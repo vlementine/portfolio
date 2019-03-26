@@ -40,15 +40,6 @@
   }
 }
 
-@media screen and (max-width: 1080px) {
-  .explain {
-    max-width: 100%;
-  }
-  .explain__text {
-    display: none;
-  }
-}
-
 @media screen and (max-width: 1000px) {
   .project {
     flex-direction: column;
@@ -108,9 +99,6 @@
   .contact__description .description__wrapper .description__number {
     top: -22px;
     font-size: 5rem;
-  }
-  .contact__description .description__wrapper .description__title {
-    margin: 20px 0 0;
   }
   .contact__form {
     flex-grow: 1;
@@ -178,6 +166,9 @@
   .project-mobile img:last-child {
     margin: 40px auto 0 auto;
   }
+  .explain__w-pin {
+    display: none;
+  }
 }
 
 @media screen and (max-width: 650px) {
@@ -239,6 +230,11 @@
   }
   .bubble--answer .btn-enter {
     display: block;
+  }
+  .bubble input,
+  .bubble textarea {
+    width: 100%;
+    max-width: 230px;
   }
   .bubble--group__choice {
     flex-direction: column;
@@ -321,6 +317,10 @@
   .project-picture,
   .project-picture.padding {
     padding: 10px;
+  }
+  .project-picture:after {
+    height: calc(100% - 60px);
+    top: 30px;
   }
   .project-picture--double .picture-double__wrapper:last-child {
     margin-top: 10px;
