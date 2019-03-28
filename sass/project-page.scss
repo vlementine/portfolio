@@ -328,6 +328,7 @@
 
 	&:after {
 		content: '';
+		z-index: 0;
 		position: absolute;
 		width: calc(100% + 8px);
 		height: calc(100% + 8px);
@@ -335,7 +336,7 @@
 		top: -4px;
 		background: rgba(6, 10, 46, 0.2);
 		border-radius: 50%;
-		@include animation(1.8s pinAnimation ease-in-out infinite);
+		@include animation(1.6s pinAnimation ease-in-out infinite);
 	}
 }
 
@@ -660,10 +661,10 @@
 	}
 
 	.explain__pin {
-		background: rgba(245, 158, 100, 0.9);
+		background: $project-01;
 
 		&:after {
-			background: rgba(245, 158, 100, 0.3);
+			background: rgba(245, 158, 100, 0.2);
 		}
 	}
 
@@ -760,6 +761,14 @@
 		width: 100%;
 	}
 
+	.explain__pin {
+		background: $project-02;
+
+		&:after {
+			background: rgba(205, 53, 91, 0.2);
+		}
+	}
+
 	#explain__w-pin-01 {
 		top: 4%;
 		left: 14%;
@@ -825,19 +834,27 @@
 		width: 100%;
 	}
 
+	.explain__pin {
+		background: $project-03;
+
+		&:after {
+			background: rgba(86, 145, 255, 0.2);
+		}
+	}
+
 	#explain__w-pin-1-01 {
-		top: 12%;
-		left: 37%;
+		top: 9.5%;
+		left: 36%;
 	}
 
 	#explain__w-pin-1-02 {
-		top: 57%;
-		left: 52%;
+		top: 61%;
+		left: 53%;
 	}
 
 	#explain__w-pin-1-03 {
 		top: 92%;
-		left: 58.5%;
+		left: 23.5%;
 	}
 }
 
