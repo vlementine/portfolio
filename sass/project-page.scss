@@ -400,23 +400,13 @@
 	background-position: center;
 }
 
-.project-parallax--bg--mobile .parallax-visuel {
-	background-attachment: fixed;
-	background-position: center;
-	background-repeat: no-repeat;
-	background-size: cover;
-	height: 100%;
-	@include transform(scale(0.1));
-}
-
-.parallax-visuel__wrapper {
-	@include transform(scale(10));
-}
-
 .project-parallax--bg--mobile {
 	display: none;
 	height: 350px;
 	overflow: hidden;
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
 }
 
 //-------------------------------------
@@ -634,7 +624,7 @@
 	}
 
 	#parallax-bg-01 div,
-	.project-parallax--bg--mobile .parallax-visuel {
+	.project-parallax--bg--mobile {
 		background-image: url(../img/zenchef/zenchef__picture-product-parallax.jpg);
 	}
 
@@ -745,7 +735,7 @@
 	}
 
 	#parallax-bg-01 div,
-	.project-parallax--bg--mobile .parallax-visuel {
+	.project-parallax--bg--mobile {
 		background-image: url(../img/le-trianon/le-trianon__picture-parallax.jpg);
 	}
 
@@ -818,7 +808,7 @@
 	}
 
 	#parallax-bg-01 div,
-	.project-parallax--bg--mobile .parallax-visuel {
+	.project-parallax--bg--mobile {
 		background-image: url(../img/alcatraz/alcatraz__picture-parallax.jpg);
 	}
 
