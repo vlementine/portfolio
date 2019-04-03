@@ -234,9 +234,10 @@ const responsive = () => {
 const main = () => {
 	// Loader
 	d.q('.loader').style.opacity = 0;
+	d.q('.loader').style.display = 'none';
 	setTimeout(() => {
-		d.q('.loader').style.zIndex = -24;
-	}, 1200);
+		d.q('.loader').style.zIndex = -100;
+	}, 1000);
 
 	// Display
 	d.q('nav').classList.add('enable');

@@ -240,6 +240,13 @@ function displayMenu() {
 	//All
 	let windowWidth = window.innerWidth;
 	d.q('.menu__wrapper').classList.toggle('disable');
+
+	if (d.q('.menu__wrapper').classList.contains('disable')) {
+		setTimeout(() => {
+			d.q('.menu__wrapper').style.display = 'none';
+		}, 1500);
+	}
+
 	d.q('.menu__icon--open').classList.toggle('enable');
 	d.q('.menu__icon--close').classList.toggle('enable');
 	d.q('body').classList.toggle('menu-visible');
@@ -331,7 +338,7 @@ menuHoverProject = (number, name) => {
 redirectToPageProject = varURL => {
 	d.q('.transition-screen').classList.add('redirect-page');
 	d.q('.transition-screen--white').classList.add('redirect-page');
-	
+
 	setTimeout(() => {
 		let urlPage = window.location.href;
 		let positionSlash = urlPage.lastIndexOf('/') + 1;
