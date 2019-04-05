@@ -252,25 +252,21 @@ a {
 }
 
 .menu__wrapper {
-  position: fixed;
+  position: absolute;
   top: 0;
   left: 0;
   width: 100%;
-  height: 100%;
+  height: 100vh;
   overflow: auto;
-  z-index: 50;
   background: #fff;
-  opacity: 1;
-  -webkit-transition: opacity 0.4s ease-in-out;
-  -moz-transition: opacity 0.4s ease-in-out;
-  -ms-transition: opacity 0.4s ease-in-out;
-  -o-transition: opacity 0.4s ease-in-out;
-  transition: opacity 0.4s ease-in-out;
+  -webkit-transition: opacity 0.4s ease-in-out, z-index 0.4s ease-in-out;
+  -moz-transition: opacity 0.4s ease-in-out, z-index 0.4s ease-in-out;
+  -ms-transition: opacity 0.4s ease-in-out, z-index 0.4s ease-in-out;
+  -o-transition: opacity 0.4s ease-in-out, z-index 0.4s ease-in-out;
+  transition: opacity 0.4s ease-in-out, z-index 0.4s ease-in-out;
 }
 
 .menu__wrapper.disable {
-  opacity: 0;
-  z-index: -1;
   -webkit-transition: opacity 0.4s ease-in-out, z-index 0.4s ease-in-out 0.4s;
   -moz-transition: opacity 0.4s ease-in-out, z-index 0.4s ease-in-out 0.4s;
   -ms-transition: opacity 0.4s ease-in-out, z-index 0.4s ease-in-out 0.4s;
@@ -704,7 +700,7 @@ h3 {
 .loader {
   position: fixed;
   z-index: 9999;
-  background: #FFF;
+  background: #fff;
   top: 0px;
   left: 0px;
   height: 100%;

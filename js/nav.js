@@ -14,8 +14,7 @@ function displayProject(project) {
 			.length;
 		for (let i = 0; i < imgNumber; i++) {
 			document
-				.querySelectorAll(project + ' .project__visuel--mobile img')
-				[i].classList.add('enable');
+				.querySelectorAll(project + ' .project__visuel--mobile img')[i].classList.add('enable');
 		}
 		d.q(project + ' .project__visuel--mobile').classList.add('enable');
 		d.q(project + ' .description__number-shadow--mobile').classList.add('enable');
@@ -29,8 +28,7 @@ function displayProject(project) {
 		let imgNumber = document.querySelectorAll(project + ' .project__visuel img').length;
 		for (let i = 0; i < imgNumber; i++) {
 			document
-				.querySelectorAll(project + ' .project__visuel img')
-				[i].classList.add('enable');
+				.querySelectorAll(project + ' .project__visuel img')[i].classList.add('enable');
 		}
 		d.q(project + ' .project__visuel').classList.add('enable');
 		d.q(project + ' .description__number').classList.add('enable');
@@ -53,8 +51,7 @@ function hideProject(project) {
 			.length;
 		for (let i = 0; i < imgNumber; i++) {
 			document
-				.querySelectorAll(project + ' .project__visuel--mobile img')
-				[i].classList.remove('enable');
+				.querySelectorAll(project + ' .project__visuel--mobile img')[i].classList.remove('enable');
 		}
 		d.q(project + ' .project__visuel--mobile').classList.remove('enable');
 		d.q(project + ' .description__number-shadow--mobile').classList.remove('enable');
@@ -68,8 +65,7 @@ function hideProject(project) {
 		let imgNumber = document.querySelectorAll(project + ' .project__visuel img').length;
 		for (let i = 0; i < imgNumber; i++) {
 			document
-				.querySelectorAll(project + ' .project__visuel img')
-				[i].classList.remove('enable');
+				.querySelectorAll(project + ' .project__visuel img')[i].classList.remove('enable');
 		}
 		d.q(project + ' .project__visuel').classList.remove('enable');
 		d.q(project + ' .description__number').classList.remove('enable');
@@ -165,7 +161,7 @@ function navDesktop(direction = null, param = null) {
 		projectClicked !== projectActive
 	) {
 		hideProject(idToHide);
-		setTimeout(function() {
+		setTimeout(function () {
 			d.q(idToHide).classList.remove('enable');
 			d.q(idToDisplay).classList.add('enable');
 			displayProject(idToDisplay);
@@ -177,7 +173,7 @@ function navDesktop(direction = null, param = null) {
 		changeLogoColor();
 
 		hideProject(idToHide);
-		setTimeout(function() {
+		setTimeout(function () {
 			d.q(idToHide).classList.remove('enable');
 		}, 700);
 
@@ -187,7 +183,7 @@ function navDesktop(direction = null, param = null) {
 		changeLogoColor();
 
 		hideProject(idToHide);
-		setTimeout(function() {
+		setTimeout(function () {
 			d.q(idToHide).classList.remove('enable');
 			d.q('.bubble--group:nth-child(1) .bubble').classList.add('enable');
 			d.q('.bubble--group:nth-child(1) .bubble--answer').classList.add('enable');
@@ -214,7 +210,7 @@ function navMobile(param) {
 	if (itemClicked < totalItemNav && itemClicked !== 1) {
 		d.q('.number--active').textContent = '0' + itemClicked;
 		hideProject(idToHide);
-		setTimeout(function() {
+		setTimeout(function () {
 			d.q(idToHide).classList.remove('enable');
 			d.q(idToDisplay).classList.add('enable');
 			displayProject(idToDisplay);
@@ -242,9 +238,22 @@ function displayMenu() {
 	d.q('.menu__wrapper').classList.toggle('disable');
 
 	if (d.q('.menu__wrapper').classList.contains('disable')) {
+
+		d.q('.menu__wrapper').style.opacity = '0';
+		d.q('.menu__wrapper').style.zIndex = '-1000';
 		setTimeout(() => {
 			d.q('.menu__wrapper').style.display = 'none';
-		}, 1500);
+		}, 400);
+	} else {
+
+
+		d.q('.menu__wrapper').style.display = 'block';
+
+		d.q('.menu__wrapper').style.opacity = '1';
+		d.q('.menu__wrapper').style.zIndex = '50';
+		setTimeout(() => {
+
+		}, 400);
 	}
 
 	d.q('.menu__icon--open').classList.toggle('enable');
