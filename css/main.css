@@ -324,6 +324,7 @@ a {
 }
 
 .menu__wrapper.disable {
+  opacity: 0;
   -webkit-transition: opacity 0.4s ease-in-out, z-index 0.4s ease-in-out 0.4s;
   -moz-transition: opacity 0.4s ease-in-out, z-index 0.4s ease-in-out 0.4s;
   -ms-transition: opacity 0.4s ease-in-out, z-index 0.4s ease-in-out 0.4s;
@@ -1794,6 +1795,11 @@ button {
   -ms-animation: 0.6s fadeIn ease-in-out forwards 0.6s;
   -o-transition: 0.6s fadeIn ease-in-out forwards 0.6s;
   animation: 0.6s fadeIn ease-in-out forwards 0.6s;
+}
+
+#project-03 .mockup--mobile,
+#project-04 .mockup--mobile {
+  display: none;
 }
 
 .contact__wrapper {

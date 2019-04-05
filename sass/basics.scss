@@ -233,7 +233,7 @@ a {
 
 	&.disable {
 		
-		// opacity: 0;
+		opacity: 0;
 		// z-index: -1000;
 		@include transition(opacity 0.4s ease-in-out, z-index 0.4s ease-in-out 0.4s);
 	}

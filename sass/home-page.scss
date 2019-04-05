@@ -601,7 +601,7 @@
 	text-align: center;
 	margin-bottom: 30px;
 
-	& > div {
+	&>div {
 		position: relative;
 	}
 }
@@ -761,6 +761,11 @@
 			@include animation(0.6s fadeIn ease-in-out forwards 0.6s);
 		}
 	}
+}
+
+#project-03 .mockup--mobile,
+#project-04 .mockup--mobile {
+	display: none;
 }
 
 //-------------------------------------
@@ -996,12 +1001,12 @@
 			cursor: pointer;
 			width: 0;
 
-			&:checked ~ .choice,
-			&:checked ~ .choice .checked {
+			&:checked~.choice,
+			&:checked~.choice .checked {
 				opacity: 1;
 			}
 
-			&:not(:checked) ~ .choice {
+			&:not(:checked)~.choice {
 				opacity: 0.4;
 			}
 		}

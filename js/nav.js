@@ -245,15 +245,11 @@ function displayMenu() {
 			d.q('.menu__wrapper').style.display = 'none';
 		}, 400);
 	} else {
-
-
 		d.q('.menu__wrapper').style.display = 'block';
-
-		d.q('.menu__wrapper').style.opacity = '1';
 		d.q('.menu__wrapper').style.zIndex = '50';
 		setTimeout(() => {
-
-		}, 400);
+			d.q('.menu__wrapper').style.opacity = '1';
+		}, 100);
 	}
 
 	d.q('.menu__icon--open').classList.toggle('enable');

@@ -528,7 +528,7 @@
   height: auto;
   max-height: 500px;
   width: auto;
-  max-width: 60%;
+  max-width: 78%;
 }
 
 .project__visuel .visuel__letter {
@@ -986,6 +986,11 @@
   animation: 0.6s fadeIn ease-in-out forwards 0.6s;
 }
 
+#project-03 .mockup--mobile,
+#project-04 .mockup--mobile {
+  display: none;
+}
+
 .contact__wrapper {
   position: absolute;
   top: 0;
@@ -1078,6 +1083,12 @@
   transform: none;
 }
 
+.contact__description .description a {
+  font-weight: 400;
+  font-size: 0.875rem;
+  text-decoration: underline;
+}
+
 .contact__form {
   overflow: auto;
   display: flex;
@@ -1118,11 +1129,11 @@
 .contact__form .chat-msg-error {
   color: #eb5160;
   position: absolute;
-  bottom: -24px;
+  height: 40px;
+  bottom: -44px;
   left: 8px;
   font-size: 12px;
   border-radius: 2px;
-  text-align: center;
   font-weight: 500;
 }
 
@@ -1148,7 +1159,7 @@
 .bubble {
   display: none;
   background: #fff;
-  max-width: 270px;
+  max-width: 260px;
   padding: 20px;
   border-radius: 4px;
   box-shadow: 0 4px 8px rgba(6, 10, 46, 0.1);
@@ -1171,24 +1182,19 @@
   font-family: 'Asap', sans-serif;
   background: transparent !important;
   border: transparent;
+  padding: 0;
   outline: none;
   color: #fff !important;
   line-height: 18px;
   font-size: 0.9rem;
   font-weight: 600;
   resize: none;
-  width: 100%;
+  width: 200px;
 }
 
 .bubble textarea {
   height: 16px;
   height: auto;
-  width: 100%;
-  max-width: 230px;
-}
-
-.bubble input#mailAnswer {
-  width: 220px;
 }
 
 .bubble ::-webkit-input-placeholder {
