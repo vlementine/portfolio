@@ -787,7 +787,7 @@
 	&.disable {
 		z-index: 0;
 		@include transform(translateY(-100%));
-		@include transition(transform 0.8s ease-in-out);
+		@include transition(transform 0.8s ease-in-out, z-index 0.8s ease-in-out);
 	}
 }
 
