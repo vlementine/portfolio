@@ -1,74 +1,344 @@
 <html lang="fr">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<meta http-equiv="X-UA-Compatible" content="ie=edge" />
+		<title>Le Trianon • Clémentine Bertrand</title>
+		<link rel="icon" type="image/png" href="../img/favicon-pro.png" />
+		<link rel="stylesheet" href="../css/main.min.css" />
+		<link rel="stylesheet" href="../css/slick.css" />
+	</head>
 
-<head>
-	<meta charset="UTF-8" />
-	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-	<meta http-equiv="X-UA-Compatible" content="ie=edge" />
-	<title>Le Trianon • Clémentine Bertrand</title>
-	<link rel="icon" type="image/png" href="../img/favicon-pro.png" />
-	<link rel="stylesheet" href="../css/main.min.css" />
-	<link rel="stylesheet" href="../css/slick.css" />
-</head>
+	<body id="project-02" class="project-page">
+		<div class="loader"></div>
+		<div>
+			<!-- Transition -->
+			<span class="transition-screen"></span>
+			<span class="transition-screen transition-screen--white"></span>
 
-<body id="project-02" class="project-page">
-	<div class="loader"></div>
-	<div>
-		<!-- Transition -->
-		<span class="transition-screen"></span>
-		<span class="transition-screen transition-screen--white"></span>
+			<!-- Navigation -->
+			<nav>
+				<a href="../index.html">
+					<img src="../img/logo.gif" alt="Logo Clémentine Bertrand" class="logo"
+				/></a>
 
-		<!-- Navigation -->
-		<nav>
-			<a href="../index.html">
-				<img src="../img/logo.gif" alt="Logo Clémentine Bertrand" class="logo" /></a>
-
-			<div class="nav__return" onClick="redirectionProject()">
-				<div class="arrow__clickable">
-					<span class="nav__arrow nav__arrow--left">
-						<span class="arrow__circle"></span>
-					</span>
-				</div>
-				<div class="return__text">
-					<span class="text--top">Back to projects</span>
-					<span class="text--bottom">Back to projects</span>
-				</div>
-			</div>
-		</nav>
-
-		<!-- Menu -->
-		<div class="menu__wrapper disable">
-			<div class="menu__categories">
-				<div class="menu__category">
-					<h2 onClick="redirectionProject('home')">Accueil</h2>
-					<p>Présentation</p>
-				</div>
-				<div class="menu__category">
-					<h2 onClick="redirectionProject('work')">Projets</h2>
-					<p>Découvrez mes travaux</p>
-				</div>
-				<div class="menu__category">
-					<h2 onClick="redirectionProject('contact')">Contact</h2>
-					<p>En savoir plus</p>
-				</div>
-			</div>
-
-			<div class="menu__projects-wrapper--mobile"></div>
-
-			<div class="menu__projects-wrapper">
-				<div class="menu__project-visuel">
-					<div class="visuels__wrapper">
-						<div class="visuel__mockup">
-							<img class="mockup--desktop" src="../img/zenchef_visuel-home.png" alt="Visuel Zenchef"
-								draggable="false" />
-						</div>
-						<img class="visuel__letter" src="../img/zenchef_letter.png" alt="B" draggable="false" />
+				<div class="nav__return" onClick="redirectionProject()">
+					<div class="arrow__clickable">
+						<span class="nav__arrow nav__arrow--left">
+							<span class="arrow__circle"></span>
+						</span>
+					</div>
+					<div class="return__text">
+						<span class="text--top">Back to projects</span>
+						<span class="text--bottom">Back to projects</span>
 					</div>
 				</div>
-				<div class="menu__projects"></div>
+			</nav>
+
+			<!-- Menu -->
+			<div class="menu__wrapper disable">
+				<div class="menu__categories">
+					<div class="menu__category">
+						<h2 onClick="redirectionProject('home')">Accueil</h2>
+						<p>Présentation</p>
+					</div>
+					<div class="menu__category">
+						<h2 onClick="redirectionProject('work')">Projets</h2>
+						<p>Découvrez mes travaux</p>
+					</div>
+					<div class="menu__category">
+						<h2 onClick="redirectionProject('contact')">Contact</h2>
+						<p>En savoir plus</p>
+					</div>
+				</div>
+
+				<div class="menu__projects-wrapper--mobile"></div>
+
+				<div class="menu__projects-wrapper">
+					<div class="menu__project-visuel">
+						<div class="visuels__wrapper">
+							<div class="visuel__mockup">
+								<img
+									class="mockup--desktop"
+									src="../img/zenchef_visuel-home.png"
+									alt="Visuel Zenchef"
+									draggable="false"
+								/>
+							</div>
+							<img
+								class="visuel__letter"
+								src="../img/zenchef_letter.png"
+								alt="B"
+								draggable="false"
+							/>
+						</div>
+					</div>
+					<div class="menu__projects"></div>
+				</div>
+
+				<div class="menu__footer">
+					<span class="copyright">Clémentine Bertrand © 2018</span>
+					<div class="links">
+						<a class="link--behance" href="http://be.net/cbertrand" target="_blank">
+							<span>Behance</span>
+						</a>
+						<a
+							class="link--dribbble"
+							href="https://dribbble.com/cbertrand"
+							target="_blank"
+						>
+							<span>Dribbble</span>
+						</a>
+						<a
+							class="link--linkedin"
+							href="https://www.linkedin.com/in/clementinebertrand"
+							target="_blank"
+						>
+							<span>Linkedin</span>
+						</a>
+					</div>
+					<div class="footer__contact">
+						<span>Contactez-moi</span>
+						<div class="contact__link">
+							<a href="mailto:hello@clementinebertrand.fr"> ✍️ </a>
+						</div>
+					</div>
+				</div>
 			</div>
 
-			<div class="menu__footer">
-				<span class="copyright">Clémentine Bertrand © 2018</span>
+			<!-- Menu icon -->
+			<div class="menu-btn menu-btn-open" onclick="displayMenu()">
+				<div class="menu__icon menu__icon--open enable">
+					<span></span> <span></span> <span></span>
+				</div>
+				<div class="menu__icon menu__icon--close"><span></span> <span></span></div>
+			</div>
+
+			<!-- HEADER -->
+			<header>
+				<div class="header--text disable-selection">
+					<h1>Titre du projet</h1>
+					<p class="subtitle">Date • Type de projet</p>
+				</div>
+			</header>
+
+			<!-- PROJECT CONTENT -->
+			<section>
+				<div class="container project-intro">
+					<div class="intro__content">
+						<h2>Présentation</h2>
+						<p>
+							Lors d'un projet universitaire, nous devions réaliser la refonte du site de
+							notre choix. Passionnée par la musique et les concerts, j'ai alors opté pour
+							le site du Trianon, salle de spectacle parisienne située au pied de la butte
+							Montmartre. Le site n'étant que trop peu ergonomique, le choix fut évident.
+						</p>
+					</div>
+				</div>
+
+				<div class="container project-picture project-picture--simple padding">
+					<img src="../img/le-trianon/le-trianon__picture-animate-01.gif" alt="" />
+				</div>
+
+				<div id="parallax-bg-01" class="project-parallax--bg">
+					<div></div>
+				</div>
+				<div class="project-parallax--bg--mobile"></div>
+
+				<div class="container project-description">
+					<h3>Page d'accueil</h3>
+					<p>
+						La page d'accueil est celle que j'ai le plus réorganisée. Dans l'actuelle,
+						tout est mélangé et il était compliqué de savoir ce qui était cliquable ou
+						non. Je me suis appuyée sur les éléments existants (les têtes d'affiche, la
+						programmation, la newsletter, les réseaux sociaux) et y ai inclus des
+						nouveaux.
+					</p>
+				</div>
+
+				<div class="container project-picture project-picture--explain">
+					<div class="explain__picture">
+						<img src="../img/le-trianon/le-trianon__picture-explain-01.jpg" alt="" />
+
+						<div id="explain__w-pin-01" class="explain__w-pin">
+							<div class="explain__pin"></div>
+							<div class="explain__text">
+								<h4>Têtes d’affiche</h4>
+								<p>Sélection des artistes les plus connus, sous forme de slider.</p>
+							</div>
+						</div>
+
+						<div id="explain__w-pin-02" class="explain__w-pin">
+							<div class="explain__pin"></div>
+							<div class="explain__text">
+								<h4>Artistes à l'affiche</h4>
+								<p>
+									Les 6 prochains artistes à venir, avec un CTA vers la programmation
+									complète.
+								</p>
+							</div>
+						</div>
+
+						<div id="explain__w-pin-03" class="explain__w-pin">
+							<div class="explain__pin"></div>
+							<div class="explain__text">
+								<h4>Histoire du Trianon</h4>
+								<p>
+									Mise en avant historique du Trianon, avec une description retraçant son
+									histoire.
+								</p>
+							</div>
+						</div>
+
+						<div id="explain__w-pin-04" class="explain__w-pin">
+							<div class="explain__pin"></div>
+							<div class="explain__text">
+								<h4>Newsletter</h4>
+								<p>Formulaire d’inscription à la Newsletter.</p>
+							</div>
+						</div>
+
+						<div id="explain__w-pin-05" class="explain__w-pin">
+							<div class="explain__pin"></div>
+							<div class="explain__text">
+								<h4>Privatisation</h4>
+								<p>
+									Présentation des trois salles privatisables, avec un lien vers la page
+									de « Événements » pour plus d’informations.
+								</p>
+							</div>
+						</div>
+
+						<div id="explain__w-pin-06" class="explain__w-pin">
+							<div class="explain__pin"></div>
+							<div class="explain__text">
+								<h4>Réseaux sociaux</h4>
+								<p>Mise en avant des derniers posts sur les réseaux sociaux.</p>
+							</div>
+						</div>
+
+						<div id="explain__w-pin-07" class="explain__w-pin">
+							<div class="explain__pin"></div>
+							<div class="explain__text">
+								<h4>Infos pratiques</h4>
+								<p>Regroupement des informations pratiques concernant le Trianon.</p>
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<div class="container project-description">
+					<h3>Page de programmation et artistes</h3>
+					<p>
+						La principale nouveauté dans la page de programmation est le champ de
+						recherche ainsi que les filtres pour une recherche plus efficace. J'y ai
+						également ajouté les informations pratiques. Concernant la page des musiciens,
+						le contenu est beaucoup plus complet pour en savoir plus sur l'univers musical
+						de l'artiste (leurs réseaux sociaux, dernier clip, sélection de 3 titres et
+						liens vers leur page Spotify). Le lien de l'évènement Facebook a également été
+						ajouté.
+					</p>
+				</div>
+
+				<div class="container project-picture project-picture--double">
+					<div class="picture-double__wrapper">
+						<img src="../img/le-trianon/le-trianon__picture-01.jpg" alt="" />
+					</div>
+					<div class="picture-double__wrapper">
+						<img src="../img/le-trianon/le-trianon__picture-02.jpg" alt="" />
+					</div>
+				</div>
+
+				<div class="container project-description">
+					<h3>Flow d’achat de ticket</h3>
+					<p>
+						Pour ce projet, j'ai totalement revu le système de réservation et d'achat de
+						tickets, notamment en y ajoutant une interface interactive de la salle pour le
+						choix de sa place.
+					</p>
+				</div>
+
+				<div class="container-fluid project-slider">
+					<div class="slider__content center slider">
+						<div>
+							<h4>Choix des places</h4>
+							<img src="../img/le-trianon/le-trianon__slide-01.jpg" alt="" />
+						</div>
+
+						<div>
+							<h4>Informations bancaires</h4>
+							<img src="../img/le-trianon/le-trianon__slide-02.jpg" alt="" />
+						</div>
+
+						<div>
+							<h4>Confirmation de la commande</h4>
+							<img src="../img/le-trianon/le-trianon__slide-03.jpg" alt="" />
+						</div>
+					</div>
+				</div>
+
+				<div class="container project-description">
+					<h3>Page des évévements</h3>
+					<p>
+						Le Trianon propose trois espaces privatisables, la salle de bal ou foyer, le
+						jardin d’hiver et le théâtre. Cette nouvelle organisation permet l'affichage
+						de toutes les informations nécessaires sans profondeur peu utile.
+					</p>
+				</div>
+
+				<div class="container project-picture project-picture--simple">
+					<img src="../img/le-trianon/le-trianon__picture-03.jpg" alt="" />
+				</div>
+
+				<div class="container project-description">
+					<h3>Page des archives et contact</h3>
+					<p>
+						La page des archives, tout comme la page de programmation, a été améliorée
+						grâce à l'ajout de filtres pour la recherche, en plus du remaniement
+						graphique. Seule la page contact reste inchangée en termes de contenu.
+					</p>
+				</div>
+
+				<div class="container project-picture project-picture--double">
+					<div class="picture-double__wrapper">
+						<img src="../img/le-trianon/le-trianon__picture-04.jpg" alt="" />
+					</div>
+					<div class="picture-double__wrapper">
+						<img src="../img/le-trianon/le-trianon__picture-05.jpg" alt="" />
+					</div>
+				</div>
+
+				<div class="container project-description" id="trigger">
+					<h3>Responsive : un site adapté à tous les écrans</h3>
+				</div>
+
+				<div class="container project-mobile">
+					<img
+						id="parallax-mobile-01"
+						class="img-01"
+						src="../img/le-trianon/le-trianon__picture-mobile-01.png"
+						alt=""
+					/>
+					<img
+						id="parallax-mobile-02"
+						class="img-02"
+						src="../img/le-trianon/le-trianon__picture-mobile-02.png"
+						alt=""
+					/>
+				</div>
+			</section>
+
+			<!-- NEXT PROJECT -->
+			<section class="next-project">
+				<h3 class="next-project__title">Projet suivant</h3>
+				<span class="next-project__name" onClick="redirectionNextProject()"
+					>Nom du projet suivant</span
+				>
+			</section>
+
+			<!-- FOOTER -->
+			<footer>
+				<p class="copyright">Clémentine Bertrand © 2018</p>
 				<div class="links">
 					<a class="link--behance" href="http://be.net/cbertrand" target="_blank">
 						<span>Behance</span>
@@ -76,7 +346,11 @@
 					<a class="link--dribbble" href="https://dribbble.com/cbertrand" target="_blank">
 						<span>Dribbble</span>
 					</a>
-					<a class="link--linkedin" href="https://www.linkedin.com/in/clementinebertrand" target="_blank">
+					<a
+						class="link--linkedin"
+						href="https://www.linkedin.com/in/clementinebertrand"
+						target="_blank"
+					>
 						<span>Linkedin</span>
 					</a>
 				</div>
@@ -86,285 +360,45 @@
 						<a href="mailto:hello@clementinebertrand.fr"> ✍️ </a>
 					</div>
 				</div>
-			</div>
+			</footer>
 		</div>
 
-		<!-- Menu icon -->
-		<div class="menu-btn menu-btn-open" onclick="displayMenu()">
-			<div class="menu__icon menu__icon--open enable">
-				<span></span> <span></span> <span></span>
-			</div>
-			<div class="menu__icon menu__icon--close"><span></span> <span></span></div>
-		</div>
+		<script src="https://code.jquery.com/jquery-2.2.0.min.js"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.6/ScrollMagic.min.js"></script>
+		<script src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+		<script src="../js/vendor/TweenMax.min.js"></script>
+		<script src="../js/vendor/animation.gsap.min.js"></script>
+		-->
+		<script src="../js/data-json.js"></script>
+		<script src="../js/nav.js"></script>
+		<script src="../js/script-project.js"></script>
 
-		<!-- HEADER -->
-		<header>
-			<div class="header--text disable-selection">
-				<h1>Titre du projet</h1>
-				<p class="subtitle">Date • Type de projet</p>
-			</div>
-		</header>
-
-		<!-- PROJECT CONTENT -->
-		<section>
-			<div class="container project-intro">
-				<div class="intro__content">
-					<h2>Présentation</h2>
-					<p>
-						Lors d'un projet universitaire, nous devions réaliser la refonte du site de
-						notre choix. Passionnée par la musique et les concerts, j'ai alors opté pour
-						le site du Trianon, salle de spectacle parisienne située au pied de la butte
-						Montmartre. Le site n'étant que trop peu ergonomique, le choix fut évident.
-					</p>
-				</div>
-			</div>
-
-			<div class="container project-picture project-picture--simple padding">
-				<img src="../img/le-trianon/le-trianon__picture-animate-01.gif" alt="" />
-			</div>
-
-			<div id="parallax-bg-01" class="project-parallax--bg">
-				<div></div>
-			</div>
-			<div class="project-parallax--bg--mobile"></div>
-
-			<div class="container project-description">
-				<h3>Page d'accueil</h3>
-				<p>
-					La page d'accueil est celle que j'ai le plus réorganisé. Dans l'actuelle,
-					tout est mélangé et il était compliqué de savoir ce qui était cliquable ou non.
-					Je me suis appuyée sur les éléments existants (les têtes d'affiche, la
-					programmation, la newsletter, les réseaux sociaux) et y ai inclus des
-					nouveaux.
-				</p>
-			</div>
-
-			<div class="container project-picture project-picture--explain">
-				<div class="explain__picture">
-					<img src="../img/le-trianon/le-trianon__picture-explain-01.jpg" alt="" />
-
-					<div id="explain__w-pin-01" class="explain__w-pin">
-						<div class="explain__pin"></div>
-						<div class="explain__text">
-							<h4>Têtes d’affiche</h4>
-							<p>Sélection des artistes les plus connus, sous forme de slider.</p>
-						</div>
-					</div>
-
-					<div id="explain__w-pin-02" class="explain__w-pin">
-						<div class="explain__pin"></div>
-						<div class="explain__text">
-							<h4>Artistes à l'affiche</h4>
-							<p>
-								Les 6 prochains artistes à venir, avec un CTA vers la programmation
-								complète.
-							</p>
-						</div>
-					</div>
-
-					<div id="explain__w-pin-03" class="explain__w-pin">
-						<div class="explain__pin"></div>
-						<div class="explain__text">
-							<h4>Histoire du Trianon</h4>
-							<p>
-								Mise en avant historique du Trianon, avec une description retraçant son
-								histoire.
-							</p>
-						</div>
-					</div>
-
-					<div id="explain__w-pin-04" class="explain__w-pin">
-						<div class="explain__pin"></div>
-						<div class="explain__text">
-							<h4>Newsletter</h4>
-							<p>Formulaire d’inscription à la Newsletter.</p>
-						</div>
-					</div>
-
-					<div id="explain__w-pin-05" class="explain__w-pin">
-						<div class="explain__pin"></div>
-						<div class="explain__text">
-							<h4>Privatisation</h4>
-							<p>
-								Présentation des trois salles privatisables, avec un lien vers la page
-								de « Événements » pour plus d’informations.
-							</p>
-						</div>
-					</div>
-
-					<div id="explain__w-pin-06" class="explain__w-pin">
-						<div class="explain__pin"></div>
-						<div class="explain__text">
-							<h4>Réseaux sociaux</h4>
-							<p>Mise en avant des derniers posts sur les réseaux sociaux.</p>
-						</div>
-					</div>
-
-					<div id="explain__w-pin-07" class="explain__w-pin">
-						<div class="explain__pin"></div>
-						<div class="explain__text">
-							<h4>Infos pratiques</h4>
-							<p>Regroupement des informations pratiques concernant le Trianon.</p>
-						</div>
-					</div>
-				</div>
-			</div>
-
-			<div class="container project-description">
-				<h3>Page de programmation et artistes</h3>
-				<p>
-					La principale nouveauté dans la page de programmation est le champ de
-					recherche ainsi que les filtres pour une recherche plus efficace. J'y ai
-					également ajouté les informations pratiques. Concernant la page des musiciens,
-					le contenu est beaucoup plus complet pour en savoir plus sur l'univers musical
-					de l'artiste (leurs réseaux sociaux, dernier clip, sélection de 3 titres et
-					liens vers leur page Spotify). Le lien de l'évènement Facebook a également été
-					ajouté.
-				</p>
-			</div>
-
-			<div class="container project-picture project-picture--double">
-				<div class="picture-double__wrapper">
-					<img src="../img/le-trianon/le-trianon__picture-01.jpg" alt="" />
-				</div>
-				<div class="picture-double__wrapper">
-					<img src="../img/le-trianon/le-trianon__picture-02.jpg" alt="" />
-				</div>
-			</div>
-
-			<div class="container project-description">
-				<h3>Flow d’achat de ticket</h3>
-				<p>
-					Pour ce projet, j'ai totalement revu le système de réservation et d'achat de
-					tickets, notamment en y ajoutant une interface interactive de la salle pour le
-					choix de sa place.
-				</p>
-			</div>
-
-			<div class="container-fluid project-slider">
-				<div class="slider__content center slider">
-					<div>
-						<h4>Choix des places</h4>
-						<img src="../img/le-trianon/le-trianon__slide-01.jpg" alt="" />
-					</div>
-
-					<div>
-						<h4>Informations bancaires</h4>
-						<img src="../img/le-trianon/le-trianon__slide-02.jpg" alt="" />
-					</div>
-
-					<div>
-						<h4>Confirmation de la commande</h4>
-						<img src="../img/le-trianon/le-trianon__slide-03.jpg" alt="" />
-					</div>
-				</div>
-			</div>
-
-			<div class="container project-description">
-				<h3>Page des évévements</h3>
-				<p>
-					Le Trianon propose trois espaces privatisables : la salle de bal ou foyer, le jardin d’hiver et le
-					théâtre.
-				</p>
-			</div>
-
-			<div class="container project-picture project-picture--simple">
-				<img src="../img/le-trianon/le-trianon__picture-03.jpg" alt="" />
-			</div>
-
-			<div class="container project-description">
-				<h3>Page des archives et contact</h3>
-				<p>
-					Le Trianon propose trois espaces privatisables : la salle de bal ou foyer, le jardin d’hiver et le
-					théâtre.
-				</p>
-			</div>
-
-			<div class="container project-picture project-picture--double">
-				<div class="picture-double__wrapper">
-					<img src="../img/le-trianon/le-trianon__picture-04.jpg" alt="" />
-				</div>
-				<div class="picture-double__wrapper">
-					<img src="../img/le-trianon/le-trianon__picture-05.jpg" alt="" />
-				</div>
-			</div>
-
-			<div class="container project-description" id="trigger">
-				<h3>Responsive : un site adapté à tous les écrans</h3>
-			</div>
-
-			<div class="container project-mobile">
-				<img id="parallax-mobile-01" class="img-01" src="../img/le-trianon/le-trianon__picture-mobile-01.png"
-					alt="" />
-				<img id="parallax-mobile-02" class="img-02" src="../img/le-trianon/le-trianon__picture-mobile-02.png"
-					alt="" />
-			</div>
-		</section>
-
-		<!-- NEXT PROJECT -->
-		<section class="next-project">
-			<h3 class="next-project__title">Projet suivant</h3>
-			<span class="next-project__name" onClick="redirectionNextProject()">Nom du projet suivant</span>
-		</section>
-
-		<!-- FOOTER -->
-		<footer>
-			<p class="copyright">Clémentine Bertrand © 2018</p>
-			<div class="links">
-				<a class="link--behance" href="http://be.net/cbertrand" target="_blank">
-					<span>Behance</span>
-				</a>
-				<a class="link--dribbble" href="https://dribbble.com/cbertrand" target="_blank">
-					<span>Dribbble</span>
-				</a>
-				<a class="link--linkedin" href="https://www.linkedin.com/in/clementinebertrand" target="_blank">
-					<span>Linkedin</span>
-				</a>
-			</div>
-			<div class="footer__contact">
-				<span>Contactez-moi</span>
-				<div class="contact__link">
-					<a href="mailto:hello@clementinebertrand.fr"> ✍️ </a>
-				</div>
-			</div>
-		</footer>
-	</div>
-
-	<script src="https://code.jquery.com/jquery-2.2.0.min.js"></script>
-	<script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.6/ScrollMagic.min.js"></script>
-	<script src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
-	<script src="../js/vendor/TweenMax.min.js"></script>
-	<script src="../js/vendor/animation.gsap.min.js"></script> -->
-	<script src="../js/data-json.js"></script>
-	<script src="../js/nav.js"></script>
-	<script src="../js/script-project.js"></script>
-
-	<script type="text/javascript">
-		$(document).on('ready', function () {
-			$('.center').slick({
-				arrows: false,
-				dots: true,
-				infinite: true,
-				centerMode: true,
-				slidesToShow: 1,
-				slidesToScroll: 1,
-				mobileFirst: true,
-				responsive: [{
-						breakpoint: 1224,
-						settings: {
-							centerPadding: '18%'
+		<script type="text/javascript">
+			$(document).on('ready', function() {
+				$('.center').slick({
+					arrows: false,
+					dots: true,
+					infinite: true,
+					centerMode: true,
+					slidesToShow: 1,
+					slidesToScroll: 1,
+					mobileFirst: true,
+					responsive: [
+						{
+							breakpoint: 1224,
+							settings: {
+								centerPadding: '18%'
+							}
+						},
+						{
+							breakpoint: 600,
+							settings: {
+								centerPadding: '10%'
+							}
 						}
-					},
-					{
-						breakpoint: 600,
-						settings: {
-							centerPadding: '10%'
-						}
-					}
-				]
+					]
+				});
 			});
-		});
-	</script>
-</body>
-
+		</script>
+	</body>
 </html>
