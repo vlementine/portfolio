@@ -1831,11 +1831,11 @@ button {
   -ms-transform: translateY(-100%);
   -o-transform: translateY(-100%);
   transform: translateY(-100%);
-  -webkit-transition: transform 0.8s ease-in-out;
-  -moz-transition: transform 0.8s ease-in-out;
-  -ms-transition: transform 0.8s ease-in-out;
-  -o-transition: transform 0.8s ease-in-out;
-  transition: transform 0.8s ease-in-out;
+  -webkit-transition: transform 0.8s ease-in-out, z-index 0.8s ease-in-out;
+  -moz-transition: transform 0.8s ease-in-out, z-index 0.8s ease-in-out;
+  -ms-transition: transform 0.8s ease-in-out, z-index 0.8s ease-in-out;
+  -o-transition: transform 0.8s ease-in-out, z-index 0.8s ease-in-out;
+  transition: transform 0.8s ease-in-out, z-index 0.8s ease-in-out;
 }
 
 .contact__description {
