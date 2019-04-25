@@ -1,72 +1,309 @@
 <!DOCTYPE html>
 <html lang="fr">
-<head>
-	<meta charset="UTF-8" />
-	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-	<meta http-equiv="X-UA-Compatible" content="ie=edge" />
-	<title>Project name • Clémentine Bertrand</title>
-	<link rel="icon" type="image/png" href="../img/favicon-pro.png" />
-	<link rel="stylesheet" href="../css/main.min.css" />
-	<link rel="stylesheet" href="../css/slick.css" />
-</head>
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<meta http-equiv="X-UA-Compatible" content="ie=edge" />
+		<title>Alcatraz, 1962 • Clémentine Bertrand</title>
+		<link rel="icon" type="image/png" href="../img/favicon-pro.png" />
+		<link rel="stylesheet" href="../css/main.min.css" />
+		<link rel="stylesheet" href="../css/slick.css" />
+	</head>
 
-<body id="project-03" class="project-page">
-	<div class="loader"></div>
-	<div>
-		<!-- Transition -->
-		<span class="transition-screen"></span>
-		<span class="transition-screen transition-screen--white"></span>
+	<body id="project-03" class="project-page">
+		<div class="loader"></div>
+		<div>
+			<!-- Transition -->
+			<span class="transition-screen"></span>
+			<span class="transition-screen transition-screen--white"></span>
 
-		<!-- Navigation -->
-		<nav>
-			<img src="../img/logo.gif" alt="Logo Clémentine Bertrand" class="logo" />
-
-			<div class="nav__return" onClick="redirectionProject()">
-				<div class="arrow__clickable">
-					<span class="nav__arrow nav__arrow--left">
-						<span class="arrow__circle"></span>
-					</span>
+			<!-- Navigation -->
+			<nav>
+				<div class="logo__clickable" onClick="redirectionProject('home')">
+					<img src="../img/logo.gif" alt="Logo Clémentine Bertrand" class="logo" />
 				</div>
-				<div class="return__text">
-					<span class="text--top">Back to projects</span>
-					<span class="text--bottom">Back to projects</span>
-				</div>
-			</div>
-		</nav>
 
-		<!-- MENU -->
-		<div class="menu__wrapper disable">
-			<div class="menu__categories">
-				<div class="menu__category">
-					<h2 onClick="redirectionProject('home')">Accueil</h2>
-					<p>Présentation</p>
-				</div>
-				<div class="menu__category">
-					<h2 onClick="redirectionProject('work')">Projets</h2>
-					<p>Découvrez mes travaux</p>
-				</div>
-				<div class="menu__category">
-					<h2 onClick="redirectionProject('contact')">Contact</h2>
-					<p>En savoir plus</p>
-				</div>
-			</div>
-
-			<div class="menu__projects-wrapper--mobile"></div>
-
-			<div class="menu__projects-wrapper">
-				<div class="menu__project-visuel">
-					<div class="visuels__wrapper">
-						<div class="visuel__mockup">
-							<img class="mockup--desktop" src="../img/zenchef_visuel-home.png" alt="Visuel Zenchef"
-								draggable="false" />
-						</div>
-						<img class="visuel__letter" src="../img/zenchef_letter.png" alt="B" draggable="false" />
+				<div class="nav__return" onClick="redirectionProject()">
+					<div class="arrow__clickable">
+						<span class="nav__arrow nav__arrow--left">
+							<span class="arrow__circle"></span>
+						</span>
+					</div>
+					<div class="return__text">
+						<span class="text--top">Back to projects</span>
+						<span class="text--bottom">Back to projects</span>
 					</div>
 				</div>
-				<div class="menu__projects"></div>
+			</nav>
+
+			<!-- MENU -->
+			<div class="menu__wrapper disable">
+				<div class="menu__categories">
+					<div class="menu__category">
+						<h2 onClick="redirectionProject('home')">Accueil</h2>
+						<p>Présentation</p>
+					</div>
+					<div class="menu__category">
+						<h2 onClick="redirectionProject('work')">Projets</h2>
+						<p>Découvrez mes travaux</p>
+					</div>
+					<div class="menu__category">
+						<h2 onClick="redirectionProject('contact')">Contact</h2>
+						<p>En savoir plus</p>
+					</div>
+				</div>
+
+				<div class="menu__projects-wrapper--mobile"></div>
+
+				<div class="menu__projects-wrapper">
+					<div class="menu__project-visuel">
+						<div class="visuels__wrapper">
+							<div class="visuel__mockup">
+								<img
+									class="mockup--desktop"
+									src="../img/zenchef_visuel-home.png"
+									alt="Visuel Zenchef"
+									draggable="false"
+								/>
+							</div>
+							<img
+								class="visuel__letter"
+								src="../img/zenchef_letter.png"
+								alt="B"
+								draggable="false"
+							/>
+						</div>
+					</div>
+					<div class="menu__projects"></div>
+				</div>
+
+				<div class="menu__footer">
+					<span class="copyright">Clémentine Bertrand © 2019</span>
+					<div class="links">
+						<a class="link--behance" href="http://be.net/cbertrand" target="_blank">
+							<span>Behance</span>
+						</a>
+						<a
+							class="link--dribbble"
+							href="https://dribbble.com/cbertrand"
+							target="_blank"
+						>
+							<span>Dribbble</span>
+						</a>
+						<a
+							class="link--linkedin"
+							href="https://www.linkedin.com/in/clementinebertrand"
+							target="_blank"
+						>
+							<span>Linkedin</span>
+						</a>
+					</div>
+					<div class="footer__contact">
+						<span>Contactez-moi</span>
+						<div class="contact__link">
+							<a href="mailto:hello@clementinebertrand.fr"> ✍️ </a>
+						</div>
+					</div>
+				</div>
 			</div>
 
-			<div class="menu__footer">
+			<div class="menu-btn menu-btn-open" onclick="displayMenu()">
+				<div class="menu__icon menu__icon--open enable">
+					<span></span> <span></span> <span></span>
+				</div>
+				<div class="menu__icon menu__icon--close"><span></span> <span></span></div>
+			</div>
+
+			<!-- HEADER -->
+			<header>
+				<div class="header--text">
+					<h1>Titre du projet</h1>
+					<p class="subtitle">Date • Type de projet</p>
+				</div>
+			</header>
+
+			<!-- PROJECT CONTENT -->
+			<section>
+				<div class="container project-intro">
+					<div class="intro__content">
+						<h2>Présentation</h2>
+						<p>
+							Alcatraz, 1962 est un webdocumentaire réalisé dans le cadre d'un projet
+							universitaire. Il relate les préparatifs ainsi que le déroulement de
+							l'évasion de 3 prisonniers d'Alcatraz. La seule évasion réussie depuis
+							l'ouverture de la célèbre prison ! Aucun des trois prisonniers n'a été
+							découvert ni rattrapé durant la fuite. La seule contrainte de ce projet
+							était de le réaliser sous un format iPad.
+						</p>
+					</div>
+				</div>
+
+				<div class="container project-picture project-picture--simple">
+					<div class="video-wrapper">
+						<video
+							class="video video--1"
+							controls
+							preload="metadata"
+							poster="../img/alcatraz/Animation_Alcatraz_Opening--Picture.jpg"
+						>
+							<source src="../vid/Animation_Alcatraz_Opening.mp4" type="video/mp4" />
+						</video>
+						<div class="controls video-controls--1">
+							<button class="playpause--1 icon-play"></button>
+
+							<div class="progress progress--1">
+								<span class="progress-bar progress-bar--1"></span>
+							</div>
+							<span class="duration duration--1">00:00</span>
+							<button class="mute--1 icon-volume_up"></button>
+						</div>
+					</div>
+				</div>
+
+				<div id="parallax-bg-01" class="project-parallax--bg">
+					<div></div>
+				</div>
+
+				<div class="container project-description">
+					<h3>Les différentes intéractions</h3>
+					<p>
+						Le but de ce webdocumentaire étant d'être interactif, j'ai disposé des
+						éléments cliquables dans chacune des pièces à visiter. Pour avoir une vue sur
+						sa progression, et pour n'oublier aucune information, la timeline nous informe
+						des éléments découverts.
+					</p>
+				</div>
+
+				<div class="container project-picture padding">
+					<div class="explain__picture">
+						<img src="../img/alcatraz/alcatraz__picture-explain-01.jpg" alt="" />
+
+						<div id="explain__w-pin-1-01" class="explain__w-pin">
+							<div class="explain__pin"></div>
+							<div class="explain__text">
+								<h4>Bouton d'information</h4>
+								<p>Permet d’afficher des informations sur des éléments en particulier.</p>
+							</div>
+						</div>
+
+						<div id="explain__w-pin-1-02" class="explain__w-pin">
+							<div class="explain__pin"></div>
+							<div class="explain__text">
+								<h4>Bouton d'action</h4>
+								<p>
+									Débloqué en progressant dans le documentaire, et permet de découvrir
+									d’autres lieux.
+								</p>
+							</div>
+						</div>
+
+						<div id="explain__w-pin-1-03" class="explain__w-pin">
+							<div class="explain__pin"></div>
+							<div class="explain__text">
+								<h4>Timeline</h4>
+								<p>Affiche la progression de l’utilisateur dans le webdocumentaire.</p>
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<div class="container project-description">
+					<h3>Les différents lieux à explorer</h3>
+					<p>
+						Lors de mes recherches, j'ai réussi à trouver des photos de différents lieux
+						de la célèbre prison. Cela permet au visiteur de se balader dans différentes
+						pièces existantes du pénitencier (le bureau administratif, la cantine, une
+						cellule).
+					</p>
+				</div>
+
+				<div class="container project-picture project-picture--double">
+					<div class="picture-double__wrapper">
+						<img src="../img/alcatraz/alcatraz__picture-01.jpg" alt="" />
+						<img src="../img/alcatraz/alcatraz__picture-02.jpg" alt="" />
+						<img src="../img/alcatraz/alcatraz__picture-05.jpg" alt="" />
+					</div>
+
+					<div class="picture-double__wrapper">
+						<img src="../img/alcatraz/alcatraz__picture-03.jpg" alt="" />
+						<img src="../img/alcatraz/alcatraz__picture-04.jpg" alt="" />
+						<img src="../img/alcatraz/alcatraz__picture-06.jpg" alt="" />
+					</div>
+				</div>
+
+				<div class="container project-description">
+					<h3>Les contenus</h3>
+					<p>
+						Si l'utilisateur clique sur un des éléments, les informations sur celui-ci
+						s'affichent. On retrouve un texte relatant certains événements, ou des
+						informations sur certaines personnes, des extraits vidéos sur un passage de
+						l'évasion, etc.
+					</p>
+				</div>
+
+				<div class="container project-picture project-picture--simple">
+					<div class="video-wrapper">
+						<video
+							class="video video--2"
+							controls
+							preload="metadata"
+							poster="../img/alcatraz/Animation_Alcatraz_Infos--Picture.jpg"
+						>
+							<source src="../vid/Animation_Alcatraz_Infos.mp4" type="video/mp4" />
+						</video>
+						<div class="controls video-controls--2">
+							<button class="playpause--2 icon-play"></button>
+
+							<div class="progress progress--2">
+								<span class="progress-bar progress-bar--2"></span>
+							</div>
+							<span class="duration duration--2">00:00</span>
+							<button class="mute--2 icon-volume_up"></button>
+						</div>
+					</div>
+				</div>
+
+				<div class="container project-description">
+					<h3>L'évasion</h3>
+					<p>
+						Ci-dessous, vous retrouverez la dernière étape du documentaire, et aussi de
+						l'évasion. Une vidéo qui conclut cette étrange et étonnante aventure.
+					</p>
+				</div>
+
+				<div class="container project-picture project-picture--simple">
+					<div class="video-wrapper">
+						<video
+							class="video video--3"
+							controls
+							preload="metadata"
+							poster="../img/alcatraz/Animation_Alcatraz_Ending--Picture.jpg"
+						>
+							<source src="../vid/Animation_Alcatraz_Ending.mp4" type="video/mp4" />
+						</video>
+						<div class="controls video-controls--3">
+							<button class="playpause--3 icon-play"></button>
+
+							<div class="progress progress--3">
+								<span class="progress-bar progress-bar--3"></span>
+							</div>
+							<span class="duration duration--3">00:00</span>
+							<button class="mute--3 icon-volume_up"></button>
+						</div>
+					</div>
+				</div>
+			</section>
+
+			<!-- NEXT PROJECT -->
+			<section class="next-project">
+				<h3 class="next-project__title">Projet suivant</h3>
+				<span class="next-project__name" onClick="redirectionNextProject()"
+					>Nom du projet suivant</span
+				>
+			</section>
+
+			<!-- FOOTER -->
+			<footer>
 				<span class="copyright">Clémentine Bertrand © 2019</span>
 				<div class="links">
 					<a class="link--behance" href="http://be.net/cbertrand" target="_blank">
@@ -75,7 +312,11 @@
 					<a class="link--dribbble" href="https://dribbble.com/cbertrand" target="_blank">
 						<span>Dribbble</span>
 					</a>
-					<a class="link--linkedin" href="https://www.linkedin.com/in/clementinebertrand" target="_blank">
+					<a
+						class="link--linkedin"
+						href="https://www.linkedin.com/in/clementinebertrand"
+						target="_blank"
+					>
 						<span>Linkedin</span>
 					</a>
 				</div>
@@ -85,253 +326,48 @@
 						<a href="mailto:hello@clementinebertrand.fr"> ✍️ </a>
 					</div>
 				</div>
-			</div>
+			</footer>
 		</div>
 
-		<div class="menu-btn menu-btn-open" onclick="displayMenu()">
-			<div class="menu__icon menu__icon--open enable">
-				<span></span> <span></span> <span></span>
-			</div>
-			<div class="menu__icon menu__icon--close"><span></span> <span></span></div>
-		</div>
+		<script src="https://code.jquery.com/jquery-2.2.0.min.js"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.6/ScrollMagic.min.js"></script>
+		<script src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+		<script src="../js/vendor/TweenMax.min.js"></script>
+		<script src="../js/vendor/animation.gsap.min.js"></script>
+		<script src="../js/data-json.js"></script>
+		<script src="../js/nav.js"></script>
+		<script src="../js/script-project.js"></script>
 
-		<!-- HEADER -->
-		<header>
-			<div class="header--text">
-				<h1>Titre du projet</h1>
-				<p class="subtitle">Date • Type de projet</p>
-			</div>
-		</header>
+		<script>
+			videoPlayer(1);
+			videoPlayer(2);
+			videoPlayer(3);
 
-		<!-- PROJECT CONTENT -->
-		<section>
-			<div class="container project-intro">
-				<div class="intro__content">
-					<h2>Présentation</h2>
-					<p>
-						Alcatraz, 1962 est un webdocumentaire réalisé dans le cadre d'un projet
-						universitaire. Il relate les préparatifs ainsi que le déroulement de
-						l'évasion de 3 prisonniers d'Alcatraz. La seule évasion réussie depuis
-						l'ouverture de la célèbre prison ! Aucun des trois prisonniers n'a été
-						découvert ni rattrapé durant la fuite. La seule contrainte de ce projet était de le réaliser
-						sous un format
-						iPad.
-					</p>
-				</div>
-			</div>
-
-			<div class="container project-picture project-picture--simple">
-				<div class="video-wrapper">
-					<video class="video video--1" controls preload="metadata"
-						poster="../img/alcatraz/Animation_Alcatraz_Opening--Picture.jpg">
-						<source src="../vid/Animation_Alcatraz_Opening.mp4" type="video/mp4" />
-					</video>
-					<div class="controls video-controls--1">
-						<button class="playpause--1 icon-play"></button>
-
-						<div class="progress progress--1">
-							<span class="progress-bar progress-bar--1"></span>
-						</div>
-						<span class="duration duration--1">00:00</span>
-						<button class="mute--1 icon-volume_up"></button>
-					</div>
-				</div>
-			</div>
-
-			<div id="parallax-bg-01" class="project-parallax--bg">
-				<div></div>
-			</div>
-
-			<div class="container project-description">
-				<h3>Les différentes intéractions</h3>
-				<p>
-					Le but de ce webdocumentaire étant d'être interactif, j'ai disposé des
-					éléments cliquables dans chacune des pièces à visiter. Pour avoir une vue sur
-					sa progression, et pour n'oublier aucune information, la timeline nous informe
-					des éléments découverts.
-				</p>
-			</div>
-
-			<div class="container project-picture padding">
-				<div class="explain__picture">
-					<img src="../img/alcatraz/alcatraz__picture-explain-01.jpg" alt="" />
-
-					<div id="explain__w-pin-1-01" class="explain__w-pin">
-						<div class="explain__pin"></div>
-						<div class="explain__text">
-							<h4>Bouton d'information</h4>
-							<p>Permet d’afficher des informations sur des éléments en particulier.</p>
-						</div>
-					</div>
-
-					<div id="explain__w-pin-1-02" class="explain__w-pin">
-						<div class="explain__pin"></div>
-						<div class="explain__text">
-							<h4>Bouton d'action</h4>
-							<p>
-								Débloqué en progressant dans le documentaire, et permet de découvrir
-								d’autres lieux.
-							</p>
-						</div>
-					</div>
-
-					<div id="explain__w-pin-1-03" class="explain__w-pin">
-						<div class="explain__pin"></div>
-						<div class="explain__text">
-							<h4>Timeline</h4>
-							<p>Affiche la progression de l’utilisateur dans le webdocumentaire.</p>
-						</div>
-					</div>
-				</div>
-			</div>
-
-			<div class="container project-description">
-				<h3>Les différents lieux à explorer</h3>
-				<p>
-					Lors de mes recherches, j'ai réussi à trouver des photos de différents lieux
-					de la célèbre prison. Cela permet au visiteur de se balader dans différentes
-					pièces existantes du pénitencier (le bureau administratif, la cantine, une
-					cellule).
-				</p>
-			</div>
-
-			<div class="container project-picture project-picture--double">
-				<div class="picture-double__wrapper">
-					<img src="../img/alcatraz/alcatraz__picture-01.jpg" alt="" />
-					<img src="../img/alcatraz/alcatraz__picture-02.jpg" alt="" />
-					<img src="../img/alcatraz/alcatraz__picture-05.jpg" alt="" />
-				</div>
-
-				<div class="picture-double__wrapper">
-					<img src="../img/alcatraz/alcatraz__picture-03.jpg" alt="" />
-					<img src="../img/alcatraz/alcatraz__picture-04.jpg" alt="" />
-					<img src="../img/alcatraz/alcatraz__picture-06.jpg" alt="" />
-				</div>
-			</div>
-
-			<div class="container project-description">
-				<h3>Les contenus</h3>
-				<p>
-					Si l'utilisateur clique sur un des éléments, les informations sur celui-ci
-					s'affichent. On retrouve un texte relatant certains événements, ou des
-					informations sur certaines personnes, des extraits vidéos sur un passage de
-					l'évasion, etc.
-				</p>
-			</div>
-
-			<div class="container project-picture project-picture--simple">
-				<div class="video-wrapper">
-					<video class="video video--2" controls preload="metadata"
-						poster="../img/alcatraz/Animation_Alcatraz_Infos--Picture.jpg">
-						<source src="../vid/Animation_Alcatraz_Infos.mp4" type="video/mp4" />
-					</video>
-					<div class="controls video-controls--2">
-						<button class="playpause--2 icon-play"></button>
-
-						<div class="progress progress--2">
-							<span class="progress-bar progress-bar--2"></span>
-						</div>
-						<span class="duration duration--2">00:00</span>
-						<button class="mute--2 icon-volume_up"></button>
-					</div>
-				</div>
-			</div>
-
-			<div class="container project-description">
-				<h3>L'évasion</h3>
-				<p>
-					Ci-dessous, vous retrouverez la dernière étape du documentaire, et aussi de
-					l'évasion. Une vidéo qui conclut cette étrange et étonnante aventure.
-				</p>
-			</div>
-
-			<div class="container project-picture project-picture--simple">
-				<div class="video-wrapper">
-					<video class="video video--3" controls preload="metadata"
-						poster="../img/alcatraz/Animation_Alcatraz_Ending--Picture.jpg">
-						<source src="../vid/Animation_Alcatraz_Ending.mp4" type="video/mp4" />
-					</video>
-					<div class="controls video-controls--3">
-						<button class="playpause--3 icon-play"></button>
-
-						<div class="progress progress--3">
-							<span class="progress-bar progress-bar--3"></span>
-						</div>
-						<span class="duration duration--3">00:00</span>
-						<button class="mute--3 icon-volume_up"></button>
-					</div>
-				</div>
-			</div>
-		</section>
-
-		<!-- NEXT PROJECT -->
-		<section class="next-project">
-			<h3 class="next-project__title">Projet suivant</h3>
-			<span class="next-project__name" onClick="redirectionNextProject()">Nom du projet suivant</span>
-		</section>
-
-		<!-- FOOTER -->
-		<footer>
-			<span class="copyright">Clémentine Bertrand © 2019</span>
-			<div class="links">
-				<a class="link--behance" href="http://be.net/cbertrand" target="_blank">
-					<span>Behance</span>
-				</a>
-				<a class="link--dribbble" href="https://dribbble.com/cbertrand" target="_blank">
-					<span>Dribbble</span>
-				</a>
-				<a class="link--linkedin" href="https://www.linkedin.com/in/clementinebertrand" target="_blank">
-					<span>Linkedin</span>
-				</a>
-			</div>
-			<div class="footer__contact">
-				<span>Contactez-moi</span>
-				<div class="contact__link">
-					<a href="mailto:hello@clementinebertrand.fr"> ✍️ </a>
-				</div>
-			</div>
-		</footer>
-	</div>
-
-	<script src="https://code.jquery.com/jquery-2.2.0.min.js"></script>
-	<script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.6/ScrollMagic.min.js"></script>
-	<script src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
-	<script src="../js/vendor/TweenMax.min.js"></script>
-	<script src="../js/vendor/animation.gsap.min.js"></script>
-	<script src="../js/data-json.js"></script>
-	<script src="../js/nav.js"></script>
-	<script src="../js/script-project.js"></script>
-
-	<script>
-		videoPlayer(1);
-		videoPlayer(2);
-		videoPlayer(3);
-
-		$(document).on('ready', function () {
-			$('.center').slick({
-				arrows: false,
-				dots: true,
-				infinite: true,
-				centerMode: true,
-				slidesToShow: 1,
-				slidesToScroll: 1,
-				mobileFirst: true,
-				responsive: [{
-						breakpoint: 1224,
-						settings: {
-							centerPadding: '18%'
+			$(document).on('ready', function() {
+				$('.center').slick({
+					arrows: false,
+					dots: true,
+					infinite: true,
+					centerMode: true,
+					slidesToShow: 1,
+					slidesToScroll: 1,
+					mobileFirst: true,
+					responsive: [
+						{
+							breakpoint: 1224,
+							settings: {
+								centerPadding: '18%'
+							}
+						},
+						{
+							breakpoint: 600,
+							settings: {
+								centerPadding: '10%'
+							}
 						}
-					},
-					{
-						breakpoint: 600,
-						settings: {
-							centerPadding: '10%'
-						}
-					}
-				]
+					]
+				});
 			});
-		});
-	</script>
-</body>
-
+		</script>
+	</body>
 </html>
