@@ -238,7 +238,6 @@ function displayMenu() {
 	d.q('.menu__wrapper').classList.toggle('disable');
 
 	if (d.q('.menu__wrapper').classList.contains('disable')) {
-
 		d.q('.menu__wrapper').style.opacity = '0';
 		d.q('.menu__wrapper').style.zIndex = '-1000';
 		setTimeout(() => {
