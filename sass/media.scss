@@ -29,8 +29,8 @@
 			color: rgba(255, 255, 255, 0.5);
 		}
 
-		&:hover .arrow__clickable+.return__text span:first-child,
-		&:hover .arrow__clickable+.return__text span:last-child {
+		&:hover .arrow__clickable + .return__text span:first-child,
+		&:hover .arrow__clickable + .return__text span:last-child {
 			color: rgba(255, 255, 255, 0.8);
 		}
 	}
@@ -40,7 +40,6 @@
 //	MEDIA QUERIES : 1000px
 //-------------------------------------
 @media screen and (max-width: 1000px) {
-
 	//-- PROJECTS
 	.project {
 		flex-direction: column;
@@ -136,7 +135,6 @@
 //	MEDIA QUERIES : 800px
 //-------------------------------------
 @media screen and (max-width: 800px) {
-
 	//-- FOOTER
 	.links {
 		margin-left: auto;
@@ -410,7 +408,6 @@
 //	MEDIA QUERIES : 400px
 //-------------------------------------
 @media screen and (max-width: 400px) {
-
 	//-- HOME
 	.home img {
 		max-width: 80%;
@@ -441,7 +438,6 @@
 //	MEDIA QUERIES : 320px
 //-------------------------------------
 @media screen and (max-width: 320px) {
-
 	//-- HOME
 	.project__description--mobile {
 		margin-bottom: 20px;
@@ -511,11 +507,11 @@
 	}
 
 	.nav--mobile {
-		bottom: 10px;
+		bottom: 15px !important;
 	}
 
 	.project__content {
-		padding: 20px 20px 60px 20px;
+		padding: 20px 20px 70px 20px !important;
 	}
 
 	.btn {
@@ -530,5 +526,55 @@
 
 	.contact__form form {
 		margin: 0 10px 10px;
+	}
+
+	.home .presentation__wrapper {
+		margin-top: 0 !important;
+	}
+}
+
+@media (max-height: 560px) {
+	.project__content {
+		padding: 20px 20px 120px 20px;
+	}
+
+	.description__number-wrapper--mobile .description__number--mobile {
+		font-size: 6rem;
+		top: -65px;
+	}
+
+	.description__number-wrapper--mobile .description__number-shadow--mobile {
+		font-size: 6rem;
+		top: -55px;
+	}
+
+	.description__title--mobile {
+		margin: 35px 0 0 0;
+	}
+
+	.project__description--mobile {
+		margin-bottom: 20px;
+	}
+
+	.project--mobile .btn {
+		margin-top: 20px;
+	}
+
+	.project__visuel--mobile {
+		margin-top: 0;
+	}
+
+	.nav--mobile {
+		bottom: 58px;
+	}
+
+	.home .presentation__wrapper {
+		margin-top: -25px;
+	}
+
+	.home .home__illustration img:first-child {
+		width: 120px;
+		top: 32px;
+		margin-left: -60px;
 	}
 }
