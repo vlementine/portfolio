@@ -1,3 +1,15 @@
 RewriteEngine On
+RewriteBase /
+
+#Redirection https
 RewriteCond %{SERVER_PORT} 80
-RewriteRule ^(.*)$ https://www.clementinebertrand.fr/$1 [R=301,L]
+RewriteRule (.*) https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
+
+#Rewrite .html
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule ^([^\.]+)$ $1.html [NC,L]
+
+#Rewrite index.html
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteRule ^([^\.]+)$ $1.html [NC,L]

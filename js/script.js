@@ -212,13 +212,6 @@ const main = () => {
 	//-------------------------------------
 	//	CLEAN URL
 	//-------------------------------------
-	// const redirectionProject = varURL => {
-	// 	d.q('.transition-screen').classList.add('redirect-page');
-	// 	setTimeout(() => {
-	// 		window.location.href = './projects/project-page--' + varURL + '.html';
-	// 	}, 1500);
-	// };
-
 	let urlNumber = window.location.hash.substring(1);
 	window.history.replaceState({}, '', 'index.html');
 
